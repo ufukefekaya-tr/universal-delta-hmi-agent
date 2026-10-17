@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "coverage_claim": "Inventory only; no migration completion implied",
+  "coverage_claim": "All discovered features have a reviewed explicit backend disposition; support levels are not interchangeable.",
   "source_snapshot": "DIA_MCP_Sever@004d96bb90d047438f852245999b62e4770856aa plus local generic behavior inventory N002-N016",
   "upstream_license": "NOT_DECLARED; do not redistribute source",
   "features": [
@@ -9,594 +9,1052 @@
       "feature": "Native container and unknown byte preservation",
       "legacy_evidence": "upstream codec/document",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "native.NativeFile",
+        "native.NativeIndex",
+        "native.apply_spans"
+      ],
+      "test_evidence": [
+        "test_native.NativeTests.test_noop_original_container",
+        "test_native.NativeTests.test_unknown_fields_survive_edit"
+      ],
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "limitations": "Bounded source spans and complete unknown-byte retention; exact source/profile only.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D02",
       "feature": "Application model resolution controller metadata",
       "legacy_evidence": "upstream model",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "native.Project.info"
+      ],
+      "test_evidence": [
+        "test_session.SessionTests.test_profile_mismatch_and_profile_mutation"
+      ],
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "limitations": "Serialized model/version/resolution metadata is not editor execution evidence.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D03",
       "feature": "Screen element state geometry text address inventory",
       "legacy_evidence": "upstream model/MCP",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "native.Project",
+        "session.inspect"
+      ],
+      "test_evidence": [
+        "test_session.SessionTests.test_inspect_before_plan_and_pins"
+      ],
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "limitations": "Inventory is not qualification of every native type.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D04",
       "feature": "Project find and coordinate-ordered text layout",
       "legacy_evidence": "upstream find/screenshot_text",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "session.inspect"
+      ],
+      "test_evidence": [
+        "test_plan_review.PlanReviewTests.test_coordinate_layout_text_order_preserves_render_layers",
+        "test_plan_review.PlanReviewTests.test_sort_invalid_or_unrelated_views_refused",
+        "test_plan_review.PlanReviewTests.test_stdio_readonly_proposal_review_and_discovery_schemas"
+      ],
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "limitations": "Default native layer order; optional coordinate projection uses native page order, Y, X, layer_index. Only layout/text; never changes native/render z-order or establishes a vendor screenshot.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D05",
       "feature": "All address owners including trigger interlock visible unit dot and macros",
       "legacy_evidence": "N003,N009-N016",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "operations.address_inventory"
+      ],
+      "test_evidence": [
+        "test_operations.OperationTests.test_r10_all_indexed_address_owners_and_trigger"
+      ],
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "limitations": "Trigger/interlock/visible/unit/dot and macro owners; unknown roles stay unqualified.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D06",
       "feature": "Donor clone with fresh IDs geometry target page and z-order",
       "legacy_evidence": "N002,N003",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "operations.operation_patches:clone_element",
+        "operations.operation_patches:reorder_element"
+      ],
+      "test_evidence": [
+        "test_operations.OperationTests.test_clone_unique_fresh_identity_geometry_and_reorder"
+      ],
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "limitations": "Pinned donor, fresh identities, explicit inheritance and complete order.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D07",
       "feature": "Screen creation clone deletion and navigation reference checks",
       "legacy_evidence": "upstream edit/MCP",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "operations.operation_patches:clone_screen",
+        "operations.validate_references"
+      ],
+      "test_evidence": [
+        "test_operations.OperationTests.test_screen_frame_clone_delete_and_navigation_guards"
+      ],
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "limitations": "Explicit frame/full donors and complete default/navigation references.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D08",
       "feature": "Turkish UTF16 state captions language fields descriptions",
       "legacy_evidence": "N004,N016",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "native.encode_token",
+        "operations.operation_patches:set_text"
+      ],
+      "test_evidence": [
+        "test_native.NativeTests.test_counted_unicode",
+        "test_operations.OperationTests.test_r12_turkish_caption_and_long_unicode"
+      ],
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "limitations": "Counted UTF-16; no silent Latin1 fallback.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D09",
       "feature": "Native geometry font alignment fill border",
       "legacy_evidence": "N003,N004,N015,N016",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "operations.ELEMENT_VISUAL",
+        "operations.STATE_VISUAL"
+      ],
+      "test_evidence": [
+        "test_operations.OperationTests.test_visual_geometry_and_full_inverse"
+      ],
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "limitations": "Qualified existing fields only; preserve functional owners.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D10",
       "feature": "DIB background and offset decode; remove duplicate background text",
       "legacy_evidence": "N004 background regression",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "resources.flat_dib",
+        "preview.decode_dib"
+      ],
+      "test_evidence": [
+        "test_preview.PreviewTests.test_dib_channel_stride_orientation_and_32bit_unused_alpha",
+        "test_operations.OperationTests.test_flat_background_has_real_page_offset_and_no_old_text"
+      ],
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "limitations": "Text-free background append and actual page offsets; no bitmap controls.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D11",
       "feature": "Picture bank encode append import copy prune",
       "legacy_evidence": "upstream picbank and asset scripts",
       "required_disposition": "DISCOVERED_UNQUALIFIED",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "resources.resource",
+        "native.NativeIndex opaque retention"
+      ],
+      "test_evidence": [
+        "test_contracts.ContractTests.test_picture_bank_import_copy_and_prune_refused"
+      ],
+      "support_level": "DISCOVERED_UNQUALIFIED",
+      "limitations": "General picture import/copy/prune/codecs are absent; preserve or refuse.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D12",
       "feature": "Momentary maintained set-on set-off and navigation behaviors",
       "legacy_evidence": "N006 vendor-corrected subtype contract",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "operations.operation_patches:button_behavior",
+        "operations.operation_patches:navigation"
+      ],
+      "test_evidence": [
+        "test_operations.OperationTests.test_r14_real_behavior_codes_and_value_text"
+      ],
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "limitations": "Explicit source-qualified behavior contracts; no universal enum guess.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D13",
       "feature": "Value0/1 text color and request versus feedback",
       "legacy_evidence": "N004,N006,N013,N016",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "preview state selection",
+        "operations.state"
+      ],
+      "test_evidence": [
+        "test_preview.PreviewTests.test_actual_value_selection_commands_and_no_unknown_fallback",
+        "test_preview.PreviewTests.test_shared_address_fixture_conflict_and_numeric_cases"
+      ],
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "limitations": "Use actual Value; request readback is not physical feedback.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D14",
       "feature": "Mode selection opposite-bit macros; non-atomic semantics",
       "legacy_evidence": "N006,N009,N011,N014",
       "required_disposition": "SOURCE_BOUND_UNQUALIFIED",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "macros.MacroProgram",
+        "no atomic mode controller"
+      ],
+      "test_evidence": [
+        "test_contracts.ContractTests.test_atomic_mode_and_automatic_reconnect_replay_are_not_supplied"
+      ],
+      "support_level": "CONTRACT_ONLY",
+      "limitations": "Opposite-bit cleanup plus another write is non-atomic.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D15",
       "feature": "Numeric type width decimals digits limits scale offset and units",
       "legacy_evidence": "N003,N005,N007",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "operations.numeric_changes",
+        "operations.operation_patches:numeric"
+      ],
+      "test_evidence": [
+        "test_operations.OperationTests.test_r15_limits_explicit_and_no_float_extremes_or_time_alias"
+      ],
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "limitations": "Explicit type/width/digits/decimals/limits/gain/offset and separate unit owners.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D16",
       "feature": "Numeric literal limit overflow and digit-fit regression",
       "legacy_evidence": "N005,N016",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "operations.numeric_changes",
+        "preview numeric formatting"
+      ],
+      "test_evidence": [
+        "test_operations.OperationTests.test_r15_limits_explicit_and_no_float_extremes_or_time_alias",
+        "test_preview.PreviewTests.test_numeric_exponent_is_bounded"
+      ],
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "limitations": "No guessed limits, overflow or insufficient digits; narrowing changes behavior.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D17",
       "feature": "Explicit separate TIME-to-ms PLC interface; no silent coercion",
       "legacy_evidence": "N007",
       "required_disposition": "CONTRACT_ONLY",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "symbols.SymbolCatalog.resolve",
+        "operations.numeric_changes TIME refusal"
+      ],
+      "test_evidence": [
+        "test_symbols.SymbolTests.test_enum_and_time_remain_distinct",
+        "test_operations.OperationTests.test_r15_limits_explicit_and_no_float_extremes_or_time_alias"
+      ],
+      "support_level": "CONTRACT_ONLY",
+      "limitations": "Require a real separate millisecond PLC interface; no bridge generation or XML relabel.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D18",
       "feature": "Counted embedded DIA XML replace and metadata preservation",
       "legacy_evidence": "N007,N014",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "resources.embedded_xml",
+        "resources.resource_patch",
+        "operations.operation_patches:replace_xml"
+      ],
+      "test_evidence": [
+        "test_native.NativeTests.test_resource_xml_and_exact_metadata",
+        "test_operations.OperationTests.test_xml_preserves_metadata_and_all_dependencies"
+      ],
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "limitations": "Raw-byte count includes BOM; unrelated metadata and suffix survive. Catalog association must match metadata or a noncontradictory reviewed missing-field map. XML updates are additive only; old type/node/member/access/offset shapes cannot be reinterpreted.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D19",
       "feature": "XML nested types structs arrays width and access resolver",
       "legacy_evidence": "N016 decoder; design source contract",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "symbols.parse_symbols",
+        "symbols.SymbolCatalog.resolve"
+      ],
+      "test_evidence": [
+        "test_symbols.SymbolTests.test_actual_offsets_and_native_padding",
+        "test_symbols.SymbolTests.test_inclusive_array_bounds",
+        "test_symbols.SymbolTests.test_ancestor_access_cannot_be_restored_by_member"
+      ],
+      "support_level": "OFFLINE_TESTED",
+      "limitations": "Nested structs/arrays/enums and intersected access; no invented layout/stride.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D20",
       "feature": "Exact read/write rebind with typed access validation",
       "legacy_evidence": "N013",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "symbols.validate_reference",
+        "operations.operation_patches:rebind"
+      ],
+      "test_evidence": [
+        "test_symbols.SymbolTests.test_role_specific_read_and_write_permissions",
+        "test_operations.OperationTests.test_r05_exact_rebind_not_prefix"
+      ],
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "limitations": "Exact owner/address, role, link and station; no substring/global replace.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D21",
       "feature": "All macro slots counted framing opcode five-fields and tail",
       "legacy_evidence": "N009,N011,N016",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "macros.parse_macro",
+        "macros.MacroProgram.to_bytes"
+      ],
+      "test_evidence": [
+        "test_macros.MacroTests.test_counted_roundtrip_and_source_with_newlines",
+        "test_macros.MacroTests.test_truncation_lengths_flags_and_trailing_bytes"
+      ],
+      "support_level": "OFFLINE_TESTED",
+      "limitations": "02REV/opcode/five counted fields/observed tail; unknown opcodes read-only.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D22",
       "feature": "Visible statement distinct from parsed macro operands",
       "legacy_evidence": "N009,N010FAIL,N011",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "macros.MacroProgram.replace_operand",
+        "macros.MacroProgram.inspect"
+      ],
+      "test_evidence": [
+        "test_macros.MacroTests.test_exact_operand_replacement_preserves_visible_source",
+        "test_macros.MacroTests.test_legacy_display_operand_can_be_inspected_without_acceptance"
+      ],
+      "support_level": "OFFLINE_TESTED",
+      "limitations": "Field0 immutable during operand edits; display-form parsed operands flagged invalid.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D23",
       "feature": "Remote macro operand link station Application and type canonicalization",
       "legacy_evidence": "N009,N011",
       "required_disposition": "SOURCE_BOUND_UNQUALIFIED",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "macros.parse_parsed_address",
+        "symbols.validate_reference"
+      ],
+      "test_evidence": [
+        "test_macros.MacroTests.test_display_addresses_and_source_statements_are_not_operands",
+        "test_operations.OperationTests.test_macro_slot_type_access_and_visible_source"
+      ],
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "limitations": "Parsed link/station/path syntax differs; Application qualification is not a universal repair.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D24",
       "feature": "Initial clock and button macro add remove preserve",
       "legacy_evidence": "N008,N009,N012",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "operations.operation_patches:clear_macro",
+        "operations.operation_patches:donor_macro"
+      ],
+      "test_evidence": [
+        "test_operations.OperationTests.test_macro_slot_type_access_and_visible_source"
+      ],
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "limitations": "Explicit hash-pinned slot operation; retain all unrelated slots and opaque bytes.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D25",
       "feature": "BITON BITOFF assignment increment IF ELSE ENDIF from exact donors",
       "legacy_evidence": "N008,N009 vendor-resaved witnesses",
       "required_disposition": "SOURCE_BOUND_UNQUALIFIED",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "macros.KNOWN_OPCODES",
+        "operations.operation_patches:donor_macro"
+      ],
+      "test_evidence": [
+        "test_macros.MacroTests.test_unknown_opcode_roundtrips_but_blocks_all_writes",
+        "test_operations.OperationTests.test_macro_slot_type_access_and_visible_source"
+      ],
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "limitations": "Observed BITON/BITOFF/word assignment/add/IF/ELSE/ENDIF exact reuse; no runtime guarantee.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D26",
       "feature": "Other upstream macro instructions including popup arithmetic FMOV FILLASC",
       "legacy_evidence": "upstream macro",
       "required_disposition": "DISCOVERED_UNQUALIFIED",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "macros.parse_macro unknown opcode retention"
+      ],
+      "test_evidence": [
+        "test_macros.MacroTests.test_unknown_opcode_roundtrips_but_blocks_all_writes"
+      ],
+      "support_level": "DISCOVERED_UNQUALIFIED",
+      "limitations": "Other popup/arithmetic/FMOV/FILLASC writers absent; unsupported edits refuse.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D27",
       "feature": "Read-only compiled CIN operand inspection and stale-hash rejection",
       "legacy_evidence": "N011 inspect_compiled",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "macros.inspect_compiled"
+      ],
+      "test_evidence": [
+        "test_macros.MacroTests.test_compiled_stale_source_candidate_and_actual_sha_rejected",
+        "test_macros.MacroTests.test_compiled_observation_is_partial_counted_scan"
+      ],
+      "support_level": "OFFLINE_TESTED",
+      "limitations": "Caller-linked three-SHA receipt and partial BOOL scan; not full CIN/compiler/runtime acceptance.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D28",
       "feature": "Heartbeat startup inhibit rollover ownership reconnect contract",
       "legacy_evidence": "N008 then N012 rollback",
       "required_disposition": "ROLLED_BACK_NOT_DEFAULT",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "preservation and explicit clear_macro only"
+      ],
+      "test_evidence": [
+        "test_operations.OperationTests.test_r18_clear_global_macro_not_default_reenable"
+      ],
+      "support_level": "ROLLED_BACK_NOT_DEFAULT",
+      "limitations": "No automatic heartbeat/startup/ownership/reconnect macro regeneration.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D29",
       "feature": "Draft versus drive-read freshness read/apply terminal result contract",
       "legacy_evidence": "N008 runtime plan",
       "required_disposition": "CONTRACT_ONLY",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "external transaction roles",
+        "generic read-only primitives"
+      ],
+      "test_evidence": [
+        "test_status.StatusTests.test_transfer_draft_fresh_readback_terminal_result_distinct"
+      ],
+      "support_level": "CONTRACT_ONLY",
+      "limitations": "Draft/readback/freshness/terminal result need a target-owned contract; no dispatcher.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D30",
       "feature": "Current fault view code family source catalog unknown fallback",
       "legacy_evidence": "N014",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "typed read-only numeric/text primitives",
+        "contracts.evaluate_status (synthetic-only, no PLC polling)"
+      ],
+      "test_evidence": [
+        "test_status.StatusTests.test_r19_active_fault_zero_and_unknown_raw_never_healthy"
+      ],
+      "support_level": "CONTRACT_ONLY",
+      "limitations": "Active/family/source/raw-code roles; no alarm/history engine or healthy sparse default.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D31",
       "feature": "Reference latch versus physical home and start permit roles",
       "legacy_evidence": "N014,N015,N016",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "read-only typed symbol roles"
+      ],
+      "test_evidence": [
+        "test_status.StatusTests.test_reference_latch_separate_from_sensor_and_start_permission"
+      ],
+      "support_level": "CONTRACT_ONLY",
+      "limitations": "Reference latch/home/start permit are distinct external signals.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D32",
       "feature": "Drive request ACK status freshness frequency raw fault roles",
       "legacy_evidence": "N014 drive telemetry",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "read-only roles and saved-layer fixtures"
+      ],
+      "test_evidence": [
+        "test_status.StatusTests.test_drive_request_ack_fresh_status_frequency_not_conflated"
+      ],
+      "support_level": "CONTRACT_ONLY",
+      "limitations": "Request/ACK/status/freshness/frequency/raw fault differ; cache is not transport validity.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D33",
       "feature": "Compact current-fault strip and read-only service navigation",
       "legacy_evidence": "N015,N016",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "operations navigation/text/style primitives"
+      ],
+      "test_evidence": [
+        "test_operations.OperationTests.test_r21_style_only_preserves_controls_bindings_macro_xml_unknown"
+      ],
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "limitations": "Qualified source owners only; no invented fault reset/ACK/history side effects.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D34",
       "feature": "Two sequential aesthetic reviews preview approval style-only plan",
       "legacy_evidence": "N016",
       "required_disposition": "WORKFLOW_REQUIRED",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "contracts.validate_aesthetic_receipts",
+        "docs/WORKFLOW.md",
+        "session.preview/validate exact plan_sha256 readonly selection"
+      ],
+      "test_evidence": [
+        "test_status.StatusTests.test_sequential_visual_reviews_challenge_first_and_producer",
+        "test_plan_review.PlanReviewTests.test_proposal_caption_sha_and_readonly_state",
+        "test_plan_review.PlanReviewTests.test_gallery_uses_proposed_background_profile",
+        "test_plan_review.PlanReviewTests.test_stdio_readonly_proposal_review_and_discovery_schemas"
+      ],
+      "support_level": "WORKFLOW_REQUIRED",
+      "limitations": "Two sequential aesthetic reviews and approval bind exact proposal/candidate; runtime separate. Version0.1.0 preapply preview claim withdrawn by DIA-R2;0.1.1 explicitly selects a pending proposal.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D35",
       "feature": "Saved layer render font cmap fit occlusion actual backgrounds",
       "legacy_evidence": "N016 visual_check",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "preview.render_preview",
+        "preview.FontFace"
+      ],
+      "test_evidence": [
+        "test_preview.PreviewTests.test_metrics_missing_glyph_overflow_and_occlusion",
+        "test_preview.PreviewTests.test_all_states_checked_not_only_selected"
+      ],
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "limitations": "Actual DIB/layers/states plus supplied font metrics/cmap; absent metrics never fit PASS.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D36",
       "feature": "Range state long-text sample galleries clearly marked examples",
       "legacy_evidence": "N004,N014,N016",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "preview.render_gallery"
+      ],
+      "test_evidence": [
+        "test_preview.PreviewTests.test_shared_address_fixture_conflict_and_numeric_cases",
+        "test_preview.PreviewTests.test_offline_label_escape_no_font_claim_and_source_preserved"
+      ],
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "limitations": "Synthetic long/range/state examples labelled; shared-address fixture conflicts refuse.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D37",
       "feature": "Inverse byte diff restoring allowed changes equals entire original",
       "legacy_evidence": "N013-N016",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "native.restore_spans",
+        "operations.compile_changes"
+      ],
+      "test_evidence": [
+        "test_native.NativeTests.test_patch_precondition_and_overlap",
+        "test_session.SessionTests.test_multiple_approved_plans_inverse"
+      ],
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "limitations": "Reverse every exact ledger to recover whole payload and thumbnail.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D38",
       "feature": "Source plan codec hashes inspect-before-apply idempotency new-only save",
       "legacy_evidence": "N002-N016 wrappers",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "session plan/authorization/save lifecycle"
+      ],
+      "test_evidence": [
+        "test_session.SessionTests.test_actual_apply_save_reread_diff_rollback_and_source"
+      ],
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "limitations": "Inspect before apply; exact authorization/hashes/replay protection/new-only save.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D39",
       "feature": "Real stdio mutation/result tests not only tool discovery",
       "legacy_evidence": "native wrapper clients",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "cli JSON-RPC stdio dispatch"
+      ],
+      "test_evidence": [
+        "test_stdio.StdioTests.test_real_process_mutation_not_only_discovery"
+      ],
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "limitations": "Actual isolated stdio mutation/reread required; tools/list is insufficient.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D40",
       "feature": "Source isolation scope manifests checkpoints Kaizen retractions",
       "legacy_evidence": "N001-N016",
       "required_disposition": "WORKFLOW_REQUIRED",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "AGENTS.md",
+        "SYSTEM_PROMPT.md",
+        "tools/session_guard.py",
+        "docs/PROVENANCE.md"
+      ],
+      "test_evidence": [
+        "test_release.ReleaseTests.test_current_inventory_and_public_privacy"
+      ],
+      "support_level": "WORKFLOW_REQUIRED",
+      "limitations": "Read-only sources, exact owners, root checkpoint, scoped commit and retractions.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D41",
       "feature": "Canonical design/tag ledger CSV mapping and operator preview",
       "legacy_evidence": "design revisions010-013",
       "required_disposition": "CONTRACT_ONLY",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "contracts.design_ledger",
+        "session.inspect(view=design)"
+      ],
+      "test_evidence": [
+        "test_status.StatusTests.test_design_csv_is_native_reference_not_vendor_import"
+      ],
+      "support_level": "CONTRACT_ONLY",
+      "limitations": "Object count differs from unique tags; CSV/HTML are references, not native import.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D42",
       "feature": "Missing-tag disabled placeholder no invented feedback/counters",
       "legacy_evidence": "design revision013",
       "required_disposition": "WORKFLOW_REQUIRED",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "symbols missing-path refusal",
+        "preview unknown-value refusal"
+      ],
+      "test_evidence": [
+        "test_symbols.SymbolTests.test_scalar_index_and_unindexed_array_traversal_rejected",
+        "test_contracts.ContractTests.test_missing_tag_is_not_invented_feedback_or_a_polling_counter"
+      ],
+      "support_level": "WORKFLOW_REQUIRED",
+      "limitations": "Missing tags disabled/unknown; no polling event counters or fabricated feedback.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D43",
       "feature": "Preserve existing symbols and bindings during XML update",
       "legacy_evidence": "N005,N007,N013,N014",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "operations.operation_patches:replace_xml",
+        "symbols.validate_reference",
+        "symbols.assert_additive_symbols",
+        "operations.qualified_xml"
+      ],
+      "test_evidence": [
+        "test_operations.OperationTests.test_xml_preserves_metadata_and_all_dependencies",
+        "test_native.NativeTests.test_resource_xml_and_exact_metadata"
+      ],
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "limitations": "Validate surviving bindings against new catalog; retain type semantics/metadata.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "D44",
       "feature": "Unsupported gradient radius transparency DPI explicitly stops render claim",
       "legacy_evidence": "N006,N008,N016",
       "required_disposition": "REIMPLEMENT_AND_TEST",
-      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "preview effect qualification/refusal"
+      ],
+      "test_evidence": [
+        "test_preview.PreviewTests.test_unknown_effect_gradient_radius_and_family",
+        "test_preview.PreviewTests.test_wrong_page_background_and_ambiguous_resource"
+      ],
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "limitations": "Unsupported gradient/radius/transparency/DPI stop the affected claim; preservation is not pixels.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "U01",
       "feature": "Enhanced recipes",
       "legacy_evidence": "upstream specialized builders, not generic qualified tools",
       "required_disposition": "DISCOVERED_UNQUALIFIED",
-      "migration_status": "PENDING_EXPLICIT_DISPOSITION",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "opaque retention and unsupported-operation refusal only"
+      ],
+      "test_evidence": [
+        "test_contracts.ContractTests.test_unimplemented_runtime_families_have_no_generic_builder"
+      ],
+      "support_level": "DISCOVERED_UNQUALIFIED",
+      "limitations": "Discovery retained explicitly. No generic builder, native/lifecycle rendering, or runtime qualification; preserve unknown owners or refuse the edit.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "U02",
       "feature": "Native alarm history",
       "legacy_evidence": "upstream specialized builders, not generic qualified tools",
       "required_disposition": "DISCOVERED_UNQUALIFIED",
-      "migration_status": "PENDING_EXPLICIT_DISPOSITION",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "opaque retention and unsupported-operation refusal only"
+      ],
+      "test_evidence": [
+        "test_contracts.ContractTests.test_unimplemented_runtime_families_have_no_generic_builder"
+      ],
+      "support_level": "DISCOVERED_UNQUALIFIED",
+      "limitations": "Discovery retained explicitly. No generic builder, native/lifecycle rendering, or runtime qualification; preserve unknown owners or refuse the edit.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "U03",
       "feature": "Trend history charts gauges",
       "legacy_evidence": "upstream specialized builders, not generic qualified tools",
       "required_disposition": "DISCOVERED_UNQUALIFIED",
-      "migration_status": "PENDING_EXPLICIT_DISPOSITION",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "opaque retention and unsupported-operation refusal only"
+      ],
+      "test_evidence": [
+        "test_contracts.ContractTests.test_unimplemented_runtime_families_have_no_generic_builder"
+      ],
+      "support_level": "DISCOVERED_UNQUALIFIED",
+      "limitations": "Discovery retained explicitly. No generic builder, native/lifecycle rendering, or runtime qualification; preserve unknown owners or refuse the edit.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "U04",
       "feature": "Login accounts security operation log",
       "legacy_evidence": "upstream specialized builders, not generic qualified tools",
       "required_disposition": "DISCOVERED_UNQUALIFIED",
-      "migration_status": "PENDING_EXPLICIT_DISPOSITION",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "opaque retention and unsupported-operation refusal only"
+      ],
+      "test_evidence": [
+        "test_contracts.ContractTests.test_unimplemented_runtime_families_have_no_generic_builder"
+      ],
+      "support_level": "DISCOVERED_UNQUALIFIED",
+      "limitations": "Discovery retained explicitly. No generic builder, native/lifecycle rendering, or runtime qualification; preserve unknown owners or refuse the edit.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "U05",
       "feature": "Multilingual state rendering",
       "legacy_evidence": "upstream specialized builders, not generic qualified tools",
       "required_disposition": "DISCOVERED_UNQUALIFIED",
-      "migration_status": "PENDING_EXPLICIT_DISPOSITION",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "opaque retention and unsupported-operation refusal only"
+      ],
+      "test_evidence": [
+        "test_contracts.ContractTests.test_unimplemented_runtime_families_have_no_generic_builder"
+      ],
+      "support_level": "DISCOVERED_UNQUALIFIED",
+      "limitations": "Discovery retained explicitly. No generic builder, native/lifecycle rendering, or runtime qualification; preserve unknown owners or refuse the edit.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "U06",
       "feature": "System menu datetime brightness keypad",
       "legacy_evidence": "upstream specialized builders, not generic qualified tools",
       "required_disposition": "DISCOVERED_UNQUALIFIED",
-      "migration_status": "PENDING_EXPLICIT_DISPOSITION",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "opaque retention and unsupported-operation refusal only"
+      ],
+      "test_evidence": [
+        "test_contracts.ContractTests.test_unimplemented_runtime_families_have_no_generic_builder"
+      ],
+      "support_level": "DISCOVERED_UNQUALIFIED",
+      "limitations": "Discovery retained explicitly. No generic builder, native/lifecycle rendering, or runtime qualification; preserve unknown owners or refuse the edit.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "U07",
       "feature": "Popup open close and leave cleanup",
       "legacy_evidence": "upstream specialized builders, not generic qualified tools",
       "required_disposition": "DISCOVERED_UNQUALIFIED",
-      "migration_status": "PENDING_EXPLICIT_DISPOSITION",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "opaque retention and unsupported-operation refusal only"
+      ],
+      "test_evidence": [
+        "test_contracts.ContractTests.test_unimplemented_runtime_families_have_no_generic_builder"
+      ],
+      "support_level": "DISCOVERED_UNQUALIFIED",
+      "limitations": "Discovery retained explicitly. No generic builder, native/lifecycle rendering, or runtime qualification; preserve unknown owners or refuse the edit.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "U08",
       "feature": "S7 DB mapping and relocation",
       "legacy_evidence": "upstream specialized builders, not generic qualified tools",
       "required_disposition": "DISCOVERED_UNQUALIFIED",
-      "migration_status": "PENDING_EXPLICIT_DISPOSITION",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "opaque retention and unsupported-operation refusal only"
+      ],
+      "test_evidence": [
+        "test_contracts.ContractTests.test_unimplemented_runtime_families_have_no_generic_builder"
+      ],
+      "support_level": "DISCOVERED_UNQUALIFIED",
+      "limitations": "Discovery retained explicitly. No generic builder, native/lifecycle rendering, or runtime qualification; preserve unknown owners or refuse the edit.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {
       "id": "U09",
       "feature": "SVG icon rasterization and custom process assets",
       "legacy_evidence": "upstream specialized builders, not generic qualified tools",
       "required_disposition": "DISCOVERED_UNQUALIFIED",
-      "migration_status": "PENDING_EXPLICIT_DISPOSITION",
-      "implementation": null,
-      "test_evidence": null
+      "migration_status": "BACKEND_DISPOSITION_VERIFIED",
+      "implementation": [
+        "opaque retention and unsupported-operation refusal only"
+      ],
+      "test_evidence": [
+        "test_contracts.ContractTests.test_unimplemented_runtime_families_have_no_generic_builder"
+      ],
+      "support_level": "DISCOVERED_UNQUALIFIED",
+      "limitations": "Discovery retained explicitly. No generic builder, native/lifecycle rendering, or runtime qualification; preserve unknown owners or refuse the edit.",
+      "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     }
   ],
   "legacy_tools": [
     {
       "name": "open_project",
-      "status": "MAPPING_PENDING",
-      "replacement": null
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "open_project",
+      "limitations": "Immutable hash-pinned source/profile."
     },
     {
       "name": "list_screens",
-      "status": "MAPPING_PENDING",
-      "replacement": null
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "inspect: screens",
+      "limitations": "Actual screen identity."
     },
     {
       "name": "layout",
-      "status": "MAPPING_PENDING",
-      "replacement": null
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "inspect: layout",
+      "limitations": "Source geometry/order."
     },
     {
       "name": "element",
-      "status": "MAPPING_PENDING",
-      "replacement": null
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "inspect: element",
+      "limitations": "Page ID plus screen-local identity."
     },
     {
       "name": "find",
-      "status": "MAPPING_PENDING",
-      "replacement": null
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "inspect: find",
+      "limitations": "Read-only text search."
     },
     {
       "name": "addresses",
-      "status": "MAPPING_PENDING",
-      "replacement": null
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "inspect: addresses",
+      "limitations": "All owners and roles."
     },
     {
       "name": "macros",
-      "status": "MAPPING_PENDING",
-      "replacement": null
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "inspect: macros",
+      "limitations": "Counted records; runtime unqualified."
     },
     {
       "name": "alarms",
-      "status": "MAPPING_PENDING",
-      "replacement": null
+      "status": "PRESERVED_ONLY_DISCOVERY",
+      "replacement": "inspect: alarms",
+      "limitations": "Discovery/preserved-only raw record inventory; no alarm/history engine."
     },
     {
       "name": "set_property",
-      "status": "MAPPING_PENDING",
-      "replacement": null
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "plan_changes: set_property",
+      "limitations": "Qualified existing visual fields only."
     },
     {
       "name": "set_text",
-      "status": "MAPPING_PENDING",
-      "replacement": null
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "plan_changes: set_text",
+      "limitations": "Counted Unicode caption/description."
     },
     {
       "name": "rebind",
-      "status": "MAPPING_PENDING",
-      "replacement": null
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "plan_changes: rebind",
+      "limitations": "Exact owner/address/type/access."
     },
     {
       "name": "pending_changes",
-      "status": "MAPPING_PENDING",
-      "replacement": null
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "diff",
+      "limitations": "Read exact pending/applied diff state; no source mutation."
     },
     {
       "name": "save",
-      "status": "MAPPING_PENDING",
-      "replacement": null
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "save_as",
+      "limitations": "New-only authorized output plus reread/diff."
     },
     {
       "name": "screenshot_text",
-      "status": "MAPPING_PENDING",
-      "replacement": null
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "inspect: text",
+      "limitations": "Coordinate text projection, not screenshot."
     },
     {
       "name": "clone_element",
-      "status": "MAPPING_PENDING",
-      "replacement": null
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "plan_changes: clone_element",
+      "limitations": "Pinned donor and explicit inherited fields."
     },
     {
       "name": "clone_screen",
-      "status": "MAPPING_PENDING",
-      "replacement": null
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "plan_changes: clone_screen",
+      "limitations": "Pinned frame/full page and reference checks."
     },
     {
       "name": "delete_element",
-      "status": "MAPPING_PENDING",
-      "replacement": null
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "plan_changes: delete_element",
+      "limitations": "Exact nonnegative identity."
     },
     {
       "name": "set_state_text",
-      "status": "MAPPING_PENDING",
-      "replacement": null
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "plan_changes: set_text + state_value",
+      "limitations": "Actual state Value, not list index."
     },
     {
       "name": "editor_windows",
-      "status": "INTENTIONALLY_EXCLUDED_GUI",
-      "replacement": null
+      "status": "INTENTIONALLY_EXCLUDED",
+      "replacement": null,
+      "limitations": "Editor/Computer Use operations are outside file-only authorization."
     },
     {
       "name": "close_in_editor",
-      "status": "INTENTIONALLY_EXCLUDED_GUI",
-      "replacement": null
+      "status": "INTENTIONALLY_EXCLUDED",
+      "replacement": null,
+      "limitations": "Editor/Computer Use operations are outside file-only authorization."
     },
     {
       "name": "open_in_editor",
-      "status": "INTENTIONALLY_EXCLUDED_GUI",
-      "replacement": null
+      "status": "INTENTIONALLY_EXCLUDED",
+      "replacement": null,
+      "limitations": "Editor/Computer Use operations are outside file-only authorization."
     },
     {
       "name": "reload_in_editor",
-      "status": "INTENTIONALLY_EXCLUDED_GUI",
-      "replacement": null
+      "status": "INTENTIONALLY_EXCLUDED",
+      "replacement": null,
+      "limitations": "Editor/Computer Use operations are outside file-only authorization."
     }
   ],
   "excluded_save_options": [
     "overwrite_source",
     "reload_editor"
   ],
-  "final_omission_review": "PENDING_AFTER_IMPLEMENTATION"
+  "final_omission_review": "PENDING_AFTER_IMPLEMENTATION",
+  "backend_source": "components/dop_100/docs/SUPPORT_MATRIX.json@0.1.1"
 }

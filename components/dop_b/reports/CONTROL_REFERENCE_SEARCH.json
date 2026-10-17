@@ -1,0 +1,320 @@
+{
+  "scope": "PRIMARY_REFERENCE_SEARCH_NOT_NATIVE_QUALIFICATION",
+  "source_revision": "59a8ba76e3d1e50e57f2937f96f6ba320ede63329b4452e6c20febf803e8827d",
+  "examples": [
+    {
+      "sample": "B_creator_dosing",
+      "primary_creator_repo": "ismaelfari1996/hmi-simulacion-dosificador",
+      "git_tree": "aa8684c51dcd4372d6dc7d274d7cf7a51a7d94d1",
+      "native_file": "Dosificador.dps",
+      "source_url": "https://raw.githubusercontent.com/ismaelfari1996/hmi-simulacion-dosificador/aa8684c51dcd4372d6dc7d274d7cf7a51a7d94d1/Dosificador.dps",
+      "source_sha256": "07d90a3900cb86e994b55a467f594809e4ffe1e0681f329d205ff26b3b688f90",
+      "bytes": 71189,
+      "observed_target": {
+        "Version": "4.00.07.04",
+        "PanelSeries": "DOP-B series",
+        "PanelName": "DOP-B03E211 65536 Colors",
+        "ModelName": "-1107091184"
+      },
+      "observed_type_counts": [
+        {
+          "type": "1",
+          "subtype": "10",
+          "count": 8
+        },
+        {
+          "type": "1",
+          "subtype": "3",
+          "count": 3
+        },
+        {
+          "type": "1",
+          "subtype": "4",
+          "count": 12
+        },
+        {
+          "type": "10",
+          "subtype": "1",
+          "count": 2
+        },
+        {
+          "type": "10",
+          "subtype": "2",
+          "count": 9
+        },
+        {
+          "type": "10",
+          "subtype": "6",
+          "count": 25
+        },
+        {
+          "type": "12",
+          "subtype": "11",
+          "count": 1
+        },
+        {
+          "type": "12",
+          "subtype": "4",
+          "count": 1
+        },
+        {
+          "type": "12",
+          "subtype": "8",
+          "count": 1
+        },
+        {
+          "type": "13",
+          "subtype": "1",
+          "count": 4
+        },
+        {
+          "type": "14",
+          "subtype": "2",
+          "count": 4
+        },
+        {
+          "type": "14",
+          "subtype": "4",
+          "count": 2
+        },
+        {
+          "type": "14",
+          "subtype": "5",
+          "count": 4
+        },
+        {
+          "type": "14",
+          "subtype": "6",
+          "count": 4
+        },
+        {
+          "type": "14",
+          "subtype": "7",
+          "count": 5
+        },
+        {
+          "type": "5",
+          "subtype": "1",
+          "count": 4
+        },
+        {
+          "type": "7",
+          "subtype": "1",
+          "count": 1
+        },
+        {
+          "type": "9",
+          "subtype": "1",
+          "count": 4
+        }
+      ],
+      "asset_output": "NOT_CREATED",
+      "semantic_qualification": "UNVERIFIED",
+      "vendor": "NOT_RUN",
+      "physical": "NOT_RUN",
+      "native_inventory": "READONLY_PASS",
+      "pages": 9,
+      "owners": 94,
+      "decisive_gap": "No Type6 numeric input; basic Type1/Sub1/Sub2 absent; Type3/4 labels are not property/runtime proof; aliases need authorized alias table and driver contract",
+      "vendor_executable_build": "UNVERIFIED"
+    },
+    {
+      "sample": "B_creator_legacy_modbus",
+      "primary_creator_repo": "aetcnc/Arduino_DeltaHMI_RS485",
+      "git_tree": "de1c1befa7db729102d9767bbe7d69e550360779",
+      "native_file": "Arduino VSD 12 Dec 13.dps",
+      "source_url": "https://raw.githubusercontent.com/aetcnc/Arduino_DeltaHMI_RS485/de1c1befa7db729102d9767bbe7d69e550360779/Arduino%20VSD%2012%20Dec%2013.dps",
+      "source_sha256": "a97dc054f9804c8ff2d798ea784d5708cdeb61ce57dbc5e6fc2e7ed743b81afc",
+      "bytes": 95497,
+      "observed_target": {
+        "Version": "3.01.08.10",
+        "PanelSeries": "DOP-B series",
+        "PanelName": "DOP-B07E515 65536 Colors",
+        "ModelName": "-1106816944"
+      },
+      "observed_type_counts": [
+        {
+          "type": "1",
+          "subtype": "5",
+          "count": 5
+        },
+        {
+          "type": "10",
+          "subtype": "2",
+          "count": 1
+        },
+        {
+          "type": "10",
+          "subtype": "6",
+          "count": 7
+        },
+        {
+          "type": "16",
+          "subtype": "1",
+          "count": 1
+        },
+        {
+          "type": "2",
+          "subtype": "1",
+          "count": 3
+        },
+        {
+          "type": "4",
+          "subtype": "1",
+          "count": 1
+        },
+        {
+          "type": "5",
+          "subtype": "1",
+          "count": 3
+        }
+      ],
+      "asset_output": "NOT_CREATED",
+      "semantic_qualification": "UNVERIFIED",
+      "vendor": "NOT_RUN",
+      "physical": "NOT_RUN",
+      "native_inventory": "REFUSED",
+      "error_code": "MISSING_NATIVE_FIELD",
+      "error_context": {
+        "section": "Element",
+        "field": "nPartsID"
+      },
+      "decisive_gap": "Legacy source has no stable nPartsID owners; must not invent vendor IDs or promote Type1/Sub5 multistate controls to four named bit button behaviors",
+      "vendor_executable_build": "UNVERIFIED"
+    },
+    {
+      "sample": "100_creator_external_numeric",
+      "primary_creator_repo": "T-Richman/PLC_Factory_Projects",
+      "git_tree": "96bd5b32abb437a235a94c610236b5075afe22e7",
+      "native_file": "HMI_2.dpa",
+      "source_url": "https://raw.githubusercontent.com/T-Richman/PLC_Factory_Projects/96bd5b32abb437a235a94c610236b5075afe22e7/HMI_2.dpa",
+      "source_sha256": "eb40ba20b063226e44925feed961fe010fd0eb24b9fb5674e843f3fe846e5f46",
+      "bytes": 117746,
+      "observed_target": {
+        "Version": "4.00.16.30",
+        "PanelSeries": "DOP-100 series",
+        "PanelName": "DOP-107WV 65536 Colors",
+        "ModelName": "268502784"
+      },
+      "observed_type_counts": [
+        {
+          "type": "1",
+          "subtype": "3",
+          "count": 2
+        },
+        {
+          "type": "1",
+          "subtype": "4",
+          "count": 2
+        },
+        {
+          "type": "10",
+          "subtype": "6",
+          "count": 11
+        },
+        {
+          "type": "16",
+          "subtype": "1",
+          "count": 1
+        },
+        {
+          "type": "2",
+          "subtype": "1",
+          "count": 4
+        },
+        {
+          "type": "5",
+          "subtype": "1",
+          "count": 6
+        },
+        {
+          "type": "6",
+          "subtype": "1",
+          "count": 3
+        }
+      ],
+      "asset_output": "NOT_CREATED",
+      "semantic_qualification": "UNVERIFIED",
+      "vendor": "NOT_RUN",
+      "physical": "NOT_RUN",
+      "native_inventory": "READONLY_PASS",
+      "pages": 1,
+      "owners": 29,
+      "external_numeric_observation": {
+        "owner": "1/23",
+        "owner_sha256": "099dd0b6b9b7d7a3d5eb3258572036e7e70c1b1f4f63ed6b9751b118f9a0d266",
+        "read": {
+          "address": "None",
+          "link": "1",
+          "mem_type": "0"
+        },
+        "write": {
+          "address": "{Link2}1@D1",
+          "link": "1",
+          "mem_type": "0"
+        },
+        "observed_fields": {
+          "Type": "6",
+          "SubType": "1",
+          "MemLen": "1",
+          "MemFmt": "2",
+          "MinValue": "0",
+          "MaxValue": "9999",
+          "IntNum": "4",
+          "DotNum": "0",
+          "GainValue": "1.0",
+          "OffsetValue": "0.000000"
+        },
+        "primitive_type": "UNVERIFIED",
+        "write_permission": "UNVERIFIED",
+        "DOP_B_evidence": false,
+        "DIAScreen_mandatory_profile_evidence": false
+      },
+      "vendor_executable_build": "UNVERIFIED"
+    }
+  ],
+  "manufacturer_model_identity": {
+    "distribution": "DOPSoft 2.00.07 PanelList.ini",
+    "file_sha256": "1138879e519d1da1a1a295ce67aa4f4a62b7c98dd2e0af5af74c81aef5f5903f",
+    "model": "DOP-B07S411",
+    "model_id": "2953265424",
+    "hex_model_id": "B0074110",
+    "resolution": [
+      800,
+      480
+    ],
+    "scope": "MODEL_CONFIGURATION_OBSERVATION_ONLY",
+    "controls_qualified": false
+  },
+  "other_source_attempts": [
+    {
+      "url": "https://delta-ia-tips.com/wp-content/uploads/2011/03/hmi-dtc-control-example.zip",
+      "archive_sha256": "7cc475fafe34ba216ce6ec60a12f8a0da741112008ff2893af9d35ee219de720",
+      "member": "HMI - DTC control.dpb",
+      "result": "LEGACY_DPB_NOT_DPS2_REFERENCE"
+    },
+    {
+      "url": "https://deltaacdrives.com/Delta-DOP-Example-File.zip",
+      "result": "FETCH_403_NO_BYPASS"
+    }
+  ],
+  "independent_review": {
+    "status": "OBSERVATIONS_REPRODUCED_QUALIFICATION_STILL_OPEN",
+    "source_hashes_match": true,
+    "four_B_behaviors_qualified": false,
+    "typed_external_B_numeric_qualified": false,
+    "safe_unknown_behavior_clone_is_full_goal_progress": false,
+    "additional_D1_display_observation": {
+      "owner": "1/18",
+      "owner_sha256": "d84d0a27afd541b388de8d23f529c05a7b431e066aa1ac28b2d2870cad94aa20",
+      "ReadMemType": "1",
+      "numeric_entry_WriteMemType": "0",
+      "automatic_metadata_transfer_allowed": false
+    },
+    "decisive_next_input": "Vendor-created B DPS2 reference tying four named bit button behaviors and external numeric input/display to exact property/type/driver/owner evidence; model re-selection not required"
+  },
+  "program_writer_complete": false,
+  "emission_authority": false,
+  "next_input": "Vendor-created B DPS2 reference tying four named bit button behaviors and external numeric input/display to exact property/type/driver/owner evidence; model re-selection not required",
+  "source_assets_written_or_redistributed": false
+}

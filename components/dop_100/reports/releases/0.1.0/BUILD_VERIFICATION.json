@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "wheel": {
+    "name": "universal_diascreen_hmi_agent-0.1.0-py3-none-any.whl",
+    "sha256": "b48ddce617dd55b24c0577c9752d18fe5f7a77c5391f58250afba6e710b8c394",
+    "members": 52,
+    "source_modules_exact": true,
+    "license_expression": "Apache-2.0",
+    "license_files_exact": true
+  },
+  "sdist": {
+    "name": "universal_diascreen_hmi_agent-0.1.0.tar.gz",
+    "sha256": "dcf5aaf8b9a976427c16d821210813e2f3617101bdd10613356e5365d0a3b913",
+    "files": 56,
+    "neutral_fixtures_and_docs_present": true
+  },
+  "runtime_dependencies": [],
+  "isolated_install": {
+    "network": false,
+    "dependencies_installed": false,
+    "system_site_packages": false,
+    "python_isolated_flag": true,
+    "module_resolves_inside_venv": true,
+    "actual_stdio_mutation_save_rollback": "PASS",
+    "installed_tests": 8,
+    "source_unchanged": true
+  },
+  "python_runtime": "3.14.0",
+  "python311_syntax": "PASS_ONLY_NOT_RUNTIME_EXECUTED",
+  "vendor_compile": "NOT_RUN",
+  "panel_runtime": "NOT_RUN"
+}

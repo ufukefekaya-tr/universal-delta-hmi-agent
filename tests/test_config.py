@@ -4,7 +4,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from delta_hmi.config import ConfigurationError, GatewayConfig, PACKAGES, read_json, sha256, tree_files, tree_sha256
+from delta_hmi.config import ConfigurationError, GatewayConfig, FAMILIES, PACKAGES, read_json, sha256, tree_files, tree_sha256
 
 
 def make_config(base, families=("dop_b", "dop_100")):
@@ -21,7 +21,7 @@ def make_config(base, families=("dop_b", "dop_100")):
         python.write_bytes(b"fixture interpreter")
         for kind in ("workspace", "profiles", "state"):
             (base / family / kind).mkdir()
-        (base / family / "profiles" / "sample.json").write_text(json.dumps({"id": "sample", "family": {"dop_b": "delta_dopsoft2", "dop_100": "delta_diascreen"}[family]}), encoding="utf8")
+        (base / family / "profiles" / "sample.json").write_text(json.dumps({"id": "sample", "family": FAMILIES[family]}), encoding="utf8")
         manifest = base / family / "source.json"
         manifest.write_text(json.dumps({"package_prefix": "runtime/site-packages/" + PACKAGES[family], "import_roots": ["runtime"], "files": [{"path": "runtime/" + name, "sha256": digest} for name, digest in tree_files(root / "runtime").items()]}), encoding="utf8")
         entries[family] = {"enabled": True, "root": f"{family}/backend", "python": f"{family}/backend/runtime/python", "python_sha256": sha256(python), "workspace": f"{family}/workspace", "profiles": f"{family}/profiles", "state": f"{family}/state", "source_manifest": f"{family}/source.json", "source_manifest_sha256": sha256(manifest), "profiles_sha256": tree_sha256(base / family / "profiles")}

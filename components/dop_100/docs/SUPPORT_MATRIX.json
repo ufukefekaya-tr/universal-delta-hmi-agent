@@ -1,0 +1,2312 @@
+{
+  "schema_version": 1,
+  "scope": "Original DIAScreen/DOP-100 file backend only",
+  "inventory_sources": [
+    "shared-feature-checklist",
+    "shared-regression-checklist"
+  ],
+  "acceptance": {
+    "scope": "BOUNDED_OFFLINE_IMPLEMENTATION",
+    "tests": "reports/TEST_RESULTS.json",
+    "build": "reports/BUILD_VERIFICATION.json",
+    "independent_final_review": "reports/FINAL_REVIEW.md",
+    "vendor_compile": "NOT_RUN",
+    "native_pixels": "NOT_ESTABLISHED",
+    "runtime": "NOT_RUN"
+  },
+  "features": [
+    {
+      "id": "D01",
+      "feature": "Native container and unknown byte preservation",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "implementation": [
+        "native.NativeFile",
+        "native.NativeIndex",
+        "native.apply_spans"
+      ],
+      "planned_tests": [
+        "test_native.NativeTests.test_noop_original_container",
+        "test_native.NativeTests.test_unknown_fields_survive_edit"
+      ],
+      "limits": "Bounded source spans and complete unknown-byte retention; exact source/profile only.",
+      "known_history": "upstream codec/document",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist"
+      ]
+    },
+    {
+      "id": "D02",
+      "feature": "Application model resolution controller metadata",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "implementation": [
+        "native.Project.info"
+      ],
+      "planned_tests": [
+        "test_session.SessionTests.test_profile_mismatch_and_profile_mutation"
+      ],
+      "limits": "Serialized model/version/resolution metadata is not editor execution evidence.",
+      "known_history": "upstream model",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist"
+      ]
+    },
+    {
+      "id": "D03",
+      "feature": "Screen element state geometry text address inventory",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "implementation": [
+        "native.Project",
+        "session.inspect"
+      ],
+      "planned_tests": [
+        "test_session.SessionTests.test_inspect_before_plan_and_pins"
+      ],
+      "limits": "Inventory is not qualification of every native type.",
+      "known_history": "upstream model/MCP",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist"
+      ]
+    },
+    {
+      "id": "D04",
+      "feature": "Project find and coordinate-ordered text layout",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "implementation": [
+        "session.inspect"
+      ],
+      "planned_tests": [
+        "test_plan_review.PlanReviewTests.test_coordinate_layout_text_order_preserves_render_layers",
+        "test_plan_review.PlanReviewTests.test_sort_invalid_or_unrelated_views_refused",
+        "test_plan_review.PlanReviewTests.test_stdio_readonly_proposal_review_and_discovery_schemas"
+      ],
+      "limits": "Default native layer order; optional coordinate projection uses native page order, Y, X, layer_index. Only layout/text; never changes native/render z-order or establishes a vendor screenshot.",
+      "known_history": "upstream find/screenshot_text",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist"
+      ]
+    },
+    {
+      "id": "D05",
+      "feature": "All address owners including trigger interlock visible unit dot and macros",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "implementation": [
+        "operations.address_inventory"
+      ],
+      "planned_tests": [
+        "test_operations.OperationTests.test_r10_all_indexed_address_owners_and_trigger"
+      ],
+      "limits": "Trigger/interlock/visible/unit/dot and macro owners; unknown roles stay unqualified.",
+      "known_history": "N003,N009-N016",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n003-manifest",
+        "history-n009-manifest",
+        "history-n016-manifest"
+      ]
+    },
+    {
+      "id": "D06",
+      "feature": "Donor clone with fresh IDs geometry target page and z-order",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "implementation": [
+        "operations.operation_patches:clone_element",
+        "operations.operation_patches:reorder_element"
+      ],
+      "planned_tests": [
+        "test_operations.OperationTests.test_clone_unique_fresh_identity_geometry_and_reorder"
+      ],
+      "limits": "Pinned donor, fresh identities, explicit inheritance and complete order.",
+      "known_history": "N002,N003",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n002-manifest",
+        "history-n003-manifest"
+      ]
+    },
+    {
+      "id": "D07",
+      "feature": "Screen creation clone deletion and navigation reference checks",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "implementation": [
+        "operations.operation_patches:clone_screen",
+        "operations.validate_references"
+      ],
+      "planned_tests": [
+        "test_operations.OperationTests.test_screen_frame_clone_delete_and_navigation_guards"
+      ],
+      "limits": "Explicit frame/full donors and complete default/navigation references.",
+      "known_history": "upstream edit/MCP",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist"
+      ]
+    },
+    {
+      "id": "D08",
+      "feature": "Turkish UTF16 state captions language fields descriptions",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "implementation": [
+        "native.encode_token",
+        "operations.operation_patches:set_text"
+      ],
+      "planned_tests": [
+        "test_native.NativeTests.test_counted_unicode",
+        "test_operations.OperationTests.test_r12_turkish_caption_and_long_unicode"
+      ],
+      "limits": "Counted UTF-16; no silent Latin1 fallback.",
+      "known_history": "N004,N016",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n004-manifest",
+        "history-n016-manifest"
+      ]
+    },
+    {
+      "id": "D09",
+      "feature": "Native geometry font alignment fill border",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "implementation": [
+        "operations.ELEMENT_VISUAL",
+        "operations.STATE_VISUAL"
+      ],
+      "planned_tests": [
+        "test_operations.OperationTests.test_visual_geometry_and_full_inverse"
+      ],
+      "limits": "Qualified existing fields only; preserve functional owners.",
+      "known_history": "N003,N004,N015,N016",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n003-manifest",
+        "history-n004-manifest",
+        "history-n015-manifest",
+        "history-n016-manifest"
+      ]
+    },
+    {
+      "id": "D10",
+      "feature": "DIB background and offset decode; remove duplicate background text",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "implementation": [
+        "resources.flat_dib",
+        "preview.decode_dib"
+      ],
+      "planned_tests": [
+        "test_preview.PreviewTests.test_dib_channel_stride_orientation_and_32bit_unused_alpha",
+        "test_operations.OperationTests.test_flat_background_has_real_page_offset_and_no_old_text"
+      ],
+      "limits": "Text-free background append and actual page offsets; no bitmap controls.",
+      "known_history": "N004 background regression",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n004-manifest"
+      ]
+    },
+    {
+      "id": "D11",
+      "feature": "Picture bank encode append import copy prune",
+      "historical_disposition": "DISCOVERED_UNQUALIFIED",
+      "support_level": "DISCOVERED_UNQUALIFIED",
+      "implementation": [
+        "resources.resource",
+        "native.NativeIndex opaque retention"
+      ],
+      "planned_tests": [
+        "test_contracts.ContractTests.test_picture_bank_import_copy_and_prune_refused"
+      ],
+      "limits": "General picture import/copy/prune/codecs are absent; preserve or refuse.",
+      "known_history": "upstream picbank and asset scripts",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist"
+      ]
+    },
+    {
+      "id": "D12",
+      "feature": "Momentary maintained set-on set-off and navigation behaviors",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "implementation": [
+        "operations.operation_patches:button_behavior",
+        "operations.operation_patches:navigation"
+      ],
+      "planned_tests": [
+        "test_operations.OperationTests.test_r14_real_behavior_codes_and_value_text"
+      ],
+      "limits": "Explicit source-qualified behavior contracts; no universal enum guess.",
+      "known_history": "N006 vendor-corrected subtype contract",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n006-buttons-manifest",
+        "history-n006-time-interface-manifest"
+      ]
+    },
+    {
+      "id": "D13",
+      "feature": "Value0/1 text color and request versus feedback",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "implementation": [
+        "preview state selection",
+        "operations.state"
+      ],
+      "planned_tests": [
+        "test_preview.PreviewTests.test_actual_value_selection_commands_and_no_unknown_fallback",
+        "test_preview.PreviewTests.test_shared_address_fixture_conflict_and_numeric_cases"
+      ],
+      "limits": "Use actual Value; request readback is not physical feedback.",
+      "known_history": "N004,N006,N013,N016",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n004-manifest",
+        "history-n006-buttons-manifest",
+        "history-n006-time-interface-manifest",
+        "history-n013-manifest",
+        "history-n016-manifest"
+      ]
+    },
+    {
+      "id": "D14",
+      "feature": "Mode selection opposite-bit macros; non-atomic semantics",
+      "historical_disposition": "SOURCE_BOUND_UNQUALIFIED",
+      "support_level": "CONTRACT_ONLY",
+      "implementation": [
+        "macros.MacroProgram",
+        "no atomic mode controller"
+      ],
+      "planned_tests": [
+        "test_contracts.ContractTests.test_atomic_mode_and_automatic_reconnect_replay_are_not_supplied"
+      ],
+      "limits": "Opposite-bit cleanup plus another write is non-atomic.",
+      "known_history": "N006,N009,N011,N014",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n006-buttons-manifest",
+        "history-n006-time-interface-manifest",
+        "history-n009-manifest",
+        "history-n011-manifest",
+        "history-n014-manifest"
+      ]
+    },
+    {
+      "id": "D15",
+      "feature": "Numeric type width decimals digits limits scale offset and units",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "implementation": [
+        "operations.numeric_changes",
+        "operations.operation_patches:numeric"
+      ],
+      "planned_tests": [
+        "test_operations.OperationTests.test_r15_limits_explicit_and_no_float_extremes_or_time_alias"
+      ],
+      "limits": "Explicit type/width/digits/decimals/limits/gain/offset and separate unit owners.",
+      "known_history": "N003,N005,N007",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n003-manifest",
+        "history-n005-manifest",
+        "history-n007-manifest"
+      ]
+    },
+    {
+      "id": "D16",
+      "feature": "Numeric literal limit overflow and digit-fit regression",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "implementation": [
+        "operations.numeric_changes",
+        "preview numeric formatting"
+      ],
+      "planned_tests": [
+        "test_operations.OperationTests.test_r15_limits_explicit_and_no_float_extremes_or_time_alias",
+        "test_preview.PreviewTests.test_numeric_exponent_is_bounded"
+      ],
+      "limits": "No guessed limits, overflow or insufficient digits; narrowing changes behavior.",
+      "known_history": "N005,N016",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n005-manifest",
+        "history-n016-manifest"
+      ]
+    },
+    {
+      "id": "D17",
+      "feature": "Explicit separate TIME-to-ms PLC interface; no silent coercion",
+      "historical_disposition": "CONTRACT_ONLY",
+      "support_level": "CONTRACT_ONLY",
+      "implementation": [
+        "symbols.SymbolCatalog.resolve",
+        "operations.numeric_changes TIME refusal"
+      ],
+      "planned_tests": [
+        "test_symbols.SymbolTests.test_enum_and_time_remain_distinct",
+        "test_operations.OperationTests.test_r15_limits_explicit_and_no_float_extremes_or_time_alias"
+      ],
+      "limits": "Require a real separate millisecond PLC interface; no bridge generation or XML relabel.",
+      "known_history": "N007",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n007-manifest"
+      ]
+    },
+    {
+      "id": "D18",
+      "feature": "Counted embedded DIA XML replace and metadata preservation",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "implementation": [
+        "resources.embedded_xml",
+        "resources.resource_patch",
+        "operations.operation_patches:replace_xml"
+      ],
+      "planned_tests": [
+        "test_native.NativeTests.test_resource_xml_and_exact_metadata",
+        "test_operations.OperationTests.test_xml_preserves_metadata_and_all_dependencies"
+      ],
+      "limits": "Raw-byte count includes BOM; unrelated metadata and suffix survive. Catalog association must match metadata or a noncontradictory reviewed missing-field map. XML updates are additive only; old type/node/member/access/offset shapes cannot be reinterpreted.",
+      "known_history": "N007,N014",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n007-manifest",
+        "history-n014-manifest"
+      ]
+    },
+    {
+      "id": "D19",
+      "feature": "XML nested types structs arrays width and access resolver",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "OFFLINE_TESTED",
+      "implementation": [
+        "symbols.parse_symbols",
+        "symbols.SymbolCatalog.resolve"
+      ],
+      "planned_tests": [
+        "test_symbols.SymbolTests.test_actual_offsets_and_native_padding",
+        "test_symbols.SymbolTests.test_inclusive_array_bounds",
+        "test_symbols.SymbolTests.test_ancestor_access_cannot_be_restored_by_member"
+      ],
+      "limits": "Nested structs/arrays/enums and intersected access; no invented layout/stride.",
+      "known_history": "N016 decoder; design source contract",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n016-manifest"
+      ]
+    },
+    {
+      "id": "D20",
+      "feature": "Exact read/write rebind with typed access validation",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "implementation": [
+        "symbols.validate_reference",
+        "operations.operation_patches:rebind"
+      ],
+      "planned_tests": [
+        "test_symbols.SymbolTests.test_role_specific_read_and_write_permissions",
+        "test_operations.OperationTests.test_r05_exact_rebind_not_prefix"
+      ],
+      "limits": "Exact owner/address, role, link and station; no substring/global replace.",
+      "known_history": "N013",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n013-manifest"
+      ]
+    },
+    {
+      "id": "D21",
+      "feature": "All macro slots counted framing opcode five-fields and tail",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "OFFLINE_TESTED",
+      "implementation": [
+        "macros.parse_macro",
+        "macros.MacroProgram.to_bytes"
+      ],
+      "planned_tests": [
+        "test_macros.MacroTests.test_counted_roundtrip_and_source_with_newlines",
+        "test_macros.MacroTests.test_truncation_lengths_flags_and_trailing_bytes"
+      ],
+      "limits": "02REV/opcode/five counted fields/observed tail; unknown opcodes read-only.",
+      "known_history": "N009,N011,N016",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n009-manifest",
+        "history-n011-manifest",
+        "history-n016-manifest"
+      ]
+    },
+    {
+      "id": "D22",
+      "feature": "Visible statement distinct from parsed macro operands",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "OFFLINE_TESTED",
+      "implementation": [
+        "macros.MacroProgram.replace_operand",
+        "macros.MacroProgram.inspect"
+      ],
+      "planned_tests": [
+        "test_macros.MacroTests.test_exact_operand_replacement_preserves_visible_source",
+        "test_macros.MacroTests.test_legacy_display_operand_can_be_inspected_without_acceptance"
+      ],
+      "limits": "Field0 immutable during operand edits; display-form parsed operands flagged invalid.",
+      "known_history": "N009,N010FAIL,N011",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n009-manifest",
+        "history-n010-manifest",
+        "history-n011-manifest"
+      ]
+    },
+    {
+      "id": "D23",
+      "feature": "Remote macro operand link station Application and type canonicalization",
+      "historical_disposition": "SOURCE_BOUND_UNQUALIFIED",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "implementation": [
+        "macros.parse_parsed_address",
+        "symbols.validate_reference"
+      ],
+      "planned_tests": [
+        "test_macros.MacroTests.test_display_addresses_and_source_statements_are_not_operands",
+        "test_operations.OperationTests.test_macro_slot_type_access_and_visible_source"
+      ],
+      "limits": "Parsed link/station/path syntax differs; Application qualification is not a universal repair.",
+      "known_history": "N009,N011",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n009-manifest",
+        "history-n011-manifest"
+      ]
+    },
+    {
+      "id": "D24",
+      "feature": "Initial clock and button macro add remove preserve",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "implementation": [
+        "operations.operation_patches:clear_macro",
+        "operations.operation_patches:donor_macro"
+      ],
+      "planned_tests": [
+        "test_operations.OperationTests.test_macro_slot_type_access_and_visible_source"
+      ],
+      "limits": "Explicit hash-pinned slot operation; retain all unrelated slots and opaque bytes.",
+      "known_history": "N008,N009,N012",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n008-manifest",
+        "history-n009-manifest",
+        "history-n012-manifest"
+      ]
+    },
+    {
+      "id": "D25",
+      "feature": "BITON BITOFF assignment increment IF ELSE ENDIF from exact donors",
+      "historical_disposition": "SOURCE_BOUND_UNQUALIFIED",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "implementation": [
+        "macros.KNOWN_OPCODES",
+        "operations.operation_patches:donor_macro"
+      ],
+      "planned_tests": [
+        "test_macros.MacroTests.test_unknown_opcode_roundtrips_but_blocks_all_writes",
+        "test_operations.OperationTests.test_macro_slot_type_access_and_visible_source"
+      ],
+      "limits": "Observed BITON/BITOFF/word assignment/add/IF/ELSE/ENDIF exact reuse; no runtime guarantee.",
+      "known_history": "N008,N009 vendor-resaved witnesses",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n008-manifest",
+        "history-n009-manifest"
+      ]
+    },
+    {
+      "id": "D26",
+      "feature": "Other upstream macro instructions including popup arithmetic FMOV FILLASC",
+      "historical_disposition": "DISCOVERED_UNQUALIFIED",
+      "support_level": "DISCOVERED_UNQUALIFIED",
+      "implementation": [
+        "macros.parse_macro unknown opcode retention"
+      ],
+      "planned_tests": [
+        "test_macros.MacroTests.test_unknown_opcode_roundtrips_but_blocks_all_writes"
+      ],
+      "limits": "Other popup/arithmetic/FMOV/FILLASC writers absent; unsupported edits refuse.",
+      "known_history": "upstream macro",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist"
+      ]
+    },
+    {
+      "id": "D27",
+      "feature": "Read-only compiled CIN operand inspection and stale-hash rejection",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "OFFLINE_TESTED",
+      "implementation": [
+        "macros.inspect_compiled"
+      ],
+      "planned_tests": [
+        "test_macros.MacroTests.test_compiled_stale_source_candidate_and_actual_sha_rejected",
+        "test_macros.MacroTests.test_compiled_observation_is_partial_counted_scan"
+      ],
+      "limits": "Caller-linked three-SHA receipt and partial BOOL scan; not full CIN/compiler/runtime acceptance.",
+      "known_history": "N011 inspect_compiled",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n011-manifest"
+      ]
+    },
+    {
+      "id": "D28",
+      "feature": "Heartbeat startup inhibit rollover ownership reconnect contract",
+      "historical_disposition": "ROLLED_BACK_NOT_DEFAULT",
+      "support_level": "ROLLED_BACK_NOT_DEFAULT",
+      "implementation": [
+        "preservation and explicit clear_macro only"
+      ],
+      "planned_tests": [
+        "test_operations.OperationTests.test_r18_clear_global_macro_not_default_reenable"
+      ],
+      "limits": "No automatic heartbeat/startup/ownership/reconnect macro regeneration.",
+      "known_history": "N008 then N012 rollback",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n008-manifest",
+        "history-n012-manifest"
+      ]
+    },
+    {
+      "id": "D29",
+      "feature": "Draft versus drive-read freshness read/apply terminal result contract",
+      "historical_disposition": "CONTRACT_ONLY",
+      "support_level": "CONTRACT_ONLY",
+      "implementation": [
+        "external transaction roles",
+        "generic read-only primitives"
+      ],
+      "planned_tests": [
+        "test_status.StatusTests.test_transfer_draft_fresh_readback_terminal_result_distinct"
+      ],
+      "limits": "Draft/readback/freshness/terminal result need a target-owned contract; no dispatcher.",
+      "known_history": "N008 runtime plan",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n008-manifest"
+      ]
+    },
+    {
+      "id": "D30",
+      "feature": "Current fault view code family source catalog unknown fallback",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "CONTRACT_ONLY",
+      "implementation": [
+        "typed read-only numeric/text primitives",
+        "contracts.evaluate_status (synthetic-only, no PLC polling)"
+      ],
+      "planned_tests": [
+        "test_status.StatusTests.test_r19_active_fault_zero_and_unknown_raw_never_healthy"
+      ],
+      "limits": "Active/family/source/raw-code roles; no alarm/history engine or healthy sparse default.",
+      "known_history": "N014",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n014-manifest"
+      ]
+    },
+    {
+      "id": "D31",
+      "feature": "Reference latch versus physical home and start permit roles",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "CONTRACT_ONLY",
+      "implementation": [
+        "read-only typed symbol roles"
+      ],
+      "planned_tests": [
+        "test_status.StatusTests.test_reference_latch_separate_from_sensor_and_start_permission"
+      ],
+      "limits": "Reference latch/home/start permit are distinct external signals.",
+      "known_history": "N014,N015,N016",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n014-manifest",
+        "history-n015-manifest",
+        "history-n016-manifest"
+      ]
+    },
+    {
+      "id": "D32",
+      "feature": "Drive request ACK status freshness frequency raw fault roles",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "CONTRACT_ONLY",
+      "implementation": [
+        "read-only roles and saved-layer fixtures"
+      ],
+      "planned_tests": [
+        "test_status.StatusTests.test_drive_request_ack_fresh_status_frequency_not_conflated"
+      ],
+      "limits": "Request/ACK/status/freshness/frequency/raw fault differ; cache is not transport validity.",
+      "known_history": "N014 drive telemetry",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n014-manifest"
+      ]
+    },
+    {
+      "id": "D33",
+      "feature": "Compact current-fault strip and read-only service navigation",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "implementation": [
+        "operations navigation/text/style primitives"
+      ],
+      "planned_tests": [
+        "test_operations.OperationTests.test_r21_style_only_preserves_controls_bindings_macro_xml_unknown"
+      ],
+      "limits": "Qualified source owners only; no invented fault reset/ACK/history side effects.",
+      "known_history": "N015,N016",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n015-manifest",
+        "history-n016-manifest"
+      ]
+    },
+    {
+      "id": "D34",
+      "feature": "Two sequential aesthetic reviews preview approval style-only plan",
+      "historical_disposition": "WORKFLOW_REQUIRED",
+      "support_level": "WORKFLOW_REQUIRED",
+      "implementation": [
+        "contracts.validate_aesthetic_receipts",
+        "docs/WORKFLOW.md",
+        "session.preview/validate exact plan_sha256 readonly selection"
+      ],
+      "planned_tests": [
+        "test_status.StatusTests.test_sequential_visual_reviews_challenge_first_and_producer",
+        "test_plan_review.PlanReviewTests.test_proposal_caption_sha_and_readonly_state",
+        "test_plan_review.PlanReviewTests.test_gallery_uses_proposed_background_profile",
+        "test_plan_review.PlanReviewTests.test_stdio_readonly_proposal_review_and_discovery_schemas"
+      ],
+      "limits": "Two sequential aesthetic reviews and approval bind exact proposal/candidate; runtime separate. Version0.1.0 preapply preview claim withdrawn by DIA-R2;0.1.1 explicitly selects a pending proposal.",
+      "known_history": "N016",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n016-manifest"
+      ]
+    },
+    {
+      "id": "D35",
+      "feature": "Saved layer render font cmap fit occlusion actual backgrounds",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "implementation": [
+        "preview.render_preview",
+        "preview.FontFace"
+      ],
+      "planned_tests": [
+        "test_preview.PreviewTests.test_metrics_missing_glyph_overflow_and_occlusion",
+        "test_preview.PreviewTests.test_all_states_checked_not_only_selected"
+      ],
+      "limits": "Actual DIB/layers/states plus supplied font metrics/cmap; absent metrics never fit PASS.",
+      "known_history": "N016 visual_check",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n016-manifest"
+      ]
+    },
+    {
+      "id": "D36",
+      "feature": "Range state long-text sample galleries clearly marked examples",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "implementation": [
+        "preview.render_gallery"
+      ],
+      "planned_tests": [
+        "test_preview.PreviewTests.test_shared_address_fixture_conflict_and_numeric_cases",
+        "test_preview.PreviewTests.test_offline_label_escape_no_font_claim_and_source_preserved"
+      ],
+      "limits": "Synthetic long/range/state examples labelled; shared-address fixture conflicts refuse.",
+      "known_history": "N004,N014,N016",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n004-manifest",
+        "history-n014-manifest",
+        "history-n016-manifest"
+      ]
+    },
+    {
+      "id": "D37",
+      "feature": "Inverse byte diff restoring allowed changes equals entire original",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "implementation": [
+        "native.restore_spans",
+        "operations.compile_changes"
+      ],
+      "planned_tests": [
+        "test_native.NativeTests.test_patch_precondition_and_overlap",
+        "test_session.SessionTests.test_multiple_approved_plans_inverse"
+      ],
+      "limits": "Reverse every exact ledger to recover whole payload and thumbnail.",
+      "known_history": "N013-N016",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n013-manifest",
+        "history-n016-manifest"
+      ]
+    },
+    {
+      "id": "D38",
+      "feature": "Source plan codec hashes inspect-before-apply idempotency new-only save",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "implementation": [
+        "session plan/authorization/save lifecycle"
+      ],
+      "planned_tests": [
+        "test_session.SessionTests.test_actual_apply_save_reread_diff_rollback_and_source"
+      ],
+      "limits": "Inspect before apply; exact authorization/hashes/replay protection/new-only save.",
+      "known_history": "N002-N016 wrappers",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n002-manifest",
+        "history-n016-manifest"
+      ]
+    },
+    {
+      "id": "D39",
+      "feature": "Real stdio mutation/result tests not only tool discovery",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "implementation": [
+        "cli JSON-RPC stdio dispatch"
+      ],
+      "planned_tests": [
+        "test_stdio.StdioTests.test_real_process_mutation_not_only_discovery"
+      ],
+      "limits": "Actual isolated stdio mutation/reread required; tools/list is insufficient.",
+      "known_history": "native wrapper clients",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist"
+      ]
+    },
+    {
+      "id": "D40",
+      "feature": "Source isolation scope manifests checkpoints Kaizen retractions",
+      "historical_disposition": "WORKFLOW_REQUIRED",
+      "support_level": "WORKFLOW_REQUIRED",
+      "implementation": [
+        "AGENTS.md",
+        "SYSTEM_PROMPT.md",
+        "tools/session_guard.py",
+        "docs/PROVENANCE.md"
+      ],
+      "planned_tests": [
+        "test_release.ReleaseTests.test_current_inventory_and_public_privacy"
+      ],
+      "limits": "Read-only sources, exact owners, root checkpoint, scoped commit and retractions.",
+      "known_history": "N001-N016",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n016-manifest"
+      ]
+    },
+    {
+      "id": "D41",
+      "feature": "Canonical design/tag ledger CSV mapping and operator preview",
+      "historical_disposition": "CONTRACT_ONLY",
+      "support_level": "CONTRACT_ONLY",
+      "implementation": [
+        "contracts.design_ledger",
+        "session.inspect(view=design)"
+      ],
+      "planned_tests": [
+        "test_status.StatusTests.test_design_csv_is_native_reference_not_vendor_import"
+      ],
+      "limits": "Object count differs from unique tags; CSV/HTML are references, not native import.",
+      "known_history": "design revisions010-013",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "planning-conversation-109-turns",
+        "design-r010-manifest",
+        "design-r011-manifest",
+        "design-r012-manifest",
+        "design-r013-manifest"
+      ]
+    },
+    {
+      "id": "D42",
+      "feature": "Missing-tag disabled placeholder no invented feedback/counters",
+      "historical_disposition": "WORKFLOW_REQUIRED",
+      "support_level": "WORKFLOW_REQUIRED",
+      "implementation": [
+        "symbols missing-path refusal",
+        "preview unknown-value refusal"
+      ],
+      "planned_tests": [
+        "test_symbols.SymbolTests.test_scalar_index_and_unindexed_array_traversal_rejected",
+        "test_contracts.ContractTests.test_missing_tag_is_not_invented_feedback_or_a_polling_counter"
+      ],
+      "limits": "Missing tags disabled/unknown; no polling event counters or fabricated feedback.",
+      "known_history": "design revision013",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "planning-conversation-109-turns",
+        "design-r010-manifest",
+        "design-r011-manifest",
+        "design-r012-manifest",
+        "design-r013-manifest"
+      ]
+    },
+    {
+      "id": "D43",
+      "feature": "Preserve existing symbols and bindings during XML update",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "implementation": [
+        "operations.operation_patches:replace_xml",
+        "symbols.validate_reference",
+        "symbols.assert_additive_symbols",
+        "operations.qualified_xml"
+      ],
+      "planned_tests": [
+        "test_operations.OperationTests.test_xml_preserves_metadata_and_all_dependencies",
+        "test_native.NativeTests.test_resource_xml_and_exact_metadata"
+      ],
+      "limits": "Validate surviving bindings against new catalog; retain type semantics/metadata.",
+      "known_history": "N005,N007,N013,N014",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n005-manifest",
+        "history-n007-manifest",
+        "history-n013-manifest",
+        "history-n014-manifest"
+      ]
+    },
+    {
+      "id": "D44",
+      "feature": "Unsupported gradient radius transparency DPI explicitly stops render claim",
+      "historical_disposition": "REIMPLEMENT_AND_TEST",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
+      "implementation": [
+        "preview effect qualification/refusal"
+      ],
+      "planned_tests": [
+        "test_preview.PreviewTests.test_unknown_effect_gradient_radius_and_family",
+        "test_preview.PreviewTests.test_wrong_page_background_and_ambiguous_resource"
+      ],
+      "limits": "Unsupported gradient/radius/transparency/DPI stop the affected claim; preservation is not pixels.",
+      "known_history": "N006,N008,N016",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist",
+        "history-n006-buttons-manifest",
+        "history-n006-time-interface-manifest",
+        "history-n008-manifest",
+        "history-n016-manifest"
+      ]
+    },
+    {
+      "id": "U01",
+      "feature": "Enhanced recipes",
+      "historical_disposition": "DISCOVERED_UNQUALIFIED",
+      "support_level": "DISCOVERED_UNQUALIFIED",
+      "implementation": [
+        "opaque retention and unsupported-operation refusal only"
+      ],
+      "planned_tests": [
+        "test_contracts.ContractTests.test_unimplemented_runtime_families_have_no_generic_builder"
+      ],
+      "limits": "Discovery retained explicitly. No generic builder, native/lifecycle rendering, or runtime qualification; preserve unknown owners or refuse the edit.",
+      "known_history": "upstream specialized builders, not generic qualified tools",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist"
+      ]
+    },
+    {
+      "id": "U02",
+      "feature": "Native alarm history",
+      "historical_disposition": "DISCOVERED_UNQUALIFIED",
+      "support_level": "DISCOVERED_UNQUALIFIED",
+      "implementation": [
+        "opaque retention and unsupported-operation refusal only"
+      ],
+      "planned_tests": [
+        "test_contracts.ContractTests.test_unimplemented_runtime_families_have_no_generic_builder"
+      ],
+      "limits": "Discovery retained explicitly. No generic builder, native/lifecycle rendering, or runtime qualification; preserve unknown owners or refuse the edit.",
+      "known_history": "upstream specialized builders, not generic qualified tools",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist"
+      ]
+    },
+    {
+      "id": "U03",
+      "feature": "Trend history charts gauges",
+      "historical_disposition": "DISCOVERED_UNQUALIFIED",
+      "support_level": "DISCOVERED_UNQUALIFIED",
+      "implementation": [
+        "opaque retention and unsupported-operation refusal only"
+      ],
+      "planned_tests": [
+        "test_contracts.ContractTests.test_unimplemented_runtime_families_have_no_generic_builder"
+      ],
+      "limits": "Discovery retained explicitly. No generic builder, native/lifecycle rendering, or runtime qualification; preserve unknown owners or refuse the edit.",
+      "known_history": "upstream specialized builders, not generic qualified tools",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist"
+      ]
+    },
+    {
+      "id": "U04",
+      "feature": "Login accounts security operation log",
+      "historical_disposition": "DISCOVERED_UNQUALIFIED",
+      "support_level": "DISCOVERED_UNQUALIFIED",
+      "implementation": [
+        "opaque retention and unsupported-operation refusal only"
+      ],
+      "planned_tests": [
+        "test_contracts.ContractTests.test_unimplemented_runtime_families_have_no_generic_builder"
+      ],
+      "limits": "Discovery retained explicitly. No generic builder, native/lifecycle rendering, or runtime qualification; preserve unknown owners or refuse the edit.",
+      "known_history": "upstream specialized builders, not generic qualified tools",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist"
+      ]
+    },
+    {
+      "id": "U05",
+      "feature": "Multilingual state rendering",
+      "historical_disposition": "DISCOVERED_UNQUALIFIED",
+      "support_level": "DISCOVERED_UNQUALIFIED",
+      "implementation": [
+        "opaque retention and unsupported-operation refusal only"
+      ],
+      "planned_tests": [
+        "test_contracts.ContractTests.test_unimplemented_runtime_families_have_no_generic_builder"
+      ],
+      "limits": "Discovery retained explicitly. No generic builder, native/lifecycle rendering, or runtime qualification; preserve unknown owners or refuse the edit.",
+      "known_history": "upstream specialized builders, not generic qualified tools",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist"
+      ]
+    },
+    {
+      "id": "U06",
+      "feature": "System menu datetime brightness keypad",
+      "historical_disposition": "DISCOVERED_UNQUALIFIED",
+      "support_level": "DISCOVERED_UNQUALIFIED",
+      "implementation": [
+        "opaque retention and unsupported-operation refusal only"
+      ],
+      "planned_tests": [
+        "test_contracts.ContractTests.test_unimplemented_runtime_families_have_no_generic_builder"
+      ],
+      "limits": "Discovery retained explicitly. No generic builder, native/lifecycle rendering, or runtime qualification; preserve unknown owners or refuse the edit.",
+      "known_history": "upstream specialized builders, not generic qualified tools",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist"
+      ]
+    },
+    {
+      "id": "U07",
+      "feature": "Popup open close and leave cleanup",
+      "historical_disposition": "DISCOVERED_UNQUALIFIED",
+      "support_level": "DISCOVERED_UNQUALIFIED",
+      "implementation": [
+        "opaque retention and unsupported-operation refusal only"
+      ],
+      "planned_tests": [
+        "test_contracts.ContractTests.test_unimplemented_runtime_families_have_no_generic_builder"
+      ],
+      "limits": "Discovery retained explicitly. No generic builder, native/lifecycle rendering, or runtime qualification; preserve unknown owners or refuse the edit.",
+      "known_history": "upstream specialized builders, not generic qualified tools",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist"
+      ]
+    },
+    {
+      "id": "U08",
+      "feature": "S7 DB mapping and relocation",
+      "historical_disposition": "DISCOVERED_UNQUALIFIED",
+      "support_level": "DISCOVERED_UNQUALIFIED",
+      "implementation": [
+        "opaque retention and unsupported-operation refusal only"
+      ],
+      "planned_tests": [
+        "test_contracts.ContractTests.test_unimplemented_runtime_families_have_no_generic_builder"
+      ],
+      "limits": "Discovery retained explicitly. No generic builder, native/lifecycle rendering, or runtime qualification; preserve unknown owners or refuse the edit.",
+      "known_history": "upstream specialized builders, not generic qualified tools",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist"
+      ]
+    },
+    {
+      "id": "U09",
+      "feature": "SVG icon rasterization and custom process assets",
+      "historical_disposition": "DISCOVERED_UNQUALIFIED",
+      "support_level": "DISCOVERED_UNQUALIFIED",
+      "implementation": [
+        "opaque retention and unsupported-operation refusal only"
+      ],
+      "planned_tests": [
+        "test_contracts.ContractTests.test_unimplemented_runtime_families_have_no_generic_builder"
+      ],
+      "limits": "Discovery retained explicitly. No generic builder, native/lifecycle rendering, or runtime qualification; preserve unknown owners or refuse the edit.",
+      "known_history": "upstream specialized builders, not generic qualified tools",
+      "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
+      "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
+      "source_refs": [
+        "shared-feature-checklist"
+      ]
+    }
+  ],
+  "legacy_tools": [
+    {
+      "legacy_name": "open_project",
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "open_project",
+      "limits": "Immutable hash-pinned source/profile.",
+      "discovery_evidence": {
+        "test": "test_plan_review.PlanReviewTests.test_stdio_readonly_proposal_review_and_discovery_schemas",
+        "status": "PASS_FINAL_STDIO_TEST_0.1.1",
+        "meaning": "Name/schema discovery verified; qualified operations/refusals retain their separate feature support levels."
+      }
+    },
+    {
+      "legacy_name": "list_screens",
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "inspect: screens",
+      "limits": "Actual screen identity.",
+      "discovery_evidence": {
+        "test": "test_plan_review.PlanReviewTests.test_stdio_readonly_proposal_review_and_discovery_schemas",
+        "status": "PASS_FINAL_STDIO_TEST_0.1.1",
+        "meaning": "Name/schema discovery verified; qualified operations/refusals retain their separate feature support levels."
+      }
+    },
+    {
+      "legacy_name": "layout",
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "inspect: layout",
+      "limits": "Source geometry/order.",
+      "discovery_evidence": {
+        "test": "test_plan_review.PlanReviewTests.test_stdio_readonly_proposal_review_and_discovery_schemas",
+        "status": "PASS_FINAL_STDIO_TEST_0.1.1",
+        "meaning": "Name/schema discovery verified; qualified operations/refusals retain their separate feature support levels."
+      }
+    },
+    {
+      "legacy_name": "element",
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "inspect: element",
+      "limits": "Page ID plus screen-local identity.",
+      "discovery_evidence": {
+        "test": "test_plan_review.PlanReviewTests.test_stdio_readonly_proposal_review_and_discovery_schemas",
+        "status": "PASS_FINAL_STDIO_TEST_0.1.1",
+        "meaning": "Name/schema discovery verified; qualified operations/refusals retain their separate feature support levels."
+      }
+    },
+    {
+      "legacy_name": "find",
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "inspect: find",
+      "limits": "Read-only text search.",
+      "discovery_evidence": {
+        "test": "test_plan_review.PlanReviewTests.test_stdio_readonly_proposal_review_and_discovery_schemas",
+        "status": "PASS_FINAL_STDIO_TEST_0.1.1",
+        "meaning": "Name/schema discovery verified; qualified operations/refusals retain their separate feature support levels."
+      }
+    },
+    {
+      "legacy_name": "addresses",
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "inspect: addresses",
+      "limits": "All owners and roles.",
+      "discovery_evidence": {
+        "test": "test_plan_review.PlanReviewTests.test_stdio_readonly_proposal_review_and_discovery_schemas",
+        "status": "PASS_FINAL_STDIO_TEST_0.1.1",
+        "meaning": "Name/schema discovery verified; qualified operations/refusals retain their separate feature support levels."
+      }
+    },
+    {
+      "legacy_name": "macros",
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "inspect: macros",
+      "limits": "Counted records; runtime unqualified.",
+      "discovery_evidence": {
+        "test": "test_plan_review.PlanReviewTests.test_stdio_readonly_proposal_review_and_discovery_schemas",
+        "status": "PASS_FINAL_STDIO_TEST_0.1.1",
+        "meaning": "Name/schema discovery verified; qualified operations/refusals retain their separate feature support levels."
+      }
+    },
+    {
+      "legacy_name": "alarms",
+      "status": "PRESERVED_ONLY_DISCOVERY",
+      "replacement": "inspect: alarms",
+      "limits": "Discovery/preserved-only raw record inventory; no alarm/history engine.",
+      "discovery_evidence": {
+        "test": "test_plan_review.PlanReviewTests.test_stdio_readonly_proposal_review_and_discovery_schemas",
+        "status": "PASS_FINAL_STDIO_TEST_0.1.1",
+        "meaning": "Name/schema discovery verified; qualified operations/refusals retain their separate feature support levels."
+      }
+    },
+    {
+      "legacy_name": "set_property",
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "plan_changes: set_property",
+      "limits": "Qualified existing visual fields only.",
+      "discovery_evidence": {
+        "test": "test_plan_review.PlanReviewTests.test_stdio_readonly_proposal_review_and_discovery_schemas",
+        "status": "PASS_FINAL_STDIO_TEST_0.1.1",
+        "meaning": "Name/schema discovery verified; qualified operations/refusals retain their separate feature support levels."
+      }
+    },
+    {
+      "legacy_name": "set_text",
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "plan_changes: set_text",
+      "limits": "Counted Unicode caption/description.",
+      "discovery_evidence": {
+        "test": "test_plan_review.PlanReviewTests.test_stdio_readonly_proposal_review_and_discovery_schemas",
+        "status": "PASS_FINAL_STDIO_TEST_0.1.1",
+        "meaning": "Name/schema discovery verified; qualified operations/refusals retain their separate feature support levels."
+      }
+    },
+    {
+      "legacy_name": "rebind",
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "plan_changes: rebind",
+      "limits": "Exact owner/address/type/access.",
+      "discovery_evidence": {
+        "test": "test_plan_review.PlanReviewTests.test_stdio_readonly_proposal_review_and_discovery_schemas",
+        "status": "PASS_FINAL_STDIO_TEST_0.1.1",
+        "meaning": "Name/schema discovery verified; qualified operations/refusals retain their separate feature support levels."
+      }
+    },
+    {
+      "legacy_name": "pending_changes",
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "diff",
+      "limits": "Read exact pending/applied diff state; no source mutation.",
+      "discovery_evidence": {
+        "test": "test_plan_review.PlanReviewTests.test_stdio_readonly_proposal_review_and_discovery_schemas",
+        "status": "PASS_FINAL_STDIO_TEST_0.1.1",
+        "meaning": "Name/schema discovery verified; qualified operations/refusals retain their separate feature support levels."
+      }
+    },
+    {
+      "legacy_name": "save",
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "save_as",
+      "limits": "New-only authorized output plus reread/diff.",
+      "discovery_evidence": {
+        "test": "test_plan_review.PlanReviewTests.test_stdio_readonly_proposal_review_and_discovery_schemas",
+        "status": "PASS_FINAL_STDIO_TEST_0.1.1",
+        "meaning": "Name/schema discovery verified; qualified operations/refusals retain their separate feature support levels."
+      }
+    },
+    {
+      "legacy_name": "screenshot_text",
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "inspect: text",
+      "limits": "Coordinate text projection, not screenshot.",
+      "discovery_evidence": {
+        "test": "test_plan_review.PlanReviewTests.test_stdio_readonly_proposal_review_and_discovery_schemas",
+        "status": "PASS_FINAL_STDIO_TEST_0.1.1",
+        "meaning": "Name/schema discovery verified; qualified operations/refusals retain their separate feature support levels."
+      }
+    },
+    {
+      "legacy_name": "clone_element",
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "plan_changes: clone_element",
+      "limits": "Pinned donor and explicit inherited fields.",
+      "discovery_evidence": {
+        "test": "test_plan_review.PlanReviewTests.test_stdio_readonly_proposal_review_and_discovery_schemas",
+        "status": "PASS_FINAL_STDIO_TEST_0.1.1",
+        "meaning": "Name/schema discovery verified; qualified operations/refusals retain their separate feature support levels."
+      }
+    },
+    {
+      "legacy_name": "clone_screen",
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "plan_changes: clone_screen",
+      "limits": "Pinned frame/full page and reference checks.",
+      "discovery_evidence": {
+        "test": "test_plan_review.PlanReviewTests.test_stdio_readonly_proposal_review_and_discovery_schemas",
+        "status": "PASS_FINAL_STDIO_TEST_0.1.1",
+        "meaning": "Name/schema discovery verified; qualified operations/refusals retain their separate feature support levels."
+      }
+    },
+    {
+      "legacy_name": "delete_element",
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "plan_changes: delete_element",
+      "limits": "Exact nonnegative identity.",
+      "discovery_evidence": {
+        "test": "test_plan_review.PlanReviewTests.test_stdio_readonly_proposal_review_and_discovery_schemas",
+        "status": "PASS_FINAL_STDIO_TEST_0.1.1",
+        "meaning": "Name/schema discovery verified; qualified operations/refusals retain their separate feature support levels."
+      }
+    },
+    {
+      "legacy_name": "set_state_text",
+      "status": "MAPPED_STDIO_DISCOVERY_VERIFIED",
+      "replacement": "plan_changes: set_text + state_value",
+      "limits": "Actual state Value, not list index.",
+      "discovery_evidence": {
+        "test": "test_plan_review.PlanReviewTests.test_stdio_readonly_proposal_review_and_discovery_schemas",
+        "status": "PASS_FINAL_STDIO_TEST_0.1.1",
+        "meaning": "Name/schema discovery verified; qualified operations/refusals retain their separate feature support levels."
+      }
+    },
+    {
+      "legacy_name": "editor_windows",
+      "status": "INTENTIONALLY_EXCLUDED",
+      "replacement": null,
+      "limits": "Editor/Computer Use operations are outside file-only authorization."
+    },
+    {
+      "legacy_name": "close_in_editor",
+      "status": "INTENTIONALLY_EXCLUDED",
+      "replacement": null,
+      "limits": "Editor/Computer Use operations are outside file-only authorization."
+    },
+    {
+      "legacy_name": "open_in_editor",
+      "status": "INTENTIONALLY_EXCLUDED",
+      "replacement": null,
+      "limits": "Editor/Computer Use operations are outside file-only authorization."
+    },
+    {
+      "legacy_name": "reload_in_editor",
+      "status": "INTENTIONALLY_EXCLUDED",
+      "replacement": null,
+      "limits": "Editor/Computer Use operations are outside file-only authorization."
+    }
+  ],
+  "excluded_save_options": [
+    {
+      "option": "overwrite_source",
+      "status": "INTENTIONALLY_EXCLUDED",
+      "reason": "Immutable sources; no editor automation"
+    },
+    {
+      "option": "reload_editor",
+      "status": "INTENTIONALLY_EXCLUDED",
+      "reason": "Immutable sources; no editor automation"
+    }
+  ],
+  "required_regressions": [
+    {
+      "id": "R01",
+      "scenario": "Invalid width scalar rejected",
+      "status": "PASS_OFFLINE",
+      "planned_tests": [
+        "test_operations.OperationTests.test_r01_r02_invalid_rectangles"
+      ],
+      "implementation": [
+        "operations.py typed exact-plan guards",
+        "contract/refusal when behavior is unimplemented"
+      ],
+      "expected_result": "Reject non-integer/nonpositive width before edit."
+    },
+    {
+      "id": "R02",
+      "scenario": "Negative or off-canvas coordinates rejected",
+      "status": "PASS_OFFLINE",
+      "planned_tests": [
+        "test_operations.OperationTests.test_r01_r02_invalid_rectangles"
+      ],
+      "implementation": [
+        "operations.py typed exact-plan guards",
+        "contract/refusal when behavior is unimplemented"
+      ],
+      "expected_result": "Reject negative/off-panel geometry."
+    },
+    {
+      "id": "R03",
+      "scenario": "Negative element index cannot delete last object",
+      "status": "PASS_OFFLINE",
+      "planned_tests": [
+        "test_native.NativeTests.test_negative_identity_is_not_list_index"
+      ],
+      "implementation": [
+        "native.py counted spans and exact identities"
+      ],
+      "expected_result": "Nonnegative screen-local identity; never Python negative indexing."
+    },
+    {
+      "id": "R04",
+      "scenario": "Opening another project does not silently discard pending changes",
+      "status": "PASS_OFFLINE",
+      "planned_tests": [
+        "test_session.SessionTests.test_r04_pending_open_does_not_discard"
+      ],
+      "implementation": [
+        "session.py lifecycle"
+      ],
+      "expected_result": "Refuse another open while pending state exists."
+    },
+    {
+      "id": "R05",
+      "scenario": "Start rebinding does not alter Start2",
+      "status": "PASS_OFFLINE",
+      "planned_tests": [
+        "test_operations.OperationTests.test_r05_exact_rebind_not_prefix"
+      ],
+      "implementation": [
+        "operations.py typed exact-plan guards",
+        "contract/refusal when behavior is unimplemented"
+      ],
+      "expected_result": "Exact field owner/address; similarly named symbols unchanged."
+    },
+    {
+      "id": "R06",
+      "scenario": "Framed length cannot be edited separately from blob",
+      "status": "PASS_OFFLINE",
+      "planned_tests": [
+        "test_native.NativeTests.test_length_cannot_be_patched_as_scalar"
+      ],
+      "implementation": [
+        "native.py counted spans and exact identities"
+      ],
+      "expected_result": "Count and payload are one owned span."
+    },
+    {
+      "id": "R07",
+      "scenario": "Truncated counted blob rejected",
+      "status": "PASS_OFFLINE",
+      "planned_tests": [
+        "test_native.NativeTests.test_declared_huge_truncated_blob_rejected"
+      ],
+      "implementation": [
+        "native.py counted spans and exact identities"
+      ],
+      "expected_result": "Truncated/oversized counted blobs STOP."
+    },
+    {
+      "id": "R08",
+      "scenario": "CRLF-less opaque tail preserved",
+      "status": "PASS_OFFLINE",
+      "planned_tests": [
+        "test_native.NativeTests.test_opaque_tail_without_eol_is_exact"
+      ],
+      "implementation": [
+        "native.py counted spans and exact identities"
+      ],
+      "expected_result": "Retain opaque suffix without terminal CRLF."
+    },
+    {
+      "id": "R09",
+      "scenario": "Repeated clone does not duplicate objects/pages",
+      "status": "PASS_OFFLINE",
+      "planned_tests": [
+        "test_operations.OperationTests.test_clone_unique_fresh_identity_geometry_and_reorder"
+      ],
+      "implementation": [
+        "operations.py typed exact-plan guards",
+        "contract/refusal when behavior is unimplemented"
+      ],
+      "expected_result": "Fresh IDs and replay checks stop duplicate object/page insertion."
+    },
+    {
+      "id": "R10",
+      "scenario": "TriggerVar included in address inventory",
+      "status": "PASS_OFFLINE",
+      "planned_tests": [
+        "test_operations.OperationTests.test_r10_all_indexed_address_owners_and_trigger"
+      ],
+      "implementation": [
+        "operations.py typed exact-plan guards",
+        "contract/refusal when behavior is unimplemented"
+      ],
+      "expected_result": "Inventory includes TriggerVar with read semantics."
+    },
+    {
+      "id": "R11",
+      "scenario": "Negative state index rejected",
+      "status": "PASS_OFFLINE",
+      "planned_tests": [
+        "test_operations.OperationTests.test_r03_r11_no_negative_identity_or_state"
+      ],
+      "implementation": [
+        "operations.py typed exact-plan guards",
+        "contract/refusal when behavior is unimplemented"
+      ],
+      "expected_result": "Select actual Value, not state list index."
+    },
+    {
+      "id": "R12",
+      "scenario": "Turkish text never silently coerced to Latin1",
+      "status": "PASS_OFFLINE",
+      "planned_tests": [
+        "test_native.NativeTests.test_counted_unicode"
+      ],
+      "implementation": [
+        "native.py counted spans and exact identities"
+      ],
+      "expected_result": "Count UTF-16; unsupported encoding never silently becomes Latin1."
+    },
+    {
+      "id": "R13",
+      "scenario": "Wrong-page background detected",
+      "status": "PASS_OFFLINE",
+      "planned_tests": [
+        "test_preview.PreviewTests.test_wrong_page_background_and_ambiguous_resource"
+      ],
+      "implementation": [
+        "preview.py background qualification"
+      ],
+      "expected_result": "Page offset and resource hash must match selected background."
+    },
+    {
+      "id": "R14",
+      "scenario": "Maintained subtype1.4 distinguished from momentary1.3 for qualified source",
+      "status": "PASS_OFFLINE",
+      "planned_tests": [
+        "test_operations.OperationTests.test_r14_real_behavior_codes_and_value_text"
+      ],
+      "implementation": [
+        "operations.py typed exact-plan guards",
+        "contract/refusal when behavior is unimplemented"
+      ],
+      "expected_result": "Source-qualified historical1.3momentary/1.4maintained; old dictionary withdrawn."
+    },
+    {
+      "id": "R15",
+      "scenario": "Floating limits not guessed from missing display width",
+      "status": "PASS_OFFLINE",
+      "planned_tests": [
+        "test_operations.OperationTests.test_r15_limits_explicit_and_no_float_extremes_or_time_alias"
+      ],
+      "implementation": [
+        "operations.py typed exact-plan guards",
+        "contract/refusal when behavior is unimplemented"
+      ],
+      "expected_result": "Explicit finite type-domain limits and digits; no E308/width guess."
+    },
+    {
+      "id": "R16",
+      "scenario": "Visible macro source not replaced together with parsed operands",
+      "status": "PASS_OFFLINE",
+      "planned_tests": [
+        "test_macros.MacroTests.test_exact_operand_replacement_preserves_visible_source"
+      ],
+      "implementation": [
+        "macros.py source/operand separation and SHA receipt"
+      ],
+      "expected_result": "Field0 immutable; failed visible-source Application rewrite stays withdrawn."
+    },
+    {
+      "id": "R17",
+      "scenario": "Compiled evidence tied to source/candidate hash",
+      "status": "PASS_OFFLINE",
+      "planned_tests": [
+        "test_macros.MacroTests.test_compiled_stale_source_candidate_and_actual_sha_rejected"
+      ],
+      "implementation": [
+        "macros.py source/operand separation and SHA receipt"
+      ],
+      "expected_result": "Actual artifact SHA plus receipt source/candidate pair; still no compile/runtime proof."
+    },
+    {
+      "id": "R18",
+      "scenario": "Rolled-back global macros not silently reenabled",
+      "status": "PASS_OFFLINE",
+      "planned_tests": [
+        "test_operations.OperationTests.test_r18_clear_global_macro_not_default_reenable"
+      ],
+      "implementation": [
+        "operations.py typed exact-plan guards",
+        "contract/refusal when behavior is unimplemented"
+      ],
+      "expected_result": "No implicit regeneration of rolled-back startup/heartbeat globals."
+    },
+    {
+      "id": "R19",
+      "scenario": "Raw zero not automatically healthy; unknown codes visible",
+      "status": "PASS_OFFLINE",
+      "planned_tests": [
+        "test_status.StatusTests.test_r19_active_fault_zero_and_unknown_raw_never_healthy"
+      ],
+      "implementation": [
+        "operations.py typed exact-plan guards",
+        "contract/refusal when behavior is unimplemented"
+      ],
+      "expected_result": "Active fault code0possible; raw unknown values never default healthy."
+    },
+    {
+      "id": "R20",
+      "scenario": "Text simplification does not imply visual style flattening",
+      "status": "PASS_OFFLINE",
+      "planned_tests": [
+        "test_operations.OperationTests.test_visual_geometry_and_full_inverse"
+      ],
+      "implementation": [
+        "operations.py typed exact-plan guards",
+        "contract/refusal when behavior is unimplemented"
+      ],
+      "expected_result": "Caption-only edit preserves colors/fonts/gradients/geometry."
+    },
+    {
+      "id": "R21",
+      "scenario": "Style-only edits preserve writes addresses macros XML and unknown bytes",
+      "status": "PASS_OFFLINE",
+      "planned_tests": [
+        "test_operations.OperationTests.test_r21_style_only_preserves_controls_bindings_macro_xml_unknown"
+      ],
+      "implementation": [
+        "operations.py typed exact-plan guards",
+        "contract/refusal when behavior is unimplemented"
+      ],
+      "expected_result": "Style-only ledger preserves all writes/addresses/macros/XML/unknown bytes."
+    }
+  ],
+  "native_history": [
+    {
+      "revision": "N002",
+      "source_id": "history-n002-manifest",
+      "summary": "Main-page file pilot with native owners. Schema-derived types, tag import and missing gates remained unqualified; file/model checks were not panel acceptance.",
+      "evidence_scope": "HISTORICAL_NOT_CURRENT_GENERIC_ACCEPTANCE"
+    },
+    {
+      "revision": "N003",
+      "source_id": "history-n003-manifest",
+      "summary": "Seven-page operator reconstruction. Visual PASS withdrawn after background/layer defects; button enum assumptions later withdrawn too.",
+      "evidence_scope": "HISTORICAL_NOT_CURRENT_GENERIC_ACCEPTANCE"
+    },
+    {
+      "revision": "N004",
+      "source_id": "history-n004-manifest",
+      "summary": "Text-free DIB/background and actual state/layer preview. Numeric limits and button behavior defects remained separate open issues.",
+      "evidence_scope": "HISTORICAL_NOT_CURRENT_GENERIC_ACCEPTANCE"
+    },
+    {
+      "revision": "N005",
+      "source_id": "history-n005-manifest",
+      "summary": "Diagnostic numeric limits: one999upper-limit change reduced13reported errors to12; no safe physical-range, full fit or generic TIME acceptance.",
+      "evidence_scope": "HISTORICAL_NOT_CURRENT_GENERIC_ACCEPTANCE"
+    },
+    {
+      "revision": "N006-buttons",
+      "source_id": "history-n006-buttons-manifest",
+      "summary": "Source witnesses corrected momentary1.3/maintained1.4. TIME card temporarily removed without changing original TIME XML; mode writes non-atomic.",
+      "evidence_scope": "HISTORICAL_NOT_CURRENT_GENERIC_ACCEPTANCE"
+    },
+    {
+      "revision": "N006-time-interface",
+      "source_id": "history-n006-time-interface-manifest",
+      "summary": "Separate source-level millisecond interface branch. Source-backed candidate, not a new generic PLC bridge or vendor export.",
+      "evidence_scope": "HISTORICAL_NOT_CURRENT_GENERIC_ACCEPTANCE"
+    },
+    {
+      "revision": "N007",
+      "source_id": "history-n007-manifest",
+      "summary": "Four time-card owners restored onto corrected buttons; real helper leaves added, original TIME and surviving object/XML bytes retained.",
+      "evidence_scope": "HISTORICAL_NOT_CURRENT_GENERIC_ACCEPTANCE"
+    },
+    {
+      "revision": "N008",
+      "source_id": "history-n008-manifest",
+      "summary": "Startup/heartbeat and draft/readback proposal. Shared-draft race candidate rejected; macro acceptance later withdrawn and globals rolled back.",
+      "evidence_scope": "HISTORICAL_NOT_CURRENT_GENERIC_ACCEPTANCE"
+    },
+    {
+      "revision": "N009",
+      "source_id": "history-n009-manifest",
+      "summary": "Vendor-resaved initial/clock preserved; three button parsed operands changed. Five programs/40records roundtripped; no live write/cadence proof.",
+      "evidence_scope": "HISTORICAL_NOT_CURRENT_GENERIC_ACCEPTANCE"
+    },
+    {
+      "revision": "N010",
+      "source_id": "history-n010-manifest",
+      "summary": "Visible source plus parsed Application rewrite failed with five Error109. Acceptance withdrawn; failed archive and later delivery-location bytes differ.",
+      "evidence_scope": "HISTORICAL_NOT_CURRENT_GENERIC_ACCEPTANCE"
+    },
+    {
+      "revision": "N011",
+      "source_id": "history-n011-manifest",
+      "summary": "Field0 retained and29parsed operands qualified. Human CompilePASS lacked exact compiled-native linkage; live Error7/HB0/stale bare descriptors remained, final STOP. MeMeCode-only explanation withdrawn.",
+      "evidence_scope": "HISTORICAL_NOT_CURRENT_GENERIC_ACCEPTANCE"
+    },
+    {
+      "revision": "N012",
+      "source_id": "history-n012-manifest",
+      "summary": "Only Initial/Clock cleared, three BeforeExec retained. PLC pairing/rearm/live acceptance open. Reviewed archive passes9negatives; other copy fails whole-section drift.",
+      "evidence_scope": "HISTORICAL_NOT_CURRENT_GENERIC_ACCEPTANCE"
+    },
+    {
+      "revision": "N013",
+      "source_id": "history-n013-manifest",
+      "summary": "Sixteen buttons/32fields rebound to command inputs; physical/status fields remained Read. Request is not motion. Reviewed archive passes11negatives; other copy fails whole-payload reverse.",
+      "evidence_scope": "HISTORICAL_NOT_CURRENT_GENERIC_ACCEPTANCE"
+    },
+    {
+      "revision": "N014",
+      "source_id": "history-n014-manifest",
+      "summary": "Readonly current fault/home/drive roles. No history/ACK/reset engine, reliable mode transaction or transport-cache suppression; active code0possible.",
+      "evidence_scope": "HISTORICAL_NOT_CURRENT_GENERIC_ACCEPTANCE"
+    },
+    {
+      "revision": "N015",
+      "source_id": "history-n015-manifest",
+      "summary": "Simplified layout and passive code reference replaced corrupted sparse mappings; raw codes retained. Text simplification does not authorize style flattening.",
+      "evidence_scope": "HISTORICAL_NOT_CURRENT_GENERIC_ACCEPTANCE"
+    },
+    {
+      "revision": "N016",
+      "source_id": "history-n016-manifest",
+      "summary": "Exact style-only transfer with sequential aesthetic reviews/preservation negatives. Unproved gradient/radius/DPI/native pixels and runtime remain unqualified.",
+      "evidence_scope": "HISTORICAL_NOT_CURRENT_GENERIC_ACCEPTANCE"
+    }
+  ],
+  "planning_history": {
+    "source_id": "planning-conversation-109-turns",
+    "root_collected_turns": 109,
+    "root_collected_pages": 11,
+    "root_collection_complete": true,
+    "author_review": "Filtered generic HMI intents from the complete root-collected record;39HMI user messages selected. Machine PLC narrative excluded.",
+    "generic_lessons": [
+      "Coordinate native file MCP work with separate manual vendor import/compile acceptance.",
+      "Clearly distinguish input/display, request/readback and physical feedback.",
+      "Readable labels and separate units; value range, width, gain and digit-fit matter.",
+      "Large hit areas and consistent grids; do not fill blank space with invented controls.",
+      "Canonical CSV is a technical ledger, not a vendor import file.",
+      "Missing tags/counters stay disabled; no fictional polling counters.",
+      "Momentary JOG and maintained toggles require explicit behavioral intent.",
+      "Preview is not native fidelity; preserve controlled revisions and retractions."
+    ],
+    "document_history": [
+      {
+        "revision": "R010",
+        "source_id": "design-r010-readme",
+        "summary": "Canonical object/tag/migration ledger and measured layout; simulated transaction model. Unique-tag and object counts differ; design references are not a compiled native project."
+      },
+      {
+        "revision": "R011",
+        "source_id": "design-r011-readme",
+        "summary": "Recipe/motor/service consolidation and clear input/display distinction. Draft/apply differs from readback; analog/reserved channels stay explicit."
+      },
+      {
+        "revision": "R012",
+        "source_id": "design-r012-readme",
+        "summary": "Simplified ramps/service hierarchy. Local drafts need a real dispatcher/readback contract; unsupported browser/native writes refuse."
+      },
+      {
+        "revision": "R013",
+        "source_id": "design-r013-readme",
+        "summary": "Unavailable counters/full servo feedback/first-fault latch remain missing or disabled. No invented polling counters or alternative feedback; full acceptance withheld."
+      }
+    ]
+  },
+  "test_execution_policy": "Final-tree execution is recorded in reports/TEST_RESULTS.json and exact final review; older0.1.0 reports under reports/releases/0.1.0 are historical. Discovery PASS does not implement an unqualified or refused subsystem.",
+  "global_human_gates": {
+    "vendor_compile": "NOT_RUN_FOR_THIS_BACKEND",
+    "native_pixel_fidelity": "NOT_RUN",
+    "panel_runtime": "NOT_RUN",
+    "physical_acceptance": "NOT_RUN"
+  },
+  "final_omission_review": {
+    "required": true,
+    "evidence": "reports/FINAL_REVIEW.md",
+    "release_manifest": "reports/FILE_MANIFEST.json",
+    "archive_receipt_external_to_archive": "reports/RELEASE.json"
+  },
+  "common_tools": [
+    "open_project",
+    "capabilities",
+    "inspect",
+    "plan_changes",
+    "preview",
+    "validate",
+    "apply_plan",
+    "save_as",
+    "diff"
+  ],
+  "support_levels": {
+    "OFFLINE_TESTED": "A bounded original module was exercised; final integrated tree reverify is still required.",
+    "SOURCE_BOUND_UNQUALIFIED": "Original implementation/primitives under explicit source/profile contracts; no blanket vendor qualification.",
+    "CONTRACT_ONLY": "External behavior/interface roles documented; no target machine logic here.",
+    "DISCOVERED_UNQUALIFIED": "Discovered, no generic writer/lifecycle qualification; preserve or refuse.",
+    "ROLLED_BACK_NOT_DEFAULT": "Withdrawn/rolled-back behavior not silently regenerated.",
+    "WORKFLOW_REQUIRED": "Explicit process requirement; a row does not prove execution.",
+    "INTENTIONALLY_EXCLUDED": "Outside file-only scope; no GUI/device fallback."
+  },
+  "test_catalog": [
+    {
+      "test_name": "test_macros.MacroTests.test_compiled_observation_is_partial_counted_scan",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": "Symbol/macro module tests26/26were observed PASS at56da93c; this is not final-tree acceptance."
+    },
+    {
+      "test_name": "test_macros.MacroTests.test_compiled_stale_source_candidate_and_actual_sha_rejected",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": "Symbol/macro module tests26/26were observed PASS at56da93c; this is not final-tree acceptance."
+    },
+    {
+      "test_name": "test_macros.MacroTests.test_counted_roundtrip_and_source_with_newlines",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": "Symbol/macro module tests26/26were observed PASS at56da93c; this is not final-tree acceptance."
+    },
+    {
+      "test_name": "test_macros.MacroTests.test_display_addresses_and_source_statements_are_not_operands",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": "Symbol/macro module tests26/26were observed PASS at56da93c; this is not final-tree acceptance."
+    },
+    {
+      "test_name": "test_macros.MacroTests.test_exact_operand_replacement_preserves_visible_source",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": "Symbol/macro module tests26/26were observed PASS at56da93c; this is not final-tree acceptance."
+    },
+    {
+      "test_name": "test_macros.MacroTests.test_legacy_display_operand_can_be_inspected_without_acceptance",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": "Symbol/macro module tests26/26were observed PASS at56da93c; this is not final-tree acceptance."
+    },
+    {
+      "test_name": "test_macros.MacroTests.test_truncation_lengths_flags_and_trailing_bytes",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": "Symbol/macro module tests26/26were observed PASS at56da93c; this is not final-tree acceptance."
+    },
+    {
+      "test_name": "test_macros.MacroTests.test_unknown_opcode_roundtrips_but_blocks_all_writes",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": "Symbol/macro module tests26/26were observed PASS at56da93c; this is not final-tree acceptance."
+    },
+    {
+      "test_name": "test_native.NativeTests.test_counted_unicode",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_native.NativeTests.test_declared_huge_truncated_blob_rejected",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_native.NativeTests.test_length_cannot_be_patched_as_scalar",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_native.NativeTests.test_negative_identity_is_not_list_index",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_native.NativeTests.test_noop_original_container",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_native.NativeTests.test_opaque_tail_without_eol_is_exact",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_native.NativeTests.test_patch_precondition_and_overlap",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_native.NativeTests.test_resource_xml_and_exact_metadata",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_native.NativeTests.test_unknown_fields_survive_edit",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_operations.OperationTests.test_clone_unique_fresh_identity_geometry_and_reorder",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_operations.OperationTests.test_flat_background_has_real_page_offset_and_no_old_text",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_operations.OperationTests.test_macro_slot_type_access_and_visible_source",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_operations.OperationTests.test_r01_r02_invalid_rectangles",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_operations.OperationTests.test_r03_r11_no_negative_identity_or_state",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_operations.OperationTests.test_r05_exact_rebind_not_prefix",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_operations.OperationTests.test_r10_all_indexed_address_owners_and_trigger",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_operations.OperationTests.test_r12_turkish_caption_and_long_unicode",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_operations.OperationTests.test_r14_real_behavior_codes_and_value_text",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_operations.OperationTests.test_r15_limits_explicit_and_no_float_extremes_or_time_alias",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_operations.OperationTests.test_r18_clear_global_macro_not_default_reenable",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_operations.OperationTests.test_r21_style_only_preserves_controls_bindings_macro_xml_unknown",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_operations.OperationTests.test_screen_frame_clone_delete_and_navigation_guards",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_operations.OperationTests.test_visual_geometry_and_full_inverse",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_operations.OperationTests.test_xml_preserves_metadata_and_all_dependencies",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_preview.PreviewTests.test_actual_value_selection_commands_and_no_unknown_fallback",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_preview.PreviewTests.test_all_states_checked_not_only_selected",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_preview.PreviewTests.test_dib_channel_stride_orientation_and_32bit_unused_alpha",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_preview.PreviewTests.test_metrics_missing_glyph_overflow_and_occlusion",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_preview.PreviewTests.test_numeric_exponent_is_bounded",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_preview.PreviewTests.test_offline_label_escape_no_font_claim_and_source_preserved",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_preview.PreviewTests.test_shared_address_fixture_conflict_and_numeric_cases",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_preview.PreviewTests.test_unknown_effect_gradient_radius_and_family",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_preview.PreviewTests.test_wrong_page_background_and_ambiguous_resource",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_contracts.ContractTests.test_unimplemented_runtime_families_have_no_generic_builder",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_status.StatusTests.test_design_csv_is_native_reference_not_vendor_import",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_status.StatusTests.test_transfer_draft_fresh_readback_terminal_result_distinct",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_release.ReleaseTests.test_current_inventory_and_public_privacy",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_contracts.ContractTests.test_missing_tag_is_not_invented_feedback_or_a_polling_counter",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_contracts.ContractTests.test_atomic_mode_and_automatic_reconnect_replay_are_not_supplied",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_contracts.ContractTests.test_picture_bank_import_copy_and_prune_refused",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_status.StatusTests.test_reference_latch_separate_from_sensor_and_start_permission",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_status.StatusTests.test_drive_request_ack_fresh_status_frequency_not_conflated",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_status.StatusTests.test_sequential_visual_reviews_challenge_first_and_producer",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_status.StatusTests.test_r19_active_fault_zero_and_unknown_raw_never_healthy",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_session.SessionTests.test_actual_apply_save_reread_diff_rollback_and_source",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_session.SessionTests.test_inspect_before_plan_and_pins",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_session.SessionTests.test_multiple_approved_plans_inverse",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_session.SessionTests.test_profile_mismatch_and_profile_mutation",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_session.SessionTests.test_r04_pending_open_does_not_discard",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_stdio.StdioTests.test_real_process_mutation_not_only_discovery",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": null
+    },
+    {
+      "test_name": "test_symbols.SymbolTests.test_actual_offsets_and_native_padding",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": "Symbol/macro module tests26/26were observed PASS at56da93c; this is not final-tree acceptance."
+    },
+    {
+      "test_name": "test_symbols.SymbolTests.test_ancestor_access_cannot_be_restored_by_member",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": "Symbol/macro module tests26/26were observed PASS at56da93c; this is not final-tree acceptance."
+    },
+    {
+      "test_name": "test_symbols.SymbolTests.test_enum_and_time_remain_distinct",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": "Symbol/macro module tests26/26were observed PASS at56da93c; this is not final-tree acceptance."
+    },
+    {
+      "test_name": "test_symbols.SymbolTests.test_inclusive_array_bounds",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": "Symbol/macro module tests26/26were observed PASS at56da93c; this is not final-tree acceptance."
+    },
+    {
+      "test_name": "test_symbols.SymbolTests.test_role_specific_read_and_write_permissions",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": "Symbol/macro module tests26/26were observed PASS at56da93c; this is not final-tree acceptance."
+    },
+    {
+      "test_name": "test_symbols.SymbolTests.test_scalar_index_and_unindexed_array_traversal_rejected",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": "Symbol/macro module tests26/26were observed PASS at56da93c; this is not final-tree acceptance."
+    },
+    {
+      "test_name": "test_plan_review.PlanReviewTests.test_coordinate_layout_text_order_preserves_render_layers",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": "New0.1.1regression; final-tree report records execution."
+    },
+    {
+      "test_name": "test_plan_review.PlanReviewTests.test_proposal_caption_sha_and_readonly_state",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": "New0.1.1regression; final-tree report records execution."
+    },
+    {
+      "test_name": "test_plan_review.PlanReviewTests.test_stdio_readonly_proposal_review_and_discovery_schemas",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": "New0.1.1regression; final-tree report records execution."
+    },
+    {
+      "test_name": "test_plan_review.PlanReviewTests.test_sort_invalid_or_unrelated_views_refused",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": "New0.1.1regression; final-tree report records execution."
+    },
+    {
+      "test_name": "test_plan_review.PlanReviewTests.test_gallery_uses_proposed_background_profile",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
+      "prior_observation": "New0.1.1regression; final-tree report records execution."
+    }
+  ],
+  "private_qualification": {
+    "report": "reports/PRIVATE_QUALIFICATION.json",
+    "sources": 20,
+    "qualified": 19,
+    "stopped": 1,
+    "stopped_source": "N008-candidate-1",
+    "reason": "Element nPartsID absent; no identity invented",
+    "acceptance": "No-op or in-memory inverse only, not visual/vendor/runtime acceptance"
+  },
+  "package_version": "0.1.1",
+  "patch_regressions": [
+    {
+      "id": "DIA-R2",
+      "implementation": [
+        "session._checked_proposal",
+        "session._review_project",
+        "session.preview",
+        "session.validate"
+      ],
+      "tests": [
+        "test_plan_review.PlanReviewTests.test_proposal_caption_sha_and_readonly_state",
+        "test_plan_review.PlanReviewTests.test_unknown_malformed_and_immutable_plan_drift",
+        "test_plan_review.PlanReviewTests.test_proposal_inverse_extends_applied_chain",
+        "test_plan_review.PlanReviewTests.test_stdio_readonly_proposal_review_and_discovery_schemas"
+      ],
+      "limits": "Hash-bound pending proposal only; readonly does not consume approval, apply, save or establish native pixels/runtime."
+    },
+    {
+      "id": "D04",
+      "implementation": [
+        "session.inspect sort selector"
+      ],
+      "tests": [
+        "test_plan_review.PlanReviewTests.test_coordinate_layout_text_order_preserves_render_layers",
+        "test_plan_review.PlanReviewTests.test_stdio_readonly_proposal_review_and_discovery_schemas"
+      ],
+      "limits": "Projection only; layer order default retained."
+    }
+  ],
+  "final_suite": {
+    "package_version": "0.1.1",
+    "tests_run": 148,
+    "passed": 147,
+    "skipped": 1,
+    "failures": 0,
+    "errors": 0,
+    "report": "reports/TEST_RESULTS.json"
+  }
+}

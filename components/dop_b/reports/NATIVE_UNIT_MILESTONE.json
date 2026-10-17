@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "scope": "BOUNDED_LINKED_UNIT_AND_RAW_FRAMING_SUBSET_NOT_FULL_V1",
+  "status": "OFFLINE_PASS",
+  "test_revision_sha256": "765c6460d932d0ba66ab4e7ade29f10350b5c8c95546c2ef4c19c63af328ed1d",
+  "source_hashes": {
+    "src/universal_hmi/__init__.py": "0db3fbb84952385b48986a224db88e67609945e5d5ac8708bdee50c8e8837035",
+    "src/universal_hmi/cli.py": "fac2fb4b0abbaaa7d55afd9a1bdecd22c480d3a0ac962cf4b065511a39895e92",
+    "src/universal_hmi/errors.py": "f0424fc7333cc3cd2c84ad02fbfb5b6a5ef8daa5eae6f335eedc6e28b8f25a45",
+    "src/universal_hmi/mcp_server.py": "513343f6716cd196195b40efbc32755a7df1c830129c204f2e3d5df23deeaf0b",
+    "src/universal_hmi/model.py": "b1407dadad8ad9205a9717a4ed0bfa80a183a9b093b2f1487219ce5d8b3f83ad",
+    "src/universal_hmi/native/__init__.py": "da495714d910c81bbf766252273ad2b57356b1deaa257792aba657fb98c099f3",
+    "src/universal_hmi/native/codec.py": "c8db8ebc25d74aa20c97dbaa7602e3d30a8b5d2d464b84ae59f6a9c26c767d06",
+    "src/universal_hmi/native/identity.py": "cef9007cb3f9ad3b2f5e1c2c2350a878c1c6c24a1e5988389cad92abe540c8cf",
+    "src/universal_hmi/native/macro_semantics.py": "b867861c58283214bbc4566d8e93227a57c83bb1eb9470f243688f3ec5b752e8",
+    "src/universal_hmi/native/macros.py": "4c4d0ea62d4d802264691eedac1865bc7ba606be978246bb48b5b3d352fa1af9",
+    "src/universal_hmi/native/numeric.py": "facc48b91377057ebcd9ecb2bf9ab1d552364480a3ec4ef890230310c903796a",
+    "src/universal_hmi/native/records.py": "ddf823d3f87f197a45001d3a6a6a2f4422afb5c6ef03029ece5dae72ccd1d787",
+    "src/universal_hmi/native/resources.py": "e0eedf68dc89aeffa072ae4c707615a99431cd6fe9866606abb034b0222766fc",
+    "src/universal_hmi/preview.py": "b14031eac5dde559630722fdede6b3c5ead4ce07a5bb10d9b49fc56b5c4e572a",
+    "src/universal_hmi/service.py": "d50349583240b4c9027296eb386d80b353fbbdb8e604e1c16399efbfa9548a9a",
+    "src/universal_hmi/validation.py": "469005ad90baba4d418ad7b0530326581a1c5de019767939700c5c78b3b202f5",
+    "tests/test_design.py": "3e3fe987c86d4117770e81d2e63f2418d32a498c63271ce6b8cc007bcc74ea11",
+    "tests/test_governance.py": "93f255cd8b2026c567b6886a12f0582c545c98e9cbf1ba2b54b788eca6517628",
+    "tests/test_native.py": "3329bf87239f1276802d19b49816cd9bf7929760f31a8b193f88ae1afa610f68",
+    "tests/test_resources.py": "6771af585209156341d2eef0caaa9b8d6aba158cb3b1b22db5a0b15cf52364b3",
+    "tests/test_service.py": "f377d8d9c1c2d918621249035a9486a39ad3266c46dd5768593c53cf624bfef9",
+    "tests/test_stdio.py": "d06f827be72d7e459b50ef4944316d74847809eebd136f202db406a8420e5865",
+    "profiles/dop_110is_diascreen.json": "72b5e04f3435e488bfd6c23d7aba3915617de36d27972627d7782b8d8a050bf9",
+    "profiles/dop_b07s411_dopsoft2.json": "ae052c6c7208ad4c38fee47abe71ea3388c7d0bb902851b67544b7ca0133b7a1",
+    "profiles/synthetic_diascreen.json": "ba237a67ab7d9f2c8def98e4e1f377862cd666a9c32d344860c5956a95b8ad44",
+    "profiles/synthetic_dopsoft2.json": "54648f8d00863a8d92eb78c3b61b3c919d2db3b2f6fb145cb4e890c41428c2f4",
+    "tools/_governance.py": "b0fab8b43fa2be055743fd7c46a0239357cfa17c3af164a8fc3ea5dc30b7c209",
+    "tools/check_repo.py": "4113425ec33eddad3e9e920470a96a65421ebfb99f918c8e170e1c3b6006884e",
+    "tools/session_guard.py": "7b3a8baedbd528aabbb3c77f69bfd1bbb8ffb5079ba726bb3597cf233dbdaaff",
+    "scripts/build_manifest.py": "d3735a80d523b7fe83e0dfef14e51922060b7f415370065e4fc3a2cce33e2ca8",
+    "scripts/build_previews.py": "608f007c469460ba79ef69323b308e80704fcd28bb5ccdd94309906cba19a8d4",
+    "scripts/build_profiles.py": "2dd35eb99e59bb1e183c4f9e9816fba75970b228d7f00ab9b9bed2215cadecc5",
+    "scripts/codex_config.toml.example": "20171fd77d09b6d52f9253c65816d14617753a88b6ae51eea1cad2b59dc31ffa",
+    "scripts/configure_mcp.py": "72b5a76a64582dc08dd9eb771e7233f21659ce6dae99d1c845ba8767f44fa2bc",
+    "scripts/preview_smoke.cjs": "58076b2f5dfbf70e15eaa1152eb20e72609d24f59dca9b728b0209ddaa6864e8",
+    "scripts/relocation_test.py": "f6020a59b975296ff32cf184586d440cbc723952b9665bed968df2b31fb5c446",
+    "scripts/setup.ps1": "d9a68842d2a446cb8439b5ba6de60ffbf45a1aa8f3f769bf187bebf3c72cb415",
+    "scripts/setup.sh": "e3c4d18c74f300f6bbc5f757b0385775aa86abfbf7b03df3c15db3919b12a2bc",
+    "scripts/vendor_probe.py": "1036ed0f8b89974670fbd25481244e54ca9c7d913af40ade617a8ab96765af13",
+    "scripts/verify.py": "b386127db5b933a79ddf27f4f66b08bde3de3c9afaf4594ceb0c0254d25d084b"
+  },
+  "root_tests": {
+    "executed": 297,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 42.415
+  },
+  "independent_review": {
+    "reviewer": "/root/emitter_counterreview",
+    "read_only": true,
+    "status": "OFFLINE_PASS",
+    "executed": 297,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 38.173,
+    "source_hashes_unchanged": true,
+    "direct_probes": 139,
+    "direct_probe_elapsed_seconds": 0.798,
+    "important_open_findings": 0,
+    "conceptual_dom_cases": 10,
+    "native_visual": "NOT_RUN",
+    "report": "NATIVE_UNIT_REVIEW.md"
+  },
+  "implemented": [
+    "Exact numeric unit_label to one same-page separate literal text owner",
+    "Declared label geometry/font/color and conceptual DOM fit without font shrink",
+    "UnitTextLenN framing, separate inventory, pure original/candidate baselines and primary literal patcher",
+    "Public inactive empty embedded unit context and immutable source/donor/candidate identity baseline",
+    "Public embedded-caption mutation denied and actual stdio linked units on both envelopes/kinds"
+  ],
+  "findings_closed": [
+    {
+      "id": "U1",
+      "severity": "IMPORTANT",
+      "trigger": "CRLF/NUL label ID normalized by HTML DOM",
+      "evidence": "Exact string membership missed overflow in independent actual browser probe",
+      "effect": "Undeclared clipping without fit error",
+      "fix": "Stable element-index membership; declared font and literal retained",
+      "retest": [
+        "test_design.PreviewTests.test_unit_label_fit_uses_stable_indexes_when_html_normalizes_identifier_controls"
+      ],
+      "independent_retest": "10/10 conceptual DOM cases PASS"
+    },
+    {
+      "id": "U2",
+      "severity": "IMPORTANT",
+      "trigger": "Same caption text but 6/0006 raw length spelling changes",
+      "evidence": "Pure candidate verifier previously compared decoded literal only",
+      "effect": "Semantic no-op rewrites framed source bytes",
+      "fix": "Exact original primary Record.raw required on unchanged caption literal",
+      "retest": [
+        "test_native.NativeTests.test_unit_semantic_noop_requires_exact_source_primary_record_bytes"
+      ],
+      "independent_retest": "Both envelope directions PASS"
+    },
+    {
+      "id": "U3",
+      "severity": "IMPORTANT",
+      "trigger": "Unitless numeric Element plus foreign Application/Screen unit metadata",
+      "evidence": "Local Element-only condition bypassed unknown effective context",
+      "effect": "Public numeric candidate with undeclared unit behavior",
+      "fix": "Unconditional original/donor/candidate foreign-owner check on numeric paths",
+      "retest": [
+        "test_service.ServiceTests.test_foreign_unit_owners_rejected_even_with_unitless_numeric_element",
+        "test_service.ServiceTests.test_saved_foreign_unit_owner_is_rejected_for_unitless_numeric_ir"
+      ],
+      "independent_retest": "Automatic, explicit no-op, saved and read-only distinction PASS"
+    },
+    {
+      "id": "U4",
+      "severity": "IMPORTANT",
+      "trigger": "unit_caption named input/display kinds swapped without numeric schema",
+      "evidence": "Canonical set membership alone did not pin named operation behavior",
+      "effect": "Input6/1 and display5/1 role identity accepted reversed",
+      "fix": "Exact named input6/1, display5/1 mapping independently required",
+      "retest": [
+        "test_native.NativeTests.test_unit_named_kinds_cannot_be_swapped_when_numeric_schema_is_absent"
+      ],
+      "independent_retest": "Six canonical/swapped apply and pure-verifier probes across both envelopes PASS"
+    }
+  ],
+  "genuine_read_only_holdouts": {
+    "memory_only": true,
+    "native_sources_written": false,
+    "native_candidates_written": false,
+    "root_enabled_owners_verified": 30,
+    "independent_enabled_owners_verified": 30,
+    "independent_changed_caption_holdouts": 2,
+    "root_changed_caption_holdouts": 30,
+    "source_unchanged": true,
+    "exact_one_primary_record_changed": true,
+    "prefix_thumbnail_tail_preserved": true,
+    "sources": [
+      {
+        "name": "History",
+        "sha256": "7f35b5fd05537106b46a9791a426a1b3e3a59f8afa1f870595e9c0fd75e24471",
+        "model": 268505093,
+        "editor": "6.6.0.10",
+        "enabled_owners": 21
+      },
+      {
+        "name": "SC Alarm",
+        "sha256": "5cc5fa8215be212a3a19d6cd3e78520cddcc355b8e105c7e17b31b7df11e17a9",
+        "model": 268505088,
+        "editor": "6.6.0.9",
+        "enabled_owners": 9
+      }
+    ],
+    "report": "NATIVE_UNIT_RESEARCH.md",
+    "selected_model_qualification": "NOT_RUN"
+  },
+  "fresh_relocation": {
+    "status": "OFFLINE_PASS",
+    "source_commit": "12a655975cec085d19f741ab96e61196b41cb5c8",
+    "test_revision_sha256": "765c6460d932d0ba66ab4e7ade29f10350b5c8c95546c2ef4c19c63af328ed1d",
+    "executed": 297,
+    "skipped": 0,
+    "pip_check": {
+      "exit_code": 0,
+      "result": "No broken requirements found."
+    },
+    "linux_runtime": "NOT_RUN",
+    "macos_runtime": "NOT_RUN",
+    "report": "history/297/relocation_verification.json",
+    "tests": "history/297/relocation_tests.json",
+    "source_hash_count": 40,
+    "same_physical_windows_host": true,
+    "independent_environment_audit": "OFFLINE_PASS",
+    "independent_audit": {
+      "reviewer": "/root/emitter_counterreview",
+      "read_only": true,
+      "actual_checkout_head_matches": true,
+      "actual_source_hashes_match": 40,
+      "unique_test_ids_same_order": 297,
+      "fresh_elapsed_seconds": 43.695,
+      "new_isolated_venv_and_editable_direct_url": true,
+      "outside_checkout_import": true,
+      "old_checkout_not_in_path_or_sys_path": true,
+      "pythonpath_pythonhome_unset": true,
+      "lock_pins_match": 30,
+      "pip_check_exit_code": 0,
+      "actual_git_directory": true,
+      "no_origin_no_object_alternates": true,
+      "saved_report_matches_actual_clone": true,
+      "host_neutral_saved_logs": true,
+      "suite_not_repeated": true
+    }
+  },
+  "native_visual": "NOT_RUN",
+  "vendor_compile": "NOT_RUN",
+  "physical_test": "NOT_RUN",
+  "vendor_assets_redistributed": false,
+  "both_families_vendor_qualified": false,
+  "full_v1_complete": false,
+  "open": [
+    "Complete exact selected-model native page/font/picture/layer/unit/conversion and driver qualification",
+    "Public Alarm IR, active strip/current table/date-time history emission",
+    "External/alias/REAL/TIME macros and other conditions",
+    "Two real native common pilot and human vendor/panel acceptance",
+    "Linux/macOS runtime NOT_RUN"
+  ],
+  "source_commit": "12a655975cec085d19f741ab96e61196b41cb5c8",
+  "historical_evidence": "history/297/README.md"
+}

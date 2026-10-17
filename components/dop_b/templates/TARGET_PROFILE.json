@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "profile_id": "<exact-profile-id>",
+  "model": "<human-or-source-confirmed-model>",
+  "editor": {"name": "<DOPSoft 2 or DIAScreen>", "build": null},
+  "format": "<.dps or .dpa>",
+  "resolution": {"width": null, "height": null, "evidence_ref": null},
+  "driver": {"id": null, "version": null, "evidence_ref": null},
+  "source_sha256": null,
+  "profile_sha256": null,
+  "qualification": {
+    "status": "UNVERIFIED",
+    "native_schema_revision": null,
+    "native_schema_sha256": null,
+    "vendor_fixture_sha256": null,
+    "fixture_provenance": null,
+    "fixture_redistribution_permission": null,
+    "features_and_scenarios": []
+  }
+}

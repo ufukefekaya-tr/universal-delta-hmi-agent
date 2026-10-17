@@ -1,0 +1,55 @@
+# İnsan kabulü ve teslim
+
+Teslim paketi exact target profile, immutable source SHA, output SHA, approved preview/hash'ler, semantic diff, offline test revision, açık bulgular ve [destek matrisi](SUPPORT_MATRIX.md) sınırını taşır. `FrameworkReady` teslimi fiziksel devreye alma kabulü değildir.
+
+Önceki FrameworkReady, macro/Alarm, layout ve [unit milestone](../reports/NATIVE_UNIT_MILESTONE.json)/[review](../reports/NATIVE_UNIT_REVIEW.md) kendi revision'larında kabul edilmiştir. 297-test Windows kanıtı (tarihsel yerel kanıt; genel pakete dahil değil: `../reports/history/297/relocation_verification.json`) yeni Alarm kaynağına taşınmaz. Bu faz existing active-high BOOL primary-message ve source-preserved Type11 current/history/strip geometri/clone subset'ini ekler; yeni frozen test/review/relocation ve scoped Git/checkpoint kapanışı [güncel raporda](../reports/VERIFICATION.md) ayrıca bağlanır. Bounded internal macro ve Alarm subset'i geniş macro/driver, alarm storage/retention/lifecycle veya native runtime kabulü değildir. Public save_as yalnız SYNTHETIC/0.0; gerçek production qualified flag veya insan onayıyla açılmaz. Tam selected-model unit/caption compiler, native font units/picture/gradient/transparency, `Order` layer, temel Alarm/history davranışı, external driver ve iki gerçek native pilot/vendor/panel kabulü açıktır. Synthetic çıktıyı üretim paneline aday olarak teslim etme; aşağıdaki insan adımları gerçek profile/feature emitter tamamlandıktan sonraki kabul planıdır.
+
+Test hedefleri root seçimiyle `dop_b07s411_dopsoft2` / DOP-B07S411 ve `dop_110is_diascreen` / DOP-110IS'tir. Model seçimini tekrar kullanıcıya sorma; exact editor build/driver, fixture ve açık feature kabulünü ayrıca kanıtla. FrameworkReady son rapor, temiz ortam ve scoped commit kapanışına bağlıdır.
+
+Başka host'a teslimde [PORTABILITY](PORTABILITY.md) uygulanır: bağımsız tam Git repo veya clone, yeni venv/editable install ve yeni host'ta stdout'tan üretilmiş MCP config. Eski venv/client ayarı taşınmaz; private input ve fixture izinleri ayrıca yönetilir. Client repo dışında cwd ile başlayabilir. Vendor IDE runtime önkoşulu değildir; insan vendor kabulü vendor yazılımının desteklediği OS üzerinde yapılır. Önceki 297-test Windows fresh-clone/ortam kabulü kendi unit revision'ındadır; Alarm revision'ı için yeni source hashes/test listesi, fresh clone, ortam denetimi ve manifest/scoped proof kapanışı ayrıca gerekir. Son durum root raporlarından okunur. Linux/macOS runtime NOT_RUN; biri diğerinin kanıtı sayılmaz.
+
+Layout diff'inde page ID/name ve tam section sırası, boş/inert donor koşulu, bütün state values, açık caption text (boş dahil) ve exact bindings kaydedilir. Numeric donor'un unmanaged State caption'ı devralınmaz. Linked unit için numeric `unit_label`→same-page exact text ID, tek owner, element/tag unit/literal eşitliği ve text geometry/font/color/fill ayrıca kaydedilir. Rename/goto ID ve name companions birlikte doğrulanır; unknown reference veya stale name kabul edilmez. Ordinary font yalnız State.FontSize0, FontRatio0=100 ve ASCII FontName0; renk explicit rgb24 veya calibrated colorref24 contract'idir. PictureOffset/PIB Name/Picture Name flat-style adayı değildir. Scalar eşitliği points/pixels veya native glyph/yerleşim/renk/layer eşitliği sağlamaz; native visual NOT_RUN kalır. Kaydedilmiş vendor thumbnail encoding corroboration'ı, conceptual preview ve scalar OFFLINE testi candidate native pixel-rendering PASS olarak sunulmaz; insan IDE/panel kabulü ayrıca gerekir.
+
+Public unit subset'inde donor/candidate embedded `ShowUnit=0` ve bütün primary/secondary captions exact empty terminal-NUL UTF-16LE 2-byte frame olmalıdır. Ayrı qualified `unit_context` identity baseline bütün 22 primary companion'ı ve tam secondary-language triples'ı kapsar; source/donor/candidate raw signature exact korunur. UnitSrcVar/UnitDisplayVar external operand ve percent/custom address operand kabul edilmez. Unitless numeric emission bile Application/Screen/State yabancı unit owner'ını kabul etmez; read-only parse/retention ayrı kalır. Design'da unit'i kaldırmak hidden conversion metadata'nın kaybolmasına veya değişmesine izin vermez.
+
+Conceptual preview linked numeric'in inline unit'ini bastırır ve ayrı text owner'ı declared font ile ölçer; overflow `INSUFFICIENT SPACE` üretir, font küçültmez. Stable numeric indexes CRLF/NUL ID normalization bypass'ını kapatır. Bu ölçüm browser font'udur; native `UnitDirection`, unit font/enum/glyph/pixel kabulü değildir. Embedded `set_unit_caption` helper'ı **RAW RECORD ONLY** ve public intent'te `NATIVE_OPERATION_INTENT` ile kapalıdır. 30 gerçek read-only History/SCAlarm unit-owner holdout'u preservation/framing gözlemidir; selected-model/production/vendor/pixel veya yeni Alarm subset'inin kabulünü yaratmaz. Mevcut examples değiştirilmemiştir.
+
+Yeni page için tam7field plain-source baseline SHA'sı ve saved yeni page eşitliği kaydedilir; donor nesnesiz/inert kalır, unknown background/lock/inheritance eklenmez. Public pure guard Screen/Element/State `Order` alanını 0/no-op/append-only'de de reddeder. State-only fill ve kind-prefix'li görünüm alanları aynı companion guard'ını gerektirir; empty-companion original synthetic profile vendor flat-style kanıtı değildir. S1–S7 guard düzeltmelerinin önceki bounded OFFLINE_PASS kabulü kendi layout revision'ındadır; önceki local suite sonucu yeni unit revision'ına otomatik taşınmaz.
+
+Explicit property planı, onaylı IR'daki fixed field/owner ve açık style/state intent sınırını aşamaz; generic low-level primitive kabulü public transaction yetkisi değildir. Public caption yazımı primary language=0 ile sınırlı, retained diğer dil kayıtları multilingual kabulü değildir. Goto tam canonical Type/SubType ve varsa ASCII target-name companion ile denetlenir. Teslimde semantic diff yanında saved candidate/apply receipt SHA eşitliği gösterilir; opaque corruption'da yeni çıktı üretilmez. Önceki S5–S7/unit review kapanışına ek olarak Alarm contract'in exact source/review/relocation raporları ayrı bağlanır; final manifest hash eşitliği ve scoped proof commit kapanışı Git/checkpoint üzerinden doğrulanır.
+
+## Alarm subset'inin teslim sınırı
+
+Mevcut active-high BOOL alarmlarının primary mesajları için source-local `alarm_ir` v1 / existing_bool_message / all_enabled contract gerekir. Entry/message raw SHA, explicit one-bit storage (`bits=1`, format=bit, native_mem_len="1"), altı native guard ve exact BOOL tag/address/channel/station/orders/link eşleşmesi kanıt paketinde görünmelidir. Sparse native alanlar default ile tamamlanmaz; numeric/continuous/new-entry/new-trigger/per-entry adres yolu, mapped WatchAddr* ve değişen `%` formatted mesaj bu subset'te desteklenmez. Source trigger, disabled/secondary mesaj, history/global scalar ve prefix/suffix bytes'ı korunur. Contract varken alarms=[] coverage gate'ini atlayamaz; contract yok ve alarm IR boşsa unmanaged tail'in exact korunması Alarm desteği sayılmaz.
+
+View sözleşmesi native Type11 history1/current2/strip4 owner/donor SHA'sını ve immutable Element+State extent'ini pinler. Yalnız Element kimlik/geometri records değişebilir; font/column/title/date/time/language/unknown sunum ve State records aynen korunur. Original Type11 owner silinemez. View IR `text: ""`, `view_policy: "preserve_source"` ve identity/kind/geometri taşır; ayrı başlık ordinary text nesnesidir. Style/text/binding/state override, foreign Application/Screen/State ownership, active action/filter/group/file-browser/reference, FunctionKeyPartID≥0 ve executable macro reddedilir. SHA'nın pinlenmiş olması dependency veya owner qualification'ının yerine geçmez.
+
+`history_policy: "preserve_source"` retention/lifecycle üretimi değildir; Hold/AlmHoldPlace/timestamp/storage/restart davranışı değiştirilmez veya tahmin edilmez. Kavramsal modelde retain/clear bulunması native preflight yetkisi vermez. Önizleme UNKNOWN / SOURCE-PRESERVED PRESENTATION ve history'de NO HISTORY DATA gösterir; native font/column/time/action veya pixel doğrulaması yapmaz. Kaydedilmiş adayın expected whole tail'i immutable source + approved IR'dan yeniden doğrulanır; explicit/no-op plan aynı final guard'a tabidir. [Alarm Kaizen](../kaizen/ALARM_VIEWS.md) ve [kanıt sınırı](EVIDENCE.md) teslimde birlikte okunur.
+
+Malformed kinds/donors map, public grammar dışı kısa/uzun index veya primary scalar companion'da subindex yeni sourceSHA ile kabul edilmez. Typed hata source'a/candidate'a yazmadan dönmelidir; yanlış serialized spelling normalize edilip vendor kabulü üretilmez. Tarih/saat metadata'sının exact korunması çalışır veya kalıcı alarm geçmişi desteği sayılmaz.
+
+## Vendor kabulü — insan yürütür
+
+1. Çıktı SHA'sının kartla eşleştiğini ve kaynak dosyanın değişmediğini doğrula.
+2. Exact editor build/target profile ile **yeni çıktıyı** aç. Parser/container başarı raporuna dayanarak geçiş verme.
+3. Editor open, target/driver/type/address, ekran/nesne/font ve unknown-field warning'lerini kaydet. Unit feature için tek visible owner, exact literal, text geometry/declared font ve embedded caption'ın inactive kaldığını ayrı doğrula.
+4. Derle/simüle et; momentary/maintained/toggle, numeric type/width/TIME/64-bit ve comm-loss senaryolarının expected/actual sonuçlarını yaz. Numeric raw değer/process unit eşitliği ve unintended conversion olmadığını exact unit/limit senaryolarıyla kanıtla.
+5. Hataları artifact SHA, screenshot/log reference ve senaryoya bağla. [VENDOR_EVIDENCE](../templates/VENDOR_EVIDENCE.json) yalnız insan testi tamamlandıysa `VENDOR_PASS` olur.
+
+Ajan editor GUI'sini açıp test yürütmez, vendor compile yapmaz. HMC veya başka model örneğinin açılması bu profile kabulü değildir.
+
+## Fiziksel kabul — yetkili saha insanı yürütür
+
+Saha insanı hedef panel/model/PLC/driver ve uygulama çıktısını doğrular; tesisin yetkili prosedürüyle bağlantı/download/enerjilendirme işini yürütür. Ajan bu işlemleri veya force yapmaz. Kartta özel cihaz/IP/tag bilgisi gerekiyorsa ignored proje-local kalır.
+
+- Komut bitine basılınca yalnız komut oluşmasını, fiziksel feedback gelmeden "çalışıyor" görünmemesini test et.
+- Momentary down/up ve maintained/toggle sözleşmesini test et; restart/retained durumlarını kaydet.
+- Type, width, signedness, scale/unit ve exact address mapping'i doğrula. Limit/offset'i adres sanma.
+- Haberleşme kaybı/stale/unknown'da sağlıklı veya kapalı varsayılmadığını test et.
+- İzinli gerçek feedback/quality ve alarm davranışını test et; sonuçları exact artifact SHA'ya bağla.
+
+[PHYSICAL_EVIDENCE](../templates/PHYSICAL_EVIDENCE.json) `PHYSICAL_PASS` olmadan G7 açık kalır. Tek model testi başka model/aileyi kabul etmez.
+
+## Teslim sonucu
+
+Her kabul için sonuç, açık geliştirme, bulgu, etki, sorumlu insan/rol ve sonraki kanıt belirtilir. G2/G3 native emitter, G4 iki gerçek native pilot, G5 vendor ve G7 fiziksel açıkları "tamamlandı" kelimesiyle gizlenmez. Onay sonrası profile/design/binding/behavior/source değişirse ilgili onay ve testler yeniden değerlendirilir. Ajan offline çalışmaya devam edebilir; geçmiş insan kanıtını yeni hash'e taşımak yasaktır.

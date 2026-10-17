@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<title>neutral_800x480 · Conceptual HMI preview</title>
+<style>
+:root{color-scheme:dark;font-family:Segoe UI,Arial,sans-serif;background:#0b1220;color:#e6edf5}*{box-sizing:border-box}body{margin:0}header{padding:24px 32px 18px;border-bottom:1px solid #263448;background:#111d2e}.eyebrow{color:#f0bc6f;font-size:11px;letter-spacing:1.8px;font-weight:700}h1{font-size:24px;margin:8px 0;font-weight:600}header p{color:#a5b5c9;font-size:13px;line-height:1.5;margin:4px 0}.workspace{display:grid;grid-template-columns:minmax(480px,1fr) 330px;gap:22px;padding:24px 32px}.preview-column{min-width:0}.toolbar{display:flex;gap:12px;align-items:center;margin-bottom:14px;font-size:12px;color:#a5b5c9}.toolbar select{flex:1;max-width:320px}.badge{border:1px solid #3c526c;border-radius:20px;padding:5px 10px;font-size:10px;letter-spacing:.8px;white-space:nowrap}.frame{background:#070e19;border:1px solid #2a3c54;border-radius:12px;padding:18px;overflow:hidden;box-shadow:0 20px 45px #0005}.viewport{position:relative;overflow:hidden;margin:auto}.screen{position:absolute;transform-origin:top left;background:#101b2a;overflow:hidden}.screen[hidden]{display:none}.element{position:absolute;border-radius:9px;display:flex;flex-direction:column;justify-content:center;padding:10px 16px;overflow:hidden;user-select:none;pointer-events:none;line-height:1.12}.element.text{padding:0;display:flex;justify-content:center;border-radius:0}.element.text .label{white-space:pre-wrap}.element-title{font-size:11px;letter-spacing:.65px;opacity:.82;line-height:1.2;margin-bottom:6px;overflow:hidden}.reading{display:flex;gap:10px;align-items:baseline;white-space:nowrap;min-width:0}.value{font-weight:600;white-space:nowrap;max-width:100%;font-variant-numeric:tabular-nums;line-height:1.1}.reading .value{flex:0 0 auto;min-width:0}.unit{font-size:13px;color:#a5b5c9;flex:none}.quality{font-size:11px;font-weight:500;letter-spacing:.55px;margin-top:7px;opacity:.7;line-height:1.2}.button,.goto{border:1px solid #526d8c;box-shadow:inset 0 -3px 0 #0002}.button .value,.indicator .value{font-size:inherit}.indicator{border-left:4px solid #67778c}.unknown{background:#303d4e!important;border-color:#738095!important;color:#e5eaf1!important}.unknown .quality{color:#d3d9e2;opacity:1}.element-title,.quality,.reading,.element>.value{flex-shrink:0}.quality[hidden]{display:none}.alarm_strip{padding:6px 16px}.alarm_strip .element-title{margin-bottom:3px;font-size:10px}.alarm_strip .quality{margin-top:3px;font-size:11px}.alarm_strip.active,.alarm_table.active{background:#3b2e22!important;border-left:4px solid #d9ab5f;color:#f2d5ad!important}.layout-error{border:1px solid #d9ab5f}.layout-report{color:#f0bc6f;background:#352a23;border:1px solid #6b4a32;border-radius:7px;padding:12px;font-size:12px;line-height:1.5}.unsupported{background:#493b32!important;color:#f0bc6f!important;border:1px dashed #d09856}.caption{color:#8296ae;font-size:11px;line-height:1.6;margin:12px 2px}.validation{font-size:11px;color:#92a9bf;line-height:1.5}.issues{background:#352a23;border:1px solid #6b4a32;padding:12px;border-radius:7px;color:#efc49d;font-size:11px;margin-top:12px}.issues summary{cursor:pointer}.issues li{margin:6px 0;line-height:1.5}.issues code{color:#f0bc6f}.controls{background:#111d2e;border:1px solid #263448;border-radius:10px;padding:20px;align-self:start}.controls h2{font-size:16px;font-weight:600;margin:0 0 8px}.controls p{font-size:12px;color:#95a8bf;line-height:1.6;margin:0 0 18px}.global{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid #2a3a4e;padding-bottom:15px;margin-bottom:5px;font-size:12px}.tag-control{display:grid;grid-template-columns:1fr 88px;gap:8px;padding:14px 0;border-bottom:1px solid #22334a}.tag-control>span{min-width:0}.tag-control strong{display:block;overflow-wrap:anywhere;font-size:11px;font-weight:500}.tag-control small{display:block;color:#8aa0b8;font-size:10px;margin-top:5px}.tag-control select{grid-column:1/-1;width:100%}input,select{color:#dfe8f4;background:#0c1727;border:1px solid #354b65;border-radius:5px;padding:8px;font-family:inherit;font-size:11px;min-width:0}input:focus,select:focus{outline:2px solid #74b4f0;outline-offset:1px}.controls .footnote{margin-top:16px;margin-bottom:0;font-size:10px}.empty{padding:40px;color:#a5b5c9}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}@media(max-width:1050px){.workspace{grid-template-columns:1fr;padding:20px}.controls{max-width:none}.tag-control{grid-template-columns:minmax(100px,1fr) 100px 150px}.tag-control select{grid-column:auto}.frame{padding:12px}header{padding:20px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body>
+<header><span class="eyebrow">OFFLINE ENGINEERING PREVIEW</span><h1>neutral_800x480</h1><p>Conceptual only · no native vendor rendering · no live controller connection.</p><p>synthetic_dopsoft2 · Synthetic fixture · no vendor-native source</p></header>
+<main class="workspace"><div class="preview-column"><div class="toolbar"><label for="screen-select">Screen</label><select id="screen-select"><option value="0">Overview · 800 × 480</option></select><span class="badge">ILLUSTRATION</span></div><div class="frame"><div class="viewport" id="viewport"><section class="screen" data-screen="0" data-width="800" data-height="480" style="width:800px;height:480px"><div class="element text" data-index="0" data-element-id="page_title" style="left:32px;top:20px;width:650px;height:36px;font-size:26px;color:#e6edf5;background:#101b2a;" role="img" aria-label="Conceptual illustration: Machine overview"><span class="label">Machine overview</span></div><div class="element indicator" data-index="1" data-element-id="run_status" style="left:32px;top:100px;width:230px;height:104px;font-size:18px;color:#e6edf5;background:#256b58;" role="img" aria-label="Conceptual illustration: RUN FEEDBACK"><span class="element-title">RUN FEEDBACK</span><span class="value">Running</span><span class="quality" hidden></span></div><div class="element numeric_display" data-index="2" data-element-id="speed_value" style="left:282px;top:100px;width:230px;height:104px;font-size:30px;color:#e6edf5;background:#1b293b;" role="img" aria-label="Conceptual illustration: ACTUAL SPEED"><span class="element-title">ACTUAL SPEED</span><span class="reading"><span class="value">1420.5</span><span class="unit">rpm</span></span><span class="quality" hidden></span></div><div class="element numeric_input" data-index="3" data-element-id="speed_input" style="left:532px;top:100px;width:236px;height:104px;font-size:30px;color:#e6edf5;background:#1b293b;" role="img" aria-label="Conceptual illustration: SPEED SETPOINT"><span class="element-title">SPEED SETPOINT</span><span class="reading"><span class="value">1500.0</span><span class="unit">rpm</span></span><span class="quality" hidden></span></div><div class="element text" data-index="4" data-element-id="controls_title" style="left:32px;top:228px;width:650px;height:22px;font-size:12px;color:#95a9c2;background:#101b2a;" role="img" aria-label="Conceptual illustration: REQUESTS"><span class="label">REQUESTS</span></div><div class="element button" data-index="5" data-element-id="run_button" style="left:32px;top:264px;width:230px;height:92px;font-size:18px;color:#e6edf5;background:#27384d;" role="img" aria-label="Conceptual illustration: RUN REQUEST"><span class="element-title">RUN REQUEST</span><span class="value">Request clear</span><span class="quality" hidden></span></div><div class="element button" data-index="6" data-element-id="stop_button" style="left:282px;top:264px;width:230px;height:92px;font-size:18px;color:#e6edf5;background:#27384d;" role="img" aria-label="Conceptual illustration: STOP REQUEST"><span class="element-title">STOP REQUEST</span><span class="value">Request clear</span><span class="quality" hidden></span></div><div class="element indicator" data-index="7" data-element-id="request_state" style="left:532px;top:264px;width:236px;height:92px;font-size:18px;color:#e6edf5;background:#27384d;" role="img" aria-label="Conceptual illustration: RUN REQUEST STATE"><span class="element-title">RUN REQUEST STATE</span><span class="value">Clear</span><span class="quality" hidden></span></div><div class="element alarm_strip " data-index="8" data-element-id="alarm_summary" style="left:32px;top:386px;width:736px;height:72px;font-size:15px;color:#e6edf5;background:#1b293b;" role="img" aria-label="Conceptual illustration: ALARMS"><span class="element-title">ALARMS · 0 ACTIVE</span><span class="value">No active alarms</span><span class="quality" hidden></span></div></section></div></div><p class="caption">Panel elements are illustrations. Inspect request, feedback and invalid states with the external sample controls. Button behavior, macros, navigation and alarm retention are not executed here. Additional request-state indicator is an offline qualification example.</p><p class="layout-report" id="layout-issues" hidden role="alert"></p><p class="validation">Common-model validation passed. Vendor and physical acceptance remain separate.</p></div><aside class="controls"><h2>Sample controls</h2><p>These controls belong to this preview, outside the HMI. Values are samples, never controller observations.</p><label class="global"><span>All sample quality</span><select id="global-quality"><option value="per_tag">Per tag</option><option value="invalid">Invalid</option><option value="stale">Stale</option></select></label><div><label class="tag-control"><span><strong>run_request</strong><small>BOOL · </small></span><input data-tag="0" aria-label="Sample value for run_request" autocomplete="off" placeholder="No sample"><select data-quality="0" aria-label="Sample quality for run_request"><option value="valid">Valid sample</option><option value="invalid">Invalid</option><option value="stale">Stale</option></select></label><label class="tag-control"><span><strong>stop_request</strong><small>BOOL · </small></span><input data-tag="1" aria-label="Sample value for stop_request" autocomplete="off" placeholder="No sample"><select data-quality="1" aria-label="Sample quality for stop_request"><option value="valid">Valid sample</option><option value="invalid">Invalid</option><option value="stale">Stale</option></select></label><label class="tag-control"><span><strong>run_feedback</strong><small>BOOL · </small></span><input data-tag="2" aria-label="Sample value for run_feedback" autocomplete="off" placeholder="No sample"><select data-quality="2" aria-label="Sample quality for run_feedback"><option value="valid">Valid sample</option><option value="invalid">Invalid</option><option value="stale">Stale</option></select></label><label class="tag-control"><span><strong>actual_speed</strong><small>REAL · rpm</small></span><input data-tag="3" aria-label="Sample value for actual_speed" autocomplete="off" placeholder="No sample"><select data-quality="3" aria-label="Sample quality for actual_speed"><option value="valid">Valid sample</option><option value="invalid">Invalid</option><option value="stale">Stale</option></select></label><label class="tag-control"><span><strong>speed_setpoint</strong><small>REAL · rpm</small></span><input data-tag="4" aria-label="Sample value for speed_setpoint" autocomplete="off" placeholder="No sample"><select data-quality="4" aria-label="Sample quality for speed_setpoint"><option value="valid">Valid sample</option><option value="invalid">Invalid</option><option value="stale">Stale</option></select></label><label class="tag-control"><span><strong>alarm_active</strong><small>BOOL · </small></span><input data-tag="5" aria-label="Sample value for alarm_active" autocomplete="off" placeholder="No sample"><select data-quality="5" aria-label="Sample quality for alarm_active"><option value="valid">Valid sample</option><option value="invalid">Invalid</option><option value="stale">Stale</option></select></label></div><p class="footnote">Missing, malformed, out-of-range or stale data displays gray UNKNOWN. Alarm history has no persisted sample store.</p></aside></main>
+<script id="preview-data" type="application/json">{"elements":[{"id":"page_title","kind":"text","x":32,"y":20,"width":650,"height":36,"text":"Machine overview","font_size":26,"color":"#e6edf5","fill":"#101b2a"},{"id":"run_status","kind":"indicator","x":32,"y":100,"width":230,"height":104,"text":"RUN FEEDBACK","font_size":18,"color":"#e6edf5","fill":"#1b293b","binding":{"read":"run_feedback","write":null},"states":[{"value":0,"text":"Stopped","fill":"#27384d"},{"value":1,"text":"Running","fill":"#256b58"}],"role":"feedback"},{"id":"speed_value","kind":"numeric_display","x":282,"y":100,"width":230,"height":104,"text":"ACTUAL SPEED","font_size":30,"color":"#e6edf5","fill":"#1b293b","unit":"rpm","fractional":1,"format":"decimal","binding":{"read":"actual_speed","write":null}},{"id":"speed_input","kind":"numeric_input","x":532,"y":100,"width":236,"height":104,"text":"SPEED SETPOINT","font_size":30,"color":"#e6edf5","fill":"#1b293b","unit":"rpm","minimum":0,"maximum":5000,"fractional":1,"format":"decimal","binding":{"read":"speed_setpoint","write":"speed_setpoint"}},{"id":"controls_title","kind":"text","x":32,"y":228,"width":650,"height":22,"text":"REQUESTS","font_size":12,"color":"#95a9c2","fill":"#101b2a"},{"id":"run_button","kind":"button","x":32,"y":264,"width":230,"height":92,"text":"RUN REQUEST","font_size":18,"color":"#e6edf5","fill":"#1b293b","behavior":"maintained","role":"request","binding":{"read":"run_request","write":"run_request"},"states":[{"value":0,"text":"Request clear","fill":"#27384d"},{"value":1,"text":"Request active","fill":"#24689d"}]},{"id":"stop_button","kind":"button","x":282,"y":264,"width":230,"height":92,"text":"STOP REQUEST","font_size":18,"color":"#e6edf5","fill":"#1b293b","behavior":"set_on","role":"request","binding":{"read":"stop_request","write":"stop_request"},"states":[{"value":0,"text":"Request clear","fill":"#27384d"},{"value":1,"text":"Request active","fill":"#8e4e42"}]},{"id":"request_state","kind":"indicator","x":532,"y":264,"width":236,"height":92,"text":"RUN REQUEST STATE","font_size":18,"color":"#e6edf5","fill":"#1b293b","role":"request","binding":{"read":"run_request","write":null},"states":[{"value":0,"text":"Clear","fill":"#27384d"},{"value":1,"text":"Requested","fill":"#24689d"}]},{"id":"alarm_summary","kind":"alarm_strip","x":32,"y":386,"width":736,"height":72,"text":"ALARMS","font_size":15,"color":"#e6edf5","fill":"#1b293b"}],"tags":[{"id":"run_request","address":"DEMO.RUN_REQUEST","data_type":"BOOL","access":"ReadWrite","unit":"","channel":"SIM","station":"OFFLINE","byte_order":"little","word_order":"little"},{"id":"stop_request","address":"DEMO.STOP_REQUEST","data_type":"BOOL","access":"ReadWrite","unit":"","channel":"SIM","station":"OFFLINE","byte_order":"little","word_order":"little"},{"id":"run_feedback","address":"DEMO.RUN_FEEDBACK","data_type":"BOOL","access":"Read","unit":"","channel":"SIM","station":"OFFLINE","byte_order":"little","word_order":"little"},{"id":"actual_speed","address":"DEMO.ACTUAL_SPEED","data_type":"REAL","access":"Read","unit":"rpm","channel":"SIM","station":"OFFLINE","byte_order":"little","word_order":"little"},{"id":"speed_setpoint","address":"DEMO.SPEED_SETPOINT","data_type":"REAL","access":"ReadWrite","unit":"rpm","channel":"SIM","station":"OFFLINE","byte_order":"little","word_order":"little"},{"id":"alarm_active","address":"DEMO.ALARM_ACTIVE","data_type":"BOOL","access":"Read","unit":"","channel":"SIM","station":"OFFLINE","byte_order":"little","word_order":"little"}],"values":{"run_request":0,"stop_request":0,"run_feedback":1,"actual_speed":1420.5,"speed_setpoint":1500.0,"alarm_active":0},"states":{},"invalid_values":[],"valid":true,"numeric":{"INT":[-32768,32767,0],"UINT":[0,65535,0],"DINT":[-2147483648,2147483647,0],"UDINT":[0,4294967295,0],"REAL":[-3.4028234663852886e+38,3.4028234663852886e+38,7],"LREAL":[-1.7976931348623157e+308,1.7976931348623157e+308,15],"TIME":[0,4294967295,0]},"alarms":[{"id":"demo_alarm","tag":"alarm_active","text":"Sample condition requires inspection","history_policy":"retain"}]}</script>
+<script>
+"use strict";
+const data=JSON.parse(document.getElementById('preview-data').textContent);
+const inputs=[...document.querySelectorAll('[data-tag]')];
+const qualities=[...document.querySelectorAll('[data-quality]')];
+const values=Object.assign(Object.create(null),data.values);
+const quality=Object.assign(Object.create(null),data.states);
+const invalidValues=new Set(data.invalid_values);
+const tags=new Map(data.tags.filter(t=>typeof t.id==='string').map(t=>[t.id,t]));
+const nodes=[...document.querySelectorAll('[data-index]')];
+const allQuality=document.getElementById('global-quality');
+const screenSelect=document.getElementById('screen-select');
+let layoutReports=[];
+function hex(value,fallback){return typeof value==='string'&&/^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(value)?value:fallback;}
+function tagSample(id){
+ const tag=tags.get(id),v=values[id];
+ const q=allQuality.value==='per_tag'?(quality[id]||'valid'):allQuality.value;
+ if(!data.valid||!tag||q!=='valid'||invalidValues.has(id)||typeof v!=='number'||!Number.isFinite(v))return {ok:false,reason:q==='stale'?'STALE':'INVALID / MISSING'};
+ if(tag.data_type==='BOOL')return {ok:v===0||v===1,value:v,reason:'INVALID BOOL'};
+ const limits=data.numeric[tag.data_type];
+ if(!Array.isArray(limits)||v<limits[0]||v>limits[1]||(limits[2]===0&&!Number.isInteger(v)))return {ok:false,reason:'TYPE / RANGE'};
+ return {ok:true,value:v};
+}
+function unknown(node,reason){
+ node.classList.add('unknown');
+ const value=node.querySelector('.value');if(value)value.textContent='UNKNOWN';
+ setQuality(node,reason);
+}
+function setQuality(node,text){const note=node.querySelector('.quality');if(note){note.textContent=text;note.hidden=!text;}}
+function rangeBounds(value){const range=document.createRange();range.selectNodeContents(value);return range.getBoundingClientRect();}
+function contentBox(node){
+ const box=node.getBoundingClientRect(),style=getComputedStyle(node),scale=box.width/node.offsetWidth||1;
+ return {left:box.left+(parseFloat(style.borderLeftWidth)+parseFloat(style.paddingLeft))*scale,
+ right:box.right-(parseFloat(style.borderRightWidth)+parseFloat(style.paddingRight))*scale,
+ top:box.top+(parseFloat(style.borderTopWidth)+parseFloat(style.paddingTop))*scale,
+ bottom:box.bottom-(parseFloat(style.borderBottomWidth)+parseFloat(style.paddingBottom))*scale,scale};
+}
+function fit(node){
+ const value=node.querySelector('.value');if(!value)return;
+ let size=parseInt(getComputedStyle(node).fontSize,10)||20;
+ const alarm=node.classList.contains('alarm_strip')||node.classList.contains('alarm_table')||node.classList.contains('alarm_history');
+ if(alarm)size=Math.max(14,size);
+ value.style.fontSize=size+'px';
+ value.style.whiteSpace=alarm?'normal':'nowrap';value.style.overflowWrap=alarm?'anywhere':'normal';value.style.lineHeight=alarm?'1.25':'1.1';
+ const fits=()=>{
+  const box=contentBox(node),bounds=rangeBounds(value);
+  const unit=node.querySelector('.unit'),unitBounds=unit?rangeBounds(unit):null;
+  if(bounds.left<box.left-0.5||bounds.right>box.right+0.5||(unitBounds&&unitBounds.right>box.right+0.5))return false;
+  if(alarm){
+   const required=[...node.children].filter(c=>!c.hidden).reduce((total,c)=>{const style=getComputedStyle(c);return total+c.getBoundingClientRect().height/box.scale+parseFloat(style.marginTop)+parseFloat(style.marginBottom);},0);
+   return required<=(box.bottom-box.top)/box.scale+0.5;
+  }
+  return bounds.top>=box.top-0.5&&bounds.bottom<=box.bottom+0.5;
+ };
+ const minimum=alarm?14:10;
+ while(size>minimum&&!fits()){size--;value.style.fontSize=size+'px';}
+ if(alarm&&!fits()){
+  const full=value.textContent;node.classList.add('layout-error');node.title=full;
+  layoutReports.push('INSUFFICIENT SPACE — '+node.dataset.elementId+': alarm text cannot fit at 14px or larger. Full text is retained in the design.');
+  value.textContent='INSUFFICIENT SPACE';value.style.fontSize='14px';setQuality(node,'');
+ }
+}
+function render(){
+ layoutReports=[];
+ nodes.forEach(node=>{
+  if(node.closest('.screen').hidden)return;
+  const element=data.elements[Number(node.dataset.index)],kind=element.kind,binding=element.binding||{};
+  node.classList.remove('unknown','active','layout-error');node.removeAttribute('title');node.style.background=hex(element.fill,kind==='text'?'#101b2a':'#1b293b');
+  if(kind==='button'||kind==='indicator'){
+   // A write-only command is not feedback. A sample read binding is mandatory to illustrate state.
+   const sample=tagSample(binding.read);
+   if(!sample.ok){unknown(node,sample.reason||'NO READ SAMPLE');fit(node);return;}
+   const states=Array.isArray(element.states)?element.states:[];
+   const state=states.find(s=>s&&s.value===sample.value);
+   if(!state||typeof state.text!=='string'){unknown(node,'STATE UNDEFINED');fit(node);return;}
+   node.querySelector('.value').textContent=state.text;
+   node.style.background=hex(state.fill,'#303d4e');
+   setQuality(node,'');
+  }else if(kind==='numeric_input'||kind==='numeric_display'){
+   if(kind==='numeric_input'){
+    const readTag=tags.get(binding.read),writeTag=tags.get(binding.write);
+    if(!readTag||!writeTag||binding.read!==binding.write||readTag.data_type!==writeTag.data_type||(readTag.unit||'')!==(writeTag.unit||'')||writeTag.access!=='ReadWrite'){
+     unknown(node,'INPUT BINDING INVALID');fit(node);return;
+    }
+   }
+   const sample=tagSample(binding.read);
+   if(!sample.ok||(typeof element.minimum==='number'&&sample.value<element.minimum)||(typeof element.maximum==='number'&&sample.value>element.maximum)){
+    unknown(node,sample.reason||'ELEMENT RANGE');fit(node);return;
+   }
+   const digits=Number.isInteger(element.fractional)&&element.fractional>=0&&element.fractional<=15?element.fractional:0;
+   const rendered=sample.value.toFixed(digits);
+   node.querySelector('.value').textContent=rendered;
+   setQuality(node,'');
+  }else if(typeof kind==='string'&&kind.startsWith('alarm_')){
+   node.querySelector('.element-title').textContent=element.text||'ALARMS';
+   if(kind==='alarm_history'){unknown(node,'NO HISTORY DATA');fit(node);return;}
+   const alarms=Array.isArray(data.alarms)?data.alarms:[];
+   const sampled=alarms.map(a=>({alarm:a,sample:tags.get(a.tag)?.data_type==='BOOL'?tagSample(a.tag):{ok:false,reason:'ALARM BINDING INVALID'}}));
+   if(!sampled.length||sampled.some(a=>!a.sample.ok)){unknown(node,sampled.some(a=>a.sample.reason==='STALE')?'STALE':'ALARM DATA UNKNOWN');fit(node);return;}
+   const active=sampled.filter(a=>a.sample.value===1);
+   node.classList.toggle('active',active.length>0);
+   node.querySelector('.element-title').textContent=active.length?'ACTIVE ALARMS · '+active.length:'ALARMS · 0 ACTIVE';
+   node.querySelector('.value').textContent=active.length?active.map(a=>String(a.alarm.text)).join(' · '):'No active alarms';
+   setQuality(node,'');
+  }
+  fit(node);
+ });
+ const report=document.getElementById('layout-issues');report.textContent=layoutReports.join(' ');report.hidden=layoutReports.length===0;
+}
+inputs.forEach((input,index)=>{
+ const id=data.tags[index].id;
+ const initial=Object.prototype.hasOwnProperty.call(values,id)?values[id]:null;
+ input.value=typeof initial==='number'&&Number.isFinite(initial)?String(initial):'';
+ const q=quality[id];qualities[index].value=['valid','invalid','stale'].includes(q)?q:'invalid';
+ if(q===undefined)qualities[index].value='valid';
+ input.addEventListener('input',()=>{const raw=input.value.trim();const tag=tags.get(id);const integer=tag&&Array.isArray(data.numeric[tag.data_type])&&data.numeric[tag.data_type][2]===0;const grammar=integer?/^[+-]?\d+$/:/^[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?$/i;values[id]=raw!==''&&grammar.test(raw)?Number(raw):null;invalidValues.delete(id);render();});
+ qualities[index].addEventListener('change',()=>{quality[id]=qualities[index].value;render();});
+});
+function resize(){
+ const screen=document.querySelector('.screen:not([hidden])');
+ const viewport=document.getElementById('viewport');
+ if(!screen){viewport.innerHTML='<p class="empty">No screen supplied.</p>';return;}
+ const width=Number(screen.dataset.width),height=Number(screen.dataset.height);
+ const available=viewport.parentElement.clientWidth-parseFloat(getComputedStyle(viewport.parentElement).paddingLeft)*2;
+ const scale=Math.min(1,available/width);
+ viewport.style.width=Math.floor(width*scale)+'px';viewport.style.height=Math.floor(height*scale)+'px';screen.style.transform='scale('+scale+')';
+ render();
+}
+screenSelect.addEventListener('change',()=>{document.querySelectorAll('.screen').forEach(screen=>{screen.hidden=screen.dataset.screen!==screenSelect.value;});resize();});
+allQuality.addEventListener('change',render);window.addEventListener('resize',resize);resize();
+</script></body></html>

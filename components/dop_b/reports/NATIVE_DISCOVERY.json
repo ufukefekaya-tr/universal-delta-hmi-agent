@@ -1,0 +1,25 @@
+{
+  "scope": "READ_ONLY_FORMAT_DISCOVERY_ONLY",
+  "vendor_compile": "NOT_RUN",
+  "physical_test": "NOT_RUN",
+  "vendor_assets_distributed": false,
+  "input_paths_are_runtime_dependencies": false,
+  "probe_command": "python scripts/vendor_probe.py <user-supplied-file> --family <family>",
+  "native_parser_change": "Application.MeMeCode uint32LE length + opaque bytes + CRLF; read-only, bounded, unknown retained",
+  "results": [
+    {"fixture":"DIAScreen Full_Element_Demo","model_id":"268502784","editor_version":"6.0.00205.8268","sha256":"fc079f74ed9b34e2e698b0c65c95c4f914983594f658cadc72e1ee4d97493ed5","screens":18,"elements":648,"states":930,"nonempty_macros":62,"macro_bytes":37243,"document_byte_equal":true,"noop_byte_equal":true,"source_unchanged":true},
+    {"fixture":"DIAScreen Alarm function EN","model_id":"268505088","editor_version":"6.6.0.2","sha256":"ae60464b551a5f773871910c180ccd72fdc63dc5123a76a17c16ab50bd94b8be","screens":7,"elements":62,"states":68,"nonempty_macros":7,"macro_bytes":1340,"document_byte_equal":true,"noop_byte_equal":true,"source_unchanged":true},
+    {"fixture":"DIAScreen History function","model_id":"268505093","editor_version":"6.6.0.10","sha256":"7f35b5fd05537106b46a9791a426a1b3e3a59f8afa1f870595e9c0fd75e24471","screens":11,"elements":144,"states":163,"nonempty_macros":9,"macro_bytes":2918,"document_byte_equal":true,"noop_byte_equal":true,"source_unchanged":true},
+    {"fixture":"DOPSoft4 DOP100_FullDemo","model_id":"268502784","editor_version":"4.00.00.11","sha256":"7d011ef0a5d1233e7fd381685337deaff0b25fd2aad2f08a60fb43abc5856f7d","screens":18,"elements":648,"states":930,"nonempty_macros":62,"macro_bytes":37237,"document_byte_equal":true,"noop_byte_equal":true,"source_unchanged":true},
+    {"fixture":"HMC N411","model_id":"302453852","editor_version":"4.00.05.24","sha256":"4c21c3f04484f620c48cf4aae101d7b2d3288a1dc11455330b20cc53fd67d148","screens":157,"elements":3615,"states":33457,"nonempty_macros":1841,"macro_bytes":690486,"document_byte_equal":true,"noop_byte_equal":true,"source_unchanged":true},
+    {"fixture":"HMC N500","model_id":"302454098","editor_version":"4.00.05.24","sha256":"a724e5d4af44ce7cd95ad6674a860939ae0940dfab20af9844449bcfa4e82a33","screens":157,"elements":3630,"states":33503,"nonempty_macros":1854,"macro_bytes":704473,"document_byte_equal":true,"noop_byte_equal":true,"source_unchanged":true}
+  ],
+  "limitations": [
+    "None is exact selected DOP-B07S411 or DOP-110IS qualification",
+    "HMC is not DOP-B acceptance",
+    "Numeric Type6/SubType1 needs MemLen plus MemFmt, limits, digits, gain/offset and word order; writer unimplemented",
+    "AlarmCount is capacity metadata, not configured active-alarm count",
+    "Macro/alarm/history tails retained opaque, not compiled or qualified",
+    "Third-party code/assets not copied; redistribution permission not established"
+  ]
+}

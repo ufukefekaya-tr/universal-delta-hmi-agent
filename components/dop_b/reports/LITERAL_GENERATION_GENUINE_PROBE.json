@@ -1,0 +1,87 @@
+{
+  "scope": "GENUINE_MANUFACTURER_B_MEMORY_ONLY_APPENDED_LITERAL_PAGE",
+  "source_sha256": "f2f77df5011d30ff85a38fa3956f99cbf9cd165acfcc2f6b42478169f7f9a916",
+  "candidate_sha256": "3f0739088f4132441e70ba69a09893fa8e99b31f15798e42fafa19809e109880",
+  "source_bytes": 67990,
+  "candidate_bytes": 68064,
+  "source_body_bytes": 58387,
+  "candidate_body_bytes": 59837,
+  "operations": [
+    {
+      "op": "append_literal_page",
+      "screen_id": "2",
+      "name": "Yeni Sayfa"
+    },
+    {
+      "op": "clone_element",
+      "source_screen": "1",
+      "source_element": "1",
+      "target_screen": "2",
+      "element_id": "15"
+    },
+    {
+      "op": "set_property",
+      "screen_id": "2",
+      "element_id": "15",
+      "key": "width",
+      "value": 350
+    },
+    {
+      "op": "set_property",
+      "screen_id": "2",
+      "element_id": "15",
+      "key": "x",
+      "value": 40
+    },
+    {
+      "op": "set_property",
+      "screen_id": "2",
+      "element_id": "15",
+      "key": "height",
+      "value": 60
+    },
+    {
+      "op": "set_property",
+      "screen_id": "2",
+      "element_id": "15",
+      "key": "y",
+      "value": 40
+    },
+    {
+      "op": "set_text",
+      "screen_id": "2",
+      "element_id": "15",
+      "state_index": 0,
+      "language": 0,
+      "text": "Yeni ekran — Ölçüm"
+    }
+  ],
+  "new_pages": 1,
+  "new_owners": 1,
+  "retained_original_owners": 14,
+  "original_sections_byte_equal": true,
+  "thumbnail_opaque41_tail_byte_equal": true,
+  "gzip_isize_matches_new_payload": true,
+  "model_id": "-1106816944",
+  "serialized_version": "4.00.05.24",
+  "source_origin_url": "https://delta-ia-tips.com/wp-content/uploads/2017/04/ftp-server_recipe-update_dps-file.zip",
+  "native_file_saved": false,
+  "mcp_file_session": "NOT_RUN",
+  "vendor_compile": "NOT_RUN",
+  "native_pixels": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "opaque_graph_dependencies": "UNKNOWN",
+  "full_program_writer_complete": false,
+  "test_revision_sha256": "4ecbb67a8057c97a46132eacfa9c5a18fd360b9eb2c48a552bf0c1dc29815e79",
+  "evidence_limit": "In-memory helper, not MCP file-session/approval/save, native pixel, vendor or panel acceptance",
+  "independent_review": {
+    "reviewer": "/root/emitter_counterreview",
+    "fresh_memory_probe": "PASS",
+    "candidate_sha256": "3f0739088f4132441e70ba69a09893fa8e99b31f15798e42fafa19809e109880",
+    "schema_sha256": "1c60e76f0e76a381cb008df81f2e3c06611f7fd0ed9a1576ffafd315a0c26bb9",
+    "design_sha256": "2a946c9c669b23432f3b404118f9f2e964793a0d9b211fed16621d2d14997149",
+    "original_owners": 14,
+    "gzip_isize": 59878,
+    "scope": "Memory helper only; no native file/MCP file-session/approval/save, vendor/render/panel"
+  }
+}

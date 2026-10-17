@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "authority_kind": "manufacturer_static_numeric_presentation_contract",
+  "family": "delta_dopsoft2",
+  "serialized_version": "4.00.07.04",
+  "model_id": 2953863504,
+  "types": {"UINT": {"MemLen": "1", "MemFmt": "2", "bits": 16, "format": "unsigned"}},
+  "value_model": "integer_fixed_decimal",
+  "max_fractional_digits": 4,
+  "max_total_digits": 5,
+  "input_lowering": "UNVERIFIED",
+  "evidence": {
+    "editor_sha256": "9ed92401cd08e2be8bfc2df3a40dee4e99e9f605da7a4fa9605f9e2754821eeb",
+    "b10_renderer_sha256": "e6fa5b74d8d73415b1fd79b16aa19fc163f95113471eb8e9e1022f8615b19ab3",
+    "bundled_crt_sha256": "2d5670881a6d13a100e37da297f6eeb876f68b63073a28eb5d650625c60f9bf7",
+    "uint_renderer_va": "0x100c9453-0x100c949a",
+    "decimal_insertion_va": "0x10131acf; dot at0x10131b88",
+    "display_dotnum_loader_va": "0x100b9f46",
+    "digit_capacity_va": "0x7ad8fe; unsigned word branch0x7adfb3",
+    "genuine_type6_fractional_owner_sha256": "158679a2ae7f5a10127b24dd5b73eab2a4a08fcfb8208bdf9f20cb89a5a7b1d7",
+    "genuine_type5_fractional_holdout": "NOT_FOUND",
+    "scope": "Read-only static display mapping; not native pixels/keypad/compiler/runtime/vendor acceptance"
+  },
+  "acceptance_scope": "OFFLINE_STORED_PRESENTATION_ONLY"
+}

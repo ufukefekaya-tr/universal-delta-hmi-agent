@@ -1,0 +1,188 @@
+{
+  "kind": "focused_aesthetic_repair_browser_smoke",
+  "fixture_kind": "synthetic",
+  "status": "OFFLINE_PASS",
+  "browser": "145.0.7632.6",
+  "viewport": [
+    1600,
+    1100
+  ],
+  "measurement": "DOM TextRange rectangles against padded content box; computed font and line bounds; no inline span scrollWidth/clientWidth heuristic",
+  "cases": [
+    {
+      "resolution": [
+        800,
+        480
+      ],
+      "scenario": "0",
+      "status": "OFFLINE_PASS",
+      "render_scale": 1,
+      "actual_per_tag_stale": false,
+      "layout_report_expected": false,
+      "alarm_font_size": 15,
+      "alarm_line_count": 1,
+      "text_range_clipping": []
+    },
+    {
+      "resolution": [
+        800,
+        480
+      ],
+      "scenario": "1",
+      "status": "OFFLINE_PASS",
+      "render_scale": 1,
+      "actual_per_tag_stale": false,
+      "layout_report_expected": false,
+      "alarm_font_size": 15,
+      "alarm_line_count": 1,
+      "text_range_clipping": []
+    },
+    {
+      "resolution": [
+        800,
+        480
+      ],
+      "scenario": "stale",
+      "status": "OFFLINE_PASS",
+      "render_scale": 1,
+      "actual_per_tag_stale": true,
+      "layout_report_expected": false,
+      "alarm_font_size": 15,
+      "alarm_line_count": 1,
+      "text_range_clipping": []
+    },
+    {
+      "resolution": [
+        800,
+        480
+      ],
+      "scenario": "long",
+      "status": "OFFLINE_PASS",
+      "render_scale": 1,
+      "actual_per_tag_stale": false,
+      "layout_report_expected": false,
+      "alarm_font_size": 15,
+      "alarm_line_count": 2,
+      "text_range_clipping": []
+    },
+    {
+      "resolution": [
+        800,
+        480
+      ],
+      "scenario": "overflow",
+      "status": "OFFLINE_PASS",
+      "render_scale": 1,
+      "actual_per_tag_stale": false,
+      "layout_report_expected": true,
+      "alarm_font_size": 14,
+      "alarm_line_count": 1,
+      "text_range_clipping": []
+    },
+    {
+      "resolution": [
+        1024,
+        600
+      ],
+      "scenario": "0",
+      "status": "OFFLINE_PASS",
+      "render_scale": 1,
+      "actual_per_tag_stale": false,
+      "layout_report_expected": false,
+      "alarm_font_size": 19,
+      "alarm_line_count": 1,
+      "text_range_clipping": []
+    },
+    {
+      "resolution": [
+        1024,
+        600
+      ],
+      "scenario": "1",
+      "status": "OFFLINE_PASS",
+      "render_scale": 1,
+      "actual_per_tag_stale": false,
+      "layout_report_expected": false,
+      "alarm_font_size": 19,
+      "alarm_line_count": 1,
+      "text_range_clipping": []
+    },
+    {
+      "resolution": [
+        1024,
+        600
+      ],
+      "scenario": "stale",
+      "status": "OFFLINE_PASS",
+      "render_scale": 1,
+      "actual_per_tag_stale": true,
+      "layout_report_expected": false,
+      "alarm_font_size": 19,
+      "alarm_line_count": 1,
+      "text_range_clipping": []
+    },
+    {
+      "resolution": [
+        1024,
+        600
+      ],
+      "scenario": "long",
+      "status": "OFFLINE_PASS",
+      "render_scale": 1,
+      "actual_per_tag_stale": false,
+      "layout_report_expected": false,
+      "alarm_font_size": 19,
+      "alarm_line_count": 2,
+      "text_range_clipping": []
+    },
+    {
+      "resolution": [
+        1024,
+        600
+      ],
+      "scenario": "overflow",
+      "status": "OFFLINE_PASS",
+      "render_scale": 1,
+      "actual_per_tag_stale": false,
+      "layout_report_expected": true,
+      "alarm_font_size": 14,
+      "alarm_line_count": 1,
+      "text_range_clipping": []
+    }
+  ],
+  "artifact_sha256": {
+    "src/universal_hmi/preview.py": "5b8d4cb4d6e96aba33b36260b578cd8587539f0442551cf5b42f664ff678a63d",
+    "src/universal_hmi/validation.py": "c132566c9a5de06507016b0fb65028f9b171c232e5ee0257f830495ed4d597e8",
+    "tests/test_design.py": "6160907283c0d638e691c14004856271f65ab9e1b452a2f14d6c393fd56ae4ef",
+    "examples/neutral_1024x600.json": "149bf505c598140c11b4d989f26a680799493911fc8a4cb8d8eb1197fbe8297f",
+    "examples/neutral_1024x600.preview.html": "60ec4342363cf5d2a37b985ac458410535bd9af758bc7c7874c9503fdfba49b9",
+    "examples/neutral_1024x600.preview.png": "335ac7e1bb852cf405bf50694ab6c5b48cc3815f6650db630666c7fc656b6ec5",
+    "examples/neutral_800x480.json": "46b5c103fa527b50813131f29ed79c97476714dad21b51922941aafb1d991594",
+    "examples/neutral_800x480.preview.html": "b595f2a8fd4272cb5ea104cc5cc63f22c7e9cd46dbab87348e1ad9e081e4d19c",
+    "examples/neutral_800x480.preview.png": "1f4336292bb76503c6186fa62da6c698fad64de250964f9e97fcd49a7b477166",
+    "examples/neutral_800x480.unknown.preview.png": "1071fb38c2b253579447ebbb0415ff15463b9b4433566ade3f6e497d16690be7",
+    "examples/review/1024x600_0.html": "c4ea66c0c58207803853bdb8308bdd3ab4ce42ff49374626a97b7da63a5167bf",
+    "examples/review/1024x600_0.png": "8e4926e7756842d431294cb1e36927ffe8e2707a7dbe1d53331fe85ef7709427",
+    "examples/review/1024x600_1.html": "d96ab4b4f9e54ec5bf241f6d29ae1e4cf189997e0a6e7773a98f21bad30e4dbd",
+    "examples/review/1024x600_1.png": "b4fc06530cb8855edeac3a0fbf32c66a9bdb009180ab097693ecdf97e4a8fa8a",
+    "examples/review/1024x600_long.html": "2199a0c722e0af7c6d4f37ae34ea6beac9b7abd8dd39bac2f8627f608637a279",
+    "examples/review/1024x600_long.png": "36809908a0fb7098cb3dc136c92701be4718e4f1eee27e012b6b8cd1d1bae662",
+    "examples/review/1024x600_overflow.html": "f7681340a558ca00f9f3b41d408887cef032b267f45d114bf680802899bca90e",
+    "examples/review/1024x600_overflow.png": "950ecf1cb0cc3fa3b203c5d90851819ff97b0c450781386483c43d6f9bb4783c",
+    "examples/review/1024x600_stale.html": "fa16e25d9f10801151f1b2c424d557c3834e8065c05fe68b2caf4266957d2ab8",
+    "examples/review/1024x600_stale.png": "4607fa1e84ad8ab41eb67cc5f9b25981d899bd95bb1b6eaddc537b03b7bd4490",
+    "examples/review/800x480_0.html": "3ea998be15cb945ba94ff5307be817d1decea9b1ab87cd9798ed2dc9c9f7cf81",
+    "examples/review/800x480_0.png": "aeaa51c181708a1651e3b1895f000a470f6234961c34327cf14ab05e731ce40e",
+    "examples/review/800x480_1.html": "27a29f2ff74e71228f422f5fa81571ffe781a497f736f3def86cfa758f97c1d8",
+    "examples/review/800x480_1.png": "7fecd16b183ec1ff00b562b7b3020794003cac669a0722d180de61aef21a0fc5",
+    "examples/review/800x480_long.html": "2d4c4e8f9fc6c95e12f468ab4fdaf753b9d8e9af1c21a2d92fbb3d23c26aed3d",
+    "examples/review/800x480_long.png": "b38511219d6bcaed11c47ee4586abee306d03ea004d0c6d488e31d82a6b35607",
+    "examples/review/800x480_overflow.html": "651fcb707399f0f2c0ef5c247cf4d358fd92925f7f3e2d4dd3c4d90eac068a5d",
+    "examples/review/800x480_overflow.png": "f8c097e90a5154c9d4a8ec0645162507b5af9b6ea81ac21c1d336f2adf405cb0",
+    "examples/review/800x480_stale.html": "71767583e421ceeb93d5f532be5293208e2187541d688c31dca622b1359b9621",
+    "examples/review/800x480_stale.png": "d829aa016ea3bd4bba07bb223408eb026ea356e054384f6bc33d9410fb67d6f2"
+  },
+  "page_errors": [],
+  "remote_requests": [],
+  "limitation": "Conceptual 1:1 browser rendering only. Separate independent reinspection required. No vendor rendering or physical acceptance."
+}

@@ -1,0 +1,227 @@
+{
+  "id": "synthetic_diascreen",
+  "family": "delta_diascreen",
+  "model": "ORIGINAL_SYNTHETIC_FIXTURE",
+  "model_id": "SYNTHETIC",
+  "editor_version": "0.0",
+  "resolution": [
+    1024,
+    600
+  ],
+  "driver": "SIMULATED_ONLY",
+  "fixture_kind": "synthetic",
+  "capabilities": {
+    "text": "OFFLINE_PASS",
+    "button": "OFFLINE_PASS",
+    "numeric_input": "OFFLINE_PASS",
+    "numeric_display": "OFFLINE_PASS",
+    "indicator": "OFFLINE_PASS",
+    "goto": "OFFLINE_PASS",
+    "alarm_strip": "OFFLINE_PASS",
+    "alarm_table": "OFFLINE_PASS",
+    "alarm_history": "OFFLINE_PASS",
+    "alarms": "OFFLINE_PASS",
+    "macros": "OFFLINE_PASS",
+    "macro_trigger:startup": "OFFLINE_PASS",
+    "macro_trigger:clock": "OFFLINE_PASS",
+    "macro_trigger:button": "OFFLINE_PASS",
+    "macro_op:assign": "OFFLINE_PASS",
+    "macro_op:bit_on": "OFFLINE_PASS",
+    "macro_op:bit_off": "OFFLINE_PASS",
+    "macro_op:if": "OFFLINE_PASS"
+  },
+  "numeric_types": [
+    "INT",
+    "UINT",
+    "DINT",
+    "UDINT",
+    "REAL",
+    "LREAL"
+  ],
+  "limitation": "Common IR and original synthetic button/numeric transactions only. No vendor or panel acceptance; real profiles remain unqualified.",
+  "native_schema": {
+    "qualified": true,
+    "cloning": true,
+    "kinds": {
+      "button": {
+        "Type": "1"
+      }
+    },
+    "binding_contract": {
+      "data_type": "BOOL",
+      "channel": "SIM",
+      "station": "0",
+      "byte_order": "little",
+      "word_order": "little"
+    },
+    "state_fill": {
+      "field": "BgColor",
+      "encoding": "rgb24"
+    },
+    "visual": {
+      "qualified": true,
+      "color": {"field": "FontColor", "scope": "state", "encoding": "rgb24"},
+      "fill": {"field": "BgColor", "scope": "state", "encoding": "rgb24"},
+      "companions": {"element": {}, "state": {}}
+    },
+    "properties": {
+      "x": {
+        "field": "X",
+        "type": "int",
+        "min": 0,
+        "max": 1024
+      },
+      "y": {
+        "field": "Y",
+        "type": "int",
+        "min": 0,
+        "max": 1024
+      },
+      "width": {
+        "field": "Width",
+        "type": "int",
+        "min": 0,
+        "max": 1024
+      },
+      "height": {
+        "field": "Height",
+        "type": "int",
+        "min": 0,
+        "max": 1024
+      },
+      "behavior": {
+        "field": "SubType",
+        "type": "enum",
+        "values": {
+          "momentary": 1,
+          "maintained": 2
+        }
+      },
+      "color": {
+        "field": "FontColor",
+        "scope": "state",
+        "type": "int",
+        "min": 0,
+        "max": 16777215
+      },
+      "state_fill": {
+        "field": "BgColor",
+        "scope": "state",
+        "type": "int",
+        "min": 0,
+        "max": 16777215
+      },
+      "fill": {
+        "field": "BgColor", "scope": "state", "type": "int", "min": 0, "max": 16777215
+      }
+    },
+    "bindings": {
+      "read": {
+        "field": "ReadVar",
+        "link_field": "ReadLink",
+        "mem_type_field": "ReadMemType"
+      },
+      "write": {
+        "field": "WriteVar",
+        "link_field": "WriteLink",
+        "mem_type_field": "WriteMemType"
+      }
+    },
+    "numeric": {
+      "qualified": true,
+      "kinds": {
+        "numeric_input": {
+          "Type": "6",
+          "SubType": "1"
+        },
+        "numeric_display": {
+          "Type": "5",
+          "SubType": "1"
+        }
+      },
+      "types": {
+        "INT": {
+          "MemLen": "1",
+          "MemFmt": "1",
+          "bits": 16,
+          "format": "signed"
+        },
+        "UINT": {
+          "MemLen": "1",
+          "MemFmt": "2",
+          "bits": 16,
+          "format": "unsigned"
+        },
+        "DINT": {
+          "MemLen": "2",
+          "MemFmt": "1",
+          "bits": 32,
+          "format": "signed"
+        },
+        "UDINT": {
+          "MemLen": "2",
+          "MemFmt": "2",
+          "bits": 32,
+          "format": "unsigned"
+        },
+        "REAL": {
+          "MemLen": "2",
+          "MemFmt": "5",
+          "bits": 32,
+          "format": "floating"
+        }
+      },
+      "max_integer_digits": 20,
+      "max_fractional_digits": 18
+    },
+    "binding_contracts": {
+      "INT": {
+        "data_type": "INT",
+        "channel": "SIM",
+        "station": "0",
+        "byte_order": "little",
+        "word_order": "little"
+      },
+      "UINT": {
+        "data_type": "UINT",
+        "channel": "SIM",
+        "station": "0",
+        "byte_order": "little",
+        "word_order": "little"
+      },
+      "DINT": {
+        "data_type": "DINT",
+        "channel": "SIM",
+        "station": "0",
+        "byte_order": "little",
+        "word_order": "little"
+      },
+      "UDINT": {
+        "data_type": "UDINT",
+        "channel": "SIM",
+        "station": "0",
+        "byte_order": "little",
+        "word_order": "little"
+      },
+      "REAL": {
+        "data_type": "REAL",
+        "channel": "SIM",
+        "station": "0",
+        "byte_order": "little",
+        "word_order": "little"
+      }
+    },
+    "state_values": {
+      "button": [
+        0,
+        1
+      ],
+      "numeric_input": [
+        0
+      ],
+      "numeric_display": [
+        0
+      ]
+    }
+  }
+}

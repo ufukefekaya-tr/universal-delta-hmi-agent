@@ -4,12 +4,17 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "universal-delta-hmi-agent"
-version = "0.1.0"
+version = "0.2.0"
 description = "Isolated file MCP routing for Delta HMI engineering"
+readme = "README.md"
 requires-python = ">=3.14"
 license = "Apache-2.0"
 license-files = ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md"]
 dependencies = ["mcp==2.3.0"]
+
+[project.urls]
+Repository = "https://github.com/ufukefekaya-tr/universal-delta-hmi-agent"
+Issues = "https://github.com/ufukefekaya-tr/universal-delta-hmi-agent/issues"
 
 [project.scripts]
 delta-hmi = "delta_hmi.cli:main"

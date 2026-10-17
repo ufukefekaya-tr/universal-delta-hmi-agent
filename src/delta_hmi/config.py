@@ -7,7 +7,7 @@ from pathlib import Path, PureWindowsPath
 import re
 
 
-FAMILIES = {"dop_b": "delta_dopsoft2", "dop_100": "delta_diascreen"}
+FAMILIES = {"dop_b": "delta_dopsoft2", "dop_100": "diascreen-dop100"}
 PACKAGES = {"dop_b": "universal_hmi", "dop_100": "universal_diascreen_hmi"}
 
 
@@ -115,6 +115,26 @@ class BackendConfig:
     source_manifest: Path | None = None
     source_manifest_sha256: str = ""
     profiles_sha256: str = ""
+    allow_write: bool = False
+    job_policy: Path | None = None
+    job_policy_sha256: str = ""
+
+    def verify_job_policy(self):
+        if self.family != "dop_b" or self.job_policy is None:
+            raise ConfigurationError("Persistent jobs require a separately pinned trusted DOP-B job policy")
+        no_links(self.job_policy)
+        if sha256(self.job_policy) != self.job_policy_sha256:
+            raise ConfigurationError("Trusted job policy changed")
+        data = read_json(self.job_policy)
+        if not isinstance(data, dict):
+            raise ConfigurationError("Trusted job policy must be an object")
+        for key, wanted in (("workspace", self.workspace), ("profiles_root", self.profiles)):
+            if not isinstance(data.get(key), str) or not Path(data[key]).is_absolute() or no_links(data[key]) != wanted:
+                raise ConfigurationError("Job policy roots do not match the configured backend")
+        for key in ("output_root", "reviews_root"):
+            if not isinstance(data.get(key), str) or not Path(data[key]).is_absolute() or not no_links(data[key]).is_dir():
+                raise ConfigurationError("Job policy requires existing explicit output/review roots")
+        return data
 
     def verify(self):
         if not self.enabled:
@@ -219,10 +239,20 @@ class GatewayConfig:
                 result[family] = BackendConfig(family, False, reason=item["reason"])
                 continue
             fields = {"enabled", "root", "python", "python_sha256", "workspace", "profiles", "state", "source_manifest", "source_manifest_sha256", "profiles_sha256"}
-            if set(item) != fields:
+            optional = {"allow_write"} if family == "dop_100" else {"job_policy", "job_policy_sha256"}
+            if not fields.issubset(item) or set(item) - fields - optional:
                 raise ConfigurationError("Unknown or missing backend configuration fields")
             args = {key: relative_path(path.parent, item[key]) for key in ("root", "python", "workspace", "profiles", "state", "source_manifest")}
             args.update({key: _digest(item[key]) for key in ("python_sha256", "source_manifest_sha256", "profiles_sha256")})
+            if family == "dop_100":
+                if type(item.get("allow_write", False)) is not bool:
+                    raise ConfigurationError("allow_write must be a trusted boolean")
+                args["allow_write"] = item.get("allow_write", False)
+            if family == "dop_b" and ("job_policy" in item or "job_policy_sha256" in item):
+                if not {"job_policy", "job_policy_sha256"}.issubset(item):
+                    raise ConfigurationError("Job policy path and SHA must be supplied together")
+                args["job_policy"] = relative_path(path.parent, item["job_policy"])
+                args["job_policy_sha256"] = _digest(item["job_policy_sha256"])
             backend = BackendConfig(family, True, **args)
             if not backend.python.is_relative_to(backend.root) or not backend.python.is_file():
                 raise ConfigurationError("Python must be a file inside this backend root")
@@ -244,6 +274,26 @@ class GatewayConfig:
             for other in result.values():
                 if other.enabled:
                     for mutable in (other.workspace, other.state):
-                        if path.is_relative_to(mutable) or backend.source_manifest.is_relative_to(mutable):
+                        authority = [path, backend.source_manifest] + ([backend.job_policy] if backend.job_policy is not None else [])
+                        if any(item.is_relative_to(mutable) for item in authority):
                             raise ConfigurationError("Authority files overlap mutable state")
-        return cls(result)
+        config = cls(result)
+        if result["dop_b"].job_policy is not None:
+            config.verify_jobs()
+        return config
+
+    def verify_jobs(self):
+        backend = self.backends["dop_b"]
+        data = backend.verify_job_policy()
+        extras = [no_links(data[key]) for key in ("output_root", "reviews_root")]
+        occupied = [getattr(cfg, key) for cfg in self.backends.values() if cfg.enabled for key in ("root", "workspace", "profiles", "state")]
+        for extra in extras:
+            if any(extra.is_relative_to(other) or other.is_relative_to(extra) for other in occupied):
+                raise ConfigurationError("Job output/review roots overlap another protected backend root")
+            occupied.append(extra)
+        for cfg in self.backends.values():
+            if cfg.enabled:
+                for authority in (cfg.source_manifest, backend.job_policy):
+                    if any(authority.is_relative_to(extra) for extra in extras):
+                        raise ConfigurationError("Job output/review roots contain trusted authority")
+        return data

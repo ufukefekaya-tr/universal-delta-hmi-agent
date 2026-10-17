@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "project_id": "<neutral-project-id>",
+  "profile_id": "<exact-profile-id>",
+  "screens": [
+    {
+      "id": "overview",
+      "name": "Kavramsal başlangıç",
+      "width": 800,
+      "height": 480,
+      "elements": [
+        {"id": "title", "kind": "text", "x": 24, "y": 20, "width": 700, "height": 40, "text": "KAVRAMSAL TASLAK — HEDEFİ DOĞRULA", "font_size": 22, "color": "#e6edf5", "fill": "#101b2a"}
+      ]
+    }
+  ],
+  "tags": [],
+  "macros": [],
+  "alarms": []
+}

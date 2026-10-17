@@ -1,0 +1,58 @@
+{
+  "scope": "GENUINE_B_MEMORY_ONLY_EXISTING_TEXT_AND_GEOMETRY_HELPER_PROBE",
+  "status": "OFFLINE_PASS",
+  "source_url": "https://delta-ia-tips.com/wp-content/uploads/2017/04/ftp-server_recipe-update_dps-file.zip",
+  "archive_sha256": "8801f743feeac42551650e8e5c4ffe78d8cef1fa5f9204088946e52b5a43084c",
+  "source_sha256": "f2f77df5011d30ff85a38fa3956f99cbf9cd165acfcc2f6b42478169f7f9a916",
+  "model_id_raw": "-1106816944",
+  "model_id_uint32": 3188150352,
+  "serialized_version": "4.00.05.24",
+  "vendor_executable_version": "UNVERIFIED",
+  "source_owner_sha256": "e53ee98a5e7d57585f6c4968ea07b98334ae60a7a59fb5769a2c810bebf48b1e",
+  "candidate_sha256": "14584602e0831cd51ba5c57a68213e67a237f33e5bdcab7558101d183c381487",
+  "candidate_owner_sha256": "29cbce5d31342428a655d348a3e66506878bfb6ef41b4776c0fbd476e09a09eb",
+  "schema_sha256": "0eb5a2f15f631616446c0816d2be0be4cc8b33278253b577f2de71981ec17551",
+  "design_sha256": "e8d1ae9536f3b4080518f8360aa748d843df2e4d7b4e2bd2391d6d500f39397b",
+  "operations": [
+    {
+      "op": "set_property",
+      "screen_id": "1",
+      "element_id": "1",
+      "key": "x",
+      "value": 262
+    },
+    {
+      "op": "set_text",
+      "screen_id": "1",
+      "element_id": "1",
+      "state_index": 0,
+      "language": 0,
+      "text": "DEMO01"
+    }
+  ],
+  "owner_count": 14,
+  "retained_owner_count": 13,
+  "caption_utf16_byte_extent": 14,
+  "all_unmanaged_body_records": "BYTE_EQUAL_TO_INDEPENDENT_IR_TARGET",
+  "thumbnail_prefix_tail": "BYTE_EQUAL",
+  "assets_written": false,
+  "native_output_written": false,
+  "file_session_open_approve_save": "NOT_RUN",
+  "vendor": "NOT_RUN",
+  "native_visual": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "full_program_writer_complete": false,
+  "test_revision_sha256": "9f62a01e77885a80a5aace8123788836a7bb0fbab73447f5043c78fbc6138236",
+  "binding_note": "Pure compound memory compiler/matcher re-run after C6; new two-operation plan retains exact prior candidate bytes. No file-session approval/save or native asset export.",
+  "independent_review": {
+    "reviewer": "/root/emitter_counterreview",
+    "result": "OFFLINE_PASS_CURRENT_MEMORY_HELPERS_ONLY",
+    "test_revision_sha256": "9f62a01e77885a80a5aace8123788836a7bb0fbab73447f5043c78fbc6138236",
+    "candidate_sha256": "14584602e0831cd51ba5c57a68213e67a237f33e5bdcab7558101d183c381487",
+    "source_and_candidate_files_written": false,
+    "retained_owners": 13,
+    "operation_count": 2,
+    "independent_design_sha256": "db91faa7600494cdea90117e40135c5960b2085e131b3f9dea50c05d16504980",
+    "note": "Reviewer assembled independent IR IDs; candidate bytes agree exactly. No real file-session/approval/save or vendor operation."
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "status": "OFFLINE_PASS",
+  "scope": "STORED_CONTROL_APPEND_SHARED_SOURCE_BINDINGS",
+  "source_alias": "DIA-INSTALLED-04",
+  "source_sha256": "fc079f74ed9b34e2e698b0c65c95c4f914983594f658cadc72e1ee4d97493ed5",
+  "source_bytes": 490466,
+  "candidate_sha256": "778ce590b56a82d2b68d7042ef7fe704b81be5466953ce344e3d725f99dc0d80",
+  "candidate_bytes": 476212,
+  "candidate_body_sha256": "b661bde420201d73cdfb5dd6569f3870eb10f92a120ffd8d703e4042642dcd2e",
+  "candidate_body_bytes": 5113252,
+  "source_body_sha256": "1783abf7adc7bbf49d7a105139c585eb2565692cba38fb8e9e1678565094cb8a",
+  "source_prefix_sha256": "a92615d0e15d6777ee4f1d23cdf9321a9cc6d954095370ec769d04aedd302962",
+  "source_tail_sha256": "5031a419ea5b9c1ee89b854b27c69eeb661472a020e9e147e794331ee0c37c98",
+  "model_id": 268502784,
+  "serialized_version": "6.0.00205.8268",
+  "resolution": [
+    800,
+    480
+  ],
+  "source_pages": 18,
+  "source_owners": 648,
+  "candidate_owners": 652,
+  "appended_owners": 4,
+  "unchanged_original_owners": 648,
+  "donors": {
+    "momentary": {
+      "screen_id": "13",
+      "element_id": "3",
+      "owner_sha256": "a8e486b0c23fa28a30d5a47176c10636532a933ec9415aa6dbcf7bef0a606ba5"
+    },
+    "maintained": {
+      "screen_id": "5",
+      "element_id": "66",
+      "owner_sha256": "06de0c17dd7b16bf46196355812ca1797140c67e6481381239448e513ae936c5"
+    },
+    "numeric_input": {
+      "screen_id": "2",
+      "element_id": "19",
+      "owner_sha256": "fd0e825e71d05e9a12b7b6e9e50788d502e717686af2a7084974e12526422859"
+    },
+    "numeric_display": {
+      "screen_id": "6",
+      "element_id": "10",
+      "owner_sha256": "2fe108ea74e71161d5174792cff947e6aef26e9e268660ac79b0b6eb0f1adb4f"
+    }
+  },
+  "operations": [
+    {
+      "op": "append_control",
+      "screen_id": "20",
+      "element_id": "97",
+      "donor_kind": "maintained",
+      "x": 180,
+      "y": 80,
+      "width": 160,
+      "height": 40,
+      "captions": [
+        {
+          "value": 0,
+          "text": "KAPALI"
+        },
+        {
+          "value": 1,
+          "text": "AÇIK"
+        }
+      ]
+    },
+    {
+      "op": "append_control",
+      "screen_id": "20",
+      "element_id": "98",
+      "donor_kind": "momentary",
+      "x": 180,
+      "y": 160,
+      "width": 160,
+      "height": 40,
+      "captions": [
+        {
+          "value": 0,
+          "text": "JOG"
+        },
+        {
+          "value": 1,
+          "text": "JOG"
+        }
+      ]
+    },
+    {
+      "op": "append_control",
+      "screen_id": "20",
+      "element_id": "99",
+      "donor_kind": "numeric_input",
+      "x": 180,
+      "y": 240,
+      "width": 160,
+      "height": 40,
+      "captions": []
+    },
+    {
+      "op": "append_control",
+      "screen_id": "20",
+      "element_id": "100",
+      "donor_kind": "numeric_display",
+      "x": 180,
+      "y": 320,
+      "width": 160,
+      "height": 40,
+      "captions": []
+    }
+  ],
+  "profile_sha256": "cdd6d4aeb194047fc0a55a6a7b170e973bd7545119263f8dfaf371c755701494",
+  "calibration_sha256": "dff99b99968c48d16c362269ca0acecc7d7ff9f32359e6c79b7958403514aa50",
+  "authority_sha256": "941820a574425a2b85fadd5c8e2ce12cea12d694eee1a5049919e5b8999aae77",
+  "sdk_tools": 9,
+  "tool_names": [
+    "apply_plan",
+    "capabilities",
+    "diff",
+    "inspect",
+    "open_project",
+    "plan_changes",
+    "preview",
+    "save_as",
+    "validate"
+  ],
+  "approval_capture": "IMMUTABLE_BEFORE_APPLY",
+  "approval_sha256": "8645a0456b507c81aef1e801c962a0ee36b918168ac615efd3fc7da80d60a38b",
+  "approval_snapshots": {
+    "candidate": "81af76b652fa104114b2916f70b2a9c5435ca4cc47aa84d5d9ca75efd0f987f2",
+    "replay": "81af76b652fa104114b2916f70b2a9c5435ca4cc47aa84d5d9ca75efd0f987f2",
+    "noop": "93c1c7ee012ccb09383667f8768367f7d66605294737cf1e0005c333924f5129"
+  },
+  "whole_body_independent_oracle": true,
+  "decoded_body_restoration": true,
+  "byte_noop_equal": true,
+  "replay_equal": true,
+  "source_unchanged": true,
+  "thumbnail_unchanged": true,
+  "prefix_length_only": true,
+  "tail_unchanged": true,
+  "shared_source_bindings": true,
+  "source_macros_preserved": true,
+  "preview_render_kind": "CONCEPTUAL_IR_OPAQUE_SOURCE_CLONES",
+  "native_pixels": "NOT_RUN",
+  "vendor_compile": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "computer_use": false,
+  "licensed_assets_redistributed": false,
+  "program_writer_complete": false,
+  "full_v1_complete": false,
+  "full_batch_ready": false,
+  "runtime_source_hashes": {
+    "src/universal_hmi/service.py": "af84bb1827aba72028122079674bda11cdce9817da456499b05fbff04ad06c09",
+    "src/universal_hmi/model.py": "8b0f3cf250eb472dc08f6159d353410d27e04b68bf5ae3e22757851b87232961",
+    "src/universal_hmi/validation.py": "74d0b9bd1ee246ba5f5778f867b504951a16f650f410d9e27cf64887aaab5a9b",
+    "src/universal_hmi/preview.py": "1a91105533981f46dfbf5842f3c0af842e190c53d7a510aabfecffbb2d6fa114",
+    "src/universal_hmi/native/__init__.py": "86f7a9c7aa86146fd57bbb4d8931d609a2de043505f4c731b0cd6662b69976e4",
+    "src/universal_hmi/native/diascreen_control_append.py": "3c334b9f3baec4d50555e613f612aa51e54709e211e2bcb65eb12b84c17d2d24",
+    "scripts/calibrate_diascreen_controls.py": "c6851da03f199754a895f4f29208b28ed81871d6f3f1ef4dcc487caab331c457"
+  },
+  "elapsed_seconds": 82.592
+}

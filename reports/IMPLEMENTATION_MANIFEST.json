@@ -1,65 +1,9 @@
 {
-  "scope": "Interim gateway, independent DIAScreen pending",
+  "scope": "Two-family offline file MCP release implementation",
   "files": [
     {
-      "path": "scripts/bootstrap.ps1",
-      "sha256": "6a16380b69e2edbf0cfe127fcbe8e528903dd2903b24347611627bc8e73b6e10"
-    },
-    {
-      "path": "scripts/bootstrap.sh",
-      "sha256": "26e459acc9035b4b18a50044cacc4d5fa8e12a5267ebc8f2061be6202cc81813"
-    },
-    {
-      "path": "scripts/build_package.py",
-      "sha256": "5c8305c72271dc6ca66d1ad84d4cdd81ac2bd1bebe011aa9655ff52c95518cd6"
-    },
-    {
-      "path": "scripts/finish_install.py",
-      "sha256": "a8b15d61bcf5b1420cad7a944fb1ce1ccfcfb7b8088e58334f11c9a1c68feba1"
-    },
-    {
-      "path": "scripts/probe_stdio.py",
-      "sha256": "a70d05760b0c0290de97da7a5048a4a2e3daac3e1de97867e4a45c510e114a21"
-    },
-    {
-      "path": "src/delta_hmi/__init__.py",
-      "sha256": "a73317935b70db1333c58f38e9365e60ba08448d218c2162d229767ddb5946e7"
-    },
-    {
-      "path": "src/delta_hmi/cli.py",
-      "sha256": "40d8e3a7e0054e635afebf62083602302596bebbe7c46a28cfb23a54a2b44520"
-    },
-    {
-      "path": "src/delta_hmi/config.py",
-      "sha256": "7359fcb1428ceae2ca3950c3417361355cf5aeb25939abfab127878ccd42abfc"
-    },
-    {
-      "path": "src/delta_hmi/gateway.py",
-      "sha256": "76d36faa64e905da0513d01e05bc60bba907f0069a7919e6a6bb76d7870837ce"
-    },
-    {
-      "path": "templates/backends.json",
-      "sha256": "0d489820647117e6477f2db406b967ff5e0697161bd782111295881337d6feca"
-    },
-    {
-      "path": "templates/releases.lock.json",
-      "sha256": "a202b2cfe8a8997a9b6db26c6ce3f407947893f967c30f11a209064aca4edbd2"
-    },
-    {
-      "path": "tests/test_config.py",
-      "sha256": "a3a43a1560f1c37403174d8d74315d96f72da4d2ff0ab135fa4a90158a4c8b8c"
-    },
-    {
-      "path": "tests/test_gateway.py",
-      "sha256": "c5a9a3deafa0aaecbeb8c477d043b32726744e8503685b15085a8d55969fbd2f"
-    },
-    {
-      "path": "tests/test_inventory.py",
-      "sha256": "41062a77cb813beb1fbad61a696e8ff5ee1a08cbda55bbf3d8cadcd30a67c97d"
-    },
-    {
-      "path": "tools/guard.py",
-      "sha256": "58ed8dced250e885f012702446ff138a078cd551d3ea3c7c7b82d7ee100a576d"
+      "path": "examples/create_gateway_demo.py",
+      "sha256": "2581a0a7e54fbeffc5dd889edc066e71ac682d205ffee01ad6ea052de92e5745"
     },
     {
       "path": "LICENSE",
@@ -70,12 +14,100 @@
       "sha256": "652be1c6bbe8b3a7f8d10f4fa6d99b17e299b3c3e21639e8fe480d2a0659981f"
     },
     {
-      "path": "THIRD_PARTY_NOTICES.md",
-      "sha256": "2a9256c26d284c4037fb0f0448c55b49c46d467d9713b4b841d29dcececbdbde"
+      "path": "pyproject.toml",
+      "sha256": "c8398e1e28b4c4a13a8bf21f24beabbf5adbf83033bba48a12e579240cd4c2a7"
     },
     {
-      "path": "pyproject.toml",
-      "sha256": "f6c4b4c8a323737c0cb65a388257ebf70c1f6800a43aded2edfef45459c13a17"
+      "path": "scripts/bootstrap.ps1",
+      "sha256": "d558b041b58ce324f66cd8d07a0a87513975a9cabd7c011a6c515f6423791a23"
+    },
+    {
+      "path": "scripts/bootstrap.sh",
+      "sha256": "e2eff0b9b1b82657988dc352ca23bd5e7dd39dcb00f7b6f180c27c72054e6cfd"
+    },
+    {
+      "path": "scripts/build_package.py",
+      "sha256": "aaae60324203e0bc594897431130b34a76ff903b7c34035fc08e77dda85ccf39"
+    },
+    {
+      "path": "scripts/finish_install.py",
+      "sha256": "af476baf6d6ea804e6746f3a4e599095eae910b008384a824b27e9406691c064"
+    },
+    {
+      "path": "scripts/probe_both.py",
+      "sha256": "2a2c01d464b85e07eb8a9e024485e4034c363071629c6cf4b7b5895c2eb546c1"
+    },
+    {
+      "path": "scripts/probe_stdio.py",
+      "sha256": "a70d05760b0c0290de97da7a5048a4a2e3daac3e1de97867e4a45c510e114a21"
+    },
+    {
+      "path": "src/delta_hmi/__init__.py",
+      "sha256": "f984cf7ec028fdb1b41b405d6628ee777c22c0df828a6aa08a8a458eb79b6942"
+    },
+    {
+      "path": "src/delta_hmi/cli.py",
+      "sha256": "40d8e3a7e0054e635afebf62083602302596bebbe7c46a28cfb23a54a2b44520"
+    },
+    {
+      "path": "src/delta_hmi/config.py",
+      "sha256": "a690ba5da690604d97542b6e94f5e52facd5c13143a518e44b45e07094339e66"
+    },
+    {
+      "path": "src/delta_hmi/gateway.py",
+      "sha256": "6460e8d419eae04becd724e554dcda0b26f69e861968bded5b455a0002a014cd"
+    },
+    {
+      "path": "templates/backends.json",
+      "sha256": "d38dcc32b796e8d42e31c1d124489fa56bd5c06990999390fc3e5d4c82f980cb"
+    },
+    {
+      "path": "templates/component_files.json",
+      "sha256": "931a4f11323c0c968894fb73290208e606fb302b1887af336e197d252e49315d"
+    },
+    {
+      "path": "templates/releases.lock.json",
+      "sha256": "509559bfbf627eebdc0ad164289548ffbeb6dd66107ef65405603da04eb1e427"
+    },
+    {
+      "path": "tests/test_config.py",
+      "sha256": "7cd6e4e3186347d41f8af62d40d6bad149fc920b0357c1c8b2089f1ab49236c4"
+    },
+    {
+      "path": "tests/test_diascreen_gateway.py",
+      "sha256": "8140dcc1308317678904d2aa092e6d76a5b604da7efc890a27f3c51f544ffc44"
+    },
+    {
+      "path": "tests/test_gateway.py",
+      "sha256": "7a59a2dae102dde9aff67adea5b757e5a3bbf2e73bc529172b4acc9f34a252e3"
+    },
+    {
+      "path": "tests/test_installation.py",
+      "sha256": "f8b3dd2054f4cec53d127b7887b777288eb060173f918e241336bcffd9b476a0"
+    },
+    {
+      "path": "tests/test_inventory.py",
+      "sha256": "50df131eeedcd2b044b29a512b49fc260d5469cfd0663be780b15178ca19659d"
+    },
+    {
+      "path": "tests/test_jobs_gateway.py",
+      "sha256": "34c57cd8d86dd58d0c4b74f4fe3116d0d8a68a4ecf925bd420acc55fbdbf228e"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "748c22c18492bd33f1beebc1cdbb91fd6c50b082f325fee9154b383688de1487"
+    },
+    {
+      "path": "tools/check_snapshots.py",
+      "sha256": "fa888ce951fe77165d1cf80ce3d7cbce3835bec214ec823c17cc10137fadb78b"
+    },
+    {
+      "path": "tools/ci.py",
+      "sha256": "f733bc3f574e33d5a0c602e9424046e3912cf87752c9f1c8f2780be26d15c621"
+    },
+    {
+      "path": "tools/guard.py",
+      "sha256": "58ed8dced250e885f012702446ff138a078cd551d3ea3c7c7b82d7ee100a576d"
     }
   ]
 }

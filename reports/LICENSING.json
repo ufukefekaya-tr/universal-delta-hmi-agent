@@ -5,6 +5,8 @@
   "wheel_license_metadata": "PASS",
   "wheel_and_source_zip_license_bytes": "PASS",
   "diascreen_owner_notified": true,
-  "public_release": "NOT_PERFORMED",
-  "bundled_dop_b_public_license_gate": "OPEN: separate licensed release required; existing0.2.0 not relabeled"
+  "public_release": "REDISTRIBUTION_GATE_PASS; final GitHub identity and archive hashes are recorded in release metadata",
+  "bundled_dop_b_public_license_gate": "CLOSED: separately licensed0.2.1 with34wheels/two runtimes/198notice mappings and source-availability statements",
+  "dop_b_license": "Apache-2.0 original source; retained third-party notices",
+  "dop_100_license": "Apache-2.0 original source; no runtime dependencies"
 }

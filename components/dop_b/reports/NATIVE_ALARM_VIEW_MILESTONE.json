@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "scope": "BOUNDED_EXISTING_BOOL_ALARM_AND_PRESERVED_VIEW_SUBSET_NOT_FULL_V1",
+  "status": "OFFLINE_PASS",
+  "test_revision_sha256": "ac8f4109405de411efa6927ac0a2d184063aef92a31b2263c630996cba8e1d0f",
+  "source_hashes": {
+    "src/universal_hmi/__init__.py": "0db3fbb84952385b48986a224db88e67609945e5d5ac8708bdee50c8e8837035",
+    "src/universal_hmi/cli.py": "fac2fb4b0abbaaa7d55afd9a1bdecd22c480d3a0ac962cf4b065511a39895e92",
+    "src/universal_hmi/errors.py": "f0424fc7333cc3cd2c84ad02fbfb5b6a5ef8daa5eae6f335eedc6e28b8f25a45",
+    "src/universal_hmi/mcp_server.py": "513343f6716cd196195b40efbc32755a7df1c830129c204f2e3d5df23deeaf0b",
+    "src/universal_hmi/model.py": "7f5610866e8b1ebc3af5e75dd6ef6152a9a58d29a5ee9d2e450d0f955a1aac83",
+    "src/universal_hmi/native/__init__.py": "da495714d910c81bbf766252273ad2b57356b1deaa257792aba657fb98c099f3",
+    "src/universal_hmi/native/codec.py": "c8db8ebc25d74aa20c97dbaa7602e3d30a8b5d2d464b84ae59f6a9c26c767d06",
+    "src/universal_hmi/native/identity.py": "cef9007cb3f9ad3b2f5e1c2c2350a878c1c6c24a1e5988389cad92abe540c8cf",
+    "src/universal_hmi/native/macro_semantics.py": "b867861c58283214bbc4566d8e93227a57c83bb1eb9470f243688f3ec5b752e8",
+    "src/universal_hmi/native/macros.py": "4c4d0ea62d4d802264691eedac1865bc7ba606be978246bb48b5b3d352fa1af9",
+    "src/universal_hmi/native/numeric.py": "facc48b91377057ebcd9ecb2bf9ab1d552364480a3ec4ef890230310c903796a",
+    "src/universal_hmi/native/records.py": "ddf823d3f87f197a45001d3a6a6a2f4422afb5c6ef03029ece5dae72ccd1d787",
+    "src/universal_hmi/native/resources.py": "f3c0a1f9178ef8636ec97205e432020c70d24857faa902f614ee64d64b15c2d7",
+    "src/universal_hmi/preview.py": "4ac94e7f0f41a9b1fc4a9b84303e7386d1c2af5c8047c0111787497641746a40",
+    "src/universal_hmi/service.py": "1afb021b622dca3adb90261aadf13e08fa05e13e31e50bca3c63dbc8b2595363",
+    "src/universal_hmi/validation.py": "28aa8734fb53f24d1987033d2dc4891b704812c7b5e3b0070513873186f9d957",
+    "tests/test_design.py": "0a9b9f7a74579d34cb5b1e4675237ed1ca9aa28c460e626fe4ed3696110bf346",
+    "tests/test_governance.py": "93f255cd8b2026c567b6886a12f0582c545c98e9cbf1ba2b54b788eca6517628",
+    "tests/test_native.py": "3329bf87239f1276802d19b49816cd9bf7929760f31a8b193f88ae1afa610f68",
+    "tests/test_resources.py": "e14a874f4a32bd9390acc55ac04a8644eec9adb8be79cb36f91540c07e721884",
+    "tests/test_service.py": "e16626a6aca35753c3724c1b447ad768ea59de82b59189e26fd186fda2aca3e5",
+    "tests/test_stdio.py": "348d8d57f85403a19529523e482c4c294ed90c600a435f90739f1a1b36318fc5",
+    "profiles/dop_110is_diascreen.json": "72b5e04f3435e488bfd6c23d7aba3915617de36d27972627d7782b8d8a050bf9",
+    "profiles/dop_b07s411_dopsoft2.json": "ae052c6c7208ad4c38fee47abe71ea3388c7d0bb902851b67544b7ca0133b7a1",
+    "profiles/synthetic_diascreen.json": "ba237a67ab7d9f2c8def98e4e1f377862cd666a9c32d344860c5956a95b8ad44",
+    "profiles/synthetic_dopsoft2.json": "54648f8d00863a8d92eb78c3b61b3c919d2db3b2f6fb145cb4e890c41428c2f4",
+    "tools/_governance.py": "b0fab8b43fa2be055743fd7c46a0239357cfa17c3af164a8fc3ea5dc30b7c209",
+    "tools/check_repo.py": "4113425ec33eddad3e9e920470a96a65421ebfb99f918c8e170e1c3b6006884e",
+    "tools/session_guard.py": "7b3a8baedbd528aabbb3c77f69bfd1bbb8ffb5079ba726bb3597cf233dbdaaff",
+    "scripts/build_manifest.py": "d3735a80d523b7fe83e0dfef14e51922060b7f415370065e4fc3a2cce33e2ca8",
+    "scripts/build_previews.py": "608f007c469460ba79ef69323b308e80704fcd28bb5ccdd94309906cba19a8d4",
+    "scripts/build_profiles.py": "2dd35eb99e59bb1e183c4f9e9816fba75970b228d7f00ab9b9bed2215cadecc5",
+    "scripts/codex_config.toml.example": "20171fd77d09b6d52f9253c65816d14617753a88b6ae51eea1cad2b59dc31ffa",
+    "scripts/configure_mcp.py": "72b5a76a64582dc08dd9eb771e7233f21659ce6dae99d1c845ba8767f44fa2bc",
+    "scripts/preview_smoke.cjs": "58076b2f5dfbf70e15eaa1152eb20e72609d24f59dca9b728b0209ddaa6864e8",
+    "scripts/relocation_test.py": "f6020a59b975296ff32cf184586d440cbc723952b9665bed968df2b31fb5c446",
+    "scripts/setup.ps1": "d9a68842d2a446cb8439b5ba6de60ffbf45a1aa8f3f769bf187bebf3c72cb415",
+    "scripts/setup.sh": "e3c4d18c74f300f6bbc5f757b0385775aa86abfbf7b03df3c15db3919b12a2bc",
+    "scripts/vendor_probe.py": "1036ed0f8b89974670fbd25481244e54ca9c7d913af40ade617a8ab96765af13",
+    "scripts/verify.py": "b386127db5b933a79ddf27f4f66b08bde3de3c9afaf4594ceb0c0254d25d084b"
+  },
+  "root_tests": {
+    "executed": 356,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 43.767
+  },
+  "test_local_transactions": [
+    {
+      "family": "delta_dopsoft2",
+      "profile_id": "synthetic_dopsoft2",
+      "generated_by": "test_service.ServiceTests.use_alarms(family)",
+      "profile_sha256": "8aeadaf5e19ac1a385f015bdf5e490015ce99924ff34ff8c40492029f9e4afc8",
+      "algorithm": "sha256-raw-test-local-serialized-json-bytes",
+      "source_sha256": "1997aa936381787aeb3b590a8248e16430c7876c3556398274d9685756cd74a3",
+      "schema_sha256": "8c860a6346d1098b48e4f4ac340e16b4df79ede8ded0b102944bff81aca7c460",
+      "alarm_count": 2,
+      "view_count": 3
+    },
+    {
+      "family": "delta_diascreen",
+      "profile_id": "synthetic_diascreen",
+      "generated_by": "test_service.ServiceTests.use_alarms(family)",
+      "profile_sha256": "c4c7ec44522558ebf4f64fa607830434a389dabe6a056a9cdb91c1481e66b486",
+      "algorithm": "sha256-raw-test-local-serialized-json-bytes",
+      "source_sha256": "a07e04c8ddb4247ab1ca480df9fb8700814fa7350a4ff4345a22fd36ff52a6bf",
+      "schema_sha256": "8c860a6346d1098b48e4f4ac340e16b4df79ede8ded0b102944bff81aca7c460",
+      "alarm_count": 2,
+      "view_count": 3
+    }
+  ],
+  "independent_review": {
+    "reviewer": "/root/emitter_counterreview",
+    "read_only": true,
+    "status": "OFFLINE_PASS",
+    "executed": 356,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 40.079,
+    "runner_elapsed_seconds": 40.074,
+    "source_hashes_unchanged": true,
+    "direct_probes": 330,
+    "direct_probe_groups": {
+      "resource_and_views": 224,
+      "service": 92,
+      "actual_sdk_stdio": 14
+    },
+    "conceptual_dom_cases": 20,
+    "important_open_findings": 0,
+    "native_visual": "NOT_RUN",
+    "report": "NATIVE_ALARM_VIEW_REVIEW.md"
+  },
+  "implemented": [
+    "Existing direct active-high BOOL primary-message mapping with exact all-enabled coverage",
+    "Raw source SHA, six companions, explicit one-bit storage and exact tag engineering/binding",
+    "Source-preserved Type11 current/history/strip owner fingerprints and geometry-only cloning",
+    "Pure original-plus-IR complete tail expectation and immutable source-owner/candidate comparison",
+    "Conceptual UNKNOWN source-preserved placeholders and actual SDK stdio both envelopes"
+  ],
+  "native_visual": "NOT_RUN",
+  "vendor_compile": "NOT_RUN",
+  "physical_test": "NOT_RUN",
+  "vendor_assets_redistributed": false,
+  "both_families_vendor_qualified": false,
+  "full_v1_complete": false,
+  "fresh_relocation": {
+    "status": "PENDING_CURRENT_SOURCE_COMMIT"
+  },
+  "open": [
+    "Exact selected-model neutral fixtures and external driver/address qualification",
+    "Vendor page/font/picture/layer/unit and conversion qualification",
+    "New alarm entries/triggers, numeric/continuous/format operands and retention semantics",
+    "External/alias/REAL/TIME macros and other conditions",
+    "Two real native pilot and human vendor/panel acceptance",
+    "Linux/macOS runtime NOT_RUN"
+  ],
+  "genuine_read_only_holdouts": {
+    "memory_only": true,
+    "native_sources_written": false,
+    "native_candidates_written": false,
+    "noop_byte_equal_files": 3,
+    "source_unchanged": true,
+    "alarm_view_context_pass_files": 0,
+    "selected_model_qualification": "NOT_RUN",
+    "sources": [
+      {
+        "name": "AlarmEN",
+        "sha256": "ae60464b551a5f773871910c180ccd72fdc63dc5123a76a17c16ab50bd94b8be",
+        "model": "268505088",
+        "editor": "6.6.0.2",
+        "views": {
+          "current": "CLOSED_GroupIDVariation",
+          "history": "CLOSED_GroupIDVariation"
+        }
+      },
+      {
+        "name": "FullDemo",
+        "sha256": "fc079f74ed9b34e2e698b0c65c95c4f914983594f658cadc72e1ee4d97493ed5",
+        "model": "268502784",
+        "editor": "6.0.00205.8268",
+        "views": {
+          "current": "CLOSED_GroupID",
+          "history": "CLOSED_GroupID",
+          "strip": "CLOSED_GroupID",
+          "frequency": "UNSUPPORTED_SUBTYPE3"
+        }
+      },
+      {
+        "name": "History",
+        "sha256": "7f35b5fd05537106b46a9791a426a1b3e3a59f8afa1f870595e9c0fd75e24471",
+        "model": "268505093",
+        "editor": "6.6.0.10",
+        "views": 0,
+        "enabled_alarms": 0
+      }
+    ]
+  },
+  "findings_closed": [
+    {
+      "id": "A1",
+      "trigger": "BOOL tag plus nonzero native width2/65535",
+      "effect": "Unqualified storage accepted as BOOL",
+      "fix": "Exact bits1/bit/native_mem_len1 plus six source guards",
+      "retest": [
+        "test_resources.PublicAlarmTests.test_trigger_storage_requires_exact_bit_contract",
+        "test_resources.PublicAlarmTests.test_changed_source_direct_polarity_and_bool_width_are_closed"
+      ],
+      "severity": "IMPORTANT"
+    },
+    {
+      "id": "A2",
+      "trigger": "Foreign Application/Screen/State dependency or active FunctionKeyPartID0 under raw-pinned owner",
+      "effect": "Undeclared effective view action/context",
+      "fix": "Known owner-family guard and inert dependencies; exact whole owner baseline",
+      "retest": [
+        "test_resources.AlarmViewContextTests.test_foreign_view_fields_under_application_screen_and_state_are_closed",
+        "test_resources.AlarmViewContextTests.test_active_functionkeys_filebrowser_variables_and_macros_are_closed"
+      ],
+      "severity": "IMPORTANT"
+    },
+    {
+      "id": "A3",
+      "trigger": "Mapped WatchAddr companion despite no percent character",
+      "effect": "Unknown watched formatting dependency",
+      "fix": "Explicit formatter rejection plus changed source/replacement percent gate",
+      "retest": [
+        "test_resources.PublicAlarmTests.test_numeric_per_entry_and_watch_companions_are_closed",
+        "test_resources.PublicAlarmTests.test_replacement_and_existing_format_messages_are_closed_when_changed"
+      ],
+      "severity": "IMPORTANT"
+    },
+    {
+      "id": "A4",
+      "trigger": "Empty alarm IR with explicit alarm_ir source contract",
+      "effect": "Incomplete enabled coverage accepted through no-op shortcut",
+      "fix": "Unmanaged opaque bypass only absent alarm_ir and empty IR; otherwise exact coverage/provenance",
+      "retest": [
+        "test_resources.PublicAlarmTests.test_empty_ir_does_not_bypass_declared_enabled_coverage",
+        "test_service.ServiceTests.test_alarm_history_semantics_not_inferred_and_empty_coverage_not_bypassed"
+      ],
+      "severity": "IMPORTANT"
+    },
+    {
+      "id": "A5",
+      "trigger": "kinds/donors null or list in otherwise qualified profile",
+      "effect": "Raw AttributeError instead of typed validation failure",
+      "fix": "Explicit dict guards at kind/donor and clone-intent resolution",
+      "retest": [
+        "test_service.ServiceTests.test_malformed_alarm_kind_and_donor_maps_close_with_typed_errors"
+      ],
+      "severity": "IMPORTANT"
+    },
+    {
+      "id": "A6",
+      "trigger": "Short/long unobserved AlarmVar01/AlarmEnable000001/wMessageLen1-0/WatchAddr01-001 spellings and malformed protected suffixes AlarmVar-001/AlarmVar001-X/WatchAddr-001-001",
+      "effect": "Semantic alias/formatter evades public index checks",
+      "fix": "Public exact native index grammar before alias classification; low-level opaque preservation unchanged",
+      "retest": [
+        "test_resources.PublicAlarmTests.test_unobserved_index_spellings_cannot_evade_alias_or_formatter_checks",
+        "test_resources.PublicAlarmTests.test_malformed_protected_suffixes_are_closed_before_projection_on_rebased_source"
+      ],
+      "severity": "IMPORTANT"
+    },
+    {
+      "id": "A7",
+      "trigger": "Additional AlarmVar001-001 or AlarmOn001-001 under rebased source contract",
+      "effect": "Unqualified address/polarity subindex admitted as direct BOOL",
+      "fix": "Allowed scalar primary companions must have no subindex",
+      "retest": [
+        "test_resources.PublicAlarmTests.test_scalar_companion_subindexes_are_closed_on_rebased_noop_and_changed_source"
+      ],
+      "severity": "IMPORTANT"
+    },
+    {
+      "id": "A8",
+      "severity": "IMPORTANT",
+      "trigger": "Changed alarm message IR with missing/duplicate explicit configure_alarm",
+      "effect": "validate falsely reports offline_pass although apply cannot satisfy approved alarm contract",
+      "fix": "Exactly one consolidated exact expected operation required before offline_pass; pure final tail equality remains independent",
+      "retest": [
+        "test_service.ServiceTests.test_explicit_alarm_noop_cannot_omit_changed_message",
+        "test_service.ServiceTests.test_changed_alarm_operation_must_be_exactly_one_and_final_tail_still_checked"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "task_id": "REPLACE-TASK-ID",
+  "authority": "<direct authorization and exact scope>",
+  "baseline": "<full immutable commit SHA>",
+  "policy_epoch": "<sha256-path-nul-bytes-nul-v1>",
+  "allowed_write": ["projects/REPLACE-ID/", ".agent-state/REPLACE-TASK-ID/"],
+  "protected": ["AGENTS.md", "SYSTEM_PROMPT.md", "INDEX.md", "projects/REPLACE-ID/inputs/"],
+  "commit_owner": "root",
+  "scope_owners": {
+    "designer": ["projects/REPLACE-ID/contracts/design.json"],
+    "programmer": ["projects/REPLACE-ID/outputs/"],
+    "root": [".agent-state/REPLACE-TASK-ID/"]
+  },
+  "source_sha256": null,
+  "human_approval_for_production_required": true
+}

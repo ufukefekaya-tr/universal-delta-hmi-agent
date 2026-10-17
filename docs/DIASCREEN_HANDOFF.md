@@ -1,18 +1,13 @@
-# Bağımsız DIAScreen teslim sözleşmesi
+# Accepted independent DIAScreen integration contract
 
-DIAScreen ajanına yeni `universal-diascreen-hmi-agent` reposunda çalışma görevi insan yetkisiyle gönderildi. Çatıya veya DOP-B deposuna yazmayacak. İlk inceleme bağımsız genel DIAScreen reposu bulunmadığını, lisansı belirtilmemiş upstream ile ayrı proje wrapper'larının kullanıldığını doğruladı.
+The separately maintained component is published as a clean source snapshot in `components/dop_100`; `templates/releases.lock.json` pins its version, original commit and archive identity. Original source is Apache-2.0. Historical license-unclear upstream code and proprietary qualification files are excluded.
 
-Teslimde gerekenler:
+The module is `universal_diascreen_hmi.cli`. Its actual CLI accepts `--workspace`, optional `--allow-write` and repeated `--read-root`. It has no DOP-B `serve` subcommand, profile registry argument or durable job runner. The gateway preserves this distinction.
 
-- Özgün/proje agnostik kod; müşteri adı, tag/IP, logo, özel native dosya ve host yolu yok.
-- stdio giriş noktası ve Python bağımlılıkları; önerilen modül `universal_diascreen_hmi.cli`.
-- Bütün araç adları ve JSON şemaları; dokuz temel araç dışında kalan işlevler için de explicit harita.
-- Kaynak/model/editor/driver family contract; unsupported alanlarda açık hata.
-- Kaynak manifesti, hashli taşınabilir paket, commit/sürüm ve kurulum komutları.
-- `FEATURE_MIGRATION.json` D01–D44, U01–U09 ve18dosya/4hariçGUI araç için yeni uygulama/test/durum eşleştirmesi.
-- `REGRESSIONS.json` gerçek hata senaryolarının karşılığı.
-- Bağımsız eksiksizlik denetimi; dokümantasyon satırı uygulama kanıtı sayılmaz.
+A trusted registry supplies exact profile objects of family `diascreen-dop100`. Gateway opening accepts `profile_id`, `path` and `source_sha256`; it injects the canonical profile and hash. Each open owns a new backend process; all project tools require the returned gateway `session_id`. `close_session` explicitly releases it. No previous project's implicit state is overwritten.
 
-N016 vendor modüllerini tek başına almak eski wrapper özelliklerini kaybettirir. Momentary/maintained tür sözlüğü eski upstream'den güvenle alınamaz. Macro görünür kaynak ile parsed operand ayrı tutulmalıdır. Geri alınmış heartbeat ve henüz üretilmemiş alarm history varsayılan özellik olarak açılamaz.
+All30 audited tool names, including18 historical file intents, are discoverable. Their backend schemas are retained except the explicit gateway session/profile transformation. Four historical GUI tools and source-overwrite/editor-reload options remain intentionally excluded. Unsupported constructors remain explicit refusals.
 
-Bu bağımsız teslim gelene kadar çatı DIAScreen'i `UNAVAILABLE` gösterir. Kaynak DOP-B deposundaki dar DIAScreen deneyleri bu teslim yerine kullanılmaz.
+Proposal preview and validation require the exact reviewed `plan_sha256` to select a proposed candidate. Application still requires independent `approval_sha256` equality and trusted process write permission. Save requires a new path and exact candidate hash. Read-only proposal review does not apply or save the candidate.
+
+The full53-group feature disposition and21 regressions remain linked to the component support matrix. Offline, source-bound, contract-only, unqualified, withdrawn and physical evidence levels are not interchangeable.

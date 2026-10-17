@@ -1,0 +1,40 @@
+{
+  "scope": "FRESH_RELOCATED_EDITABLE_INSTALL",
+  "os": "nt",
+  "platform": "win32",
+  "source_commit": "5d7afae3b6b2d351c7922000b550d5add2ed826f",
+  "separate_checkout": true,
+  "checkout_path_contains_spaces": true,
+  "fresh_venv": true,
+  "original_venv_copied": false,
+  "original_git_remote_removed": true,
+  "pythonpath_removed": true,
+  "original_checkout_removed_from_path": true,
+  "bootstrap_interpreter": "HOST_BASE_PYTHON",
+  "import_resolves_to_relocated_source": true,
+  "caller_outside_checkout": true,
+  "test_revision_sha256": "4174a7152c9fecfd10cc0a5638ec9d56f2bb21a8c0d4335c0977c362649fc700",
+  "matches_source_test_revision": true,
+  "executed": 507,
+  "skipped": 0,
+  "tests_pass": true,
+  "pip_check": {
+    "exit_code": 0,
+    "result": "No broken requirements found."
+  },
+  "vendor_assets_required": false,
+  "vendor_compile": "NOT_RUN",
+  "linux_runtime": "NOT_RUN",
+  "macos_runtime": "NOT_RUN",
+  "status": "OFFLINE_PASS",
+  "independent_actual_environment_audit": {
+    "status": "PASS",
+    "source_hash_count": 47,
+    "test_ids": 507,
+    "distinct_git_objects": 691,
+    "lock_pins": 30,
+    "open_material_findings": 0,
+    "report": "RELOCATION_507_REVIEW.md",
+    "physical_host": "Same Windows host; second-PC not tested"
+  }
+}

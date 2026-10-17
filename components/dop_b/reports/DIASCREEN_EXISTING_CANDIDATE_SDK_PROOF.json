@@ -1,0 +1,181 @@
+{
+  "scope": "GENUINE_INSTALLED_MANUFACTURER_SOURCE_NINE_TOOL_SDK_STORED_ONLY",
+  "status": "OFFLINE_PASS",
+  "source_alias": "DIA-TEMPERATURE-INSTALLED-01",
+  "source_sha256": "b60f24b99cbee35adb8f84e8de18de227ffcaa58ac25d17b2e41f95c27a52baf",
+  "source_bytes": 494328,
+  "candidate_sha256": "f1ba3c33606c89da6e6cc25d6f9f819e94fd7b26efaa85f3a3fff32a8f6e6500",
+  "candidate_bytes": 483033,
+  "candidate_body_sha256": "264965434d299803e7740b000f35b5f9e6b7992e295c3ea72dbaf355f85c2253",
+  "candidate_body_bytes": 3384288,
+  "source_body_sha256": "5e1dc0d63e4f7df26316747006c55452581b139836748712c3e0250777d9928b",
+  "prefix_sha256": "0e9303f34df6e95a882394f49a4447374e7b7b94fc9be9c7d333ca7285f25e8d",
+  "prefix_bytes": 22815,
+  "prefix_section_hashes": [
+    {
+      "name": "Application",
+      "sha256": "b110d9b9db2ff00c9091a4bfc9b74ca8a7ed966c2ac2e08ac37f02a7869eb98b"
+    },
+    {
+      "name": "Multi-Language",
+      "sha256": "60b377e69425c7a43de5171159e072281e43377435c49d3901e74eabcc1c3fa7"
+    },
+    {
+      "name": "Global-Camera",
+      "sha256": "efa19414c64a7b847c7fa520969e16a2d83fbf6d6a4219752096d65a8df729aa"
+    },
+    {
+      "name": "Event-Trigger",
+      "sha256": "09af2e4df33bbfddf3a88fe893170dd43c0fa57e9e74162268310b282a70a1f2"
+    },
+    {
+      "name": "Global-Keypad",
+      "sha256": "73481c2bdfeed915fb4c0926da5ad8e2e522d80d8329466db07a997eed999ae4"
+    },
+    {
+      "name": "Recipe",
+      "sha256": "2502cfe64c47003e28dfc9f4c3785360469755656fde2cce07a22883f9dcfc6f"
+    },
+    {
+      "name": "Recipe32",
+      "sha256": "e4797f2d8ca0bbd148597b9bed68ebf3f9d6c5272ca12322433c841c613c913f"
+    },
+    {
+      "name": "EnhanceRcp",
+      "sha256": "3d895b6a93ecc881a4b1658c9de21cdd409962a1ae5d42e34678e0b0281d6fbd"
+    },
+    {
+      "name": "Ethernet",
+      "sha256": "8fce7d03536308153e603c0958b37d486dc9349e3162ae32dbef6d2d05402cb5"
+    },
+    {
+      "name": "Modbus_TCP_Server",
+      "sha256": "5f04655dad8c86cc25e6ded749aca1eaa8041d3d9c4a95e32006a8e1fbe9244b"
+    },
+    {
+      "name": "WEB_OUTPUT",
+      "sha256": "c1fdd0d3681958d5c6dac3c188e1affb45daf7311d3740fc02f91a57a0aebb76"
+    },
+    {
+      "name": "SIP",
+      "sha256": "147972abddce14dd8e6c5c699cd5919b7c17a6c6ef925d6776e8852946272e1d"
+    },
+    {
+      "name": "RemoteCtrl",
+      "sha256": "3bf80384855dfbd183a00a9ac9806793f713ca0ae118c11d0326c0c71cc3baaf"
+    },
+    {
+      "name": "VNCCtrl",
+      "sha256": "b559388ffda3a4a6fb420f75176f192d794fc1cc369f848931f8f2d956a21be0"
+    },
+    {
+      "name": "RTC",
+      "sha256": "d6784a562f13c1ca82fb196104a084ff8a4d355de79bfcae613d3eb2038fc47a"
+    },
+    {
+      "name": "LOG",
+      "sha256": "15e241a1912a5675cdbe2c5e4396d346d714dfc6f25b4e8205c85f8d18c5debc"
+    },
+    {
+      "name": "FTP",
+      "sha256": "a258ca8518cd10db445c68026ddeb4d644b35e94bff3891b38586d376bea3542"
+    },
+    {
+      "name": "FTPFile",
+      "sha256": "e06a45bb164132cb187a784086ed3b10748852717d5934b2af5fff7afb03dde5"
+    },
+    {
+      "name": "DataExchange",
+      "sha256": "6ad7aad0ff769d56b7092e8f980e73e2663defa841722709e8df33b4b2f76c4f"
+    },
+    {
+      "name": "DataExchangeEnd",
+      "sha256": "1a655c3d5c76deead7719b9b1c8e5d27a791a2061c34d3102d762ef74fe78d24"
+    },
+    {
+      "name": "LuaData",
+      "sha256": "2c80bda242cbdcd9fe02dbf96bb5e9a48301ac1cfe29435b160942dca1e7f7ab"
+    },
+    {
+      "name": "ExtraZA_ZGSection",
+      "sha256": "a1a62e9bbd885b4348e163299b736352d21cf7bf0f3d43236ab02baa7d6ac85d"
+    }
+  ],
+  "source_owner_sha256": "1f85fa950ddfaba958e5cac0a942ca9298ec74bc08e7cfba86fbd7e77847f693",
+  "profile_sha256": "6cb58f97c3851646c9155332176330aa662ddc5dc74a2569a406a4188036ba94",
+  "profile_hash_scope": "Raw project-local source-pinned generated profile, licensed source not distributed",
+  "calibration_sha256": "0531d59d02293e0b7208d55fc9e891747060b969de8d1eb5776437f63d154d33",
+  "family": "delta_diascreen",
+  "model_id": 268502784,
+  "serialized_version": "6.0.00209.8338",
+  "resolution": [
+    800,
+    480
+  ],
+  "pages": 1,
+  "owners": 26,
+  "unchanged_owners": 25,
+  "sdk_tools": 9,
+  "tool_names": [
+    "apply_plan",
+    "capabilities",
+    "diff",
+    "inspect",
+    "open_project",
+    "plan_changes",
+    "preview",
+    "save_as",
+    "validate"
+  ],
+  "changes": [
+    {
+      "owner": "2/4",
+      "record": "wTextLen0",
+      "before": "Control Mode",
+      "after": "Control View"
+    },
+    {
+      "owner": "2/4",
+      "record": "X",
+      "before": 93,
+      "after": 94
+    }
+  ],
+  "changed_body_byte_positions": 5,
+  "whole_body_oracle": true,
+  "decoded_body_restoration": true,
+  "source_unchanged": true,
+  "replay_equal": true,
+  "byte_noop_equal": true,
+  "thumbnail_unchanged": true,
+  "prefix_unchanged": true,
+  "source_provenance": "manufacturer_installed_example",
+  "approval_scope": "Human-authorized neutral adapter experiment, not production design acceptance",
+  "elapsed_seconds": 16.004,
+  "computer_use": false,
+  "licensed_assets_redistributed": false,
+  "native_pixels": "NOT_RUN",
+  "vendor_compile": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "selected_110is_acceptance": "UNVERIFIED",
+  "full_batch_ready": false,
+  "full_v1_complete": false,
+  "program_writer_complete": false,
+  "approval_sha256": "99d237f127d71f9a2a276b41d5d6fbcea3202cb52702d1ed1a2ec8383dab5ff1",
+  "approval_evidence": {
+    "capture": "IMMUTABLE_BEFORE_APPLY",
+    "candidate_sha256": "13563436af9ff6fdb6947984ac6dd1b8336279afc7e9803fb99a8d571ceaf747",
+    "noop_sha256": "4baa39ca4e1699cde161b6ab5b8de32a16c45ddfb75f5980b713f3c9e1fde333",
+    "previous_finding_closed": "DIA_E1_EVIDENCE_SNAPSHOT"
+  },
+  "source_revision_sha256": "8567025f1b240ac2aee0b9f49ba54ea507647bf9d38d5cba0c50b4e267c51867",
+  "executable_source_hashes": {
+    "src/universal_hmi/native/__init__.py": "86f7a9c7aa86146fd57bbb4d8931d609a2de043505f4c731b0cd6662b69976e4",
+    "src/universal_hmi/service.py": "372c6e7c09d73282fcb505cb67159de36f1aeeb5f10ae5e0736bb9c7f2485573",
+    "scripts/calibrate_source.py": "40ebcbda883c0a5e56d458b3e00a79499fc0350bb06bdc0393b75f94df3fa1a7"
+  },
+  "test_module_sha256": "ff23294704624e260ed9eeca28679777dad87d573d0aa5dca7e73b15f476fbe5",
+  "scenario_regression_test_id": "test_diascreen_candidate.DiascreenCandidateSdkTests.test_neutral_three_page_candidate_through_all_nine_real_stdio_tools",
+  "scenario_scope": "The listed regression uses original neutral invented bytes. This separate observed manufacturer-source nineSDK saved experiment used local-only licensed input; it is not a vendor-executed or synthetic-source approval exception."
+}

@@ -1,0 +1,189 @@
+{
+  "status": "OFFLINE_PASS",
+  "scope": "STORED_CONTROL_APPEND_SHARED_SOURCE_BINDINGS",
+  "source_revision_sha256": "df0934702897adb689cd1cca6cb75eaa958d2b5a2b6fd789a72a4f7c4eb878c6",
+  "source_hash_count": 93,
+  "root_tests": {
+    "discovered": 880,
+    "executed": 880,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 277.445
+  },
+  "root_unittest_seconds": 275.848,
+  "independent_tests": {
+    "reviewer": "/root/clean_program_contract",
+    "executed": 880,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 276.726,
+    "ordered_test_ids_equal": true,
+    "frozen_source_hashes_equal": true
+  },
+  "independent_run_record_sha256": "0c89ef3bab3e59445f0d541f4d9dd050898b62ded61ee84865cb9c654f230557",
+  "independent_run_record_scope": "Ignored local full result/hash/ID record; independent metadata reproduced in this portable milestone",
+  "ordered_test_ids_sha256": "a738b6f66b28b4cb7f1d2a02f7b3ed25abc9f340b5ac7e407dd5a165230b1f7f",
+  "ordered_test_ids_algorithm": "sha256(json.dumps(test_ids,separators=(',',':')).encode())",
+  "new_tests": {
+    "native": 18,
+    "common_IR": 5,
+    "helper_service": 10,
+    "real_stdio_sdk_neutral": 1,
+    "total": 34,
+    "test_ids": [
+      "test_diascreen_control_service.DiascreenCloneIntentTests.test_clone_refuses_fabricated_binding_state_behavior_numeric_or_style_intent",
+      "test_diascreen_control_service.DiascreenCloneIntentTests.test_exact_donor_kind_and_caption_state_frame_intent",
+      "test_diascreen_control_service.DiascreenCloneIntentTests.test_preview_never_turns_clone_into_sample_or_runtime_state",
+      "test_diascreen_control_service.DiascreenCloneIntentTests.test_provenance_native_id_and_rectangle_are_explicit",
+      "test_diascreen_control_service.DiascreenCloneIntentTests.test_source_clone_is_separate_from_generic_control_qualification",
+      "test_diascreen_control_service.DiascreenControlSdkTests.test_original_neutral_clones_through_all_nine_stdio_tools",
+      "test_diascreen_control_service.DiascreenControlServiceTests.test_all_approval_pins_and_non_synthetic_exception_are_enforced",
+      "test_diascreen_control_service.DiascreenControlServiceTests.test_explicit_operations_cannot_hide_extra_changes_or_change_approved_clone",
+      "test_diascreen_control_service.DiascreenControlServiceTests.test_helper_public_candidate_replay_full_body_and_preserved_source",
+      "test_diascreen_control_service.DiascreenControlServiceTests.test_mixed_ordinary_schema_or_other_family_is_not_a_source_clone_route",
+      "test_diascreen_control_service.DiascreenControlServiceTests.test_noop_preserves_complete_file_and_heterogeneous_doc_panel_sizes",
+      "test_diascreen_control_service.DiascreenControlServiceTests.test_preserved_owner_or_foreign_clone_intent_refuses_before_output",
+      "test_diascreen_control_service.DiascreenControlServiceTests.test_review_artifact_is_exact_source_and_donor_metadata_not_arbitrary_digest",
+      "test_diascreen_control_service.DiascreenControlServiceTests.test_samples_are_rejected_and_preview_remains_source_clone_placeholder",
+      "test_diascreen_control_service.DiascreenControlServiceTests.test_single_pass_owner_hashes_equal_complete_source_extent_hashes",
+      "test_diascreen_control_service.DiascreenControlServiceTests.test_source_review_calibration_and_profile_freshness",
+      "test_diascreen_controls.DiascreenControlNativeTests.test_candidate_envelope_staleness_reorder_missing_extra_controls_and_wrong_request",
+      "test_diascreen_controls.DiascreenControlNativeTests.test_candidate_new_state_address_type_format_effect_hidden_fields_and_tail_tamper_refuse",
+      "test_diascreen_controls.DiascreenControlNativeTests.test_caption_state_value_frame_and_unicode_limits",
+      "test_diascreen_controls.DiascreenControlNativeTests.test_each_forbidden_operation_and_extra_intent_refuse_even_noop",
+      "test_diascreen_controls.DiascreenControlNativeTests.test_empty_operations_preserve_every_byte_and_verify_requires_identical_file",
+      "test_diascreen_controls.DiascreenControlNativeTests.test_four_controls_saved_reopen_replay_and_complete_restoration",
+      "test_diascreen_controls.DiascreenControlNativeTests.test_ids_duplicates_cross_page_target_and_geometry_limits",
+      "test_diascreen_controls.DiascreenControlNativeTests.test_independent_raw_expected_clone_and_insertion",
+      "test_diascreen_controls.DiascreenControlNativeTests.test_malformed_deep_cyclic_nonjson_inputs_raise_typed_and_leave_source_unchanged",
+      "test_diascreen_controls.DiascreenControlNativeTests.test_page_and_donor_pins_order_dimensions_and_full_owner_hash",
+      "test_diascreen_controls.DiascreenControlNativeTests.test_rehashed_donor_binding_type_numeric_macro_visibility_group_and_picture_refuse",
+      "test_diascreen_controls.DiascreenControlNativeTests.test_rehashed_source_prefix_variant_aux_shape_group_and_newid_collision_refuse",
+      "test_diascreen_controls.DiascreenControlNativeTests.test_rehashed_source_state_duplicate_values_effects_macro_and_nonascii_rejected",
+      "test_diascreen_controls.DiascreenControlNativeTests.test_schema_exact_keys_types_unmixed_and_digest_grammar",
+      "test_diascreen_controls.DiascreenControlNativeTests.test_shared_source_bindings_and_disabled_numeric_read_metadata_exact",
+      "test_diascreen_controls.DiascreenControlNativeTests.test_source_effects_font_colors_units_keypad_and_page24_preserved",
+      "test_diascreen_controls.DiascreenControlNativeTests.test_source_pin_and_descriptor_projection_freshness",
+      "test_diascreen_controls.DiascreenControlNativeTests.test_source_tail_drift_wrong_family_deep_schema_and_failed_request_no_output"
+    ]
+  },
+  "independent_negative_cases": {
+    "native": 380,
+    "native_categories": {
+      "descriptor": 127,
+      "page": 72,
+      "donor": 96,
+      "operation": 72,
+      "extra_intent": 13
+    },
+    "public": 85,
+    "public_categories": {
+      "shape": 59,
+      "semantic": 10,
+      "fully_rehashed_witness": 8,
+      "fully_rehashed_authority": 7,
+      "missing_capability": 1
+    }
+  },
+  "failed_regression_run": {
+    "test_revision_sha256": "0ebd101bfd369395ae37379be3b1f9b23b8727d1199d771457ca198008c96156",
+    "executed": 880,
+    "failures": 1,
+    "errors": 15,
+    "skipped": 0,
+    "root_unittest_seconds": 284.997,
+    "independent_seconds": 282.92,
+    "root_report_sha256": "e056840ce63434f4ccebc458a7d1e8c320792c3b1be48518318f0527f708327e",
+    "root_log_sha256": "03101aa5ef4715e33a9a9b7ee1063fb75c7d4e3c120979e1c3a92bf426963081",
+    "acceptance": "FAILED_NOT_RELABELED; only three obsolete exact test expectations changed; seven runtime sources unchanged"
+  },
+  "source_contract": {
+    "family": "delta_diascreen",
+    "model_id": 268502784,
+    "serialized_version": "6.0.00205.8268",
+    "target_page": "20",
+    "original_pages": 18,
+    "original_owners": 648,
+    "new_IDs": [
+      "97",
+      "98",
+      "99",
+      "100"
+    ],
+    "shared_original_addresses": true,
+    "new_address_allocation": "NOT_QUALIFIED",
+    "mutable": [
+      "fresh_nPartsID",
+      "ordinary_geometry",
+      "button_primary_state0and1_caption"
+    ],
+    "other_fields": "IMMUTABLE_BYTE_PRESERVED",
+    "doc_and_panel_sizes_separate": true,
+    "global_prefix_semantics": "UNKNOWN",
+    "default_other_modes": "UNCHANGED"
+  },
+  "genuine_sdk": {
+    "source_alias": "DIA-INSTALLED-04",
+    "source_sha256": "fc079f74ed9b34e2e698b0c65c95c4f914983594f658cadc72e1ee4d97493ed5",
+    "profile_sha256": "cdd6d4aeb194047fc0a55a6a7b170e973bd7545119263f8dfaf371c755701494",
+    "calibration_sha256": "dff99b99968c48d16c362269ca0acecc7d7ff9f32359e6c79b7958403514aa50",
+    "authority_sha256": "941820a574425a2b85fadd5c8e2ce12cea12d694eee1a5049919e5b8999aae77",
+    "candidate_sha256": "778ce590b56a82d2b68d7042ef7fe704b81be5466953ce344e3d725f99dc0d80",
+    "candidate_bytes": 476212,
+    "candidate_body_sha256": "b661bde420201d73cdfb5dd6569f3870eb10f92a120ffd8d703e4042642dcd2e",
+    "sdk_tools": 9,
+    "elapsed_seconds": 82.592,
+    "proof": {
+      "path": "reports/DIASCREEN_CONTROL_APPEND_SDK_PROOF.json",
+      "sha256": "d41b05f90b4fc85986e254145bd75023d6c43cab65d93d032879145a342de16e"
+    },
+    "approval_capture": "IMMUTABLE_BEFORE_APPLY",
+    "approval_scope": "Human-authorized neutral adapter development experiment, not production design acceptance",
+    "runtime_sources_exact_after_test_only_change": true,
+    "independent_insertion_offset": 55439,
+    "independent_insertion_bytes": 6861,
+    "neutral_unit_test_uses_manufacturer_bytes": false
+  },
+  "reviews": {
+    "technical": "/root/clean_program_contract",
+    "saved_file": "/root/control_final_review",
+    "path": "reports/DIASCREEN_CONTROL_APPEND_REVIEW.md",
+    "sha256": "458c215ae5682f04fd45e6d9ac71df9636f68fde50e69929e466e2971e1c7cc5",
+    "closed_findings": [
+      "DIA_C1_LEGACY_EXPECTATIONS"
+    ],
+    "material_open_findings": 0
+  },
+  "frozen_runtime_sources": {
+    "src/universal_hmi/service.py": "af84bb1827aba72028122079674bda11cdce9817da456499b05fbff04ad06c09",
+    "src/universal_hmi/model.py": "8b0f3cf250eb472dc08f6159d353410d27e04b68bf5ae3e22757851b87232961",
+    "src/universal_hmi/validation.py": "74d0b9bd1ee246ba5f5778f867b504951a16f650f410d9e27cf64887aaab5a9b",
+    "src/universal_hmi/preview.py": "1a91105533981f46dfbf5842f3c0af842e190c53d7a510aabfecffbb2d6fa114",
+    "src/universal_hmi/native/__init__.py": "86f7a9c7aa86146fd57bbb4d8931d609a2de043505f4c731b0cd6662b69976e4",
+    "src/universal_hmi/native/diascreen_control_append.py": "3c334b9f3baec4d50555e613f612aa51e54709e211e2bcb65eb12b84c17d2d24",
+    "scripts/calibrate_diascreen_controls.py": "c6851da03f199754a895f4f29208b28ed81871d6f3f1ef4dcc487caab331c457"
+  },
+  "historical_846": "Exact2514c68 Git blobs under reports/history/846; original actual candidate remains tied to old revision",
+  "limits": [
+    "Shared source addresses and active macros; no fresh memory or blank program",
+    "Native appearances are opaque placeholders; no sample/runtime state",
+    "New logical bindings, drivers, set-on/set-off conversions and generic control qualification open",
+    "Selected110IS and all-family acceptance open",
+    "All fractional input/quality/max-age/AND/continuous/commit-time/safety remain unqualified",
+    "Current revision relocation not run; immutable RAR remains oldb709/532"
+  ],
+  "current_revision_relocation": "NOT_RUN",
+  "native_pixels": "NOT_RUN",
+  "vendor": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "computer_use": "PROHIBITED_NOT_USED",
+  "licensed_assets_redistributed": false,
+  "selected_110is_acceptance": "UNVERIFIED",
+  "full_batch_ready": false,
+  "program_writer_complete": false,
+  "full_v1_complete": false,
+  "material_open_findings": 0
+}

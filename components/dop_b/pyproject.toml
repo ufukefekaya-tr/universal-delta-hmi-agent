@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools==84.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "universal-hmi-agents"
+version = "0.2.1"
+description = "Original file-only HMI design and native qualification framework"
+requires-python = ">=3.14"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md", "licenses/*.md", "licenses/*.json", "licenses/texts/*.txt"]
+dependencies = ["mcp==2.3.0"]
+
+[project.scripts]
+universal-hmi = "universal_hmi.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+universal_hmi = ["data/**/*", "data/assets-manifest.json"]

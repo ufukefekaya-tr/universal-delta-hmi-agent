@@ -4,107 +4,191 @@
     {
       "id": "R01",
       "scenario": "Invalid width scalar rejected",
-      "status": "PENDING_BACKEND_EVIDENCE"
+      "status": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_operations.OperationTests.test_r01_r02_invalid_rectangles"
+      ],
+      "expected_result": "Reject non-integer/nonpositive width before edit."
     },
     {
       "id": "R02",
       "scenario": "Negative or off-canvas coordinates rejected",
-      "status": "PENDING_BACKEND_EVIDENCE"
+      "status": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_operations.OperationTests.test_r01_r02_invalid_rectangles"
+      ],
+      "expected_result": "Reject negative/off-panel geometry."
     },
     {
       "id": "R03",
       "scenario": "Negative element index cannot delete last object",
-      "status": "PENDING_BACKEND_EVIDENCE"
+      "status": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_native.NativeTests.test_negative_identity_is_not_list_index"
+      ],
+      "expected_result": "Nonnegative screen-local identity; never Python negative indexing."
     },
     {
       "id": "R04",
       "scenario": "Opening another project does not silently discard pending changes",
-      "status": "PENDING_BACKEND_EVIDENCE"
+      "status": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_session.SessionTests.test_r04_pending_open_does_not_discard"
+      ],
+      "expected_result": "Refuse another open while pending state exists."
     },
     {
       "id": "R05",
       "scenario": "Start rebinding does not alter Start2",
-      "status": "PENDING_BACKEND_EVIDENCE"
+      "status": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_operations.OperationTests.test_r05_exact_rebind_not_prefix"
+      ],
+      "expected_result": "Exact field owner/address; similarly named symbols unchanged."
     },
     {
       "id": "R06",
       "scenario": "Framed length cannot be edited separately from blob",
-      "status": "PENDING_BACKEND_EVIDENCE"
+      "status": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_native.NativeTests.test_length_cannot_be_patched_as_scalar"
+      ],
+      "expected_result": "Count and payload are one owned span."
     },
     {
       "id": "R07",
       "scenario": "Truncated counted blob rejected",
-      "status": "PENDING_BACKEND_EVIDENCE"
+      "status": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_native.NativeTests.test_declared_huge_truncated_blob_rejected"
+      ],
+      "expected_result": "Truncated/oversized counted blobs STOP."
     },
     {
       "id": "R08",
       "scenario": "CRLF-less opaque tail preserved",
-      "status": "PENDING_BACKEND_EVIDENCE"
+      "status": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_native.NativeTests.test_opaque_tail_without_eol_is_exact"
+      ],
+      "expected_result": "Retain opaque suffix without terminal CRLF."
     },
     {
       "id": "R09",
       "scenario": "Repeated clone does not duplicate objects/pages",
-      "status": "PENDING_BACKEND_EVIDENCE"
+      "status": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_operations.OperationTests.test_clone_unique_fresh_identity_geometry_and_reorder"
+      ],
+      "expected_result": "Fresh IDs and replay checks stop duplicate object/page insertion."
     },
     {
       "id": "R10",
       "scenario": "TriggerVar included in address inventory",
-      "status": "PENDING_BACKEND_EVIDENCE"
+      "status": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_operations.OperationTests.test_r10_all_indexed_address_owners_and_trigger"
+      ],
+      "expected_result": "Inventory includes TriggerVar with read semantics."
     },
     {
       "id": "R11",
       "scenario": "Negative state index rejected",
-      "status": "PENDING_BACKEND_EVIDENCE"
+      "status": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_operations.OperationTests.test_r03_r11_no_negative_identity_or_state"
+      ],
+      "expected_result": "Select actual Value, not state list index."
     },
     {
       "id": "R12",
       "scenario": "Turkish text never silently coerced to Latin1",
-      "status": "PENDING_BACKEND_EVIDENCE"
+      "status": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_native.NativeTests.test_counted_unicode"
+      ],
+      "expected_result": "Count UTF-16; unsupported encoding never silently becomes Latin1."
     },
     {
       "id": "R13",
       "scenario": "Wrong-page background detected",
-      "status": "PENDING_BACKEND_EVIDENCE"
+      "status": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_preview.PreviewTests.test_wrong_page_background_and_ambiguous_resource"
+      ],
+      "expected_result": "Page offset and resource hash must match selected background."
     },
     {
       "id": "R14",
       "scenario": "Maintained subtype1.4 distinguished from momentary1.3 for qualified source",
-      "status": "PENDING_BACKEND_EVIDENCE"
+      "status": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_operations.OperationTests.test_r14_real_behavior_codes_and_value_text"
+      ],
+      "expected_result": "Source-qualified historical1.3momentary/1.4maintained; old dictionary withdrawn."
     },
     {
       "id": "R15",
       "scenario": "Floating limits not guessed from missing display width",
-      "status": "PENDING_BACKEND_EVIDENCE"
+      "status": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_operations.OperationTests.test_r15_limits_explicit_and_no_float_extremes_or_time_alias"
+      ],
+      "expected_result": "Explicit finite type-domain limits and digits; no E308/width guess."
     },
     {
       "id": "R16",
       "scenario": "Visible macro source not replaced together with parsed operands",
-      "status": "PENDING_BACKEND_EVIDENCE"
+      "status": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_macros.MacroTests.test_exact_operand_replacement_preserves_visible_source"
+      ],
+      "expected_result": "Field0 immutable; failed visible-source Application rewrite stays withdrawn."
     },
     {
       "id": "R17",
       "scenario": "Compiled evidence tied to source/candidate hash",
-      "status": "PENDING_BACKEND_EVIDENCE"
+      "status": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_macros.MacroTests.test_compiled_stale_source_candidate_and_actual_sha_rejected"
+      ],
+      "expected_result": "Actual artifact SHA plus receipt source/candidate pair; still no compile/runtime proof."
     },
     {
       "id": "R18",
       "scenario": "Rolled-back global macros not silently reenabled",
-      "status": "PENDING_BACKEND_EVIDENCE"
+      "status": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_operations.OperationTests.test_r18_clear_global_macro_not_default_reenable"
+      ],
+      "expected_result": "No implicit regeneration of rolled-back startup/heartbeat globals."
     },
     {
       "id": "R19",
       "scenario": "Raw zero not automatically healthy; unknown codes visible",
-      "status": "PENDING_BACKEND_EVIDENCE"
+      "status": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_status.StatusTests.test_r19_active_fault_zero_and_unknown_raw_never_healthy"
+      ],
+      "expected_result": "Active fault code0possible; raw unknown values never default healthy."
     },
     {
       "id": "R20",
       "scenario": "Text simplification does not imply visual style flattening",
-      "status": "PENDING_BACKEND_EVIDENCE"
+      "status": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_operations.OperationTests.test_visual_geometry_and_full_inverse"
+      ],
+      "expected_result": "Caption-only edit preserves colors/fonts/gradients/geometry."
     },
     {
       "id": "R21",
       "scenario": "Style-only edits preserve writes addresses macros XML and unknown bytes",
-      "status": "PENDING_BACKEND_EVIDENCE"
+      "status": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_operations.OperationTests.test_r21_style_only_preserves_controls_bindings_macro_xml_unknown"
+      ],
+      "expected_result": "Style-only ledger preserves all writes/addresses/macros/XML/unknown bytes."
     }
   ]
 }

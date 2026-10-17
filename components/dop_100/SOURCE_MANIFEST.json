@@ -1,0 +1,463 @@
+{
+  "schema_version": 1,
+  "purpose": "Neutral identities of read-only evidence; no source locations, customer content or unlicensed implementation code packaged.",
+  "original_code_license": "Apache-2.0",
+  "license_boundary": "The original-code license and patent terms do not license or redistribute excluded upstream/private source material.",
+  "source_policy": {
+    "upstream_license": "NOT_DECLARED_REFERENCE_ONLY_NO_REDISTRIBUTION",
+    "implementation": "Original stdlib-only modules from factual format observations.",
+    "private_assets": "NOT_DISTRIBUTED",
+    "location_lookup": "Retained outside the release by the orchestrator."
+  },
+  "sources": [
+    {
+      "source_id": "shared-feature-checklist",
+      "sha256": "cca353e3054ca1a4befc24c8a6d390c638fecf79ccac17e6a1f009d86b05dd0c",
+      "byte_length": 20290,
+      "kind": "shared_inventory",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "shared-regression-checklist",
+      "sha256": "26ce8f3f943f441db53c211cf587c00624535363770d6e9f8a0522f056e834aa",
+      "byte_length": 3093,
+      "kind": "shared_inventory",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n002-readme",
+      "sha256": "daabdffc0cb33902169d68f97d1bad7a256eb5b0b1c86a3348d4f1ebe7c32e65",
+      "byte_length": 8234,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n002-manifest",
+      "sha256": "7020c02cee319e4c97cc60f25b16f4fd680258424e67d260f45df2f1ea0f2be3",
+      "byte_length": 2161,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n003-readme",
+      "sha256": "6b3d0baf5118d12cac5c16e49f8674fd0dc4da69b6ed21c47decfcc17af34af4",
+      "byte_length": 4990,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n003-manifest",
+      "sha256": "0317185940426d0a20c71952ed9c1ea33b6cf000e41d90f44df9998954a42cb0",
+      "byte_length": 3661,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n004-readme",
+      "sha256": "68d59d491853bb137ca8878e49aa8cb3a7ace4fe52d3dd443cf38c6f11a27d05",
+      "byte_length": 2516,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n004-manifest",
+      "sha256": "923ab12b80dd31049909ebcff994f2ee67a6249cc0956e22e8d2e56cc0730f87",
+      "byte_length": 6957,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n005-readme",
+      "sha256": "75f4d97ef35c61f2bfbaf822a57e1e335a56db6e9b113bf96089bd5861170d14",
+      "byte_length": 4842,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n005-manifest",
+      "sha256": "ef5712c3a021c5ccfc1f02db0df6bd5b9bc8d7a8a474ea4e63051ab59109e2a9",
+      "byte_length": 2187,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n006-buttons-readme",
+      "sha256": "5cede21c6add5bbbda5bed309ae733a6070e2dbc7524e23740938e18d90b6ecf",
+      "byte_length": 6305,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n006-buttons-manifest",
+      "sha256": "332370044a37a6295bbf23f87ae6fa3a4662e69d9bb0454ab8489db8c60d3d97",
+      "byte_length": 2851,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n006-time-interface-readme",
+      "sha256": "eecf633f462b22850ef2b15a64c48dd6be58697d8001811549dac5cfb0ebcd0e",
+      "byte_length": 2410,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n006-time-interface-manifest",
+      "sha256": "ed4e7539c087c2bcb358a76c3b01ece7bbef4c2adeaadcbbb08e9b25d287194f",
+      "byte_length": 3943,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n007-readme",
+      "sha256": "43c9548f4de5ab9681177eab2a6e265b5981932918f7b4ee9906020cef3b6bfd",
+      "byte_length": 2819,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n007-manifest",
+      "sha256": "b1f5a1ed048e1ab9abf211ef5b52ddc5655e65a01d6cf993faf063cbb12fdac9",
+      "byte_length": 4558,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n008-readme",
+      "sha256": "e9b982d4afd87ffb026a7f3d91df78fe918d617771cfa6bd083881993afe3ce6",
+      "byte_length": 3574,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n008-manifest",
+      "sha256": "e9a6af9bebe1fc6e0394539eb0a3e2b9f05bba21d2524e4ac84d147f366bb75c",
+      "byte_length": 9938,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n009-readme",
+      "sha256": "d9fbde31852f27b32595db622865aeb75548d6e9cd10c737936f682938252fee",
+      "byte_length": 2625,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n009-manifest",
+      "sha256": "2d80769cfa391977c78390a15981bff1b3d29682a7702f0dde4295534887b9a7",
+      "byte_length": 3625,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n012-readme",
+      "sha256": "d8ecf0c79af1da00339aaa36175b664257df9a7079d0b2531f4abe74695ef096",
+      "byte_length": 2319,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n012-manifest",
+      "sha256": "4f1d2ae4c7b7aa558389bd9b6fd06dc757667971ebe4486d65b8c9617939731d",
+      "byte_length": 5558,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n013-readme",
+      "sha256": "a752c628f2648981253c28838e4c1bcc2740d2c286905127b4d1edc181303f61",
+      "byte_length": 2973,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n013-manifest",
+      "sha256": "31d4c06759bf2c640f9a18321a1c3b271681e5b8b37b73ca12a0ef6665fdc29c",
+      "byte_length": 6844,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n014-readme",
+      "sha256": "9e4bc4aba566522ad41b9badf4e6f8f65e7e40a358cf4ad137cd9be999e3456a",
+      "byte_length": 4625,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n014-manifest",
+      "sha256": "3239856d5ed3bf938dcb7c7cb85f625b59e723b36f0f72122d4cd648378259e7",
+      "byte_length": 10121,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n015-readme",
+      "sha256": "78e061b24d39f23fb8fff687cf56180aa938618ec610b516cd53964e8e173d40",
+      "byte_length": 1775,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n015-manifest",
+      "sha256": "632fa8e882ef1719292c3374ff251ee9b214a23f63b44c84edea3939b6fdb2b7",
+      "byte_length": 11402,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n016-readme",
+      "sha256": "f915c71ae58f2346c4bbbbcfda8133264cb3195e9d3ce9eb2a6fb800a7f14fce",
+      "byte_length": 2166,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n016-manifest",
+      "sha256": "13bba041d870a18bba0dd063bc80ad04cec48bd1c908a5218f729587a3b051e5",
+      "byte_length": 19471,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n010-readme",
+      "sha256": "df99e2d18304f3878cab4c99473570a8b6a41b76fd4110041bf8d9920f169bf2",
+      "byte_length": 1203,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n010-manifest",
+      "sha256": "7eba884f567ca7e901c4dd3f8a40bb4b7275dbfe4a913cf8dbb16b8f9305d0fd",
+      "byte_length": 5250,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n011-readme",
+      "sha256": "dce9b5e37cbc928e9ac9740e02b2e429ce67fb935a78bb8394c6ab2c8eb690e8",
+      "byte_length": 2386,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "history-n011-manifest",
+      "sha256": "1686e0a5873a937248497dba215d5b5e9817182b7805417396d14eac3792fb7c",
+      "byte_length": 6393,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "design-r010-readme",
+      "sha256": "12c9514449025df57b3c60c7ea33942ac76c6b8f5f62b5e761f8df80c14c6551",
+      "byte_length": 5859,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "design-r010-manifest",
+      "sha256": "ff32c7cf06fd65055923d77cdef97a249dd72e561c4dab699b4374375acb2c1d",
+      "byte_length": 12059,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "design-r011-readme",
+      "sha256": "e0efeb995fa9b5791f028a217e4e3f9598c2effabdd226ac1386b9d495c126d4",
+      "byte_length": 4962,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "design-r011-manifest",
+      "sha256": "b9e5b066ba7ab01955d294e2efc3b9e792274a0d134ef21fc7396ccd5337790e",
+      "byte_length": 13462,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "design-r012-readme",
+      "sha256": "e75f7ad44306bbe844a2ae9574c9db626c0e3ec261fdca7ee7bf37304b6d9dcb",
+      "byte_length": 2566,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "design-r012-manifest",
+      "sha256": "0874c55e78b1affb1af5d4493abe5a860b76e100c377b0c64d018e10dfcdc93a",
+      "byte_length": 14204,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "design-r013-readme",
+      "sha256": "7622901af324c71db8c47249f4eedf6477dafc4eae14e8b21b56927ff281edf0",
+      "byte_length": 2054,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "design-r013-manifest",
+      "sha256": "cd7852bd1664b0ea529d5dcfc9701270809c3d9f4c8aaed58a994f48c812c319",
+      "byte_length": 17194,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "symbols-source-candidate",
+      "sha256": "971774da5229d500e63125ded8a24ba6dd4ab191545a3889f0497d79eb4f94c1",
+      "byte_length": 48859,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "symbols-published-commands",
+      "sha256": "37c72c37f070449ec942d6be2d9562137cfb9692ea9dbf73f68967085b781a25",
+      "byte_length": 57932,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "symbols-status-extension",
+      "sha256": "cfd01b875762f2d64be8ed10abc544c3515e1aa059cfab1867f8c2d6f8a93ac6",
+      "byte_length": 58261,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "native-n009-reviewed",
+      "sha256": "ece2be669318e56b6c060bc9b8a6e633d3942059d8356ae5c8e7b58575257df0",
+      "byte_length": 197469,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "native-n010-failed-archive",
+      "sha256": "bb7df35c8bbcc9668d78a6bbce5b062cbcbb997c0e8cb3917ab603474ac7946f",
+      "byte_length": 197481,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "native-n010-current-location",
+      "sha256": "89153b9adde603d354ff5def32ec1bed40176db8d9b7d787cce954ed057dbb2b",
+      "byte_length": 198718,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "native-n011-frozen",
+      "sha256": "e0ea1ccd7c0bca5f85dedda94e37bd39225cfaa60a9ca8a8fa0904ee518fad48",
+      "byte_length": 197484,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "native-n011-resaved",
+      "sha256": "4d786ec828e989f7943454879161c56f68fb60ff65e8ec62b439ea944d282799",
+      "byte_length": 198702,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "n010-compile-failure-receipt",
+      "sha256": "3cffb2df6b112b77ae4c9b8fee3ada0de938f855232271dc141790788d0f0484",
+      "byte_length": 861,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "n011-stop-history",
+      "sha256": "23f7ed37a6989b9533dcb3c4d2ba4d40051c4a4813f5d4392f74a02f01f22ab3",
+      "byte_length": 5394,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "n011-compiled-scope",
+      "sha256": "b777b4b28218fc83c11220f1a9fda399edb486c3cb94c4f0f34144731b7eec29",
+      "byte_length": 498,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "native-n012-reviewed",
+      "sha256": "51a14f2b861e0866c5e95698c68651e76e47a416116403951b33cd707879c7f1",
+      "byte_length": 196922,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "native-n012-resaved",
+      "sha256": "7610ea6ee4b91939a9da832e790e57fb3007fd56a288a22c752f16cea391882f",
+      "byte_length": 197817,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "native-n013-reviewed",
+      "sha256": "b66928c40c94ce5fb8e81bb016352ce79248f8355d6aca91cd9fac70c1a2a48c",
+      "byte_length": 197618,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "native-n013-resaved",
+      "sha256": "7cc8c84962a04a339c863e7fbe8900e993e8132ce5c0d4f246a3b9947d1cd50b",
+      "byte_length": 198514,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "planning-conversation-109-turns",
+      "sha256": "6f088d887b09a8171bc99de8fe27d897b1f85d9880c71beb9d626d09abc83f35",
+      "byte_length": 636417,
+      "kind": "private_root_collected_history",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "native-n014-current",
+      "sha256": "50d0dc93b8fa2f506b8c25b551673d416cb05e93f1c295a7b5da73837f76926e",
+      "byte_length": 212523,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "native-n015-current",
+      "sha256": "f9461ea4d4576c13a457994a4e69acf536a86b593652150064c58a59bcdc9a8e",
+      "byte_length": 200798,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "native-n016-current",
+      "sha256": "b878ecfa564a8780eea8a3705adff72d9ae06d729f277834ee6331bbc8fda342",
+      "byte_length": 205660,
+      "kind": "private_reference",
+      "distribution": "NOT_INCLUDED"
+    }
+  ],
+  "source_drift": [
+    {
+      "id": "drift-n010",
+      "original": "native-n010-failed-archive",
+      "other_observed_copy": "native-n010-current-location",
+      "disposition": "Distinct identities; the failed archive is the Error109 reference."
+    },
+    {
+      "id": "drift-n012",
+      "reviewed": "native-n012-reviewed",
+      "other_observed_copy": "native-n012-resaved",
+      "observed_check": "Historical readonly verifier rejects complete section/Raw drift on other copy; archive passes9negative cases."
+    },
+    {
+      "id": "drift-n013",
+      "reviewed": "native-n013-reviewed",
+      "other_observed_copy": "native-n013-resaved",
+      "observed_check": "Historical readonly verifier rejects whole-payload reverse mismatch on other copy; archive passes11negative cases."
+    }
+  ],
+  "reproduction_boundary": "Public neutral tests need no private files. Optional private source qualification is separately SHA-bound and is not vendor/runtime evidence."
+}
+

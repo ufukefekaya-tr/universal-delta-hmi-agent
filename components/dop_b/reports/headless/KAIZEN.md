@@ -1,0 +1,15 @@
+# Headless release lessons
+
+| Observation / trigger | Root cause / counterargument | Minimum correction | Retest / rollback / boundary |
+|---|---|---|---|
+| An output directory could imitate a completed job | A self-hashed manifest is not authority | Pin exact manifest in separate trusted state; verify exact file set, reviews and native digest | Forged directory/rehashed native tests reject it; preserve source and failed stage; OS-account compromise is outside this trust boundary |
+| Cancellation could race publication | Separate check and rename left a gap | SQLite publication fence and irreversible exact-byte intent | Concurrent cancel/publish and child-death recovery; preserve pinned bytes, never regenerate under old intent |
+| Review-work preview could be changed after review | Mutable working files were copied into delivery | Emit reviewed in-memory preview bytes, independently check actual native bytes | Mutation injection cannot enter published preview; source remains unchanged |
+| Broken stage could become permanently pinned | Verification occurred too late | Validate complete stage before pin, then revalidate inside publication | Corrupt-stage test fails without publication intent; fix and submit a new job |
+| Waiting jobs could starve or disappear after worker death | Review cache and empty-ready-list were mistaken for final state | Poll actual missing review; distinguish unfinished jobs from claimable jobs | Two-job real stdio test and actual early-exit child test; resume durable store without a new submission |
+| Archive could change between hash and extraction | Path reread was assumed stable | One bounded byte snapshot for hash and ZIP reader | Replace archive path during extraction test retains verified bytes; new destination only |
+| Reconnecting a Windows MCP client could leave durable jobs without a consumer | SDK process-tree shutdown can also stop the dispatcher | A configured server starts a fixed dispatcher when unfinished jobs exist; leases still serialize execution | Actual server restart without resubmission and dead-child startup tests; no job-supplied executable or command |
+| Linux rejected an absent differently cased duplicate with an unstructured exception | Windows filesystem behavior hid validation order | Check casefold collisions before existence; translate unavailable paths into structured errors | Same missing-source/case-collision tests run against installed Windows and Linux wheels |
+| Conceptual review missed normal states and labels | Empty samples and command/feedback ambiguity | Explicit 0/1/invalid samples, role labels and darker state fills | Sequential independent visual review; applies only to neutral pilot, not native pixels or production-machine approval |
+
+Whole-batch runtime and packaging tests must be repeated after runtime changes. Source-only, installed-wheel, vendor and physical evidence are separate. A clean package must carry its reports and reusable templates without customer or host paths.

@@ -1,0 +1,33 @@
+{
+  "scope": "ORIGINAL_NEUTRAL_NATIVE_TESTS_AND_GENUINE_MEMORY_ONLY",
+  "native_module_sha256": "b640f33edd98f864daa0eadeccfd93d00ffcc73f0acfea6e8917ea39068fff27",
+  "native_tests_sha256": "969d617475b4d2a83e443863a708b81d0b70301ce6f21ea6b66236ab6644f2e4",
+  "focused_tests": 14,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 2.023,
+  "reported_by": "independent native author",
+  "genuine_memory": {
+    "source_sha256": "c3ba093b3c17fb374c8d4669d04ab27aa66c80285d087528561784a13a6dd4ba",
+    "source_unchanged": true,
+    "deleted_inert_literals": 166,
+    "pages": 3,
+    "survivors": 122,
+    "body_bytes": 7569375,
+    "body_sha256": "a9e354706645188ef3bf1c79a481172b83d7aa18fd3810d5ee455e7a929a2b2b",
+    "encoded_memory_sha256": "43c1d728b3f44ff470f493b73327115fa1097c96a77366e79cf213a337d81422",
+    "encoded_memory_bytes": 112535,
+    "independent_raw_subtraction_restoration": "PASS",
+    "external_file_writes": 0,
+    "saved_candidate": "NOT_CREATED",
+    "public_sdk": "NOT_RUN_ON_PRIVATE_SOURCE"
+  },
+  "public_sdk_neutral": "PASS_AT_647_TEST_REVISION",
+  "vendor": "NOT_RUN",
+  "native_pixels": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "full_batch_ready": false,
+  "full_v1_complete": false
+}

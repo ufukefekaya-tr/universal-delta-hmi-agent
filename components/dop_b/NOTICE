@@ -1,0 +1,7 @@
+Universal HMI Agents (DOP-B backend)
+Copyright 2026 Universal Delta HMI Agent contributors
+
+Original code and documentation are licensed under Apache-2.0.
+Third-party dependencies and runtime libraries retain their own licenses; see
+THIRD_PARTY_NOTICES.md and licenses/. Delta product names describe compatibility
+targets only. No vendor endorsement or vendor software redistribution is implied.

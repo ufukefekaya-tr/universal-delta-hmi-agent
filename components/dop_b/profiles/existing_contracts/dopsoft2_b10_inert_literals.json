@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "authority_kind": "manufacturer_static_inert_literal_contract",
+  "family": "delta_dopsoft2",
+  "serialized_version": "4.00.07.04",
+  "model_id": 2953863504,
+  "mode": "source_inert_literal_deletion",
+  "owner_kind": {"Type": "10", "SubType": "6"},
+  "identity_policy": "scalar_nPartsID_survivors_unchanged",
+  "graph_policy": "closed_empty_macro_group_aux_recipe_history_picture_graph",
+  "background_policy": "complete_unique_same_canvas_BI_RGB32_frames_preserved",
+  "mutation_policy": "subtract_exact_pinned_owner_extents_only",
+  "acceptance_scope": "OFFLINE_STORED_INERT_LITERAL_DELETION_ONLY",
+  "evidence": {
+    "editor_sha256": "9ed92401cd08e2be8bfc2df3a40dee4e99e9f605da7a4fa9605f9e2754821eeb",
+    "identity_reader": "b6716a..b67178 scalar owner+4ec",
+    "identity_writer": "b66541..b66565 scalar nPartsID",
+    "group_compiler": "7d43ee..7d43f8 GroupID0 skipped",
+    "metadata_scope": "811f51..811f68 and 69c4be..69c5b7 global MeMeCode, not owner checksum",
+    "configuration_scope": "250c7 fixed8char slot,884196..8841b7;885ddb..885e56;4dbfb9..4dbfed",
+    "submacro_configuration": "816f10..816f39 %s writer;69ff1d..69ff9c reader;7a9df6/7a9e30 separate password string slot",
+    "submacro_shape": "816da2 writer512 slots001..512;d42da0/69ffa6..6a0020 SubMacro%03dLen; observed password scalar8bytes only",
+    "executed_vendor_code": false,
+    "vendor": "NOT_RUN",
+    "native_pixels": "NOT_RUN"
+  }
+}

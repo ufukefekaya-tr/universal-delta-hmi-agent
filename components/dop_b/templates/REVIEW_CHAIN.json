@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "project_id": "<neutral-project-id>",
+  "source_sha256": null,
+  "design_sha256": null,
+  "profile_sha256": null,
+  "preview_version": null,
+  "preview_sha256": null,
+  "technical_review": {"reviewer": null, "read_only": true, "status": "UNVERIFIED", "report_sha256": null},
+  "aesthetic_reviews": [
+    {"sequence": 1, "role": "AESTHETIC_FIRST", "reviewer": null, "status": "UNVERIFIED", "report_sha256": null},
+    {"sequence": 2, "role": "AESTHETIC_SECOND", "reviewer": null, "first_report_sha256": null, "critiques_first_review_and_author": true, "status": "UNVERIFIED", "report_sha256": null}
+  ],
+  "aesthetic_repair": {"maximum_rounds": 1, "completed_rounds": 0, "retest_sha256": null},
+  "functional_acceptance_open_until_resolved": true,
+  "findings": [
+    {"id": "<finding-id>", "trigger": null, "evidence": null, "impact": null, "minimum_correction": null, "retest": null, "status": "OPEN"}
+  ],
+  "result": "UNVERIFIED"
+}

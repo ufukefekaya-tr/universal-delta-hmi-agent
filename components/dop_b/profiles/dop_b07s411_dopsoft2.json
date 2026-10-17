@@ -1,0 +1,39 @@
+{
+  "id": "dop_b07s411_dopsoft2",
+  "family": "delta_dopsoft2",
+  "model": "DOP-B07S411",
+  "model_id": "2953265424",
+  "editor_version": "UNVERIFIED",
+  "target_editor": "DOPSoft 2.00.07",
+  "resolution": [
+    800,
+    480
+  ],
+  "driver": "UNVERIFIED",
+  "fixture_kind": "vendor",
+  "numeric_types": [],
+  "capabilities": {
+    "text": "UNVERIFIED",
+    "button": "UNVERIFIED",
+    "numeric_input": "UNVERIFIED",
+    "numeric_display": "UNVERIFIED",
+    "indicator": "UNVERIFIED",
+    "goto": "UNVERIFIED",
+    "alarm_strip": "UNVERIFIED",
+    "alarm_table": "UNVERIFIED",
+    "alarm_history": "UNVERIFIED",
+    "alarms": "UNVERIFIED",
+    "macros": "UNVERIFIED",
+    "macro_trigger:startup": "UNVERIFIED",
+    "macro_trigger:clock": "UNVERIFIED",
+    "macro_trigger:button": "UNVERIFIED",
+    "macro_op:assign": "UNVERIFIED",
+    "macro_op:bit_on": "UNVERIFIED",
+    "macro_op:bit_off": "UNVERIFIED",
+    "macro_op:if": "UNVERIFIED"
+  },
+  "native_schema": {
+    "qualified": false
+  },
+  "limitation": "Root-selected qualification target. Await fresh exact-model vendor fixtures, calibrated fields and human compile/emulator/panel evidence."
+}

@@ -1,0 +1,205 @@
+{
+  "scope": "SOURCE_PINNED_EXISTING_WORD_INTEGER_NUMERIC_STORED_CONFIGURATION_ONLY",
+  "status": "OFFLINE_PASS",
+  "source_revision_sha256": "945ea43a7e44db052e8df39c815191ae04e1988b4052e21da194477dc7d98665",
+  "source_hash_count": 85,
+  "root_tests": {
+    "discovered": 782,
+    "executed": 782,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 228.124
+  },
+  "new_tests": {
+    "native_numeric": 14,
+    "composition": 4,
+    "common_IR_preview": 4,
+    "public_service": 8,
+    "nine_tool_sdk": 1,
+    "total": 31,
+    "test_ids": [
+      "test_design.ExistingIntegerNumericDesignTests.test_capability_and_immutable_source_metadata_are_explicit",
+      "test_design.ExistingIntegerNumericDesignTests.test_display_contract_and_input_raw_domain_are_distinct",
+      "test_design.ExistingIntegerNumericDesignTests.test_preview_never_claims_numeric_or_native_glyph_rendering",
+      "test_design.ExistingIntegerNumericDesignTests.test_refuses_fractional_input_narrowed_domain_and_malformed_settings",
+      "test_existing_edit.ExistingEditTests.test_numeric_duplicate_delete_conflict_and_scalar_overlap_refused",
+      "test_existing_edit.ExistingEditTests.test_numeric_opcode_requires_optional_descriptor_and_old_noop_unchanged",
+      "test_existing_edit.ExistingEditTests.test_optional_numeric_descriptor_freshness_and_saved_numeric_tamper",
+      "test_existing_edit.ExistingEditTests.test_optional_numeric_same_owner_presentation_four_category_composition",
+      "test_existing_integer_numeric.ExistingIntegerNumericTests.test_descriptor_exactness_freshness_source_and_cached_projection",
+      "test_existing_integer_numeric.ExistingIntegerNumericTests.test_exact_noop_equivalent_original_spellings_and_noncanonical_gzip_refused",
+      "test_existing_integer_numeric.ExistingIntegerNumericTests.test_f0_inputs_canonical_boundaries_signed_unsigned_and_short_domains",
+      "test_existing_integer_numeric.ExistingIntegerNumericTests.test_independent_raw_spans_restore_whole_body_and_expected_has_no_mutation_dependency",
+      "test_existing_integer_numeric.ExistingIntegerNumericTests.test_input_limits_strict_integral_order_width_and_digits",
+      "test_existing_integer_numeric.ExistingIntegerNumericTests.test_non_numeric_original_and_wrong_original_pin_refused",
+      "test_existing_integer_numeric.ExistingIntegerNumericTests.test_only_numeric_scalars_change_all_other_owner_state_resource_bytes_exact",
+      "test_existing_integer_numeric.ExistingIntegerNumericTests.test_operation_shapes_duplicate_missing_pins_and_typed_bad_input",
+      "test_existing_integer_numeric.ExistingIntegerNumericTests.test_requested_representation_limits_and_all_fractional_inputs_fail_closed",
+      "test_existing_integer_numeric.ExistingIntegerNumericTests.test_saved_candidate_storage_scaling_binding_caption_limits_and_resource_tamper",
+      "test_existing_integer_numeric.ExistingIntegerNumericTests.test_saved_reopen_replay_source_unchanged_and_order_invariant",
+      "test_existing_integer_numeric.ExistingIntegerNumericTests.test_signed_and_unsigned_full_domain_display_digits_exact",
+      "test_existing_integer_numeric.ExistingIntegerNumericTests.test_source_floating_width_format_fractional_input_and_scaling_rehashed_refused",
+      "test_existing_integer_numeric.ExistingIntegerNumericTests.test_unsafe_conditional_dynamic_keypad_macro_fields_and_ambiguous_scalars_refused",
+      "test_service.ExistingIntegerNumericServiceTests.test_capability_claim_without_numeric_descriptor_cannot_configure_numeric",
+      "test_service.ExistingIntegerNumericServiceTests.test_existing_storage_and_fractional_input_cannot_be_reinterpreted",
+      "test_service.ExistingIntegerNumericServiceTests.test_explicit_ops_and_changed_numeric_settings_cannot_reuse_approval",
+      "test_service.ExistingIntegerNumericServiceTests.test_independent_expected_body_rejects_emitter_numeric_and_binding_tampering",
+      "test_service.ExistingIntegerNumericServiceTests.test_mixed_numeric_presentation_background_full_body_and_fresh_replay",
+      "test_service.ExistingIntegerNumericServiceTests.test_original_and_explicit_numeric_noop_preserve_complete_file_and_limit_spelling",
+      "test_service.ExistingIntegerNumericServiceTests.test_registered_facts_cannot_be_forged_even_with_new_descriptor_hash",
+      "test_service.ExistingIntegerNumericServiceTests.test_registry_freshness_covers_repeat_validation_preview_apply_and_after_link_save",
+      "test_stdio.StdioTests.test_existing_word_numeric_and_same_owner_presentation_over_all_nine_tools"
+    ]
+  },
+  "independent_review": {
+    "role": "independent read-only technical reviewer",
+    "executed": 782,
+    "unique_test_ids": 782,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 227.56,
+    "source_hash_count": 85,
+    "source_hashes_equal_root": true,
+    "source_hashes_unchanged": true,
+    "test_id_order_equal_root": true,
+    "test_revision_sha256": "945ea43a7e44db052e8df39c815191ae04e1988b4052e21da194477dc7d98665",
+    "test_ids_sha256": "83c2e66b2b3b6593e0bb1aab5bc02fc47dc4155455a9799e1424ac25efd2980d",
+    "material_open_findings": 0,
+    "shared_file_edits": 0
+  },
+  "independent_extra": {
+    "independent_focus_tests": 46,
+    "malformed_native_operations": 76,
+    "fully_rehashed_public_authority_forgeries": 54,
+    "independent_body_oracles": 24,
+    "wholebody_restorations": 24,
+    "operation_order_permutations": 24,
+    "signed_F1_F4_exact_arithmetic_cases": 131072,
+    "public_pre_review": {
+      "intent_cases": 72,
+      "accepted": 15,
+      "refused": 57,
+      "deliberate_emitter_corruptions_refused": 3
+    },
+    "native_or_vendor_execution": "NOT_RUN"
+  },
+  "source_contract": {
+    "model_id": 2953863504,
+    "serialized_version": "4.00.07.04",
+    "original_source": "Immutable closed source graph; no new donor/storage conversion",
+    "display": {
+      "INT": [
+        0,
+        1,
+        4
+      ],
+      "UINT": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "integer_digits": "5-F_full_WORD_domain"
+    },
+    "input": "Original and requested F0 only; strictly increasing integral raw limits; enough integer digits",
+    "storage": "MemLen1/MemFmt1 INT or2 UINT unchanged",
+    "scaling": "Original identity Gain1/Offset0/Roundoff0 spellings retained",
+    "mutation_fields": [
+      "IntNum",
+      "DotNum",
+      "MinValue",
+      "MaxValue"
+    ]
+  },
+  "public_integration": {
+    "optional_descriptor": "existing_integer_numeric",
+    "mode": "existing_word_integer_numeric_v1",
+    "IR": "native_integer_numeric",
+    "opcode": "configure_existing_integer_numeric",
+    "helper": "scripts/qualify_existing_edit.py --integer-numeric; four source-bound JSON files, no native output",
+    "profile": "existing_edit_numeric_v1",
+    "registered_book": "profiles/existing_contracts/dopsoft2_b10_integer_numeric.json",
+    "old_modes": "existing_edit/native_preserved/clone conversion gates unchanged",
+    "source_coordinate_composition": "Disjoint original scalar/deletion/background intervals",
+    "approval": "Exact design/profile/source/operations hashes",
+    "save": "New-only reopen independent BODY and postlink source/registry/asset freshness"
+  },
+  "sdk": {
+    "proof": "EXISTING_INTEGER_NUMERIC_SDK_PROOF.json",
+    "candidate_sha256": "e1161e8c418d838ef7e5e56bfd2bd6f69399105ed827390eec05fbfe6a518a7d",
+    "independent_original_intervals": 12,
+    "fullbody_restoration_and_replay": true
+  },
+  "genuine": {
+    "proof": "EXISTING_INTEGER_NUMERIC_GENUINE_PROBE.json",
+    "candidate_sha256": "ea414b64a8fcfc18963a37f08245e3959741e7da83f56fba8500d241fcbaf7fb",
+    "independent_reproduced": true,
+    "mutated_records": 2,
+    "native_output": "NOT_CREATED",
+    "private_project_writes": 0,
+    "signed_F4_property_holdout": "NOT_FOUND"
+  },
+  "preservation": {
+    "wholefile_noop": true,
+    "equivalent_original_limit_spellings": true,
+    "original_states_units_addresses_storage_resources": true,
+    "independent_IR_original_record_body": true,
+    "wholebody_restoration": true,
+    "source_files_unchanged": true
+  },
+  "preview": {
+    "native_controls": "UNKNOWN_NOT_RENDERED",
+    "native_value_or_font_render": "NOT_RUN",
+    "requested_background": "Pinned opaque PNG only"
+  },
+  "historical_tests": "history/751/python_tests.json",
+  "closed_findings": [
+    {
+      "id": "N1_PROFILE_EVIDENCE",
+      "trigger": "New test-local profile SHA was listed without its serialized artifact or explicit SDK proof pin",
+      "evidence": "Independent final delivery audit asked for retained profile/raw SHA provenance",
+      "effect": "Profile evidence could not be directly followed from the delivery ledger",
+      "fix": "Retained exact 2610-byte neutral qualification profile under reports/fixtures; SDK proof and six new ledger references bind SHA056ba37cec6b66f062631f5402974951c6513a837186d683fd814ab98829ce42",
+      "retest": "Independent exact profile reconstruction, source/witness/four authority pins and 91 profile-hash references PASS; sources unchanged",
+      "status": "CLOSED"
+    }
+  ],
+  "unsupported_in_this_milestone": [
+    "All fractional input lowering",
+    "New storage width/format or driver/address changes",
+    "Quality producer and entry/continuous/commit-time interlocks",
+    "Complete macro/alarm/new program integration",
+    "DOP-100 real feature qualification",
+    "Vendor/native pixels/runtime/panel acceptance"
+  ],
+  "vendor_compile": "NOT_RUN",
+  "native_pixels": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "current_revision_relocation": "NOT_RUN",
+  "full_batch_ready": false,
+  "program_writer_complete": false,
+  "full_v1_complete": false,
+  "computer_use": false,
+  "delivery_audit": {
+    "status": "PASS",
+    "mode": "INDEPENDENT_READ_ONLY",
+    "manifest_files": 457,
+    "manifest_revision_before_final_audit_transcription": "ed09233ba3053396dd8cc07d0e2dd129c23c8e317ded151435871bf135dca51d",
+    "source_hashes": 85,
+    "unique_test_ids": 782,
+    "ledger_entries": 99,
+    "scenario_refs": 590,
+    "path_artifacts": 50,
+    "profile_hash_references": 91,
+    "unique_profile_pins": 15,
+    "history_751_git_exact_files": 7,
+    "sdk_original_body_and_candidate_independently_reconstructed": true,
+    "suite_rerun": false,
+    "file_writes": 0,
+    "material_open_findings": 0
+  }
+}

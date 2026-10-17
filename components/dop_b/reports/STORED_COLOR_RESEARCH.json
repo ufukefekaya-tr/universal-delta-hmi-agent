@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "scope": "READ_ONLY_PRIMARY_STATIC_COLOR_FIELDS_NOT_RENDER_ACCEPTANCE",
+  "independent_executor": "control_final_review",
+  "primary_files": {
+    "DOPSoft.exe": "9ed92401cd08e2be8bfc2df3a40dee4e99e9f605da7a4fa9605f9e2754821eeb",
+    "B10/HMI.dll": "e6fa5b74d8d73415b1fd79b16aa19fc163f95113471eb8e9e1022f8615b19ab3",
+    "B10/KernelWin.dll": "8e58747aba447c823deb6a424b62c668fcb2769e82f5b2981079f14af6ab66bf"
+  },
+  "native_encoding": {
+    "encoding": "COLORREF_0x00BBGGRR",
+    "example_rgb": "#123456",
+    "example_raw_hex": "0x563412",
+    "writer": "0xb6caf6..0xb6cb07 state+0x48 to BgColor=%ld;0xb6cb25..0xb6cb36 state+8 to FontColor=%d",
+    "native_brush": "0xb758da..0xb758e4 passes same state+0x48 unchanged to Win32 CreateSolidBrush"
+  },
+  "compiled_color": {
+    "converter": "0x7b1c29 selects0x7b194a for65536colors",
+    "storage": "RGB565",
+    "reserved_remap": "0x0020 to0x0040",
+    "rule": "Native24bit must not be pre-quantized; compiled fields are not DPS metadata"
+  },
+  "visible_fill_counterexample": {
+    "kind": "Type2/SubType1 indicator",
+    "callback": "0x10021dd0",
+    "source": "FgColor state+4 loaded0x10021df6..0x10021dfc",
+    "rectangle": "0x10022122..0x1002213a",
+    "conclusion": "Stored BgColor encoding does not prove the requested indicator face color; per-kind/style roles needed"
+  },
+  "font_ratio": {
+    "original_numeric": [
+      48,
+      0
+    ],
+    "auxiliary_resave_numeric": [
+      100,
+      100
+    ],
+    "equivalent_metrics": "NOT_PROVEN",
+    "policy": "Do not normalize ratios or equate FontSize0 with final pixel height"
+  },
+  "capability_opened": false,
+  "gui": "NOT_USED",
+  "executed_vendor_code": false,
+  "native_pixels": "NOT_RUN",
+  "vendor": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "full_v1_complete": false
+}

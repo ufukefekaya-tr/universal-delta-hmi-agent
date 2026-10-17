@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "method": "READ_ONLY_STATIC_VENDOR_BINARY_ANALYSIS_NO_EXECUTION",
+  "editor_sha256": "9ed92401cd08e2be8bfc2df3a40dee4e99e9f605da7a4fa9605f9e2754821eeb",
+  "renderer_sha256": "e6fa5b74d8d73415b1fd79b16aa19fc163f95113471eb8e9e1022f8615b19ab3",
+  "crt_sha256": "2d5670881a6d13a100e37da297f6eeb876f68b63073a28eb5d650625c60f9bf7",
+  "input_limit_domain": "display/keypad",
+  "lowering_chain": [
+    "atof",
+    "binary64 QWORD spill",
+    "pow(10,DotNum)",
+    "x87 fmul",
+    "CRT _ftol toward-zero",
+    "unsigned integer formatting"
+  ],
+  "input_min_va": "0x61823f..0x6182b6",
+  "input_max_va": "0x61841e..0x618495",
+  "startup_pc53": "_controlfp(0x10000,0x30000) at0xc2b062 from0xc2a991",
+  "ftol_va": "0x78002551",
+  "pow_va": "0x78028f20; helper0x7802c2b5",
+  "renderer_uint_va": "0x100c9453..0x100c949a",
+  "decimal_insert_va": "0x10131acf; insertion0x10131b88",
+  "display_dotnum_loader_va": "0x100b9f46",
+  "digit_capacity_va": "0x7ad8fe; UINT branch0x7adfb3",
+  "compiled_limits_loader_va": "0x100b5b4d..0x100b5bb3; parser0x100b380e",
+  "genuine_type6_source_sha256": "b1d1df022757cda191ffa9145124405b263e05dfa3e1cc3c311232ab22e71862",
+  "genuine_type6_owner_sha256": "158679a2ae7f5a10127b24dd5b73eab2a4a08fcfb8208bdf9f20cb89a5a7b1d7",
+  "genuine_type6_fields": {
+    "Type": 6,
+    "MemLen": 1,
+    "MemFmt": 2,
+    "IntNum": 1,
+    "DotNum": 2,
+    "MinValue": "0",
+    "MaxValue": "9.99",
+    "Gain": 1,
+    "Offset": 0
+  },
+  "genuine_type5_fractional_holdout": "NOT_FOUND",
+  "diagnostic_assumption": "Exact10**F factor; binary64 atof then nearest53 or extended product followed by truncation. Rational arithmetic; NOT vendor runtime.",
+  "diagnostic_rows": [
+    {
+      "raw": 29,
+      "fractional_digits": 2,
+      "native_literal": "0.29",
+      "nearest53_then_trunc": 28,
+      "extended_then_trunc": 28
+    },
+    {
+      "raw": 58,
+      "fractional_digits": 2,
+      "native_literal": "0.58",
+      "nearest53_then_trunc": 57,
+      "extended_then_trunc": 57
+    },
+    {
+      "raw": 123,
+      "fractional_digits": 2,
+      "native_literal": "1.23",
+      "nearest53_then_trunc": 123,
+      "extended_then_trunc": 122
+    },
+    {
+      "raw": 999,
+      "fractional_digits": 2,
+      "native_literal": "9.99",
+      "nearest53_then_trunc": 999,
+      "extended_then_trunc": 999
+    },
+    {
+      "raw": 65535,
+      "fractional_digits": 2,
+      "native_literal": "655.35",
+      "nearest53_then_trunc": 65535,
+      "extended_then_trunc": 65535
+    },
+    {
+      "raw": 65535,
+      "fractional_digits": 4,
+      "native_literal": "6.5535",
+      "nearest53_then_trunc": 65535,
+      "extended_then_trunc": 65534
+    }
+  ],
+  "input_fractional_lowering": "UNVERIFIED",
+  "vendor_assets_redistributed": false,
+  "actual_loaded_crt": "NOT_RUN",
+  "thread_control_word": "NOT_RUN",
+  "exact_pow_factor": "NOT_RUN",
+  "native_pixels": "NOT_RUN",
+  "keypad": "NOT_RUN",
+  "vendor_compile": "NOT_RUN",
+  "physical": "NOT_RUN"
+}

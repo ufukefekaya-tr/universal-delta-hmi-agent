@@ -1,0 +1,85 @@
+{
+  "scope": "GENUINE_SOURCE_READONLY_MEMORY_OBSERVATIONS",
+  "sources": [
+    {
+      "sample": "manufacturer_B_FTP",
+      "origin": {
+        "url": "https://delta-ia-tips.com/wp-content/uploads/2017/04/ftp-server_recipe-update_dps-file.zip",
+        "archive_sha256": "8801f743feeac42551650e8e5c4ffe78d8cef1fa5f9204088946e52b5a43084c"
+      },
+      "source_sha256": "f2f77df5011d30ff85a38fa3956f99cbf9cd165acfcc2f6b42478169f7f9a916",
+      "source_bytes": 67990,
+      "family": "delta_dopsoft2",
+      "model_id": "-1106816944",
+      "serialized_version": "4.00.05.24",
+      "pages": 1,
+      "owners": 14,
+      "global_sections": 15,
+      "controller_blocks": 1,
+      "controller_marker_findings": [],
+      "redacted_global_records": 16,
+      "canonical_observation_sha256": "676d9bafdb6d53a70089b5901bbbc2ec3db1114613d39cbb76022a5c2fd888e4",
+      "qualification": "UNVERIFIED",
+      "emission_authority": false,
+      "native_output": "NOT_CREATED",
+      "source_assets_redistributed": false
+    },
+    {
+      "sample": "installed_manufacturer_DIA_full_demo",
+      "origin": {
+        "distribution": "DIAScreen shipped full element demo; local installation is a research source only"
+      },
+      "source_sha256": "fc079f74ed9b34e2e698b0c65c95c4f914983594f658cadc72e1ee4d97493ed5",
+      "source_bytes": 490466,
+      "family": "delta_diascreen",
+      "model_id": "268502784",
+      "serialized_version": "6.0.00205.8268",
+      "pages": 18,
+      "owners": 648,
+      "global_sections": 21,
+      "controller_blocks": 1,
+      "controller_marker_findings": [],
+      "redacted_global_records": 25,
+      "canonical_observation_sha256": "5dd800bb8b64ceecc1aae500fdd9c48d735d4c5b4550b1b22c2592c24d931541",
+      "qualification": "UNVERIFIED",
+      "emission_authority": false,
+      "native_output": "NOT_CREATED",
+      "source_assets_redistributed": false
+    }
+  ],
+  "vendor": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "program_writer_complete": false,
+  "independent_repeat": {
+    "root_source_observation_hashes_match": true,
+    "sources": [
+      "manufacturer_B_FTP",
+      "installed_manufacturer_DIA_full_demo"
+    ],
+    "additional_readonly_holdouts": [
+      {
+        "sample": "manufacturer_DIA_Alarm_EN",
+        "source_sha256": "ae60464b551a5f773871910c180ccd72fdc63dc5123a76a17c16ab50bd94b8be",
+        "canonical_observation_sha256": "68fa5612a01a9cbf15e5878bacfb08000a0bc01a24734ad4fa6b747253e7a534",
+        "pages": 7,
+        "owners": 62,
+        "global_sections": 26,
+        "controller_blocks": 1,
+        "redacted_global_records": 45
+      },
+      {
+        "sample": "manufacturer_DIA_History",
+        "source_sha256": "7f35b5fd05537106b46a9791a426a1b3e3a59f8afa1f870595e9c0fd75e24471",
+        "canonical_observation_sha256": "f9fd422f5e25b2b9cbebe30048d086d3eff7efa816adacdefa566978471ae33e",
+        "pages": 11,
+        "owners": 144,
+        "global_sections": 27,
+        "controller_blocks": 1,
+        "redacted_global_records": 45
+      }
+    ],
+    "source_assets_written": false,
+    "semantic_qualification": "UNVERIFIED",
+    "emission_authority": false
+  }
+}

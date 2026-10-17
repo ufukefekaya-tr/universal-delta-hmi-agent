@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "status": "USER_PAUSE_HANDOFF",
+  "complete": false,
+  "computer_use": "PROHIBITED",
+  "authority": "Direct human requests pause for account change; no new feature work",
+  "pre_handoff_head": "1bc4690d1c82d0ebc6e9b29284356e207f3ffe3a",
+  "last_accepted_source_commit": "567e25ef3849ab448d5f29d377adb17a9cb17a5e",
+  "last_research_commit": "1bc4690d1c82d0ebc6e9b29284356e207f3ffe3a",
+  "policy_epoch": "d0cc20c74e7dccbe3b654f1fd32eb6ed664f9de9fb0c8b25d266138d80fa477c",
+  "task_id": "UHMI-V1-20261011",
+  "task_envelope": "../.agent-state/UHMI-V1-20261011/TASK_ENVELOPE.json",
+  "checkpoint": "../.agent-state/UHMI-V1-20261011/SESSION_CHECKPOINT.json",
+  "envelope_sha256": "a832d90543233d114d51985610bf4e7384ff1f85867f59e395fbdfca935d057c",
+  "scope_revision": 12,
+  "tested_source": {
+    "revision": "853bb797bfc1d1d9f18695e4c8aadde821554fb900bb2b9ef2d6dd6ae3f6bd63",
+    "hash_count": 67,
+    "tests": 623,
+    "unique_ids": 623,
+    "root_elapsed_seconds": 175.837,
+    "independent_elapsed_seconds": 172.027,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "additional_negative_probes": 424,
+    "unchanged_at_pause": true,
+    "raw_evidence": "python_tests.json"
+  },
+  "accepted_offline_scope": [
+    "File-only nine SDK tools, separate source-pinned native candidates",
+    "B10 basic buttons and UINT/INT16F0 controls; source/local/target preserved",
+    "Three native pages, readonly indicators/goto/text, v2 octal X/Y addressing",
+    "Explicit UINT fixed-decimal display; INT16F0 static conversion",
+    "Earlier synthetic macros/alarms/layout/unit work retain historical scope"
+  ],
+  "native_candidate": {
+    "workspace_relative_path": "projects/qualification_dop_b_v001/storage_candidates_v001/MCP_INT16_DEMO.dps",
+    "sha256": "c64a790da08c4ec859b143dc1f996a8034cd2d031d59b5169bd5d219cac0928f",
+    "bytes": 55664,
+    "pages": 3,
+    "owners": 16,
+    "purpose": "NEUTRAL_ADAPTER_QUALIFICATION_NOT_PEER_MACHINE_FINAL",
+    "body_sha256": "f3674c5787f9186bcdae40ffabc038fd44a116bfbd26c38831ae29ae0cbc7f45",
+    "vendor": "NOT_RUN",
+    "native_pixels": "NOT_RUN",
+    "runtime": "NOT_RUN",
+    "physical": "NOT_RUN"
+  },
+  "wip": {
+    "escrow_path": "wip/existing_program.py.txt",
+    "intended_runtime_path": "src/universal_hmi/native/existing_program.py",
+    "sha256": "640bbd4dae3f8e4720f671e15b3afbef9c0dc5879e85726bd9ff64b36d6e043c",
+    "bytes": 30893,
+    "status": "INCOMPLETE_UNREVIEWED_NOT_IMPORTED",
+    "test_file": "tests/test_existing_program.py NOT_CREATED",
+    "suite": "NOT_RUN",
+    "public_integration": "NOT_IMPLEMENTED",
+    "sdk": "NOT_RUN",
+    "memory_probe": "Rejected actualsource Recipe blank CRLF delimiter: UNQUALIFIED_EXISTING_GRAPH; noapply/save",
+    "review_todo": [
+      "Recipe blank delimiter framing",
+      "SubMacro duplicate-key handling",
+      "Malformed non-ASCII Type/gotoID typedrefusal",
+      "Changed descriptor freshness",
+      "TagLinkCount/LinkSize consistency",
+      "Complete neutral tests and independent genuine savedbody/source-restoration before publicMCPintegration"
+    ]
+  },
+  "latest_uncommitted_research": {
+    "numeric_runtime_keypad": {
+      "status": "STATIC_CHAIN_CLOSED_NOT_CAPABILITY",
+      "fractional_validation": "10048260 rejects fractionalcharcount>DotNum",
+      "normalize": "10131ca1 dot removal/Fzero padding;101319b8 appendsFzeros ifno dot",
+      "raw_limits": "1004ecb6 ->10053cab signed decimalstringcompare",
+      "raw_buffer": "1004edb0 ->global101aaf2a",
+      "integer_parse": "100efb56 ->101332e0 ->10142d67 ->10142b62; integer10*acc+digit10142cbd/c1 +signneg10142d44; INT16 bounded exact",
+      "identity_write": "100efd29 ->100f00a7 Gain1/Offset0; nofloatingfractionalinterior conversion"
+    },
+    "numeric_compiler_limits": {
+      "status": "OPEN_PRIMARY_STATIC_UNCERTAINTY",
+      "chain": "6181c5..61823f/6183a4..618419 atof->QWORDspill->pow10F->x87fmul->ftol->signed%d",
+      "crt_sha256": "2d5670881a6d13a100e37da297f6eeb876f68b63073a28eb5d650625c60f9bf7",
+      "pow": "78028f20 ->FYL2X78028f76 ->7802c2b5 FRNDINT/FSUBR/F2XM1/FADD/FSCALE",
+      "controlword": "7802c2ca keepscallerprecisionbits&300/removesRC;7802c35f restorescallerCW",
+      "exact_integer_power_shortcut": "NOT_FOUND",
+      "implication": "Exact10**F factor/callerFPU notqualified; dyadiclimitsdoNOTautomaticallyclose; noepsilon orboundchanges; signeddisplaydecimalinsertion separate"
+    },
+    "interlock": {
+      "status": "SINGLE_BOOL_STATIC_ENABLE_MAPPING_DEVELOPABLE_NOT_IMPLEMENTED",
+      "native_reader_writer": "616fdf..617073 link+704,var+644,level+705;616531..6165de writer",
+      "compiler": "7d8f38..7d9074 singleaddress/linkminus1/addressconverter7c8415",
+      "runtime_loader": "100b5822..100b58a6 descriptor+76/level+7e; forcedbitformat/count1",
+      "helper": "100fd8bb..100fd916 uses100fbf37: readfail-1/match1/mismatch0",
+      "keypad_gate": "100ef3a3..100ef3d3 requires1 beforekeypad",
+      "trigger_counterexample": "+71 is Order(trigger timing); +72 is TriggerVar(write descriptor), NOTInterLock; doNOTbindreadonlyX toTriggerVar",
+      "visibility_counterexample": "100ed549..100ed5fc hidesonmatch1/unhides0/readfail-1 keepspriorhiddenflag; directVisibleVar doesNOTfailclosed mask stalequality",
+      "open_keypad_counterexample": "No directsecond100fd8bb between100ef7f9keypad and100f00e5 write; callbackrechecknotclosed",
+      "OR": "NativeVaroneBOOL cannotexpressOR. Project-owned aggregateproducer/freshnessor separatelyqualifiedHMIlogic required; neverinventcustomerbits",
+      "real_active_holdout": "NOT_FOUND"
+    }
+  },
+  "batch_pending": [
+    "Existing-owner publicMCP profile/helper/wholeexpectedbody",
+    "Inert literal deletion completion+tests",
+    "Variable-length geometry/text extent qualification beyondinitialsame-lengthscalar",
+    "Typed per-kind style/fg/bg/font appearance lowering",
+    "OpaquePNG tosame-sizeexistingDIB background replacement",
+    "INT16F1/F4 exact storednumeric andinputlimits qualification",
+    "Generic quality/interlock/startup/disconnect/postkeypad behavior",
+    "9SDKsavedfile replay/source-restoration andindependent finalreview",
+    "Clean scoped commit before authorizedpeerready message"
+  ],
+  "broader_v1_open": [
+    "Real DIAScreen selected-profile blank/control and driver/macro/alarm/history integration",
+    "Two real common pilots",
+    "Vendor/simulation andphysicaltwo-modelacceptance",
+    "Full V1/programwriter remains false"
+  ],
+  "peer": {
+    "thread_id": "01a134e0-fda4-7530-98ad-0e2153e2a2a4",
+    "verified_human_authorization_id": "01a135db-e9c8-72e1-b187-7cdd9e0b3321",
+    "rule": "One complete audited batch or significantactionableimpasse notification; partialfeature mustnotcauseapplication",
+    "state": "Framework work paused byhuman; no ready notification sent for batch",
+    "different_account": "Thread maynotbeaccessible; donotassumeoldchatcontextorpermissionswithoutreadinglocalauthority/currentuserinstruction; no peerprojectwrites"
+  },
+  "clean_archive": {
+    "path": "../dist/Universal_HMI_Agents_V1_CLEAN_20261013.rar",
+    "sha256": "fd216ea3001cb4ee28aa0a5fc6a67d8bbbf654b2182ae6e8ad7265c2fba1bb24",
+    "bytes": 2801302,
+    "source_commit": "b7093d5836000c35122c5f46dfe0977d31a034b0",
+    "scope": "Historical532-test snapshot; doesNOTinclude later567e25e code/research/WIP"
+  },
+  "governance_deviation": "CP records1bc4690 commitguard orderingfailure; doNOTretroactivelycallPASS. Actual4path/index/parent/source integrity verified. Nextcommits stageexactfirst, guardcommitPASSsecond, thencommit; nonzerogate stopsdependentaction.",
+  "resume_order": [
+    "Userexplicitresume",
+    "Read AGENTS/SYSTEM_PROMPT/INDEX completely, programmer role, account handoff, envelope/checkpoint",
+    "Verify HEAD/epoch/scope/source/artifactSHA and resume gate",
+    "Regrant exactsinglewriterleases before restoring WIP into runtime",
+    "Complete unfinished tests and independentreview; accepted623 resultdoesNOTcoverWIP",
+    "ContinuegenericV1/batch; ComputerUse/IDE/PLC/peerprojectwrites remainprohibited",
+    "Pauseisnotcompletion; doNOTmarkgoalcompleteorbatchready"
+  ]
+}

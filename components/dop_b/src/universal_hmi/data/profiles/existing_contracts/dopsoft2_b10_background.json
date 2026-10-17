@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "family": "delta_dopsoft2",
+  "model_id": 2953863504,
+  "serialized_version": "4.00.07.04",
+  "acceptance_scope": "OFFLINE_STORED_CONFIGURATION_ONLY",
+  "source_policy": "original_source_pinned_closed_existing_graph",
+  "vendor": "NOT_RUN",
+  "native_pixels": "NOT_RUN",
+  "authority_kind": "manufacturer_static_existing_background_contract",
+  "mode": "fixed_opaque_page_background_v1",
+  "resource_policy": "unique_complete_PictureOffset_to_same_canvas_DIB40_BI_RGB32",
+  "image_policy": "opaque_noninterlaced_RGB8_or_RGBA8_PNG_IHDR_IDAT_IEND_only",
+  "mutation_policy": "same_size_frame_pixels_only_header_and_offsets_preserved",
+  "pixel_encoding": "bottom_up_BGR_reservedFF_not_alpha",
+  "evidence": {
+    "editor_sha256": "9ed92401cd08e2be8bfc2df3a40dee4e99e9f605da7a4fa9605f9e2754821eeb",
+    "page_link": "86656b..866593 page+70;6a05a8..6a0627;68d7ce/68d7ea/7b0de1",
+    "frame_copy": "7b0e8b..9a/c1e260;7b0f2a..5f;7b0f9a..fb8/c1e350",
+    "consumer": "834b65/68d811/8655ff;834f98..fa5/861014;8611b3..12f9/c1fb40 mode0;SetDIBits/BitBlt SRCCOPY",
+    "base_policy": "BaseScreenID0 only;866201..220/867ee3/861028/8686c2",
+    "review": "reports/EXISTING_BACKGROUND_FOUNDATION.json"
+  }
+}

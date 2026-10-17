@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "status": "OFFLINE_PASS",
+  "scope": "THREE_SOURCE_SAME_MODEL_STORED_MULTIPAGE_CANDIDATE",
+  "model": "DOP-B10S615",
+  "serialized_version": "4.00.07.04",
+  "resolution": [
+    1024,
+    600
+  ],
+  "target_sha256": "c16e6b81580f91f508becae459dede710239d5f6f243800404575cdf77b3abfb",
+  "controls_sha256": "c7830ddfc6305f479b21e441107eccf5441b3273ba62c73fac278d4c7f3d3052",
+  "auxiliary_sha256": "c73e18847f0d6243dd190efbafc8609f8f0d3ac56da976d3d6c5174ad0de3531",
+  "authority_sha256": "4c6e0ddd9a08875afb63582909fac33fe09f3ec7823968f76deacc2397c4e0ca",
+  "candidate_sha256": "52852387fdbc9b03b8d0f2565e7377b3c2fafd6c62096499e76867a06f85ab99",
+  "candidate_bytes": 55577,
+  "decoded_and_declared_body_bytes": 52087,
+  "body_sha256": "d707acdbbadd522792d75f17f81b0468e1a58a97fd75dd79c810d07f3366e59f",
+  "candidate_pages": [
+    {
+      "id": "1",
+      "name": "Screen_1",
+      "owners": [
+        "201",
+        "101",
+        "102",
+        "203"
+      ],
+      "action": "SOURCE_EXACT"
+    },
+    {
+      "id": "2",
+      "name": "Values",
+      "owners": [
+        "206",
+        "105",
+        "106",
+        "202",
+        "204"
+      ],
+      "action": 0
+    },
+    {
+      "id": "3",
+      "name": "Commands",
+      "owners": [
+        "207",
+        "103",
+        "104",
+        "205"
+      ],
+      "action": 0
+    }
+  ],
+  "owner_count": 13,
+  "numeric_intent": "UINT raw F0; previous fixed F2 candidate remains separate",
+  "indicator": {
+    "owner_id": "202",
+    "read": "{Link2}1@M4",
+    "write": "None",
+    "states": [
+      0,
+      1
+    ],
+    "role": "feedback"
+  },
+  "source_replay_byte_equal": true,
+  "independent_service_whole_body_match": true,
+  "independent_raw_donor_ir_reconstruction": true,
+  "removed_generated_owners_pages_and_reversed_owned_tag_restore_entire_target_body": true,
+  "restored_target_body_sha256": "4c6d0f55bbd5b45c8aff2414fe72964658d306b3d50c4486a0d57fd091b90320",
+  "target_globals_exact": true,
+  "target_thumbnail_exact": true,
+  "target_first37_prefix_exact": true,
+  "target_driver_HMIPortNr0": 2,
+  "excluded_auxiliary_driver_HMIPortNr0": 1660265583,
+  "old_control_ratio_normalization_not_imported": true,
+  "dependencies_unchanged": true,
+  "mcp_calls": [
+    "open_project",
+    "capabilities",
+    "inspect",
+    "plan_changes",
+    "preview",
+    "validate",
+    "apply_plan",
+    "save_as",
+    "diff"
+  ],
+  "transaction_record_sha256": "6aabd870eae408bd879e23eab9802606059e085c3cfafda3afb709023b57093c",
+  "plan_id": "1c3f64417e06178d170c2f1aa83d141d21158b1303e35d4be3eec2e5fc1fbdb3",
+  "current_revalidation_revision": "1488881f01d6c61db8b1e861058dd44063b31e08ce8d6fbafcd5d33708c12075",
+  "prototype_assets": "Ignored neutral qualification sources and property data; not redistributed",
+  "native_visual": "NOT_RUN",
+  "vendor_compile": "NOT_RUN",
+  "simulation": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "program_writer_complete": false,
+  "full_v1_complete": false
+}

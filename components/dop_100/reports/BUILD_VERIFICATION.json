@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "package_version": "0.1.1",
+  "status": "PASS",
+  "wheel": {
+    "name": "universal_diascreen_hmi_agent-0.1.1-py3-none-any.whl",
+    "sha256": "c87ea901d52c613cae3074e90cfb291f865f5bd78f1e3e4681b1b08737e39fa0",
+    "members": 53,
+    "source_modules_exact": true,
+    "license_expression": "Apache-2.0",
+    "license_files_exact": true
+  },
+  "sdist": {
+    "name": "universal_diascreen_hmi_agent-0.1.1.tar.gz",
+    "sha256": "936b83aa0d0e34fa6826f8df44e7fcaf295ab1ce8048b0a2d0faafd7ef01cf54",
+    "files": 57,
+    "neutral_fixtures_and_docs_present": true
+  },
+  "runtime_dependencies": [],
+  "isolated_install": {
+    "network": false,
+    "dependencies_installed": false,
+    "system_site_packages": false,
+    "python_isolated_flag": true,
+    "module_resolves_inside_venv": true,
+    "installed_api_tests": 20,
+    "stdio_note": "Dedicated test module child sets explicit source path; separate installed-only process probe and portable extracted process verification are recorded in release receipt."
+  },
+  "python_runtime": "3.14.0",
+  "python311_syntax": "PASS_ONLY_NOT_RUNTIME_EXECUTED",
+  "vendor_compile": "NOT_RUN",
+  "panel_runtime": "NOT_RUN"
+}

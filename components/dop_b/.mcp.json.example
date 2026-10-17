@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "universal-hmi": {
+      "command": "python",
+      "args": ["-m", "universal_hmi.cli", "serve"]
+    }
+  }
+}

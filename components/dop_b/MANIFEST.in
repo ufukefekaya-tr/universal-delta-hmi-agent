@@ -1,0 +1,8 @@
+recursive-include src/universal_hmi/data *.json *.md
+recursive-include profiles *.json
+recursive-include templates *.json *.md
+include scripts/build_release.py scripts/bootstrap.lock.json
+
+include LICENSE NOTICE THIRD_PARTY_NOTICES.md
+include licenses/*.md licenses/*.json
+recursive-include licenses/texts *.txt

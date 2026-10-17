@@ -1,0 +1,7 @@
+# Son kabul sınırı
+
+**919/919 root ve bağımsız PASS; yeni DIAScreen maintained BOOL binding'in dar dosya kapsamındaki önemli bulgular kapandı.** Revision `42950ffd6c9d3261319737be10fa38be18531229143382e9acfbc903d8a74aac`; aynı100sourcehash ve919orderedIDs. [Bağımsız denetim](DIASCREEN_BOUND_BUTTONS_REVIEW.md), [gerçek kaydedilmiş aday ve dokuz araç kanıtı](DIASCREEN_BOUND_BUTTONS_PROOF.json).
+
+Private kaynak/namespace snapshot'ı, raw authority/review/dependency hash'leri, doğru Type1/Sub4/BOOL0-2/directlink2 kayıtları ve ordinary request IR eşleşmesi doğrulandı. Yeni native owner, açık canonical M adresi ve farklı0/1 metinleri source programına eklenir. Whole BODY oracle, source restoration, replay ve kayıt yeniden okuma bağımsız geçti. Varsayılan kalibrasyon kendi portable adres kitabını üretir; R1–R4 tekrar testle kapandı. Legacy B namespace sınırı genişletilmedi.
+
+Eski kaynak programı ve aktif global makrolar korunur. Native görünüm/font/gradient, vendor compile, runtime toggle, panel, temiz bağımsız program ve seçilmiş110IS kabulü bu sonuçtan çıkmaz. İki-family V1 tam features/pilotlar, numeric read-policy/quality/fractional input ve insan kabulü açıktır. [Goals](GOAL_STATUS.json). Önceki894 exact f5f7 kayıtları archive'dadır; eski genuine SDK/RAR/Windows relocation kaynak kapsamları değişmedi. Computer Use yok; fullV1 active ve tamamlanmamış durumda. Final manifest/index/Git denetimi ayrı kapanış kapısıdır.

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "project_id": "<neutral-project-id>",
+  "status": "UNVERIFIED",
+  "approved": false,
+  "approver_role": "human_project_owner",
+  "approved_at": null,
+  "source_sha256": null,
+  "profile_sha256": null,
+  "design_sha256": null,
+  "bindings_sha256": null,
+  "behavior_sha256": null,
+  "preview": {"version": null, "sha256": null, "render_kind": null, "reference": null},
+  "review_chain_sha256": null,
+  "authority_ref": null,
+  "scope": "<exact design change approved>",
+  "open_findings": []
+}

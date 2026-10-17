@@ -1,0 +1,11 @@
+# Merge this table into the desired Codex config; this file is not auto-loaded.
+# Run with an interpreter where this checkout is installed (pip install -e .).
+# Repo-local defaults resolve from the package, not the client working directory.
+# scripts/configure_mcp.py emits an optional host-local config for a fresh venv.
+# Official syntax: https://developers.openai.com/codex/mcp/
+[mcp_servers.universal_hmi]
+command = "python"
+args = ["-m", "universal_hmi.cli", "serve"]
+startup_timeout_sec = 20
+tool_timeout_sec = 60
+enabled_tools = ["open_project", "capabilities", "inspect", "plan_changes", "preview", "validate", "apply_plan", "save_as", "diff"]

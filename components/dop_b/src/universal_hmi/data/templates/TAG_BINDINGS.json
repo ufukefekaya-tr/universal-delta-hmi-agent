@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "project_id": "<neutral-project-id>",
+  "source_sha256": null,
+  "profile_sha256": null,
+  "tags": [
+    {
+      "id": "<neutral-tag-id>",
+      "role": "<request or feedback>",
+      "read_address": null,
+      "write_address": null,
+      "driver": null,
+      "data_type": null,
+      "width_bits": null,
+      "signed": null,
+      "scale": null,
+      "unit": null,
+      "limits": {"minimum": null, "maximum": null},
+      "source_evidence_ref": null,
+      "quality_source_ref": null
+    }
+  ],
+  "behaviors": [
+    {
+      "element_id": "<neutral-element-id>",
+      "semantics": "<momentary, maintained or toggle>",
+      "down_action": null,
+      "up_action": null,
+      "restart_retained_behavior": null,
+      "physical_feedback_tag_id": null,
+      "comm_loss_behavior": "UNKNOWN",
+      "evidence_ref": null
+    }
+  ],
+  "bindings_sha256": null,
+  "behavior_sha256": null,
+  "status": "UNVERIFIED"
+}

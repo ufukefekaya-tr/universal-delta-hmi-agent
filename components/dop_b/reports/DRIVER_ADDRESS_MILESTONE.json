@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "status": "OFFLINE_PASS",
+  "scope": "SOURCE_DRIVER_DECIMAL_REGIONS",
+  "test_revision_sha256": "d3389aa99f47aa536dce92097f0ebb804559987ca5633f749e8d123164391cc1",
+  "source_hashes": {
+    "src/universal_hmi/__init__.py": "0db3fbb84952385b48986a224db88e67609945e5d5ac8708bdee50c8e8837035",
+    "src/universal_hmi/cli.py": "fac2fb4b0abbaaa7d55afd9a1bdecd22c480d3a0ac962cf4b065511a39895e92",
+    "src/universal_hmi/errors.py": "f0424fc7333cc3cd2c84ad02fbfb5b6a5ef8daa5eae6f335eedc6e28b8f25a45",
+    "src/universal_hmi/mcp_server.py": "513343f6716cd196195b40efbc32755a7df1c830129c204f2e3d5df23deeaf0b",
+    "src/universal_hmi/model.py": "590c6f744c8627814669ca651d001f39cf161325c39e42ee1825d1c271421086",
+    "src/universal_hmi/native/__init__.py": "796b8beb3fb75757c774e513f94e4eb9afbc7d9084b4b14ad337bdb559ab17be",
+    "src/universal_hmi/native/address_contract.py": "e648348491824eec67822d7845c9cfade9680feed4aa4484fbd1b9a45566eb9e",
+    "src/universal_hmi/native/codec.py": "efd83897989120f021ee600ca6c8ee1aa0458ffebc2fef880bcdcba91ee2f8b3",
+    "src/universal_hmi/native/identity.py": "cef9007cb3f9ad3b2f5e1c2c2350a878c1c6c24a1e5988389cad92abe540c8cf",
+    "src/universal_hmi/native/macro_semantics.py": "b867861c58283214bbc4566d8e93227a57c83bb1eb9470f243688f3ec5b752e8",
+    "src/universal_hmi/native/macros.py": "4c4d0ea62d4d802264691eedac1865bc7ba606be978246bb48b5b3d352fa1af9",
+    "src/universal_hmi/native/numeric.py": "facc48b91377057ebcd9ecb2bf9ab1d552364480a3ec4ef890230310c903796a",
+    "src/universal_hmi/native/program.py": "4ee3c42c3cc95fa871d540eb2dca5f134efe48f0ed1869b1edf068344555f257",
+    "src/universal_hmi/native/records.py": "ddf823d3f87f197a45001d3a6a6a2f4422afb5c6ef03029ece5dae72ccd1d787",
+    "src/universal_hmi/native/resources.py": "f3c0a1f9178ef8636ec97205e432020c70d24857faa902f614ee64d64b15c2d7",
+    "src/universal_hmi/preview.py": "7133d7aa5c369300e8d5d714e0d0222ff7475acf0ebe3ad3edb2198b8d55bf12",
+    "src/universal_hmi/service.py": "f42b714526fc9467d6f63c12c316249ef98025ee6e54aee91cd970eccfafb325",
+    "src/universal_hmi/validation.py": "ce4973c5de6df4dba9847c02a0e3219f70e6d4f6e9510c8f49ee5850e2f49d5c",
+    "tests/test_addresses.py": "e41038f7ff86add0ee0598aa5eb75243942d7220a13cfa7bf389d2479b7b29df",
+    "tests/test_codec_length.py": "7f71bf42e97088a0f0fe0dcd3b87e7e97b90a931f082051097459701aee5abfa",
+    "tests/test_design.py": "7e4e305f69dc11f82922b497e69428eff47d40c3f88e35ecb4905bbd229af50a",
+    "tests/test_governance.py": "93f255cd8b2026c567b6886a12f0582c545c98e9cbf1ba2b54b788eca6517628",
+    "tests/test_native.py": "75b93f7bb9cc6557071926a11183ccf12589c3baa76ff7cd3d929eff2be612c1",
+    "tests/test_program.py": "f7c5239ca6144fc1c22333a49d9da1469c0c556c84f0204ef66caa69cbdb9476",
+    "tests/test_resources.py": "e14a874f4a32bd9390acc55ac04a8644eec9adb8be79cb36f91540c07e721884",
+    "tests/test_service.py": "ef151b6d194a194d02986326c5ebe97160e7d88a2a7a5c390f478a44ff147a9d",
+    "tests/test_stdio.py": "5e52f4f10f3b9fe6c2912bd85a3f3ce140dbb94f1f780c70fbc8a4add5767c2e",
+    "profiles/dop_110is_diascreen.json": "72b5e04f3435e488bfd6c23d7aba3915617de36d27972627d7782b8d8a050bf9",
+    "profiles/dop_b07s411_dopsoft2.json": "ae052c6c7208ad4c38fee47abe71ea3388c7d0bb902851b67544b7ca0133b7a1",
+    "profiles/driver_contracts/delta_dvp_serial_2016.json": "5abf757dd70ff15c0ca2394f5128664e8499d9b0987a42b2ba2d3b73de2248c1",
+    "profiles/synthetic_diascreen.json": "ba237a67ab7d9f2c8def98e4e1f377862cd666a9c32d344860c5956a95b8ad44",
+    "profiles/synthetic_dopsoft2.json": "54648f8d00863a8d92eb78c3b61b3c919d2db3b2f6fb145cb4e890c41428c2f4",
+    "tools/_governance.py": "b0fab8b43fa2be055743fd7c46a0239357cfa17c3af164a8fc3ea5dc30b7c209",
+    "tools/check_repo.py": "4113425ec33eddad3e9e920470a96a65421ebfb99f918c8e170e1c3b6006884e",
+    "tools/session_guard.py": "7b3a8baedbd528aabbb3c77f69bfd1bbb8ffb5079ba726bb3597cf233dbdaaff",
+    "scripts/build_manifest.py": "d3735a80d523b7fe83e0dfef14e51922060b7f415370065e4fc3a2cce33e2ca8",
+    "scripts/build_previews.py": "608f007c469460ba79ef69323b308e80704fcd28bb5ccdd94309906cba19a8d4",
+    "scripts/build_profiles.py": "2dd35eb99e59bb1e183c4f9e9816fba75970b228d7f00ab9b9bed2215cadecc5",
+    "scripts/calibrate_controls.py": "b50b438911be920e7934bf33d50010ff3aea131f65b6b951db8722a22aee7a32",
+    "scripts/calibrate_dvp_namespace.py": "2c4c854cb2755e7f4b0f17d80f14383d78ff679a0f082c7cb72ac8b91dd374e9",
+    "scripts/calibrate_program.py": "21c82d394c57ddc584bcdcedd95e6ceff32b011496ed1b36dab8517664b796bd",
+    "scripts/calibrate_source.py": "310a5943f49c0570b35bdd968d66311a8303698d92e7ff863b229ffe42966275",
+    "scripts/capture_controls.py": "fae00c9155c2c52f767035c5507737e4838cc7418f63d2b6219b7a59d68f0447",
+    "scripts/codex_config.toml.example": "20171fd77d09b6d52f9253c65816d14617753a88b6ae51eea1cad2b59dc31ffa",
+    "scripts/configure_mcp.py": "72b5a76a64582dc08dd9eb771e7233f21659ce6dae99d1c845ba8767f44fa2bc",
+    "scripts/preview_smoke.cjs": "58076b2f5dfbf70e15eaa1152eb20e72609d24f59dca9b728b0209ddaa6864e8",
+    "scripts/relocation_test.py": "f6020a59b975296ff32cf184586d440cbc723952b9665bed968df2b31fb5c446",
+    "scripts/setup.ps1": "d9a68842d2a446cb8439b5ba6de60ffbf45a1aa8f3f769bf187bebf3c72cb415",
+    "scripts/setup.sh": "e3c4d18c74f300f6bbc5f757b0385775aa86abfbf7b03df3c15db3919b12a2bc",
+    "scripts/vendor_probe.py": "1036ed0f8b89974670fbd25481244e54ca9c7d913af40ade617a8ab96765af13",
+    "scripts/verify.py": "b386127db5b933a79ddf27f4f66b08bde3de3c9afaf4594ceb0c0254d25d084b"
+  },
+  "root_tests": {
+    "executed": 532,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 95.01
+  },
+  "independent_review": {
+    "executor": "independent_read_only_astra_high",
+    "executed": 532,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 87.209,
+    "source_hash_count": 51,
+    "revision": "d3389aa99f47aa536dce92097f0ebb804559987ca5633f749e8d123164391cc1",
+    "malformed_namespace_probes": 128,
+    "malformed_book_probes": 56,
+    "freshness_routes": 9,
+    "candidate_mutations_rejected": 59,
+    "closed_findings": [
+      "N1",
+      "N2"
+    ],
+    "n2_oserror_retests": 6,
+    "open_material_findings": 0,
+    "report": "DRIVER_ADDRESS_REVIEW.md"
+  },
+  "registered_authority_sha256": "5abf757dd70ff15c0ca2394f5128664e8499d9b0987a42b2ba2d3b73de2248c1",
+  "driver": {
+    "company": "Delta",
+    "name": "Delta DVP PLC"
+  },
+  "regions": {
+    "BOOL": [
+      {
+        "area": "M",
+        "minimum": 0,
+        "maximum": 4095
+      },
+      {
+        "area": "S",
+        "minimum": 0,
+        "maximum": 1023
+      }
+    ],
+    "UINT": [
+      {
+        "area": "D",
+        "minimum": 0,
+        "maximum": 11999
+      }
+    ]
+  },
+  "genuine_probe": "DRIVER_ADDRESS_GENUINE_PROBE.json",
+  "candidate_sha256": "9d599354a35d4f85110ec944b2c12148873bf8121fa7bda4f822b59e17a57c68",
+  "program_writer_complete": false,
+  "full_v1_complete": false,
+  "current_revision_fresh_clone": "NOT_RUN",
+  "historical_fresh_clone": "history/507/relocation_verification.json",
+  "native_visual": "NOT_RUN",
+  "vendor_compile": "NOT_RUN",
+  "simulation": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "next": [
+    "Numeric display/keypad-domain limits and scaled integer raw semantics; signed/floating source witnesses",
+    "Combine pages/navigation/style/units/macros/alarms with clean assembler",
+    "Actual DOP-100 blank/library profile and two neutral native pilots",
+    "Human exact-artifact vendor/simulation/panel acceptance"
+  ]
+}

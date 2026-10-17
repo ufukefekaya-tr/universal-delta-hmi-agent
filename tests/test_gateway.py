@@ -50,13 +50,16 @@ class GatewayTests(unittest.IsolatedAsyncioTestCase):
         self.temp.cleanup()
 
     async def open(self, family="dop_b"):
-        value = await self.gateway.call_tool(family + "__open_project", {"profile_id": "sample"})
+        args = {"profile_id": "sample"}
+        if family == "dop_100":
+            args.update(path="source.dpa", source_sha256="0" * 64)
+        value = await self.gateway.call_tool(family + "__open_project", args)
         self.assertFalse(value.is_error)
         return value.structured_content["session_id"]
 
     async def test_namespaced_catalog_and_allowlist(self):
         tools = await self.gateway.list_tools()
-        self.assertEqual(len(tools), 19)
+        self.assertEqual(len(tools), 25)
         self.assertFalse(any("evil_shell" in t.name for t in tools))
         self.assertIsNotNone(create_server(self.gateway))
 
@@ -121,6 +124,22 @@ class GatewayTests(unittest.IsolatedAsyncioTestCase):
             await handle.request("call_tool", expected_instance=instance, name="inspect", arguments={"session_id": "native-old"})
         self.assertFalse(self.sessions["dop_b"].calls)
 
+    async def test_cancelled_request_closes_process_and_invalidates_session(self):
+        session = await self.open()
+        entered = asyncio.Event()
+        async def hanging(**kwargs):
+            entered.set()
+            await asyncio.Event().wait()
+        self.sessions["dop_b"].call_tool = hanging
+        task = asyncio.create_task(self.gateway.call_tool("dop_b__inspect", {"session_id": session}))
+        await entered.wait()
+        task.cancel()
+        with self.assertRaises(asyncio.CancelledError):
+            await task
+        self.assertIsNone(self.gateway.handles["dop_b"].task)
+        stale = await self.gateway.call_tool("dop_b__inspect", {"session_id": session})
+        self.assertTrue(stale.is_error)
+
     async def test_backend_error_semantics_preserved(self):
         session = await self.open()
         async def denied(**kwargs):
@@ -136,7 +155,7 @@ class GatewayTests(unittest.IsolatedAsyncioTestCase):
         value = await self.gateway.call_tool("dop_b__inspect", {"session_id": session})
         self.assertTrue(value.is_error)
         tools = await self.gateway.list_tools()
-        self.assertEqual(len(tools), 10)
+        self.assertEqual(len(tools), 16)
         self.assertFalse(self.gateway.catalog()["backends"]["dop_b"]["available"])
 
     async def test_no_implicit_route_or_headless_command(self):
@@ -161,7 +180,7 @@ class GatewayTests(unittest.IsolatedAsyncioTestCase):
 
     async def test_concurrent_requests_stay_routed(self):
         handles = await asyncio.gather(*(self.open(family) for family in ("dop_b", "dop_100") * 5))
-        self.assertEqual(len(set(handles)), 2)
+        self.assertEqual(len(set(handles)), 6)
         self.assertTrue(handles[0].startswith("dop_b:"))
         self.assertTrue(handles[1].startswith("dop_100:"))
 

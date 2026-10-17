@@ -1,0 +1,161 @@
+{
+  "scope": "SOURCE_PINNED_DIASCREEN_OPAQUE_EXISTING_INERT_TEXT_GEOMETRY_STORED_ONLY",
+  "status": "OFFLINE_PASS",
+  "source_revision_sha256": "8567025f1b240ac2aee0b9f49ba54ea507647bf9d38d5cba0c50b4e267c51867",
+  "source_hash_count": 89,
+  "root_tests": {
+    "discovered": 846,
+    "executed": 846,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 329.045
+  },
+  "root_unittest_seconds": 327.444,
+  "independent_tests": {
+    "reviewer": "/root/clean_program_contract",
+    "executed": 846,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 319.346,
+    "ordered_test_ids_equal": true,
+    "frozen_source_hashes_equal": true
+  },
+  "ordered_test_ids_sha256": "6be1ae5a45f91b47d22dd6170b4635d25bbb07d48ef7608d25ac2e867d2b5f3b",
+  "ordered_test_ids_algorithm": "sha256(json.dumps(test_ids,separators=(',',':')).encode())",
+  "new_tests": {
+    "native": 12,
+    "helper_service": 7,
+    "real_stdio_sdk_neutral": 1,
+    "total": 20,
+    "test_ids": [
+      "test_diascreen_candidate.DiascreenCandidateSdkTests.test_neutral_three_page_candidate_through_all_nine_real_stdio_tools",
+      "test_diascreen_candidate.DiascreenCandidateServiceTests.test_calibration_and_source_freshness_no_saved_output",
+      "test_diascreen_candidate.DiascreenCandidateServiceTests.test_default_and_wrong_family_mode_or_manufacturer_origin_without_flag_refuse",
+      "test_diascreen_candidate.DiascreenCandidateServiceTests.test_helper_and_public_save_exact_body_diff_replay_source_retention",
+      "test_diascreen_candidate.DiascreenCandidateServiceTests.test_manufacturer_provenance_is_explicit_non_synthetic_and_receipt_is_mock",
+      "test_diascreen_candidate.DiascreenCandidateServiceTests.test_public_explicit_forbidden_operations_no_output_and_source_bytes_unchanged",
+      "test_diascreen_candidate.DiascreenCandidateServiceTests.test_public_refuses_live_dynamic_or_uncalibrated_owner_and_non_geometry_intent",
+      "test_diascreen_candidate.DiascreenCandidateServiceTests.test_public_whole_ir_oracle_detects_allowed_but_unapproved_caption_and_geometry",
+      "test_diascreen_candidate.DiascreenNativeCandidateTests.test_default_v1_b_and_dia_policies_remain_closed_and_unchanged",
+      "test_diascreen_candidate.DiascreenNativeCandidateTests.test_descriptor_shape_types_order_and_source_pins",
+      "test_diascreen_candidate.DiascreenNativeCandidateTests.test_every_forbidden_opcode_is_refused_including_byte_equivalent_bind",
+      "test_diascreen_candidate.DiascreenNativeCandidateTests.test_independent_body_reopen_restoration_and_exact_noop",
+      "test_diascreen_candidate.DiascreenNativeCandidateTests.test_individual_scalar_caption_extents_language_state_and_duplicate_refusals",
+      "test_diascreen_candidate.DiascreenNativeCandidateTests.test_inert_owner_requirement_and_macros_are_not_inferred_from_text_type",
+      "test_diascreen_candidate.DiascreenNativeCandidateTests.test_malformed_operation_values_raise_typed_errors_without_source_mutation",
+      "test_diascreen_candidate.DiascreenNativeCandidateTests.test_mixed_unknown_and_remapped_schema_rejected_even_before_noop_dispatch",
+      "test_diascreen_candidate.DiascreenNativeCandidateTests.test_source_projection_candidate_projection_and_envelope_drift_refuse",
+      "test_diascreen_candidate.DiascreenNativeCandidateTests.test_unknown_repeated_missing_and_nonopaque_unkeyed_sections_refuse_rehash",
+      "test_diascreen_candidate.DiascreenNativeCandidateTests.test_unobserved_family_model_version_marker_or_each_page_dimensions_refuse",
+      "test_diascreen_candidate.DiascreenNativeCandidateTests.test_whole_body_mask_catches_every_unmanaged_change_and_compensated_lengths"
+    ]
+  },
+  "independent_negative_cases": {
+    "technical": 278,
+    "technical_categories": {
+      "schema": 156,
+      "operation": 57,
+      "fully_rehashed_live_owner": 7,
+      "unmanaged_body": 45,
+      "unapproved_public_fields": 5,
+      "public_coverage_witness": 8
+    },
+    "saved_public": 11
+  },
+  "source_contract": {
+    "prefix_policy": "diascreen_opaque_source_v1",
+    "contract_version": 2,
+    "mode": "existing_owner_edits",
+    "family": "delta_diascreen",
+    "model_id": 268502784,
+    "serialized_version": "6.0.00209.8338",
+    "resolution": [
+      800,
+      480
+    ],
+    "prefix_sections": 22,
+    "opaque_unkeyed_allowed_only": [
+      "Ethernet",
+      "WEB_OUTPUT",
+      "LuaData"
+    ],
+    "prefix_semantics": "UNKNOWN",
+    "allowed_owner": "Inert Type10/Sub6; one State Value0, no read/write/offset/visibility and no active macro",
+    "allowed_fields": [
+      "primary_state0_language0_caption",
+      "X",
+      "Y",
+      "Width",
+      "Height"
+    ],
+    "each_record_extent": "UNCHANGED_INDIVIDUALLY",
+    "oracle": "Complete decoded BODY restoration plus independent public whole-IR expected BODY",
+    "default_v1_other_modes": "UNCHANGED"
+  },
+  "genuine_sdk": {
+    "source_alias": "DIA-TEMPERATURE-INSTALLED-01",
+    "source_sha256": "b60f24b99cbee35adb8f84e8de18de227ffcaa58ac25d17b2e41f95c27a52baf",
+    "profile_sha256": "6cb58f97c3851646c9155332176330aa662ddc5dc74a2569a406a4188036ba94",
+    "calibration_sha256": "0531d59d02293e0b7208d55fc9e891747060b969de8d1eb5776437f63d154d33",
+    "candidate_sha256": "f1ba3c33606c89da6e6cc25d6f9f819e94fd7b26efaa85f3a3fff32a8f6e6500",
+    "candidate_bytes": 483033,
+    "candidate_body_sha256": "264965434d299803e7740b000f35b5f9e6b7992e295c3ea72dbaf355f85c2253",
+    "changed_body_byte_positions": 5,
+    "unchanged_owners": 25,
+    "tool_count": 9,
+    "elapsed_seconds": 16.004,
+    "source_provenance": "manufacturer_installed_example",
+    "approval_capture": "IMMUTABLE_BEFORE_APPLY",
+    "approval_scope": "Human-authorized neutral adapter experiment, not production design acceptance",
+    "neutral_unit_test_uses_manufacturer_bytes": false,
+    "proof": {
+      "path": "reports/DIASCREEN_EXISTING_CANDIDATE_SDK_PROOF.json",
+      "sha256": "1cae6459fd7c6b8fe18846e7c2601f931ae7e1b53a567efe5abf59e020f83d9d"
+    }
+  },
+  "reviews": {
+    "technical": "/root/clean_program_contract",
+    "saved_file": "/root/control_final_review",
+    "path": "reports/DIASCREEN_EXISTING_CANDIDATE_REVIEW.md",
+    "sha256": "ac613f3cff59b558273b4f3797ed6ce8936a2ce52b293fc4e4ef25caec3b2ca8",
+    "material_open_findings": 0,
+    "closed_findings": [
+      "DIA_E1_EVIDENCE_SNAPSHOT",
+      "DIA_R1_DEFAULT_ERROR_CODE"
+    ]
+  },
+  "source_inventory": {
+    "path": "reports/DIASCREEN_SOURCE_INVENTORY.json",
+    "sha256": "c1e1ec6f8fc64e89d5db7c4c54a16baebe0a87ad737ad56fc101d10af8578df3",
+    "qualification": "FORMAT_OBSERVATION_ONLY"
+  },
+  "frozen_sources": {
+    "src/universal_hmi/native/__init__.py": "86f7a9c7aa86146fd57bbb4d8931d609a2de043505f4c731b0cd6662b69976e4",
+    "src/universal_hmi/service.py": "372c6e7c09d73282fcb505cb67159de36f1aeeb5f10ae5e0736bb9c7f2485573",
+    "scripts/calibrate_source.py": "40ebcbda883c0a5e56d458b3e00a79499fc0350bb06bdc0393b75f94df3fa1a7",
+    "tests/test_diascreen_candidate.py": "ff23294704624e260ed9eeca28679777dad87d573d0aa5dca7e73b15f476fbe5"
+  },
+  "limitations": [
+    "Existing inert equal-extent literal/geometry only; not new controls/pages/driver/macros/alarms",
+    "Selected DOP-110IS has no accepted target input",
+    "Hash consistency is not manufacturer provenance",
+    "Conceptual preview is not native pixels",
+    "Current-revision relocation NOT_RUN",
+    "All fractional numeric input and transport quality producer remain unqualified",
+    "Full V1 and full presentation batch incomplete"
+  ],
+  "current_revision_relocation": "NOT_RUN",
+  "native_pixels": "NOT_RUN",
+  "vendor": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "computer_use": "PROHIBITED_NOT_USED",
+  "licensed_assets_redistributed": false,
+  "selected_110is_acceptance": "UNVERIFIED",
+  "material_open_findings": 0,
+  "full_batch_ready": false,
+  "program_writer_complete": false,
+  "full_v1_complete": false
+}

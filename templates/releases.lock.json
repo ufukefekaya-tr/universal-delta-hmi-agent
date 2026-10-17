@@ -1,15 +1,26 @@
 {
   "schema_version": 1,
   "dop_b": {
-    "version": "0.2.0",
-    "commit": "315c77602645ba3ed8fc4851ec0d5e59c8e9d1ea",
-    "archive": "dop-b-0.2.0.zip",
-    "sha256": "b2fba4ab82c91adc0478c493c879c05f1337ab2e1e8ab8a645b399149fa290b3",
-    "bytes": 84779364,
-    "redistribution_scope": "User-authorized original release; preserve all bundled dependency notices. No customer/vendor reference pack."
+    "version": "0.2.1",
+    "commit": "2df894099853ca16a32e36e2f4b5da1a112daead",
+    "archive": "dop-b-0.2.1.zip",
+    "sha256": "ae6157aa9c967d0fffdb3faf29fb1e01210a3560eec85d94e4e201be30bec8ce",
+    "bytes": 85224421,
+    "redistribution_scope": "Apache-2.0 original component; dependency/runtime notices and source provenance retained under licenses/.",
+    "url": "https://github.com/ufukefekaya-tr/universal-delta-hmi-agent/releases/download/v0.2.0/dop-b-0.2.1.zip",
+    "linux_archive": "dop-b-0.2.1.tar.gz",
+    "linux_sha256": "6355895c18be288dd7f50a9e9d730eb530e420b313583b8ea0c939f8e507851a",
+    "linux_url": "https://github.com/ufukefekaya-tr/universal-delta-hmi-agent/releases/download/v0.2.0/dop-b-0.2.1.tar.gz",
+    "source_export_sha256": "9c05351b23114371fa065874e5aebf4ddd7c9013df4b7806d357aea409c49355"
   },
   "dop_100": {
-    "status": "AWAITING_INDEPENDENT_REPOSITORY",
-    "release": null
+    "version": "0.1.1",
+    "commit": "e39d2a3b3a48a28ed034a05b30e08a97e380cd0c",
+    "archive": "Universal-DIAScreen-HMI-Agent-0.1.1.zip",
+    "sha256": "35d643c179bd4e316dd017de85dec9b0cebf177d404f46122b5d7c7e50b20180",
+    "bytes": 706054,
+    "license": "Apache-2.0",
+    "source_snapshot": "components/dop_100",
+    "status": "INDEPENDENT_OFFLINE_RELEASE_VERIFIED"
   }
 }

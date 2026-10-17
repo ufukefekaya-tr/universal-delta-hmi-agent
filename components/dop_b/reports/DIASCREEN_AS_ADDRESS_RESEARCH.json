@@ -1,0 +1,242 @@
+{
+  "scope": "PRIMARY_STATIC_DIASCREEN_EXTERNAL_ADDRESS_PIPELINE_FOUNDATION",
+  "status": "OFFLINE_PURE_PRIMITIVE_PASS_NO_PUBLIC_NATIVE_PROMOTION",
+  "public_native_capability_opened": false,
+  "source_alias": "DIA-TEMPERATURE-INSTALLED-01",
+  "source_sha256": "b60f24b99cbee35adb8f84e8de18de227ffcaa58ac25d17b2e41f95c27a52baf",
+  "source_bytes": 494328,
+  "model_id": 268502784,
+  "serialized_version": "6.0.00209.8338",
+  "driver_span_bytes": 466,
+  "driver_span_sha256": "ff3c3bb3c7c5bad3f38b3bfabe2efbefc243a7b6ed00c7bd58b8f9aeefaf21df",
+  "authority_artifact": {
+    "path": "profiles/driver_contracts/delta_as_tcp_2024.json",
+    "sha256": "3c5fb8719089e70e619edfbac1cf2df668880364569decbca89b662f08af202d"
+  },
+  "pure_contract": {
+    "qualified": true,
+    "contract_version": 1,
+    "mode": "diascreen_source_driver_decimal_regions_v1",
+    "family": "delta_diascreen",
+    "source_sha256": "b60f24b99cbee35adb8f84e8de18de227ffcaa58ac25d17b2e41f95c27a52baf",
+    "model_id": "268502784",
+    "serialized_version": "6.0.00209.8338",
+    "prefix": "{EtherLink1}1@",
+    "driver": {
+      "native_index": "1",
+      "native_link": "2",
+      "company": "Delta",
+      "name": "Delta AS series PLC TCP",
+      "raw_span_sha256": "ff3c3bb3c7c5bad3f38b3bfabe2efbefc243a7b6ed00c7bd58b8f9aeefaf21df"
+    },
+    "regions": {
+      "BOOL": [
+        {
+          "area": "M",
+          "minimum": 0,
+          "maximum": 8191,
+          "radix": 10,
+          "access": "ReadWrite"
+        }
+      ],
+      "UINT": [
+        {
+          "area": "D",
+          "minimum": 0,
+          "maximum": 29999,
+          "radix": 10,
+          "access": "ReadWrite"
+        }
+      ]
+    },
+    "authority_sha256": "3c5fb8719089e70e619edfbac1cf2df668880364569decbca89b662f08af202d",
+    "witnesses": {
+      "BOOL": {
+        "read": {
+          "screen_id": "2",
+          "element_id": "2",
+          "owner_sha256": "ff858ab36bdbe3dda620b800ba5ef984d606a07c130a4004f4790daa8c09efdc"
+        },
+        "write": {
+          "screen_id": "2",
+          "element_id": "2",
+          "owner_sha256": "ff858ab36bdbe3dda620b800ba5ef984d606a07c130a4004f4790daa8c09efdc"
+        }
+      },
+      "UINT": {
+        "read": {
+          "screen_id": "2",
+          "element_id": "24",
+          "owner_sha256": "6b72fd6287cd59214232a0770a6e108411b010f2a9275e97010ec0bf67b42cc2"
+        },
+        "write": {
+          "screen_id": "2",
+          "element_id": "17",
+          "owner_sha256": "5f27af02b4487fe6872c83555e01349697c6b3645681b294bb8579a59795e0f0"
+        }
+      }
+    }
+  },
+  "original_neutral_tests": {
+    "executed": 14,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 0.633,
+    "exhaustive_scalar_requests": 76384,
+    "vendor_bytes_in_unit_fixtures": false
+  },
+  "actual_source_probe": {
+    "source_pins": "PASS",
+    "direct_active_read_write_witnesses": "PASS",
+    "eight_boundary_matches": "PASS",
+    "native_output": "NOT_CREATED",
+    "external_writes": 0,
+    "source_unchanged": true
+  },
+  "primary_pe": {
+    "manufacturer_filename": "Delta_AS_series_PLC_Modbus_TCP.dll",
+    "bytes": 74664,
+    "sha256": "cab7a683e8a680da5ac0da8f7049b3055e7ddf19e8697ba7f04eeeac086135d9",
+    "PE": "PE32",
+    "image_base": "0x10000000",
+    "CheckPLCValueRange_RVA": "0x2972",
+    "GetAddrValue_RVA": "0x40D9",
+    "word_table_RVA": "0xB200",
+    "word_records": 12,
+    "bit_table_RVA": "0xB2F0",
+    "bit_records": 9,
+    "stride_bytes": 20,
+    "Dword_record_RVA": "0xB228",
+    "Mbit_record_RVA": "0xB340",
+    "Dword_max_offset": 8,
+    "Mbit_max_offset": 12,
+    "radix_offset": 18,
+    "records": {
+      "M_bit": "d8c700108400000000000000ff1f000000000a00",
+      "D_word": "a0c70010020000002f7500000000000000000a00"
+    },
+    "branch_selector_and_inclusive_comparison": "Independent causal reconstruction PASS: nonzeroarg+0x10 chooses wordB200/12,zero chooses bitB2F0/9; WORD16 lower+6/upper+8 andbitlower+10/upper+12 zeroextended and0xffff, strictjl/jg reject outside inclusive bounds; Mscalar branch2b2f..76 andGetAddrValueradix10 verified.",
+    "execution": "NOT_RUN",
+    "lowerword_offset": 6,
+    "lowerbit_offset": 10,
+    "bound_read_bits": 16,
+    "minimum_warning": "record+6 is upper16bits of areaID dword here0; not independent32bitminimum"
+  },
+  "clean_target_scan": {
+    "installed_neutral_DPA_sources": 22,
+    "zero_owner_pages_found": 0,
+    "vendor_blank_source_found": false,
+    "empty_application_macro_witness": "Some manufacturer samples have0 framed lengths; not a complete clean program source",
+    "Temperature_initial_macro_bytes": 6478,
+    "Temperature_page2_open_macro_bytes": 379,
+    "Temperature_page2_cycle_macro_bytes": 931,
+    "Temperature_screen_action": "250",
+    "macro_global_removal_qualified": false
+  },
+  "numeric_guard_gaps": {
+    "source_2_17_18": "ReadMemType3/WriteMemType0; TriggerM95 andVisibleY60.5 remain explicit live dependencies",
+    "read_policy_3": "PRIMARY_STATIC_CAUSAL_RESEARCH_PENDING",
+    "source_witnesses_qualify_whole_controls": false
+  },
+  "privacy": "No installed paths/IP/credentials/manufacturer assets distributed; driver settings represented only by SHA",
+  "previous_accepted_baseline": {
+    "commit": "719fe87f6fc1b9c24779a4b99d71c0106b37701c",
+    "tests": 880,
+    "sources": 93,
+    "revision": "df0934702897adb689cd1cca6cb75eaa958d2b5a2b6fd789a72a4f7c4eb878c6"
+  },
+  "current_fullsuite": "ROOT_AND_INDEPENDENT894_PASS",
+  "computer_use": false,
+  "vendor": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "native_pixels": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "program_writer_complete": false,
+  "full_batch_ready": false,
+  "full_v1_complete": false,
+  "independent": "PURE_SOURCE_CONTRACT_PRIMARY_STATIC_AND_FULL_REGRESSION_PASS",
+  "source_code_sha256": "1a8b448aee9882c9965100a31c0d0fbad299078a41def065e185bd5a78117c9c",
+  "tests_sha256": "f2682efc131d5e1633b8c7adc9227733a502a3fa44df36da036da94f6bbbd40c",
+  "independent_focus": {
+    "reviewer": "/root/diascreen_address_review",
+    "executed": 14,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 0.6,
+    "extra_cases": 604,
+    "typed_refusals": 602,
+    "valid_authority_evidence_dict_accepts": 2,
+    "categories": {
+      "authority": 87,
+      "contract": 392,
+      "match": 33,
+      "fully_rehashed_source_witness": 92
+    },
+    "exhaustive_scalar_requests": 76384,
+    "material_open_findings": 0
+  },
+  "manual_evidence": {
+    "root": "OFFICIAL_INDEXED_DEVICE_TABLE_OBSERVED",
+    "independent": "TEXT_NOT_RETRIEVED",
+    "pdf_download_hash": null,
+    "direct_access": "UNAVAILABLE_OR_HTML_NOT_PDF"
+  },
+  "findings": [
+    {
+      "id": "DIA_ADDR_R1",
+      "trigger": "Fully rehashed authority_kind list/dict encountered set-membership",
+      "evidence": "Independent87 authoritytype probes:4 unhashable list/dict TypeError escapes beforefix",
+      "effect": "Typed refusal contract violated for malformed authority",
+      "fix": "Require str authority_kind before enumset membership; dedicated9-value regression",
+      "retest": "Independent14tests plus604probes,0escapedexception;602typednegatives and2validpositives",
+      "status": "CLOSED"
+    }
+  ],
+  "source_revision_sha256": "1e456c3bc639deb4f326a8efa80188eddd80fc023ed29f20303eb9f605191b0e",
+  "source_hash_count": 96,
+  "root_tests": {
+    "executed": 894,
+    "discovered": 894,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 300.439
+  },
+  "root_unittest_seconds": 298.632,
+  "ordered_test_ids_sha256": "5a0885a9a71f01ec15459701428b9259617bfdbc4b8bbfa4b398be6b9027dec8",
+  "ordered_test_ids_algorithm": "sha256(json.dumps(test_ids,sort_keys=True,separators=(',',':')).encode())",
+  "independent_fullsuite": {
+    "executed": 894,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 286.481,
+    "ordered_test_ids_sha256": "5a0885a9a71f01ec15459701428b9259617bfdbc4b8bbfa4b398be6b9027dec8",
+    "source_hashes_equal": true,
+    "test_ids_equal": true,
+    "stable_before_after": true,
+    "reviewer": "/root/diascreen_address_review"
+  },
+  "new_test_ids": [
+    "test_diascreen_address.DiaScreenAddressTests.test_active_source_pins_width_links_and_exact_lowering_metadata",
+    "test_diascreen_address.DiaScreenAddressTests.test_authority_raw_pin_metadata_duplicate_fields_and_nonfinite_refuse",
+    "test_diascreen_address.DiaScreenAddressTests.test_caller_mutation_returned_metadata_and_two_projects_cannot_leak",
+    "test_diascreen_address.DiaScreenAddressTests.test_canonical_prefix_station_decimal_grammar_and_bounded_operands",
+    "test_diascreen_address.DiaScreenAddressTests.test_contract_shape_primitive_types_extra_missing_and_recursive_data",
+    "test_diascreen_address.DiaScreenAddressTests.test_every_declared_scalar_address_and_both_directions",
+    "test_diascreen_address.DiaScreenAddressTests.test_existing_b_namespace_cannot_accept_new_dia_descriptor",
+    "test_diascreen_address.DiaScreenAddressTests.test_readonly_region_refuses_write_and_can_coexist_with_source_write_witness",
+    "test_diascreen_address.DiaScreenAddressTests.test_readtype3_never_becomes_direct_read_witness_or_native_output",
+    "test_diascreen_address.DiaScreenAddressTests.test_region_shape_overlap_cross_type_boolean_bounds_and_access",
+    "test_diascreen_address.DiaScreenAddressTests.test_rehashed_authority_kind_nonstring_values_have_typed_refusal",
+    "test_diascreen_address.DiaScreenAddressTests.test_rehashed_source_with_wrong_declared_body_length_is_not_qualified",
+    "test_diascreen_address.DiaScreenAddressTests.test_source_model_version_body_driver_and_witness_full_extent_drift",
+    "test_diascreen_address.DiaScreenAddressTests.test_wrong_datatype_area_outside_bounds_and_unqualified_bit_grammar"
+  ],
+  "review_artifact": {
+    "path": "reports/DIASCREEN_AS_ADDRESS_REVIEW.md",
+    "sha256": "b47abfb50f9e2b90cd77a5a39136b3371b8d83c42628de53f36d9bef51b1a9d0"
+  }
+}

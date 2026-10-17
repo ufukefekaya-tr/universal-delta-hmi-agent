@@ -1,0 +1,272 @@
+{
+  "schema_version": 1,
+  "scope": "BOUNDED_MACRO_AND_RESOURCE_DEVELOPMENT_NOT_FULL_V1",
+  "status": "OFFLINE_PASS",
+  "test_revision_sha256": "c25e69fe9a6401e4d24a0b036345b5978d7478eb90581320f1b3652689d41931",
+  "source_hashes": {
+    "src/universal_hmi/__init__.py": "0db3fbb84952385b48986a224db88e67609945e5d5ac8708bdee50c8e8837035",
+    "src/universal_hmi/cli.py": "fac2fb4b0abbaaa7d55afd9a1bdecd22c480d3a0ac962cf4b065511a39895e92",
+    "src/universal_hmi/errors.py": "f0424fc7333cc3cd2c84ad02fbfb5b6a5ef8daa5eae6f335eedc6e28b8f25a45",
+    "src/universal_hmi/mcp_server.py": "513343f6716cd196195b40efbc32755a7df1c830129c204f2e3d5df23deeaf0b",
+    "src/universal_hmi/model.py": "995b38bff239b6db89066c93b6c65388fc4154ba595cbb25f3be19d358050243",
+    "src/universal_hmi/native/__init__.py": "eb69c153cdbdf3f483bd618889dc78900b79016bfd6aec5bda2f10794d0d9cf0",
+    "src/universal_hmi/native/codec.py": "c8db8ebc25d74aa20c97dbaa7602e3d30a8b5d2d464b84ae59f6a9c26c767d06",
+    "src/universal_hmi/native/identity.py": "cef9007cb3f9ad3b2f5e1c2c2350a878c1c6c24a1e5988389cad92abe540c8cf",
+    "src/universal_hmi/native/macro_semantics.py": "b867861c58283214bbc4566d8e93227a57c83bb1eb9470f243688f3ec5b752e8",
+    "src/universal_hmi/native/macros.py": "4c4d0ea62d4d802264691eedac1865bc7ba606be978246bb48b5b3d352fa1af9",
+    "src/universal_hmi/native/numeric.py": "facc48b91377057ebcd9ecb2bf9ab1d552364480a3ec4ef890230310c903796a",
+    "src/universal_hmi/native/records.py": "c0fb8bbba9d020ae07de71c960d8b0ec591f8a395b96966664e530789734c2d2",
+    "src/universal_hmi/native/resources.py": "e0eedf68dc89aeffa072ae4c707615a99431cd6fe9866606abb034b0222766fc",
+    "src/universal_hmi/preview.py": "d389335be8948c761eae2a8b1d4a8320849e24ca2847d485f4a4815e9fbf0a71",
+    "src/universal_hmi/service.py": "025d2bfbe9992b97b9c2ac197bbb39fc3ec23585dcd1ec3846cb5f6357b3adb9",
+    "src/universal_hmi/validation.py": "c132566c9a5de06507016b0fb65028f9b171c232e5ee0257f830495ed4d597e8",
+    "tests/test_design.py": "3ba7d2725b8e7660eaf3951ec0414b40e5834f16600e6f2dbfe0c91d53c88f80",
+    "tests/test_governance.py": "93f255cd8b2026c567b6886a12f0582c545c98e9cbf1ba2b54b788eca6517628",
+    "tests/test_native.py": "f6679fb4d9f42eca53cd8ca71f9b1cb0641bf93dfce2b4f807ae38d6472a8540",
+    "tests/test_resources.py": "6771af585209156341d2eef0caaa9b8d6aba158cb3b1b22db5a0b15cf52364b3",
+    "tests/test_service.py": "0452bcfc37b285e7e76a62ed6bdc4773624b50dc0bd66330918b17ec83022182",
+    "tests/test_stdio.py": "aed9f6abd0403b69a67caf1e497e83ba43b6eba0c5bd653da3597f1fed0b3cbf",
+    "profiles/dop_110is_diascreen.json": "72b5e04f3435e488bfd6c23d7aba3915617de36d27972627d7782b8d8a050bf9",
+    "profiles/dop_b07s411_dopsoft2.json": "ae052c6c7208ad4c38fee47abe71ea3388c7d0bb902851b67544b7ca0133b7a1",
+    "profiles/synthetic_diascreen.json": "61dc8c739a9c1cc3e64cbb2bc6de06f6063ef6251dce03ef0ea29045c25b773d",
+    "profiles/synthetic_dopsoft2.json": "1d8a51fc5644b8c70fec46b1505100126105ec4de69b65b92411c26e5514f7cf",
+    "tools/_governance.py": "b0fab8b43fa2be055743fd7c46a0239357cfa17c3af164a8fc3ea5dc30b7c209",
+    "tools/check_repo.py": "4113425ec33eddad3e9e920470a96a65421ebfb99f918c8e170e1c3b6006884e",
+    "tools/session_guard.py": "7b3a8baedbd528aabbb3c77f69bfd1bbb8ffb5079ba726bb3597cf233dbdaaff",
+    "scripts/build_manifest.py": "d3735a80d523b7fe83e0dfef14e51922060b7f415370065e4fc3a2cce33e2ca8",
+    "scripts/build_previews.py": "608f007c469460ba79ef69323b308e80704fcd28bb5ccdd94309906cba19a8d4",
+    "scripts/build_profiles.py": "2dd35eb99e59bb1e183c4f9e9816fba75970b228d7f00ab9b9bed2215cadecc5",
+    "scripts/codex_config.toml.example": "20171fd77d09b6d52f9253c65816d14617753a88b6ae51eea1cad2b59dc31ffa",
+    "scripts/configure_mcp.py": "72b5a76a64582dc08dd9eb771e7233f21659ce6dae99d1c845ba8767f44fa2bc",
+    "scripts/preview_smoke.cjs": "58076b2f5dfbf70e15eaa1152eb20e72609d24f59dca9b728b0209ddaa6864e8",
+    "scripts/relocation_test.py": "f6020a59b975296ff32cf184586d440cbc723952b9665bed968df2b31fb5c446",
+    "scripts/setup.ps1": "d9a68842d2a446cb8439b5ba6de60ffbf45a1aa8f3f769bf187bebf3c72cb415",
+    "scripts/setup.sh": "e3c4d18c74f300f6bbc5f757b0385775aa86abfbf7b03df3c15db3919b12a2bc",
+    "scripts/vendor_probe.py": "1036ed0f8b89974670fbd25481244e54ca9c7d913af40ade617a8ab96765af13",
+    "scripts/verify.py": "b386127db5b933a79ddf27f4f66b08bde3de3c9afaf4594ceb0c0254d25d084b"
+  },
+  "root_tests": {
+    "executed": 225,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 27.063
+  },
+  "independent_review": {
+    "reviewer": "/root/emitter_counterreview",
+    "read_only": true,
+    "executed": 225,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 25.706,
+    "suite_revision_before_script_only_delta": "d5499f88054a757a3939995bcc51233898521faba5682c9b9767e315c6135c54",
+    "script_only_delta_review": {
+      "path": "scripts/relocation_test.py",
+      "sha256": "f6020a59b975296ff32cf184586d440cbc723952b9665bed968df2b31fb5c446",
+      "independent_escaped_URI_and_case_checks": "PASS"
+    },
+    "review_report": "NATIVE_MACRO_ALARM_REVIEW.md",
+    "important_open_findings": 0
+  },
+  "implemented": [
+    "Exact source-local immutable program/line SHA and full descriptor/flags donor macro generation",
+    "Internal UINT/UDINT/DINT assignment, BOOL bit on/off, nested UINT equality conditions in public synthetic IR; low-level add separate",
+    "Startup/clock/button native owner, trigger and raw companion schedule mappings bound to approval; no guessed clock interval",
+    "Complete record byte identity for semantic macro no-op; pure reopen/semantic verification after change",
+    "Reject undeclared macros/schedule/resource changes even with explicit or no-op public plans",
+    "Bounded global Alarm parsing with mechanically validated known suffix; read-only diagnostics for opaque/malformed resources",
+    "Exactly one atomic global Alarm update operation: existing qualified scalar, text and paired typed limit fields; no missing entry creation"
+  ],
+  "findings_closed": [
+    {
+      "id": "M1",
+      "severity": "IMPORTANT",
+      "trigger": "Semantic no-op with vendor whitespace, blank lines and native length spelling",
+      "evidence": "Independent probe showed same-tree macro rebuilt and lost bytes",
+      "effect": "Unchanged native source was rewritten",
+      "fix": "Return complete original macro Record.bytes() for same semantic tree; verifier requires byte identity",
+      "retest": [
+        "test_native.NativeTests.test_macro_semantic_noop_preserves_blank_lines_case_spacing_and_compression"
+      ],
+      "independent_retest": "PASS"
+    },
+    {
+      "id": "A1",
+      "severity": "IMPORTANT",
+      "trigger": "Unknown ASCII Picture.MysterySize suffix plus END",
+      "evidence": "Unknown frame originally accepted as scalar and global ownership marked complete",
+      "effect": "Mutation could bypass unsupported framing",
+      "fix": "Only observed scalar/frame whitelist can prove suffix traversal; unknown content read-only",
+      "retest": [
+        "test_resources.ResourceTests.test_unknown_ascii_size_suffix_cannot_qualify",
+        "test_resources.ResourceTests.test_unknown_ascii_scalar_suffix_cannot_qualify"
+      ],
+      "independent_retest": "PASS"
+    },
+    {
+      "id": "A2",
+      "severity": "IMPORTANT",
+      "trigger": "Update minimum while untouched maximum exceeds storage width or disagrees with pair storage",
+      "evidence": "Retained 65536 with16unsigned storage initially survived",
+      "effect": "Saved limit pair could contradict native storage",
+      "fix": "Require shared pair kind/storage contract and validate both final members including untouched partner",
+      "retest": [
+        "test_resources.ResourceTests.test_retained_pair_limit_width_is_checked",
+        "test_resources.ResourceTests.test_conflicting_pair_storage_is_rejected"
+      ],
+      "independent_retest": "PASS"
+    }
+  ],
+  "current_real_macro_holdouts": {
+    "implementation_sha256": "b867861c58283214bbc4566d8e93227a57c83bb1eb9470f243688f3ec5b752e8",
+    "passed": 2,
+    "memory_only": true,
+    "source_unchanged": true,
+    "only_target_macro_record_changed": true,
+    "exact_same_tree_noop": true,
+    "source_sha256": "fc079f74ed9b34e2e698b0c65c95c4f914983594f658cadc72e1ee4d97493ed5",
+    "cases": [
+      {
+        "owner": {
+          "kind": "application"
+        },
+        "field": "InitialMacroLen",
+        "lines": 111,
+        "candidate_sha256": "32c51cc8d448dfaeb063f56b84a3b47b0d64bd1f5477ef0a509c0ab476f8a68a"
+      },
+      {
+        "owner": {
+          "kind": "element",
+          "screen_id": 9,
+          "element_id": 4
+        },
+        "field": "BeforeExecMacroLen",
+        "candidate_sha256": "172c54664a152117617eabc7ff4fb3f2c96dd06a342830115bb8d6390b20d357"
+      }
+    ],
+    "previous_scan": {
+      "passed": 35,
+      "explicit_rejects": 27,
+      "scope": "Historical pre-byte-noop-fix scan, not counted as35 current-source proofs",
+      "complete_case_manifest_saved": false
+    }
+  },
+  "current_real_resource_holdouts": {
+    "implementation_sha256": "e0eedf68dc89aeffa072ae4c707615a99431cd6fe9866606abb034b0222766fc",
+    "parse_and_exact_noop_count": 23,
+    "complete_source_manifest_saved": false,
+    "limitation": "Counts observed in memory; reproducible artifact-bound mutation proof limited to three sources below",
+    "memory_only": true,
+    "source_unchanged": true,
+    "only_fields_changed": [
+      "AlarmEnable001",
+      "wMessageLen001-000"
+    ],
+    "unknown_records_prefix_suffix_preserved": true,
+    "cases": [
+      {
+        "source": "DIAScreen Alarm EN",
+        "source_sha256": "ae60464b551a5f773871910c180ccd72fdc63dc5123a76a17c16ab50bd94b8be",
+        "candidate_sha256": "9caf075e4e1239f59ea002d4096fc6523f37fcc62b3a7ed1d4a771747e824a5c"
+      },
+      {
+        "source": "DIAScreen FullDemo",
+        "source_sha256": "fc079f74ed9b34e2e698b0c65c95c4f914983594f658cadc72e1ee4d97493ed5",
+        "candidate_sha256": "4c9fea85cb63361ff154e54bc3d8f598649ff803eb7f3e9a60132c02a187f1cc"
+      },
+      {
+        "source": "Public author GPL B03E211",
+        "source_sha256": "07d90a3900cb86e994b55a467f594809e4ffe1e0681f329d205ff26b3b688f90",
+        "candidate_sha256": "8ba587ef81ecc028c702f3945767098e7707308519e80b34c1d33b35c38f26b6"
+      }
+    ]
+  },
+  "portability_current_revision": {
+    "status": "OFFLINE_PASS",
+    "source_commit": "55ef69390bb51fabfba5f1603e9b8477488a47b1",
+    "test_revision_sha256": "c25e69fe9a6401e4d24a0b036345b5978d7478eb90581320f1b3652689d41931",
+    "executed": 225,
+    "source_hashes_checked": 40,
+    "evidence": "relocation_verification.json",
+    "linux_runtime": "NOT_RUN",
+    "macos_runtime": "NOT_RUN",
+    "independent_audit": "PASS",
+    "lock_pins_checked": 30,
+    "unique_test_ids_checked": 225,
+    "report_paths_host_neutral": true,
+    "new_checkout_source_import_verified": true,
+    "physical_host": "SAME_WINDOWS_HOST_SEPARATE_INDEPENDENT_CHECKOUT"
+  },
+  "unchanged_conceptual_renderer": {
+    "sha256": "d389335be8948c761eae2a8b1d4a8320849e24ca2847d485f4a4815e9fbf0a71",
+    "reviews": [
+      "FIRST_AESTHETIC.md",
+      "SECOND_AESTHETIC.md"
+    ],
+    "new_native_visual_acceptance": "NOT_RUN"
+  },
+  "real_production_gate": "PRODUCTION_EMISSION_PENDING",
+  "open": [
+    "Exact selected-model neutral source and external driver/operand calibration",
+    "Full page/style/layer/label/unit compiler",
+    "Public Alarm IR, active strip/current table/date-time history and native view dependency compiler",
+    "External/alias/REAL/TIME macros, comparisons other than equality",
+    "Two real native common pilot",
+    "Human vendor compile/simulation and physical acceptance",
+    "Linux/macOS runtime NOT_RUN"
+  ],
+  "vendor_compile": "NOT_RUN",
+  "physical_test": "NOT_RUN",
+  "vendor_assets_redistributed": false,
+  "both_families_vendor_qualified": false,
+  "full_v1_complete": false,
+  "independent_real_resource_spotchecks": {
+    "source_sha256s": [
+      "ae60464b551a5f773871910c180ccd72fdc63dc5123a76a17c16ab50bd94b8be",
+      "7f35b5fd05537106b46a9791a426a1b3e3a59f8afa1f870595e9c0fd75e24471",
+      "fc079f74ed9b34e2e698b0c65c95c4f914983594f658cadc72e1ee4d97493ed5"
+    ],
+    "whole_file_and_tail_exact_noop": true,
+    "exact_one_message_changes": 2,
+    "history_empty_message": "NOT_APPLICABLE",
+    "memory_only": true
+  },
+  "independent_real_macro_noop_spotchecks": {
+    "source_sha256": "fc079f74ed9b34e2e698b0c65c95c4f914983594f658cadc72e1ee4d97493ed5",
+    "passed": 3,
+    "explicit_rejected_preceding_programs": 7,
+    "scope": "Research decoder range only; not exact selected-profile bounds",
+    "cases": [
+      {
+        "owner": {
+          "kind": "screen",
+          "screen_id": 4
+        },
+        "field": "OpenMacroLen",
+        "lines": 16
+      },
+      {
+        "owner": {
+          "kind": "element",
+          "screen_id": 4,
+          "element_id": 7
+        },
+        "field": "ButtonOnMacroLen",
+        "lines": 1
+      },
+      {
+        "owner": {
+          "kind": "element",
+          "screen_id": 4,
+          "element_id": 25
+        },
+        "field": "ButtonOnMacroLen",
+        "lines": 1
+      }
+    ],
+    "memory_only": true,
+    "source_unchanged": true
+  },
+  "source_commit": "55ef69390bb51fabfba5f1603e9b8477488a47b1"
+}

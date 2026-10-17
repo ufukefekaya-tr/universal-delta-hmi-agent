@@ -1,0 +1,121 @@
+{
+  "scope": "COMMON_CONCEPTUAL_PREVIEW_ONLY",
+  "status": "OFFLINE_PASS",
+  "initial": [
+    "1.23",
+    "12.3"
+  ],
+  "checks": [
+    {
+      "raw": "0",
+      "expected": [
+        "0.00",
+        "0.0"
+      ],
+      "actual": [
+        "0.00",
+        "0.0"
+      ]
+    },
+    {
+      "raw": "3",
+      "expected": [
+        "0.03",
+        "0.3"
+      ],
+      "actual": [
+        "0.03",
+        "0.3"
+      ]
+    },
+    {
+      "raw": "29",
+      "expected": [
+        "0.29",
+        "2.9"
+      ],
+      "actual": [
+        "0.29",
+        "2.9"
+      ]
+    },
+    {
+      "raw": "123",
+      "expected": [
+        "1.23",
+        "12.3"
+      ],
+      "actual": [
+        "1.23",
+        "12.3"
+      ]
+    },
+    {
+      "raw": "999",
+      "expected": [
+        "9.99",
+        "99.9"
+      ],
+      "actual": [
+        "9.99",
+        "99.9"
+      ]
+    },
+    {
+      "raw": "1000",
+      "expected": [
+        "UNKNOWN",
+        "UNKNOWN"
+      ],
+      "actual": [
+        "UNKNOWN",
+        "UNKNOWN"
+      ]
+    },
+    {
+      "raw": "0.29",
+      "expected": [
+        "UNKNOWN",
+        "UNKNOWN"
+      ],
+      "actual": [
+        "UNKNOWN",
+        "UNKNOWN"
+      ]
+    },
+    {
+      "raw": "65536",
+      "expected": [
+        "UNKNOWN",
+        "UNKNOWN"
+      ],
+      "actual": [
+        "UNKNOWN",
+        "UNKNOWN"
+      ]
+    },
+    {
+      "quality": "stale",
+      "actual": [
+        "UNKNOWN",
+        "UNKNOWN"
+      ]
+    },
+    {
+      "quality": "invalid",
+      "actual": [
+        "UNKNOWN",
+        "UNKNOWN"
+      ]
+    }
+  ],
+  "shared_tag_values": "RAW_INTEGER",
+  "native_render": "NOT_RUN",
+  "vendor": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "errors": [],
+  "network": [],
+  "test_revision_sha256": "c9e2de3e8c2029f97ef2883ad117a69e7a7fd6ba5bb8dcbda8a98a0e111631be",
+  "preview_sha256": "e2023da25e6e48279359a048d65f999c3848b666c14ecc37c7914fec09d19e76",
+  "checker_sha256": "7f62ba587bc3b801890ff55c225be672ccb6ee3cb8dadd77fecd6806fb97d94f"
+}

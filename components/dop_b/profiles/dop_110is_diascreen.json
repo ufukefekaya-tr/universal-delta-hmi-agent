@@ -1,0 +1,39 @@
+{
+  "id": "dop_110is_diascreen",
+  "family": "delta_diascreen",
+  "model": "DOP-110IS",
+  "model_id": "268505092",
+  "editor_version": "UNVERIFIED",
+  "target_editor": "DIAScreen",
+  "resolution": [
+    1024,
+    600
+  ],
+  "driver": "UNVERIFIED",
+  "fixture_kind": "vendor",
+  "numeric_types": [],
+  "capabilities": {
+    "text": "UNVERIFIED",
+    "button": "UNVERIFIED",
+    "numeric_input": "UNVERIFIED",
+    "numeric_display": "UNVERIFIED",
+    "indicator": "UNVERIFIED",
+    "goto": "UNVERIFIED",
+    "alarm_strip": "UNVERIFIED",
+    "alarm_table": "UNVERIFIED",
+    "alarm_history": "UNVERIFIED",
+    "alarms": "UNVERIFIED",
+    "macros": "UNVERIFIED",
+    "macro_trigger:startup": "UNVERIFIED",
+    "macro_trigger:clock": "UNVERIFIED",
+    "macro_trigger:button": "UNVERIFIED",
+    "macro_op:assign": "UNVERIFIED",
+    "macro_op:bit_on": "UNVERIFIED",
+    "macro_op:bit_off": "UNVERIFIED",
+    "macro_op:if": "UNVERIFIED"
+  },
+  "native_schema": {
+    "qualified": false
+  },
+  "limitation": "Root-selected qualification target. Await fresh exact-model vendor fixtures, calibrated fields and human compile/emulator/panel evidence."
+}

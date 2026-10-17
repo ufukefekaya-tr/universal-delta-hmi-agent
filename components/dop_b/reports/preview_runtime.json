@@ -1,0 +1,3410 @@
+[
+  {
+    "size": "800x480",
+    "variant": "0",
+    "scope": "CONCEPTUAL_ONLY",
+    "browser": "154.0.8037.99",
+    "page_errors": [],
+    "network_requests": [],
+    "initial": "Machine overview\nRUN FEEDBACK\nStopped\nACTUAL SPEED\n0.0\nrpm\nSPEED SETPOINT\n150.0\nrpm\nREQUESTS\nRUN REQUEST\nRequest clear\nSTOP REQUEST\nRequest clear\nRUN REQUEST STATE\nClear\nALARMS · 0 ACTIVE\nNo active alarms",
+    "forced_stale_unknown": true,
+    "width": 800,
+    "height": 480,
+    "fit": [
+      {
+        "id": "page_title",
+        "fill": "rgb(16, 27, 42)",
+        "content": {
+          "left": 206,
+          "right": 856,
+          "top": 271,
+          "bottom": 307
+        },
+        "text": [
+          {
+            "class": "label",
+            "text": "Machine overview",
+            "font_px": 26,
+            "bounds": [
+              {
+                "left": 206,
+                "right": 412.5,
+                "top": 271.4375,
+                "bottom": 306.4375
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "run_status",
+        "fill": "rgb(39, 56, 77)",
+        "content": {
+          "left": 226,
+          "right": 420,
+          "top": 361,
+          "bottom": 445
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "RUN FEEDBACK",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 226,
+                "right": 309.78125,
+                "top": 382.5,
+                "bottom": 397.5
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Stopped",
+            "font_px": 18,
+            "bounds": [
+              {
+                "left": 226,
+                "right": 294.53125,
+                "top": 399.6875,
+                "bottom": 423.6875
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "speed_value",
+        "fill": "rgb(27, 41, 59)",
+        "content": {
+          "left": 472,
+          "right": 670,
+          "top": 361,
+          "bottom": 445
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "ACTUAL SPEED",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 472,
+                "right": 552.6875,
+                "top": 375.90625,
+                "bottom": 390.90625
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "0.0",
+            "font_px": 30,
+            "bounds": [
+              {
+                "left": 472,
+                "right": 512.546875,
+                "top": 392.09375,
+                "bottom": 432.09375
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "unit",
+            "text": "rpm",
+            "font_px": 13,
+            "bounds": [
+              {
+                "left": 522.546875,
+                "right": 545.90625,
+                "top": 410.09375,
+                "bottom": 427.09375
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "speed_input",
+        "fill": "rgb(27, 41, 59)",
+        "content": {
+          "left": 722,
+          "right": 926,
+          "top": 361,
+          "bottom": 445
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "SPEED SETPOINT",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 722,
+                "right": 813.515625,
+                "top": 375.90625,
+                "bottom": 390.90625
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "150.0",
+            "font_px": 30,
+            "bounds": [
+              {
+                "left": 722,
+                "right": 795.859375,
+                "top": 392.09375,
+                "bottom": 432.09375
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "unit",
+            "text": "rpm",
+            "font_px": 13,
+            "bounds": [
+              {
+                "left": 805.859375,
+                "right": 829.21875,
+                "top": 410.09375,
+                "bottom": 427.09375
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "controls_title",
+        "fill": "rgb(16, 27, 42)",
+        "content": {
+          "left": 206,
+          "right": 856,
+          "top": 479,
+          "bottom": 501
+        },
+        "text": [
+          {
+            "class": "label",
+            "text": "REQUESTS",
+            "font_px": 12,
+            "bounds": [
+              {
+                "left": 206,
+                "right": 261.421875,
+                "top": 481.28125,
+                "bottom": 497.28125
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "run_button",
+        "fill": "rgb(39, 56, 77)",
+        "content": {
+          "left": 223,
+          "right": 419,
+          "top": 526,
+          "bottom": 596
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "RUN REQUEST",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 223,
+                "right": 300.703125,
+                "top": 540.5,
+                "bottom": 555.5
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Request clear",
+            "font_px": 18,
+            "bounds": [
+              {
+                "left": 223,
+                "right": 332.21875,
+                "top": 557.6875,
+                "bottom": 581.6875
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "stop_button",
+        "fill": "rgb(39, 56, 77)",
+        "content": {
+          "left": 473,
+          "right": 669,
+          "top": 526,
+          "bottom": 596
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "STOP REQUEST",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 473,
+                "right": 554.53125,
+                "top": 540.5,
+                "bottom": 555.5
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Request clear",
+            "font_px": 18,
+            "bounds": [
+              {
+                "left": 473,
+                "right": 582.21875,
+                "top": 557.6875,
+                "bottom": 581.6875
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "request_state",
+        "fill": "rgb(39, 56, 77)",
+        "content": {
+          "left": 726,
+          "right": 926,
+          "top": 525,
+          "bottom": 597
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "RUN REQUEST STATE",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 726,
+                "right": 839.109375,
+                "top": 540.5,
+                "bottom": 555.5
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Clear",
+            "font_px": 18,
+            "bounds": [
+              {
+                "left": 726,
+                "right": 767.515625,
+                "top": 557.6875,
+                "bottom": 581.6875
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "alarm_summary",
+        "fill": "rgb(27, 41, 59)",
+        "content": {
+          "left": 222,
+          "right": 926,
+          "top": 643,
+          "bottom": 703
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "ALARMS · 0 ACTIVE",
+            "font_px": 10,
+            "bounds": [
+              {
+                "left": 222,
+                "right": 318.625,
+                "top": 655.125,
+                "bottom": 669.125
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "No active alarms",
+            "font_px": 15,
+            "bounds": [
+              {
+                "left": 222,
+                "right": 335.28125,
+                "top": 670.125,
+                "bottom": 690.125
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      }
+    ],
+    "alarm": {
+      "active": false,
+      "unknown": false,
+      "fill": "rgb(27, 41, 59)",
+      "title": "ALARMS · 0 ACTIVE",
+      "value": "No active alarms",
+      "font_px": 15
+    },
+    "layout_errors": [],
+    "quality": [
+      "valid",
+      "valid",
+      "valid",
+      "valid",
+      "valid",
+      "valid"
+    ]
+  },
+  {
+    "size": "800x480",
+    "variant": "1",
+    "scope": "CONCEPTUAL_ONLY",
+    "browser": "154.0.8037.99",
+    "page_errors": [],
+    "network_requests": [],
+    "initial": "Machine overview\nRUN FEEDBACK\nRunning\nACTUAL SPEED\n125.5\nrpm\nSPEED SETPOINT\n150.0\nrpm\nREQUESTS\nRUN REQUEST\nRequest active\nSTOP REQUEST\nRequest clear\nRUN REQUEST STATE\nRequested\nACTIVE ALARMS · 1\nSample condition requires inspection",
+    "forced_stale_unknown": true,
+    "width": 800,
+    "height": 480,
+    "fit": [
+      {
+        "id": "page_title",
+        "fill": "rgb(16, 27, 42)",
+        "content": {
+          "left": 206,
+          "right": 856,
+          "top": 271,
+          "bottom": 307
+        },
+        "text": [
+          {
+            "class": "label",
+            "text": "Machine overview",
+            "font_px": 26,
+            "bounds": [
+              {
+                "left": 206,
+                "right": 412.5,
+                "top": 271.4375,
+                "bottom": 306.4375
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "run_status",
+        "fill": "rgb(37, 107, 88)",
+        "content": {
+          "left": 226,
+          "right": 420,
+          "top": 361,
+          "bottom": 445
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "RUN FEEDBACK",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 226,
+                "right": 309.78125,
+                "top": 382.5,
+                "bottom": 397.5
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Running",
+            "font_px": 18,
+            "bounds": [
+              {
+                "left": 226,
+                "right": 294.765625,
+                "top": 399.6875,
+                "bottom": 423.6875
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "speed_value",
+        "fill": "rgb(27, 41, 59)",
+        "content": {
+          "left": 472,
+          "right": 670,
+          "top": 361,
+          "bottom": 445
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "ACTUAL SPEED",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 472,
+                "right": 552.6875,
+                "top": 375.90625,
+                "bottom": 390.90625
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "125.5",
+            "font_px": 30,
+            "bounds": [
+              {
+                "left": 472,
+                "right": 545.859375,
+                "top": 392.09375,
+                "bottom": 432.09375
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "unit",
+            "text": "rpm",
+            "font_px": 13,
+            "bounds": [
+              {
+                "left": 555.859375,
+                "right": 579.21875,
+                "top": 410.09375,
+                "bottom": 427.09375
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "speed_input",
+        "fill": "rgb(27, 41, 59)",
+        "content": {
+          "left": 722,
+          "right": 926,
+          "top": 361,
+          "bottom": 445
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "SPEED SETPOINT",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 722,
+                "right": 813.515625,
+                "top": 375.90625,
+                "bottom": 390.90625
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "150.0",
+            "font_px": 30,
+            "bounds": [
+              {
+                "left": 722,
+                "right": 795.859375,
+                "top": 392.09375,
+                "bottom": 432.09375
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "unit",
+            "text": "rpm",
+            "font_px": 13,
+            "bounds": [
+              {
+                "left": 805.859375,
+                "right": 829.21875,
+                "top": 410.09375,
+                "bottom": 427.09375
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "controls_title",
+        "fill": "rgb(16, 27, 42)",
+        "content": {
+          "left": 206,
+          "right": 856,
+          "top": 479,
+          "bottom": 501
+        },
+        "text": [
+          {
+            "class": "label",
+            "text": "REQUESTS",
+            "font_px": 12,
+            "bounds": [
+              {
+                "left": 206,
+                "right": 261.421875,
+                "top": 481.28125,
+                "bottom": 497.28125
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "run_button",
+        "fill": "rgb(36, 104, 157)",
+        "content": {
+          "left": 223,
+          "right": 419,
+          "top": 526,
+          "bottom": 596
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "RUN REQUEST",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 223,
+                "right": 300.703125,
+                "top": 540.5,
+                "bottom": 555.5
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Request active",
+            "font_px": 18,
+            "bounds": [
+              {
+                "left": 223,
+                "right": 341.046875,
+                "top": 557.6875,
+                "bottom": 581.6875
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "stop_button",
+        "fill": "rgb(39, 56, 77)",
+        "content": {
+          "left": 473,
+          "right": 669,
+          "top": 526,
+          "bottom": 596
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "STOP REQUEST",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 473,
+                "right": 554.53125,
+                "top": 540.5,
+                "bottom": 555.5
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Request clear",
+            "font_px": 18,
+            "bounds": [
+              {
+                "left": 473,
+                "right": 582.21875,
+                "top": 557.6875,
+                "bottom": 581.6875
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "request_state",
+        "fill": "rgb(36, 104, 157)",
+        "content": {
+          "left": 726,
+          "right": 926,
+          "top": 525,
+          "bottom": 597
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "RUN REQUEST STATE",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 726,
+                "right": 839.109375,
+                "top": 540.5,
+                "bottom": 555.5
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Requested",
+            "font_px": 18,
+            "bounds": [
+              {
+                "left": 726,
+                "right": 811.78125,
+                "top": 557.6875,
+                "bottom": 581.6875
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "alarm_summary",
+        "fill": "rgb(59, 46, 34)",
+        "content": {
+          "left": 226,
+          "right": 926,
+          "top": 643,
+          "bottom": 703
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "ACTIVE ALARMS · 1",
+            "font_px": 10,
+            "bounds": [
+              {
+                "left": 226,
+                "right": 322.625,
+                "top": 655.125,
+                "bottom": 669.125
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Sample condition requires inspection",
+            "font_px": 15,
+            "bounds": [
+              {
+                "left": 226,
+                "right": 478.546875,
+                "top": 670.125,
+                "bottom": 690.125
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      }
+    ],
+    "alarm": {
+      "active": true,
+      "unknown": false,
+      "fill": "rgb(59, 46, 34)",
+      "title": "ACTIVE ALARMS · 1",
+      "value": "Sample condition requires inspection",
+      "font_px": 15
+    },
+    "layout_errors": [],
+    "quality": [
+      "valid",
+      "valid",
+      "valid",
+      "valid",
+      "valid",
+      "valid"
+    ]
+  },
+  {
+    "size": "800x480",
+    "variant": "stale",
+    "scope": "CONCEPTUAL_ONLY",
+    "browser": "154.0.8037.99",
+    "page_errors": [],
+    "network_requests": [],
+    "initial": "Machine overview\nRUN FEEDBACK\nUNKNOWN\nSTALE\nACTUAL SPEED\nUNKNOWN\nrpm\nSTALE\nSPEED SETPOINT\nUNKNOWN\nrpm\nSTALE\nREQUESTS\nRUN REQUEST\nUNKNOWN\nSTALE\nSTOP REQUEST\nUNKNOWN\nSTALE\nRUN REQUEST STATE\nUNKNOWN\nSTALE\nALARMS\nUNKNOWN\nSTALE",
+    "forced_stale_unknown": true,
+    "width": 800,
+    "height": 480,
+    "fit": [
+      {
+        "id": "page_title",
+        "fill": "rgb(16, 27, 42)",
+        "content": {
+          "left": 206,
+          "right": 856,
+          "top": 271,
+          "bottom": 307
+        },
+        "text": [
+          {
+            "class": "label",
+            "text": "Machine overview",
+            "font_px": 26,
+            "bounds": [
+              {
+                "left": 206,
+                "right": 412.5,
+                "top": 271.4375,
+                "bottom": 306.4375
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "run_status",
+        "fill": "rgb(48, 61, 78)",
+        "content": {
+          "left": 226,
+          "right": 420,
+          "top": 361,
+          "bottom": 445
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "RUN FEEDBACK",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 226,
+                "right": 309.78125,
+                "top": 372.40625,
+                "bottom": 387.40625
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "UNKNOWN",
+            "font_px": 18,
+            "bounds": [
+              {
+                "left": 226,
+                "right": 322.078125,
+                "top": 389.59375,
+                "bottom": 413.59375
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "quality",
+            "text": "STALE",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 226,
+                "right": 258.46875,
+                "top": 418.390625,
+                "bottom": 433.390625
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "speed_value",
+        "fill": "rgb(48, 61, 78)",
+        "content": {
+          "left": 472,
+          "right": 670,
+          "top": 361,
+          "bottom": 445
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "ACTUAL SPEED",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 472,
+                "right": 552.6875,
+                "top": 365.8125,
+                "bottom": 380.8125
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "UNKNOWN",
+            "font_px": 30,
+            "bounds": [
+              {
+                "left": 472,
+                "right": 632.109375,
+                "top": 382,
+                "bottom": 422
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "unit",
+            "text": "rpm",
+            "font_px": 13,
+            "bounds": [
+              {
+                "left": 642.109375,
+                "right": 665.46875,
+                "top": 400,
+                "bottom": 417
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "quality",
+            "text": "STALE",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 472,
+                "right": 504.46875,
+                "top": 425,
+                "bottom": 440
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "speed_input",
+        "fill": "rgb(48, 61, 78)",
+        "content": {
+          "left": 722,
+          "right": 926,
+          "top": 361,
+          "bottom": 445
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "SPEED SETPOINT",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 722,
+                "right": 813.515625,
+                "top": 365.8125,
+                "bottom": 380.8125
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "UNKNOWN",
+            "font_px": 30,
+            "bounds": [
+              {
+                "left": 722,
+                "right": 882.109375,
+                "top": 382,
+                "bottom": 422
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "unit",
+            "text": "rpm",
+            "font_px": 13,
+            "bounds": [
+              {
+                "left": 892.109375,
+                "right": 915.46875,
+                "top": 400,
+                "bottom": 417
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "quality",
+            "text": "STALE",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 722,
+                "right": 754.46875,
+                "top": 425,
+                "bottom": 440
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "controls_title",
+        "fill": "rgb(16, 27, 42)",
+        "content": {
+          "left": 206,
+          "right": 856,
+          "top": 479,
+          "bottom": 501
+        },
+        "text": [
+          {
+            "class": "label",
+            "text": "REQUESTS",
+            "font_px": 12,
+            "bounds": [
+              {
+                "left": 206,
+                "right": 261.421875,
+                "top": 481.28125,
+                "bottom": 497.28125
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "run_button",
+        "fill": "rgb(48, 61, 78)",
+        "content": {
+          "left": 223,
+          "right": 419,
+          "top": 526,
+          "bottom": 596
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "RUN REQUEST",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 223,
+                "right": 300.703125,
+                "top": 530.40625,
+                "bottom": 545.40625
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "UNKNOWN",
+            "font_px": 18,
+            "bounds": [
+              {
+                "left": 223,
+                "right": 319.078125,
+                "top": 547.59375,
+                "bottom": 571.59375
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "quality",
+            "text": "STALE",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 223,
+                "right": 255.46875,
+                "top": 576.390625,
+                "bottom": 591.390625
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "stop_button",
+        "fill": "rgb(48, 61, 78)",
+        "content": {
+          "left": 473,
+          "right": 669,
+          "top": 526,
+          "bottom": 596
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "STOP REQUEST",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 473,
+                "right": 554.53125,
+                "top": 530.40625,
+                "bottom": 545.40625
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "UNKNOWN",
+            "font_px": 18,
+            "bounds": [
+              {
+                "left": 473,
+                "right": 569.078125,
+                "top": 547.59375,
+                "bottom": 571.59375
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "quality",
+            "text": "STALE",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 473,
+                "right": 505.46875,
+                "top": 576.390625,
+                "bottom": 591.390625
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "request_state",
+        "fill": "rgb(48, 61, 78)",
+        "content": {
+          "left": 726,
+          "right": 926,
+          "top": 525,
+          "bottom": 597
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "RUN REQUEST STATE",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 726,
+                "right": 839.109375,
+                "top": 530.40625,
+                "bottom": 545.40625
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "UNKNOWN",
+            "font_px": 18,
+            "bounds": [
+              {
+                "left": 726,
+                "right": 822.078125,
+                "top": 547.59375,
+                "bottom": 571.59375
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "quality",
+            "text": "STALE",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 726,
+                "right": 758.46875,
+                "top": 576.390625,
+                "bottom": 591.390625
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "alarm_summary",
+        "fill": "rgb(48, 61, 78)",
+        "content": {
+          "left": 222,
+          "right": 926,
+          "top": 643,
+          "bottom": 703
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "ALARMS",
+            "font_px": 10,
+            "bounds": [
+              {
+                "left": 222,
+                "right": 264.078125,
+                "top": 647.03125,
+                "bottom": 661.03125
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "UNKNOWN",
+            "font_px": 15,
+            "bounds": [
+              {
+                "left": 222,
+                "right": 302.0625,
+                "top": 662.03125,
+                "bottom": 682.03125
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "quality",
+            "text": "STALE",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 222,
+                "right": 254.46875,
+                "top": 683.78125,
+                "bottom": 698.78125
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      }
+    ],
+    "alarm": {
+      "active": false,
+      "unknown": true,
+      "fill": "rgb(48, 61, 78)",
+      "title": "ALARMS",
+      "value": "UNKNOWN",
+      "font_px": 15
+    },
+    "layout_errors": [],
+    "quality": [
+      "stale",
+      "stale",
+      "stale",
+      "stale",
+      "stale",
+      "stale"
+    ]
+  },
+  {
+    "size": "800x480",
+    "variant": "long",
+    "scope": "CONCEPTUAL_ONLY",
+    "browser": "154.0.8037.99",
+    "page_errors": [],
+    "network_requests": [],
+    "initial": "Machine overview\nRUN FEEDBACK\nRunning\nACTUAL SPEED\n99999999.9\nrpm\nSPEED SETPOINT\n150.0\nrpm\nREQUESTS\nRUN REQUEST\nRequest active\nSTOP REQUEST\nRequest clear\nRUN REQUEST STATE\nRequested\nACTIVE ALARMS · 1\nSample alarm with a deliberately long explanation: inspect the external sensor, acknowledge the cause and restore operation only after the condition has cleared.",
+    "forced_stale_unknown": true,
+    "width": 800,
+    "height": 480,
+    "fit": [
+      {
+        "id": "page_title",
+        "fill": "rgb(16, 27, 42)",
+        "content": {
+          "left": 206,
+          "right": 856,
+          "top": 271,
+          "bottom": 307
+        },
+        "text": [
+          {
+            "class": "label",
+            "text": "Machine overview",
+            "font_px": 26,
+            "bounds": [
+              {
+                "left": 206,
+                "right": 412.5,
+                "top": 271.4375,
+                "bottom": 306.4375
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "run_status",
+        "fill": "rgb(37, 107, 88)",
+        "content": {
+          "left": 226,
+          "right": 420,
+          "top": 361,
+          "bottom": 445
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "RUN FEEDBACK",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 226,
+                "right": 309.78125,
+                "top": 382.5,
+                "bottom": 397.5
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Running",
+            "font_px": 18,
+            "bounds": [
+              {
+                "left": 226,
+                "right": 294.765625,
+                "top": 399.6875,
+                "bottom": 423.6875
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "speed_value",
+        "fill": "rgb(27, 41, 59)",
+        "content": {
+          "left": 472,
+          "right": 670,
+          "top": 361,
+          "bottom": 445
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "ACTUAL SPEED",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 472,
+                "right": 552.6875,
+                "top": 375.90625,
+                "bottom": 390.90625
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "99999999.9",
+            "font_px": 30,
+            "bounds": [
+              {
+                "left": 472,
+                "right": 629.140625,
+                "top": 392.09375,
+                "bottom": 432.09375
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "unit",
+            "text": "rpm",
+            "font_px": 13,
+            "bounds": [
+              {
+                "left": 639.140625,
+                "right": 662.5,
+                "top": 410.09375,
+                "bottom": 427.09375
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "speed_input",
+        "fill": "rgb(27, 41, 59)",
+        "content": {
+          "left": 722,
+          "right": 926,
+          "top": 361,
+          "bottom": 445
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "SPEED SETPOINT",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 722,
+                "right": 813.515625,
+                "top": 375.90625,
+                "bottom": 390.90625
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "150.0",
+            "font_px": 30,
+            "bounds": [
+              {
+                "left": 722,
+                "right": 795.859375,
+                "top": 392.09375,
+                "bottom": 432.09375
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "unit",
+            "text": "rpm",
+            "font_px": 13,
+            "bounds": [
+              {
+                "left": 805.859375,
+                "right": 829.21875,
+                "top": 410.09375,
+                "bottom": 427.09375
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "controls_title",
+        "fill": "rgb(16, 27, 42)",
+        "content": {
+          "left": 206,
+          "right": 856,
+          "top": 479,
+          "bottom": 501
+        },
+        "text": [
+          {
+            "class": "label",
+            "text": "REQUESTS",
+            "font_px": 12,
+            "bounds": [
+              {
+                "left": 206,
+                "right": 261.421875,
+                "top": 481.28125,
+                "bottom": 497.28125
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "run_button",
+        "fill": "rgb(36, 104, 157)",
+        "content": {
+          "left": 223,
+          "right": 419,
+          "top": 526,
+          "bottom": 596
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "RUN REQUEST",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 223,
+                "right": 300.703125,
+                "top": 540.5,
+                "bottom": 555.5
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Request active",
+            "font_px": 18,
+            "bounds": [
+              {
+                "left": 223,
+                "right": 341.046875,
+                "top": 557.6875,
+                "bottom": 581.6875
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "stop_button",
+        "fill": "rgb(39, 56, 77)",
+        "content": {
+          "left": 473,
+          "right": 669,
+          "top": 526,
+          "bottom": 596
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "STOP REQUEST",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 473,
+                "right": 554.53125,
+                "top": 540.5,
+                "bottom": 555.5
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Request clear",
+            "font_px": 18,
+            "bounds": [
+              {
+                "left": 473,
+                "right": 582.21875,
+                "top": 557.6875,
+                "bottom": 581.6875
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "request_state",
+        "fill": "rgb(36, 104, 157)",
+        "content": {
+          "left": 726,
+          "right": 926,
+          "top": 525,
+          "bottom": 597
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "RUN REQUEST STATE",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 726,
+                "right": 839.109375,
+                "top": 540.5,
+                "bottom": 555.5
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Requested",
+            "font_px": 18,
+            "bounds": [
+              {
+                "left": 726,
+                "right": 811.78125,
+                "top": 557.6875,
+                "bottom": 581.6875
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "alarm_summary",
+        "fill": "rgb(59, 46, 34)",
+        "content": {
+          "left": 226,
+          "right": 926,
+          "top": 643,
+          "bottom": 703
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "ACTIVE ALARMS · 1",
+            "font_px": 10,
+            "bounds": [
+              {
+                "left": 226,
+                "right": 322.625,
+                "top": 645.75,
+                "bottom": 659.75
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Sample alarm with a deliberately long explanation: inspect the external sensor, acknowledge the cause and restore operation only after the condition has cleared.",
+            "font_px": 15,
+            "bounds": [
+              {
+                "left": 226,
+                "right": 921.859375,
+                "top": 660.75,
+                "bottom": 680.75
+              },
+              {
+                "left": 226,
+                "right": 622.65625,
+                "top": 679.5,
+                "bottom": 699.5
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      }
+    ],
+    "alarm": {
+      "active": true,
+      "unknown": false,
+      "fill": "rgb(59, 46, 34)",
+      "title": "ACTIVE ALARMS · 1",
+      "value": "Sample alarm with a deliberately long explanation: inspect the external sensor, acknowledge the cause and restore operation only after the condition has cleared.",
+      "font_px": 15
+    },
+    "layout_errors": [],
+    "quality": [
+      "valid",
+      "valid",
+      "valid",
+      "valid",
+      "valid",
+      "valid"
+    ]
+  },
+  {
+    "size": "1024x600",
+    "variant": "0",
+    "scope": "CONCEPTUAL_ONLY",
+    "browser": "154.0.8037.99",
+    "page_errors": [],
+    "network_requests": [],
+    "initial": "Machine overview\nRUN FEEDBACK\nStopped\nACTUAL SPEED\n0.0\nrpm\nSPEED SETPOINT\n150.0\nrpm\nREQUESTS\nRUN REQUEST\nRequest clear\nSTOP REQUEST\nRequest clear\nRUN REQUEST STATE\nClear\nALARMS · 0 ACTIVE\nNo active alarms",
+    "forced_stale_unknown": true,
+    "width": 1024,
+    "height": 600,
+    "fit": [
+      {
+        "id": "page_title",
+        "fill": "rgb(16, 27, 42)",
+        "content": {
+          "left": 103,
+          "right": 935,
+          "top": 276,
+          "bottom": 322
+        },
+        "text": [
+          {
+            "class": "label",
+            "text": "Machine overview",
+            "font_px": 33,
+            "bounds": [
+              {
+                "left": 103,
+                "right": 365.09375,
+                "top": 276.515625,
+                "bottom": 320.515625
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "run_status",
+        "fill": "rgb(39, 56, 77)",
+        "content": {
+          "left": 123,
+          "right": 381,
+          "top": 386,
+          "bottom": 496
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "RUN FEEDBACK",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 123,
+                "right": 206.78125,
+                "top": 417.75,
+                "bottom": 432.75
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Stopped",
+            "font_px": 23,
+            "bounds": [
+              {
+                "left": 123,
+                "right": 210.578125,
+                "top": 434.9375,
+                "bottom": 465.9375
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "speed_value",
+        "fill": "rgb(27, 41, 59)",
+        "content": {
+          "left": 439,
+          "right": 701,
+          "top": 386,
+          "bottom": 496
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "ACTUAL SPEED",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 439,
+                "right": 519.6875,
+                "top": 409.5,
+                "bottom": 424.5
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "0.0",
+            "font_px": 38,
+            "bounds": [
+              {
+                "left": 439,
+                "right": 490.359375,
+                "top": 424.6875,
+                "bottom": 475.6875
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "unit",
+            "text": "rpm",
+            "font_px": 13,
+            "bounds": [
+              {
+                "left": 500.359375,
+                "right": 523.71875,
+                "top": 451.6875,
+                "bottom": 468.6875
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "speed_input",
+        "fill": "rgb(27, 41, 59)",
+        "content": {
+          "left": 759,
+          "right": 1029,
+          "top": 386,
+          "bottom": 496
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "SPEED SETPOINT",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 759,
+                "right": 850.515625,
+                "top": 409.5,
+                "bottom": 424.5
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "150.0",
+            "font_px": 38,
+            "bounds": [
+              {
+                "left": 759,
+                "right": 852.5625,
+                "top": 424.6875,
+                "bottom": 475.6875
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "unit",
+            "text": "rpm",
+            "font_px": 13,
+            "bounds": [
+              {
+                "left": 862.5625,
+                "right": 885.921875,
+                "top": 451.6875,
+                "bottom": 468.6875
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "controls_title",
+        "fill": "rgb(16, 27, 42)",
+        "content": {
+          "left": 103,
+          "right": 935,
+          "top": 536,
+          "bottom": 564
+        },
+        "text": [
+          {
+            "class": "label",
+            "text": "REQUESTS",
+            "font_px": 15,
+            "bounds": [
+              {
+                "left": 103,
+                "right": 172.265625,
+                "top": 539.59375,
+                "bottom": 559.59375
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "run_button",
+        "fill": "rgb(39, 56, 77)",
+        "content": {
+          "left": 120,
+          "right": 380,
+          "top": 592,
+          "bottom": 685
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "RUN REQUEST",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 120,
+                "right": 197.703125,
+                "top": 615.25,
+                "bottom": 630.25
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Request clear",
+            "font_px": 23,
+            "bounds": [
+              {
+                "left": 120,
+                "right": 259.546875,
+                "top": 632.4375,
+                "bottom": 663.4375
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "stop_button",
+        "fill": "rgb(39, 56, 77)",
+        "content": {
+          "left": 440,
+          "right": 700,
+          "top": 592,
+          "bottom": 685
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "STOP REQUEST",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 440,
+                "right": 521.53125,
+                "top": 615.25,
+                "bottom": 630.25
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Request clear",
+            "font_px": 23,
+            "bounds": [
+              {
+                "left": 440,
+                "right": 579.546875,
+                "top": 632.4375,
+                "bottom": 663.4375
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "request_state",
+        "fill": "rgb(39, 56, 77)",
+        "content": {
+          "left": 763,
+          "right": 1029,
+          "top": 591,
+          "bottom": 686
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "RUN REQUEST STATE",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 763,
+                "right": 876.109375,
+                "top": 615.25,
+                "bottom": 630.25
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Clear",
+            "font_px": 23,
+            "bounds": [
+              {
+                "left": 763,
+                "right": 816.03125,
+                "top": 632.4375,
+                "bottom": 663.4375
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "alarm_summary",
+        "fill": "rgb(27, 41, 59)",
+        "content": {
+          "left": 119,
+          "right": 1029,
+          "top": 739,
+          "bottom": 817
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "ALARMS · 0 ACTIVE",
+            "font_px": 10,
+            "bounds": [
+              {
+                "left": 119,
+                "right": 215.625,
+                "top": 757.625,
+                "bottom": 771.625
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "No active alarms",
+            "font_px": 19,
+            "bounds": [
+              {
+                "left": 119,
+                "right": 262.484375,
+                "top": 771.625,
+                "bottom": 797.625
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      }
+    ],
+    "alarm": {
+      "active": false,
+      "unknown": false,
+      "fill": "rgb(27, 41, 59)",
+      "title": "ALARMS · 0 ACTIVE",
+      "value": "No active alarms",
+      "font_px": 19
+    },
+    "layout_errors": [],
+    "quality": [
+      "valid",
+      "valid",
+      "valid",
+      "valid",
+      "valid",
+      "valid"
+    ]
+  },
+  {
+    "size": "1024x600",
+    "variant": "1",
+    "scope": "CONCEPTUAL_ONLY",
+    "browser": "154.0.8037.99",
+    "page_errors": [],
+    "network_requests": [],
+    "initial": "Machine overview\nRUN FEEDBACK\nRunning\nACTUAL SPEED\n125.5\nrpm\nSPEED SETPOINT\n150.0\nrpm\nREQUESTS\nRUN REQUEST\nRequest active\nSTOP REQUEST\nRequest clear\nRUN REQUEST STATE\nRequested\nACTIVE ALARMS · 1\nSample condition requires inspection",
+    "forced_stale_unknown": true,
+    "width": 1024,
+    "height": 600,
+    "fit": [
+      {
+        "id": "page_title",
+        "fill": "rgb(16, 27, 42)",
+        "content": {
+          "left": 103,
+          "right": 935,
+          "top": 276,
+          "bottom": 322
+        },
+        "text": [
+          {
+            "class": "label",
+            "text": "Machine overview",
+            "font_px": 33,
+            "bounds": [
+              {
+                "left": 103,
+                "right": 365.09375,
+                "top": 276.515625,
+                "bottom": 320.515625
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "run_status",
+        "fill": "rgb(37, 107, 88)",
+        "content": {
+          "left": 123,
+          "right": 381,
+          "top": 386,
+          "bottom": 496
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "RUN FEEDBACK",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 123,
+                "right": 206.78125,
+                "top": 417.75,
+                "bottom": 432.75
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Running",
+            "font_px": 23,
+            "bounds": [
+              {
+                "left": 123,
+                "right": 210.875,
+                "top": 434.9375,
+                "bottom": 465.9375
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "speed_value",
+        "fill": "rgb(27, 41, 59)",
+        "content": {
+          "left": 439,
+          "right": 701,
+          "top": 386,
+          "bottom": 496
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "ACTUAL SPEED",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 439,
+                "right": 519.6875,
+                "top": 409.5,
+                "bottom": 424.5
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "125.5",
+            "font_px": 38,
+            "bounds": [
+              {
+                "left": 439,
+                "right": 532.5625,
+                "top": 424.6875,
+                "bottom": 475.6875
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "unit",
+            "text": "rpm",
+            "font_px": 13,
+            "bounds": [
+              {
+                "left": 542.5625,
+                "right": 565.921875,
+                "top": 451.6875,
+                "bottom": 468.6875
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "speed_input",
+        "fill": "rgb(27, 41, 59)",
+        "content": {
+          "left": 759,
+          "right": 1029,
+          "top": 386,
+          "bottom": 496
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "SPEED SETPOINT",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 759,
+                "right": 850.515625,
+                "top": 409.5,
+                "bottom": 424.5
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "150.0",
+            "font_px": 38,
+            "bounds": [
+              {
+                "left": 759,
+                "right": 852.5625,
+                "top": 424.6875,
+                "bottom": 475.6875
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "unit",
+            "text": "rpm",
+            "font_px": 13,
+            "bounds": [
+              {
+                "left": 862.5625,
+                "right": 885.921875,
+                "top": 451.6875,
+                "bottom": 468.6875
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "controls_title",
+        "fill": "rgb(16, 27, 42)",
+        "content": {
+          "left": 103,
+          "right": 935,
+          "top": 536,
+          "bottom": 564
+        },
+        "text": [
+          {
+            "class": "label",
+            "text": "REQUESTS",
+            "font_px": 15,
+            "bounds": [
+              {
+                "left": 103,
+                "right": 172.265625,
+                "top": 539.59375,
+                "bottom": 559.59375
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "run_button",
+        "fill": "rgb(36, 104, 157)",
+        "content": {
+          "left": 120,
+          "right": 380,
+          "top": 592,
+          "bottom": 685
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "RUN REQUEST",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 120,
+                "right": 197.703125,
+                "top": 615.25,
+                "bottom": 630.25
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Request active",
+            "font_px": 23,
+            "bounds": [
+              {
+                "left": 120,
+                "right": 270.828125,
+                "top": 632.4375,
+                "bottom": 663.4375
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "stop_button",
+        "fill": "rgb(39, 56, 77)",
+        "content": {
+          "left": 440,
+          "right": 700,
+          "top": 592,
+          "bottom": 685
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "STOP REQUEST",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 440,
+                "right": 521.53125,
+                "top": 615.25,
+                "bottom": 630.25
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Request clear",
+            "font_px": 23,
+            "bounds": [
+              {
+                "left": 440,
+                "right": 579.546875,
+                "top": 632.4375,
+                "bottom": 663.4375
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "request_state",
+        "fill": "rgb(36, 104, 157)",
+        "content": {
+          "left": 763,
+          "right": 1029,
+          "top": 591,
+          "bottom": 686
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "RUN REQUEST STATE",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 763,
+                "right": 876.109375,
+                "top": 615.25,
+                "bottom": 630.25
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Requested",
+            "font_px": 23,
+            "bounds": [
+              {
+                "left": 763,
+                "right": 872.609375,
+                "top": 632.4375,
+                "bottom": 663.4375
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "alarm_summary",
+        "fill": "rgb(59, 46, 34)",
+        "content": {
+          "left": 123,
+          "right": 1029,
+          "top": 739,
+          "bottom": 817
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "ACTIVE ALARMS · 1",
+            "font_px": 10,
+            "bounds": [
+              {
+                "left": 123,
+                "right": 219.625,
+                "top": 757.625,
+                "bottom": 771.625
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Sample condition requires inspection",
+            "font_px": 19,
+            "bounds": [
+              {
+                "left": 123,
+                "right": 442.90625,
+                "top": 771.625,
+                "bottom": 797.625
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      }
+    ],
+    "alarm": {
+      "active": true,
+      "unknown": false,
+      "fill": "rgb(59, 46, 34)",
+      "title": "ACTIVE ALARMS · 1",
+      "value": "Sample condition requires inspection",
+      "font_px": 19
+    },
+    "layout_errors": [],
+    "quality": [
+      "valid",
+      "valid",
+      "valid",
+      "valid",
+      "valid",
+      "valid"
+    ]
+  },
+  {
+    "size": "1024x600",
+    "variant": "stale",
+    "scope": "CONCEPTUAL_ONLY",
+    "browser": "154.0.8037.99",
+    "page_errors": [],
+    "network_requests": [],
+    "initial": "Machine overview\nRUN FEEDBACK\nUNKNOWN\nSTALE\nACTUAL SPEED\nUNKNOWN\nrpm\nSTALE\nSPEED SETPOINT\nUNKNOWN\nrpm\nSTALE\nREQUESTS\nRUN REQUEST\nUNKNOWN\nSTALE\nSTOP REQUEST\nUNKNOWN\nSTALE\nRUN REQUEST STATE\nUNKNOWN\nSTALE\nALARMS\nUNKNOWN\nSTALE",
+    "forced_stale_unknown": true,
+    "width": 1024,
+    "height": 600,
+    "fit": [
+      {
+        "id": "page_title",
+        "fill": "rgb(16, 27, 42)",
+        "content": {
+          "left": 103,
+          "right": 935,
+          "top": 276,
+          "bottom": 322
+        },
+        "text": [
+          {
+            "class": "label",
+            "text": "Machine overview",
+            "font_px": 33,
+            "bounds": [
+              {
+                "left": 103,
+                "right": 365.09375,
+                "top": 276.515625,
+                "bottom": 320.515625
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "run_status",
+        "fill": "rgb(48, 61, 78)",
+        "content": {
+          "left": 123,
+          "right": 381,
+          "top": 386,
+          "bottom": 496
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "RUN FEEDBACK",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 123,
+                "right": 206.78125,
+                "top": 407.65625,
+                "bottom": 422.65625
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "UNKNOWN",
+            "font_px": 23,
+            "bounds": [
+              {
+                "left": 123,
+                "right": 245.75,
+                "top": 424.84375,
+                "bottom": 455.84375
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "quality",
+            "text": "STALE",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 123,
+                "right": 155.46875,
+                "top": 459.140625,
+                "bottom": 474.140625
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "speed_value",
+        "fill": "rgb(48, 61, 78)",
+        "content": {
+          "left": 439,
+          "right": 701,
+          "top": 386,
+          "bottom": 496
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "ACTUAL SPEED",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 439,
+                "right": 519.6875,
+                "top": 399.40625,
+                "bottom": 414.40625
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "UNKNOWN",
+            "font_px": 38,
+            "bounds": [
+              {
+                "left": 439,
+                "right": 641.8125,
+                "top": 414.59375,
+                "bottom": 465.59375
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "unit",
+            "text": "rpm",
+            "font_px": 13,
+            "bounds": [
+              {
+                "left": 651.8125,
+                "right": 675.171875,
+                "top": 441.59375,
+                "bottom": 458.59375
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "quality",
+            "text": "STALE",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 439,
+                "right": 471.46875,
+                "top": 467.390625,
+                "bottom": 482.390625
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "speed_input",
+        "fill": "rgb(48, 61, 78)",
+        "content": {
+          "left": 759,
+          "right": 1029,
+          "top": 386,
+          "bottom": 496
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "SPEED SETPOINT",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 759,
+                "right": 850.515625,
+                "top": 399.40625,
+                "bottom": 414.40625
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "UNKNOWN",
+            "font_px": 38,
+            "bounds": [
+              {
+                "left": 759,
+                "right": 961.8125,
+                "top": 414.59375,
+                "bottom": 465.59375
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "unit",
+            "text": "rpm",
+            "font_px": 13,
+            "bounds": [
+              {
+                "left": 971.8125,
+                "right": 995.171875,
+                "top": 441.59375,
+                "bottom": 458.59375
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "quality",
+            "text": "STALE",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 759,
+                "right": 791.46875,
+                "top": 467.390625,
+                "bottom": 482.390625
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "controls_title",
+        "fill": "rgb(16, 27, 42)",
+        "content": {
+          "left": 103,
+          "right": 935,
+          "top": 536,
+          "bottom": 564
+        },
+        "text": [
+          {
+            "class": "label",
+            "text": "REQUESTS",
+            "font_px": 15,
+            "bounds": [
+              {
+                "left": 103,
+                "right": 172.265625,
+                "top": 539.59375,
+                "bottom": 559.59375
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "run_button",
+        "fill": "rgb(48, 61, 78)",
+        "content": {
+          "left": 120,
+          "right": 380,
+          "top": 592,
+          "bottom": 685
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "RUN REQUEST",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 120,
+                "right": 197.703125,
+                "top": 605.15625,
+                "bottom": 620.15625
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "UNKNOWN",
+            "font_px": 23,
+            "bounds": [
+              {
+                "left": 120,
+                "right": 242.75,
+                "top": 622.34375,
+                "bottom": 653.34375
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "quality",
+            "text": "STALE",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 120,
+                "right": 152.46875,
+                "top": 656.640625,
+                "bottom": 671.640625
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "stop_button",
+        "fill": "rgb(48, 61, 78)",
+        "content": {
+          "left": 440,
+          "right": 700,
+          "top": 592,
+          "bottom": 685
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "STOP REQUEST",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 440,
+                "right": 521.53125,
+                "top": 605.15625,
+                "bottom": 620.15625
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "UNKNOWN",
+            "font_px": 23,
+            "bounds": [
+              {
+                "left": 440,
+                "right": 562.75,
+                "top": 622.34375,
+                "bottom": 653.34375
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "quality",
+            "text": "STALE",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 440,
+                "right": 472.46875,
+                "top": 656.640625,
+                "bottom": 671.640625
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "request_state",
+        "fill": "rgb(48, 61, 78)",
+        "content": {
+          "left": 763,
+          "right": 1029,
+          "top": 591,
+          "bottom": 686
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "RUN REQUEST STATE",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 763,
+                "right": 876.109375,
+                "top": 605.15625,
+                "bottom": 620.15625
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "UNKNOWN",
+            "font_px": 23,
+            "bounds": [
+              {
+                "left": 763,
+                "right": 885.75,
+                "top": 622.34375,
+                "bottom": 653.34375
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "quality",
+            "text": "STALE",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 763,
+                "right": 795.46875,
+                "top": 656.640625,
+                "bottom": 671.640625
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "alarm_summary",
+        "fill": "rgb(48, 61, 78)",
+        "content": {
+          "left": 119,
+          "right": 1029,
+          "top": 739,
+          "bottom": 817
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "ALARMS",
+            "font_px": 10,
+            "bounds": [
+              {
+                "left": 119,
+                "right": 161.078125,
+                "top": 749.53125,
+                "bottom": 763.53125
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "UNKNOWN",
+            "font_px": 19,
+            "bounds": [
+              {
+                "left": 119,
+                "right": 220.40625,
+                "top": 763.53125,
+                "bottom": 789.53125
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "quality",
+            "text": "STALE",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 119,
+                "right": 151.46875,
+                "top": 791.28125,
+                "bottom": 806.28125
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      }
+    ],
+    "alarm": {
+      "active": false,
+      "unknown": true,
+      "fill": "rgb(48, 61, 78)",
+      "title": "ALARMS",
+      "value": "UNKNOWN",
+      "font_px": 19
+    },
+    "layout_errors": [],
+    "quality": [
+      "stale",
+      "stale",
+      "stale",
+      "stale",
+      "stale",
+      "stale"
+    ]
+  },
+  {
+    "size": "1024x600",
+    "variant": "long",
+    "scope": "CONCEPTUAL_ONLY",
+    "browser": "154.0.8037.99",
+    "page_errors": [],
+    "network_requests": [],
+    "initial": "Machine overview\nRUN FEEDBACK\nRunning\nACTUAL SPEED\n99999999.9\nrpm\nSPEED SETPOINT\n150.0\nrpm\nREQUESTS\nRUN REQUEST\nRequest active\nSTOP REQUEST\nRequest clear\nRUN REQUEST STATE\nRequested\nACTIVE ALARMS · 1\nSample alarm with a deliberately long explanation: inspect the external sensor, acknowledge the cause and restore operation only after the condition has cleared.",
+    "forced_stale_unknown": true,
+    "width": 1024,
+    "height": 600,
+    "fit": [
+      {
+        "id": "page_title",
+        "fill": "rgb(16, 27, 42)",
+        "content": {
+          "left": 103,
+          "right": 935,
+          "top": 276,
+          "bottom": 322
+        },
+        "text": [
+          {
+            "class": "label",
+            "text": "Machine overview",
+            "font_px": 33,
+            "bounds": [
+              {
+                "left": 103,
+                "right": 365.09375,
+                "top": 276.515625,
+                "bottom": 320.515625
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "run_status",
+        "fill": "rgb(37, 107, 88)",
+        "content": {
+          "left": 123,
+          "right": 381,
+          "top": 386,
+          "bottom": 496
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "RUN FEEDBACK",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 123,
+                "right": 206.78125,
+                "top": 417.75,
+                "bottom": 432.75
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Running",
+            "font_px": 23,
+            "bounds": [
+              {
+                "left": 123,
+                "right": 210.875,
+                "top": 434.9375,
+                "bottom": 465.9375
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "speed_value",
+        "fill": "rgb(27, 41, 59)",
+        "content": {
+          "left": 439,
+          "right": 701,
+          "top": 386,
+          "bottom": 496
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "ACTUAL SPEED",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 439,
+                "right": 519.6875,
+                "top": 409.5,
+                "bottom": 424.5
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "99999999.9",
+            "font_px": 38,
+            "bounds": [
+              {
+                "left": 439,
+                "right": 638.046875,
+                "top": 424.6875,
+                "bottom": 475.6875
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "unit",
+            "text": "rpm",
+            "font_px": 13,
+            "bounds": [
+              {
+                "left": 648.046875,
+                "right": 671.40625,
+                "top": 451.6875,
+                "bottom": 468.6875
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "speed_input",
+        "fill": "rgb(27, 41, 59)",
+        "content": {
+          "left": 759,
+          "right": 1029,
+          "top": 386,
+          "bottom": 496
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "SPEED SETPOINT",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 759,
+                "right": 850.515625,
+                "top": 409.5,
+                "bottom": 424.5
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "150.0",
+            "font_px": 38,
+            "bounds": [
+              {
+                "left": 759,
+                "right": 852.5625,
+                "top": 424.6875,
+                "bottom": 475.6875
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "unit",
+            "text": "rpm",
+            "font_px": 13,
+            "bounds": [
+              {
+                "left": 862.5625,
+                "right": 885.921875,
+                "top": 451.6875,
+                "bottom": 468.6875
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "controls_title",
+        "fill": "rgb(16, 27, 42)",
+        "content": {
+          "left": 103,
+          "right": 935,
+          "top": 536,
+          "bottom": 564
+        },
+        "text": [
+          {
+            "class": "label",
+            "text": "REQUESTS",
+            "font_px": 15,
+            "bounds": [
+              {
+                "left": 103,
+                "right": 172.265625,
+                "top": 539.59375,
+                "bottom": 559.59375
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "run_button",
+        "fill": "rgb(36, 104, 157)",
+        "content": {
+          "left": 120,
+          "right": 380,
+          "top": 592,
+          "bottom": 685
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "RUN REQUEST",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 120,
+                "right": 197.703125,
+                "top": 615.25,
+                "bottom": 630.25
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Request active",
+            "font_px": 23,
+            "bounds": [
+              {
+                "left": 120,
+                "right": 270.828125,
+                "top": 632.4375,
+                "bottom": 663.4375
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "stop_button",
+        "fill": "rgb(39, 56, 77)",
+        "content": {
+          "left": 440,
+          "right": 700,
+          "top": 592,
+          "bottom": 685
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "STOP REQUEST",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 440,
+                "right": 521.53125,
+                "top": 615.25,
+                "bottom": 630.25
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Request clear",
+            "font_px": 23,
+            "bounds": [
+              {
+                "left": 440,
+                "right": 579.546875,
+                "top": 632.4375,
+                "bottom": 663.4375
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "request_state",
+        "fill": "rgb(36, 104, 157)",
+        "content": {
+          "left": 763,
+          "right": 1029,
+          "top": 591,
+          "bottom": 686
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "RUN REQUEST STATE",
+            "font_px": 11,
+            "bounds": [
+              {
+                "left": 763,
+                "right": 876.109375,
+                "top": 615.25,
+                "bottom": 630.25
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Requested",
+            "font_px": 23,
+            "bounds": [
+              {
+                "left": 763,
+                "right": 872.609375,
+                "top": 632.4375,
+                "bottom": 663.4375
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      },
+      {
+        "id": "alarm_summary",
+        "fill": "rgb(59, 46, 34)",
+        "content": {
+          "left": 123,
+          "right": 1029,
+          "top": 739,
+          "bottom": 817
+        },
+        "text": [
+          {
+            "class": "element-title",
+            "text": "ACTIVE ALARMS · 1",
+            "font_px": 10,
+            "bounds": [
+              {
+                "left": 123,
+                "right": 219.625,
+                "top": 745.75,
+                "bottom": 759.75
+              }
+            ],
+            "clipped": false
+          },
+          {
+            "class": "value",
+            "text": "Sample alarm with a deliberately long explanation: inspect the external sensor, acknowledge the cause and restore operation only after the condition has cleared.",
+            "font_px": 19,
+            "bounds": [
+              {
+                "left": 123,
+                "right": 1004.40625,
+                "top": 759.75,
+                "bottom": 785.75
+              },
+              {
+                "left": 123,
+                "right": 625.4375,
+                "top": 783.5,
+                "bottom": 809.5
+              }
+            ],
+            "clipped": false
+          }
+        ],
+        "clipped": false
+      }
+    ],
+    "alarm": {
+      "active": true,
+      "unknown": false,
+      "fill": "rgb(59, 46, 34)",
+      "title": "ACTIVE ALARMS · 1",
+      "value": "Sample alarm with a deliberately long explanation: inspect the external sensor, acknowledge the cause and restore operation only after the condition has cleared.",
+      "font_px": 19
+    },
+    "layout_errors": [],
+    "quality": [
+      "valid",
+      "valid",
+      "valid",
+      "valid",
+      "valid",
+      "valid"
+    ]
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "scope": "NEUTRAL_SYNTHETIC_EXISTING_EDIT_NINE_TOOL_SDK_ONLY",
+  "status": "OFFLINE_PASS",
+  "source_revision_sha256": "166d78e639c69fb3b6f82aabe0a85051ea2a103be6d05a215a1be7c8d31d0ded",
+  "source_sha256": "6eaae40fe3f7dcd9f42c2611e2ddf148732bbd6ec544cadbc87df0721f94c78a",
+  "candidate_sha256": "7a7edf7ccba08a2c73b076a9ac6a27feabfd48d738aa0200c5258a3016c6098b",
+  "candidate_bytes": 2772,
+  "candidate_body_sha256": "ca2decf8c1bfce7a062468dee87b26675695e8af030e3de633aa729788f46248",
+  "candidate_body_bytes": 166423,
+  "pages": 3,
+  "surviving_owners": 15,
+  "sdk_tools": 9,
+  "independent_sdk_elapsed_seconds": 4.829,
+  "scenario_test_id": "test_stdio.StdioTests.test_existing_presentation_background_over_nine_sdk_tools_and_saved_replay",
+  "operations": [
+    "delete_literal",
+    "set_existing_presentation",
+    "set_existing_background"
+  ],
+  "checks": {
+    "independent_original_record_body_oracle": true,
+    "independent_direct_bottom_up_bgrff_oracle": true,
+    "entire_source_restoration": true,
+    "fresh_session_byte_identical_replay": true,
+    "source_unchanged": true,
+    "prefix_first37_unchanged": true,
+    "thumbnail_unchanged": true,
+    "declared_length_checked": true,
+    "stale_png_repeated_saved_receipt_refused": true
+  },
+  "fixture_kind": "neutral synthetic file and test-local profile; not vendor-created active-feature witness",
+  "vendor_compile": "NOT_RUN",
+  "native_pixels": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "full_batch_ready": false,
+  "full_v1_complete": false,
+  "computer_use": false
+}

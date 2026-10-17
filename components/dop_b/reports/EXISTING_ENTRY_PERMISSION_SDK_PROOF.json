@@ -1,0 +1,66 @@
+{
+  "profile": {
+    "path": "reports/fixtures/existing_entry_permission_neutral_profile.json",
+    "sha256": "8e5e5d2018688932abc86f1f1825db81c15f217102a35bab86184bde30e65c80",
+    "bytes": 3652
+  },
+  "namespace": {
+    "path": "reports/fixtures/existing_entry_permission_neutral_namespace.json",
+    "sha256": "8271b4386b3910201489f7802f73410c8e114896417ff01452c4b4a5dc3bf833",
+    "bytes": 1294
+  },
+  "actions": {
+    "path": "reports/fixtures/existing_entry_permission_neutral_actions.json",
+    "sha256": "72fd174eb40d3dfbf888ca8a0b9e4dd952d3f31abdb82e1a976dbaeb61b7b1da",
+    "bytes": 1951
+  },
+  "witness": {
+    "path": "reports/fixtures/existing_entry_permission_neutral_witness.json",
+    "sha256": "ce7a0e9486ce66e7a2f18b535ad88789e00184cdf6e84aa602df6334686106d3",
+    "bytes": 543
+  },
+  "design": {
+    "path": "reports/fixtures/existing_entry_permission_neutral_design.json",
+    "sha256": "e6cf21f7f3bac05a5ccc61915c81d9eae740ee0d18d51c8399fead430f491b22",
+    "bytes": 8037
+  },
+  "scope": "SOURCE_PINNED_EXISTING_ENTRY_PERMISSION_STORED_ONLY",
+  "status": "OFFLINE_PASS",
+  "tools": [
+    "capabilities",
+    "open_project",
+    "inspect",
+    "plan_changes",
+    "validate",
+    "preview",
+    "apply_plan",
+    "save_as",
+    "diff"
+  ],
+  "tool_count": 9,
+  "source_sha256": "c8808bfeafcacbca756de95718ce95d785238da35b0c86606db55500f244703b",
+  "candidate_sha256": "033bc3ff7698558274290bfddb54c65d9b362c16d1e5e62e438c1bd924658972",
+  "candidate_bytes": 2876,
+  "body_sha256": "f004250842675de7c2654772ee6f8f6aa8c086c8667c15b5a85fec92aa31f3c3",
+  "body_bytes": 169253,
+  "pages": 3,
+  "owners": 17,
+  "operation_count": 8,
+  "independent_full_body_equal": true,
+  "whole_body_restoration_equal": true,
+  "source_unchanged": true,
+  "thumbnail_unchanged": true,
+  "prefix_rebuilt_from_original": true,
+  "saved_reopen": true,
+  "byte_equal_replay": true,
+  "raw_dependency_drift_refused": true,
+  "isolated_install_unrelated_cwd": true,
+  "approval": "SYNTHETIC TEST MOCK; NO HUMAN MACHINE ACCEPTANCE",
+  "source_origin": "NEUTRAL SYNTHETIC FIXTURE",
+  "native_visual_acceptance": "NOT_RUN",
+  "vendor": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "full_batch_ready": false,
+  "full_v1_complete": false
+}

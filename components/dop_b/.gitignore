@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.agent-state/
+.local/
+projects/*/
+!projects/README.md
+# Generated portable release archives and extraction probes.
+/dist/
+/build/
+/wheelhouse/
+/runtime-bundle/
+/.runtime/

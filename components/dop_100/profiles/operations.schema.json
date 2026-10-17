@@ -1,0 +1,1012 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:universal-diascreen-hmi-agent:operations:v1",
+  "title": "Explicit Session.plan_changes operations",
+  "description": "Documentation schema for17 source-qualified operations. Bounds, identities, addresses, donor banks, field presence and coupled spans are validated semantically by the stdlib backend. Unsupported constructors have no branch.",
+  "type": "array",
+  "minItems": 1,
+  "maxItems": 1000,
+  "items": {
+    "oneOf": [
+      {
+        "type": "object",
+        "properties": {
+          "op": {
+            "const": "set_property"
+          },
+          "operation_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "page_id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "element_id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "state_value": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "field": {
+            "enum": [
+              "X",
+              "Y",
+              "Width",
+              "Height",
+              "Style",
+              "BorderColor",
+              "FontName0",
+              "FontSize0",
+              "FontAlign",
+              "FontBold",
+              "FontItalic",
+              "FontUnderline",
+              "FontRatio0",
+              "FontColor",
+              "FgColor",
+              "BgColor",
+              "FgFillColor",
+              "FgFillEndColor",
+              "BgFillColor",
+              "BgFillEndColor",
+              "FgFillStopColor0",
+              "FgFillStopColor1",
+              "FgFillStopColor2",
+              "FgFillStopColor3",
+              "FgFillStopColor4",
+              "BgFillStopColor0",
+              "BgFillStopColor1",
+              "BgFillStopColor2",
+              "BgFillStopColor3",
+              "BgFillStopColor4"
+            ]
+          },
+          "value": {
+            "oneOf": [
+              {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2147483647
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "expected": {
+            "oneOf": [
+              {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2147483647
+              },
+              {
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "required": [
+          "op",
+          "page_id",
+          "element_id",
+          "field",
+          "value"
+        ],
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "required": [
+                "state_value"
+              ]
+            },
+            "then": {
+              "properties": {
+                "field": {
+                  "enum": [
+                    "FontName0",
+                    "FontSize0",
+                    "FontAlign",
+                    "FontBold",
+                    "FontItalic",
+                    "FontUnderline",
+                    "FontRatio0",
+                    "FontColor",
+                    "FgColor",
+                    "BgColor",
+                    "FgFillColor",
+                    "FgFillEndColor",
+                    "BgFillColor",
+                    "BgFillEndColor",
+                    "FgFillStopColor0",
+                    "FgFillStopColor1",
+                    "FgFillStopColor2",
+                    "FgFillStopColor3",
+                    "FgFillStopColor4",
+                    "BgFillStopColor0",
+                    "BgFillStopColor1",
+                    "BgFillStopColor2",
+                    "BgFillStopColor3",
+                    "BgFillStopColor4"
+                  ]
+                }
+              }
+            },
+            "else": {
+              "properties": {
+                "field": {
+                  "enum": [
+                    "X",
+                    "Y",
+                    "Width",
+                    "Height",
+                    "Style",
+                    "BorderColor"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "field": {
+                  "const": "FontName0"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "else": {
+              "properties": {
+                "value": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 2147483647
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "object",
+        "properties": {
+          "op": {
+            "const": "set_text"
+          },
+          "operation_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "page_id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "element_id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "state_value": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "description": {
+            "type": "boolean"
+          },
+          "field": {
+            "enum": [
+              "wDescTextLen0",
+              "wDescTextLen1",
+              "wTextLen0",
+              "wTextLen1"
+            ]
+          },
+          "text": {
+            "type": "string",
+            "maxLength": 1048576
+          }
+        },
+        "required": [
+          "op",
+          "page_id",
+          "element_id",
+          "text"
+        ],
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "required": [
+                "description"
+              ],
+              "properties": {
+                "description": {
+                  "const": true
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "field": {
+                  "enum": [
+                    "wDescTextLen0",
+                    "wDescTextLen1"
+                  ]
+                }
+              }
+            },
+            "else": {
+              "required": [
+                "state_value"
+              ],
+              "properties": {
+                "field": {
+                  "enum": [
+                    "wTextLen0",
+                    "wTextLen1"
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "object",
+        "properties": {
+          "op": {
+            "const": "rebind"
+          },
+          "operation_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "page_id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "element_id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "field": {
+            "enum": [
+              "ReadVar",
+              "WriteVar",
+              "TriggerVar",
+              "InterLockVar",
+              "VisibleVar",
+              "DisplayDotVar",
+              "UnitSrcVar",
+              "UnitDisplayVar",
+              "ReadOffsetVar",
+              "WriteOffsetVar",
+              "UnitPercent1Var",
+              "UnitPercent2Var"
+            ]
+          },
+          "expected_address": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "xml_index": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          }
+        },
+        "required": [
+          "op",
+          "page_id",
+          "element_id",
+          "field",
+          "expected_address",
+          "address"
+        ],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "op": {
+            "const": "numeric"
+          },
+          "operation_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "page_id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "element_id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "spec": {
+            "type": "object",
+            "properties": {
+              "iec_type": {
+                "type": "string",
+                "minLength": 1,
+                "not": {
+                  "enum": [
+                    "TIME",
+                    "LTIME",
+                    "TIME_OF_DAY",
+                    "TOD",
+                    "DATE",
+                    "DT",
+                    "DATE_AND_TIME"
+                  ]
+                }
+              },
+              "minimum": {
+                "oneOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "string",
+                    "pattern": "^-?[0-9]{1,40}(?:\\.[0-9]{1,20})?$"
+                  }
+                ]
+              },
+              "maximum": {
+                "oneOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "string",
+                    "pattern": "^-?[0-9]{1,40}(?:\\.[0-9]{1,20})?$"
+                  }
+                ]
+              },
+              "integer_digits": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 20
+              },
+              "decimals": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 15
+              },
+              "gain": {
+                "oneOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "string",
+                    "pattern": "^-?[0-9]{1,40}(?:\\.[0-9]{1,20})?$"
+                  }
+                ]
+              },
+              "offset": {
+                "oneOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "string",
+                    "pattern": "^-?[0-9]{1,40}(?:\\.[0-9]{1,20})?$"
+                  }
+                ]
+              },
+              "unit": {
+                "type": "string",
+                "maxLength": 1024
+              }
+            },
+            "required": [
+              "iec_type",
+              "minimum",
+              "maximum",
+              "integer_digits",
+              "decimals",
+              "gain",
+              "offset"
+            ],
+            "additionalProperties": false
+          },
+          "xml_index": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          }
+        },
+        "required": [
+          "op",
+          "page_id",
+          "element_id",
+          "spec"
+        ],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "op": {
+            "const": "button_behavior"
+          },
+          "operation_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "page_id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "element_id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "behavior": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Profile entry must resolve to qualified raw1.3/1.4; no universal enum inference."
+          }
+        },
+        "required": [
+          "op",
+          "page_id",
+          "element_id",
+          "behavior"
+        ],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "op": {
+            "const": "navigation"
+          },
+          "operation_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "page_id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "element_id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "target_page_id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          }
+        },
+        "required": [
+          "op",
+          "page_id",
+          "element_id",
+          "target_page_id"
+        ],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "op": {
+            "const": "delete_element"
+          },
+          "operation_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "page_id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "element_id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          }
+        },
+        "required": [
+          "op",
+          "page_id",
+          "element_id"
+        ],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "op": {
+            "const": "reorder_element"
+          },
+          "operation_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "page_id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "order": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 2147483647
+            }
+          }
+        },
+        "required": [
+          "op",
+          "page_id",
+          "order"
+        ],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "op": {
+            "const": "clone_element"
+          },
+          "operation_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "donor_id": {
+            "type": "string"
+          },
+          "donor_page_id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "donor_element_id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "page_id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "new_element_id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "rect": {
+            "type": "object",
+            "properties": {
+              "X": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2147483647
+              },
+              "Y": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2147483647
+              },
+              "Width": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "Height": {
+                "type": "integer",
+                "minimum": 1
+              }
+            },
+            "required": [
+              "X",
+              "Y",
+              "Width",
+              "Height"
+            ],
+            "additionalProperties": false
+          },
+          "retain_bindings": {
+            "const": true
+          },
+          "retain_macros": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "op",
+          "donor_id",
+          "donor_page_id",
+          "donor_element_id",
+          "page_id",
+          "new_element_id",
+          "name",
+          "rect",
+          "retain_bindings"
+        ],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "op": {
+            "const": "clone_screen"
+          },
+          "operation_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "donor_id": {
+            "type": "string"
+          },
+          "donor_page_id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "new_page_id": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 65534
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "content": {
+            "enum": [
+              "frame",
+              "all"
+            ],
+            "default": "frame"
+          },
+          "retain_bindings": {
+            "type": "boolean"
+          },
+          "retain_macros": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "op",
+          "donor_id",
+          "donor_page_id",
+          "new_page_id",
+          "name"
+        ],
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "required": [
+                "content"
+              ],
+              "properties": {
+                "content": {
+                  "const": "all"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "retain_bindings",
+                "retain_macros"
+              ],
+              "properties": {
+                "retain_bindings": {
+                  "const": true
+                },
+                "retain_macros": {
+                  "const": true
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "object",
+        "properties": {
+          "op": {
+            "const": "delete_screen"
+          },
+          "operation_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "page_id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          }
+        },
+        "required": [
+          "op",
+          "page_id"
+        ],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "op": {
+            "const": "default_screen"
+          },
+          "operation_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "page_id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          }
+        },
+        "required": [
+          "op",
+          "page_id"
+        ],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "op": {
+            "const": "replace_xml"
+          },
+          "operation_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "xml": {
+            "type": "string"
+          },
+          "xml_index": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "expected_xml_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "required": [
+          "op",
+          "xml",
+          "expected_xml_sha256"
+        ],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "op": {
+            "const": "flat_background"
+          },
+          "operation_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "resource_index": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "page_ids": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 2147483647
+            }
+          },
+          "rgb": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 16777215
+          },
+          "expected_bank_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "required": [
+          "op",
+          "page_ids",
+          "rgb",
+          "expected_bank_sha256"
+        ],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "op": {
+            "const": "clear_macro"
+          },
+          "operation_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "section_index": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "slot": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_]*MacroLen[0-9]*$"
+          },
+          "expected_macro_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "required": [
+          "op",
+          "section_index",
+          "slot",
+          "expected_macro_sha256"
+        ],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "op": {
+            "const": "patch_macro_operand"
+          },
+          "operation_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "section_index": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "slot": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_]*MacroLen[0-9]*$"
+          },
+          "expected_macro_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "instruction_index": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "field_index": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+          },
+          "expected": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "op",
+          "section_index",
+          "slot",
+          "expected_macro_sha256",
+          "instruction_index",
+          "field_index",
+          "expected",
+          "value"
+        ],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "op": {
+            "const": "donor_macro"
+          },
+          "operation_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "section_index": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "slot": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_]*MacroLen[0-9]*$"
+          },
+          "expected_macro_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "source_bound_ack": {
+            "const": true
+          },
+          "donor_hex": {
+            "type": "string",
+            "pattern": "^(?:[0-9a-fA-F]{2})*$",
+            "maxLength": 16777216
+          },
+          "donor_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "required": [
+          "op",
+          "section_index",
+          "slot",
+          "expected_macro_sha256",
+          "source_bound_ack",
+          "donor_hex",
+          "donor_sha256"
+        ],
+        "additionalProperties": false
+      }
+    ]
+  }
+}

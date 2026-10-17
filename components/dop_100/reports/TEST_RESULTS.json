@@ -1,0 +1,732 @@
+{
+  "schema_version": 1,
+  "package_version": "0.1.1",
+  "status": "PASS",
+  "tests_run": 148,
+  "passed": 147,
+  "skipped": 1,
+  "failures": 0,
+  "errors": 0,
+  "python_runtime": "3.14.0",
+  "python311_syntax": "PASS; runtime3.11 not executed",
+  "tests": [
+    {
+      "id": "tests.test_contracts.ContractTests.test_alarm_marker_is_not_a_history_decoder_or_health_proof",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_contracts.ContractTests.test_atomic_mode_and_automatic_reconnect_replay_are_not_supplied",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_contracts.ContractTests.test_demo_is_neutral_fresh_and_never_overwrites",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_contracts.ContractTests.test_documented_schema_operation_set_matches_runtime",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_contracts.ContractTests.test_dop_b_family_and_profile_mismatch_refused",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_contracts.ContractTests.test_dynamic_gradient_and_transparency_are_not_flattened",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_contracts.ContractTests.test_missing_tag_is_not_invented_feedback_or_a_polling_counter",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_contracts.ContractTests.test_picture_bank_import_copy_and_prune_refused",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_contracts.ContractTests.test_stale_compiled_artifact_and_receipt_are_refused",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_contracts.ContractTests.test_unimplemented_runtime_families_have_no_generic_builder",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_contracts.ContractTests.test_unknown_operation_members_and_properties_fail_closed",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_macros.MacroTests.test_builder_validates_flags_and_field_types",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_macros.MacroTests.test_compiled_observation_is_partial_counted_scan",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_macros.MacroTests.test_compiled_stale_source_candidate_and_actual_sha_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_macros.MacroTests.test_counted_roundtrip_and_source_with_newlines",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_macros.MacroTests.test_display_addresses_and_source_statements_are_not_operands",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_macros.MacroTests.test_empty_slot_and_header_only",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_macros.MacroTests.test_exact_operand_replacement_preserves_visible_source",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_macros.MacroTests.test_gzip_domain_and_invalid_count_remain_observations",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_macros.MacroTests.test_legacy_display_operand_can_be_inspected_without_acceptance",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_macros.MacroTests.test_reject_source_and_incorrect_expected_or_index",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_macros.MacroTests.test_truncation_lengths_flags_and_trailing_bytes",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_macros.MacroTests.test_unknown_opcode_roundtrips_but_blocks_all_writes",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_native.NativeTests.test_counted_unicode",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_native.NativeTests.test_declared_huge_truncated_blob_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_native.NativeTests.test_duplicate_identity_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_native.NativeTests.test_duplicate_property_is_not_last_wins",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_native.NativeTests.test_frame_injection_stays_binary",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_native.NativeTests.test_length_cannot_be_patched_as_scalar",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_native.NativeTests.test_negative_identity_is_not_list_index",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_native.NativeTests.test_nested_background_inside_picture_is_not_a_resource",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_native.NativeTests.test_noop_original_container",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_native.NativeTests.test_opaque_tail_without_eol_is_exact",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_native.NativeTests.test_patch_precondition_and_overlap",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_native.NativeTests.test_resource_xml_and_exact_metadata",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_native.NativeTests.test_unknown_fields_survive_edit",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_native.NativeTests.test_unknown_outer_resource_does_not_grant_nested_ownership",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_native.NativeTests.test_wrong_family_and_corrupt_gzip",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_operations.OperationTests.test_catalog_cannot_use_another_link_permission",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_operations.OperationTests.test_clone_unique_fresh_identity_geometry_and_reorder",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_operations.OperationTests.test_counted_base64_owner_hides_structure_injection",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_operations.OperationTests.test_cross_file_donor_resource_mismatch_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_operations.OperationTests.test_flat_background_has_real_page_offset_and_no_old_text",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_operations.OperationTests.test_frame_clone_inherited_macro_requires_ack",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_operations.OperationTests.test_future_counted_owner_is_not_editable_screen",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_operations.OperationTests.test_macro_slot_type_access_and_visible_source",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_operations.OperationTests.test_partial_foreign_catalog_metadata_not_overridden",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_operations.OperationTests.test_r01_r02_invalid_rectangles",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_operations.OperationTests.test_r03_r11_no_negative_identity_or_state",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_operations.OperationTests.test_r05_exact_rebind_not_prefix",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_operations.OperationTests.test_r06_counted_lengths_not_generic_properties",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_operations.OperationTests.test_r10_all_indexed_address_owners_and_trigger",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_operations.OperationTests.test_r12_turkish_caption_and_long_unicode",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_operations.OperationTests.test_r14_real_behavior_codes_and_value_text",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_operations.OperationTests.test_r15_limits_explicit_and_no_float_extremes_or_time_alias",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_operations.OperationTests.test_r18_clear_global_macro_not_default_reenable",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_operations.OperationTests.test_r21_style_only_preserves_controls_bindings_macro_xml_unknown",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_operations.OperationTests.test_screen_frame_clone_delete_and_navigation_guards",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_operations.OperationTests.test_unsupported_enums_and_unreviewed_index_stop",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_operations.OperationTests.test_visual_geometry_and_full_inverse",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_operations.OperationTests.test_xml_alternate_anchor_and_explicit_member_shadow_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_operations.OperationTests.test_xml_preserves_metadata_and_all_dependencies",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_operations.OperationTests.test_xml_unknown_address_dependency_blocks_removal",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_plan_review.PlanReviewTests.test_coordinate_layout_text_order_preserves_render_layers",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_plan_review.PlanReviewTests.test_current_views_keep_inspection_and_all_state",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_plan_review.PlanReviewTests.test_failure_results_and_unsupported_render_do_not_mutate",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_plan_review.PlanReviewTests.test_gallery_uses_proposed_background_profile",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_plan_review.PlanReviewTests.test_inverse_rejects_coherently_rehashed_bad_ledger",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_plan_review.PlanReviewTests.test_proposal_caption_sha_and_readonly_state",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_plan_review.PlanReviewTests.test_proposal_inverse_extends_applied_chain",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_plan_review.PlanReviewTests.test_sort_invalid_or_unrelated_views_refused",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_plan_review.PlanReviewTests.test_source_profile_and_donor_drift_refused",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_plan_review.PlanReviewTests.test_stale_applied_and_rollback_proposals_refused",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_plan_review.PlanReviewTests.test_stdio_readonly_proposal_review_and_discovery_schemas",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_plan_review.PlanReviewTests.test_unknown_malformed_and_immutable_plan_drift",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_preview.PreviewTests.test_actual_value_selection_commands_and_no_unknown_fallback",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_preview.PreviewTests.test_all_states_checked_not_only_selected",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_preview.PreviewTests.test_dib_channel_stride_orientation_and_32bit_unused_alpha",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_preview.PreviewTests.test_font_input_css_name_and_malformed_metrics",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_preview.PreviewTests.test_metrics_missing_glyph_overflow_and_occlusion",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_preview.PreviewTests.test_numeric_exponent_is_bounded",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_preview.PreviewTests.test_offline_label_escape_no_font_claim_and_source_preserved",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_preview.PreviewTests.test_shared_address_fixture_conflict_and_numeric_cases",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_preview.PreviewTests.test_unknown_effect_gradient_radius_and_family",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_preview.PreviewTests.test_wrong_page_background_and_ambiguous_resource",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_preview.PreviewTests.test_xml_control_characters_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_qualification.QualificationTests.test_all_sources_are_read_after_an_earlier_source_failure",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_qualification.QualificationTests.test_explicit_reviewed_profile_exercises_in_memory_full_inverse",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_qualification.QualificationTests.test_future_length_frame_does_not_grant_fake_screen_ownership",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_qualification.QualificationTests.test_known_preamble_font_patch_preserves_all_framed_owners",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_qualification.QualificationTests.test_malformed_known_preamble_lengths_and_terminators_stop",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_qualification.QualificationTests.test_missing_or_stale_layout_review_does_not_autoqualify",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_qualification.QualificationTests.test_observed_preamble_frames_do_not_create_fake_owners",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_qualification.QualificationTests.test_optional_noop_report_is_new_only_and_contains_no_private_path",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_qualification.QualificationTests.test_profile_file_hash_required_and_checked",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_qualification.QualificationTests.test_real_optional_cli_emits_only_neutral_json_summary",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_qualification.QualificationTests.test_report_escape_source_overwrite_and_duplicate_ids_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_qualification.QualificationTests.test_source_hash_mismatch_and_format_failure_do_not_leak_exceptions",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_qualification.QualificationTests.test_unpublishable_source_id_and_duplicate_json_fields_stop",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_release.ReleaseTests.test_archive_extra_missing_changed_duplicate_or_manifest_bytes_fail",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_release.ReleaseTests.test_cli_check_is_read_only_and_success_receipt_has_hashes_counts_only",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_release.ReleaseTests.test_current_inventory_and_public_privacy",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_release.ReleaseTests.test_deterministic_rebuild_outside_public_tree_and_every_member",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_release.ReleaseTests.test_links_refused_and_ignored_runtime_trees_not_read",
+      "status": "SKIP",
+      "reason": "Host does not permit a neutral symbolic link"
+    },
+    {
+      "id": "tests.test_release.ReleaseTests.test_manifest_extra_missing_and_changed_public_files_fail",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_release.ReleaseTests.test_manifest_is_canonical_safe_and_excludes_cycle_reports",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_release.ReleaseTests.test_output_is_new_only_bounded_and_never_enters_public_tree",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_release.ReleaseTests.test_privacy_markers_case_insensitive_and_public_diagnostics_sanitized",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_release.ReleaseTests.test_release_sources_pass_their_own_privacy_policy",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_release.ReleaseTests.test_reparse_attribute_is_rejected_without_host_link_privilege",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_release.ReleaseTests.test_unknown_native_extensions_and_binary_text_refused",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_release.ReleaseTests.test_windows_reserved_and_aliased_member_names_refused",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_session.SessionTests.test_actual_apply_save_reread_diff_rollback_and_source",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_session.SessionTests.test_catalogs_never_claim_runtime_or_alarm_history",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_session.SessionTests.test_inspect_before_plan_and_pins",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_session.SessionTests.test_live_source_drift_blocks_apply",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_session.SessionTests.test_multiple_approved_plans_inverse",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_session.SessionTests.test_newonly_output_source_and_traversal",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_session.SessionTests.test_private_read_root_explicit_and_symlink_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_session.SessionTests.test_profile_mismatch_and_profile_mutation",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_session.SessionTests.test_r04_pending_open_does_not_discard",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_session.SessionTests.test_r09_replay_and_stale_other_plan",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_session.SessionTests.test_r17_compiled_receipt_current_source_candidate",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_session.SessionTests.test_returned_plan_is_not_mutable_internal_evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_session.SessionTests.test_stored_proposal_tampering_stops_application",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_session.SessionTests.test_write_switch_and_explicit_exact_approval",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_status.StatusTests.test_design_csv_is_native_reference_not_vendor_import",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_status.StatusTests.test_drive_request_ack_fresh_status_frequency_not_conflated",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_status.StatusTests.test_r19_active_fault_zero_and_unknown_raw_never_healthy",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_status.StatusTests.test_reference_latch_separate_from_sensor_and_start_permission",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_status.StatusTests.test_sequential_visual_reviews_challenge_first_and_producer",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_status.StatusTests.test_transfer_draft_fresh_readback_terminal_result_distinct",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_stdio.StdioTests.test_malformed_message_stdout_is_only_jsonrpc",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_stdio.StdioTests.test_real_process_mutation_not_only_discovery",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_symbols.SymbolTests.test_actual_offsets_and_native_padding",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_symbols.SymbolTests.test_ancestor_access_cannot_be_restored_by_member",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_symbols.SymbolTests.test_duplicate_unknown_and_cyclic_types_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_symbols.SymbolTests.test_enum_and_time_remain_distinct",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_symbols.SymbolTests.test_inclusive_array_bounds",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_symbols.SymbolTests.test_inventory_is_bounded_and_includes_access",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_symbols.SymbolTests.test_raw_identity_and_root_alias",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_symbols.SymbolTests.test_role_specific_read_and_write_permissions",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_symbols.SymbolTests.test_scalar_index_and_unindexed_array_traversal_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_symbols.SymbolTests.test_top_level_array_offset_anchor_has_no_index",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_symbols.SymbolTests.test_unknown_member_layout_stays_unknown",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_symbols.SymbolTests.test_untrusted_integer_and_unknown_base_are_structured_failures",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_symbols.SymbolTests.test_wrong_target_role_and_display_syntax",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_symbols.SymbolTests.test_xml_attacks_and_wrong_structure_rejected",
+      "status": "PASS"
+    }
+  ],
+  "tested_files": [
+    {
+      "path": "examples/create_demo.py",
+      "sha256": "3035c8d318eceb80d77471319e9a9b05f96a0bb0ff7f03cea110e5979494541e"
+    },
+    {
+      "path": "src/universal_diascreen_hmi/__init__.py",
+      "sha256": "4b539387c01bf093eb5fdcce67a476941cbc980b58ab1e43027c159b535ece9c"
+    },
+    {
+      "path": "src/universal_diascreen_hmi/cli.py",
+      "sha256": "6460949f6ccac4e41566c5cd7edebb43658f4f49cd03ec6dd8b9a186358a9e9b"
+    },
+    {
+      "path": "src/universal_diascreen_hmi/contracts.py",
+      "sha256": "6c03cd57c9ddb419f19d926c3e87b2d7bf1bffe54dd8647e1ee332b98900bfc2"
+    },
+    {
+      "path": "src/universal_diascreen_hmi/errors.py",
+      "sha256": "a66c5c1369f5786bb186bc02a7cda4f67ebbfe6d2ab6c52989e311d11ca7a8a3"
+    },
+    {
+      "path": "src/universal_diascreen_hmi/macros.py",
+      "sha256": "9477445b60610e836ffb44b77e72e0d09c54b75e1e0192cfffd9d854bccd78a5"
+    },
+    {
+      "path": "src/universal_diascreen_hmi/native.py",
+      "sha256": "85b3a22c48905d6bf21140b971e37294abac7af7291b800aaa3962dc35ad700d"
+    },
+    {
+      "path": "src/universal_diascreen_hmi/operations.py",
+      "sha256": "4d9b7e666ebf64e14f65486062480f02dde9a6d04a24e0502431e9c20b99c576"
+    },
+    {
+      "path": "src/universal_diascreen_hmi/preview.py",
+      "sha256": "957d78309bed4c9f8c66885d8339680388bc0e4e15a825216e6a4e6f7c37d962"
+    },
+    {
+      "path": "src/universal_diascreen_hmi/resources.py",
+      "sha256": "312aa3adc6a91b87703b748787a223510fbed29559a7f01d126d47a6ee0390b7"
+    },
+    {
+      "path": "src/universal_diascreen_hmi/session.py",
+      "sha256": "53e5c5a1143cf7125a5e1e8cb14748536faed053d8d4bfd7a108482e9ff8b539"
+    },
+    {
+      "path": "src/universal_diascreen_hmi/symbols.py",
+      "sha256": "1d5e26a918144801436ae287c4b4a03a43c5eda2c21c4227b615070a8d45574e"
+    },
+    {
+      "path": "tests/__init__.py",
+      "sha256": "6c6ec57de9f82ef42d82760f144a4571cb16b3cd6de33aaa7aa9fd65e8ab1fa1"
+    },
+    {
+      "path": "tests/fixtures.py",
+      "sha256": "bcfefcd7cc80b8086f7c070ead567c9e59b356e6ca34334a43fdcc320aad1c3a"
+    },
+    {
+      "path": "tests/test_contracts.py",
+      "sha256": "c235e3b677d4c12ad221c998310993c006d364274008def03857e0e355038e46"
+    },
+    {
+      "path": "tests/test_macros.py",
+      "sha256": "9b8f0c1522ad3a50e92196570d620abc401dde869d216367d7c8fbb93adc334a"
+    },
+    {
+      "path": "tests/test_native.py",
+      "sha256": "4343ba36b4c2c0eaa3a755c6a3d3ae3e1dcde8553932afb5556c5a63423d3ce0"
+    },
+    {
+      "path": "tests/test_operations.py",
+      "sha256": "47ddc568d4d87b1d96fb185ea4f063798d3eb4e47894cdd1a310e45de4bb49b8"
+    },
+    {
+      "path": "tests/test_plan_review.py",
+      "sha256": "42c2cbfcb480dba9a3c2d5cd0ffa1062507afa3380d3a03ae4549af84d387cd9"
+    },
+    {
+      "path": "tests/test_preview.py",
+      "sha256": "abf6e47aec38eaa6b7d2e708770b9752f2b23948bf9b9e9fd8d91970a0356325"
+    },
+    {
+      "path": "tests/test_qualification.py",
+      "sha256": "27b7ff8ce3587f38a3c32edb3605c034d7e30820a0bed8777dec543198ee9754"
+    },
+    {
+      "path": "tests/test_release.py",
+      "sha256": "d8f78c69a15cf0eef41ab8eb9fdd05c62f2fd8f36c94d4d9cdaa2752a2baf5f4"
+    },
+    {
+      "path": "tests/test_session.py",
+      "sha256": "9a22f96204213e50fb88b77c33090f07661bea948806547e60792b7032cdbdcf"
+    },
+    {
+      "path": "tests/test_status.py",
+      "sha256": "4e9049f5f89c7653b72bf7233b9ea3d3e5557f138c24850d40fce771fa9d511f"
+    },
+    {
+      "path": "tests/test_stdio.py",
+      "sha256": "93dc86cbec1e90865dcb8aef8a641e65277f3010cfdbc9b046f89b01cc40b75c"
+    },
+    {
+      "path": "tests/test_symbols.py",
+      "sha256": "e011829fbaf59d09630dae8774cfbc5393eeb403ac8730445291ed5f9717840e"
+    },
+    {
+      "path": "tools/private_qualification.py",
+      "sha256": "2220ff50a128d5e819a359d1fa49477d9305e353f90e9a0353f41ee9558f870f"
+    },
+    {
+      "path": "tools/release.py",
+      "sha256": "a388842c51ae1eb8655692fae2f91634bfa31fb50afceb35bba1e47d3e9eba6f"
+    },
+    {
+      "path": "tools/session_guard.py",
+      "sha256": "a10c8e621d731515f43b1f8c5ca5557a82ab3994f4133f9edea0e95ab97f48c1"
+    },
+    {
+      "path": "tools/start.py",
+      "sha256": "acd68c8b79969b9a1b8b1126f72e420b9eab37911deda1367d6c98d99ec32278"
+    }
+  ],
+  "stdio_tests": "Actual subprocess proposal review, mutation, save/re-read, rollback and schema discovery;18legacy names",
+  "vendor_compile": "NOT_RUN",
+  "panel_runtime": "NOT_RUN"
+}

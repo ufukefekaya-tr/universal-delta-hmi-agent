@@ -1,0 +1,330 @@
+{
+  "schema_version": 1,
+  "scope": "PRIMARY_STATIC_QUALITY_PRODUCER_RESEARCH_ONLY",
+  "status": "RESEARCH_ACCEPTED_PRODUCER_UNQUALIFIED",
+  "source_commit": "83357630f4da71ef0157d4020c9351d762ec116d",
+  "origin": "Read-only multipage_author primary analysis and separate control_final_review counterreview; root transcription and primary image/window rehash",
+  "target": "Pinned DOPSoft 2.00.07 editor and B_SERIES/1024_C16_615 emulator; physical panel equivalence unproved",
+  "method": "PE files read as data only; no vendor load/execution. Root byte windows use image VA minus PE ImageBase.",
+  "primary_sha256": {
+    "editor": "9ed92401cd08e2be8bfc2df3a40dee4e99e9f605da7a4fa9605f9e2754821eeb",
+    "b10_hmi": "e6fa5b74d8d73415b1fd79b16aa19fc163f95113471eb8e9e1022f8615b19ab3",
+    "kernel_win": "8e58747aba447c823deb6a424b62c668fcb2769e82f5b2981079f14af6ab66bf",
+    "online_delta_dvp": "18c043dbed61c2a6c6fa78ad31ec6b4129cd72c878c5db6fbc16006d5c8c0d64"
+  },
+  "root_static_byte_windows": [
+    {
+      "image": "b10_hmi",
+      "virtual_address": "0x10028e40",
+      "bytes": 32,
+      "sha256": "45286d430b6af1146d2fad46b3828e0a56dd8226712710afdfc313d4bddceccd",
+      "meaning": "Reproducible static byte window; not a complete function or runtime test"
+    },
+    {
+      "image": "b10_hmi",
+      "virtual_address": "0x10028ed5",
+      "bytes": 32,
+      "sha256": "2f495038cecf239d8819f09f26012da8480bfb1dd16beb53ce420ef26efcf051",
+      "meaning": "Reproducible static byte window; not a complete function or runtime test"
+    },
+    {
+      "image": "b10_hmi",
+      "virtual_address": "0x10028ffd",
+      "bytes": 32,
+      "sha256": "8a4f2a4ff357acef669fe24aa63a045996bcb673fe499dfbbbe5e80e0b5fe968",
+      "meaning": "Reproducible static byte window; not a complete function or runtime test"
+    },
+    {
+      "image": "b10_hmi",
+      "virtual_address": "0x1002bf9f",
+      "bytes": 144,
+      "sha256": "66557dea46301a8bdd10f1fe103073e10a2d23fb8179ffed4c480e70c2125df1",
+      "meaning": "Reproducible static byte window; not a complete function or runtime test"
+    },
+    {
+      "image": "b10_hmi",
+      "virtual_address": "0x10033a70",
+      "bytes": 48,
+      "sha256": "68784ada7489bed42bd2afe7a2c653ea9513614e2d31ab8ac56c2f20e1bab53b",
+      "meaning": "Reproducible static byte window; not a complete function or runtime test"
+    },
+    {
+      "image": "b10_hmi",
+      "virtual_address": "0x10034237",
+      "bytes": 80,
+      "sha256": "d901ef6405f95da8c6f00488c794e25d4f9e75f9d5740870c109292b053f99e8",
+      "meaning": "Reproducible static byte window; not a complete function or runtime test"
+    },
+    {
+      "image": "b10_hmi",
+      "virtual_address": "0x1003f48d",
+      "bytes": 48,
+      "sha256": "1973eb0cdca958bfd72796682c9bd6f72ef987d5b4209a0a2cb3a1f7bcabfb6b",
+      "meaning": "Reproducible static byte window; not a complete function or runtime test"
+    },
+    {
+      "image": "b10_hmi",
+      "virtual_address": "0x100fa600",
+      "bytes": 80,
+      "sha256": "66e702564434d1b1dddbe94b104c98e659d507c0a67169b741f1bcdcae747c4b",
+      "meaning": "Reproducible static byte window; not a complete function or runtime test"
+    },
+    {
+      "image": "b10_hmi",
+      "virtual_address": "0x100fc400",
+      "bytes": 32,
+      "sha256": "99e17ba0aa65f3eba30882dae4c907221e0003e329141d2901f039f3bd99e4b2",
+      "meaning": "Reproducible static byte window; not a complete function or runtime test"
+    },
+    {
+      "image": "b10_hmi",
+      "virtual_address": "0x100fa62a",
+      "bytes": 16,
+      "sha256": "b3d79417fb80eeb520431884acc77a4f0c85291fde45d21e319f23324dcfaca9",
+      "meaning": "Reproducible static byte window; not a complete function or runtime test"
+    },
+    {
+      "image": "b10_hmi",
+      "virtual_address": "0x1002a803",
+      "bytes": 144,
+      "sha256": "0802e96faa701de6692f6ed62a74960f4018318b3ff6b560b880706941836d6b",
+      "meaning": "Reproducible static byte window; not a complete function or runtime test"
+    },
+    {
+      "image": "b10_hmi",
+      "virtual_address": "0x100287df",
+      "bytes": 112,
+      "sha256": "474e21ebc872b844b8488cedfb5e71f565a4f4bfb34689d48003e7823a29f38d",
+      "meaning": "Reproducible static byte window; not a complete function or runtime test"
+    },
+    {
+      "image": "kernel_win",
+      "virtual_address": "0x10041ee0",
+      "bytes": 32,
+      "sha256": "af890a965e4665d3f26037935ba893a5af6d4326f73979595b0b371739922475",
+      "meaning": "Reproducible static byte window; not a complete function or runtime test"
+    },
+    {
+      "image": "kernel_win",
+      "virtual_address": "0x1003c2f0",
+      "bytes": 48,
+      "sha256": "ad2d9f3175737333f01fd42198f7fcdc5ed3f92f6408b7251b919d771a740b07",
+      "meaning": "Reproducible static byte window; not a complete function or runtime test"
+    },
+    {
+      "image": "kernel_win",
+      "virtual_address": "0x100431e0",
+      "bytes": 528,
+      "sha256": "33024f953561b68e18efc8d98bef3dee539e70a131f7fe109faeddc70eb772ee",
+      "meaning": "Reproducible static byte window; not a complete function or runtime test"
+    },
+    {
+      "image": "editor",
+      "virtual_address": "0x7cbc3e",
+      "bytes": 128,
+      "sha256": "6f94083ee6cdabb0c513ee2266e17626643ff6f19f39dc14adc81e94c61ecb16",
+      "meaning": "Reproducible static byte window; not a complete function or runtime test"
+    },
+    {
+      "image": "editor",
+      "virtual_address": "0xd34980",
+      "bytes": 16,
+      "sha256": "2bc52078d33187b51fc3c63742616f8ac4112ad417c3d7c0815c160e3faf3a2f",
+      "meaning": "Reproducible static byte window; not a complete function or runtime test"
+    },
+    {
+      "image": "editor",
+      "virtual_address": "0xd349b0",
+      "bytes": 16,
+      "sha256": "d1992b875a009104d66feb8424fa6888d95fac4a9014247176b5353a4409d97f",
+      "meaning": "Reproducible static byte window; not a complete function or runtime test"
+    },
+    {
+      "image": "editor",
+      "virtual_address": "0x7e5eb9",
+      "bytes": 32,
+      "sha256": "0c24187a324e30305f0ea44b40b76b3bc170e5c881f5048ad6781fa4710b5e7d",
+      "meaning": "Reproducible static byte window; not a complete function or runtime test"
+    },
+    {
+      "image": "editor",
+      "virtual_address": "0x7e5fdc",
+      "bytes": 48,
+      "sha256": "36250d9ec72d711522df4f0301e25b293c6d85c5931626aadb21c3ce02d246c0",
+      "meaning": "Reproducible static byte window; not a complete function or runtime test"
+    },
+    {
+      "image": "online_delta_dvp",
+      "virtual_address": "0x10001ac0",
+      "bytes": 64,
+      "sha256": "9fadb55e523fb29cddcfe745510e0a0b75ebcd6e31f55ac15d00c804f82a6cd7",
+      "meaning": "Reproducible static byte window; not a complete function or runtime test"
+    }
+  ],
+  "independent_review": {
+    "reviewer": "control_final_review",
+    "status": "PASS_FOR_BOUNDED_STATIC_RESEARCH_WITH_CORRECTIONS",
+    "independently_rehashed_images": [
+      "editor",
+      "b10_hmi",
+      "kernel_win"
+    ],
+    "producer_qualification": "UNQUALIFIED",
+    "scope": "Failure continuation/status/tick/channel and cross-model donor counterexamples, not native emission or runtime acceptance",
+    "transcription_corrections": [
+      "Macro success1 is not communicationstatus0",
+      "Abort sets distinguish-34 and separatepreceding-1",
+      "Rawdescriptorbytes versus little-endian tableDWORD distinguished; table_entry_va anddescriptor_va separated",
+      "Width/sign flags use explicit masks0x02/0x01"
+    ],
+    "correction_evidence": "Separate reviewer reconstructed primary rawdescriptor/table/writer before final transcription; final artifact hash checked separately before commit"
+  },
+  "findings": [
+    {
+      "id": "QP_READ_CONTINUES",
+      "trigger": "External macro read fails and a later unconditional assignment publishes valid=1 or a new timestamp",
+      "evidence": [
+        "10028E40..4E returns -13 without output publication",
+        "1002A39A assignment calls10028CCB at1002A3FE;1002A406..40F returns before target write",
+        "10034237..59 aborts -11/-2/-3/-34, not -13",
+        "1003F48D..A6 aborts -11/-2/-3, with a separate preceding -1 check, not -13"
+      ],
+      "effect": "Old destination can be mislabeled current",
+      "correction": "Immediate checked status capture; no unconditional successful-sample publication",
+      "retest": "Two separate static primary analyses agree; no producer implemented or runtime replay",
+      "state": "COUNTEREXAMPLE_ACCEPTED_IMPLEMENTATION_OPEN"
+    },
+    {
+      "id": "QP_SUCCESS_DOMAIN",
+      "trigger": "Assuming macro success is 0 or capturing status after an intervening statement",
+      "evidence": [
+        "Macro operand success returns1 at10028ED5/10028FFD",
+        "GETLASTERROR1002BF9F reads previous context at1002BFD1; flags0 WORD packing1002BFD8 stores-13 as0xFFF3",
+        "Dispatcher10033A7D..80 overwrites context after ordinary statements; successful getter itself returns1"
+      ],
+      "effect": "Wrong domain or intervening statement hides the sampled-read result",
+      "correction": "Captured sample status must equal1; capture immediately; capture-destination failures must also be checked",
+      "retest": "Independent reviewer reproduced exact success1 and WORD error representation",
+      "state": "CORRECTED_IN_RESEARCH; NO_NATIVE_PRODUCER_ACCEPTANCE"
+    },
+    {
+      "id": "QP_CHANNEL_NOT_SAMPLE",
+      "trigger": "Treating COMLINKSTATUS0 as this value valid/fresh",
+      "evidence": [
+        "GETCOMMSTATUS little-endian table DWORD0xA9030004, rawdescriptorbytes040003a9 ateditorD34D3C/D3CFC0; COMLINKSTATUS handler100321A4→100FA600 reads channelWORD table101AA884",
+        "Successful read100FC404..408 clears channel slot, so another value can erase failure",
+        "Out-of-range channel>=3 returns0",
+        "NETLINKSTATUS10032221→100FA62A returns constant0 in this pinned emulator",
+        "Editor7CBCAA..7CBCB6 writes descriptorfour rawbytes without swapping; D3CFC4 beginsGETCOMMSTATUS command text"
+      ],
+      "effect": "Channel-wide or constant status is not per-value freshness",
+      "correction": "No channel-status0 substitution for sample-quality or maximum-age authority",
+      "retest": "Independent static counterreview agrees; no transport/runtime measurement",
+      "state": "REJECTED_SHORTCUT"
+    },
+    {
+      "id": "QP_TICK_IS_LOCAL",
+      "trigger": "TIMETICK stored without explicit width, epoch, expiry or scheduler semantics",
+      "evidence": [
+        "1002A803/1002A855 callsKernelWin.sc_getTimeStamp",
+        "Kernel10041EE0→1003C2E0 readsDWORD1047C5B8; producer1003C2F0 increments1003C2FC and stores1003C305",
+        "Kernel100431E0..433EB advances from timeGetTime elapsed-ms callbacks",
+        "Packer100287DF alwayswrites low2bytes;100287FF flagmask0x02 enables high2bytes"
+      ],
+      "effect": "WORD wraps every65.536seconds; DWORD nominally every49.7102696296days; localcall time is not PLC measurement time",
+      "correction": "Explicit DWORD storage plus wrap/reset/epoch and consumer-time expiry; physical clock/schedule and publication coherence separately qualified",
+      "retest": "Independent static clock/packing review and arithmetic; initial image storage zero-filled but lifecycle/reset behavior unproved",
+      "state": "STATIC_EMULATOR_BUILDING_BLOCK_ONLY"
+    },
+    {
+      "id": "QP_API_NOT_ACQUISITION",
+      "trigger": "Successful external read followed by a new TIMETICK assumed to prove a new PLC sample",
+      "evidence": [
+        "DeltaDVP read_command10001AC0 constructs protocol request; timeout time is stack-local10001124/100014EF..14FB",
+        "Callback/cache/new-transport/PLC-measurement event chain is not completely established"
+      ],
+      "effect": "Timestamp can describe local API completion while upstream value is older; cached-success scenario not eliminated",
+      "correction": "Distinguish API-call time from transport-completion and measurement-generation time; upstream age requires proven acquisition event or PLC sequence/timestamp/epoch",
+      "retest": "Independent logical counterexample accepted; no claim that a specific installed driver was experimentally observed caching",
+      "state": "UPSTREAM_FRESHNESS_UNQUALIFIED"
+    },
+    {
+      "id": "QP_PRODUCER_STALL",
+      "trigger": "Periodic producer stops while retained permit istrue",
+      "evidence": [
+        "A retained Boolean by itself has no independent consumer-time expiry",
+        "No qualified periodic schedule plus consumer watchdog mapping in current contract"
+      ],
+      "effect": "A producer-only age check can leave stale true permission",
+      "correction": "Consumer must expire old state even if producer stops; startupunknown, explicit epoch and coherent value/status/timestamp publication required",
+      "retest": "Counterexample recorded as future contract requirement, not a runtime experiment",
+      "state": "CONTINUOUS_PERMISSION_UNQUALIFIED"
+    }
+  ],
+  "native_frame_observation": {
+    "reader": "editor7BC950→7BB8DF",
+    "writer": "editor7CBC3E",
+    "frame": "02REV marker +4descriptor bytes +5length-prefixed strings +3DWORD flags(+54/+58/+5C) +CRLF",
+    "descriptor_table": [
+      {
+        "serialized_descriptor_hex": "0400012d",
+        "little_endian_table_dword": "0x2d010004",
+        "opcode": "0x2D",
+        "command": "TIMETICK",
+        "table_entry_va": "0xd34980",
+        "descriptor_va": "0xd34984",
+        "opcode_location": "DWORD at table_entry_va; descriptor bytes start at descriptor_va"
+      },
+      {
+        "serialized_descriptor_hex": "04000133",
+        "little_endian_table_dword": "0x33010004",
+        "opcode": "0x33",
+        "command": "GETLASTERROR",
+        "table_entry_va": "0xd349b0",
+        "descriptor_va": "0xd349b4",
+        "opcode_location": "DWORD at table_entry_va; descriptor bytes start at descriptor_va"
+      }
+    ],
+    "width_compile": "7E5EB9..EC2 reads+58;7E5FDC..FF7 lowers width to mask0x02; +5C signed lowers to mask0x01",
+    "unqualified": "Final MacroDecord preprocessing/operand mapping across B10 and a complete source-local producer contract"
+  },
+  "donor_audit": {
+    "executor": "multipage_author",
+    "reported_neutral_B10_paths": 8,
+    "reported_distinct_B10_source_hashes": 6,
+    "reported_nonempty_B10_macros": 0,
+    "HMC_GETLASTERROR_occurrences_per_sample": 12,
+    "HMC_line_sha256": "e2f9118d1fffbf62a43869b4ef2080b90cf18f08a41ba8c42502db46bef406c4",
+    "HMC_descriptor_hex": "04000133",
+    "HMC_flags_hex": "010101010000000000000000",
+    "TIMETICK_donor": "NOT_FOUND",
+    "acceptance": "HMC genuine framing holdouts only; not B10 source-local getter, schedule, driver or runtime qualification"
+  },
+  "next_contract": [
+    "Qualified B10 sampling/getter donor or complete independently checked static parser/compiler/operand contract; no guessed opcode/flags/unused fields",
+    "Per-value provenance explicitly distinguishing local API-completion, transport completion and PLC acquisition time",
+    "Immediate GETLASTERROR capture with exactsuccess1 and checked read/capture/publication failures",
+    "Startupinvalid state, reserved internal storage, coherent value/status/timestamp publication and explicit session epoch",
+    "Consumer-time expiry that continues on producer stall, wrap-safe arithmetic and reset handling",
+    "No gating STOP/release/safety commands by inference; original explicit action authority retained",
+    "Neutral failure/cache/other-value-success/intervening-statement/wrap/reset/stall tests plus fullBODY/replay/restoration and independent technical review",
+    "New exact writer scope and approved contract before native implementation"
+  ],
+  "unchanged_implementation": {
+    "source_hash_count": 88,
+    "test_revision_sha256": "912e4d834e2b7b3e1db2ab9b227e01b59e39977a8044dc1faab6c71817a6e187",
+    "accepted_tests": 826,
+    "test_rerun": "NOT_RUN; no implementation/test/source revisions changed",
+    "new_native_candidates": "NONE"
+  },
+  "portability": "Only primary aliases/hashes/VAs recorded; host paths, vendor binary bytes, customer data and code are not bundled. These local research sources are not runtime dependencies.",
+  "capabilities_opened": [],
+  "producer_complete": false,
+  "full_batch_ready": false,
+  "full_v1_complete": false,
+  "computer_use": "PROHIBITED_NOT_USED",
+  "vendor_code_execution": false,
+  "vendor_compile": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "physical": "NOT_RUN"
+}

@@ -1,0 +1,94 @@
+{
+  "scope": "PURE_OPAQUE_PNG_TO_EXISTING_DIB_BYTES_FOUNDATION_ONLY",
+  "status": "OFFLINE_PASS_PURE_FOUNDATION_ONLY",
+  "source_sha256": "0300df009c38ed2ba79e83339ab6254d8683b4a71f0a4f056cf74a51e41c6a50",
+  "tests_sha256": "38140bd0f246d46ef91dada63f533ac91037d8c24d3bca76432b353ea405251e",
+  "root_focused": {
+    "tests": 38,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 0.02
+  },
+  "independent": {
+    "role": "read-only technical reviewer",
+    "tests": 38,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 0.023,
+    "extra_filter_pixel_conversion_oracles": 240,
+    "extra_paeth_edge_triples": 343,
+    "extra_malformed_trailing_stream_typed_refusals": 1003,
+    "source_hashes_unchanged": true,
+    "material_open_findings": 0
+  },
+  "oracle_2x2_bgrx_hex": "ff0000ff00ffffff0000ffff00ff00ff",
+  "subset": {
+    "png_color_types": [
+      2,
+      6
+    ],
+    "depth": 8,
+    "opaque_alpha": 255,
+    "allowed_chunks": [
+      "IHDR",
+      "IDAT",
+      "IEND"
+    ],
+    "filters": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "single_exact_zlib_stream": true,
+    "dimension_ceiling": 8192,
+    "byte_budget": 33554432,
+    "chunk_budget": 4096,
+    "dib_header_bytes": 40,
+    "dib_bits": 32,
+    "dib_compression": 0,
+    "dib_positive_height": true,
+    "dib_reserved_X_bytes": 255,
+    "dib_reserved_is_alpha": false,
+    "exact_noop_preserved": true
+  },
+  "primary_standards": [
+    "https://www.w3.org/TR/png-3/",
+    "https://learn.microsoft.com/en-us/previous-versions/dd183376(v=vs.85)"
+  ],
+  "integration": {
+    "source_identity": "NOT_IMPLEMENTED",
+    "resource_span_page_ownership": "NOT_IMPLEMENTED",
+    "asset_file_freshness": "NOT_IMPLEMENTED",
+    "whole_native_restoration": "NOT_IMPLEMENTED",
+    "public_sdk": "NOT_IMPLEMENTED",
+    "native_consumer_chain": "PRIMARY_STATIC_EDITOR_CHAIN_CLOSED_ONLY; public integration and actual pixels NOT_RUN"
+  },
+  "public_capability_opened": false,
+  "vendor": "NOT_RUN",
+  "native_pixels": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "full_batch_ready": false,
+  "full_v1_complete": false,
+  "computer_use": false,
+  "private_assets_used": false,
+  "test_revision_sha256": "5651df75e3fe79dd3340cf783c3a8706170fd6f5469d8c4e5b16388d9644cdde",
+  "full_suite_tests": 699,
+  "source_hash_count": 75,
+  "primary_consumer": {
+    "editor_sha256": "9ed92401cd08e2be8bfc2df3a40dee4e99e9f605da7a4fa9605f9e2754821eeb",
+    "PictureOffset": "keyd7045c reader86656b..866593 ->page+70",
+    "resource_loader": "[Background]/Size6a05a8..6a0627 loops actual app+22dc pages via68d7ce/68d7ea ->7b0de1(&page+6c,cursor,page+70,Size)",
+    "frame_extent": "7b0e8b..9a copies40-byte header;7b0f2a..5f stride/frame/end<=Size;7b0f9a..fb8 complete frame copy into bitmap+110",
+    "pixels": "c1e350 bitmap+10c=header+40 for32-bit",
+    "selected_page": "834b65 ->68d811 compares owner-view8655ff(page+fc);834f98..fa5 ->861014 exact selected page",
+    "draw": "8611b3..12f9 reads samepage+6c ->c1fb40 mode0;SetDIBits c1fbb6..ce;BitBlt c1fd92 ->c2005e ->c2011c",
+    "base_screen_prerequisite": "BaseScreenID=0 reader866201..220 ->867ee3 clears page+1918 vector and skips token0;861028 ->8686c2 zero-vector branch selects ownpage+6c",
+    "independent_static_spotcheck": "PASS; primary hash,key,offset,framebounds,pixels,selected-view,SetDIBits symbols reproduced",
+    "scope": "editor static causal link only; no native runtime/composited pixel acceptance"
+  }
+}

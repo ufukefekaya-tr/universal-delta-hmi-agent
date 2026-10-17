@@ -1,0 +1,38 @@
+{
+  "id": "dop_b10s615_dopsoft2",
+  "family": "delta_dopsoft2",
+  "model": "DOP-B10S615",
+  "model_id": "-1341103792",
+  "editor_version": "4.00.07.04",
+  "resolution": [
+    1024,
+    600
+  ],
+  "driver": "UNVERIFIED",
+  "fixture_kind": "vendor",
+  "numeric_types": [],
+  "capabilities": {
+    "text": "UNVERIFIED",
+    "button": "UNVERIFIED",
+    "numeric_input": "UNVERIFIED",
+    "numeric_display": "UNVERIFIED",
+    "indicator": "UNVERIFIED",
+    "goto": "UNVERIFIED",
+    "alarm_strip": "UNVERIFIED",
+    "alarm_table": "UNVERIFIED",
+    "alarm_history": "UNVERIFIED",
+    "alarms": "UNVERIFIED",
+    "macros": "UNVERIFIED",
+    "macro_trigger:startup": "UNVERIFIED",
+    "macro_trigger:clock": "UNVERIFIED",
+    "macro_trigger:button": "UNVERIFIED",
+    "macro_op:assign": "UNVERIFIED",
+    "macro_op:bit_on": "UNVERIFIED",
+    "macro_op:bit_off": "UNVERIFIED",
+    "macro_op:if": "UNVERIFIED"
+  },
+  "native_schema": {
+    "qualified": false
+  },
+  "limitation": "Exact model identity, serialized revision and resolution observed in a DOP-B vendor file. This registry entry enables read-only inspection only; numeric, visual, address, macro and production feature qualification remains unverified."
+}

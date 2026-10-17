@@ -1,0 +1,279 @@
+{
+  "schema_version": 1,
+  "status": "RESEARCH_ONLY",
+  "capability_opened": false,
+  "scope": "GENERIC_SOURCE_PINNED_EXISTING_PROGRAM_BATCH_PREREQUISITES",
+  "source_commit": "567e25ef3849ab448d5f29d377adb17a9cb17a5e",
+  "tested_source_revision": "853bb797bfc1d1d9f18695e4c8aadde821554fb900bb2b9ef2d6dd6ae3f6bd63",
+  "tested_sources": 67,
+  "existing_tests": 623,
+  "method": "READ_ONLY_PRIMARY_STATIC_NO_VENDOR_EXECUTION",
+  "independent_roles": [
+    "numeric_contract: style/color/font causal mapping",
+    "control_final_review: behavior/appearance and nested-resource counterexamples",
+    "multipage_author: inert literal deletion and native dependency graph"
+  ],
+  "primary_sources": {
+    "editor_sha256": "9ed92401cd08e2be8bfc2df3a40dee4e99e9f605da7a4fa9605f9e2754821eeb",
+    "b10_renderer_sha256": "e6fa5b74d8d73415b1fd79b16aa19fc163f95113471eb8e9e1022f8615b19ab3",
+    "b10_kernel_sha256": "8e58747aba447c823deb6a424b62c668fcb2769e82f5b2981079f14af6ab66bf"
+  },
+  "private_source_observation": {
+    "sha256": "c3ba093b3c17fb374c8d4669d04ab27aa66c80285d087528561784a13a6dd4ba",
+    "bytes": 128208,
+    "pages": 3,
+    "owners": 288,
+    "literal_owners": 166,
+    "ordinary_owners": 122,
+    "ordinary_states": 208,
+    "assets_copied": false,
+    "paths_copied": false,
+    "customer_bindings_copied": false,
+    "source_modified": false,
+    "vendor_signed_property_claim": "No; this later saved source does not rewrite historical unsigned-donor evidence"
+  },
+  "appearance": {
+    "abi": {
+      "family": "delta_dopsoft2",
+      "model_id": 2953863504,
+      "serialized_version": "4.00.07.04"
+    },
+    "native_reader": "b66971 Style keyda6a98 -> atoi b669aa -> WORD owner+4c b669b3",
+    "native_writer": "b66175..b66180 sameWORD -> Style=%ld",
+    "compiler": "7f06ef..7f06fd sameWORD -> Style=%d;7fc750..7fc761 alternative unchanged",
+    "loader": "100ab82a..100ab840 Style key101a2ba0; typebyte table100ac10e/jump100ac0e2",
+    "mappings": [
+      {
+        "types": [
+          "1/1",
+          "1/2",
+          "1/3",
+          "1/4",
+          "1/10",
+          "2/1"
+        ],
+        "native_runtime": {
+          "0": 0,
+          "1": 5,
+          "2": 9,
+          "3": 16
+        },
+        "roles": {
+          "surface": "State.FgColor",
+          "text": "State.FontColor",
+          "border": "fixed_3d_constants"
+        },
+        "flat_filled_button_supported": false
+      },
+      {
+        "types": [
+          "5/1",
+          "6/1"
+        ],
+        "native_runtime": {
+          "0": 0,
+          "1": 5,
+          "2": 10,
+          "3": 16
+        },
+        "flat_native_style": 0,
+        "roles": {
+          "surface": "State.BgColor",
+          "border": "Element.BorderColor",
+          "text": "State.FontColor"
+        }
+      }
+    ],
+    "type12_loader": "100ab883..100ab916",
+    "type56_loader": "100ab9ea..100aba6b",
+    "text_only_native_style": 3,
+    "text_only_runtime_style": 16,
+    "native_style16_counterexample": "Falls back to runtime0; do not write runtime enum into DPS",
+    "text_only_scope": "Skips surface/border, sets keyed transparency0x20; no alpha/picture/layer-redraw acceptance; exact no-picture companions required",
+    "callbacks": {
+      "set_on_off": "1000e6c7; textonly1000e9f4",
+      "momentary_maintained": "1000e141; textonly1000e46c/commontext1000e567",
+      "goto": "1000ec3f; textonly1000ef23/commontext1000f00d",
+      "indicator": "10021dd0; textonly100220d5..1002211d/commontext100221a4",
+      "display": "1001fcb0; flat1001fd06..1001fd45/textonly1001fd50",
+      "input": "100201f0; flat10020343..1002037c/textonly10020335"
+    },
+    "colorref_encoding": "0x00BBGGRR, not compiled RGB565",
+    "compiled_color_chain": "7fd29f..7fd2ad Fg;7fd2f5..7fd30e Bg via7b1c29; loaderFg100ac85b..885 state+4/Bg100ac88d..8b7 state+8/Font100ac8f1..91b state+14/Border100abfe4..100ac00e owner+60",
+    "numeric_flat_chain": "display1001fd11/25/45; input1002034e/62/7c: Border->SetFg/Bg->SetFill/PS_Rect; Kernel1002de10 fill+18,outline+10",
+    "border_constants": "1012ffa0 helper; style5->10130210/style10->10130002; RGB565dedf/9494/black constants",
+    "root_cross_check": [
+      "NativeStyle reader/store",
+      "compiler identical WORD emission",
+      "type12/type56 exact loader string comparisons"
+    ],
+    "font": {
+      "writer": "b6cb89 font+4 Size; b6cbb8 font+5 Ratio, distinctBYTEs",
+      "getters": "b698a0..b698c1 Size;b69900..b69921 Ratio",
+      "numeric_compiler": "80e9a7/80e9b3 ->80eb99 ->593234",
+      "caption_compiler": "80f969 ->b6a100 vtable+38 ->b6ad84..b6add6 ->80eb99/593234",
+      "height": "593496..5934bc: -MulDiv(Size,LOGPIXELSX,LOGPIXELSY); not points/72",
+      "width": "5934df..59350a: helper((height/2)*Ratio/100)",
+      "helper": "7be59e modf; positivefraction>=0.5 adds1, else integral part; not symmetric rounding",
+      "create_font": "5935f4 CreateFontW",
+      "ratio_policy": "0/48->100 changes requested glyphwidth; preserve unless separately explicit qualified change",
+      "size_zero": "Zeroheight requested; numeric nearest builtin font index80e818..83d/7b1758 first8; no universal zero/default meaning",
+      "final_pixels": "Bitmap/cache/DPI/font family/native fallback not CSS metrics"
+    },
+    "capability_status": "NOT_IMPLEMENTED; source-static contract may be built; no visual PASS",
+    "initial_record_extent": "Each changed original scalar retains its exact raw record byte length; variable-length existing-owner edits remain separately unqualified pending hidden-offset/reference proof; no padding/normalization"
+  },
+  "background": {
+    "source_format": "Three contiguous BITMAPINFOHEADER40 + BI_RGB32 pixel frames; zero PNG signatures in decoded body",
+    "picture_size": 0,
+    "background_size": 7372920,
+    "picture_offsets": [
+      0,
+      2457640,
+      4915280
+    ],
+    "frame_bytes": 2457640,
+    "header": [
+      40,
+      1024,
+      600,
+      1,
+      32,
+      0,
+      2457600,
+      0,
+      0,
+      0,
+      0
+    ],
+    "fourth_byte": "Every source pixel FF; reserved high byte convention, not proven alpha",
+    "frame_sha256": [
+      "d7965144a76e4003cba5c920dd251084c51585dea9de81d0b54c50d31c22ebfb",
+      "b3e05df7ead89088e07e7872c3333d5baad635eb07e47ec4a31ecdc7d05ffffd",
+      "d5e114b19895f73882ae7c49aaa256c71effb4556b5eb3e0672765b040df853d"
+    ],
+    "native_reader": "86656b..866593 PictureOffset ->page+70",
+    "native_writers": "819eaa..819f3c screenoffset;817a00..817b07 Background/Size/rawlength",
+    "primary_dib_docs": [
+      "https://learn.microsoft.com/en-us/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader",
+      "https://learn.microsoft.com/en-us/previous-versions/dd183376(v=vs.85)"
+    ],
+    "conversion": "Opaque PNG exactcanvas ->BGR reservedFF, bottom-up for positiveheight; no resize/crop/profile/alpha-loss fallback",
+    "minimum_contract": "Existing uniquely referenced fixed-size frames only; unchanged exact40byteheaders/Size/offsets/otherresources; nestedDIB+completeoffsetgraph validation, independent asymmetric corner/row checks and full source restoration",
+    "renderer_consumption_chain": "NOT_CLOSED_IN_THIS_RESEARCH",
+    "general_new_picture_assets": "UNQUALIFIED",
+    "capability_status": "NOT_IMPLEMENTED"
+  },
+  "inert_deletion": {
+    "status": "BOUNDED_STATIC_CONTRACT_DEVELOPABLE_NOT_IMPLEMENTED",
+    "source_preconditions_observed": [
+      "166Type10/Sub6",
+      "GroupID0",
+      "No literal ElementOrder",
+      "Read/Write/Offset/VisibleVar None",
+      "OneValue0State",
+      "PosVary0",
+      "Picture/sound/blink flags0",
+      "All source macroszero",
+      "Every AuxKeyElement empty"
+    ],
+    "nPartsID": "b67136..b6718a reader->owner+4ec; b66541..b66565 writer scalar",
+    "MeMeCode": "811f51..811f68 encrypts9globalbytes ebb9d4;69c4be..69c5b7 decrypt/copyglobal; unchanged blob retained",
+    "group": "7d43ee..7d43f8 GroupID0 skips group insertion",
+    "opaque_references": "Packed SRAM byteID matches are model/config data, not owner references; whole source framed, Aux empty, allmacroszero, GroupID0. Unknown other shapes/references must refuse.",
+    "capability_status": "NOT_IMPLEMENTED",
+    "sram_consumer": "884196..8841b7 fixed8byte slot+c0; c7 is finalslotbyte;885ddb..885e56 eight-slot(+88+index*8) decoder4dba7f;4dbfb9..4dbfed emits8characters; no private slot values recorded",
+    "minimum_contract": [
+      "Exact source family/model/version and per-owner extent SHA",
+      "Only complete inert Type10/Sub6 Element+singleValue0State extents",
+      "Whole-source closed-reference checks: groups0,emptyAux,allmacroempty,no unknownref fields/opaqueframing",
+      "No survivingowner renumber/reorder; every global/header/liveowner/thumbnail/MeMeCode/SRAM/tail byte unchanged",
+      "Only removed extents and mandatory envelope body-length/compression change",
+      "Independent body subtract exactapprovedextents; restoring extents restores exactsourcebody/envelope"
+    ]
+  },
+  "counterexamples": [
+    {
+      "id": "P_BEHAVIOR_GUARD",
+      "trigger": "Use structural preserved_layout as wholebehavior guard",
+      "evidence": "Memory source Type6 GainValue1.0->2.0 still passes layout order guard",
+      "effect": "Numeric behavior could drift unnoticed",
+      "required_fix": "Independent exact source+allowedfield expectedbody including untouched bindings/numeric/macro/keypad/tail",
+      "existing_public_service_bypass": false
+    },
+    {
+      "id": "P_OPAQUE_NUMERIC",
+      "trigger": "Re-emit existing signedF1 display through UINT/INTF0 factory",
+      "evidence": "Private source existing Type5/Sub1 MemLen1/MemFmt1 I4/F1",
+      "effect": "Geometry repair may change/reject numeric semantics",
+      "required_fix": "Existingpresentation changes preserve complete numeric behavior; do not reuse freshclone typed factory"
+    },
+    {
+      "id": "P_INDICATOR_FACE",
+      "trigger": "Change only BgColor for ordinary indicator surface",
+      "evidence": "Source two states have same FgColor but different BgColor; Type2 callback face usesFgColor",
+      "effect": "Requested status colors not visible",
+      "required_fix": "ExactType/SubType/Style per-role color mapping"
+    },
+    {
+      "id": "P_RUNTIME_ENUM",
+      "trigger": "Write runtimeStyle16 directly to native Style",
+      "evidence": "Native loader recognizes literal3 for runtime16;16fallsback0",
+      "effect": "Text-only request becomes bordered default",
+      "required_fix": "Explicit native3 mapping"
+    },
+    {
+      "id": "P_BITMAP_NESTING",
+      "trigger": "Trust outer ResourceTables framing as valid background",
+      "evidence": "Memory DIBwidth1024->0 preserves outerSize/CRLF and suffix complete=True",
+      "effect": "Invalid nested bitmap accepted by inadequate writer",
+      "required_fix": "Separate nestedDIB/referencegraph validation",
+      "existing_public_service_bypass": false
+    },
+    {
+      "id": "P_NUMERIC_ENDPOINT",
+      "trigger": "Assume decimalinput limits lower exactly",
+      "evidence": "Signed compiler6181c5..61823f/6183a4..618419 atof->binary64spill->pow10F->x87fmul->ftol; diagnosticF1raw-32767=-3276.7 extendedproducttrunc-32766; F4raw-32762=-3.2762 nearest53trunc-32761",
+      "effect": "Offbyone inputdomain",
+      "required_fix": "Resolve exact compiler/keypad contract; noepsilon/bound-shift/typefallback",
+      "diagnostic_only": true
+    },
+    {
+      "id": "P_RAW_ID_SCAN",
+      "trigger": "Treat substring/binaryID matches in opaque resources as owner refs",
+      "evidence": "Raw176 is modelDWORD fragment;250 is fixed8char configuration encoding slotbyte verified by primaryconsumer",
+      "effect": "False blocking or false graph approval",
+      "required_fix": "Interpret exact source framing and primary consumers; no private values or arbitrary pattern scans"
+    }
+  ],
+  "batch_gate": {
+    "required": [
+      "source-pinned existing geometry/font/style",
+      "inert literal deletion",
+      "fixed-size background replacement",
+      "INT16F1/F4 exact raw/display input and limits",
+      "explicit quality and write-interlock contracts",
+      "savedbody independent replay/restoration",
+      "nine SDK tools",
+      "independent final review",
+      "clean scoped commit"
+    ],
+    "notify_peer": "Complete audited batch or significant actionable impasse only; partialfeature completion is not readiness",
+    "generic_core": "No private tag/asset/path/machine design copied; peer author applies own approved plan afterward"
+  },
+  "gui": "NOT_USED",
+  "vendor_code_executed": false,
+  "native_pixels": "NOT_RUN",
+  "vendor_compile": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "full_v1_complete": false,
+  "documentation_review": {
+    "status": "PASS_SCOPE_CORRECTION_CLOSED",
+    "reviewer": "control_final_review",
+    "closed_finding": "First existing-owner scalar edits retain raw record length; variable-length edits separately unqualified",
+    "tested_source_hashes_unchanged": 67,
+    "test_ids_unchanged": 623,
+    "native_or_runtime_acceptance": false
+  }
+}

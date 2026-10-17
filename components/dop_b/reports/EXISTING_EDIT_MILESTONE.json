@@ -1,0 +1,124 @@
+{
+  "scope": "SOURCE_PINNED_EXISTING_PRESENTATION_BACKGROUND_COMPOSITION_ONLY",
+  "status": "OFFLINE_PASS",
+  "source_revision_sha256": "166d78e639c69fb3b6f82aabe0a85051ea2a103be6d05a215a1be7c8d31d0ded",
+  "source_hash_count": 82,
+  "root_tests": {
+    "discovered": 751,
+    "executed": 751,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 202.864
+  },
+  "new_tests": {
+    "composition": 15,
+    "page_background": 20,
+    "public_service": 9,
+    "common_IR_and_preview": 7,
+    "nine_tool_sdk": 1,
+    "total": 52
+  },
+  "independent_review": {
+    "role": "independent read-only technical reviewer",
+    "executed": 751,
+    "unique_test_ids": 751,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 201.891,
+    "source_hash_count": 82,
+    "source_hashes_equal_root": true,
+    "source_hashes_unchanged": true,
+    "test_id_order_equal_root": true,
+    "test_revision_sha256": "166d78e639c69fb3b6f82aabe0a85051ea2a103be6d05a215a1be7c8d31d0ded",
+    "material_open_findings": 0,
+    "shared_file_edits": 0
+  },
+  "independent_extra": {
+    "malformed_IR_typed_cases": 55,
+    "fully_rehashed_authority_forgeries": 9,
+    "helper_publication_freshness_cases": 8,
+    "composition_order_permutations": 12,
+    "opaque_fake_background_header_bytes": 530,
+    "full_fake_resource_payload_inert": true
+  },
+  "source_contract": {
+    "model_id": 2953863504,
+    "serialized_version": "4.00.07.04",
+    "graph": "original immutable closed B10 source graph",
+    "presentation": "separate registered exact ordinary scalar/State/font/color authority",
+    "background": "separate registered exact source-page frame and opaque fixed-canvas PNG",
+    "new_public_mode": "existing_edit",
+    "old_modes": "existing_program/native_preserved retention semantics unchanged"
+  },
+  "public_integration": {
+    "IR": "native_presentation plus native_background",
+    "helper": "scripts/qualify_existing_edit.py; source-bound four new JSON outputs, no native file",
+    "authority_books": [
+      "profiles/existing_contracts/dopsoft2_b10.json",
+      "profiles/existing_contracts/dopsoft2_b10_presentation.json",
+      "profiles/existing_contracts/dopsoft2_b10_background.json"
+    ],
+    "workspace_asset_hash_and_freshness": "ALL_PHASES_AND_REPEATED_RECEIPTS",
+    "source_coordinate_composition": "ORIGINAL_SOURCE_DISJOINT_SPANS_ONLY",
+    "save": "NEW_ONLY_REOPEN_INDEPENDENT_BODY_VALIDATION_AND_POSTLINK_FRESHNESS",
+    "sdk_proof": "EXISTING_EDIT_SDK_PROOF.json"
+  },
+  "preservation": {
+    "wholefile_noop": true,
+    "independent_source_record_expected_body": true,
+    "independent_resource_framing": true,
+    "wholebody_restoration": true,
+    "unknown_live_owner_bytes": true,
+    "header_thumbnail_untouched": true,
+    "private_project_source_writes": 0
+  },
+  "preview": {
+    "requested_png": "PINNED_EXACT_CANVAS_ONLY",
+    "absent_declared_bytes": "TYPED_REFUSAL",
+    "geometry_only": "NO_BACKGROUND_REQUESTED",
+    "native_controls": "UNKNOWN_NOT_RENDERED",
+    "native_fonts_colors_transparency_final_composite": "NOT_RENDERED",
+    "native_visual_acceptance": "NOT_RUN"
+  },
+  "closed_findings": [
+    {
+      "id": "E3",
+      "trigger": "list/dict native_candidate mode used in set membership",
+      "evidence": "Independent malformed-mode public open_project probes exposed raw TypeError before typed refusal",
+      "effect": "Unstructured failure at public calibration dispatch",
+      "fix": "Require string before supported-mode membership; zero-session typed-regression",
+      "retest": "Independent seven mode variants and final751 suite PASS",
+      "status": "CLOSED"
+    },
+    {
+      "id": "E4",
+      "trigger": "Declared PNG with default missing bytes or explicitNone; legitimate geometry-only request",
+      "evidence": "Independent preview rendered zero images while banner claimed requested PNG was shown; CLI could create empty output before render failed",
+      "effect": "False visual evidence and failed-output leak",
+      "fix": "Require exact byte-valued declared image coverage; honest no-background policy/banner; CLI render before parent/output creation",
+      "retest": "Independent omitted/None/bytearray/string cases typed PREVIEW_BACKGROUND; geometry-only zeroimages truthful; actual CLI no output/parent; final751 PASS",
+      "status": "CLOSED"
+    }
+  ],
+  "historical_tests": "history/699/python_tests.json",
+  "unsupported_in_this_milestone": [
+    "Signed fractional input lowering",
+    "Quality producer and continuous/commit-time interlock",
+    "New native macro/alarm definitions",
+    "Complete new program writer",
+    "DOP-100 real feature qualification",
+    "Vendor compile/runtime/native pixels/physical acceptance"
+  ],
+  "entry_permission_research": "ENTRY_PERMISSION_RESEARCH.json; research-only; no public capability",
+  "vendor_compile": "NOT_RUN",
+  "native_pixels": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "current_revision_relocation": "NOT_RUN",
+  "full_batch_ready": false,
+  "program_writer_complete": false,
+  "full_v1_complete": false,
+  "computer_use": false
+}

@@ -1,0 +1,31 @@
+{
+  "status": "OFFLINE_PASS_MEMORY_ONLY",
+  "source_sha256": "c3ba093b3c17fb374c8d4669d04ab27aa66c80285d087528561784a13a6dd4ba",
+  "source_owner_sha256": "d6f62934922040af60cdceb5a28922a74bdb10129d25caaba075da44a782f4be",
+  "candidate_sha256": "ea414b64a8fcfc18963a37f08245e3959741e7da83f56fba8500d241fcbaf7fb",
+  "candidate_bytes": 115876,
+  "candidate_body_sha256": "f409c556c666a84929656d08ac3450bd8e416059883a67b8aa90260678692d59",
+  "candidate_body_bytes": 7704224,
+  "pages": 3,
+  "owners": 288,
+  "mutated_scalar_records": [
+    "IntNum:4->1",
+    "DotNum:1->4"
+  ],
+  "original_storage": "INT_WORD_MemLen1_MemFmt1",
+  "independent_original_record_body": true,
+  "replay_equal": true,
+  "source_unchanged": true,
+  "tail_thumbnail_prefix_preserved": true,
+  "scope": "PRIVATE_SOURCE_PINNED_SIGNED_DISPLAY_F1_TO_F4_MEMORY_PROBE_ONLY",
+  "no_private_path_or_tag_exported": true,
+  "native_output": "NOT_CREATED",
+  "private_project_writes": 0,
+  "native_pixels": "NOT_RUN",
+  "vendor": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "full_batch_ready": false,
+  "computer_use": false,
+  "signed_F4_property_holdout": "NOT_FOUND; candidate is a memory-only static transformation, not a vendor witness"
+}

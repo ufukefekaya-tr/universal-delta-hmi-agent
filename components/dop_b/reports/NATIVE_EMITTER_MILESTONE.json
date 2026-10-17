@@ -1,0 +1,259 @@
+{
+  "schema_version": 1,
+  "scope": "BOUNDED_NATIVE_DEVELOPMENT_NOT_FULL_V1",
+  "status": "OFFLINE_PASS",
+  "test_revision_sha256": "8d8b416bea7055a4f51afb3f854fbbe922f61f4e483179b8e243e158c9c46e8c",
+  "source_hashes": {
+    "src/universal_hmi/service.py": "a5ec11eac8f299ae3a48dc8f8beca7277c1ae2eb6e03b60d11d3decf7435b1a1",
+    "src/universal_hmi/mcp_server.py": "513343f6716cd196195b40efbc32755a7df1c830129c204f2e3d5df23deeaf0b",
+    "src/universal_hmi/native/__init__.py": "df1a3381b72cd29c61058bddb9939abbb3b162f64269248ad20a7750a63fa7cd",
+    "src/universal_hmi/native/numeric.py": "facc48b91377057ebcd9ecb2bf9ab1d552364480a3ec4ef890230310c903796a",
+    "src/universal_hmi/native/macros.py": "4c4d0ea62d4d802264691eedac1865bc7ba606be978246bb48b5b3d352fa1af9",
+    "src/universal_hmi/native/identity.py": "cef9007cb3f9ad3b2f5e1c2c2350a878c1c6c24a1e5988389cad92abe540c8cf"
+  },
+  "root_tests": {
+    "executed": 139,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 24.587
+  },
+  "independent_review": {
+    "reviewer": "/root/emitter_counterreview",
+    "read_only": true,
+    "executed": 139,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 23.317,
+    "report": "NATIVE_EMITTER_REVIEW.md",
+    "fresh_portability": "PASS",
+    "lock_pins_checked": 30,
+    "source_hashes_checked": 37,
+    "feature_records_checked": 43,
+    "real_native_unverified_records": 22
+  },
+  "implemented": [
+    "Source-local stable donor automatic button/numeric operations for original SYNTHETIC/0.0 only",
+    "Final ordered page/name/object/state/binding contracts checked even for explicit no-op plans",
+    "Exact numeric storage/type/limit/digit identity-scaling edits; no narrowing; IEEE overflow/zero-underflow rejected",
+    "Qualified low-level existing-target goto mutation; not automatic goto compilation",
+    "Signed and unsigned equivalent uint32 model identity without source rewriting",
+    "Bounded lossless REV macro framing; opaque instruction and operand semantics"
+  ],
+  "external_numeric_holdouts": {
+    "reviewer": "/root/native_macros_research",
+    "implementation_sha256": "facc48b91377057ebcd9ecb2bf9ab1d552364480a3ec4ef890230310c903796a",
+    "passed": 9,
+    "failed": 0,
+    "memory_only": true,
+    "source_unchanged": true,
+    "vendor_outputs_distributed": false,
+    "assertions": [
+      "Expected numeric field edits only",
+      "All other raw records, prefix, thumbnail and opaque tail unchanged",
+      "Exact source no-op identity",
+      "Repeated apply identity",
+      "Reopened numeric contract verification"
+    ],
+    "cases": [
+      {
+        "source": "B03E211",
+        "screen_id": 2,
+        "element_id": 39,
+        "data_type": "UINT",
+        "changed_fields": [
+          "IntNum"
+        ],
+        "candidate_sha256": "778fb311b56726ba8e1494921a9ec56ffbce0c32f7c924c98c62f97bbb32613d"
+      },
+      {
+        "source": "B03E211",
+        "screen_id": 2,
+        "element_id": 40,
+        "data_type": "UINT",
+        "changed_fields": [
+          "IntNum"
+        ],
+        "candidate_sha256": "52425f20ed829cf73bc4557de0c9f8fbdc99f44a032801e77883c81c6456b1f8"
+      },
+      {
+        "source": "B03E211",
+        "screen_id": 2,
+        "element_id": 41,
+        "data_type": "UINT",
+        "changed_fields": [
+          "IntNum"
+        ],
+        "candidate_sha256": "9cade5113d176d2c2cba8fafe028d8d445f22740e63f929ffdeea4b33ba0e85c"
+      },
+      {
+        "source": "B03E211",
+        "screen_id": 2,
+        "element_id": 42,
+        "data_type": "UINT",
+        "changed_fields": [
+          "IntNum"
+        ],
+        "candidate_sha256": "f899d988b3e43397d50b0642dc9d2d1f66f35906d3c49d9b56b9527efc9fbe65"
+      },
+      {
+        "source": "DIAScreen History",
+        "screen_id": 2,
+        "element_id": 9,
+        "data_type": "INT",
+        "changed_fields": [
+          "MinValue",
+          "MaxValue"
+        ],
+        "candidate_sha256": "e4b5a2cac81c512e48b3a9f2e0f50e2a01fe7b08b124a84b76fc47dad627fc18"
+      },
+      {
+        "source": "DIAScreen History",
+        "screen_id": 2,
+        "element_id": 10,
+        "data_type": "UINT",
+        "changed_fields": [
+          "MaxValue"
+        ],
+        "candidate_sha256": "1fcf40368d031b403c5fdfd70ac46dc16d0106739ffe68c1bc14fcce94dfb4e7"
+      },
+      {
+        "source": "DIAScreen History",
+        "screen_id": 1,
+        "element_id": 9,
+        "data_type": "DINT",
+        "changed_fields": [
+          "MinValue",
+          "MaxValue"
+        ],
+        "candidate_sha256": "87f02c1067bf9027a5fafe0fa1d1edea536a2dc2e2c0abb9d71f2fa74aba714f"
+      },
+      {
+        "source": "DIAScreen History",
+        "screen_id": 1,
+        "element_id": 10,
+        "data_type": "UDINT",
+        "changed_fields": [
+          "MaxValue"
+        ],
+        "candidate_sha256": "8a94e22934bd8670799ca38e94c14a31de511b93d77812c78e8e22268675e3c9"
+      },
+      {
+        "source": "DIAScreen History",
+        "screen_id": 40,
+        "element_id": 10,
+        "data_type": "REAL",
+        "changed_fields": [
+          "MinValue",
+          "MaxValue",
+          "IntNum"
+        ],
+        "candidate_sha256": "2183e41d42cca780d7e58193ba668781f757e3cf654fff807ac77035f4981968"
+      }
+    ]
+  },
+  "external_macro_framing": {
+    "reviewer": "/root/native_macros_research",
+    "implementation_sha256": "4c4d0ea62d4d802264691eedac1865bc7ba606be978246bb48b5b3d352fa1af9",
+    "programs": 1921,
+    "lines": 12436,
+    "failures": 0,
+    "byte_exact_roundtrip": true,
+    "sources": [
+      {
+        "source": "DIAScreen Full Element Demo",
+        "model_id": "268502784",
+        "version": "6.0.00205.8268",
+        "programs": 62,
+        "lines": 667,
+        "sha256": "fc079f74ed9b34e2e698b0c65c95c4f914983594f658cadc72e1ee4d97493ed5"
+      },
+      {
+        "source": "DIAScreen Alarm function EN",
+        "model_id": "268505088",
+        "version": "6.6.0.2",
+        "programs": 7,
+        "lines": 25,
+        "sha256": "ae60464b551a5f773871910c180ccd72fdc63dc5123a76a17c16ab50bd94b8be"
+      },
+      {
+        "source": "DIAScreen History function",
+        "model_id": "268505093",
+        "version": "6.6.0.10",
+        "programs": 9,
+        "lines": 45,
+        "sha256": "7f35b5fd05537106b46a9791a426a1b3e3a59f8afa1f870595e9c0fd75e24471"
+      },
+      {
+        "source": "HMC N411; not DOP-B qualification",
+        "model_id": "302453852",
+        "version": "4.00.05.24",
+        "programs": 1841,
+        "lines": 11462,
+        "sha256": "4c21c3f04484f620c48cf4aae101d7b2d3288a1dc11455330b20cc53fd67d148"
+      },
+      {
+        "source": "Public author DOP-B03E211",
+        "model_id": "-1107091184",
+        "version": "4.00.07.04",
+        "programs": 2,
+        "lines": 237,
+        "sha256": "07d90a3900cb86e994b55a467f594809e4ffe1e0681f329d205ff26b3b688f90"
+      }
+    ],
+    "independent_counterreview_subset": {
+      "programs": 71,
+      "lines": 712,
+      "byte_exact": true
+    },
+    "additional_installed_scan": {
+      "files": 22,
+      "failures": 0,
+      "overlaps_sources": true,
+      "program_count": "NOT_RECORDED_DO_NOT_ADD"
+    },
+    "semantic_emission": "UNQUALIFIED"
+  },
+  "public_research_source": {
+    "repository": "https://github.com/ismaelfari1996/hmi-simulacion-dosificador",
+    "commit": "aa8684c51dcd4372d6dc7d274d7cf7a51a7d94d1",
+    "native_bytes": 71189,
+    "license_url": "https://github.com/ismaelfari1996/hmi-simulacion-dosificador/blob/aa8684c51dcd4372d6dc7d274d7cf7a51a7d94d1/LICENCE",
+    "license_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "readme_url": "https://github.com/ismaelfari1996/hmi-simulacion-dosificador/blob/aa8684c51dcd4372d6dc7d274d7cf7a51a7d94d1/README.md",
+    "redistributed_code_or_assets": false,
+    "embedded_assets": "Separate Icons8 attribution; no embedded assets redistributed",
+    "qualification": "Different model and process project; not selected neutral B pilot"
+  },
+  "unchanged_visual_acceptance": {
+    "renderer_sha256": "d389335be8948c761eae2a8b1d4a8320849e24ca2847d485f4a4815e9fbf0a71",
+    "scope": "Unchanged conceptual preview only; no native-render acceptance",
+    "sequential_reviews": [
+      "FIRST_AESTHETIC.md",
+      "SECOND_AESTHETIC.md"
+    ]
+  },
+  "portability_current_revision": {
+    "status": "OFFLINE_PASS",
+    "source_commit": "e60fdf6bf6829d52866769889da9e5982c161b45",
+    "test_revision_sha256": "8d8b416bea7055a4f51afb3f854fbbe922f61f4e483179b8e243e158c9c46e8c",
+    "executed": 139,
+    "evidence": "relocation_verification.json",
+    "linux_runtime": "NOT_RUN",
+    "macos_runtime": "NOT_RUN"
+  },
+  "real_production_gate": "PRODUCTION_EMISSION_PENDING",
+  "open": [
+    "Exact selected-model neutral native sources and driver/operand calibration",
+    "New page/full compiler/style/layer/label/unit emission",
+    "Macro semantic writer and owner metadata",
+    "Basic alarm strip/current table/date-time alarm history emission and dependency ownership",
+    "Two-real-native common pilot",
+    "Human vendor compile/simulation and physical acceptance",
+    "Linux/macOS runtime NOT_RUN"
+  ],
+  "both_families_vendor_qualified": false,
+  "full_v1_complete": false,
+  "next_native_research": "NATIVE_MACRO_ALARM_RESEARCH.md"
+}

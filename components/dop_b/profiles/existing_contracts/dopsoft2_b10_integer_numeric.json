@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "family": "delta_dopsoft2",
+  "model_id": 2953863504,
+  "serialized_version": "4.00.07.04",
+  "acceptance_scope": "OFFLINE_STORED_CONFIGURATION_ONLY",
+  "source_policy": "original_source_pinned_closed_existing_graph",
+  "vendor": "NOT_RUN",
+  "native_pixels": "NOT_RUN",
+  "authority_kind": "manufacturer_static_existing_integer_numeric_contract",
+  "mode": "existing_word_integer_numeric_v1",
+  "storage_policy": "original_WORD_MemLen1_MemFmt1_INT_or2_UINT_immutable",
+  "mutation_fields": [
+    "IntNum",
+    "DotNum",
+    "MinValue",
+    "MaxValue"
+  ],
+  "identity_scale": {
+    "gain": "1",
+    "offset": "0",
+    "roundoff": "0"
+  },
+  "display_fractional_digits": {
+    "INT": [
+      0,
+      1,
+      4
+    ],
+    "UINT": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "display_integer_digits": "5-F_full_WORD_raw_domain",
+  "input_policy": "original_F0_only_strict_integral_raw_minimum_less_than_maximum",
+  "raw_ranges": {
+    "INT": [
+      -32768,
+      32767
+    ],
+    "UINT": [
+      0,
+      65535
+    ]
+  },
+  "fractional_input": "UNVERIFIED_REFUSED",
+  "conditional_operands": "UNQUALIFIED_REFUSED",
+  "evidence": {
+    "editor_sha256": "9ed92401cd08e2be8bfc2df3a40dee4e99e9f605da7a4fa9605f9e2754821eeb",
+    "renderer_sha256": "e6fa5b74d8d73415b1fd79b16aa19fc163f95113471eb8e9e1022f8615b19ab3",
+    "numeric_reader_writer": "b66b6a..b66bbb/b66321; MemLen/MemFmt/IntNum/DotNum native scalar fields",
+    "numeric_compiler": "617dcd..617e1a;7d86a5..7d86bd/7d884d..7d8865",
+    "signed_display": "100c93ea/100c93fa signed WORD;10131acf/10131b88 decimal insertion;10131c36..10131c90 restores minus",
+    "unsigned_display": "100c9453..100c949a;10131acf/10131b88",
+    "input_F0": "6181c5..61823f/6183a4..618419; integer limits only;100efd02..100efd29 identity bypass",
+    "digit_capacity": "7ad8fe;7adcca signed WORD;7adfb3 unsigned WORD",
+    "signed_F4_property_holdout": "NOT_FOUND",
+    "review": "reports/NUMERIC_LIMIT_RESEARCH_UPDATE.json",
+    "boundary": "stored settings and source/static text path only; no actual glyph/CRT/thread/runtime/vendor execution"
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "scope": "STORED_VENDOR_CONFIGURATION_ONLY",
+  "model": "DOP-B10S615 65536 Colors",
+  "model_id": 2953863504,
+  "resolution": [
+    1024,
+    600
+  ],
+  "serialized_version": "4.00.07.04",
+  "executable": {
+    "installation_label": "DOPSoft 2.00.07",
+    "file_version": "4, 0, 7, 4",
+    "product_version": "4, 0, 7, 4",
+    "build_description": "Build Date: 2015/03/13",
+    "sha256": "9ed92401cd08e2be8bfc2df3a40dee4e99e9f605da7a4fa9605f9e2754821eeb",
+    "marketing_version_independently_confirmed": false,
+    "limitation": "Installation label, executable metadata and native serialized version are separate observations; no DOPSoft4 conversion or family-wide compatibility inferred."
+  },
+  "source": {
+    "bytes": 55044,
+    "sha256": "c7830ddfc6305f479b21e441107eccf5441b3273ba62c73fac278d4c7f3d3052",
+    "decoded_body_bytes": 43736,
+    "declared_body_bytes": 43736
+  },
+  "candidate": {
+    "bytes": 55268,
+    "sha256": "d96dacf3b05dea694a82915e25dda0e3880d6b2747e347776172915f9e6cc57b",
+    "decoded_body_bytes": 52011,
+    "declared_body_bytes": 52011,
+    "owners": 12,
+    "purpose": "ADAPTER_QUALIFICATION_FIXTURE_ONLY_NOT_LOAD_READY"
+  },
+  "donors": {
+    "set_on": {
+      "screen_id": "1",
+      "element_id": "1",
+      "owner_sha256": "1b65eb473e318ccb0dbbee8a908bc531abfe2748e6bb7e60c890cb3a4fc51166",
+      "match": {
+        "Type": "1",
+        "SubType": "1"
+      },
+      "property_witness_sha256": "018ce9bd2ec1d52da7b867966104df9a74da53f4ff28deb64b61cabaf64eb37e"
+    },
+    "set_off": {
+      "screen_id": "1",
+      "element_id": "2",
+      "owner_sha256": "1ea9d0f4388494ad4fee39debc7fb32a426cad12647cc8d590c350bdf2bb1082",
+      "match": {
+        "Type": "1",
+        "SubType": "2"
+      },
+      "property_witness_sha256": "58367933e3c3e472ea0d5a7afd6876b99fc8c0adecdd1e3e8d8e42216584c288"
+    },
+    "momentary": {
+      "screen_id": "1",
+      "element_id": "3",
+      "owner_sha256": "97b0a7bdf111b71389c0d204e41106a4c95688201b69b5b25f18d2e3a8d69d65",
+      "match": {
+        "Type": "1",
+        "SubType": "3"
+      },
+      "property_witness_sha256": "6c5ed743bdf2d3bd7c7b0b0ebe86eba8091bca96dd0d6ff7e48ea49c44c5ac66"
+    },
+    "maintained": {
+      "screen_id": "1",
+      "element_id": "4",
+      "owner_sha256": "2c748611e7283a13b90b320decf478c44fc2724286ba064b67782b137f1f4580",
+      "match": {
+        "Type": "1",
+        "SubType": "4"
+      },
+      "property_witness_sha256": "6a95610305610ceaf5c0e944e6c32cae38183a99a6419a51a3930e8b80f65cc7"
+    },
+    "numeric_input": {
+      "screen_id": "1",
+      "element_id": "5",
+      "owner_sha256": "2ef773f301614e366a4809d4b76ba67f2e8de2d4f2f54c17e71411313401a864",
+      "match": {
+        "Type": "6",
+        "SubType": "1"
+      },
+      "property_witness_sha256": "8c9d710c602498ca37f900bd40fb76269dd7910d6956b2cb6bd4d1d760c69975"
+    },
+    "numeric_display": {
+      "screen_id": "1",
+      "element_id": "6",
+      "owner_sha256": "3f514da5723d7b1eafed2533682756c4331f14583352200f07d44c68d7753eb2",
+      "match": {
+        "Type": "5",
+        "SubType": "1"
+      },
+      "property_witness_sha256": "16884ca97c1d125a4b24db8a4dcb5dd028ab4a800d22cc72237d1e672ca0fd7d"
+    }
+  },
+  "property_witnesses": {
+    "set_on": {
+      "screen_id": "1",
+      "element_id": "1",
+      "path": "evidence/button_set_on_owner1_M0.jpg",
+      "sha256": "018ce9bd2ec1d52da7b867966104df9a74da53f4ff28deb64b61cabaf64eb37e"
+    },
+    "set_off": {
+      "screen_id": "1",
+      "element_id": "2",
+      "path": "evidence/button_set_off_owner2.jpg",
+      "sha256": "58367933e3c3e472ea0d5a7afd6876b99fc8c0adecdd1e3e8d8e42216584c288"
+    },
+    "momentary": {
+      "screen_id": "1",
+      "element_id": "3",
+      "path": "evidence/button_momentary_owner3.jpg",
+      "sha256": "6c5ed743bdf2d3bd7c7b0b0ebe86eba8091bca96dd0d6ff7e48ea49c44c5ac66"
+    },
+    "maintained": {
+      "screen_id": "1",
+      "element_id": "4",
+      "path": "evidence/button_maintained_owner4.jpg",
+      "sha256": "6a95610305610ceaf5c0e944e6c32cae38183a99a6419a51a3930e8b80f65cc7"
+    },
+    "numeric_input": {
+      "screen_id": "1",
+      "element_id": "5",
+      "path": "evidence/numeric_input_D0_word_unsigned.jpg",
+      "sha256": "8c9d710c602498ca37f900bd40fb76269dd7910d6956b2cb6bd4d1d760c69975"
+    },
+    "numeric_display": {
+      "screen_id": "1",
+      "element_id": "6",
+      "path": "evidence/numeric_display_D0_word_unsigned.jpg",
+      "sha256": "16884ca97c1d125a4b24db8a4dcb5dd028ab4a800d22cc72237d1e672ca0fd7d"
+    }
+  },
+  "mcp": {
+    "calls": [
+      "capabilities",
+      "open_project",
+      "inspect",
+      "plan_changes",
+      "validate",
+      "preview",
+      "apply_plan",
+      "save_as",
+      "diff"
+    ],
+    "transaction_sha256": "45ce6017de67757ba6773f331ac14a3a3a6b64c8b4649c272d263f44b73a0bc4",
+    "calibration_sha256": "086c2fd3ac404ab5646bb865651d932ef62ebeab079062f774b48acc5799d71c",
+    "profile_raw_sha256": "d393a20856d586b8b26d72d0b5f6d4fade9b1bc2a676aabef6e006203ffe0f7a"
+  },
+  "provenance": "Direct human permission: neutral blank source supplied; narrow vendor reference creation/save authorized. Source/assets remain project-local ignored.",
+  "runtime": "NOT_RUN",
+  "native_visual": "NOT_RUN",
+  "vendor_compile": "NOT_RUN",
+  "simulation": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "program_writer_complete": false,
+  "limitation": "Original unbound reference controls remain exactly preserved. Exact M0/D0 only; no arbitrary address/tag registration/clean program/new page/macro/alarm qualification."
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "project_id": "<neutral-project-id>",
+  "executor_kind": "human_vendor",
+  "status": "UNVERIFIED",
+  "profile_id": "<exact-profile-id>",
+  "profile_sha256": null,
+  "feature": "<specific native feature>",
+  "scenario": "<open, compile or simulate scenario>",
+  "artifact": {"reference": null, "sha256": null, "source_sha256": null},
+  "test_revision": null,
+  "editor": {"name": null, "build": null},
+  "native_schema_sha256": null,
+  "vendor_fixture_sha256": null,
+  "executed_at": null,
+  "steps": [],
+  "expected": null,
+  "actual": null,
+  "tests_executed": 0,
+  "tests_skipped": 0,
+  "evidence_references": [],
+  "open_findings": []
+}

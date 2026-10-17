@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.dpa binary
+*.dps binary
+*.png binary
+
+# Upstream notices retain their exact licensed bytes and inventory hashes.
+/licenses/texts/*.txt -text -diff

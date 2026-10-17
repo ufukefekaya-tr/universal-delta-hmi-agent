@@ -1,0 +1,10 @@
+{
+  "task_id": "REPLACE-TASK-ID",
+  "sequence": 0,
+  "policy_epoch": "<actual current policy epoch>",
+  "repo_head": "<full current committed HEAD>",
+  "envelope_sha256": "<SHA-256 of raw envelope bytes>",
+  "completed": [],
+  "open": ["Native qualification / vendor / physical acceptance remains unverified until evidence"],
+  "next": "<one concrete action>"
+}

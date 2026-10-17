@@ -1,0 +1,46 @@
+{
+  "version": "0.2.1",
+  "date": "2026-10-17",
+  "original_license": "Apache-2.0",
+  "changes": [
+    "License metadata, retained notices and distribution inventory",
+    "Dispatcher and worker use -I -B to reject mutable-state/PYTHONPATH import shadowing",
+    "Portable source test no longer embeds historical machine/account identifiers",
+    "Source distribution includes only projects/README.md, not customer project directories",
+    "Historical private evidence links labeled as unavailable rather than broken public links"
+  ],
+  "source_tests": {
+    "release_package": 8,
+    "job_runner": 14,
+    "host_path_leak": 1,
+    "failures": 0,
+    "skipped": 0,
+    "clean_export_governance": 16
+  },
+  "installed_windows": {
+    "python": "3.14.8",
+    "mcp": "2.3.0",
+    "tests": 53,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "all_14_tools_called": true,
+    "server_restart_resume": true,
+    "installed_site_packages_only": true,
+    "fresh_user_directory": true,
+    "fresh_vm": false,
+    "offline_no_index": true,
+    "network_denial_enforced": false,
+    "wheel_sha256": "d2f22df02b8f9f166e1365b264facd67da1a1eb013a1b1aaac4a2c4ee50f4ac1"
+  },
+  "linux_current_version": "NOT_RUN_BY_THIS_WORKER",
+  "historical_full_suite": "0.2.0:979source/52Windows/52Linux; notclaimedrerun",
+  "notice_inventory": {
+    "wheels": 34,
+    "runtimes": 2,
+    "notice_mappings": 198
+  },
+  "vendor": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "acceptance": "OFFLINE_PACKAGING_AND_IMPORT_ISOLATION_ONLY"
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "purpose": "HUMAN_AND_INDEPENDENT_CONTROL_CALIBRATION_DOSSIER_TEMPLATE",
+  "qualification": "UNVERIFIED",
+  "emission_authority": false,
+  "source": {
+    "workspace_relative_path": null,
+    "sha256": null,
+    "provenance_reference": null,
+    "family": null,
+    "observed_model_id": null,
+    "serialized_version": null,
+    "vendor_executable_build": null,
+    "capture_reference": null,
+    "capture_sha256": null
+  },
+  "button_types": [
+    {"behavior": "momentary", "owner": null, "vendor_property_reference": null, "controlled_pair_reference": null, "initial_zero_press_release": "NOT_RUN", "initial_one_press_release": "NOT_RUN"},
+    {"behavior": "maintained", "owner": null, "vendor_property_reference": null, "controlled_pair_reference": null, "initial_zero_press_release": "NOT_RUN", "initial_one_press_release": "NOT_RUN"},
+    {"behavior": "set_on", "owner": null, "vendor_property_reference": null, "controlled_pair_reference": null, "initial_zero_press_release": "NOT_RUN", "initial_one_press_release": "NOT_RUN"},
+    {"behavior": "set_off", "owner": null, "vendor_property_reference": null, "controlled_pair_reference": null, "initial_zero_press_release": "NOT_RUN", "initial_one_press_release": "NOT_RUN"}
+  ],
+  "external_numeric": {
+    "owner": null,
+    "vendor_property_reference": null,
+    "authoritative_type": null,
+    "read_address": null,
+    "write_address": null,
+    "authoritative_access_reference": null,
+    "limits_scale_precision_reference": null,
+    "boundary_scenarios": "NOT_RUN"
+  },
+  "driver_and_globals": {
+    "driver_build_reference": null,
+    "link_station_address_grammar_reference": null,
+    "byte_word_order_reference": null,
+    "global_control_status_ownership_reference": null,
+    "unresolved_observations": []
+  },
+  "macro_alarm_contract_reference": null,
+  "independent_holdout": {"source_reference": null, "source_sha256": null, "result": "NOT_RUN"},
+  "independent_review_reference": null,
+  "vendor_candidate": {"sha256": null, "open_save_compile_reference": null, "behavior_test_reference": null, "result": "NOT_RUN"},
+  "physical_acceptance": "NOT_RUN",
+  "notes": ["This dossier is not an executable native schema, approval or whole-family support record."]
+}

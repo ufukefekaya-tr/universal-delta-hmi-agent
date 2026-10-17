@@ -1,0 +1,106 @@
+{
+  "scope": "PURE_SOURCE_PINNED_EXISTING_OWNER_PRESENTATION_FOUNDATION_ONLY",
+  "status": "OFFLINE_PASS_PURE_FOUNDATION_ONLY",
+  "public_capability_opened": false,
+  "source_sha256": "543bc7a870803e834ec6bf977f9662765ca6106848aa143691797ddaa7805ad7",
+  "tests_sha256": "8d6138759d3ab3ecaadbb5effc90e4d04bd9af6df726f4eaf1b915ca69f311e1",
+  "root_focused": {
+    "tests": 14,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 6.534
+  },
+  "independent_focused": {
+    "tests": 14,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 6.983,
+    "extra_random_independent_wholebody_batches": 30,
+    "material_open_findings": 0
+  },
+  "genuine_memory": {
+    "source_sha256": "c3ba093b3c17fb374c8d4669d04ab27aa66c80285d087528561784a13a6dd4ba",
+    "owners": 5,
+    "original_byte_pin": true,
+    "independent_source_record_oracle": true,
+    "independent_wholebody_restoration": true,
+    "body_sha256": "aae1e37d657a7bdfdadd80cbc3aad7bb16c1fa8ed14464ad2d43541ab7b707f1",
+    "memory_candidate_sha256": "cf4a41b179ab369c00d881046857593d50ab4a0b69d6fa7094e533809f86c5b1",
+    "memory_candidate_bytes": 115944,
+    "source_unchanged": true,
+    "external_writes": 0,
+    "saved_candidate": "NOT_CREATED",
+    "public_sdk": "NOT_IMPLEMENTED"
+  },
+  "primary": {
+    "editor_sha256": "9ed92401cd08e2be8bfc2df3a40dee4e99e9f605da7a4fa9605f9e2754821eeb",
+    "reader": "6988cd ->8ba0d0;8ba154..163 actual CRLF line length+2;Element6990ce ->87c250 ->87c8e3..903 ->b66960;State69987d ->87cc4d ->87ccc0",
+    "writer": "b66175 Style %ld sprintf/strlen ->7b7bb9 ->WriteFile(actual count)+CRLF;geometry b660a6..b6612b;color/font b6caf6..b6cbe3",
+    "font_size_reader": "87d049 ->7b184c ->7b1758 model-table quantization; explicit new values limited to exact intersection",
+    "font_size_whitelist": [
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      28,
+      32,
+      36,
+      40,
+      48,
+      64,
+      72
+    ],
+    "font_ratio_reader": "87d08c..87d121 only33/50/100/150/200 retained; other source values normalize to100 on vendor read",
+    "font_ratio_whitelist": [
+      33,
+      50,
+      100,
+      150,
+      200
+    ],
+    "old_font_fields": "Original0/48 remain raw unchanged unless explicit qualified requested field; no equivalence claim",
+    "surface_roles": "Button/indicator FgColor; numeric BgColor; numeric BorderColor only resulting style0; text-only style3 rejects surface/border",
+    "native_to_runtime_styles": {
+      "button_indicator": [
+        0,
+        5,
+        9,
+        16
+      ],
+      "numeric": [
+        0,
+        5,
+        10,
+        16
+      ]
+    },
+    "native_style_range": [
+      0,
+      3
+    ],
+    "color_encoding": "COLORREF24 0x00BBGGRR; bytes are exact scalar requests, no runtime glyph claim"
+  },
+  "integration": {
+    "public_IR": "NOT_IMPLEMENTED",
+    "source_local_registry_helper": "NOT_IMPLEMENTED",
+    "nine_tool_sdk": "NOT_IMPLEMENTED",
+    "background_composition": "NOT_IMPLEMENTED"
+  },
+  "vendor": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "native_pixels": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "full_batch_ready": false,
+  "full_v1_complete": false,
+  "computer_use": false,
+  "test_revision_sha256": "5651df75e3fe79dd3340cf783c3a8706170fd6f5469d8c4e5b16388d9644cdde",
+  "full_suite_tests": 699,
+  "source_hash_count": 75
+}

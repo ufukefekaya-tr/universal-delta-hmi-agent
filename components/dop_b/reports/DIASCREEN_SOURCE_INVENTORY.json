@@ -1,0 +1,425 @@
+{
+  "scope": "PRIMARY_INSTALLED_NEUTRAL_SOURCE_INVENTORY_ONLY",
+  "status": "READ_ONLY_PASS",
+  "computer_use": false,
+  "vendor_execution": false,
+  "licensed_assets_redistributed": false,
+  "source_path_policy": "Local paths not distributed; installed source selected explicitly per host",
+  "diascreen_samples": [
+    {
+      "alias": "DIA-INSTALLED-01",
+      "manufacturer_filename": "Alarm function - EN.dpa",
+      "sha256": "ae60464b551a5f773871910c180ccd72fdc63dc5123a76a17c16ab50bd94b8be",
+      "bytes": 103004,
+      "model_id": 268505088,
+      "serialized_version": "6.6.0.2",
+      "pages": 7,
+      "owners": 62,
+      "checks": {
+        "parser_body_exact": true,
+        "no_op_whole_file_exact": true,
+        "declared_body_size_exact": true,
+        "source_unchanged": true
+      },
+      "qualification": "FORMAT_OBSERVATION_ONLY"
+    },
+    {
+      "alias": "DIA-INSTALLED-02",
+      "manufacturer_filename": "Alarm function - SC.dpa",
+      "sha256": "5cc5fa8215be212a3a19d6cd3e78520cddcc355b8e105c7e17b31b7df11e17a9",
+      "bytes": 108868,
+      "model_id": 268505088,
+      "serialized_version": "6.6.0.9",
+      "pages": 8,
+      "owners": 195,
+      "checks": {
+        "parser_body_exact": true,
+        "no_op_whole_file_exact": true,
+        "declared_body_size_exact": true,
+        "source_unchanged": true
+      },
+      "qualification": "FORMAT_OBSERVATION_ONLY"
+    },
+    {
+      "alias": "DIA-INSTALLED-03",
+      "manufacturer_filename": "Alarm function - TC.dpa",
+      "sha256": "3cff8fc6f888e56b910a188f3c0117b636ca189905192c717247aed2e5e468f4",
+      "bytes": 108266,
+      "model_id": 268505088,
+      "serialized_version": "6.6.0.2",
+      "pages": 8,
+      "owners": 195,
+      "checks": {
+        "parser_body_exact": true,
+        "no_op_whole_file_exact": true,
+        "declared_body_size_exact": true,
+        "source_unchanged": true
+      },
+      "qualification": "FORMAT_OBSERVATION_ONLY"
+    },
+    {
+      "alias": "DIA-INSTALLED-04",
+      "manufacturer_filename": "Full_Element_Demo.dpa",
+      "sha256": "fc079f74ed9b34e2e698b0c65c95c4f914983594f658cadc72e1ee4d97493ed5",
+      "bytes": 490466,
+      "model_id": 268502784,
+      "serialized_version": "6.0.00205.8268",
+      "pages": 18,
+      "owners": 648,
+      "checks": {
+        "parser_body_exact": true,
+        "no_op_whole_file_exact": true,
+        "declared_body_size_exact": true,
+        "source_unchanged": true
+      },
+      "qualification": "FORMAT_OBSERVATION_ONLY"
+    },
+    {
+      "alias": "DIA-INSTALLED-05",
+      "manufacturer_filename": "Temperature_Control_Demo.dpa",
+      "sha256": "b60f24b99cbee35adb8f84e8de18de227ffcaa58ac25d17b2e41f95c27a52baf",
+      "bytes": 494328,
+      "model_id": 268502784,
+      "serialized_version": "6.0.00209.8338",
+      "pages": 1,
+      "owners": 26,
+      "checks": {
+        "parser_body_exact": true,
+        "no_op_whole_file_exact": true,
+        "declared_body_size_exact": true,
+        "source_unchanged": true
+      },
+      "qualification": "FORMAT_OBSERVATION_ONLY"
+    },
+    {
+      "alias": "DIA-INSTALLED-06",
+      "manufacturer_filename": "History function.dpa",
+      "sha256": "7f35b5fd05537106b46a9791a426a1b3e3a59f8afa1f870595e9c0fd75e24471",
+      "bytes": 189076,
+      "model_id": 268505093,
+      "serialized_version": "6.6.0.10",
+      "pages": 11,
+      "owners": 144,
+      "checks": {
+        "parser_body_exact": true,
+        "no_op_whole_file_exact": true,
+        "declared_body_size_exact": true,
+        "source_unchanged": true
+      },
+      "qualification": "FORMAT_OBSERVATION_ONLY"
+    },
+    {
+      "alias": "DIA-INSTALLED-07",
+      "manufacturer_filename": "Electrical industry - EN.dpa",
+      "sha256": "12941fa144ed554c4660448f58aa791d12e734e4c3012ffb121a0420ecadbd17",
+      "bytes": 141633,
+      "model_id": 268502784,
+      "serialized_version": "6.4.2.41",
+      "pages": 7,
+      "owners": 832,
+      "checks": {
+        "parser_body_exact": true,
+        "no_op_whole_file_exact": true,
+        "declared_body_size_exact": true,
+        "source_unchanged": true
+      },
+      "qualification": "FORMAT_OBSERVATION_ONLY"
+    },
+    {
+      "alias": "DIA-INSTALLED-08",
+      "manufacturer_filename": "Electrical industry - SC.dpa",
+      "sha256": "6bed129377f85944b2904ad0b002890ab2de8c5abff8e53c16bb9956d1ae31a6",
+      "bytes": 140387,
+      "model_id": 268502784,
+      "serialized_version": "6.4.2.41",
+      "pages": 7,
+      "owners": 832,
+      "checks": {
+        "parser_body_exact": true,
+        "no_op_whole_file_exact": true,
+        "declared_body_size_exact": true,
+        "source_unchanged": true
+      },
+      "qualification": "FORMAT_OBSERVATION_ONLY"
+    },
+    {
+      "alias": "DIA-INSTALLED-09",
+      "manufacturer_filename": "Electrical industry - TC.dpa",
+      "sha256": "3303ca291040ae8ce795a47022b19e26b78aab50190efe0c44612613de3996f6",
+      "bytes": 140103,
+      "model_id": 268502784,
+      "serialized_version": "6.4.2.41",
+      "pages": 7,
+      "owners": 832,
+      "checks": {
+        "parser_body_exact": true,
+        "no_op_whole_file_exact": true,
+        "declared_body_size_exact": true,
+        "source_unchanged": true
+      },
+      "qualification": "FORMAT_OBSERVATION_ONLY"
+    },
+    {
+      "alias": "DIA-INSTALLED-10",
+      "manufacturer_filename": "Extrusion rubber plate machine - EN.dpa",
+      "sha256": "470304b1e7aa180fae4dc45364a2bbda09521d4b40bd3d9b152d5ec364ae5132",
+      "bytes": 527823,
+      "model_id": 268502784,
+      "serialized_version": "6.4.3.45",
+      "pages": 11,
+      "owners": 673,
+      "checks": {
+        "parser_body_exact": true,
+        "no_op_whole_file_exact": true,
+        "declared_body_size_exact": true,
+        "source_unchanged": true
+      },
+      "qualification": "FORMAT_OBSERVATION_ONLY"
+    },
+    {
+      "alias": "DIA-INSTALLED-11",
+      "manufacturer_filename": "Extrusion rubber plate machine - SC.dpa",
+      "sha256": "c0656c4df3ba93c9326249b183e29a0ec648da18571ff8bbe9d3565da44bdcbb",
+      "bytes": 524937,
+      "model_id": 268502784,
+      "serialized_version": "6.4.2.41",
+      "pages": 11,
+      "owners": 674,
+      "checks": {
+        "parser_body_exact": true,
+        "no_op_whole_file_exact": true,
+        "declared_body_size_exact": true,
+        "source_unchanged": true
+      },
+      "qualification": "FORMAT_OBSERVATION_ONLY"
+    },
+    {
+      "alias": "DIA-INSTALLED-12",
+      "manufacturer_filename": "Extrusion rubber plate machine - TC.dpa",
+      "sha256": "2eb08b6800ee97a8d3ab4ab0a749e00b1fd22677c14b3009f5066e34d053e2dd",
+      "bytes": 524983,
+      "model_id": 268502784,
+      "serialized_version": "6.4.2.41",
+      "pages": 11,
+      "owners": 674,
+      "checks": {
+        "parser_body_exact": true,
+        "no_op_whole_file_exact": true,
+        "declared_body_size_exact": true,
+        "source_unchanged": true
+      },
+      "qualification": "FORMAT_OBSERVATION_ONLY"
+    },
+    {
+      "alias": "DIA-INSTALLED-13",
+      "manufacturer_filename": "Labeling machine - EN.dpa",
+      "sha256": "22a0dbed7ab0801b43e5c1305a70de8b40b841c63c1d409150683386bf317203",
+      "bytes": 248955,
+      "model_id": 268502788,
+      "serialized_version": "6.4.3.45",
+      "pages": 4,
+      "owners": 214,
+      "checks": {
+        "parser_body_exact": true,
+        "no_op_whole_file_exact": true,
+        "declared_body_size_exact": true,
+        "source_unchanged": true
+      },
+      "qualification": "FORMAT_OBSERVATION_ONLY"
+    },
+    {
+      "alias": "DIA-INSTALLED-14",
+      "manufacturer_filename": "Labeling machine - SC.dpa",
+      "sha256": "0c3c17ba4d7b9239ac4380279aee59d4e3b5ca332de2329bdf425dc3e89084c1",
+      "bytes": 250946,
+      "model_id": 268502788,
+      "serialized_version": "6.4.3.45",
+      "pages": 4,
+      "owners": 214,
+      "checks": {
+        "parser_body_exact": true,
+        "no_op_whole_file_exact": true,
+        "declared_body_size_exact": true,
+        "source_unchanged": true
+      },
+      "qualification": "FORMAT_OBSERVATION_ONLY"
+    },
+    {
+      "alias": "DIA-INSTALLED-15",
+      "manufacturer_filename": "Labeling machine - TC.dpa",
+      "sha256": "4bdb5a3d6cae4c6029ed7a7d3baa9c5b2cb38c518cdac7fe82735f34f7c35c27",
+      "bytes": 247857,
+      "model_id": 268502784,
+      "serialized_version": "6.4.3.45",
+      "pages": 4,
+      "owners": 214,
+      "checks": {
+        "parser_body_exact": true,
+        "no_op_whole_file_exact": true,
+        "declared_body_size_exact": true,
+        "source_unchanged": true
+      },
+      "qualification": "FORMAT_OBSERVATION_ONLY"
+    },
+    {
+      "alias": "DIA-INSTALLED-16",
+      "manufacturer_filename": "CODESYS_Data_Exchange_Demo.dpa",
+      "sha256": "c6663afc90c7b30568824c1e7211f07a17a4e3ace987b9cb90839a4fc714cfcd",
+      "bytes": 431188,
+      "model_id": 536870913,
+      "serialized_version": "6.0.00209.8338",
+      "pages": 2,
+      "owners": 46,
+      "checks": {
+        "parser_body_exact": true,
+        "no_op_whole_file_exact": true,
+        "declared_body_size_exact": true,
+        "source_unchanged": true
+      },
+      "qualification": "FORMAT_OBSERVATION_ONLY"
+    },
+    {
+      "alias": "DIA-INSTALLED-17",
+      "manufacturer_filename": "Application toolbar - EN.dpa",
+      "sha256": "b0009373ada31cc04fdd69537c389f397a6589e766e206d030542155468b8cad",
+      "bytes": 201177,
+      "model_id": 268502784,
+      "serialized_version": "6.6.0.2",
+      "pages": 14,
+      "owners": 482,
+      "checks": {
+        "parser_body_exact": true,
+        "no_op_whole_file_exact": true,
+        "declared_body_size_exact": true,
+        "source_unchanged": true
+      },
+      "qualification": "FORMAT_OBSERVATION_ONLY"
+    },
+    {
+      "alias": "DIA-INSTALLED-18",
+      "manufacturer_filename": "Application toolbar - SC.dpa",
+      "sha256": "10cdec05678ae7a3680d15b4e00dbdaa27be492aca3715b8bdb3b88890fd74d7",
+      "bytes": 193877,
+      "model_id": 268502784,
+      "serialized_version": "6.6.0.9",
+      "pages": 14,
+      "owners": 498,
+      "checks": {
+        "parser_body_exact": true,
+        "no_op_whole_file_exact": true,
+        "declared_body_size_exact": true,
+        "source_unchanged": true
+      },
+      "qualification": "FORMAT_OBSERVATION_ONLY"
+    },
+    {
+      "alias": "DIA-INSTALLED-19",
+      "manufacturer_filename": "Application toolbar - TC.dpa",
+      "sha256": "c69c220e3cf4091c22d0fdd2e931d7c11d920095a8ac7a936b43d98907da773d",
+      "bytes": 195048,
+      "model_id": 268502784,
+      "serialized_version": "6.6.0.2",
+      "pages": 14,
+      "owners": 479,
+      "checks": {
+        "parser_body_exact": true,
+        "no_op_whole_file_exact": true,
+        "declared_body_size_exact": true,
+        "source_unchanged": true
+      },
+      "qualification": "FORMAT_OBSERVATION_ONLY"
+    },
+    {
+      "alias": "DIA-INSTALLED-20",
+      "manufacturer_filename": "Start interface template  - EN.dpa",
+      "sha256": "163a242d04ee2ecf2b33c989e6c9f2bafdc5be1cddd0a0406c8e7061ddeed3bb",
+      "bytes": 2608406,
+      "model_id": 268502784,
+      "serialized_version": "6.6.0.2",
+      "pages": 9,
+      "owners": 70,
+      "checks": {
+        "parser_body_exact": true,
+        "no_op_whole_file_exact": true,
+        "declared_body_size_exact": true,
+        "source_unchanged": true
+      },
+      "qualification": "FORMAT_OBSERVATION_ONLY"
+    },
+    {
+      "alias": "DIA-INSTALLED-21",
+      "manufacturer_filename": "Start interface template  - SC.dpa",
+      "sha256": "376103b6b5299df74e90f305e075a7f0d484c7fc0524003d758b715219b8c64a",
+      "bytes": 2598045,
+      "model_id": 268502784,
+      "serialized_version": "6.6.0.9",
+      "pages": 9,
+      "owners": 70,
+      "checks": {
+        "parser_body_exact": true,
+        "no_op_whole_file_exact": true,
+        "declared_body_size_exact": true,
+        "source_unchanged": true
+      },
+      "qualification": "FORMAT_OBSERVATION_ONLY"
+    },
+    {
+      "alias": "DIA-INSTALLED-22",
+      "manufacturer_filename": "Start interface template  - TC.dpa",
+      "sha256": "90091ec02a2a69febdc7399d20a468385ce042327e030bdc795cf9154a26e46f",
+      "bytes": 2599811,
+      "model_id": 268502784,
+      "serialized_version": "6.6.0.2",
+      "pages": 9,
+      "owners": 70,
+      "checks": {
+        "parser_body_exact": true,
+        "no_op_whole_file_exact": true,
+        "declared_body_size_exact": true,
+        "source_unchanged": true
+      },
+      "qualification": "FORMAT_OBSERVATION_ONLY"
+    }
+  ],
+  "model_counts": {
+    "268505088": 3,
+    "268502784": 15,
+    "268505093": 1,
+    "268502788": 2,
+    "536870913": 1
+  },
+  "selected_110is_source_found": false,
+  "selected_110is_model_id": 268505092,
+  "manufacturer_mapping": {
+    "alias": "DIAScreen PanelList.ini",
+    "sha256": "090fd1f4046da0a2ac5c51f5010e4e94eb8cd4935039c0f4afcfa0faf2d4333d",
+    "model_id": 268505092,
+    "resolution": [
+      1024,
+      600
+    ]
+  },
+  "separate_dopsoft4": {
+    "alias": "DOPSOFT4-FULLDEMO",
+    "sha256": "7d011ef0a5d1233e7fd381685337deaff0b25fd2aad2f08a60fb43abc5856f7d",
+    "bytes": 126224,
+    "model_id": 268502784,
+    "serialized_version": "4.00.00.11",
+    "pages": 18,
+    "owners": 648,
+    "qualification": "SEPARATE_EDITOR_PROFILE_UNQUALIFIED",
+    "shared_marker_does_not_prove_editor_compatibility": true
+  },
+  "installed_builds": {
+    "DIAScreen": {
+      "version": "1.6.2.48",
+      "sha256": "3dd81910b43363892490d95ce8799a2f4e13d798b970e48d8e92696df06d838f"
+    },
+    "DOPSoft4": {
+      "version": "4.0.16.30",
+      "sha256": "52cdfca1ad4cf2d6f199646165fecbbb951fbc7d8bf67578e17d2fa9205e6b99"
+    }
+  },
+  "limitation": "Installed build does not identify the executable that originally saved a sample. No blank or selected110IS sample; sample framing is not feature/runtime/native pixel acceptance.",
+  "full_v1_complete": false
+}

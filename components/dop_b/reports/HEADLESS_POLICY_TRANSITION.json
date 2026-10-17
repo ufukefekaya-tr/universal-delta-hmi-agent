@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-17",
+  "authority": "Direct human approved DOP-B Headless V1 plan and instructed execution; selected DPS/control-package delivery and single task-start authorization.",
+  "previous_head": "f3fa2ac135baa878b88928defee365797c1efdab",
+  "previous_policy_epoch": "d0cc20c74e7dccbe3b654f1fd32eb6ed664f9de9fb0c8b25d266138d80fa477c",
+  "scope": ["SYSTEM_PROMPT.md", "reports/HEADLESS_POLICY_TRANSITION.json"],
+  "migration_guard": "Explicit human-authorized control-plane migration; original guard requires committed control files and cannot authorize their mutation. Old guard is not claimed PASS for migration. Exact staged paths, parent and raw control bytes are checked separately.",
+  "delivery_boundary": "DPS_PREVIEW_OFFLINE_CHECK_PACKAGE",
+  "computer_use": false,
+  "vendor_execution": false,
+  "physical_acceptance": "NOT_RUN",
+  "release_ready": false,
+  "full_v1_complete": false
+}

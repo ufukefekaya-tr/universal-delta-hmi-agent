@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "status": "OFFLINE_STATIC_RESEARCH",
+  "family": "delta_dopsoft2",
+  "serialized_version": "4.00.07.04",
+  "driver": {
+    "company": "Delta",
+    "name": "Delta DVP PLC"
+  },
+  "regions": {
+    "BOOL": [
+      {
+        "area": "M",
+        "minimum": 0,
+        "maximum": 4095
+      },
+      {
+        "area": "S",
+        "minimum": 0,
+        "maximum": 1023
+      }
+    ],
+    "UINT": [
+      {
+        "area": "D",
+        "minimum": 0,
+        "maximum": 11999
+      }
+    ]
+  },
+  "authority_file_sha256": "5abf757dd70ff15c0ca2394f5128664e8499d9b0987a42b2ba2d3b73de2248c1",
+  "manufacturer_evidence": {
+    "driver_definition_sha256": "e14767083390e1d35dbb8d9312d142d83491e75abcf68cd2b42fe807fddd9e72",
+    "controller_mapping_sha256": "011b5fa599f45c4ccddb8197e3e384a7358aa6d25f8945d689d289941efde49b",
+    "manual_url": "https://filecenter.deltaww.com/Products/download/06/060302/Manual/DELTA_IA-HMI_Delta-DVP-PLC_CM_EN_20160122.pdf",
+    "independent_static_validation": "CheckPLCValueRange PE32 static reconstruction: inclusive bit M/S and word D records; no DLL execution",
+    "validation_records": {
+      "M_bit": "0xc278",
+      "S_bit": "0xc28c",
+      "D_word": "0xc210"
+    },
+    "crosscheck": "Independent genuine distinct M/D native records and bounded partial S2 observation; serialized Link/MemType retained separately"
+  },
+  "static_reconstruction": {
+    "pe_format": "PE32",
+    "image_base": "0x10000000",
+    "check_plc_value_range": "0x272b",
+    "bit_table": "0xc250",
+    "word_table": "0xc198",
+    "stride_bytes": 20,
+    "inclusive_compare": "0x2a53-0x2a7c",
+    "bit_length": 7,
+    "word_length": 9,
+    "records": {
+      "M": "34d200108200000000000000ff0f000000000a00",
+      "S": "38d200108300000000000000ff03000000000a00",
+      "D": "20d2001006000000df2e00000000000000000a00"
+    },
+    "dll_execution": "NOT_RUN"
+  },
+  "source_holdouts": [
+    {
+      "source_sha256": "36cd9265422ccf51332e37f2c4f5be0899349127e4889bc162a8e9ed4f51b249",
+      "model": "DOP-B07S410",
+      "observed": [
+        "M100",
+        "M101",
+        "M3200",
+        "D3070",
+        "D3700"
+      ],
+      "kind": "FULL_NATIVE_READ_ONLY"
+    },
+    {
+      "source_sha256": "b1d1df022757cda191ffa9145124405b263e05dfa3e1cc3c311232ab22e71862",
+      "model": "DOP-B07S410",
+      "observed": [
+        "D2250"
+      ],
+      "kind": "FULL_NATIVE_READ_ONLY"
+    },
+    {
+      "source_sha256": "8502dcf6628cd78a93cbae45c5923100f9ea3771326911e7558f3a23fec1f3b9",
+      "model": "DOP-B03S211",
+      "observed": [
+        "S2"
+      ],
+      "kind": "BOUNDED_PARTIAL_OBSERVATION_NOT_DONOR",
+      "owner_sha256": "dc1a8ba89c128fe11a41aafad526de27a2cb9b7548d065574083b19e5f2f051c"
+    }
+  ],
+  "source_driver_span_sha256": "06d65fb7b35ef15926bc3f6148b31ac80252a79f23d19304a9e00ad588299a98",
+  "pdf_download_hash": null,
+  "pdf_access": "Official indexed content; direct request returned HTML, not a downloaded PDF",
+  "scope": "Driver syntax, not PLC CPU availability or vendor/runtime acceptance",
+  "private_assets_redistributed": false
+}

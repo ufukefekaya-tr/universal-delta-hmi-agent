@@ -1,9 +1,9 @@
-# Feature transfer status
+# Feature transfer acceptance
 
-The source inventory contains 44 historical development feature groups, 9 additional upstream groups, 18 legacy file tools and 4 intentionally excluded GUI tools. 21 named regression scenarios retain known failures.
+The independent DIAScreen0.1.1 support matrix accounts for all44 historical feature groups,9 additional upstream groups,18 retained file intents,4 intentionally excluded GUI tools and21 named regressions. The umbrella ledger matches each delivered support level, implementation reference, regression target and limitation without promoting a refusal into feature support.
 
-Each ledger entry remains explicitly pending or unqualified until the independent DIAScreen implementation supplies actual code/test/artifact evidence. No migration-complete claim is made. The existing DOP-B implementation remains a separate pinned release, not a substitute for DIAScreen.
+Current support includes bounded original offline operations and explicit source-qualified constraints. D11 general picture-bank constructors, D26 arbitrary extra macro writers and U01–U09 remain unimplemented/unqualified as described in the matrix. D14/D17/D29–D32/D41 are contract-only; D28 remains rolled back. These are published limitations rather than omitted or falsely completed native features.
 
-The historical DIAScreen owner has accepted the separate repository task and is implementing an original, project-agnostic backend. Customer projects are read-only evidence and are not redistribution fixtures. Unclear-license upstream code is not copied.
+All30 actual DIAScreen tools/aliases are routed. DOP-B's9 file tools and5 persistent job tools are routed separately. GUI, vendor compilation, control-target networking and physical operations remain excluded. Source hashes identify private qualification inputs without publishing their native contents or host locations.
 
-Final omission acceptance is OPEN. After delivery compare every ledger feature, all legacy tools, specialized library capabilities, macros, symbols, alarms, rendering limits and prior rollback behavior against the shipped API and tests. Record an explicit disposition for every difference; a pending row must never be counted as implemented.
+Combined installation and exact release acceptance are recorded in VERIFICATION.json and INDEPENDENT_REVIEW.json. Offline feature disposition does not establish vendor or physical acceptance.

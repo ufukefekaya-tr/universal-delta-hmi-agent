@@ -1,0 +1,577 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "family": {
+      "const": "diascreen-dop100"
+    },
+    "panel": {
+      "type": "object",
+      "properties": {
+        "width": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8192
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8192
+        }
+      },
+      "required": [
+        "width",
+        "height"
+      ],
+      "additionalProperties": false
+    },
+    "application_versions": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "link": {
+      "type": "string",
+      "pattern": "^[A-Za-z_][A-Za-z_0-9]*$"
+    },
+    "station": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 65535
+    },
+    "model_name": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        }
+      ]
+    },
+    "preview_model": {
+      "const": "flat-v1"
+    },
+    "background_sha256": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^[0-9]+$"
+      },
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{64}$"
+      }
+    },
+    "fonts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096,
+            "description": "Workspace-relative file; backend rejects escape, links and absent files."
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "required": [
+          "path",
+          "sha256"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "numeric_literal_digits": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 20
+    },
+    "numeric_types": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "bits": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 64
+          },
+          "MemLen": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "MemFmt": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "floating": {
+            "type": "boolean"
+          },
+          "signed": {
+            "type": "boolean"
+          },
+          "evidence": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "bits",
+          "MemLen",
+          "MemFmt",
+          "evidence"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "button_types": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "Type": {
+            "const": 1
+          },
+          "SubType": {
+            "enum": [
+              3,
+              4
+            ]
+          },
+          "evidence": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "Type",
+          "SubType",
+          "evidence"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "macro_slots": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^[0-9a-f]{8}:[1-4]$"
+      },
+      "additionalProperties": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "const": "remote"
+              },
+              "role": {
+                "enum": [
+                  "read",
+                  "write"
+                ]
+              },
+              "iec_types": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "evidence": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "kind",
+              "role",
+              "iec_types",
+              "evidence"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "const": "exact"
+              },
+              "allowed": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "evidence": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "kind",
+              "allowed",
+              "evidence"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "reviewed_index_ack": {
+      "const": true
+    },
+    "indexed_layout_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "reviewed_resources": {
+      "type": "object",
+      "properties": {
+        "reviewed_boundary_ack": {
+          "const": true
+        },
+        "source_payload_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "frames": {
+          "type": "array",
+          "maxItems": 128,
+          "items": {
+            "type": "object",
+            "properties": {
+              "section": {
+                "enum": [
+                  "Picture",
+                  "Background",
+                  "DIATag"
+                ]
+              },
+              "header_start": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2147483647
+              },
+              "header_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "blob_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "section",
+              "header_start",
+              "header_sha256",
+              "blob_sha256"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "reviewed_boundary_ack",
+        "source_payload_sha256",
+        "frames"
+      ],
+      "additionalProperties": false
+    },
+    "interface_contract": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "type": "integer",
+          "const": 1
+        },
+        "fault": {
+          "type": "object",
+          "properties": {
+            "active": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 8192
+            },
+            "code": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 8192
+            },
+            "fresh": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 8192
+            },
+            "family": {
+              "type": "string"
+            },
+            "source": {
+              "type": "string"
+            },
+            "catalog": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "active",
+            "code",
+            "fresh"
+          ],
+          "additionalProperties": false
+        },
+        "reference": {
+          "type": "object",
+          "properties": {
+            "valid": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 8192
+            },
+            "physical_home": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 8192
+            }
+          },
+          "required": [
+            "valid"
+          ],
+          "additionalProperties": false
+        },
+        "drive": {
+          "type": "object",
+          "properties": {
+            "request": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 8192
+            },
+            "ack": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 8192
+            },
+            "status": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 8192
+            },
+            "fresh": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 8192
+            },
+            "frequency": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 8192
+            }
+          },
+          "required": [
+            "request",
+            "ack",
+            "status",
+            "fresh",
+            "frequency"
+          ],
+          "additionalProperties": false
+        },
+        "transfer": {
+          "type": "object",
+          "properties": {
+            "draft": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 8192
+            },
+            "readback": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 8192
+            },
+            "fresh": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 8192
+            },
+            "request": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 8192
+            },
+            "terminal_result": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 8192
+            }
+          },
+          "required": [
+            "draft",
+            "readback",
+            "fresh",
+            "request",
+            "terminal_result"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema_version"
+      ],
+      "additionalProperties": false
+    },
+    "catalog_bindings": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^[0-9]+$"
+      },
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "reviewed": {
+            "const": true
+          },
+          "xml_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "link": {
+            "type": "string",
+            "pattern": "^[A-Za-z_][A-Za-z_0-9]*$"
+          },
+          "station": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 65535
+          }
+        },
+        "required": [
+          "reviewed",
+          "xml_sha256",
+          "link",
+          "station"
+        ],
+        "additionalProperties": false
+      },
+      "description": "Caller-reviewed XML target association used only when native DIATag link/station metadata is absent. The exact XML hash and selected link/station must match; this is not vendor proof."
+    },
+    "binding_types": {
+      "type": "object",
+      "propertyNames": {
+        "enum": [
+          "ReadVar",
+          "WriteVar",
+          "TriggerVar",
+          "InterLockVar",
+          "VisibleVar",
+          "DisplayDotVar",
+          "UnitSrcVar",
+          "UnitDisplayVar",
+          "ReadOffsetVar",
+          "WriteOffsetVar",
+          "UnitPercent1Var",
+          "UnitPercent2Var"
+        ]
+      },
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "iec_types": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "evidence": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "iec_types",
+          "evidence"
+        ],
+        "additionalProperties": false
+      },
+      "description": "Field-specific source-qualified type contract for binding an unbound donor. Already-bound controls instead preserve the actual XML type and width."
+    }
+  },
+  "required": [
+    "schema_version",
+    "family",
+    "panel",
+    "application_versions",
+    "link",
+    "station"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:universal-diascreen-hmi-agent:profile:v1",
+  "title": "Source-qualified DIAScreen file Session profile",
+  "description": "Documentation schema for explicit Session profile JSON. This schema rejects undeclared profile members; the stdlib backend performs semantic checks without a jsonschema dependency and does not itself apply this schema. Boundary acknowledgments are caller review, not vendor proof or write eligibility by themselves.",
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "reviewed_index_ack"
+        ]
+      },
+      "then": {
+        "required": [
+          "indexed_layout_sha256"
+        ]
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "indexed_layout_sha256"
+        ]
+      },
+      "then": {
+        "required": [
+          "reviewed_index_ack"
+        ]
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "preview_model"
+        ]
+      },
+      "then": {
+        "required": [
+          "background_sha256"
+        ]
+      }
+    }
+  ]
+}

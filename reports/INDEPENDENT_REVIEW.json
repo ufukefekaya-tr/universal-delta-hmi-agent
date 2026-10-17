@@ -1,32 +1,119 @@
 {
-  "scope": "Independent infrastructure interim review; not two-family final acceptance",
+  "scope": "Combined two-family file MCP release review; vendor/physical excluded",
   "reviewer": "delta_family_review",
   "mode": "read_only_independent",
-  "finding": {
-    "id": "R1",
-    "severity": "important",
-    "trigger": "A valid timestamp/size matching pyc or startup hook could differ from pinned source.",
-    "evidence": "Reviewer independently reproduced accepted poisoned bytecode under prior package-only inventory.",
-    "impact": "Executed backend code could differ from the verified source inventory.",
-    "fix": "Pin exact complete disjoint Python import roots, including bytecode, hooks, dependencies and venv base home.",
-    "retest": "Independent reviewer reproduced old exploit; poisoned pyc and sitecustomize rejected before dispatch; source suite 39 passed, 0 skipped.",
-    "status": "CLOSED_OFFLINE"
-  },
   "new_important_findings": [],
   "remaining_gates": [
-    "Independent DIAScreen release",
-    "Both actual backends integration",
-    "Final feature omission review",
-    "Exact final artifact distribution review"
+    "External frozen-archive/public-report identity audit, shipped as RELEASE_AUDIT.json with release assets"
   ],
   "vendor": "NOT_RUN",
   "physical": "NOT_RUN",
-  "final_source_retest": {
+  "final_acceptance": "PASS_SOURCE_AND_INSTALLED_OFFLINE; exact archive audit is separately bound to release asset hashes",
+  "findings": [
+    {
+      "id": "R1",
+      "severity": "important",
+      "trigger": "A valid timestamp/size matching pyc or startup hook could differ from pinned source.",
+      "evidence": "Reviewer independently reproduced accepted poisoned bytecode under prior package-only inventory.",
+      "impact": "Executed backend code could differ from the verified source inventory.",
+      "fix": "Pin exact complete disjoint Python import roots, including bytecode, hooks, dependencies and venv base home.",
+      "retest": "Independent reviewer reproduced old exploit; poisoned pyc and sitecustomize rejected before dispatch; source suite 39 passed, 0 skipped.",
+      "status": "CLOSED_OFFLINE"
+    },
+    {
+      "id": "DIA-R2",
+      "severity": "important",
+      "trigger": "Proposal review selected current source instead of the pending candidate",
+      "evidence": "Independent two-proposal reproduction observed old caption under previous backend",
+      "impact": "Wrong design could be approved",
+      "fix": "DIAScreen0.1.1 exact plan-scoped readonly preview and validate",
+      "retest": "Independent two-plan caption/hash/nonmutation counterexample passed;147PASS1hostsymlinkskip",
+      "status": "CLOSED_OFFLINE"
+    },
+    {
+      "id": "R3",
+      "severity": "important",
+      "trigger": "Linked download cache checked after writing",
+      "evidence": "Static write-order audit and private temporary junction case",
+      "impact": "Installation could write outside intended cache",
+      "fix": "Prewrite ancestor/leaf checks, new temp download and hash before publication",
+      "retest": "Independent Windows2testsPASS0skip; outside sentinel and directory members unchanged",
+      "status": "CLOSED_OFFLINE"
+    },
+    {
+      "id": "R4",
+      "severity": "important",
+      "trigger": "Nested DOP-B job processes lost isolated import flags",
+      "evidence": "Mutable cwd/PYTHONPATH could supply alternate modules",
+      "impact": "Dispatcher/worker could import unpinned code",
+      "fix": "DOP-B0.2.1 launches both with -I -B",
+      "retest": "Real planted universal_hmi/sitecustomize regression passed; fresh installed53testsPASS",
+      "status": "CLOSED_OFFLINE"
+    },
+    {
+      "id": "R5",
+      "severity": "important",
+      "trigger": "Clean source archive omitted neutral projects README",
+      "evidence": "981 source tests found one governance copytree error",
+      "impact": "Clean-source governance workflow was not repeatable",
+      "fix": "Export only tracked neutral projects/README; preserve exclusion of private project folders",
+      "retest": "16governance and8package testsPASS; finalsource482filesexactHEAD",
+      "status": "CLOSED_OFFLINE"
+    },
+    {
+      "id": "R6",
+      "severity": "integration_fixture",
+      "trigger": "General synthetic framing fixture requested unsupported fill rendering",
+      "evidence": "Linux real stdio preview refused UNSUPPORTED_RENDER",
+      "impact": "Success-path integration fixture incompatible with declared flat renderer",
+      "fix": "Generate the original source-qualified flat regression variant with refreshed profile identity",
+      "retest": "Clean Linux real46-tool/two-family byte comparison passed;60gateway and148DIAsource tests passed without skips; renderer refusals preserved.",
+      "status": "CLOSED_OFFLINE"
+    }
+  ],
+  "linux_final_acceptance": {
+    "status": "PASS",
+    "tested_implementation_hashes": 27,
+    "tested_component_files": 544,
+    "differences": 0,
+    "uid": 1000,
+    "network": "DENIED",
+    "both_payload_comparisons": "PASS",
+    "jobs": "All5routing/persistence/canceltools; no fabricated completed review"
+  },
+  "r1_historical_retest": {
     "tests": 41,
     "passed": 41,
     "skipped": 0,
     "seconds": 5.137,
     "config_sha256": "7359fcb1428ceae2ca3950c3417361355cf5aeb25939abfab127878ccd42abfc",
     "optimization_review": "Lexical expected-name checks plus real exact no-link inventory preserve R1 rejection."
-  }
+  },
+  "current_source_evidence": {
+    "manifest": "IMPLEMENTATION_MANIFEST.json",
+    "implementation_files": 27,
+    "component_files": 544,
+    "gateway_source_tests": {
+      "windows": {
+        "run": 60,
+        "passed": 60,
+        "skipped": 0
+      },
+      "linux": {
+        "run": 60,
+        "passed": 60,
+        "skipped": 0
+      }
+    },
+    "source_hash_differences": 0
+  },
+  "windows_final_acceptance": {
+    "status": "PASS",
+    "receipt_sha256": "ebf1c6e365694da0d6f6818a171f933368dbb29dd2fcba01389532667b7796e6",
+    "targeted_final_helper_delta_receipt_sha256": "fbe9db0234ad053ec875348294b352e3dd9ede9891480d109dbdfb03e1c815e3",
+    "both_candidate_hashes_equal_linux": true,
+    "whole_final_installer_rerun": false,
+    "boundary": "Final helper deltas executed as exact AST blocks on Windows; whole final installer exercised on Linux."
+  },
+  "final_reviewer_decision": "No open important implementation or installed offline findings; final archive/public-report identity must be independently checked before publication."
 }

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "authority_kind": "manufacturer_static_driver_contract",
+  "family": "delta_dopsoft2",
+  "serialized_version": "4.00.07.04",
+  "driver": {"company": "Delta", "name": "Delta DVP PLC"},
+  "regions": {
+    "BOOL": [
+      {"area": "M", "minimum": 0, "maximum": 4095},
+      {"area": "S", "minimum": 0, "maximum": 1023}
+    ],
+    "UINT": [{"area": "D", "minimum": 0, "maximum": 11999}]
+  },
+  "evidence": {
+    "driver_definition_sha256": "e14767083390e1d35dbb8d9312d142d83491e75abcf68cd2b42fe807fddd9e72",
+    "controller_mapping_sha256": "011b5fa599f45c4ccddb8197e3e384a7358aa6d25f8945d689d289941efde49b",
+    "manual_url": "https://filecenter.deltaww.com/Products/download/06/060302/Manual/DELTA_IA-HMI_Delta-DVP-PLC_CM_EN_20160122.pdf",
+    "independent_static_validation": "CheckPLCValueRange PE32 static reconstruction: inclusive bit M/S and word D records; no DLL execution",
+    "validation_records": {"M_bit": "0xc278", "S_bit": "0xc28c", "D_word": "0xc210"},
+    "crosscheck": "Independent genuine distinct M/D native records and bounded partial S2 observation; serialized Link/MemType retained separately"
+  },
+  "acceptance_scope": "OFFLINE_DRIVER_SYNTAX_ONLY"
+}

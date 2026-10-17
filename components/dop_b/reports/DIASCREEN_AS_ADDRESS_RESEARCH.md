@@ -1,0 +1,17 @@
+# DIAScreen AS adres temeli — geliştirme kaydı
+
+Kurulu üretici kaynakları salt okunur incelendi. `Delta_AS_series_PLC_Modbus_TCP.dll`74664 byte, SHAcab7a683e8a680da5ac0da8f7049b3055e7ddf19e8697ba7f04eeeac086135d9; PE32 image base0x10000000. ControllerList.ini SHA1dd69096cc1a0e29959501c9eaf689022a8943a37799a6a92ac06b44d4d3ce19, AS TCP adını bu DLL'e eşler. DLL yüklenmedi veya çalıştırılmadı.
+
+Root doğrudan PE byte'larından word tableRVA0xB200/12 kayıt ve bit tableRVA0xB2F0/9 kaydı yeniden çözdü. Stride20 byte; radix offset18, value10. D word recordRVA0xB228 max+8=29999; M bit recordRVA0xB340 max+12=8191. Export CheckPLCValueRangeRVA0x2972 ve GetAddrValueRVA0x40D9 yeniden doğrulandı. Bağımsız salt-okunur denetim selector/parser/inclusive karşılaştırma zincirini yeniden çözdü. Bound okumaları16 bittir: word lower+6/upper+8, bit lower+10/upper+12; zero-extension and0xffff sonrası strict jl/jg reddi inclusive sınırları uygular. +6 bağımsız32-bit minimum alanı değildir. Bu statik zincir runtime execution kabulü değildir.
+
+Resmi [AS programlama kılavuzunun Device Table'ı](https://filecenter.deltaww.com/Products/download/06/060301/Manual/DELTA_IA-PLC_AS_PM_EN_20240920.pdf) aynı M ve D aralıklarını verir. Resmi indekslenmiş içerik kullanıldı; doğrudan PDF erişimi başarısız olduğundan PDF byte/hash veya screenshot incelemesi iddia edilmez. Daha yeni dokümandaki farklı S/special alanlarının bu ilk aralığa eklenmesi otomatik yapılmaz.
+
+Temperature_Control_Demo sourceSHAb60f24b99cbee35adb8f84e8de18de227ffcaa58ac25d17b2e41f95c27a52baf; model268502784/version6.0.00209.8338. AS span22 kayıt/466 byte, SHAff3c3bb3c7c5bad3f38b3bfabe2efbefc243a7b6ed00c7bd58b8f9aeefaf21df. BOOL read/write2/2 M100 ve UINT read2/24 D56/write2/17 D51 aktif nativeLink2/MemType0 alanlarıyla doğrulanır. Kaynak driver ayarları özel olabileceği için raw span veya IP yayımlanmaz.
+
+Sayısal giriş2/17/18 ReadMemType3/WriteMemType0, TriggerM95 ve VisibleY60.5 bağı taşır. Namespace witness'ı bunların bütün kontrol davranışını kabul etmez. `ReadMemType=3` yerine tahmini doğrudan okuma yazılmadı; sadece doğrudan type0 okuma için ayrı display witness'ı kullanıldı. Bu kontrolün temiz/dinamik bağımsız native üretimi henüz açılmadı.
+
+Kurulu22DPA örneğinde sıfır-owner sayfa bulunmadı. Temperature InitialMacro6478, page2 OpenMacro379/CycleMacro931 byte ve ScreenAction250 içerir. Dolu örneği nesneleri silerek temiz program diye sunmak veya macro/global değerleri kanıtsız sıfırlamak hedefi karşılamaz. Tam yol [pipeline belgesinde](../docs/DIASCREEN_ADDRESS_PIPELINE.md) tanımlıdır.
+
+Yeni özgün pure namespace ve tarafsız testlerin sınırlı offline kabulü tamamlandı. Güncel focus/review/hash değerleri [JSON kaydındadır](DIASCREEN_AS_ADDRESS_RESEARCH.json); eski880 suite kendi revision'ıyla korunur. Native dosya/public capability oluşturulmadı. AS source erişimi, CPU/makine yazma yetkisi veya runtime kabulü değildir. Vendor/native pixel/runtime/panel NOT_RUN; full V1 açık, Computer Use kullanılmadı.
+
+Bağımsız pure denetim14 test/76.384 adres ve604 ek probe geçti:602 typed refusal,2 valid evidence-dict positive. DIA_ADDR_R1, list/dict authority_kind için TypeError sızıntısıydı; explicit string guard ve9-value regression ile kapandı. Rootfocus0.633s, independentfocus0.600s. Güncel tam regresyon root894/894 (300.439s verification/298.632s unittest) ve bağımsız894/894 (286.481s) geçti; failure/error/skip0.96 kaynak hash'i ve sıralı894 test kimliği eşit/sabit. Son manifest ve commit kabulü ayrıca denetlenir.

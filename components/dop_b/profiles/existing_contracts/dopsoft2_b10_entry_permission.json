@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "family": "delta_dopsoft2",
+  "model_id": 2953863504,
+  "serialized_version": "4.00.07.04",
+  "acceptance_scope": "OFFLINE_STORED_CONFIGURATION_ONLY",
+  "source_policy": "original_source_pinned_closed_existing_graph",
+  "vendor": "NOT_RUN",
+  "native_pixels": "NOT_RUN",
+  "authority_kind": "manufacturer_static_existing_entry_permission_contract",
+  "mode": "existing_entry_permission_v1",
+  "owner_types": [
+    [
+      1,
+      1
+    ],
+    [
+      6,
+      1
+    ]
+  ],
+  "action_classes": {
+    "Type1_Sub1": "start_request",
+    "Type6_Sub1": "parameter_write"
+  },
+  "action_policy": "explicit_original_owner_write_binding_project_human_contract_only",
+  "mutation_fields": [
+    "InterLockVar",
+    "InterLockLevel"
+  ],
+  "channel_policy": "retain_original_InterLockLink_equals_source_native_driver_index_plus1",
+  "permission_operand": "registered_source_driver_external_BOOL_Read_canonical",
+  "baseline": "original_disabled_interlock_plain_no_macro_offset_visibility_confirmation_trigger",
+  "numeric_policy": "original_INT_UINT_WORD_F0_identity_only",
+  "enable_levels": [
+    0,
+    1
+  ],
+  "semantics": "action_entry_or_keypad_open_only",
+  "read_failure": "never_matches_enable_level0_or1_static_path",
+  "sample_age": "UNQUALIFIED",
+  "commit_time": "UNQUALIFIED",
+  "continuous": "UNQUALIFIED",
+  "atomicity": "UNQUALIFIED",
+  "quality_composition": "UNQUALIFIED",
+  "active_vendor_holdout": "NOT_FOUND",
+  "runtime": "NOT_RUN",
+  "evidence": {
+    "editor_sha256": "9ed92401cd08e2be8bfc2df3a40dee4e99e9f605da7a4fa9605f9e2754821eeb",
+    "renderer_sha256": "e6fa5b74d8d73415b1fd79b16aa19fc163f95113471eb8e9e1022f8615b19ab3",
+    "reader_writer": "616fdf..617073;616531..6165e3",
+    "compiler": "7d8f38..7d9074 capability0x24/nonliteral0or1;7c8415 native link minusone",
+    "Type1_loader": "100b3e57..100b3f38",
+    "Type6_loader": "100b5822..100b58a6",
+    "permission_helper": "100fd8bb..100fd916 returns-1 failure,0 mismatch,1 match",
+    "action_entry": "100dbd10/100dbd6e/100dbd73/100dbf19",
+    "keypad_entry": "100ef3bc/100ef3c1/100ef7f9",
+    "review": "reports/ENTRY_PERMISSION_RESEARCH.json",
+    "boundary": "Stored configuration and independently reviewed static path; no vendor/native pixel/runtime/freshness/safety acceptance"
+  }
+}

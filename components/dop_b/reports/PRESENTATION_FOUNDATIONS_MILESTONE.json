@@ -1,0 +1,100 @@
+{
+  "scope": "PURE_EXISTING_PRESENTATION_AND_OPAQUE_BACKGROUND_FOUNDATIONS_ONLY",
+  "status": "OFFLINE_PASS",
+  "source_revision_sha256": "5651df75e3fe79dd3340cf783c3a8706170fd6f5469d8c4e5b16388d9644cdde",
+  "source_hash_count": 75,
+  "root_tests": {
+    "discovered": 699,
+    "executed": 699,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 217.483
+  },
+  "new_tests": {
+    "presentation": 14,
+    "background": 38
+  },
+  "independent_review": {
+    "role": "independent read-only technical reviewer",
+    "executed": 699,
+    "unique_test_ids": 699,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 213.984,
+    "source_hash_count": 75,
+    "source_hashes_equal_root": true,
+    "source_hashes_unchanged": true,
+    "test_id_order_equal_root": true,
+    "test_revision_sha256": "5651df75e3fe79dd3340cf783c3a8706170fd6f5469d8c4e5b16388d9644cdde",
+    "material_open_findings": 0,
+    "shared_file_edits": 0
+  },
+  "independent_extra": {
+    "presentation_random_wholebody_oracles": 30,
+    "presentation_typed_negative_cases": 81,
+    "png_pixel_filter_oracles": 240,
+    "paeth_triples": 343,
+    "png_malformed_trailing_stream_typed_cases": 1003
+  },
+  "presentation_evidence": "EXISTING_PRESENTATION_FOUNDATION.json",
+  "background_evidence": "EXISTING_BACKGROUND_FOUNDATION.json",
+  "numeric_research": "NUMERIC_LIMIT_RESEARCH_UPDATE.json",
+  "source_contract": {
+    "presentation": "Exact B10 source graph plus separately pinned ordinary scalar descriptor; no caption/address/numeric/behavior mutation",
+    "background": "Pure opaque exact-canvas PNG to same-size BI_RGB32 positive-height BGR reservedFF bytes; no source frame/page integration"
+  },
+  "preservation": {
+    "noop_complete_file": true,
+    "independent_source_record_expected_body": true,
+    "wholebody_restoration": true,
+    "genuine_probe": "Fiveowners memory-only; savedprivate outputNOT_CREATED",
+    "private_source_writes": 0
+  },
+  "public_integration": {
+    "new_IR": "NOT_IMPLEMENTED",
+    "registry_helper": "NOT_IMPLEMENTED",
+    "background_page_asset_freshness": "NOT_IMPLEMENTED",
+    "composed_native_transaction": "NOT_IMPLEMENTED",
+    "new_feature_nine_tool_SDK": "NOT_IMPLEMENTED",
+    "existing_nine_tool_tests": "Prior bounded scopes re-executed in699suite; not newfeature SDK acceptance"
+  },
+  "historical_tests": "history/647/python_tests.json",
+  "closed_documentation_findings": [
+    {
+      "id": "FONT_READER_LAYER",
+      "trigger": "Compiler font field effect alone misses prior vendor reader normalization",
+      "evidence": "87d049 model-table size quantization and87d08c..d121 ratio whitelist",
+      "impact": "Requested arbitrary font could change meaning when loaded",
+      "correction": "Exact new size/ratio whitelist; old0/48 raw retained without runtime equivalence claim",
+      "retest": "Focused font tests and independent wholebody batches PASS",
+      "status": "CLOSED"
+    },
+    {
+      "id": "NUMERIC_FULL_RANGE_DIGITS",
+      "trigger": "I>=1/I+F<=5 wording used alongside full raw range",
+      "evidence": "FullF1 requiresI4, fullF4I1",
+      "impact": "Smaller digits could imply unverified presentation capacity",
+      "correction": "Research explicitly limits full range to storage/string arithmetic and corrects digit condition",
+      "retest": "Independent reread PASS; native glyph fitNOT_RUN",
+      "status": "CLOSED"
+    }
+  ],
+  "unsupported_in_new_foundation": [
+    "Public native_presentation/background composition",
+    "Signed fractional input lowering acceptance",
+    "Quality/interlock lifecycle",
+    "DOP-100 real feature qualification",
+    "Global macro/Alarm/fullnewprogram integration"
+  ],
+  "vendor_compile": "NOT_RUN",
+  "native_pixels": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "current_revision_relocation": "NOT_RUN",
+  "full_batch_ready": false,
+  "program_writer_complete": false,
+  "full_v1_complete": false,
+  "computer_use": false
+}

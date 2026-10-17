@@ -1,0 +1,125 @@
+{
+  "scope": "SOURCE_PINNED_INERT_LITERAL_DELETION_ONLY",
+  "status": "OFFLINE_PASS",
+  "source_revision_sha256": "9121d6a0bb7b8a72ee9a2f140b60d283ea97bccf819b1cfc304c5168ffdc606b",
+  "source_hash_count": 71,
+  "root_tests": {
+    "executed": 647,
+    "discovered": 647,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 179.898
+  },
+  "new_tests": {
+    "native": 14,
+    "service": 9,
+    "sdk": 1
+  },
+  "independent_review": {
+    "role": "independent read-only technical reviewer",
+    "status": "PASS_BOUNDED_INERT_LITERAL_DELETION",
+    "executed": 647,
+    "unique_test_ids": 647,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 176.225,
+    "source_hash_count": 71,
+    "source_hashes_equal_root": true,
+    "source_hashes_unchanged": true,
+    "test_id_order_equal_root": true,
+    "test_revision_sha256": "9121d6a0bb7b8a72ee9a2f140b60d283ea97bccf819b1cfc304c5168ffdc606b",
+    "additional_descriptor_probes": 115,
+    "descriptor_probe_results": {
+      "typed_refusals": 111,
+      "legitimate_accepts": 4
+    },
+    "native_graph_negatives": 10,
+    "material_open_findings": 0,
+    "shared_file_edits": 0
+  },
+  "saved_neutral_sdk": {
+    "origin": "ORIGINAL_NEUTRAL_BYTE_FIXTURE_REAL_SDK_SERVER",
+    "tools": 9,
+    "source_sha256": "c65411ce3303919a89d88f899e9081a112aa802dfa7eccb7ccad41c2bd0938d5",
+    "candidate_sha256": "21b0c5d45e38eae0f98a091b7c6e8d6947129036dd378afdbb10c141973dd7c2",
+    "candidate_bytes": 1918,
+    "body_bytes": 9178,
+    "body_sha256": "88ad4b35085c417fe2eca54522d655d34c25f339014e8f5afd92a6fffa5ec157",
+    "pages": 3,
+    "deletions": 8,
+    "survivors": 5,
+    "independent_saved_file_audit": "PASS_BEFORE_TEMP_FIXTURE_CLEANUP",
+    "independent_raw_range_subtraction": "PASS",
+    "independent_restoration": "PASS",
+    "unchanged_survivor_bytes": "PASS",
+    "unchanged_tail_thumbnail_prefix37": "PASS",
+    "declared_length": "PASS",
+    "fresh_session_replay_byte_exact": true,
+    "source_unchanged": true,
+    "genuine_vendor_source_sdk": false
+  },
+  "genuine_memory": {
+    "source_sha256": "c3ba093b3c17fb374c8d4669d04ab27aa66c80285d087528561784a13a6dd4ba",
+    "source_unchanged": true,
+    "deleted_inert_literals": 166,
+    "pages": 3,
+    "survivors": 122,
+    "body_bytes": 7569375,
+    "body_sha256": "a9e354706645188ef3bf1c79a481172b83d7aa18fd3810d5ee455e7a929a2b2b",
+    "encoded_memory_sha256": "43c1d728b3f44ff470f493b73327115fa1097c96a77366e79cf213a337d81422",
+    "encoded_memory_bytes": 112535,
+    "independent_raw_subtraction_restoration": "PASS",
+    "external_file_writes": 0,
+    "saved_candidate": "NOT_CREATED",
+    "public_sdk": "NOT_RUN_ON_PRIVATE_SOURCE"
+  },
+  "closed_findings": [
+    {
+      "id": "E1",
+      "trigger": "Helper dependency disappears or becomes unreadable after initial validation",
+      "evidence": "Four independent FileNotFoundError/PermissionError counterexamples",
+      "impact": "Unstructured error could escape calibration helper",
+      "correction": "Convert source/registry read failures to CALIBRATION_CHANGED; temporary-output cleanup retained",
+      "retest": "Four independent cases PASS plus 647 suite",
+      "status": "CLOSED"
+    },
+    {
+      "id": "E2_EXPECTATION",
+      "trigger": "Expected body previously called the same emitter used for apply",
+      "evidence": "Service candidate construction path inspection",
+      "impact": "Correlated implementation errors could be hidden",
+      "correction": "IR-driven raw source-range subtraction independently builds expected body",
+      "retest": "Separate saved-body subtraction/restoration PASS",
+      "status": "CLOSED"
+    },
+    {
+      "id": "D3_LEDGER",
+      "trigger": "Current ledger still identified623/853 while current tests became647/9121",
+      "evidence": "Independent delivery audit",
+      "impact": "Ambiguous current scenario identity",
+      "correction": "Archive previous ledger rawbytes; rebind unchanged scenario tests to647; add24new IDs with exact inert deletion scope",
+      "retest": "All scenario IDs belong to647unique suite; artifact SHA checks and independent delivery re-audit",
+      "status": "CLOSED"
+    }
+  ],
+  "historical_tests": "history/623/python_tests.json",
+  "unsupported": [
+    "Existing-owner appearance/font/geometry edits in this mode",
+    "PNG-to-DIB replacement",
+    "Signed fractional keypad limits",
+    "Quality and write interlocks",
+    "Global macro-body and populated recipe/history/picture subset",
+    "Other native families/model/version shapes"
+  ],
+  "vendor_compile": "NOT_RUN",
+  "native_pixels": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "current_revision_relocation": "NOT_RUN",
+  "full_batch_ready": false,
+  "program_writer_complete": false,
+  "full_v1_complete": false,
+  "source_and_peer_file_writes": 0
+}

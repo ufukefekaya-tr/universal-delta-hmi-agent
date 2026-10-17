@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "project_id": "synthetic_dopsoft2_qualification",
+  "profile_id": "synthetic_dopsoft2",
+  "screens": [
+    {
+      "id": "overview",
+      "name": "Overview",
+      "width": 800,
+      "height": 480,
+      "elements": [
+        {
+          "id": "page_title",
+          "kind": "text",
+          "x": 32,
+          "y": 20,
+          "width": 650,
+          "height": 36,
+          "text": "Machine overview",
+          "font_size": 26,
+          "color": "#e6edf5",
+          "fill": "#101b2a"
+        },
+        {
+          "id": "run_status",
+          "kind": "indicator",
+          "x": 32,
+          "y": 100,
+          "width": 230,
+          "height": 104,
+          "text": "RUN FEEDBACK",
+          "font_size": 18,
+          "color": "#e6edf5",
+          "fill": "#1b293b",
+          "binding": {
+            "read": "run_feedback",
+            "write": null
+          },
+          "states": [
+            {
+              "value": 0,
+              "text": "Stopped",
+              "fill": "#27384d"
+            },
+            {
+              "value": 1,
+              "text": "Running",
+              "fill": "#256b58"
+            }
+          ],
+          "role": "feedback"
+        },
+        {
+          "id": "speed_value",
+          "kind": "numeric_display",
+          "x": 282,
+          "y": 100,
+          "width": 230,
+          "height": 104,
+          "text": "ACTUAL SPEED",
+          "font_size": 30,
+          "color": "#e6edf5",
+          "fill": "#1b293b",
+          "unit": "rpm",
+          "fractional": 1,
+          "format": "decimal",
+          "binding": {
+            "read": "actual_speed",
+            "write": null
+          }
+        },
+        {
+          "id": "speed_input",
+          "kind": "numeric_input",
+          "x": 532,
+          "y": 100,
+          "width": 236,
+          "height": 104,
+          "text": "SPEED SETPOINT",
+          "font_size": 30,
+          "color": "#e6edf5",
+          "fill": "#1b293b",
+          "unit": "rpm",
+          "minimum": 0,
+          "maximum": 5000,
+          "fractional": 1,
+          "format": "decimal",
+          "binding": {
+            "read": "speed_setpoint",
+            "write": "speed_setpoint"
+          }
+        },
+        {
+          "id": "controls_title",
+          "kind": "text",
+          "x": 32,
+          "y": 228,
+          "width": 650,
+          "height": 22,
+          "text": "REQUESTS",
+          "font_size": 12,
+          "color": "#95a9c2",
+          "fill": "#101b2a"
+        },
+        {
+          "id": "run_button",
+          "kind": "button",
+          "x": 32,
+          "y": 264,
+          "width": 230,
+          "height": 92,
+          "text": "RUN REQUEST",
+          "font_size": 18,
+          "color": "#e6edf5",
+          "fill": "#1b293b",
+          "behavior": "maintained",
+          "role": "request",
+          "binding": {
+            "read": "run_request",
+            "write": "run_request"
+          },
+          "states": [
+            {
+              "value": 0,
+              "text": "Request clear",
+              "fill": "#27384d"
+            },
+            {
+              "value": 1,
+              "text": "Request active",
+              "fill": "#24689d"
+            }
+          ]
+        },
+        {
+          "id": "stop_button",
+          "kind": "button",
+          "x": 282,
+          "y": 264,
+          "width": 230,
+          "height": 92,
+          "text": "STOP REQUEST",
+          "font_size": 18,
+          "color": "#e6edf5",
+          "fill": "#1b293b",
+          "behavior": "set_on",
+          "role": "request",
+          "binding": {
+            "read": "stop_request",
+            "write": "stop_request"
+          },
+          "states": [
+            {
+              "value": 0,
+              "text": "Request clear",
+              "fill": "#27384d"
+            },
+            {
+              "value": 1,
+              "text": "Request active",
+              "fill": "#8e4e42"
+            }
+          ]
+        },
+        {
+          "id": "request_state",
+          "kind": "indicator",
+          "x": 532,
+          "y": 264,
+          "width": 236,
+          "height": 92,
+          "text": "RUN REQUEST STATE",
+          "font_size": 18,
+          "color": "#e6edf5",
+          "fill": "#1b293b",
+          "role": "request",
+          "binding": {
+            "read": "run_request",
+            "write": null
+          },
+          "states": [
+            {
+              "value": 0,
+              "text": "Clear",
+              "fill": "#27384d"
+            },
+            {
+              "value": 1,
+              "text": "Requested",
+              "fill": "#24689d"
+            }
+          ]
+        },
+        {
+          "id": "alarm_summary",
+          "kind": "alarm_strip",
+          "x": 32,
+          "y": 386,
+          "width": 736,
+          "height": 72,
+          "text": "ALARMS",
+          "font_size": 15,
+          "color": "#e6edf5",
+          "fill": "#1b293b"
+        }
+      ]
+    }
+  ],
+  "tags": [
+    {
+      "id": "run_request",
+      "address": "DEMO.RUN_REQUEST",
+      "data_type": "BOOL",
+      "access": "ReadWrite",
+      "unit": "",
+      "channel": "SIM",
+      "station": "OFFLINE",
+      "byte_order": "little",
+      "word_order": "little"
+    },
+    {
+      "id": "stop_request",
+      "address": "DEMO.STOP_REQUEST",
+      "data_type": "BOOL",
+      "access": "ReadWrite",
+      "unit": "",
+      "channel": "SIM",
+      "station": "OFFLINE",
+      "byte_order": "little",
+      "word_order": "little"
+    },
+    {
+      "id": "run_feedback",
+      "address": "DEMO.RUN_FEEDBACK",
+      "data_type": "BOOL",
+      "access": "Read",
+      "unit": "",
+      "channel": "SIM",
+      "station": "OFFLINE",
+      "byte_order": "little",
+      "word_order": "little"
+    },
+    {
+      "id": "actual_speed",
+      "address": "DEMO.ACTUAL_SPEED",
+      "data_type": "REAL",
+      "access": "Read",
+      "unit": "rpm",
+      "channel": "SIM",
+      "station": "OFFLINE",
+      "byte_order": "little",
+      "word_order": "little"
+    },
+    {
+      "id": "speed_setpoint",
+      "address": "DEMO.SPEED_SETPOINT",
+      "data_type": "REAL",
+      "access": "ReadWrite",
+      "unit": "rpm",
+      "channel": "SIM",
+      "station": "OFFLINE",
+      "byte_order": "little",
+      "word_order": "little"
+    },
+    {
+      "id": "alarm_active",
+      "address": "DEMO.ALARM_ACTIVE",
+      "data_type": "BOOL",
+      "access": "Read",
+      "unit": "",
+      "channel": "SIM",
+      "station": "OFFLINE",
+      "byte_order": "little",
+      "word_order": "little"
+    }
+  ],
+  "macros": [],
+  "alarms": [
+    {
+      "id": "demo_alarm",
+      "tag": "alarm_active",
+      "text": "Sample condition requires inspection",
+      "history_policy": "retain"
+    }
+  ]
+}

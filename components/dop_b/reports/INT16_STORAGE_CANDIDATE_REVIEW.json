@@ -1,0 +1,15 @@
+{
+  "plan_id": "a9d7bb359465c3a79d886fb90ddfe946fbb873356c616f27c443b3a5b6fb5e0f",
+  "replay_exact": true,
+  "independent_whole_body_exact": true,
+  "target_restored": true,
+  "candidate_sha256": "c64a790da08c4ec859b143dc1f996a8034cd2d031d59b5169bd5d219cac0928f",
+  "body_sha256": "f3674c5787f9186bcdae40ffabc038fd44a116bfbd26c38831ae29ae0cbc7f45",
+  "body_bytes": 55307,
+  "owners": 16,
+  "source_hashes": {
+    "target": "c16e6b81580f91f508becae459dede710239d5f6f243800404575cdf77b3abfb",
+    "controls": "c7830ddfc6305f479b21e441107eccf5441b3273ba62c73fac278d4c7f3d3052",
+    "layout": "c73e18847f0d6243dd190efbafc8609f8f0d3ac56da976d3d6c5174ad0de3531"
+  }
+}

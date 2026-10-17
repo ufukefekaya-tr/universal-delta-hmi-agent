@@ -1,0 +1,65 @@
+{
+  "release": "0.2.0",
+  "status": "DOP_B_HEADLESS_OFFLINE_RELEASE_READY",
+  "release_ready": true,
+  "full_v1_complete": false,
+  "goals": {
+    "H0": "PASS",
+    "H1": "PASS",
+    "H2": "PASS",
+    "H3": "PASS",
+    "H4": "PASS",
+    "H5": "PASS"
+  },
+  "scope": "DOP-B existing source-qualified features; DPS/conceptual preview/verification endpoint",
+  "accepted_wheel_sha256": "e6508c0e6a6a4a40e4aaf25756da766a0c5c7f7108ded3deb8ff1d75314d3527",
+  "installed_windows": {
+    "status": "PASS",
+    "tests": 52,
+    "skipped": 0,
+    "fresh_user_directory": true,
+    "fresh_vm": false,
+    "elevated": false,
+    "offline_no_index": true,
+    "os_network_denied": false
+  },
+  "installed_linux": {
+    "status": "PASS",
+    "tests": 52,
+    "skipped": 0,
+    "fresh_ubuntu_userspace": true,
+    "fresh_vm": false,
+    "uid": 1000,
+    "os_network_denied": true
+  },
+  "native_pilot": {
+    "status": "OFFLINE_PASS",
+    "pages": 3,
+    "owners": 16,
+    "sha256": "d4cbd91b5a3e9d2b5c0815d17343cdd0e4c98dd188f784f6ce38024605e5792c",
+    "real_stdio_tools": 14,
+    "actual_independent_reports": 4
+  },
+  "independent_code_review": "PASS_NO_IMPORTANT_OPEN_FINDING",
+  "vendor": "NOT_RUN",
+  "native_visual": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "computer_use": false,
+  "open": [],
+  "release_ready_requires_containing_commit": true,
+  "source_suite": {
+    "status": "PASS",
+    "tests": 979,
+    "skipped": 0,
+    "seconds": 340.228,
+    "log_sha256": "a56a9648e8f2c20df11e5d2675dc46be26370c0c601fb63f93d01102accdbd1a"
+  },
+  "source_manifest_sha256": "36ae232ceaf6ad25f1fc2fbdf867e18eb215317bad41ef6591f819896186ae50",
+  "linux_genuine_native_read": "PASS_SAME_SHA_3_SCREENS_16_ELEMENTS",
+  "outside_release_scope": [
+    "Vendor compilation and simulation",
+    "Native pixel equivalence",
+    "Physical panel acceptance",
+    "Original full two-family V1"
+  ]
+}

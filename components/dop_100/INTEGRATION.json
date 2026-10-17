@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "package": "universal-diascreen-hmi-agent",
+  "python_module": "universal_diascreen_hmi.cli",
+  "python_requires": ">=3.11",
+  "runtime_dependencies": [],
+  "license_spdx": "Apache-2.0",
+  "family": "diascreen-dop100",
+  "transport": {
+    "protocol": "MCP JSON-RPC 2.0",
+    "channel": "stdio",
+    "framing": "one UTF-8 JSON object per line",
+    "initialize_required": true,
+    "stdout": "protocol messages only",
+    "diagnostics": "stderr",
+    "listening_network_service": false
+  },
+  "launch": {
+    "command": "python",
+    "args": [
+      "-m",
+      "universal_diascreen_hmi.cli",
+      "--workspace",
+      "${WORKSPACE}"
+    ],
+    "optional_flags": [
+      "--allow-write",
+      "--read-root PATH (repeatable)"
+    ],
+    "one_process_per_session": true
+  },
+  "authorization": {
+    "read_only_default": true,
+    "source_sha256_required": true,
+    "profile_sha256_required": true,
+    "profile_hash_basis": "canonical profile JSON object; sorted keys, compact separators, UTF-8, ensure_ascii=false, allow_nan=false",
+    "inspect_before_plan_and_apply": true,
+    "apply_requires_allow_write": true,
+    "apply_plan_fields": [
+      "plan_sha256",
+      "approval_sha256"
+    ],
+    "approval_rule": "both fields equal the exact returned reviewed plan_sha256",
+    "approval_meaning": "explicit local caller consent; not cryptographic human authentication",
+    "save_candidate_sha256_required": true,
+    "source_overwrite": false,
+    "existing_output_overwrite": false,
+    "output_scope": "new paths inside the workspace"
+  },
+  "common_tools": [
+    "open_project",
+    "capabilities",
+    "inspect",
+    "plan_changes",
+    "preview",
+    "validate",
+    "apply_plan",
+    "save_as",
+    "diff"
+  ],
+  "extra_tools": [
+    "register_donor",
+    "rollback",
+    "pending_changes",
+    "inspect_compiled",
+    "evaluate_status"
+  ],
+  "legacy_names": [
+    "open_project",
+    "list_screens",
+    "layout",
+    "element",
+    "find",
+    "addresses",
+    "macros",
+    "alarms",
+    "set_property",
+    "set_text",
+    "rebind",
+    "pending_changes",
+    "save",
+    "screenshot_text",
+    "clone_element",
+    "clone_screen",
+    "delete_element",
+    "set_state_text"
+  ],
+  "legacy_editing_semantics": "plan only; no implicit apply",
+  "profile_core_fields": [
+    "schema_version",
+    "family",
+    "panel",
+    "application_versions",
+    "link",
+    "station"
+  ],
+  "profile_preview_fields": [
+    "preview_model",
+    "background_sha256"
+  ],
+  "profile_edit_fields": [
+    "reviewed_index_ack",
+    "indexed_layout_sha256"
+  ],
+  "profile_optional_qualified_contracts": [
+    "numeric_types",
+    "button_types",
+    "fonts",
+    "reviewed_index_ack",
+    "indexed_layout_sha256",
+    "reviewed_resources",
+    "catalog_bindings",
+    "binding_types",
+    "macro_slots",
+    "interface_contract"
+  ],
+  "preview": {
+    "model": "flat-v1",
+    "level": "OFFLINE_MODEL_ONLY",
+    "font_bytes_optional": true,
+    "missing_font_issue": "FONT_METRICS_NOT_VERIFIED",
+    "installed_font_search": false,
+    "values": "synthetic; exact saved ReadVar keys",
+    "unknown_draw_behavior": "UNSUPPORTED_RENDER",
+    "background_digest_basis": "one 40-byte DIB header plus exact padded pixel extent"
+  },
+  "excluded": [
+    "Computer Use",
+    "vendor IDE automation",
+    "vendor compilation",
+    "PLC or control-target connection",
+    "force or download",
+    "panel or physical operation",
+    "DOP-B/DPS/DOPSoft writing",
+    "machine PLC logic",
+    "unqualified arbitrary macro compilation"
+  ],
+  "acceptance_not_established_by_offline_tests": [
+    "vendor native pixel fidelity",
+    "vendor compile acceptance",
+    "heartbeat cadence",
+    "atomic mode transaction",
+    "transport freshness or reconnect safety",
+    "lost-release behavior",
+    "alarm history/ACK runtime",
+    "panel or physical acceptance"
+  ],
+  "documentation": {
+    "usage": "README.md",
+    "integration": "docs/INTEGRATION.md",
+    "format": "docs/FORMAT.md",
+    "support": "docs/SUPPORT_MATRIX.md",
+    "provenance": "docs/PROVENANCE.md",
+    "final_review": "reports/FINAL_REVIEW.md"
+  },
+  "portable_source_launch": {
+    "command": "python",
+    "args": [
+      "tools/start.py",
+      "--workspace",
+      "${WORKSPACE}"
+    ],
+    "runtime_dependencies": [],
+    "installation_required": false
+  },
+  "package_version": "0.1.1",
+  "proposal_review": {
+    "tools": [
+      "preview",
+      "validate"
+    ],
+    "optional_selector": "plan_sha256",
+    "omitted_selector": {
+      "view": "current",
+      "plan_sha256": null
+    },
+    "selected_pending_plan": {
+      "view": "proposal",
+      "plan_sha256": "exact immutable unapplied plan digest"
+    },
+    "identity_fields": [
+      "view",
+      "plan_sha256",
+      "candidate_sha256",
+      "candidate_profile_sha256"
+    ],
+    "profile_selection": "derived profile of the selected candidate, including proposed background pins",
+    "explicit_mcp_null": "REJECTED",
+    "python_default_none": "current",
+    "requires_allow_write": false,
+    "applies_plan": false,
+    "writes_files": false,
+    "changes_session_state": false,
+    "refusals": [
+      "unknown or malformed selector",
+      "source/profile/base drift",
+      "proposal record/candidate/profile/ledger drift",
+      "donor drift",
+      "stale inspection",
+      "already applied or discarded plan"
+    ],
+    "after_apply": "omit selector to inspect current",
+    "historical_correction": "DIA-R2 withdraws the0.1.0 pre-application proposal-preview workflow claim; retained0.1.0 reports are not0.1.1 acceptance"
+  },
+  "inspection_sort": {
+    "argument": "sort",
+    "values": [
+      "layer",
+      "coordinate"
+    ],
+    "default": "layer",
+    "coordinate_views": [
+      "layout",
+      "text"
+    ],
+    "legacy_aliases": [
+      "layout",
+      "screenshot_text"
+    ],
+    "coordinate_key": [
+      "native_page_order",
+      "Y",
+      "X",
+      "layer_index"
+    ],
+    "layout_row_layer_index": "screen-local zero-based native element layer index",
+    "default_text_format": "unchanged",
+    "invalid_or_unrelated_coordinate_sort": "REJECTED",
+    "changes_native_bytes": false,
+    "changes_render_order": false
+  }
+}

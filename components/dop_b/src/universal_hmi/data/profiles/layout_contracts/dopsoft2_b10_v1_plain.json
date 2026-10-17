@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "authority_kind": "vendor_source_static_layout_contract",
+  "family": "delta_dopsoft2",
+  "serialized_version": "4.00.07.04",
+  "model_id": 2953863504,
+  "layout_sha256": "c73e18847f0d6243dd190efbafc8609f8f0d3ac56da976d3d6c5174ad0de3531",
+  "page_donor": {
+    "screen_id": "2",
+    "header_sha256": "2199687ea2d4eaafcedd7e51e305d0dfabf1303b65aec1380a0702d275900bdd",
+    "aux_sha256": "a9028a67c255b027497324a9985b97daac06cabe3bf2589e32eeac2f49cddce4"
+  },
+  "aux_donors": {
+    "indicator": {
+      "screen_id": "2", "element_id": "1",
+      "owner_sha256": "2ab548d92df023146b5c4bc05792421b4ff11e80280949f2faf0ad09fa33799b",
+      "property_witness_sha256": "d31688bd726bd3ed7f301c1ee2a4ac76ba8f12e67938ce3d8f10037c7185d34e",
+      "match": {"Type": "2", "SubType": "1"}
+    },
+    "text": {
+      "screen_id": "2", "element_id": "2",
+      "owner_sha256": "adcfdc9a42e73e4d3969177ea3c31922adc4d50f857f6a9759b8d83a6050b805",
+      "property_witness_sha256": "58f9580ec4493f2ff074fe886a4d462f6f61e0f4f451f546b3835d2b4ccc93cd",
+      "match": {"Type": "10", "SubType": "6"}
+    },
+    "goto": {
+      "screen_id": "2", "element_id": "3",
+      "owner_sha256": "842f46625bc60a0b6ca0d13e2dfcaa3e88d90599b79f1b19b13c39fbe76177e1",
+      "property_witness_sha256": "4e9b08008114ebf70efd98b190fc33e890ba32ff5b917238cc459f38e41fe767",
+      "match": {"Type": "1", "SubType": "10"}
+    }
+  },
+  "new_page_action": 0,
+  "page_id_max": 65535,
+  "evidence": {
+    "editor_sha256": "9ed92401cd08e2be8bfc2df3a40dee4e99e9f605da7a4fa9605f9e2754821eeb",
+    "b10_renderer_sha256": "e6fa5b74d8d73415b1fd79b16aa19fc163f95113471eb8e9e1022f8615b19ab3",
+    "source_kind": "Human-authorized neutral vendor-created B10 page and three typed owner references",
+    "paired_save_scope": "Whole-body exact reversal after new extents and enumerated GUID/MeMeCode/HMIPortNr0/numeric-ratio changes; donor globals and old normalized numeric owners are excluded",
+    "page_id_storage_va": "0x8655d1-0x8655e5;0x8187dc-0x8187f9: uint16",
+    "new_page_action_zero_va": "0x10102d57-0x10102d5e;0x101035d4: transition bypass",
+    "indicator_factory_va": "0x100b123d;0x100b1261: Type2/SubType1",
+    "indicator_read_va": "0x100dece4;0x100dedff;0x100dee49: read raw bit, AND1",
+    "indicator_action_slots": "Zero-initialized common block; optional action callbacks+0x7c/+0x84=NULL",
+    "goto_storage_va": "0xb94ae3;0xb94bd0-0xb94bd9;0x100b4100-0x100b4128: uint16",
+    "property_limits": "Goto accessibility tree omits destination controls; structured observation plus native bytes corroborate destination1/Screen_1. No accepted native-pixel capture.",
+    "qualification": "Stored layout only; vendor compilation, native pixels, navigation execution, PLC, communication loss and physical panel NOT_RUN"
+  },
+  "acceptance_scope": "OFFLINE_STORED_LAYOUT_ONLY"
+}

@@ -1,0 +1,56 @@
+{
+  "scope": "PRIMARY_STATIC_ENTRY_PERMISSION_RESEARCH_ONLY",
+  "status": "RESEARCH_ONLY_NOT_IMPLEMENTED",
+  "origin": "Independent read-only numeric_contract worker causal-chain report; root transcription preserves the reported boundaries",
+  "target": "DOP-B10S615 / pinned DOPSoft 2 source",
+  "mutations": "NONE",
+  "computer_use": "PROHIBITED_NOT_USED",
+  "vendor_runtime": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "primary_sha256": {
+    "editor": "9ed92401cd08e2be8bfc2df3a40dee4e99e9f605da7a4fa9605f9e2754821eeb",
+    "b10_hmi": "e6fa5b74d8d73415b1fd79b16aa19fc163f95113471eb8e9e1022f8615b19ab3",
+    "kernel_win": "8e58747aba447c823deb6a424b62c668fcb2769e82f5b2981079f14af6ab66bf",
+    "online_delta_dvp": "18c043dbed61c2a6c6fa78ad31ec6b4129cd72c878c5db6fbc16006d5c8c0d64"
+  },
+  "neutral_source_sha256": "c7830ddfc6305f479b21e441107eccf5441b3273ba62c73fac278d4c7f3d3052",
+  "stored_fields": {
+    "InterLockVar": "address string, editor owner+0x644",
+    "InterLockLink": "BYTE, editor owner+0x704",
+    "InterLockLevel": "BYTE, editor owner+0x705; future public subset only explicit0or1"
+  },
+  "candidate_subset": {
+    "name": "entry_permission",
+    "owners": ["Type1/SubType1 SetOn", "Type1/SubType2 SetOff", "Type1/SubType3 Momentary", "Type1/SubType4 Maintained", "Type6/SubType1 NumericInput"],
+    "semantics": "Action entry permits only if the current external read API succeeds and the returned Boolean matches enable_level. API success does not establish maximum sample age.",
+    "neutral_witness": "Genuine neutral owners contain InterLockVar=None/InterLockLink1/InterLockLevel1; active-interlock vendor property/runtime holdout NOT_FOUND",
+    "implementation": "NOT_IMPLEMENTED",
+    "public_capability": "NOT_OPENED"
+  },
+  "causal_chain": [
+    {"layer":"stored_reader","location":"editor616fdf..617073","effect":"Reads exact three fields into owner offsets"},
+    {"layer":"stored_writer","location":"editor616531..6165e3","effect":"Emits exact InterLockLink/Var/Level field names"},
+    {"layer":"native_compiler","location":"editor7d8f38..7d9074","effect":"None comparison; address compiler7c8415 with stored link minusone; rejects failed conversion; emits compiled Var/Level"},
+    {"layer":"Type1_loader","location":"hmi100b3e57..100b3f38","effect":"levelpart+76/descriptorpart+72; descriptor countWORD+18=1/bytewidth+14=1/format+1e=0"},
+    {"layer":"Type6_loader","location":"hmi100b5822..100b58a6","effect":"descriptorpart+76/level+7e; same forced descriptor fields"},
+    {"layer":"fresh_helper","location":"hmi100fd8bb..100fd916","effect":"Zeroes new BYTE; external read100fbf37; returns-1onfailure,0onmismatch,1onmatch; expected0neverallowsfailedread"},
+    {"layer":"Boolean_action","location":"hmi100b2e54/100dbd10/100dbd6e/100dbd73/100dc032/100dbf19","effect":"Genuine subtype1..4 route to same action; requires helper result1 before commandwrite"},
+    {"layer":"numeric_entry","location":"hmi100ef3bc/100ef3c1/100ef7f9","effect":"Requires helper result1 before opening keypad"},
+    {"layer":"external_API","location":"hmi100facdb..100facf9/100fc2e5/100fc330","effect":"Registered read_command callback invoked; accepts only returnAL1; not sample-age guarantee"}
+  ],
+  "counterexamples": [
+    {"trigger":"Permission changes while numeric keypad remains open","evidence":"100ef7f9opens;100f00e5writes;no established secondInterLockVarread","effect":"No commit-time write guarantee","disposition":"Reject commit_time_interlock request"},
+    {"trigger":"Confirmation or BeforeExecuteMacro after Boolean gate","evidence":"100dbe03confirmation/100dbe77macro before100dbf19write","effect":"Permission can change after read","disposition":"First proposed subset requires confirmationoff/macrosabsent; interval still disclosed"},
+    {"trigger":"Momentary permission falls before off/release action","evidence":"Same gate guards state branch100dbeb7..100dbecb","effect":"No guaranteed cancellation/release","disposition":"Never advertise continuous protection or silently gate stop/release"},
+    {"trigger":"VisibleVar read fails after visibletrue","evidence":"100dc085 updater; helper-1 skips both stateupdates100dc0c9/100dc124->100dc166; cachedbyte+62 retained","effect":"Visibility is stale; action cached-byte check is not direct interlock","disposition":"No VisibleVar quality/writeguard substitution"},
+    {"trigger":"Read-only quality signal substituted into numeric TriggerVar","evidence":"descriptorpart+72 written by100fc600 at100f01dc","effect":"TriggerVar is output; not input permission","disposition":"No TriggerVar substitution"},
+    {"trigger":"Variable-limit external reads fail","evidence":"100edbf1/100edc56 failure jumps100eee22","effect":"Previous limits retained; no action disable proof","disposition":"No dynamic-limit failclosed claim"},
+    {"trigger":"SingleBOOL istruebutold or permissionANDquality required","evidence":"No timestamp/maxage/Booleanexpression field in this contract","effect":"Cannot establish freshness or AND composition","disposition":"Require separately qualified producer/three-state presentation"}
+  ],
+  "unqualified": ["transport_quality_indicator","maximum_sample_age","continuous_permission_monitoring","numeric_commit_time_recheck","atomic_permission_read_command_write","momentary_cancel_on_loss","AND_permission_quality"],
+  "next_implementation_requirements": ["Separate registered primary/source/BOOLbinding authority", "Explicit entry_permission naming and enable_level0or1", "Only three exact interlock scalar fields mutable", "Preserve source subtype/command addresses/resources/unknown fields", "Plain confirmed-off/no-macro/no-offset bounded owners first", "Independent wholebody/negative/SDK/replay tests and review before any capability", "Never gate stop/release without explicit machine contract"],
+  "documentation_context": "https://filecenter.deltaww.com/Products/download/06/060302/Manual/DELTA_IA-HMI_DOPSoft_UM_EN_20211230.pdf",
+  "documentation_boundary": "Newer manual revision does not qualify old B10 transport-status registers/macros; no guessed system address proposed",
+  "full_batch_ready": false,
+  "full_v1_complete": false
+}

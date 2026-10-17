@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "authority_kind": "manufacturer_static_storage_conversion_contract",
+  "family": "delta_dopsoft2",
+  "serialized_version": "4.00.07.04",
+  "model_id": 2953863504,
+  "mode": "source_uint16_to_int16_f0",
+  "storage_from": {
+    "data_type": "UINT",
+    "MemLen": "1",
+    "MemFmt": "2",
+    "bits": 16,
+    "format": "unsigned"
+  },
+  "storage_to": {
+    "data_type": "INT",
+    "MemLen": "1",
+    "MemFmt": "1",
+    "bits": 16,
+    "format": "signed"
+  },
+  "permitted_storage_fields": [
+    "MemFmt"
+  ],
+  "input_range": [
+    -32768,
+    32767
+  ],
+  "input_relation": "strict_minimum_less_than_maximum",
+  "fractional_digits": 0,
+  "max_integer_digits": 5,
+  "identity_scale": {
+    "gain": "1",
+    "offset": "0",
+    "roundoff": "0"
+  },
+  "evidence": {
+    "editor_sha256": "9ed92401cd08e2be8bfc2df3a40dee4e99e9f605da7a4fa9605f9e2754821eeb",
+    "renderer_sha256": "e6fa5b74d8d73415b1fd79b16aa19fc163f95113471eb8e9e1022f8615b19ab3",
+    "native_reader": "0xb66b6a..0xb66bbb MemFmt key to single BYTE object+0x59; no companion update",
+    "native_writer": "0xb66321 object+0x59 to MemFmt=%d",
+    "native_setter": "0x99be20..0x99be44 writes only object+0x59",
+    "numeric_compiler": "0x617dcd..0x617e1a uses native width/format/digit fields",
+    "signed_word_range": "0x7adcca maximum total digits5, signed16 F0 range",
+    "signed_limits": "0x6181c5..0x61823f and0x6183a4..0x618419 signed %d lowering",
+    "compiled_format": "0x7d86a5..0x7d86bd and0x7d884d..0x7d8865 native MemFmt+1",
+    "signed_renderer": "0x100c93ea WORD sign-extension and%06d",
+    "keypad_format": "0x100b5436..0x100b54a4,0x100ee70f..0x100ee743,0x100ef50b..0x100ef540 derive signed keypad from compiled format",
+    "identity_bypass": "0x100efd02..0x100efd29",
+    "signed_donor_property": "NOT_FOUND",
+    "executed_vendor_code": false
+  },
+  "acceptance_scope": "STATIC_SOURCE_QUALIFIED_STORED_CONFIGURATION_ONLY"
+}

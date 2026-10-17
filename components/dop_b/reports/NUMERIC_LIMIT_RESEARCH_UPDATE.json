@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "status": "RESEARCH_ONLY",
+  "capability_opened": false,
+  "method": "READ_ONLY_PRIMARY_STATIC_AND_ORIGINAL_EXACT_RATIONAL_CALCULATIONS",
+  "reported_by": "numeric_contract independent read-only researcher",
+  "family": "delta_dopsoft2",
+  "model_id": 2953863504,
+  "serialized_version": "4.00.07.04",
+  "primary_hashes": {
+    "editor": "9ed92401cd08e2be8bfc2df3a40dee4e99e9f605da7a4fa9605f9e2754821eeb",
+    "b10_hmi": "e6fa5b74d8d73415b1fd79b16aa19fc163f95113471eb8e9e1022f8615b19ab3",
+    "system_x86_crt_candidate": "23a918921c545140d189ce6dc68590bacdeb0ab2f3e3a9a2d722c5aff45ce64f"
+  },
+  "crt_resolution": "Windows KnownDLL candidate is distinct from installer-bundled CRT; actual loaded module/thread NOT_RUN",
+  "proposed_storage": {
+    "MemLen": "1",
+    "MemFmt": "1",
+    "data_type": "INT",
+    "bits": 16,
+    "raw_range": [
+      -32768,
+      32767
+    ],
+    "gain": "1",
+    "offset": "0",
+    "roundoff": "0"
+  },
+  "display_proposal": {
+    "fractional_digits": [
+      1,
+      4
+    ],
+    "integer_digits": "Full signed raw domain F1 requires I4; F4 requires I1. Smaller requested ranges need their own exact digit-bound check.",
+    "full_signed_raw_range": "STORAGE_AND_STRING_ARITHMETIC_ONLY; native glyph fit NOT_RUN",
+    "renderer": "100c93ea/100c93fa signed WORD; decimal insert10131acf/10131b88",
+    "runtime_pixel_acceptance": false
+  },
+  "input_proposal": {
+    "fractional_digits": [
+      1,
+      4
+    ],
+    "Variation": "0",
+    "UseCustKeypad": "0",
+    "minimum_less_than_maximum": true,
+    "limits_raw_integral": true,
+    "endpoint_gate": "raw % (5**F) == 0; reject requested unsafe endpoints without alteration",
+    "native_literal": "canonical exact ASCII raw/10**F, no exponent/comma/epsilon",
+    "compiler_chain": "6181c5..61823f and6183a4..618419 atof -> QWORD spill -> pow -> FMUL -> ftol",
+    "profile_preconditions": [
+      "pinned editor plus qualified actual returned CRT atof and pow results; actual loaded CRT/path/thread is not established",
+      "PC53 precision",
+      "round-to-nearest",
+      "C numeric locale",
+      "identity scaling",
+      "standard keypad",
+      "atof returns each proposed dyadic literal exactly",
+      "pow returns exact 10**F in actual returned ST0, not only a hypothetical binary64 spill"
+    ],
+    "startup_precision": "c2a991 ->c2b062 ->c2b0a2 controlfp mask30000/value10000; rounding control untouched"
+  },
+  "endpoint_math": {
+    "scope": "reported exact rational calculation; no vendor code executed",
+    "F1_cases": 13107,
+    "F4_cases": 105,
+    "mismatches": 0,
+    "rational_model": "For raw INT16 endpoint divisible by5**F, raw/(10**F) has reduced power-of-two denominator and bounded coefficient<=16 significant bits. Independently nearest-even binary arithmetic and pinned reciprocal-table propagation checked exact endpoint then exact10**F factor under stated precision/rounding conditions. This is not a test of actual loaded compiler/thread.",
+    "SSE_pow": "100a7059..100a739f exact binary64 factors10/10000 by original constant propagation",
+    "x87_fallback": "1009945a ->100a55c0; reported Intel error-bound calculation under PC53/nearest",
+    "parser": "1002fa0c ->100966b0 ->10097100 ->10096810; integer coefficient10064aa0; product10096d90..10096de9; binary64 rounding10064c41",
+    "reciprocal_table_F1": "100bd4e8",
+    "reciprocal_table_F4": "100bd50c"
+  },
+  "entered_value_chain": {
+    "fractional_digits_are_text": "10048260 rejects excessF;10131ca1 removes decimal separator;101319b8 appendsFzeros",
+    "comparison": "10053cab raw signed decimal string comparison",
+    "integer_parse": "101332e0 ->10142b62; decimal accumulator10142cbd..c3; minus10142d44",
+    "identity_write": "100efd29 ->100f00a7 ->100f00e5",
+    "interior_example": {
+      "fractional": 4,
+      "entered": "-3.2762",
+      "raw": -32762
+    },
+    "entered_interior_vs_compiled_endpoint_are_separate": true
+  },
+  "negative_evidence": [
+    {
+      "case": "F4 raw endpoint -32762, literal -3.2762",
+      "observed_diagnostic": "floating compiler truncation may emit -32761",
+      "policy": "typed refusal unchanged; no narrowing or epsilon"
+    },
+    {
+      "case": "F1 endpoint -32767",
+      "observed_diagnostic": "precision-sensitive compiler endpoint",
+      "policy": "outside proposed dyadic gate"
+    },
+    {
+      "case": "variable-address MinValueVar/MaxValueVar",
+      "chain": "Min11c/120 ->decoded local-10 ->runtimeMax9e; Max114/118 ->decodedlocal-c ->runtimeMin9a",
+      "impact": "reversed endpoint roles; failed reads can leave stale/zero limits and enabled action",
+      "policy": "UNQUALIFIED; no automatic inversion/startup macro injection"
+    }
+  ],
+  "primary_docs": [
+    "https://cdrdv2-public.intel.com/789574/253665-sdm-vol-1.pdf",
+    "https://learn.microsoft.com/en-us/cpp/c-runtime-library/reference/controlfp-s?view=msvc-170",
+    "https://learn.microsoft.com/en-us/cpp/c-runtime-library/reference/atof-atof-l-wtof-wtof-l?view=msvc-170"
+  ],
+  "independent_secondary_reproduction": {
+    "status": "CONDITIONAL_STATIC_REPRODUCED_NOT_CAPABILITY",
+    "safe_endpoint_counts": {
+      "F1": 13107,
+      "F4": 105
+    },
+    "conditional_rational_mismatches": 0,
+    "editor_sha_reproduced": true,
+    "crt_candidate_sha_reproduced": true,
+    "startup_changes_precision_only": true,
+    "pow_direct_ST0_consumption": "confirmed; no explicit QWORD spill before FMUL",
+    "missing_assumption": "Actual loaded CRT dispatch/module, thread CW/locale and executed pipeline remain unqualified.",
+    "one_ulp_low_pow_counterexamples": [
+      {
+        "F": 1,
+        "raw": 32765,
+        "truncated": 32764
+      },
+      {
+        "F": 4,
+        "raw": 32500,
+        "truncated": 32499
+      }
+    ],
+    "direct_ST0_conditional_closure": {
+      "scope": "pinned candidate x87 path only, PC53/RN masked finite environment",
+      "chain": "1009945a FYL2X ->100a55c0 FRNDINT/FSUBR/FCHS/F2XM1 ->100a55ce FADDP ->100a55d0 FSCALE ->100a55d2 FSTP ST1",
+      "exact_pre_scale": {
+        "F1": "5/4",
+        "F4": "625/512"
+      },
+      "independent_conservative_error_upper_bounds": {
+        "F1": "2.451e-17",
+        "F4": "2.475e-17"
+      },
+      "PC53_half_ULP": "2^-53 =1.1102230246251565e-16",
+      "normal_return": "100a565e..566a restores CW without changing ST0",
+      "finite_diagnostic_return": "100a56a9 non-pop FSTQWORD; CW027f branch ->100a56f8 POP/RET",
+      "conclusion": "Conditional exact returned ST0 factors10/10000; no caller QWORD spill assumed."
+    }
+  },
+  "actual_loaded_crt_thread_state": "NOT_RUN",
+  "vendor_compile": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "native_pixels": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "full_batch_ready": false,
+  "full_v1_complete": false,
+  "computer_use": false
+}

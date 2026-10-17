@@ -1,0 +1,18 @@
+# Yeni literal sayfa üretimi — karşı inceleme
+
+Durum: **OFFLINE_PASS — sınırlı dosya deneyi**. Bağımsız salt-okunur denetmen436/436 test,0failure/error/skip,53.025 saniye ve41 değişmeyen hash’i doğruladı.444 native negative scenario ve40 public transaction/source-witness/post-save forgery senaryosu ayrıca geçti. Açık önemli bulgu yok. Uygulayıcı kaynakları dondurdu; root436 skipsiz test,41 hash ve revision `4ecbb67a8057c97a46132eacfa9c5a18fd360b9eb2c48a552bf0c1dc29815e79` geçti. Teknik denetmen kaynak değiştirmiyor. Bu dosya vendor veya fiziksel kabul değildir.
+
+## Bulgu zincirleri
+
+- **L1 — Donor SHA özelliği kalibre etmez.** Tetikleyici: source State ses/efekt/picture değerini0→7 değiştirip yeni source/owner hash’iyle yeniden pinlemek. Kanıt: bağımsız denetmen iki ailede8 admission üretti. Etki: yeni literal owner’a desteklenmeyen davranış taşınır. Düzeltme: exact observed-zero effect/asset/security baselines ve tam bilinen field shape gerekir; bu değerler runtime anlam kanıtı sayılmaz. Tekrar test: native rebased-value/field-removal/no-op/clone senaryoları ve bağımsız son tur.
+- **L2 — Bütün sayfayı klonlamak komut taşır.** Tetikleyici: gerçek FTP sayfasını mevcut clone_screen ile çoğaltmak. Kanıt:10 bound numeric ve2 function owner vardır. Etki: onaylanmayan komut/bağlar yeni sayfaya girer. Düzeltme: ayrı append_literal_page yalnız Screen+emptyAux alır; literal donor immutable kaynaktan çözülür. Tekrar test: kaynak bütün original region byte eşit; yeni sayfa Type10 literal dışında owner içeremez; empty-page ve immutable-donor senaryoları.
+- **L3 — Aynı header shape aynı davranış değildir.** Tetikleyici: bağımsız traffic örneğini FTP header’ına eşdeğer görmek. Kanıt: aynı32 alan, farklı ScreenAction; owner sırası1,2,4,3. Etki: davranış veya sıra yanlış kalibre edilir. Düzeltme: tam source/header/aux pin, bounded raw variants, exact original sıra ve fresh IDs; ID sorting yok. Tekrar test: farklı/eksik/extra header, malformed/colliding IDs ve body coherence.
+- **L4 — Byte koruma graph geçerliliği değildir.** Tetikleyici: yeni sayfa eklerken opaque41/tail/BMP’yi korumayı yeterli saymak. Kanıt: labelled count bulunmadı; BMP bfSize14 ama file67990. Etki: hidden count/ID/size bağımlılığı bozulabilir. Düzeltme: bu metadata için tahmini güncelleme yok; gzip frame kendiliğinden yenilenir. UNKNOWN ve vendor NOT_RUN zorunlu; vendor-valid/executable/complete iddiası durur. Tekrar test: envelope/framing/body/retained bytes; graph semantiği henüz test edilmedi.
+
+Root gerçek B örneğinde memory-only literal page/owner compound üretimini yaptı; [probe](LITERAL_GENERATION_GENUINE_PROBE.json). No asset/native file output; actual MCP file-session/vendor/render/panel kanıtı yok. Tam program writer, G2/G3/G4 ve insan G5/G7 kabulü açık kalır.
+
+## Son bağımsız tekrar test
+
+L1 etkili alanları değiştirme veya silme, source yeniden pinlense/no-op istese de reddedildi.444 native scenario:340 required-field-removal mode denemesi (bir kısmı malformed parse’ta durdu),12 repeat/alias,48 source-rebased nonzero/no-op,40 operation scope/ID/owner,4 detached projection.40 public transaction denemesi iki envelope’da yanlış explicit plan, witness drift, forged valid extra owner/empty page ve forged receipt SHA’yı çıkış/temp residue bırakmadan reddetti. Bunlar vendor runtime anlamını değil bounded source/schema/intent kontrollerini sınar.
+
+Gerçek B primary probe bağımsız yeniden üretildi: source `f2f77d...`, candidate `3f0739088f4132441e70ba69a09893fa8e99b31f15798e42fafa19809e109880`;14 original owner/section veBMP/opaque41/tail eşit. Body58387→59837, file67990→68064; gzip ISIZE59878=41+newbody. Actual dosya/MCP/approval/save veya vendor/native render/panel yapılmadı.

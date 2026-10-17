@@ -1,0 +1,22 @@
+[
+  {
+    "component": "zstd",
+    "version": "1.5.7",
+    "source": "https://github.com/python/cpython-source-deps/archive/refs/tags/zstd-1.5.7.tar.gz",
+    "source_sha256": "f24b52470d12f466e9fa4fcc94e6c530625ada51d7b36de7fdc6ed7e6f499c8e",
+    "member": "cpython-source-deps-zstd-1.5.7/LICENSE",
+    "notice_sha256": "7055266497633c9025b777c78eb7235af13922117480ed5c674677adc381c9d8",
+    "notice_file": "LICENSE.zstd.txt",
+    "retained_path": "licenses/texts/7055266497633c9025b777c78eb7235af13922117480ed5c674677adc381c9d8.txt"
+  },
+  {
+    "component": "zlib-ng",
+    "version": "2.2.4",
+    "source": "https://github.com/python/cpython-source-deps/archive/refs/tags/zlib-ng-2.2.4.tar.gz",
+    "source_sha256": "00bbd88709bc416cb96160ab61d3e1c8f76e106799af7328d0fe434dc7dd5004",
+    "member": "cpython-source-deps-zlib-ng-2.2.4/LICENSE.md",
+    "notice_sha256": "6c9f0d975b41afaa34d22f55bb8986ce69e5cb7ad327cb2b28820cd425edf5ee",
+    "notice_file": "LICENSE.zlib-ng.txt",
+    "retained_path": "licenses/texts/6c9f0d975b41afaa34d22f55bb8986ce69e5cb7ad327cb2b28820cd425edf5ee.txt"
+  }
+]

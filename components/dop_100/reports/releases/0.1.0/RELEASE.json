@@ -1,0 +1,64 @@
+{
+  "archive": {
+    "all_members_hash_exact": true,
+    "canonical_bytes": true,
+    "manifest_sha256": "b1d50098761c8da14216592fe83e99429afb12b0b8f6d207018166bcaa3d595c",
+    "members": 54,
+    "name": "Universal-DIAScreen-HMI-Agent-0.1.0.zip",
+    "private_marker_scan": "PASS",
+    "sha256": "13be0b973e9c58465252c77d36864be306e0b597c66aaefe7949712da9b8ce9a"
+  },
+  "cycle_note": "This external receipt is excluded from the archive and its manifest.",
+  "distributions": [
+    {
+      "kind": "wheel",
+      "name": "universal_diascreen_hmi_agent-0.1.0-py3-none-any.whl",
+      "sha256": "b48ddce617dd55b24c0577c9752d18fe5f7a77c5391f58250afba6e710b8c394"
+    },
+    {
+      "kind": "sdist",
+      "name": "universal_diascreen_hmi_agent-0.1.0.tar.gz",
+      "sha256": "dcf5aaf8b9a976427c16d821210813e2f3617101bdd10613356e5365d0a3b913"
+    }
+  ],
+  "independent_archive_review": {
+    "archive_members": 54,
+    "archive_sha256": "13be0b973e9c58465252c77d36864be306e0b597c66aaefe7949712da9b8ce9a",
+    "freeze_files": 53,
+    "implementation_and_test_python_files_unchanged": 29,
+    "important_findings": 0,
+    "isolated_launcher_and_saved_reread": "PASS",
+    "line_ending_rebind_exact": true,
+    "manifest_sha256": "b1d50098761c8da14216592fe83e99429afb12b0b8f6d207018166bcaa3d595c",
+    "original_private_sources_unchanged": 20,
+    "panel_runtime": "NOT_RUN",
+    "recorded_by": "root from independent final response",
+    "reviewer": "/root/diascreen_tenth",
+    "schema_version": 1,
+    "sdist_sha256": "dcf5aaf8b9a976427c16d821210813e2f3617101bdd10613356e5365d0a3b913",
+    "status": "SCOPED_OFFLINE_PASS",
+    "vendor_compile": "NOT_RUN",
+    "wheel_sha256": "b48ddce617dd55b24c0577c9752d18fe5f7a77c5391f58250afba6e710b8c394"
+  },
+  "original_private_sources_unchanged": 20,
+  "panel_runtime": "NOT_RUN",
+  "portable_extracted_test": {
+    "actual_stdio_mutation": "PASS",
+    "entrypoint": "tools/start.py",
+    "installation_required": false,
+    "mismatched_approval_rejected": true,
+    "network": false,
+    "python_isolated": true,
+    "pythonpath_removed": true,
+    "required_tools": 9,
+    "rollback": "PASS",
+    "runtime_dependencies": [],
+    "save_as_reread": "PASS",
+    "source_overwrite_rejected": true,
+    "source_unchanged": true,
+    "stdout_protocol_only": true
+  },
+  "schema_version": 1,
+  "status": "VERIFIED_OFFLINE",
+  "vendor_compile": "NOT_RUN"
+}

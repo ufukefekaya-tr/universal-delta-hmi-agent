@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "scope": "BOUNDED_SYNTHETIC_LAYOUT_RAW_CONTRACT_NOT_FULL_V1",
+  "status": "OFFLINE_PASS",
+  "test_revision_sha256": "0b2eeee4f6ee03fab00b287c5cf17dc0e291555b1b61a5bb8e696fab43c95b8d",
+  "source_hashes": {
+    "src/universal_hmi/__init__.py": "0db3fbb84952385b48986a224db88e67609945e5d5ac8708bdee50c8e8837035",
+    "src/universal_hmi/cli.py": "fac2fb4b0abbaaa7d55afd9a1bdecd22c480d3a0ac962cf4b065511a39895e92",
+    "src/universal_hmi/errors.py": "f0424fc7333cc3cd2c84ad02fbfb5b6a5ef8daa5eae6f335eedc6e28b8f25a45",
+    "src/universal_hmi/mcp_server.py": "513343f6716cd196195b40efbc32755a7df1c830129c204f2e3d5df23deeaf0b",
+    "src/universal_hmi/model.py": "995b38bff239b6db89066c93b6c65388fc4154ba595cbb25f3be19d358050243",
+    "src/universal_hmi/native/__init__.py": "25e21d0ae07ff344d7165d1639412b314d56a0edbfaca75106052fee10dacb8b",
+    "src/universal_hmi/native/codec.py": "c8db8ebc25d74aa20c97dbaa7602e3d30a8b5d2d464b84ae59f6a9c26c767d06",
+    "src/universal_hmi/native/identity.py": "cef9007cb3f9ad3b2f5e1c2c2350a878c1c6c24a1e5988389cad92abe540c8cf",
+    "src/universal_hmi/native/macro_semantics.py": "b867861c58283214bbc4566d8e93227a57c83bb1eb9470f243688f3ec5b752e8",
+    "src/universal_hmi/native/macros.py": "4c4d0ea62d4d802264691eedac1865bc7ba606be978246bb48b5b3d352fa1af9",
+    "src/universal_hmi/native/numeric.py": "facc48b91377057ebcd9ecb2bf9ab1d552364480a3ec4ef890230310c903796a",
+    "src/universal_hmi/native/records.py": "c0fb8bbba9d020ae07de71c960d8b0ec591f8a395b96966664e530789734c2d2",
+    "src/universal_hmi/native/resources.py": "e0eedf68dc89aeffa072ae4c707615a99431cd6fe9866606abb034b0222766fc",
+    "src/universal_hmi/preview.py": "d389335be8948c761eae2a8b1d4a8320849e24ca2847d485f4a4815e9fbf0a71",
+    "src/universal_hmi/service.py": "4d68e04268d34bb08e3a6f6b00632e2693d3222934ac2974838de3f77503749e",
+    "src/universal_hmi/validation.py": "c132566c9a5de06507016b0fb65028f9b171c232e5ee0257f830495ed4d597e8",
+    "tests/test_design.py": "3ba7d2725b8e7660eaf3951ec0414b40e5834f16600e6f2dbfe0c91d53c88f80",
+    "tests/test_governance.py": "93f255cd8b2026c567b6886a12f0582c545c98e9cbf1ba2b54b788eca6517628",
+    "tests/test_native.py": "3fd3936e64c5bb151bddd1cbd0a8767caff99524d176f93b8cd48472854ab582",
+    "tests/test_resources.py": "6771af585209156341d2eef0caaa9b8d6aba158cb3b1b22db5a0b15cf52364b3",
+    "tests/test_service.py": "c71c22a40c6d3ef5dfae581e7209e541a20a9b3d3e7d030831eec73e54c6c5bf",
+    "tests/test_stdio.py": "b6317e73185999630e11af85d3379f219400b098029b5ba671c31f5db4eb6f9c",
+    "profiles/dop_110is_diascreen.json": "72b5e04f3435e488bfd6c23d7aba3915617de36d27972627d7782b8d8a050bf9",
+    "profiles/dop_b07s411_dopsoft2.json": "ae052c6c7208ad4c38fee47abe71ea3388c7d0bb902851b67544b7ca0133b7a1",
+    "profiles/synthetic_diascreen.json": "ba237a67ab7d9f2c8def98e4e1f377862cd666a9c32d344860c5956a95b8ad44",
+    "profiles/synthetic_dopsoft2.json": "54648f8d00863a8d92eb78c3b61b3c919d2db3b2f6fb145cb4e890c41428c2f4",
+    "tools/_governance.py": "b0fab8b43fa2be055743fd7c46a0239357cfa17c3af164a8fc3ea5dc30b7c209",
+    "tools/check_repo.py": "4113425ec33eddad3e9e920470a96a65421ebfb99f918c8e170e1c3b6006884e",
+    "tools/session_guard.py": "7b3a8baedbd528aabbb3c77f69bfd1bbb8ffb5079ba726bb3597cf233dbdaaff",
+    "scripts/build_manifest.py": "d3735a80d523b7fe83e0dfef14e51922060b7f415370065e4fc3a2cce33e2ca8",
+    "scripts/build_previews.py": "608f007c469460ba79ef69323b308e80704fcd28bb5ccdd94309906cba19a8d4",
+    "scripts/build_profiles.py": "2dd35eb99e59bb1e183c4f9e9816fba75970b228d7f00ab9b9bed2215cadecc5",
+    "scripts/codex_config.toml.example": "20171fd77d09b6d52f9253c65816d14617753a88b6ae51eea1cad2b59dc31ffa",
+    "scripts/configure_mcp.py": "72b5a76a64582dc08dd9eb771e7233f21659ce6dae99d1c845ba8767f44fa2bc",
+    "scripts/preview_smoke.cjs": "58076b2f5dfbf70e15eaa1152eb20e72609d24f59dca9b728b0209ddaa6864e8",
+    "scripts/relocation_test.py": "f6020a59b975296ff32cf184586d440cbc723952b9665bed968df2b31fb5c446",
+    "scripts/setup.ps1": "d9a68842d2a446cb8439b5ba6de60ffbf45a1aa8f3f769bf187bebf3c72cb415",
+    "scripts/setup.sh": "e3c4d18c74f300f6bbc5f757b0385775aa86abfbf7b03df3c15db3919b12a2bc",
+    "scripts/vendor_probe.py": "1036ed0f8b89974670fbd25481244e54ca9c7d913af40ade617a8ab96765af13",
+    "scripts/verify.py": "b386127db5b933a79ddf27f4f66b08bde3de3c9afaf4594ceb0c0254d25d084b"
+  },
+  "root_tests": {
+    "executed": 263,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 31.626
+  },
+  "independent_review": {
+    "reviewer": "/root/emitter_counterreview",
+    "read_only": true,
+    "status": "OFFLINE_PASS",
+    "adversarial_probes": 52,
+    "important_open_findings": 0,
+    "executed": 263,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 29.98,
+    "source_hashes_unchanged": true,
+    "opaque_corruption_probes": 2,
+    "review_report": "NATIVE_LAYOUT_REVIEW.md"
+  },
+  "implemented": [
+    "Source-local immutable empty plain-page clone, rename and complete stable-ID page/object section permutations",
+    "Text/indicator/goto original synthetic donor emission with mandatory primary captions and exact Value states",
+    "State.FontSize0/FontRatio100/ASCII font-name companion checks, explicit rgb24 or colorref24 scalar mapping",
+    "Unconditional observed appearance and layout checks for automatic, explicit and no-op paths",
+    "Fixed IR operation property field/scope/intent bounds plus saved candidate receipt SHA protection"
+  ],
+  "findings_closed": [
+    {
+      "id": "S1",
+      "severity": "IMPORTANT",
+      "trigger": "Empty page carries BaseScreenID/ScreenLockVar",
+      "evidence": "Previous empty-only donor check accepted inherited live page context",
+      "effect": "Hidden background or lock changes undeclared behavior",
+      "fix": "Strict seven-record original-plain page signature + immutable empty donor comparison in compile and final",
+      "retest": [
+        "test_service.ServiceTests.test_new_page_background_and_lock_rejected_for_automatic_and_explicit_plans",
+        "test_service.ServiceTests.test_saved_new_page_cannot_gain_undeclared_page_baseline"
+      ],
+      "independent_retest": "PASS"
+    },
+    {
+      "id": "S2",
+      "severity": "IMPORTANT",
+      "trigger": "State-only or kind-prefixed appearance plus unknown extra mapping",
+      "evidence": "State-only fill bypassed check; prefix-only scan missed NumBgOpacity and BtnPictureStretch",
+      "effect": "Native appearance differs while declared color scalar is correct",
+      "fix": "Unconditional appearance baseline guard on all controlled objects, bounded known mappings and broad observed name recognition; no native pixel PASS",
+      "retest": [
+        "test_service.ServiceTests.test_state_only_indicator_fill_checks_appearance_even_for_exact_noop",
+        "test_service.ServiceTests.test_kind_prefixed_numeric_appearance_cannot_bypass_companion_contract",
+        "test_service.ServiceTests.test_unstyled_text_and_numeric_objects_still_check_competing_appearance",
+        "test_service.ServiceTests.test_visual_schema_cannot_exempt_unqualified_appearance_through_extra_mapping"
+      ],
+      "independent_retest": "PASS"
+    },
+    {
+      "id": "S3",
+      "severity": "IMPORTANT",
+      "trigger": "Order=0 in source without reorder operation",
+      "evidence": "Append-only or no-op bypassed operation-local Order check",
+      "effect": "Competing unqualified layer representation accepted",
+      "fix": "Pure complete layout guard on both original and candidate in every public path",
+      "retest": [
+        "test_service.ServiceTests.test_competing_order_rejected_without_reorder_in_append_and_explicit_noop"
+      ],
+      "independent_retest": "PASS"
+    },
+    {
+      "id": "S4",
+      "severity": "MINOR",
+      "trigger": "Unowned opaque State macro with owner=None",
+      "evidence": "Page donor scan called .get on None",
+      "effect": "Unstructured exception; no accepted write",
+      "fix": "Typed owner check; preserve opaque unowned macro",
+      "retest": [
+        "test_service.ServiceTests.test_unowned_opaque_macro_does_not_crash_empty_page_preflight"
+      ],
+      "independent_retest": "PASS"
+    },
+    {
+      "id": "S5",
+      "severity": "MINOR",
+      "trigger": "Malformed state_fill=None/list/bool/list-field on explicit no-op",
+      "evidence": "Final fill comparison preceded shared schema validation",
+      "effect": "Unstructured exception; no accepted write",
+      "fix": "Shared typed visual validation before final comparisons",
+      "retest": [
+        "test_service.ServiceTests.test_explicit_noop_malformed_state_fill_returns_typed_error"
+      ],
+      "independent_retest": "PASS"
+    },
+    {
+      "id": "S6",
+      "severity": "IMPORTANT",
+      "trigger": "Explicit extra native ConFirmWindow/CloseScreen/Variation property",
+      "evidence": "Partial final IR comparison accepted unmodeled property write",
+      "effect": "Native interaction changes outside approved IR behavior",
+      "fix": "Public fixed-field/scope/declared-intent property guard; nonprimary caption edits unsupported; low-level primitive separate",
+      "retest": [
+        "test_service.ServiceTests.test_explicit_extra_native_behavior_property_is_not_an_ir_transaction",
+        "test_service.ServiceTests.test_known_property_cannot_write_an_unrepresented_style_or_remapped_field",
+        "test_service.ServiceTests.test_save_receipt_detects_opaque_candidate_corruption_without_creating_output"
+      ],
+      "independent_retest": "PASS"
+    },
+    {
+      "id": "S7",
+      "severity": "IMPORTANT",
+      "trigger": "Type-only goto mapping with SubType99 on explicit no-op",
+      "evidence": "Final compared two equally incomplete kind dictionaries",
+      "effect": "Wrong native button behavior accepted as navigation",
+      "fix": "Complete canonical Type/SubType navigation contract in automatic and final paths",
+      "retest": [
+        "test_service.ServiceTests.test_partial_navigation_kind_cannot_pass_automatic_or_explicit_noop"
+      ],
+      "independent_retest": "PASS"
+    }
+  ],
+  "real_read_only_holdouts": {
+    "native_module_sha256": "25e21d0ae07ff344d7165d1639412b314d56a0edbfaca75106052fee10dacb8b",
+    "source_sha256": "fc079f74ed9b34e2e698b0c65c95c4f914983594f658cadc72e1ee4d97493ed5",
+    "source_model": "DOP-107WV",
+    "source_editor": "6.0.00205.8268",
+    "candidate_sha256s": [
+      "0c88b5261519447f980cc3e05166ce62559280d5c131d9cec1324edafb100658",
+      "4793cdf51359c019e0ed35f4911c3e1276b527d7444f7c53eadde18f9b764a58"
+    ],
+    "reopened_and_exact_controlled_record_diff": true,
+    "source_unchanged": true,
+    "memory_only": true,
+    "selected_model_qualification": "NOT_RUN",
+    "report": "NATIVE_LAYOUT_RESEARCH.md"
+  },
+  "fresh_relocation": {
+    "status": "OFFLINE_PASS",
+    "source_commit": "215e4267a7f3694e7a71822e005ca4e20f3e9125",
+    "test_revision_sha256": "0b2eeee4f6ee03fab00b287c5cf17dc0e291555b1b61a5bb8e696fab43c95b8d",
+    "executed": 263,
+    "skipped": 0,
+    "source_hash_count": 40,
+    "report": "relocation_verification.json",
+    "tests": "relocation_tests.json",
+    "independent_environment_audit": "OFFLINE_PASS",
+    "same_physical_windows_host": true,
+    "linux_runtime": "NOT_RUN",
+    "macos_runtime": "NOT_RUN",
+    "independent_audit": {
+      "reviewer": "/root/emitter_counterreview",
+      "read_only": true,
+      "actual_checkout_head_matches": true,
+      "actual_source_hashes_match": 40,
+      "unique_test_ids_same_order": 263,
+      "fresh_elapsed_seconds": 33.47,
+      "new_venv_and_editable_direct_url": true,
+      "outside_checkout_import": true,
+      "old_checkout_not_in_path_or_sys_path": true,
+      "pythonpath_pythonhome_unset": true,
+      "lock_pins_match": 30,
+      "pip_check_exit_code": 0,
+      "actual_git_directory": true,
+      "no_origin_no_object_alternates": true,
+      "saved_report_matches_actual_clone": true,
+      "suite_not_repeated": true
+    }
+  },
+  "native_visual": "NOT_RUN",
+  "vendor_compile": "NOT_RUN",
+  "physical_test": "NOT_RUN",
+  "vendor_assets_redistributed": false,
+  "both_families_vendor_qualified": false,
+  "full_v1_complete": false,
+  "open": [
+    "Complete selected-model page/font/picture/gradient/transparency/layer and unit contracts",
+    "Exact neutral selected-model sources and external driver/operand qualification",
+    "Public Alarm IR and active strip/current table/date-time history emission",
+    "External/alias/REAL/TIME macros and other comparisons",
+    "Two real native common pilot and human vendor/panel acceptance",
+    "Linux/macOS runtime NOT_RUN"
+  ],
+  "source_commit": "215e4267a7f3694e7a71822e005ca4e20f3e9125"
+}

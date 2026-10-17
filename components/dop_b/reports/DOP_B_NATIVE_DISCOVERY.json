@@ -1,0 +1,63 @@
+{
+  "scope": "READ_ONLY_GENUINE_DOP_B_DISCOVERY_AND_MEMORY_ONLY_ONE_RECORD_WRITE",
+  "source_url": "https://delta-ia-tips.com/wp-content/uploads/2017/04/ftp-server_recipe-update_dps-file.zip",
+  "source_page": "https://delta-ia-tips.com/2017/05/26/ftp-server-for-dop-b-dop-w/",
+  "member": "FTP Server_Recipe Update.dps",
+  "archive_sha256": "8801f743feeac42551650e8e5c4ffe78d8cef1fa5f9204088946e52b5a43084c",
+  "source_sha256": "f2f77df5011d30ff85a38fa3956f99cbf9cd165acfcc2f6b42478169f7f9a916",
+  "model": "DOP-B07E515",
+  "model_id_raw": "-1106816944",
+  "model_id_uint32": 3188150352,
+  "serialized_version": "4.00.05.24",
+  "vendor_executable_version": "UNVERIFIED",
+  "resolution": [
+    800,
+    600
+  ],
+  "family": "delta_dopsoft2",
+  "inspect": "PASS",
+  "noop_byte_equal": true,
+  "candidate_memory_sha256": "8f4fe86c4e645578bf743adcd16caf7c666e2c1992ac909245fa5c3e64030dad",
+  "changed_records": [
+    {
+      "section_index": 17,
+      "record_index": 2,
+      "field": "X",
+      "before": "261",
+      "after": "262"
+    }
+  ],
+  "thumbnail_preserved": true,
+  "payload_prefix_preserved": true,
+  "global_tail_preserved": true,
+  "input_bytes_unchanged": true,
+  "global_prefix_sections": [
+    "Application",
+    "Multi-Language",
+    "Global-Keypad",
+    "Recipe",
+    "Recipe32",
+    "EnhanceRcp",
+    "Ethernet",
+    "SIP",
+    "RemoteCtrl",
+    "VNCCtrl",
+    "RTC",
+    "VideoList",
+    "LOG",
+    "FTP",
+    "FTPFile"
+  ],
+  "current_service_structure_blocker": {
+    "code": "UNQUALIFIED_STRUCTURE",
+    "message": "Layout sequence has unqualified prefix sections"
+  },
+  "current_mcp_real_production": "CLOSED",
+  "selected_B07S411_qualification": "NOT_RUN",
+  "vendor_compile": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "source_files_written": false,
+  "candidate_files_written": false,
+  "vendor_assets_redistributed": false,
+  "license": "Manufacturer openly publishes example; no explicit asset redistribution grant observed; input remains memory-only"
+}

@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "status": "OFFLINE_PASS",
+  "scope": "THREE_SOURCE_B10_STORED_RADIX_DIRECTION_CANDIDATE",
+  "model": "DOP-B10S615",
+  "serialized_version": "4.00.07.04",
+  "resolution": [
+    1024,
+    600
+  ],
+  "target_sha256": "c16e6b81580f91f508becae459dede710239d5f6f243800404575cdf77b3abfb",
+  "controls_sha256": "c7830ddfc6305f479b21e441107eccf5441b3273ba62c73fac278d4c7f3d3052",
+  "auxiliary_sha256": "c73e18847f0d6243dd190efbafc8609f8f0d3ac56da976d3d6c5174ad0de3531",
+  "authority_sha256": "4c6e0ddd9a08875afb63582909fac33fe09f3ec7823968f76deacc2397c4e0ca",
+  "candidate_sha256": "a77698ae37a5e03c168de47190f43b4a601fa34bbea1e9cfe8cb1cba79cad6d5",
+  "candidate_bytes": 55629,
+  "decoded_and_declared_body_bytes": 54394,
+  "body_sha256": "3ce484c2883d2391112574971c98d158d9ea2162d1d8448faccd1e4984d24cbc",
+  "candidate_pages": [
+    {
+      "id": "1",
+      "name": "Screen_1",
+      "owners": [
+        "201",
+        "101",
+        "102",
+        "203"
+      ],
+      "action": "SOURCE_EXACT"
+    },
+    {
+      "id": "2",
+      "name": "Values",
+      "owners": [
+        "206",
+        "105",
+        "106",
+        "202",
+        "208",
+        "209",
+        "204"
+      ],
+      "action": 0
+    },
+    {
+      "id": "3",
+      "name": "Commands",
+      "owners": [
+        "207",
+        "103",
+        "104",
+        "205"
+      ],
+      "action": 0
+    }
+  ],
+  "owner_count": 15,
+  "numeric_intent": "UINT raw F0 only; no new numeric width or input lowering",
+  "indicator": {
+    "owner_id": "202",
+    "read": "{Link2}1@X377",
+    "write": "None",
+    "states": [
+      0,
+      1
+    ],
+    "role": "feedback"
+  },
+  "source_replay_byte_equal": true,
+  "independent_service_whole_body_match": true,
+  "independent_raw_donor_ir_reconstruction": true,
+  "removed_generated_owners_pages_and_reversed_owned_tag_restore_entire_target_body": true,
+  "restored_target_body_sha256": "4c6d0f55bbd5b45c8aff2414fe72964658d306b3d50c4486a0d57fd091b90320",
+  "target_globals_exact": true,
+  "target_thumbnail_exact": true,
+  "target_first37_prefix_exact": true,
+  "target_driver_HMIPortNr0": 2,
+  "excluded_auxiliary_driver_HMIPortNr0": 1660265583,
+  "old_control_ratio_normalization_not_imported": true,
+  "dependencies_unchanged": true,
+  "mcp_calls": [
+    "capabilities",
+    "open_project",
+    "inspect",
+    "plan_changes",
+    "validate",
+    "preview",
+    "apply_plan",
+    "save_as",
+    "diff"
+  ],
+  "transaction_record_sha256": "9bac4e344b638d4f1c9ec9291e5555a4c2b075be8c61e375f85e65dd0d354b73",
+  "plan_id": "5f91dcc28610f8b158ad2e112b31821872b9b5e7afddaa8ca4f611e41743033a",
+  "current_revalidation_revision": "49b1ae16f6a3fe0fa5b11c8d10371bab686357e8751912d59e7495c9095c5f26",
+  "prototype_assets": "Ignored neutral qualification sources and property data; not redistributed",
+  "native_visual": "NOT_RUN",
+  "vendor_compile": "NOT_RUN",
+  "simulation": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "program_writer_complete": false,
+  "full_v1_complete": false,
+  "additional_indicators": [
+    {
+      "owner_id": "208",
+      "read": "{Link2}1@Y10",
+      "write": "None",
+      "states": [
+        0,
+        1
+      ],
+      "role": "feedback"
+    },
+    {
+      "owner_id": "209",
+      "read": "{Link2}1@Y377",
+      "write": "None",
+      "states": [
+        0,
+        1
+      ],
+      "role": "feedback"
+    }
+  ],
+  "namespace_authority_sha256": "735371115535f6c2301af343ed7a7fc557274e48497b04f114b70afa09c9dc81",
+  "namespace_contract_version": 2,
+  "direction_policy": "X Read; Y/M/S/D ReadWrite within declared normal-operation scope; not physical feedback or vendor write acceptance",
+  "native_address_metadata": "Source captured ReadLink1/MemType0 unchanged; DLL internal region codes128/129 are not copied",
+  "source_bound_contracts": {
+    "radix_library_v001/control_calibration.json": "0021d878b9ff3f362383b5455690057a9656b30299d2f05db2f0eb5ee77ac25a",
+    "radix_library_v001/profiles/source_controls_dvp_v2.json": "1601de0457d47815e884d7bbc1b06b6021706696b0cd975f894f9723dffa031d",
+    "radix_program_v001/multipage_calibration.json": "c4f8c7da906fed24b9288b5e6aefb6aa4d1d7543892101c4d420742aed0140e3",
+    "radix_program_v001/profiles/multipage_program_v1.json": "eae205937dfdc5080f5b455428c44bbf720095ffc122afdb75ee11d8269e531b"
+  }
+}

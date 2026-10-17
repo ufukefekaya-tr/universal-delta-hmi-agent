@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "family": "delta_dopsoft2",
+  "model_id": 2953863504,
+  "serialized_version": "4.00.07.04",
+  "acceptance_scope": "OFFLINE_STORED_CONFIGURATION_ONLY",
+  "source_policy": "original_source_pinned_closed_existing_graph",
+  "vendor": "NOT_RUN",
+  "native_pixels": "NOT_RUN",
+  "authority_kind": "manufacturer_static_existing_presentation_contract",
+  "mode": "variable_scalar_records_v1",
+  "color_encoding": "COLORREF_0x00BBGGRR",
+  "kinds": {
+    "buttons": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "10"
+    ],
+    "indicator": [
+      "2",
+      "1"
+    ],
+    "numeric": [
+      [
+        "5",
+        "1"
+      ],
+      [
+        "6",
+        "1"
+      ]
+    ],
+    "inert_literal": [
+      "10",
+      "6"
+    ]
+  },
+  "surfaces": {
+    "button_indicator": "State.FgColor",
+    "numeric": "State.BgColor"
+  },
+  "native_styles": {
+    "button_indicator": [
+      0,
+      5,
+      9,
+      16
+    ],
+    "numeric": [
+      0,
+      5,
+      10,
+      16
+    ]
+  },
+  "border_policy": "numeric_result_native_style0_only",
+  "font_sizes": [
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24,
+    28,
+    32,
+    36,
+    40,
+    48,
+    64,
+    72
+  ],
+  "font_ratios": [
+    33,
+    50,
+    100,
+    150,
+    200
+  ],
+  "mutation_policy": "canonical_variable_scalar_records_only",
+  "evidence": {
+    "editor_sha256": "9ed92401cd08e2be8bfc2df3a40dee4e99e9f605da7a4fa9605f9e2754821eeb",
+    "sequential_reader": "6988cd/8ba0d0;8ba154..163;6990ce/87c250;87c27e..2c4;69987d/87cc4d",
+    "scalar_writer": "b66175/7b7bb9 actual scalar strlen plus CRLF; geometry b660a6..b6612b; State b6caf6..b6cbe3",
+    "font_tables": "d26798 and d26830 exact intersection; ratio87d09b..121",
+    "review": "reports/EXISTING_PRESENTATION_FOUNDATION.json"
+  }
+}
