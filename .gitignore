@@ -1,0 +1,10 @@
+.agent-state/
+.local/
+.venv/
+dist/
+build/
+*.egg-info/
+__pycache__/
+*.pyc
+projects/*/
+!projects/README.md
