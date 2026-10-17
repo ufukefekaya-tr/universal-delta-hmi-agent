@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "required_regressions": [
+    {
+      "id": "R01",
+      "scenario": "Invalid width scalar rejected",
+      "status": "PENDING_BACKEND_EVIDENCE"
+    },
+    {
+      "id": "R02",
+      "scenario": "Negative or off-canvas coordinates rejected",
+      "status": "PENDING_BACKEND_EVIDENCE"
+    },
+    {
+      "id": "R03",
+      "scenario": "Negative element index cannot delete last object",
+      "status": "PENDING_BACKEND_EVIDENCE"
+    },
+    {
+      "id": "R04",
+      "scenario": "Opening another project does not silently discard pending changes",
+      "status": "PENDING_BACKEND_EVIDENCE"
+    },
+    {
+      "id": "R05",
+      "scenario": "Start rebinding does not alter Start2",
+      "status": "PENDING_BACKEND_EVIDENCE"
+    },
+    {
+      "id": "R06",
+      "scenario": "Framed length cannot be edited separately from blob",
+      "status": "PENDING_BACKEND_EVIDENCE"
+    },
+    {
+      "id": "R07",
+      "scenario": "Truncated counted blob rejected",
+      "status": "PENDING_BACKEND_EVIDENCE"
+    },
+    {
+      "id": "R08",
+      "scenario": "CRLF-less opaque tail preserved",
+      "status": "PENDING_BACKEND_EVIDENCE"
+    },
+    {
+      "id": "R09",
+      "scenario": "Repeated clone does not duplicate objects/pages",
+      "status": "PENDING_BACKEND_EVIDENCE"
+    },
+    {
+      "id": "R10",
+      "scenario": "TriggerVar included in address inventory",
+      "status": "PENDING_BACKEND_EVIDENCE"
+    },
+    {
+      "id": "R11",
+      "scenario": "Negative state index rejected",
+      "status": "PENDING_BACKEND_EVIDENCE"
+    },
+    {
+      "id": "R12",
+      "scenario": "Turkish text never silently coerced to Latin1",
+      "status": "PENDING_BACKEND_EVIDENCE"
+    },
+    {
+      "id": "R13",
+      "scenario": "Wrong-page background detected",
+      "status": "PENDING_BACKEND_EVIDENCE"
+    },
+    {
+      "id": "R14",
+      "scenario": "Maintained subtype1.4 distinguished from momentary1.3 for qualified source",
+      "status": "PENDING_BACKEND_EVIDENCE"
+    },
+    {
+      "id": "R15",
+      "scenario": "Floating limits not guessed from missing display width",
+      "status": "PENDING_BACKEND_EVIDENCE"
+    },
+    {
+      "id": "R16",
+      "scenario": "Visible macro source not replaced together with parsed operands",
+      "status": "PENDING_BACKEND_EVIDENCE"
+    },
+    {
+      "id": "R17",
+      "scenario": "Compiled evidence tied to source/candidate hash",
+      "status": "PENDING_BACKEND_EVIDENCE"
+    },
+    {
+      "id": "R18",
+      "scenario": "Rolled-back global macros not silently reenabled",
+      "status": "PENDING_BACKEND_EVIDENCE"
+    },
+    {
+      "id": "R19",
+      "scenario": "Raw zero not automatically healthy; unknown codes visible",
+      "status": "PENDING_BACKEND_EVIDENCE"
+    },
+    {
+      "id": "R20",
+      "scenario": "Text simplification does not imply visual style flattening",
+      "status": "PENDING_BACKEND_EVIDENCE"
+    },
+    {
+      "id": "R21",
+      "scenario": "Style-only edits preserve writes addresses macros XML and unknown bytes",
+      "status": "PENDING_BACKEND_EVIDENCE"
+    }
+  ]
+}

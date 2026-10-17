@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "backends": {
+    "dop_b": {"enabled": false, "reason": "Install the pinned DOP-B release using bootstrap."},
+    "dop_100": {"enabled": false, "reason": "Independent DIAScreen extraction and integration qualification pending; no DOP-B fallback."}
+  }
+}

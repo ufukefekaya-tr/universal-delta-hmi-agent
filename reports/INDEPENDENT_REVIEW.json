@@ -1,0 +1,32 @@
+{
+  "scope": "Independent infrastructure interim review; not two-family final acceptance",
+  "reviewer": "delta_family_review",
+  "mode": "read_only_independent",
+  "finding": {
+    "id": "R1",
+    "severity": "important",
+    "trigger": "A valid timestamp/size matching pyc or startup hook could differ from pinned source.",
+    "evidence": "Reviewer independently reproduced accepted poisoned bytecode under prior package-only inventory.",
+    "impact": "Executed backend code could differ from the verified source inventory.",
+    "fix": "Pin exact complete disjoint Python import roots, including bytecode, hooks, dependencies and venv base home.",
+    "retest": "Independent reviewer reproduced old exploit; poisoned pyc and sitecustomize rejected before dispatch; source suite 39 passed, 0 skipped.",
+    "status": "CLOSED_OFFLINE"
+  },
+  "new_important_findings": [],
+  "remaining_gates": [
+    "Independent DIAScreen release",
+    "Both actual backends integration",
+    "Final feature omission review",
+    "Exact final artifact distribution review"
+  ],
+  "vendor": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "final_source_retest": {
+    "tests": 41,
+    "passed": 41,
+    "skipped": 0,
+    "seconds": 5.137,
+    "config_sha256": "7359fcb1428ceae2ca3950c3417361355cf5aeb25939abfab127878ccd42abfc",
+    "optimization_review": "Lexical expected-name checks plus real exact no-link inventory preserve R1 rejection."
+  }
+}

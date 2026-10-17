@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "dop_b": {
+    "version": "0.2.0",
+    "commit": "315c77602645ba3ed8fc4851ec0d5e59c8e9d1ea",
+    "archive": "dop-b-0.2.0.zip",
+    "sha256": "b2fba4ab82c91adc0478c493c879c05f1337ab2e1e8ab8a645b399149fa290b3",
+    "bytes": 84779364,
+    "redistribution_scope": "User-authorized original release; preserve all bundled dependency notices. No customer/vendor reference pack."
+  },
+  "dop_100": {
+    "status": "AWAITING_INDEPENDENT_REPOSITORY",
+    "release": null
+  }
+}

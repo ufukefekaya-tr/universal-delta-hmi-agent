@@ -1,0 +1,65 @@
+{
+  "scope": "Interim gateway, independent DIAScreen pending",
+  "files": [
+    {
+      "path": "scripts/bootstrap.ps1",
+      "sha256": "6a16380b69e2edbf0cfe127fcbe8e528903dd2903b24347611627bc8e73b6e10"
+    },
+    {
+      "path": "scripts/bootstrap.sh",
+      "sha256": "26e459acc9035b4b18a50044cacc4d5fa8e12a5267ebc8f2061be6202cc81813"
+    },
+    {
+      "path": "scripts/build_package.py",
+      "sha256": "f42df38f3271524edc71aaa9215029b61f389daf6a18dde1c97e70e23588785a"
+    },
+    {
+      "path": "scripts/finish_install.py",
+      "sha256": "a8b15d61bcf5b1420cad7a944fb1ce1ccfcfb7b8088e58334f11c9a1c68feba1"
+    },
+    {
+      "path": "scripts/probe_stdio.py",
+      "sha256": "a70d05760b0c0290de97da7a5048a4a2e3daac3e1de97867e4a45c510e114a21"
+    },
+    {
+      "path": "src/delta_hmi/__init__.py",
+      "sha256": "a73317935b70db1333c58f38e9365e60ba08448d218c2162d229767ddb5946e7"
+    },
+    {
+      "path": "src/delta_hmi/cli.py",
+      "sha256": "40d8e3a7e0054e635afebf62083602302596bebbe7c46a28cfb23a54a2b44520"
+    },
+    {
+      "path": "src/delta_hmi/config.py",
+      "sha256": "7359fcb1428ceae2ca3950c3417361355cf5aeb25939abfab127878ccd42abfc"
+    },
+    {
+      "path": "src/delta_hmi/gateway.py",
+      "sha256": "76d36faa64e905da0513d01e05bc60bba907f0069a7919e6a6bb76d7870837ce"
+    },
+    {
+      "path": "templates/backends.json",
+      "sha256": "0d489820647117e6477f2db406b967ff5e0697161bd782111295881337d6feca"
+    },
+    {
+      "path": "templates/releases.lock.json",
+      "sha256": "a202b2cfe8a8997a9b6db26c6ce3f407947893f967c30f11a209064aca4edbd2"
+    },
+    {
+      "path": "tests/test_config.py",
+      "sha256": "a3a43a1560f1c37403174d8d74315d96f72da4d2ff0ab135fa4a90158a4c8b8c"
+    },
+    {
+      "path": "tests/test_gateway.py",
+      "sha256": "c5a9a3deafa0aaecbeb8c477d043b32726744e8503685b15085a8d55969fbd2f"
+    },
+    {
+      "path": "tests/test_inventory.py",
+      "sha256": "41062a77cb813beb1fbad61a696e8ff5ee1a08cbda55bbf3d8cadcd30a67c97d"
+    },
+    {
+      "path": "tools/guard.py",
+      "sha256": "58ed8dced250e885f012702446ff138a078cd551d3ea3c7c7b82d7ee100a576d"
+    }
+  ]
+}

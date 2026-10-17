@@ -1,0 +1,602 @@
+{
+  "schema_version": 1,
+  "coverage_claim": "Inventory only; no migration completion implied",
+  "source_snapshot": "DIA_MCP_Sever@004d96bb90d047438f852245999b62e4770856aa plus local generic behavior inventory N002-N016",
+  "upstream_license": "NOT_DECLARED; do not redistribute source",
+  "features": [
+    {
+      "id": "D01",
+      "feature": "Native container and unknown byte preservation",
+      "legacy_evidence": "upstream codec/document",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D02",
+      "feature": "Application model resolution controller metadata",
+      "legacy_evidence": "upstream model",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D03",
+      "feature": "Screen element state geometry text address inventory",
+      "legacy_evidence": "upstream model/MCP",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D04",
+      "feature": "Project find and coordinate-ordered text layout",
+      "legacy_evidence": "upstream find/screenshot_text",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D05",
+      "feature": "All address owners including trigger interlock visible unit dot and macros",
+      "legacy_evidence": "N003,N009-N016",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D06",
+      "feature": "Donor clone with fresh IDs geometry target page and z-order",
+      "legacy_evidence": "N002,N003",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D07",
+      "feature": "Screen creation clone deletion and navigation reference checks",
+      "legacy_evidence": "upstream edit/MCP",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D08",
+      "feature": "Turkish UTF16 state captions language fields descriptions",
+      "legacy_evidence": "N004,N016",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D09",
+      "feature": "Native geometry font alignment fill border",
+      "legacy_evidence": "N003,N004,N015,N016",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D10",
+      "feature": "DIB background and offset decode; remove duplicate background text",
+      "legacy_evidence": "N004 background regression",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D11",
+      "feature": "Picture bank encode append import copy prune",
+      "legacy_evidence": "upstream picbank and asset scripts",
+      "required_disposition": "DISCOVERED_UNQUALIFIED",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D12",
+      "feature": "Momentary maintained set-on set-off and navigation behaviors",
+      "legacy_evidence": "N006 vendor-corrected subtype contract",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D13",
+      "feature": "Value0/1 text color and request versus feedback",
+      "legacy_evidence": "N004,N006,N013,N016",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D14",
+      "feature": "Mode selection opposite-bit macros; non-atomic semantics",
+      "legacy_evidence": "N006,N009,N011,N014",
+      "required_disposition": "SOURCE_BOUND_UNQUALIFIED",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D15",
+      "feature": "Numeric type width decimals digits limits scale offset and units",
+      "legacy_evidence": "N003,N005,N007",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D16",
+      "feature": "Numeric literal limit overflow and digit-fit regression",
+      "legacy_evidence": "N005,N016",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D17",
+      "feature": "Explicit separate TIME-to-ms PLC interface; no silent coercion",
+      "legacy_evidence": "N007",
+      "required_disposition": "CONTRACT_ONLY",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D18",
+      "feature": "Counted embedded DIA XML replace and metadata preservation",
+      "legacy_evidence": "N007,N014",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D19",
+      "feature": "XML nested types structs arrays width and access resolver",
+      "legacy_evidence": "N016 decoder; design source contract",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D20",
+      "feature": "Exact read/write rebind with typed access validation",
+      "legacy_evidence": "N013",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D21",
+      "feature": "All macro slots counted framing opcode five-fields and tail",
+      "legacy_evidence": "N009,N011,N016",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D22",
+      "feature": "Visible statement distinct from parsed macro operands",
+      "legacy_evidence": "N009,N010FAIL,N011",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D23",
+      "feature": "Remote macro operand link station Application and type canonicalization",
+      "legacy_evidence": "N009,N011",
+      "required_disposition": "SOURCE_BOUND_UNQUALIFIED",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D24",
+      "feature": "Initial clock and button macro add remove preserve",
+      "legacy_evidence": "N008,N009,N012",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D25",
+      "feature": "BITON BITOFF assignment increment IF ELSE ENDIF from exact donors",
+      "legacy_evidence": "N008,N009 vendor-resaved witnesses",
+      "required_disposition": "SOURCE_BOUND_UNQUALIFIED",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D26",
+      "feature": "Other upstream macro instructions including popup arithmetic FMOV FILLASC",
+      "legacy_evidence": "upstream macro",
+      "required_disposition": "DISCOVERED_UNQUALIFIED",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D27",
+      "feature": "Read-only compiled CIN operand inspection and stale-hash rejection",
+      "legacy_evidence": "N011 inspect_compiled",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D28",
+      "feature": "Heartbeat startup inhibit rollover ownership reconnect contract",
+      "legacy_evidence": "N008 then N012 rollback",
+      "required_disposition": "ROLLED_BACK_NOT_DEFAULT",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D29",
+      "feature": "Draft versus drive-read freshness read/apply terminal result contract",
+      "legacy_evidence": "N008 runtime plan",
+      "required_disposition": "CONTRACT_ONLY",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D30",
+      "feature": "Current fault view code family source catalog unknown fallback",
+      "legacy_evidence": "N014",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D31",
+      "feature": "Reference latch versus physical home and start permit roles",
+      "legacy_evidence": "N014,N015,N016",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D32",
+      "feature": "Drive request ACK status freshness frequency raw fault roles",
+      "legacy_evidence": "N014 drive telemetry",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D33",
+      "feature": "Compact current-fault strip and read-only service navigation",
+      "legacy_evidence": "N015,N016",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D34",
+      "feature": "Two sequential aesthetic reviews preview approval style-only plan",
+      "legacy_evidence": "N016",
+      "required_disposition": "WORKFLOW_REQUIRED",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D35",
+      "feature": "Saved layer render font cmap fit occlusion actual backgrounds",
+      "legacy_evidence": "N016 visual_check",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D36",
+      "feature": "Range state long-text sample galleries clearly marked examples",
+      "legacy_evidence": "N004,N014,N016",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D37",
+      "feature": "Inverse byte diff restoring allowed changes equals entire original",
+      "legacy_evidence": "N013-N016",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D38",
+      "feature": "Source plan codec hashes inspect-before-apply idempotency new-only save",
+      "legacy_evidence": "N002-N016 wrappers",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D39",
+      "feature": "Real stdio mutation/result tests not only tool discovery",
+      "legacy_evidence": "native wrapper clients",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D40",
+      "feature": "Source isolation scope manifests checkpoints Kaizen retractions",
+      "legacy_evidence": "N001-N016",
+      "required_disposition": "WORKFLOW_REQUIRED",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D41",
+      "feature": "Canonical design/tag ledger CSV mapping and operator preview",
+      "legacy_evidence": "design revisions010-013",
+      "required_disposition": "CONTRACT_ONLY",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D42",
+      "feature": "Missing-tag disabled placeholder no invented feedback/counters",
+      "legacy_evidence": "design revision013",
+      "required_disposition": "WORKFLOW_REQUIRED",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D43",
+      "feature": "Preserve existing symbols and bindings during XML update",
+      "legacy_evidence": "N005,N007,N013,N014",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "D44",
+      "feature": "Unsupported gradient radius transparency DPI explicitly stops render claim",
+      "legacy_evidence": "N006,N008,N016",
+      "required_disposition": "REIMPLEMENT_AND_TEST",
+      "migration_status": "PENDING_DIASCREEN_REPOSITORY",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "U01",
+      "feature": "Enhanced recipes",
+      "legacy_evidence": "upstream specialized builders, not generic qualified tools",
+      "required_disposition": "DISCOVERED_UNQUALIFIED",
+      "migration_status": "PENDING_EXPLICIT_DISPOSITION",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "U02",
+      "feature": "Native alarm history",
+      "legacy_evidence": "upstream specialized builders, not generic qualified tools",
+      "required_disposition": "DISCOVERED_UNQUALIFIED",
+      "migration_status": "PENDING_EXPLICIT_DISPOSITION",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "U03",
+      "feature": "Trend history charts gauges",
+      "legacy_evidence": "upstream specialized builders, not generic qualified tools",
+      "required_disposition": "DISCOVERED_UNQUALIFIED",
+      "migration_status": "PENDING_EXPLICIT_DISPOSITION",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "U04",
+      "feature": "Login accounts security operation log",
+      "legacy_evidence": "upstream specialized builders, not generic qualified tools",
+      "required_disposition": "DISCOVERED_UNQUALIFIED",
+      "migration_status": "PENDING_EXPLICIT_DISPOSITION",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "U05",
+      "feature": "Multilingual state rendering",
+      "legacy_evidence": "upstream specialized builders, not generic qualified tools",
+      "required_disposition": "DISCOVERED_UNQUALIFIED",
+      "migration_status": "PENDING_EXPLICIT_DISPOSITION",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "U06",
+      "feature": "System menu datetime brightness keypad",
+      "legacy_evidence": "upstream specialized builders, not generic qualified tools",
+      "required_disposition": "DISCOVERED_UNQUALIFIED",
+      "migration_status": "PENDING_EXPLICIT_DISPOSITION",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "U07",
+      "feature": "Popup open close and leave cleanup",
+      "legacy_evidence": "upstream specialized builders, not generic qualified tools",
+      "required_disposition": "DISCOVERED_UNQUALIFIED",
+      "migration_status": "PENDING_EXPLICIT_DISPOSITION",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "U08",
+      "feature": "S7 DB mapping and relocation",
+      "legacy_evidence": "upstream specialized builders, not generic qualified tools",
+      "required_disposition": "DISCOVERED_UNQUALIFIED",
+      "migration_status": "PENDING_EXPLICIT_DISPOSITION",
+      "implementation": null,
+      "test_evidence": null
+    },
+    {
+      "id": "U09",
+      "feature": "SVG icon rasterization and custom process assets",
+      "legacy_evidence": "upstream specialized builders, not generic qualified tools",
+      "required_disposition": "DISCOVERED_UNQUALIFIED",
+      "migration_status": "PENDING_EXPLICIT_DISPOSITION",
+      "implementation": null,
+      "test_evidence": null
+    }
+  ],
+  "legacy_tools": [
+    {
+      "name": "open_project",
+      "status": "MAPPING_PENDING",
+      "replacement": null
+    },
+    {
+      "name": "list_screens",
+      "status": "MAPPING_PENDING",
+      "replacement": null
+    },
+    {
+      "name": "layout",
+      "status": "MAPPING_PENDING",
+      "replacement": null
+    },
+    {
+      "name": "element",
+      "status": "MAPPING_PENDING",
+      "replacement": null
+    },
+    {
+      "name": "find",
+      "status": "MAPPING_PENDING",
+      "replacement": null
+    },
+    {
+      "name": "addresses",
+      "status": "MAPPING_PENDING",
+      "replacement": null
+    },
+    {
+      "name": "macros",
+      "status": "MAPPING_PENDING",
+      "replacement": null
+    },
+    {
+      "name": "alarms",
+      "status": "MAPPING_PENDING",
+      "replacement": null
+    },
+    {
+      "name": "set_property",
+      "status": "MAPPING_PENDING",
+      "replacement": null
+    },
+    {
+      "name": "set_text",
+      "status": "MAPPING_PENDING",
+      "replacement": null
+    },
+    {
+      "name": "rebind",
+      "status": "MAPPING_PENDING",
+      "replacement": null
+    },
+    {
+      "name": "pending_changes",
+      "status": "MAPPING_PENDING",
+      "replacement": null
+    },
+    {
+      "name": "save",
+      "status": "MAPPING_PENDING",
+      "replacement": null
+    },
+    {
+      "name": "screenshot_text",
+      "status": "MAPPING_PENDING",
+      "replacement": null
+    },
+    {
+      "name": "clone_element",
+      "status": "MAPPING_PENDING",
+      "replacement": null
+    },
+    {
+      "name": "clone_screen",
+      "status": "MAPPING_PENDING",
+      "replacement": null
+    },
+    {
+      "name": "delete_element",
+      "status": "MAPPING_PENDING",
+      "replacement": null
+    },
+    {
+      "name": "set_state_text",
+      "status": "MAPPING_PENDING",
+      "replacement": null
+    },
+    {
+      "name": "editor_windows",
+      "status": "INTENTIONALLY_EXCLUDED_GUI",
+      "replacement": null
+    },
+    {
+      "name": "close_in_editor",
+      "status": "INTENTIONALLY_EXCLUDED_GUI",
+      "replacement": null
+    },
+    {
+      "name": "open_in_editor",
+      "status": "INTENTIONALLY_EXCLUDED_GUI",
+      "replacement": null
+    },
+    {
+      "name": "reload_in_editor",
+      "status": "INTENTIONALLY_EXCLUDED_GUI",
+      "replacement": null
+    }
+  ],
+  "excluded_save_options": [
+    "overwrite_source",
+    "reload_editor"
+  ],
+  "final_omission_review": "PENDING_AFTER_IMPLEMENTATION"
+}

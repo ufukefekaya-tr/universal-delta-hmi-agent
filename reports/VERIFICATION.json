@@ -1,0 +1,59 @@
+{
+  "scope": "Infrastructure interim acceptance only",
+  "date": "2026-10-17",
+  "source_tests": {
+    "run": 41,
+    "pass": 41,
+    "skip": 0,
+    "seconds": 5.435,
+    "command": "python -B -m unittest discover -s tests -v"
+  },
+  "independent_review": "INDEPENDENT_REVIEW.json",
+  "installation": {
+    "os": "Windows x64",
+    "mode": "Fresh directory with spaces, current host; not fresh OS",
+    "network": "Pinned bundled backend plus local wheelhouse; no vendor IDE",
+    "one_shot_bootstrap": "PASS",
+    "gateway_updated_after_install": "Final config verification optimization installed into independent gateway venv; backend unchanged",
+    "backend_release_sha256": "b2fba4ab82c91adc0478c493c879c05f1337ab2e1e8ab8a645b399149fa290b3",
+    "import_files": 6619
+  },
+  "stdio": {
+    "status": "PASS",
+    "scope": "Real gateway/backend stdio; ORIGINAL SYNTHETIC transaction only",
+    "file_tools": [
+      "apply_plan",
+      "capabilities",
+      "diff",
+      "inspect",
+      "open_project",
+      "plan_changes",
+      "preview",
+      "save_as",
+      "validate"
+    ],
+    "tool_count": 10,
+    "source_preserved": true,
+    "candidate_sha256": "8e713e824d894834329bea161face71ce2dbdbf7069d3784d9c3cd3368f38c5a",
+    "independent_payload_comparison": "PASS",
+    "dop_100": "DISABLED_PENDING_SEPARATE_BACKEND",
+    "vendor": "NOT_RUN",
+    "physical": "NOT_RUN"
+  },
+  "linux_umbrella_install": "NOT_RUN",
+  "vendor": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "historical_failures": [
+    "Initial development install rejected unhashed requirements; installer corrected to derive hash-locked requirements from pinned backend bootstrap lock.",
+    "First R1 suite accidentally used older installed package and failed; final package reinstalled and all41 tests rerun successfully.",
+    "Early probe attempted before clean installation had completed; configuration absent. Final probe starts only after successful installer exit.",
+    "Pre-optimization full stdio probe intentionally interrupted to install optimized verifier; no PASS assigned to interrupted run."
+  ],
+  "limitations": [
+    "DIAScreen independent extraction pending",
+    "Two-family integration pending",
+    "DOP-B persistent job tools remain in backend, not yet exposed in umbrella",
+    "Final omission acceptance open",
+    "Complete import-tree validation has disk-dependent per-call cost"
+  ]
+}
