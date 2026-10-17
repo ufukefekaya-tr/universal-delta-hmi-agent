@@ -2,8 +2,17 @@
 import json, os, shutil, subprocess, sys, tempfile
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-def run(*args,cwd=ROOT):
-    subprocess.run([str(a) for a in args],cwd=cwd,check=True)
+def run(*args,cwd=ROOT,env=None):
+    subprocess.run([str(a) for a in args],cwd=cwd,check=True,env=env)
+
+def test_environment():
+    """Use canonical Windows temp names without changing guards/assertions."""
+    env=dict(os.environ)
+    if os.name=='nt':
+        directory=str(Path(tempfile.gettempdir()).resolve(strict=True))
+        env.update(TMPDIR=directory,TEMP=directory,TMP=directory)
+        tempfile.tempdir=directory
+    return env
 def main():
     action=sys.argv[1]
     if action=='install':
@@ -18,9 +27,10 @@ def main():
                 shutil.copytree(part,staged,ignore=shutil.ignore_patterns('.git','.agent-state','.local','.venv','*.egg-info','build','dist','__pycache__'))
                 run(sys.executable,'-I','-B','-m','pip','install','--no-deps','--no-build-isolation',staged)
     elif action=='test':
-        run(sys.executable,'-B',ROOT/'tools/check_snapshots.py')
-        run(sys.executable,'-B','-m','unittest','discover','-s','tests','-v')
+        env=test_environment()
+        run(sys.executable,'-B',ROOT/'tools/check_snapshots.py',env=env)
+        run(sys.executable,'-B','-m','unittest','discover','-s','tests','-v',env=env)
         for family in ('dop_b','dop_100'):
-            run(sys.executable,'-B','-m','unittest','discover','-s','tests','-v',cwd=ROOT/'components'/family)
+            run(sys.executable,'-B','-m','unittest','discover','-s','tests','-v',cwd=ROOT/'components'/family,env=env)
     else:raise ValueError('Use install or test')
 if __name__=='__main__':main()

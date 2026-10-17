@@ -3,7 +3,7 @@
 | Goal | Evidence | State |
 |---|---|---|
 | U0 Complete source-to-feature inventory | All53 DIAScreen groups,22 legacy intents and21 regressions match the independent component's explicit dispositions | PASS; no unsupported item promoted |
-| U1 Isolated common MCP | Pinned complete import roots, family handles, per-project DIA processes, negative/cancellation tests | 60 gateway tests PASS on Windows and Linux |
+| U1 Isolated common MCP | Pinned complete import roots, family handles, per-project DIA processes, negative/cancellation tests | 60 original gateway tests PASS on Windows/Linux; two CI temp-environment regressions added in0.2.1 |
 | U2 DOP-B integration | Apache-2.0 component0.2.1,9 file tools and5 policy-bound persistent job tools | Implemented; final installed receipts in verification report |
 | U3 Independent DIAScreen MCP | Apache-2.0 component0.1.1,30 tools/aliases, proposal review and new-only saves | Independent offline release accepted |
 | U4 Actual two-backend flow | Real stdio discovery, both saved payloads independently compared, cross-family rejection and durable job routing | Windows and Linux PASS; both saved candidates have identical SHA-256 across hosts |

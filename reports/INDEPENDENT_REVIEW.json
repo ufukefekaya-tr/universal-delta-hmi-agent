@@ -91,12 +91,12 @@
   },
   "current_source_evidence": {
     "manifest": "IMPLEMENTATION_MANIFEST.json",
-    "implementation_files": 27,
+    "implementation_files": 28,
     "component_files": 544,
     "gateway_source_tests": {
       "windows": {
-        "run": 60,
-        "passed": 60,
+        "run": 62,
+        "passed": 62,
         "skipped": 0
       },
       "linux": {
@@ -115,5 +115,12 @@
     "whole_final_installer_rerun": false,
     "boundary": "Final helper deltas executed as exact AST blocks on Windows; whole final installer exercised on Linux."
   },
-  "final_reviewer_decision": "No open important implementation or installed offline findings; final archive/public-report identity must be independently checked before publication."
+  "final_reviewer_decision": "No open important implementation or installed offline findings; final archive/public-report identity must be independently checked before publication.",
+  "ci_followup": {
+    "finding": "Windows hosted CI8.3TEMP fixture path aliases",
+    "production_guard_bypass": "NOT_OBSERVED",
+    "independent_reproduction": "Real short alias:2unchanged tests fail before andPASS2/2 under canonical child temp environment",
+    "fix_scope": "tools/ci.py andtwo new test regressions only; backend snapshots and original assertions unchanged",
+    "acceptance": "CI-only patch reviewed separately; final exact-commit clean-host run and archive audit are bound in release metadata"
+  }
 }

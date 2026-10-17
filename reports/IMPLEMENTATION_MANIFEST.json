@@ -15,7 +15,7 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "c8398e1e28b4c4a13a8bf21f24beabbf5adbf83033bba48a12e579240cd4c2a7"
+      "sha256": "3cca56443fa337b9fd923f033c9299e10b44a7fcba84ec509563484c5955e67c"
     },
     {
       "path": "scripts/bootstrap.ps1",
@@ -43,7 +43,7 @@
     },
     {
       "path": "src/delta_hmi/__init__.py",
-      "sha256": "f984cf7ec028fdb1b41b405d6628ee777c22c0df828a6aa08a8a458eb79b6942"
+      "sha256": "d63a465127fa2d875e85c741ae6e9af407ff623e0b314075139d8148853f2bfd"
     },
     {
       "path": "src/delta_hmi/cli.py",
@@ -103,11 +103,15 @@
     },
     {
       "path": "tools/ci.py",
-      "sha256": "f733bc3f574e33d5a0c602e9424046e3912cf87752c9f1c8f2780be26d15c621"
+      "sha256": "8303d3a485af65f0606d845f27188179027ef7c78dae65defb2c7d10ad45dbb6"
     },
     {
       "path": "tools/guard.py",
       "sha256": "58ed8dced250e885f012702446ff138a078cd551d3ea3c7c7b82d7ee100a576d"
+    },
+    {
+      "path": "tests/test_ci.py",
+      "sha256": "64d84592c42ca6fa9b334410f06f3b2a514de2d5e1edc381586c40a5c83a8d22"
     }
   ]
 }

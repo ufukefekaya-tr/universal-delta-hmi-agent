@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "release_version": "0.2.0",
+  "release_version": "0.2.1",
   "status": "OFFLINE_RELEASE_PASS",
   "date": "2026-10-17",
   "scope": "Two-family file MCP, current documented offline capabilities",
@@ -22,9 +22,10 @@
   },
   "source_tests": {
     "gateway_windows": {
-      "run": 60,
-      "passed": 60,
-      "skipped": 0
+      "run": 62,
+      "passed": 62,
+      "skipped": 0,
+      "seconds": 9.517
     },
     "dop_b_windows": {
       "run": 981,
@@ -309,7 +310,8 @@
     "The general framing demo contained unsupported fills; renderer refusal was correct. Success integration now uses the explicitly flat source-qualified synthetic variant, preserving rejection of unsupported effects.",
     "In-place pip builds created component egg-info; strict public collector rejected it. Installer and CI now build components from temporary private source copies. Corrected Linux148 tests and Windows148 tests recorded above.",
     "Initial Linux userspace extraction exceeded the tiny Docker filesystem. Repeated in a bounded dedicated tmpfs userspace; no existing user directory was removed.",
-    "Independent import-bytecode, proposal-preview, nested-job-import and prewrite-cache findings were corrected and negatively retested; see review chains."
+    "Independent import-bytecode, proposal-preview, nested-job-import and prewrite-cache findings were corrected and negatively retested; see review chains.",
+    "GitHub Windows runner exposed unresolved8.3TEMP fixture comparisons. Independent real short/long path reproduction confirmed the alias-only cause; v0.2.1 canonicalizes only the test environment and adds two subprocess regression tests. Full clean-host rerun is bound to the final commit checks."
   ],
   "vendor_compile": "NOT_RUN",
   "native_pixel_acceptance": "NOT_RUN",
@@ -322,5 +324,34 @@
     "exceptions": [
       "Two trailing blank lines reported in unchanged original DIAScreen SOURCE_MANIFEST.json and docs/PROVENANCE.md are retained to preserve snapshot bytes."
     ]
+  },
+  "github_ci_followup": {
+    "v020_linux": {
+      "status": "PASS",
+      "run_url": "https://github.com/ufukefekaya-tr/universal-delta-hmi-agent/actions/runs/39042814011",
+      "gateway": 60,
+      "dop_b": 981,
+      "diascreen": 148,
+      "skipped": 0
+    },
+    "v020_windows": {
+      "status": "FAILED_FIXTURE_TEMP_ALIAS",
+      "run_url": "https://github.com/ufukefekaya-tr/universal-delta-hmi-agent/actions/runs/39042814011",
+      "dop_b_run": 981,
+      "failures": 18,
+      "errors": 2,
+      "cause": "Unresolved8.3TEMP fixture names compared with canonical service paths; production paths already canonicalized."
+    },
+    "v021_fix": "Resolve only Windows test subprocess TMPDIR/TEMP/TMP and cached tempfile.tempdir. No backend code, assertions or skips changed.",
+    "independent_real_short_path_reproduction": {
+      "before": "1failure+1error in2 unchanged tests",
+      "after": "2/2PASS changing only temp environment"
+    },
+    "patch_source_tests": {
+      "windows_run": 62,
+      "passed": 62,
+      "skipped": 0
+    },
+    "final_clean_host_ci": "Exact commit CI result is bound externally in release metadata."
   }
 }

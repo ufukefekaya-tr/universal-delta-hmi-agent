@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1
+
+- Normalize Windows CI temporary-directory aliases before test subprocesses. No production backend guards, tests, assertions or skips are weakened.
+- Add child-process temp-environment regressions and preserve the initial hosted Windows failure evidence.
+- Reuse the exact audited backend releases and offline runtime bundles from0.2.0.
+
 ## 0.2.0
 
 - Integrate isolated DOP-B and DIAScreen backends with explicit family routes.

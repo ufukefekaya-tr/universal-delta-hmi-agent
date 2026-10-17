@@ -10,4 +10,6 @@
 | General demo failed success preview | Framing example intentionally covered unsupported fills | Use a separate original flat-v1 fixture with matching profile | Renderer refusal preserved; installed two-family test compares full saved payloads | Synthetic fixture is not a vendor application |
 | Source privacy test found build metadata | pip built directly inside a public snapshot | Install component from a private temporary source copy | Strict source collector and clean install tests | Generated development metadata never enters the release |
 
+| Hosted Windows fixture tests failed after local PASS | Runner8.3TEMP alias differed from canonical service paths used by guards and spies | Resolve only the test-process temp environment; keep backend checks/assertions intact | Independent real short-path2-test before/after reproduction, two added CI regressions and full clean-host rerun | No production guard relaxation or hidden skip |
+
 Withdrawn evidence and unsupported native constructors remain explicit in the support matrices. Passing a refusal, another agent's agreement or an old vendor report never upgrades current file support.
