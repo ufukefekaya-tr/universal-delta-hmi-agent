@@ -7,7 +7,7 @@ import zipfile
 
 ROOT=Path(__file__).resolve().parents[1]
 DIRS=('src','docs','prompts','scripts','templates','tests','tools','reports')
-FILES=('AGENTS.md','SYSTEM_PROMPT.md','INDEX.md','README.md','pyproject.toml','.gitignore','.gitattributes','projects/README.md')
+FILES=('LICENSE','NOTICE','THIRD_PARTY_NOTICES.md','AGENTS.md','SYSTEM_PROMPT.md','INDEX.md','README.md','pyproject.toml','.gitignore','.gitattributes','projects/README.md')
 
 def build(output, archive=None):
     output=Path(output).resolve()

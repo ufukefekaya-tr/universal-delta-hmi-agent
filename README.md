@@ -34,3 +34,9 @@ Yeni kullanıcı projesinde profil, kaynak, adres ve davranış sözleşmesi se�
 `full Delta family` burada ortak organizasyon hedefidir; bütün Delta modellerinin, sürücülerinin veya özelliklerinin doğrulanmış desteği anlamına gelmez.
 
 Test ve inceleme kayıtları: [doğrulama](reports/VERIFICATION.json), [bağımsız teknik inceleme](reports/INDEPENDENT_REVIEW.json), [açık aktarım kabulü](reports/OMISSION_STATUS.md).
+
+## Lisans
+
+Özgün repo kodu ve belgeler **Apache-2.0** lisanslıdır. [LICENSE](LICENSE), [NOTICE](NOTICE) ve [üçüncü taraf kapsamı](THIRD_PARTY_NOTICES.md) dağıtıma dahildir. Bölüm 3, katkıcıların ilgili lisanslanabilir patent istemleri için açık izin içerir; patent tescili veya üçüncü taraf patentlerine genel izin değildir. MIT ile çift lisanslama yapılmaz.
+
+Bağımsız backend ve bağımlılıklar kendi lisanslarına tabidir. Mevcut DOP-B 0.2.0 paketine bu dosya üzerinden lisans atanmaz; kamuya açık birleşik paket yayını, ayrı backend lisansı ve notice kontrolü tamamlanana kadar açık kabul kapısıdır.

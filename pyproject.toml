@@ -7,6 +7,8 @@ name = "universal-delta-hmi-agent"
 version = "0.1.0"
 description = "Isolated file MCP routing for Delta HMI engineering"
 requires-python = ">=3.14"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md"]
 dependencies = ["mcp==2.3.0"]
 
 [project.scripts]

@@ -1,0 +1,10 @@
+{
+  "original_umbrella_license": "Apache-2.0",
+  "license_source": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+  "license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "wheel_license_metadata": "PASS",
+  "wheel_and_source_zip_license_bytes": "PASS",
+  "diascreen_owner_notified": true,
+  "public_release": "NOT_PERFORMED",
+  "bundled_dop_b_public_license_gate": "OPEN: separate licensed release required; existing0.2.0 not relabeled"
+}

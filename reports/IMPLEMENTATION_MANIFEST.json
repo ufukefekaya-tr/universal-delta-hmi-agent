@@ -11,7 +11,7 @@
     },
     {
       "path": "scripts/build_package.py",
-      "sha256": "f42df38f3271524edc71aaa9215029b61f389daf6a18dde1c97e70e23588785a"
+      "sha256": "5c8305c72271dc6ca66d1ad84d4cdd81ac2bd1bebe011aa9655ff52c95518cd6"
     },
     {
       "path": "scripts/finish_install.py",
@@ -60,6 +60,22 @@
     {
       "path": "tools/guard.py",
       "sha256": "58ed8dced250e885f012702446ff138a078cd551d3ea3c7c7b82d7ee100a576d"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "652be1c6bbe8b3a7f8d10f4fa6d99b17e299b3c3e21639e8fe480d2a0659981f"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "2a9256c26d284c4037fb0f0448c55b49c46d467d9713b4b841d29dcececbdbde"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "f6c4b4c8a323737c0cb65a388257ebf70c1f6800a43aded2edfef45459c13a17"
     }
   ]
 }
