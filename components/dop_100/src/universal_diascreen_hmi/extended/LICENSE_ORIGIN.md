@@ -1,0 +1,1 @@
+Generic source originally licensed Apache-2.0. Migrated native editing, persistence, contracts and transport. No customer files, tags, IP configuration, fonts, passwords or machine-specific generators are included.

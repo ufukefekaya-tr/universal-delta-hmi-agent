@@ -126,19 +126,23 @@
       "support_level": "SOURCE_BOUND_UNQUALIFIED",
       "implementation": [
         "operations.operation_patches:clone_element",
-        "operations.operation_patches:reorder_element"
+        "operations.operation_patches:reorder_element",
+        "extended.hmi4_transaction.build"
       ],
       "planned_tests": [
-        "test_operations.OperationTests.test_clone_unique_fresh_identity_geometry_and_reorder"
+        "test_operations.OperationTests.test_clone_unique_fresh_identity_geometry_and_reorder",
+        "test_extended.ExtendedTests.test_source_move_and_clone"
       ],
-      "limits": "Pinned donor, fresh identities, explicit inheritance and complete order.",
+      "limits": "Source clone/move/static replacement, explicit retention and unique IDs; existing source pages only in one transaction.",
       "known_history": "N002,N003",
       "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
       "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
       "source_refs": [
         "shared-feature-checklist",
         "history-n002-manifest",
-        "history-n003-manifest"
+        "history-n003-manifest",
+        "native-service-baseline-313",
+        "native-service-extension-040"
       ]
     },
     {
@@ -148,17 +152,21 @@
       "support_level": "SOURCE_BOUND_UNQUALIFIED",
       "implementation": [
         "operations.operation_patches:clone_screen",
-        "operations.validate_references"
+        "operations.validate_references",
+        "extended.hmi4_transaction.build"
       ],
       "planned_tests": [
-        "test_operations.OperationTests.test_screen_frame_clone_delete_and_navigation_guards"
+        "test_operations.OperationTests.test_screen_frame_clone_delete_and_navigation_guards",
+        "test_extended.ExtendedTests.test_source_move_and_clone"
       ],
-      "limits": "Explicit frame/full donors and complete default/navigation references.",
+      "limits": "Source-qualified page clone and ID/name/Level navigation; same-plan new-page element targets refused.",
       "known_history": "upstream edit/MCP",
       "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
       "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
       "source_refs": [
-        "shared-feature-checklist"
+        "shared-feature-checklist",
+        "native-service-baseline-313",
+        "native-service-extension-040"
       ]
     },
     {
@@ -168,20 +176,25 @@
       "support_level": "SOURCE_BOUND_UNQUALIFIED",
       "implementation": [
         "native.encode_token",
-        "operations.operation_patches:set_text"
+        "operations.operation_patches:set_text",
+        "extended.hmi4_inspect.inventory",
+        "extended.hmi4_transaction.build"
       ],
       "planned_tests": [
         "test_native.NativeTests.test_counted_unicode",
-        "test_operations.OperationTests.test_r12_turkish_caption_and_long_unicode"
+        "test_operations.OperationTests.test_r12_turkish_caption_and_long_unicode",
+        "test_extended.ExtendedTests.test_multilanguage_atomic_text_and_preserve"
       ],
-      "limits": "Counted UTF-16; no silent Latin1 fallback.",
+      "limits": "Three counted UTF16 text/font banks; actual state Value identities.",
       "known_history": "N004,N016",
       "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
       "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
       "source_refs": [
         "shared-feature-checklist",
         "history-n004-manifest",
-        "history-n016-manifest"
+        "history-n016-manifest",
+        "native-service-baseline-313",
+        "native-service-extension-040"
       ]
     },
     {
@@ -330,12 +343,15 @@
       "support_level": "SOURCE_BOUND_UNQUALIFIED",
       "implementation": [
         "operations.numeric_changes",
-        "operations.operation_patches:numeric"
+        "operations.operation_patches:numeric",
+        "extended.hmi4_inspect.numeric",
+        "extended.hmi4_transaction.build"
       ],
       "planned_tests": [
-        "test_operations.OperationTests.test_r15_limits_explicit_and_no_float_extremes_or_time_alias"
+        "test_operations.OperationTests.test_r15_limits_explicit_and_no_float_extremes_or_time_alias",
+        "test_extended.ExtendedTests.test_real_decimal_format_not_integer_scale"
       ],
-      "limits": "Explicit type/width/digits/decimals/limits/gain/offset and separate unit owners.",
+      "limits": "Source-qualified BOOL/INT/DINT/REAL registers; native gain/offset and integer/REAL decimal distinction. No LREAL/unsigned native writer.",
       "known_history": "N003,N005,N007",
       "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
       "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
@@ -343,7 +359,9 @@
         "shared-feature-checklist",
         "history-n003-manifest",
         "history-n005-manifest",
-        "history-n007-manifest"
+        "history-n007-manifest",
+        "native-service-baseline-313",
+        "native-service-extension-040"
       ]
     },
     {
@@ -445,19 +463,24 @@
       "support_level": "SOURCE_BOUND_UNQUALIFIED",
       "implementation": [
         "symbols.validate_reference",
-        "operations.operation_patches:rebind"
+        "operations.operation_patches:rebind",
+        "extended.hmi4_inspect.contract_rows",
+        "extended.hmi4_transaction.build"
       ],
       "planned_tests": [
         "test_symbols.SymbolTests.test_role_specific_read_and_write_permissions",
-        "test_operations.OperationTests.test_r05_exact_rebind_not_prefix"
+        "test_operations.OperationTests.test_r05_exact_rebind_not_prefix",
+        "test_extended.ExtendedTests.test_type_width_and_unknown_constraints"
       ],
-      "limits": "Exact owner/address, role, link and station; no substring/global replace.",
+      "limits": "Exact native register and symbolic XML contracts are separate. Width/access/enum/numeric-input limits/order required; unknown flat constraints refused.",
       "known_history": "N013",
       "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
       "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
       "source_refs": [
         "shared-feature-checklist",
-        "history-n013-manifest"
+        "history-n013-manifest",
+        "native-service-baseline-313",
+        "native-service-extension-040"
       ]
     },
     {
@@ -775,19 +798,24 @@
       "support_level": "SOURCE_BOUND_UNQUALIFIED",
       "implementation": [
         "preview.render_preview",
-        "preview.FontFace"
+        "preview.FontFace",
+        "extended.hmi4_visual.fit",
+        "extended.hmi4_visual.render"
       ],
       "planned_tests": [
         "test_preview.PreviewTests.test_metrics_missing_glyph_overflow_and_occlusion",
-        "test_preview.PreviewTests.test_all_states_checked_not_only_selected"
+        "test_preview.PreviewTests.test_all_states_checked_not_only_selected",
+        "test_extended.ExtendedTests.test_multilanguage_atomic_text_and_preserve"
       ],
-      "limits": "Actual DIB/layers/states plus supplied font metrics/cmap; absent metrics never fit PASS.",
+      "limits": "Optional Pillow and host hash-pinned fonts; BGR COLORREF saved-layer synthetic PNG, not vendor pixels.",
       "known_history": "N016 visual_check",
       "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
       "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
       "source_refs": [
         "shared-feature-checklist",
-        "history-n016-manifest"
+        "history-n016-manifest",
+        "native-service-baseline-313",
+        "native-service-extension-040"
       ]
     },
     {
@@ -842,19 +870,25 @@
       "historical_disposition": "REIMPLEMENT_AND_TEST",
       "support_level": "SOURCE_BOUND_UNQUALIFIED",
       "implementation": [
-        "session plan/authorization/save lifecycle"
+        "session plan/authorization/save lifecycle",
+        "extended.core.Service",
+        "extended.journal.Journal",
+        "extended.hmi4_artifacts"
       ],
       "planned_tests": [
-        "test_session.SessionTests.test_actual_apply_save_reread_diff_rollback_and_source"
+        "test_session.SessionTests.test_actual_apply_save_reread_diff_rollback_and_source",
+        "test_extended.ExtendedTests.test_durable_fresh_process_state_and_replay"
       ],
-      "limits": "Inspect before apply; exact authorization/hashes/replay protection/new-only save.",
+      "limits": "Durable exact proposals and new-only saved-file readback, recovery without replay, UNKNOWN_OUTCOME reconciliation; journal is local state.",
       "known_history": "N002-N016 wrappers",
       "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
       "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
       "source_refs": [
         "shared-feature-checklist",
         "history-n002-manifest",
-        "history-n016-manifest"
+        "history-n016-manifest",
+        "native-service-baseline-313",
+        "native-service-extension-040"
       ]
     },
     {
@@ -863,17 +897,22 @@
       "historical_disposition": "REIMPLEMENT_AND_TEST",
       "support_level": "SOURCE_BOUND_UNQUALIFIED",
       "implementation": [
-        "cli JSON-RPC stdio dispatch"
+        "cli JSON-RPC stdio dispatch",
+        "extended.transport.install",
+        "extended.runner.main"
       ],
       "planned_tests": [
-        "test_stdio.StdioTests.test_real_process_mutation_not_only_discovery"
+        "test_stdio.StdioTests.test_real_process_mutation_not_only_discovery",
+        "test_extended.ExtendedTests.test_durable_fresh_process_state_and_replay"
       ],
-      "limits": "Actual isolated stdio mutation/reread required; tools/list is insufficient.",
+      "limits": "Real isolated CLI/MCP native mutation/reread; tool list equals explicit gateway allowlist.",
       "known_history": "native wrapper clients",
       "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
       "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
       "source_refs": [
-        "shared-feature-checklist"
+        "shared-feature-checklist",
+        "native-service-baseline-313",
+        "native-service-extension-040"
       ]
     },
     {
@@ -1081,19 +1120,24 @@
       "id": "U05",
       "feature": "Multilingual state rendering",
       "historical_disposition": "DISCOVERED_UNQUALIFIED",
-      "support_level": "DISCOVERED_UNQUALIFIED",
+      "support_level": "SOURCE_BOUND_UNQUALIFIED",
       "implementation": [
-        "opaque retention and unsupported-operation refusal only"
+        "opaque retention and unsupported-operation refusal only",
+        "extended.hmi4_visual.render",
+        "extended.hmi4_inspect.inventory"
       ],
       "planned_tests": [
-        "test_contracts.ContractTests.test_unimplemented_runtime_families_have_no_generic_builder"
+        "test_contracts.ContractTests.test_unimplemented_runtime_families_have_no_generic_builder",
+        "test_extended.ExtendedTests.test_multilanguage_atomic_text_and_preserve"
       ],
-      "limits": "Discovery retained explicitly. No generic builder, native/lifecycle rendering, or runtime qualification; preserve unknown owners or refuse the edit.",
+      "limits": "Three native language text/font banks with synthetic saved-state rendering; runtime language behavior remains unqualified.",
       "known_history": "upstream specialized builders, not generic qualified tools",
       "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
       "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
       "source_refs": [
-        "shared-feature-checklist"
+        "shared-feature-checklist",
+        "native-service-baseline-313",
+        "native-service-extension-040"
       ]
     },
     {
@@ -2259,6 +2303,96 @@
       "availability_at_authoring": "EXISTS",
       "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.1.1",
       "prior_observation": "New0.1.1regression; final-tree report records execution."
+    },
+    {
+      "test_name": "test_extended.ExtendedTests.test_multilanguage_atomic_text_and_preserve",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.4.0",
+      "prior_observation": "Original neutral synthetic regression; no private files included"
+    },
+    {
+      "test_name": "test_extended.ExtendedTests.test_real_decimal_format_not_integer_scale",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.4.0",
+      "prior_observation": "Original neutral synthetic regression; no private files included"
+    },
+    {
+      "test_name": "test_extended.ExtendedTests.test_source_hash_guard",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.4.0",
+      "prior_observation": "Original neutral synthetic regression; no private files included"
+    },
+    {
+      "test_name": "test_extended.ExtendedTests.test_unknown_property_guard",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.4.0",
+      "prior_observation": "Original neutral synthetic regression; no private files included"
+    },
+    {
+      "test_name": "test_extended.ExtendedTests.test_geometry_guard",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.4.0",
+      "prior_observation": "Original neutral synthetic regression; no private files included"
+    },
+    {
+      "test_name": "test_extended.ExtendedTests.test_duplicate_owner_guard",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.4.0",
+      "prior_observation": "Original neutral synthetic regression; no private files included"
+    },
+    {
+      "test_name": "test_extended.ExtendedTests.test_type_width_and_unknown_constraints",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.4.0",
+      "prior_observation": "Original neutral synthetic regression; no private files included"
+    },
+    {
+      "test_name": "test_extended.ExtendedTests.test_source_move_and_clone",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.4.0",
+      "prior_observation": "Original neutral synthetic regression; no private files included"
+    },
+    {
+      "test_name": "test_extended.ExtendedTests.test_durable_fresh_process_state_and_replay",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.4.0",
+      "prior_observation": "Original neutral synthetic regression; no private files included"
+    },
+    {
+      "test_name": "test_extended.ExtendedTests.test_vendor_boundary_and_empty_reference_catalog",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.4.0",
+      "prior_observation": "Original neutral synthetic regression; no private files included"
+    },
+    {
+      "test_name": "test_extended.ExtendedTests.test_complete_release_manifest_guards",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.4.0",
+      "prior_observation": "Original neutral synthetic regression; no private files included"
+    },
+    {
+      "test_name": "test_extended.ExtendedTests.test_background_dependency_absent_is_structured_refusal",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.4.0",
+      "prior_observation": "Original neutral synthetic regression; no private files included"
+    },
+    {
+      "test_name": "test_extended.ExtendedTests.test_background_bomb_is_structured_refusal",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.4.0",
+      "prior_observation": "Original neutral synthetic regression; no private files included"
+    },
+    {
+      "test_name": "test_extended.ExtendedTests.test_background_truncated_pixels_or_dependency_refusal",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.4.0",
+      "prior_observation": "Original neutral regression; runtime optional dependency is recorded separately"
+    },
+    {
+      "test_name": "test_extended.ExtendedTests.test_transport_io_failure_never_claims_no_effect",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.4.0",
+      "prior_observation": "Original neutral regression; runtime optional dependency is recorded separately"
     }
   ],
   "private_qualification": {
@@ -2308,5 +2442,6 @@
     "failures": 0,
     "errors": 0,
     "report": "reports/TEST_RESULTS.json"
-  }
+  },
+  "native_service_extension": "NATIVE_SERVICE_UPDATE.md"
 }

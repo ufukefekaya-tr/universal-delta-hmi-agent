@@ -5,7 +5,7 @@
   "license_boundary": "The original-code license and patent terms do not license or redistribute excluded upstream/private source material.",
   "source_policy": {
     "upstream_license": "NOT_DECLARED_REFERENCE_ONLY_NO_REDISTRIBUTION",
-    "implementation": "Original stdlib-only modules from factual format observations.",
+    "implementation": "Original Python file services, stdlib core and separately pinned optional visual dependency",
     "private_assets": "NOT_DISTRIBUTED",
     "location_lookup": "Retained outside the release by the orchestrator."
   },
@@ -436,6 +436,18 @@
       "byte_length": 205660,
       "kind": "private_reference",
       "distribution": "NOT_INCLUDED"
+    },
+    {
+      "source_id": "native-service-baseline-313",
+      "sha256": "21d8331456aba75f63fb8a94ce4fcc667f9a6d5d0aa51f0d5eb6265c9fcf7dff",
+      "kind": "original_code_manifest",
+      "distribution": "GENERIC_EXTRACTION_ONLY_NO_PROJECT_BUILDERS"
+    },
+    {
+      "source_id": "native-service-extension-040",
+      "sha256": "896560e0f1c4a81d6e3e496ab9ec259db7af555e040b70fc63a3bfb7daf2e138",
+      "kind": "original_code_manifest",
+      "distribution": "GENERIC_EXTRACTION_ONLY_NO_CUSTOMER_REGISTRY"
     }
   ],
   "source_drift": [
@@ -458,6 +470,6 @@
       "observed_check": "Historical readonly verifier rejects whole-payload reverse mismatch on other copy; archive passes11negative cases."
     }
   ],
-  "reproduction_boundary": "Public neutral tests need no private files. Optional private source qualification is separately SHA-bound and is not vendor/runtime evidence."
+  "reproduction_boundary": "Public neutral tests need no private files. Optional private source qualification is separately SHA-bound and is not vendor/runtime evidence.",
+  "native_service_update": "docs/NATIVE_SERVICE_UPDATE.md"
 }
-

@@ -1,0 +1,117 @@
+{
+  "scope": "Two-family offline file MCP release implementation",
+  "files": [
+    {
+      "path": "examples/create_gateway_demo.py",
+      "sha256": "2581a0a7e54fbeffc5dd889edc066e71ac682d205ffee01ad6ea052de92e5745"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "652be1c6bbe8b3a7f8d10f4fa6d99b17e299b3c3e21639e8fe480d2a0659981f"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "3cca56443fa337b9fd923f033c9299e10b44a7fcba84ec509563484c5955e67c"
+    },
+    {
+      "path": "scripts/bootstrap.ps1",
+      "sha256": "d558b041b58ce324f66cd8d07a0a87513975a9cabd7c011a6c515f6423791a23"
+    },
+    {
+      "path": "scripts/bootstrap.sh",
+      "sha256": "e2eff0b9b1b82657988dc352ca23bd5e7dd39dcb00f7b6f180c27c72054e6cfd"
+    },
+    {
+      "path": "scripts/build_package.py",
+      "sha256": "aaae60324203e0bc594897431130b34a76ff903b7c34035fc08e77dda85ccf39"
+    },
+    {
+      "path": "scripts/finish_install.py",
+      "sha256": "af476baf6d6ea804e6746f3a4e599095eae910b008384a824b27e9406691c064"
+    },
+    {
+      "path": "scripts/probe_both.py",
+      "sha256": "2a2c01d464b85e07eb8a9e024485e4034c363071629c6cf4b7b5895c2eb546c1"
+    },
+    {
+      "path": "scripts/probe_stdio.py",
+      "sha256": "a70d05760b0c0290de97da7a5048a4a2e3daac3e1de97867e4a45c510e114a21"
+    },
+    {
+      "path": "src/delta_hmi/__init__.py",
+      "sha256": "d63a465127fa2d875e85c741ae6e9af407ff623e0b314075139d8148853f2bfd"
+    },
+    {
+      "path": "src/delta_hmi/cli.py",
+      "sha256": "40d8e3a7e0054e635afebf62083602302596bebbe7c46a28cfb23a54a2b44520"
+    },
+    {
+      "path": "src/delta_hmi/config.py",
+      "sha256": "a690ba5da690604d97542b6e94f5e52facd5c13143a518e44b45e07094339e66"
+    },
+    {
+      "path": "src/delta_hmi/gateway.py",
+      "sha256": "6460e8d419eae04becd724e554dcda0b26f69e861968bded5b455a0002a014cd"
+    },
+    {
+      "path": "templates/backends.json",
+      "sha256": "d38dcc32b796e8d42e31c1d124489fa56bd5c06990999390fc3e5d4c82f980cb"
+    },
+    {
+      "path": "templates/component_files.json",
+      "sha256": "931a4f11323c0c968894fb73290208e606fb302b1887af336e197d252e49315d"
+    },
+    {
+      "path": "templates/releases.lock.json",
+      "sha256": "509559bfbf627eebdc0ad164289548ffbeb6dd66107ef65405603da04eb1e427"
+    },
+    {
+      "path": "tests/test_config.py",
+      "sha256": "7cd6e4e3186347d41f8af62d40d6bad149fc920b0357c1c8b2089f1ab49236c4"
+    },
+    {
+      "path": "tests/test_diascreen_gateway.py",
+      "sha256": "8140dcc1308317678904d2aa092e6d76a5b604da7efc890a27f3c51f544ffc44"
+    },
+    {
+      "path": "tests/test_gateway.py",
+      "sha256": "7a59a2dae102dde9aff67adea5b757e5a3bbf2e73bc529172b4acc9f34a252e3"
+    },
+    {
+      "path": "tests/test_installation.py",
+      "sha256": "f8b3dd2054f4cec53d127b7887b777288eb060173f918e241336bcffd9b476a0"
+    },
+    {
+      "path": "tests/test_inventory.py",
+      "sha256": "50df131eeedcd2b044b29a512b49fc260d5469cfd0663be780b15178ca19659d"
+    },
+    {
+      "path": "tests/test_jobs_gateway.py",
+      "sha256": "34c57cd8d86dd58d0c4b74f4fe3116d0d8a68a4ecf925bd420acc55fbdbf228e"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "748c22c18492bd33f1beebc1cdbb91fd6c50b082f325fee9154b383688de1487"
+    },
+    {
+      "path": "tools/check_snapshots.py",
+      "sha256": "fa888ce951fe77165d1cf80ce3d7cbce3835bec214ec823c17cc10137fadb78b"
+    },
+    {
+      "path": "tools/ci.py",
+      "sha256": "8303d3a485af65f0606d845f27188179027ef7c78dae65defb2c7d10ad45dbb6"
+    },
+    {
+      "path": "tools/guard.py",
+      "sha256": "58ed8dced250e885f012702446ff138a078cd551d3ea3c7c7b82d7ee100a576d"
+    },
+    {
+      "path": "tests/test_ci.py",
+      "sha256": "64d84592c42ca6fa9b334410f06f3b2a514de2d5e1edc381586c40a5c83a8d22"
+    }
+  ]
+}

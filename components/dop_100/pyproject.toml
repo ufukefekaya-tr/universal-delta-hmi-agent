@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "universal-diascreen-hmi-agent"
-version = "0.1.1"
+version = "0.4.0"
 description = "Original file-only DIAScreen/DOP-100 inspection and controlled offline editing"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -43,3 +43,9 @@ exclude = ["tests*", "private*"]
 "share/universal-diascreen-hmi-agent/examples" = ["examples/*.py"]
 "share/universal-diascreen-hmi-agent/tools" = ["tools/*.py"]
 "share/universal-diascreen-hmi-agent/tests" = ["tests/*.py"]
+
+[project.optional-dependencies]
+visuals = ["Pillow==12.2.0"]
+
+[tool.setuptools.package-data]
+"universal_diascreen_hmi.extended" = ["RELEASE_MANIFEST.json"]

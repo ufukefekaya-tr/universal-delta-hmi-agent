@@ -1,0 +1,151 @@
+{
+  "schema": "delta.hmi.source-release.v1",
+  "version": "0.4.0",
+  "files": [
+    {
+      "path": "__init__.py",
+      "sha256": "c968d774f68a99c1ff3bccfe021a375957d82743abb1213a51524ead5f7c77f1",
+      "bytes": 111
+    },
+    {
+      "path": "cli.py",
+      "sha256": "19b2fb6162ad0be0df547ad27202bf85a4eaf03f789b59aceae55705639c1084",
+      "bytes": 10391
+    },
+    {
+      "path": "contracts.py",
+      "sha256": "6c03cd57c9ddb419f19d926c3e87b2d7bf1bffe54dd8647e1ee332b98900bfc2",
+      "bytes": 6426
+    },
+    {
+      "path": "errors.py",
+      "sha256": "a66c5c1369f5786bb186bc02a7cda4f67ebbfe6d2ab6c52989e311d11ca7a8a3",
+      "bytes": 538
+    },
+    {
+      "path": "extended/__init__.py",
+      "sha256": "2d10750f1f0e23d3aa56b2def40eafff5313f7f2cc7481d6eeb15dbcff2c816d",
+      "bytes": 86
+    },
+    {
+      "path": "extended/catalog.py",
+      "sha256": "ec25fcaf0be23e9c5ab447be5e214e3aca41d67bf978eed52f3c9e7dd58302c3",
+      "bytes": 2445
+    },
+    {
+      "path": "extended/common.py",
+      "sha256": "e50eccb34423e5805873c013e03b64e6af472c04aba0a750db6fb878f2e112c2",
+      "bytes": 2146
+    },
+    {
+      "path": "extended/core.py",
+      "sha256": "e8147e40a26ec1cbb8463b1ada07b8cf20fcc331ecfc3bfb92a86c87898792d8",
+      "bytes": 16707
+    },
+    {
+      "path": "extended/file_ownership.py",
+      "sha256": "711254a4888aced0ff4dc3ce2512b8fd8c02ea217764e13bc37f6f90d058a9a9",
+      "bytes": 3199
+    },
+    {
+      "path": "extended/hmi4_artifacts.py",
+      "sha256": "046f881e39068adde40784b5f28337bdeaa23dcc103d5625092a0238f66514d5",
+      "bytes": 10408
+    },
+    {
+      "path": "extended/hmi4_bootstrap.py",
+      "sha256": "6cb9a256586ed20d5b3aff123404b51389421b09622db41bf6be9f566e80051e",
+      "bytes": 3350
+    },
+    {
+      "path": "extended/hmi4_inspect.py",
+      "sha256": "ad45cfa945fbac81c3f8f3a3df9b18b9c79a6fe811533a484b10e5eb7af8ddde",
+      "bytes": 11618
+    },
+    {
+      "path": "extended/hmi4_registry.py",
+      "sha256": "c674f50ba0bf6256b664783d38ba4068e81d7ffc365dc30d0130eb12c3a79a09",
+      "bytes": 3410
+    },
+    {
+      "path": "extended/hmi4_service.py",
+      "sha256": "99a2f183cd12c380d3aa716bb2128072a8fa8dd1d3bcede97244a109312bafaa",
+      "bytes": 18224
+    },
+    {
+      "path": "extended/hmi4_transaction.py",
+      "sha256": "919b06de973cdb5b2a4f640eec37cba78352529d2b41208ffd44338eeb8e5111",
+      "bytes": 26751
+    },
+    {
+      "path": "extended/hmi4_visual.py",
+      "sha256": "86b96530bdd1dab77c895fd7d864a9715a15eb5e971d9dbd79b53146706c5003",
+      "bytes": 5510
+    },
+    {
+      "path": "extended/journal.py",
+      "sha256": "c5b815b758d1937757874480b122c01d7facffb8a19739234dba6a8293ccf666",
+      "bytes": 9281
+    },
+    {
+      "path": "extended/native_index.py",
+      "sha256": "9472ff4837a959b5e2864629b0fcb078fb34d0e35836089fb38537e42fbbb26e",
+      "bytes": 21237
+    },
+    {
+      "path": "extended/register_contract.py",
+      "sha256": "e70e8be0382a81939391788196ecc48b0110c9d8128f4a9de951b80f4945a7dd",
+      "bytes": 8083
+    },
+    {
+      "path": "extended/runner.py",
+      "sha256": "e7eff464fd19e12307e08d6f9263befe2ba0f0998e81d279c5b975732af7bdd4",
+      "bytes": 2239
+    },
+    {
+      "path": "extended/transport.py",
+      "sha256": "e7f382fed970d6c9adf818a628ea544f32331f31de560a7f52179a439df5111d",
+      "bytes": 5280
+    },
+    {
+      "path": "extended/worker.py",
+      "sha256": "0bc15c2dbc1ff915d37bc597f39e3190824a5573fb69e18990bc2a40a43f5311",
+      "bytes": 1420
+    },
+    {
+      "path": "macros.py",
+      "sha256": "9477445b60610e836ffb44b77e72e0d09c54b75e1e0192cfffd9d854bccd78a5",
+      "bytes": 12270
+    },
+    {
+      "path": "native.py",
+      "sha256": "85b3a22c48905d6bf21140b971e37294abac7af7291b800aaa3962dc35ad700d",
+      "bytes": 18847
+    },
+    {
+      "path": "operations.py",
+      "sha256": "4d9b7e666ebf64e14f65486062480f02dde9a6d04a24e0502431e9c20b99c576",
+      "bytes": 32802
+    },
+    {
+      "path": "preview.py",
+      "sha256": "957d78309bed4c9f8c66885d8339680388bc0e4e15a825216e6a4e6f7c37d962",
+      "bytes": 27151
+    },
+    {
+      "path": "resources.py",
+      "sha256": "312aa3adc6a91b87703b748787a223510fbed29559a7f01d126d47a6ee0390b7",
+      "bytes": 7918
+    },
+    {
+      "path": "session.py",
+      "sha256": "53e5c5a1143cf7125a5e1e8cb14748536faed053d8d4bfd7a108482e9ff8b539",
+      "bytes": 27223
+    },
+    {
+      "path": "symbols.py",
+      "sha256": "1d5e26a918144801436ae287c4b4a03a43c5eda2c21c4227b615070a8d45574e",
+      "bytes": 19675
+    }
+  ]
+}

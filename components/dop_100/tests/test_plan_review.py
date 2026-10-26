@@ -373,7 +373,8 @@ class PlanReviewTests(unittest.TestCase):
             self.assertEqual(call('diff')['structuredContent']['applied'], [])
             self.assertFalse(call('pending_changes')['structuredContent']['unsaved_candidate'])
             self.assertEqual(self.source.read_bytes(), native())
-            self.assertEqual([p.name for p in self.root.iterdir()], ['source.dpa'])
+            self.assertEqual(sorted(p.name for p in self.root.iterdir()), ['.runtime','source.dpa'])
+            self.assertTrue((self.root/'.runtime/operations.sqlite3').is_file())
         finally:
             process.stdin.close()
             process.wait(timeout=10)

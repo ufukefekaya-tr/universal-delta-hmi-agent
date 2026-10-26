@@ -1,3 +1,5 @@
+Current source extension: [native service update](NATIVE_SERVICE_UPDATE.md). See the current 69-tool integration inventory; historical release evidence below remains scoped to its original bytes.
+
 # Support matrix
 
 This inventory is not a completion or vendor certificate. The [machine ledger](SUPPORT_MATRIX.json) maps every D01–D44/U01–U09 feature,18file tools,4GUI tools,2excluded save options and R01–R21 regression. [Source identities](../SOURCE_MANIFEST.json) are neutral IDs and raw-byte hashes; private source files and locations are excluded.

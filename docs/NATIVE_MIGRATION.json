@@ -1,0 +1,91 @@
+{
+  "schema": "delta.hmi.migration.v1",
+  "local_tools": 82,
+  "generic_tools": 69,
+  "generic_tools_missing_from_allowlist": [],
+  "local_only": [
+    {
+      "tool": "apply_project_plan",
+      "disposition": "LOCAL_DEPLOYMENT_ONLY",
+      "reason": "Historical pinned vendor seed/native neutral/catalog helper depends on excluded local assets; preserved in local MCP, not advertised as generic standalone constructor"
+    },
+    {
+      "tool": "configure_target",
+      "disposition": "LOCAL_DEPLOYMENT_ONLY",
+      "reason": "Historical pinned vendor seed/native neutral/catalog helper depends on excluded local assets; preserved in local MCP, not advertised as generic standalone constructor"
+    },
+    {
+      "tool": "create_neutral_screen",
+      "disposition": "LOCAL_DEPLOYMENT_ONLY",
+      "reason": "Historical pinned vendor seed/native neutral/catalog helper depends on excluded local assets; preserved in local MCP, not advertised as generic standalone constructor"
+    },
+    {
+      "tool": "create_project",
+      "disposition": "LOCAL_DEPLOYMENT_ONLY",
+      "reason": "Historical pinned vendor seed/native neutral/catalog helper depends on excluded local assets; preserved in local MCP, not advertised as generic standalone constructor"
+    },
+    {
+      "tool": "current_delivery",
+      "disposition": "LOCAL_DEPLOYMENT_ONLY",
+      "reason": "Versioned customer reference/parameter helpers remain in local deployment; trusted host generic library support retained without bundled data"
+    },
+    {
+      "tool": "get_reference_contract",
+      "disposition": "LOCAL_DEPLOYMENT_ONLY",
+      "reason": "Versioned customer reference/parameter helpers remain in local deployment; trusted host generic library support retained without bundled data"
+    },
+    {
+      "tool": "inspect_native_resource_banks",
+      "disposition": "LOCAL_DEPLOYMENT_ONLY",
+      "reason": "Historical pinned vendor seed/native neutral/catalog helper depends on excluded local assets; preserved in local MCP, not advertised as generic standalone constructor"
+    },
+    {
+      "tool": "inspect_neutral_screens",
+      "disposition": "LOCAL_DEPLOYMENT_ONLY",
+      "reason": "Historical pinned vendor seed/native neutral/catalog helper depends on excluded local assets; preserved in local MCP, not advertised as generic standalone constructor"
+    },
+    {
+      "tool": "inspect_parameters",
+      "disposition": "LOCAL_DEPLOYMENT_ONLY",
+      "reason": "Versioned customer reference/parameter helpers remain in local deployment; trusted host generic library support retained without bundled data"
+    },
+    {
+      "tool": "inspect_target_configuration",
+      "disposition": "LOCAL_DEPLOYMENT_ONLY",
+      "reason": "Historical pinned vendor seed/native neutral/catalog helper depends on excluded local assets; preserved in local MCP, not advertised as generic standalone constructor"
+    },
+    {
+      "tool": "inspect_template",
+      "disposition": "LOCAL_DEPLOYMENT_ONLY",
+      "reason": "Historical pinned vendor seed/native neutral/catalog helper depends on excluded local assets; preserved in local MCP, not advertised as generic standalone constructor"
+    },
+    {
+      "tool": "list_deliveries",
+      "disposition": "LOCAL_DEPLOYMENT_ONLY",
+      "reason": "Versioned customer reference/parameter helpers remain in local deployment; trusted host generic library support retained without bundled data"
+    },
+    {
+      "tool": "open_delivery",
+      "disposition": "LOCAL_DEPLOYMENT_ONLY",
+      "reason": "Versioned customer reference/parameter helpers remain in local deployment; trusted host generic library support retained without bundled data"
+    }
+  ],
+  "common_scope": [
+    "Native atomic owner transactions",
+    "Three language text/font banks and BGR colors",
+    "Typed BOOL/INT/DINT/REAL binding and affine scaling",
+    "Source page/element clone move replace and navigation",
+    "Reviewed opaque background DIB operations",
+    "Source-hash durable planning/application/new-only saves",
+    "Offline project ZIP and interrupted outcome reconciliation",
+    "Metadata-only ABI rebind without native replay",
+    "Host-pinned optional synthetic visuals"
+  ],
+  "unimplemented_vendor": [
+    "headless open/save/compile",
+    "offline simulator",
+    "vendor transfer package",
+    "native alarm/history/recipe/trend/account constructors",
+    "password writer"
+  ]
+}

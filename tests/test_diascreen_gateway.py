@@ -2,6 +2,7 @@ import asyncio
 from contextlib import asynccontextmanager
 import hashlib
 import json
+import os
 from pathlib import Path
 import tempfile
 import unittest
@@ -54,9 +55,9 @@ class DiascreenGatewayTests(unittest.IsolatedAsyncioTestCase):
         self.assertFalse(response.is_error, response)
         return response.structured_content["session_id"]
 
-    async def test_all_thirty_audited_tools_and_dynamic_schema_retained(self):
+    async def test_all_audited_tools_and_dynamic_schema_retained(self):
         listed = {tool.name: tool for tool in await self.gateway.list_tools()}
-        self.assertEqual(len(DIA_TOOLS), 30)
+        self.assertEqual(len(DIA_TOOLS), 69)
         self.assertEqual(set(listed), {"delta_catalog", "dop_100__close_session"} | {"dop_100__" + name for name in DIA_TOOLS})
         opening = listed["dop_100__open_project"].input_schema
         self.assertEqual(set(opening["properties"]), {"profile_id", "path", "source_sha256"})
@@ -130,8 +131,12 @@ class DiascreenGatewayTests(unittest.IsolatedAsyncioTestCase):
             self.data["backends"]["dop_100"]["allow_write"] = allowed
             self.path.write_text(json.dumps(self.data))
             cfg = GatewayConfig.load(self.path).backends["dop_100"]
-            with patch("delta_hmi.gateway.stdio_client", stdio), patch("delta_hmi.gateway.ClientSession", Session):
+            host={"DIA_HMI_REFERENCE_ROOT":"trusted-reference","DIA_HMI_FONT_ROOT":"trusted-fonts","UNTRUSTED_JOB_ENV":"secret-not-forwarded"}
+            with patch.dict(os.environ,host), patch("delta_hmi.gateway.stdio_client", stdio), patch("delta_hmi.gateway.ClientSession", Session):
                 async with connect_backend(cfg): pass
+            self.assertEqual(observed[-1].env['DIA_HMI_REFERENCE_ROOT'],host['DIA_HMI_REFERENCE_ROOT'])
+            self.assertEqual(observed[-1].env['DIA_HMI_FONT_ROOT'],host['DIA_HMI_FONT_ROOT'])
+            self.assertNotIn('UNTRUSTED_JOB_ENV',observed[-1].env)
             self.assertIn("universal_diascreen_hmi.cli", observed[-1].args)
             self.assertNotIn("serve", observed[-1].args)
             self.assertNotIn("--profiles", observed[-1].args)

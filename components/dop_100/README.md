@@ -1,3 +1,5 @@
+Current source extension: [native service update](docs/NATIVE_SERVICE_UPDATE.md). See the current 69-tool integration inventory; historical release evidence below remains scoped to its original bytes.
+
 # Universal DIAScreen HMI Agent
 
 Original, portable, file-only tools for inspecting and preparing DIAScreen/DOP-100 native project copies. The backend indexes saved bytes, compiles explicit changes into an exact patch ledger, rereads candidates, and produces bounded saved-layer SVG previews.

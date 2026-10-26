@@ -9,3 +9,5 @@ Keep every applicable notice and source-availability statement when redistributi
 Historical DIAScreen upstream code without a declared license is excluded. Vendor editor installers, proprietary customer projects, machine symbols, logos and fonts are excluded. Customer-supplied project material remains governed by its own rights and is never automatically covered by the repo license.
 
 The original source license includes Apache-2.0 section3's contributor patent grant. This is not patent registration or a license to every third-party patent. Product names identify compatibility targets without vendor endorsement.
+
+The optional DIAScreen visuals extra declares Pillow12.2.0 (installed metadata SPDX: MIT-CMU). Pillow wheels and host fonts are not redistributed by this source update; obtain the dependency and fonts under their own licenses.

@@ -1,9 +1,33 @@
 {
-  "scope": "Two-family offline file MCP release implementation",
+  "scope": "Current0.3.0 source; complete root public membership excluding components (separately snapshotted) and this manifest",
   "files": [
     {
-      "path": "examples/create_gateway_demo.py",
-      "sha256": "2581a0a7e54fbeffc5dd889edc066e71ac682d205ffee01ad6ea052de92e5745"
+      "path": ".gitattributes",
+      "sha256": "cce2bd8f2e3d53263ad034e0000b1ad961e182e5d973787ebc71f105940f77d6"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "355293831c7a3db593acb78b6dbf987ffa911d1a67a5e65881159c72b8b02e77"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "db26458f880a1d30fdf13cbbf58f1a735a9c1f219bc13c64723de4f749e669a7"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "2ee765bbd53a37826f11c21688ff500b538dbc6f584d3af5df1b10926d445f9e"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "89cacea9e3ac07ee5567d91275e2500fe24946dd652400c12efc320dab5c6d74"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "7c01c47ea582fbed8793149873c947a7ef80e2ae03a72c1f7bf468d800ea3ed6"
+    },
+    {
+      "path": "INDEX.md",
+      "sha256": "9db0e85d496af23c4a9c00f331de6594b25a6b49c42614a22c7a85bc524b6873"
     },
     {
       "path": "LICENSE",
@@ -14,8 +38,112 @@
       "sha256": "652be1c6bbe8b3a7f8d10f4fa6d99b17e299b3c3e21639e8fe480d2a0659981f"
     },
     {
+      "path": "README.md",
+      "sha256": "bffa6048d7a92fe0e0286065b60fe32eb2125886fb461ebbb132fa94bfaf06b4"
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "8efa0ec9c043ad74da806ad937ee2e4a04e5462a8360b33230509efe8ce4c20e"
+    },
+    {
+      "path": "SYSTEM_PROMPT.md",
+      "sha256": "deb5d0b395a8b6ce7f11411ca94e6a67ccdd554a12b88a1644ced410e949a098"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "41b7ba04bb54833c2f068bcf3fa591d1f78bde889923de37e5ee0fdb7a6d3b9e"
+    },
+    {
+      "path": "docs/AGENT_START.md",
+      "sha256": "c19244144312f2c29b3a24456895ef63c482dcc69c34e996b02d86fe8c77561f"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "a0b3c67b811796b8c90b37aa7d461be2ece63852ab89c7dc52bf1166c93e6c12"
+    },
+    {
+      "path": "docs/DIASCREEN_HANDOFF.md",
+      "sha256": "efef1a83c3c83d1dd5fe0693453e3add6c61719c2d86cac8cd40197d04dfcbea"
+    },
+    {
+      "path": "docs/FEATURE_MIGRATION.json",
+      "sha256": "1b0b417592d3c73272b2136bfe38ca85316e26f3d8f382f9c50e17106702772c"
+    },
+    {
+      "path": "docs/GOALS.md",
+      "sha256": "5d3f06d256860e85df932d7173745e931db7317181e902fce4168ea989589c94"
+    },
+    {
+      "path": "docs/JOBS.md",
+      "sha256": "e10300082ac4480548974e822c3c3f0c859596259641c3b17e3511fb83972b05"
+    },
+    {
+      "path": "docs/KAIZEN.md",
+      "sha256": "4a4f5f3d23d5f64ad70fabd996b0d756678346eb872242b4341ef34f1383df41"
+    },
+    {
+      "path": "docs/NATIVE_MIGRATION.json",
+      "sha256": "84a84a17745b02bb8839dbcec4479390276d8ca672bc05540440d5742bda0b21"
+    },
+    {
+      "path": "docs/NATIVE_SERVICE_UPDATE.md",
+      "sha256": "2ae047f4a17cf62ece19382e951e29f98c902eefaae75af269b05fc3d6c476cf"
+    },
+    {
+      "path": "docs/REGRESSIONS.json",
+      "sha256": "d67ab41d1cb7f868e69f3c3a29c5e5a181be950a7d8b45a691b36c68cc4b8991"
+    },
+    {
+      "path": "docs/SUPPORT.md",
+      "sha256": "94b379725fdbfc2fcb6e1fa58d82ec29c6bbeb408db0a182ccfda2816aa567fb"
+    },
+    {
+      "path": "docs/WORKFLOW.md",
+      "sha256": "d9811e6bd8f4376e8550f6699e46063801730e3fd2b9aa990c0f9c44e165703c"
+    },
+    {
+      "path": "examples/create_gateway_demo.py",
+      "sha256": "2581a0a7e54fbeffc5dd889edc066e71ac682d205ffee01ad6ea052de92e5745"
+    },
+    {
+      "path": "projects/README.md",
+      "sha256": "6054690d399769b2c5c80bd7db0962de6d439e12d3ea63ab8997aa7ee33e8810"
+    },
+    {
+      "path": "prompts/roles/IMPLEMENTER.md",
+      "sha256": "80de20092bc39e5740f0cff47fbea75c1ac6d5e6fbbb2f363610e1b35c85887a"
+    },
+    {
+      "path": "prompts/roles/REVIEWER.md",
+      "sha256": "5633f5c70b63c584a6959e588bedc668291338fb294200c6dae29262334934b0"
+    },
+    {
       "path": "pyproject.toml",
-      "sha256": "3cca56443fa337b9fd923f033c9299e10b44a7fcba84ec509563484c5955e67c"
+      "sha256": "ecc20800b7da1898cd421a9627ff230f348ea5c0cee8a8caf51019f5babdf622"
+    },
+    {
+      "path": "reports/INDEPENDENT_REVIEW.json",
+      "sha256": "e4d1b7ef0d175078238200a4698f853a654ae56c6b83b11b8c3797b487f55cf0"
+    },
+    {
+      "path": "reports/LICENSING.json",
+      "sha256": "6adb9b1c838000a6bfe99d500b93484b3c2f34f94f8756a7d2ab8ce85efb0e4b"
+    },
+    {
+      "path": "reports/NATIVE_SERVICE_UPDATE.json",
+      "sha256": "cdbbd00413049c4053a9107caa01732cb23ce5f9fe591dec1094860140c7f9d4"
+    },
+    {
+      "path": "reports/OMISSION_STATUS.md",
+      "sha256": "75bf2380cb4873949598aee6acb0dd72a2dfbaf96680cd8b47d2c126caf9b6b9"
+    },
+    {
+      "path": "reports/VERIFICATION.json",
+      "sha256": "6e1c0324965e0ea02f0ea9a025037a5856dbf9ad70ff4be1e55531aeeb8edaf9"
+    },
+    {
+      "path": "reports/releases/0.2.1/IMPLEMENTATION_MANIFEST.json",
+      "sha256": "5b9b14be2d1b442e789c50f85a52c4fea725461254f4df779ae50e89f64aa549"
     },
     {
       "path": "scripts/bootstrap.ps1",
@@ -43,7 +171,7 @@
     },
     {
       "path": "src/delta_hmi/__init__.py",
-      "sha256": "d63a465127fa2d875e85c741ae6e9af407ff623e0b314075139d8148853f2bfd"
+      "sha256": "078fe30f0e1c3f3bf460ad5764d253eaed47e96698b69c835c15ba7135018ef3"
     },
     {
       "path": "src/delta_hmi/cli.py",
@@ -55,7 +183,7 @@
     },
     {
       "path": "src/delta_hmi/gateway.py",
-      "sha256": "6460e8d419eae04becd724e554dcda0b26f69e861968bded5b455a0002a014cd"
+      "sha256": "0d8f8dd7690137dca948b25abc49c1bc267f846b5ae121fcf769c4df8202d205"
     },
     {
       "path": "templates/backends.json",
@@ -63,11 +191,15 @@
     },
     {
       "path": "templates/component_files.json",
-      "sha256": "931a4f11323c0c968894fb73290208e606fb302b1887af336e197d252e49315d"
+      "sha256": "4c744c655386f069bd773b4e3fc86634fd116ca9ad99a8b9d9f36c2022399458"
     },
     {
       "path": "templates/releases.lock.json",
       "sha256": "509559bfbf627eebdc0ad164289548ffbeb6dd66107ef65405603da04eb1e427"
+    },
+    {
+      "path": "tests/test_ci.py",
+      "sha256": "64d84592c42ca6fa9b334410f06f3b2a514de2d5e1edc381586c40a5c83a8d22"
     },
     {
       "path": "tests/test_config.py",
@@ -75,7 +207,7 @@
     },
     {
       "path": "tests/test_diascreen_gateway.py",
-      "sha256": "8140dcc1308317678904d2aa092e6d76a5b604da7efc890a27f3c51f544ffc44"
+      "sha256": "11edae1e0d1ae005ff354d6431daaea3d5ab6d05f85d173cd5d625606db8514a"
     },
     {
       "path": "tests/test_gateway.py",
@@ -94,10 +226,6 @@
       "sha256": "34c57cd8d86dd58d0c4b74f4fe3116d0d8a68a4ecf925bd420acc55fbdbf228e"
     },
     {
-      "path": "THIRD_PARTY_NOTICES.md",
-      "sha256": "748c22c18492bd33f1beebc1cdbb91fd6c50b082f325fee9154b383688de1487"
-    },
-    {
       "path": "tools/check_snapshots.py",
       "sha256": "fa888ce951fe77165d1cf80ce3d7cbce3835bec214ec823c17cc10137fadb78b"
     },
@@ -108,10 +236,6 @@
     {
       "path": "tools/guard.py",
       "sha256": "58ed8dced250e885f012702446ff138a078cd551d3ea3c7c7b82d7ee100a576d"
-    },
-    {
-      "path": "tests/test_ci.py",
-      "sha256": "64d84592c42ca6fa9b334410f06f3b2a514de2d5e1edc381586c40a5c83a8d22"
     }
   ]
 }

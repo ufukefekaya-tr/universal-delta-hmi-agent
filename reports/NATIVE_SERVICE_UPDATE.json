@@ -1,0 +1,97 @@
+{
+  "schema": "delta.hmi.native-service-update.v1",
+  "status": "PASS_FILE_SERVICES_WITH_DECLARED_HOST_SKIP",
+  "version": "0.3.0",
+  "DIAScreen_component": "0.4.0",
+  "tools": 69,
+  "source_integrity": {
+    "status": "SOURCE_MANIFEST_VERIFIED",
+    "version": "0.4.0",
+    "files": 29,
+    "manifest_sha256": "e768ec7ecd81f7dcc3a5569e1a7a66ae3f63406a6e0900f8a55a423d7998c931",
+    "engine_sha256": "50585718b316b74c46d8c99744ca607138845e7c03a5b665f95e3332a8ef11fb"
+  },
+  "source_scope": "Original generic implementation only; no customer native projects/tags/IP/passwords/fonts/machine generators",
+  "local_deployment": {
+    "version": "0.4.1-tz.1",
+    "tools": 82,
+    "not_distributed": true
+  },
+  "offline_suites": {
+    "gateway": {
+      "cases": 62,
+      "failed": 0,
+      "skipped": 0
+    },
+    "DOP_B_unchanged": {
+      "cases": 981,
+      "failed": 0,
+      "skipped": 0
+    },
+    "DIAScreen": {
+      "cases": 163,
+      "failed": 0,
+      "skipped": 1,
+      "host_skip": "Windows host does not permit a neutral symbolic link; mock reparse and other path guards pass"
+    }
+  },
+  "test_log_sha256": {
+    "DIAScreen": "380a4815b10966ee36ebe4aa52f92bdfad9b28d6bc1c51473c8130a0cdc1112e",
+    "integration": "0990b7bf95cc5365ad4f465cf7a60fb1d6a0916a75cd5da10cfd12780178ab2f"
+  },
+  "integration_note": "Full runner reached one documentation catalog mismatch; catalog leaf entries were corrected and complete DIAScreen suite rerun163/163 with one host skip. Gateway62 and unchanged DOP-B981 already passed; no hidden failed test remains.",
+  "private_native_file_regression": {
+    "anonymous_source_id": "native-service-private-001",
+    "source_sha256": "14e8f7144973e6870dda45b1d7861969f8222d498773a5c113aedf2c75b998f9",
+    "candidate_sha256": "15b51f1954ae4c6f4cb17ab58373ccefc2b38d3a42c436077c3524d9a15e4ead",
+    "pages": 24,
+    "objects": 749,
+    "operations": 8,
+    "CLI": {
+      "status": "PASS",
+      "negative_checks": 6
+    },
+    "MCP": {
+      "status": "PASS",
+      "negative_checks": 6
+    },
+    "source_preserved": true,
+    "scope": "Exact saved native file bytes only; not vendor/runtime qualification"
+  },
+  "visuals": {
+    "status": "PASS",
+    "languages": 3,
+    "fit_checks": 117,
+    "overflows": 0,
+    "scope": "Actual native font fields and pinned host glyph advances; synthetic pixels",
+    "page_ids": [
+      1
+    ]
+  },
+  "relocation": {
+    "status": "PASS",
+    "manifest_in_wheel": true,
+    "network_download": false,
+    "global_install": false,
+    "wheel_sha256": "c09cae991914971cd5f130023abc29d82b5e1885edf27b8e0eea0c4253069bd5"
+  },
+  "independent_review": {
+    "status": "PASS",
+    "scope": "Generic source/omission, complete source manifest, trusted-host environment, malformed PNG and uncertain I/O transport",
+    "reviewer_role": "Independent HMI reviewer; read-only memory tests, no source/DB/DPA writes",
+    "code_sha256": "50585718b316b74c46d8c99744ca607138845e7c03a5b665f95e3332a8ef11fb"
+  },
+  "native_qualified": false,
+  "vendor_qualified": false,
+  "vendor_compile": "NOT_IMPLEMENTED",
+  "offline_simulator": "NOT_IMPLEMENTED",
+  "vendor_transfer_package": "NOT_IMPLEMENTED",
+  "physical_IO": false,
+  "historical_offline_bundles": "Existing0.2.1 assets/locks unchanged; current main is source update",
+  "migration": "docs/NATIVE_MIGRATION.json",
+  "reproduce": [
+    "python tools/ci.py install",
+    "python tools/ci.py test",
+    "python -B -m universal_diascreen_hmi.extended.runner --check"
+  ]
+}

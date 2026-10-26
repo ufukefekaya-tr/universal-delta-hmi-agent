@@ -13,3 +13,5 @@ Proprietary native projects, vendor binaries, private symbol exports, machine lo
 DIAScreen, DOP-100 and related vendor names identify the observed file family. They do not imply affiliation, endorsement or an official SDK. Vendor products and formats remain the property of their respective owners.
 
 Offline parsing, exact-byte validation, synthetic preview and partial compiled observation do not establish vendor compilation, native pixel fidelity, panel/runtime behavior or physical acceptance. Support and withdrawn claims are recorded in the support matrix, regressions and final review for the exact release.
+
+The optional visual extra imports Pillow12.2.0 under its MIT-CMU license. Pillow and Windows fonts are not redistributed in this component; supply dependencies and licensed host fonts separately.

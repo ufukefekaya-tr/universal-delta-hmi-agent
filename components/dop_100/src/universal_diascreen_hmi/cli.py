@@ -135,7 +135,7 @@ def serve(session, incoming=None, outgoing=None):
                 initialized = True
                 result = {'protocolVersion': requested if requested in PROTOCOLS else PROTOCOLS[0],
                           'capabilities': {'tools': {'listChanged': False}},
-                          'serverInfo': {'name': 'universal-diascreen-hmi', 'version': '0.1.1'},
+                          'serverInfo': {'name': 'universal-diascreen-hmi', 'version': '0.4.0'},
                           'instructions': 'File workspace only. Inspect first. Proposals require exact plan approval and --allow-write. Vendor/runtime acceptance is separate.'}
             elif method == 'ping':
                 result = {}
@@ -173,8 +173,11 @@ def main(argv=None):
     parser.add_argument('--allow-write', action='store_true')
     args = parser.parse_args(argv)
     try:
-        session = Session(args.workspace, allow_write=args.allow_write, read_roots=args.read_root)
-        return serve(session)
+        from .extended.hmi4_service import Service
+        from .extended.transport import install,cli as transport_cli
+        install()
+        session = Service(args.workspace, allow_write=args.allow_write, read_roots=args.read_root)
+        return transport_cli.serve(session)
     except (AgentError, OSError) as exc:
         print('Workspace startup failed: ' + str(exc), file=sys.stderr)
         return 2

@@ -1,3 +1,5 @@
+Current source extension: [native service update](NATIVE_SERVICE_UPDATE.md). See the current 69-tool integration inventory; historical release evidence below remains scoped to its original bytes.
+
 # Supported release scope
 
 | Route | Implementation | Evidence boundary |

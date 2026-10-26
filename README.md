@@ -4,6 +4,8 @@ Portable, file-only MCP tools for Delta HMI engineering. DOP-B/DOPSoft 2 and DOP
 
 This release integrates the existing qualified offline capabilities of two independent components. It preserves unknown native bytes, requires explicit target/source/plan contracts, and saves new candidates. It does not claim support for every model, driver or native widget. See [support](docs/SUPPORT.md) before choosing a task.
 
+Current source update: [native service migration](docs/NATIVE_SERVICE_UPDATE.md). The new source backend has 69 tools; published v0.2.1 offline archives remain historical 30-tool bundles.
+
 ## Install
 
 Download and extract the complete offline ZIP from [Releases](https://github.com/ufukefekaya-tr/universal-delta-hmi-agent/releases). Windows x64 (PowerShell and the system `tar` command):
@@ -31,7 +33,7 @@ The Windows launch option applies only to that installer process and does not ch
 Call `delta_catalog` to see actual backend availability and authority. Tool names have explicit family prefixes:
 
 - `dop_b__`: nine file tools and five persistent job tools. Jobs require a separately configured trusted policy; discovery never starts the queue.
-- `dop_100__`: all 30 audited file tools and legacy aliases, plus `close_session`. Each opened project receives its own process and gateway session handle.
+- `dop_100__`: all 69 audited file tools and legacy aliases, plus `close_session`. Each opened project receives its own process and gateway session handle.
 
 For DOP-B, call `capabilities(profile_id)`, then `open_project(profile_id, source_path)`. Follow the returned session/plan hashes through proposal, preview, validation, approval, application, new-only save and diff.
 
@@ -54,7 +56,7 @@ python tools/ci.py install
 python tools/ci.py test
 ```
 
-CI tests the gateway and both original component suites on Windows and Linux. Integration qualification uses `scripts/probe_both.py` against a clean installed configuration. Test receipts and [independent review](reports/INDEPENDENT_REVIEW.json) identify the actual reviewed scope.
+CI tests the gateway and both original component suites on Windows and Linux. Integration qualification uses `scripts/probe_both.py` against a clean installed configuration. Test receipts and [independent review](reports/NATIVE_SERVICE_UPDATE.json) identify the actual reviewed scope.
 
 - [Architecture](docs/ARCHITECTURE.md), [workflow](docs/WORKFLOW.md), [goals](docs/GOALS.md)
 - [Feature migration](docs/FEATURE_MIGRATION.json), [regressions](docs/REGRESSIONS.json)
