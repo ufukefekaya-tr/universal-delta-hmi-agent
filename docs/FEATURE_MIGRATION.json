@@ -1163,7 +1163,9 @@
       "test_typed_visibility.VisibilityTests.test_same_source_direct_witness_is_mandatory",
       "test_typed_visibility.VisibilityTests.test_audit_cannot_hide_numeric_mismatch_behind_valid_bool",
       "test_typed_visibility.VisibilityTests.test_macro_indirect_unknown_condition_and_missing_fields_refuse",
-      "test_typed_visibility.VisibilityTests.test_fresh_restore_exact_approval_newonly_save_and_readonly_audit"
-    ]
+      "test_typed_visibility.VisibilityTests.test_fresh_restore_exact_approval_newonly_save_and_readonly_audit",
+      "test_typed_visibility.VisibilityTests.test_existing_unsupported_visibility_is_preserved_without_acceptance_credit"
+    ],
+    "existing_other_families": "PRESERVED_ONLY; no visibility acceptance credit"
   }
 }

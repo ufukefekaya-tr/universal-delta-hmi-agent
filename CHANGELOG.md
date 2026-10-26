@@ -10,7 +10,7 @@ DIAScreen component0.4.0 adds69 audited file tools/aliases: source-qualified ato
 
 ## 0.3.4
 
-DIAScreen0.4.5 adds source-qualified readonly numeric/static BOOL visibility, preserving existing conditions and separately auditing numeric and visibility types. No GUI, macro, gauge, password or PLC action is added.
+DIAScreen0.4.5 adds source-qualified readonly numeric/static BOOL visibility, preserving existing conditions and separately auditing numeric and visibility types. No GUI, macro, gauge, password or PLC action is added. Existing visibility on other native families remains preserved-only without acceptance credit; legacy contract rebind remains compatible.
 
 ## 0.3.3
 

@@ -101,17 +101,20 @@ def check_binding(q,e,contract,tag_address=None):
     return dict(type=typ,read=reads,write=writes,status='PASS',scope='Native declared type/width/access/security/wordorder and optional numeric_input fields; not PLC behavioral equivalence')
 def audit_contract(q,contract,contract_sha256,require_all=False,lookup_markers=()):
     hash_value(contract_sha256);require(sha(canonical(contract))==contract_sha256,'CONTRACT_HASH','Contract hash differs');tags=contract_rows(contract)
-    rows=[];seen=set()
+    rows=[];seen=set();preserved_visibility=[]
     for p in q.pages:
         for e in p.elements:
             s=e.section;bindings=[address(field(q,s,k)) for k in ('ReadVar','WriteVar')]
             visible=address(field(q,s,'VisibleVar'))
             if visible and visible['address'] in tags:
-                try:
-                    from .typed_visibility import readback as visibility_readback
-                    detail=visibility_readback(q,e,contract)
-                    rows.append(dict(page_id=p.page_id,element_id=q.index.number(s,'nPartsID'),addresses=[visible['address']],status='PASS',visibility=detail));seen.add(visible['address'])
-                except ValueError as error:rows.append(dict(page_id=p.page_id,element_id=q.index.number(s,'nPartsID'),addresses=[visible['address']],status='FAIL',role='visibility',reason=str(error)))
+                from .typed_visibility import FAMILIES,readback as visibility_readback
+                if family(q,e) not in FAMILIES:
+                    preserved_visibility.append(dict(page_id=p.page_id,element_id=q.index.number(s,'nPartsID'),address=visible['address'],status='PRESERVED_ONLY',reason='Visibility on this source family is not qualified by the numeric/static extension; no acceptance credit'))
+                else:
+                    try:
+                        detail=visibility_readback(q,e,contract)
+                        rows.append(dict(page_id=p.page_id,element_id=q.index.number(s,'nPartsID'),addresses=[visible['address']],status='PASS',visibility=detail));seen.add(visible['address'])
+                    except ValueError as error:rows.append(dict(page_id=p.page_id,element_id=q.index.number(s,'nPartsID'),addresses=[visible['address']],status='FAIL',role='visibility',reason=str(error)))
             declared=[b['address'] for b in bindings if b and b['address'] in tags]
             if declared:
                 try:
@@ -127,4 +130,4 @@ def audit_contract(q,contract,contract_sha256,require_all=False,lookup_markers=(
                     rows.append(dict(page_id=p.page_id,element_id=q.index.number(s,'nPartsID'),addresses=declared,status='PASS'));seen.update(declared)
                 except ValueError as error:rows.append(dict(page_id=p.page_id,element_id=q.index.number(s,'nPartsID'),addresses=declared,status='FAIL',reason=str(error)))
     missing=sorted(set(tags)-seen) if require_all else []
-    return dict(status='PASS' if not missing and all(x['status']=='PASS' for x in rows) else 'FAIL',contract_sha256=contract_sha256,matched_addresses=len(seen),missing=missing,rows=rows,native_qualified=False)
+    return dict(status='PASS' if not missing and all(x['status']=='PASS' for x in rows) else 'FAIL',contract_sha256=contract_sha256,matched_addresses=len(seen),missing=missing,rows=rows,preserved_visibility=preserved_visibility,native_qualified=False)

@@ -12,11 +12,11 @@
   "vendor_compile": "NOT_RUN",
   "tests": {
     "gateway": 63,
-    "diascreen": 190,
-    "typed_visibility": 8,
+    "diascreen": 191,
+    "typed_visibility": 9,
     "failures": 0,
     "skipped": 1,
-    "skip_scope": "Legacy local Windows OS symlink privilege case; all8newvisibility methods ran"
+    "skip_scope": "Legacy local Windows OS symlink privilege case; all9newvisibility methods ran"
   },
   "fresh_protocols": {
     "local_cli": "PASS",
@@ -45,5 +45,7 @@
     "PLC/device writes",
     "Vendor/runtime truth qualification"
   ],
-  "source_witness_privacy": "Private source evidence remains outside this repo; neutral fixtures only"
+  "source_witness_privacy": "Private source evidence remains outside this repo; neutral fixtures only",
+  "regression_correction": "Preserve existing visibility on unsupported source families separately without matched-address credit; keep numeric/static writer scope strict",
+  "private_test_evidence": "Initial full private regression exposed overbroad visibility audit; actual legacy recovery and9neutral tests passed after the narrow preserved-only correction. Complete private evidence is maintained externally."
 }

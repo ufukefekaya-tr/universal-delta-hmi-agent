@@ -82,5 +82,8 @@ class VisibilityTests(unittest.TestCase):
                 s=Service(root,allow_write=True);s.open_project('source.dpa',sha(self.raw),self.profile,sha(canonical(self.profile)));s.inspect();return s
             spec=self.spec();s=session();p=s.plan_native_update(sha(self.raw),spec,sha(canonical(spec)));h=p['plan_sha256'];s=session();s.restore_plan(h);self.refused('APPROVAL',lambda:s.apply_plan(h,'0'*64));s.apply_plan(h,h);s.save_new('visibility.dpa',p['candidate_sha256']);self.assertEqual((root/'source.dpa').read_bytes(),self.raw)
             saved=(root/'visibility.dpa').read_bytes();q=Project(saved);self.assertEqual(sha(saved),p['candidate_sha256']);self.assertEqual(audit_contract(q,spec['contract'],spec['contract_sha256'],True)['status'],'PASS');self.refused('REPLAY_OR_UNKNOWN',lambda:session().restore_plan(h))
+    def test_existing_unsupported_visibility_is_preserved_without_acceptance_credit(self):
+        e=next(e for p in self.q.pages for e in p.elements if (self.q.index.number(e.section,'Type'),self.q.index.number(e.section,'SubType'))==(1,3));patch=token_patch(self.q,e.section,'VisibleVar','{'+self.profile['link']+'}'+str(self.profile['station'])+'@M100','neutral preserved existing visibility');body,_=apply_spans(self.q.file.payload,[patch]);q=Project(self.q.file.encode(body));c=dict(tags=[dict(address='M100',type='BOOL',words=0,access='READ_ONLY')]);r=audit_contract(q,c,sha(canonical(c)));self.assertEqual(r['status'],'PASS');self.assertTrue(r['preserved_visibility']);self.assertEqual(r['matched_addresses'],0)
+        r=audit_contract(q,c,sha(canonical(c)),True);self.assertEqual(r['status'],'FAIL');self.assertEqual(r['missing'],['M100']);self.assertFalse(r['rows'])
 
 if __name__=='__main__':unittest.main()

@@ -19,7 +19,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "21f2c2e59ac58a7e2bd7f692165141ca7336a7dac348b3d0596b2b6c74459a58"
+      "sha256": "236d64fb5d7df1e4d3dff23277e97b305386267771a76e327194362bdc8a0c3a"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -67,7 +67,7 @@
     },
     {
       "path": "docs/FEATURE_MIGRATION.json",
-      "sha256": "265d92972ebef088add72487521f9642e7522c1985f7cc50c52551d96ae2c6f6"
+      "sha256": "77d32dedd16f8d292070a9ba671b9db688e70f9b473081fb3563afc0bdec5043"
     },
     {
       "path": "docs/GAUGE_SOURCE_PROFILE.md",
@@ -107,7 +107,7 @@
     },
     {
       "path": "docs/TYPED_VISIBILITY.md",
-      "sha256": "2e62c1a6cb9da581af4e0e58989d732fba62f00fda0291a625560f54ee46a268"
+      "sha256": "8ed8e4e5980d3d64e5742f5e83c5cd4ac018e044ac5653e1f2dd8a27faa508bb"
     },
     {
       "path": "docs/WORKFLOW.md",
@@ -159,7 +159,7 @@
     },
     {
       "path": "reports/TYPED_VISIBILITY.json",
-      "sha256": "1626952ae92c7d137a7e07ebe1c998369a11873b83e4d726e954b53eb3344a4c"
+      "sha256": "24a766b09bdb5e3ebb830070edfa40824ead4f622cf1241c98c89313f724d856"
     },
     {
       "path": "reports/VERIFICATION.json",
@@ -235,7 +235,7 @@
     },
     {
       "path": "templates/component_files.json",
-      "sha256": "6c69a85899f23b8b99bc6240f46dfb343f33d0d07114bffa4b3ce4cfb2a23b99"
+      "sha256": "ad89fecbecddcf2041150ad22080f7201e50a3c885cb0be543abf1c1e39c174b"
     },
     {
       "path": "templates/releases.lock.json",

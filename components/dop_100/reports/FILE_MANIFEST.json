@@ -87,8 +87,8 @@
     },
     {
       "path": "docs/SUPPORT_MATRIX.json",
-      "sha256": "bd290883ba2a8088a691e38f94a9e06b4c219fb948a0e3d26f268c1f5c62dd57",
-      "size": 119649
+      "sha256": "3ef5b1cee0200ebd9c65f6ae807041e562e95c8cce42290ae42654a4e268a2ec",
+      "size": 119854
     },
     {
       "path": "docs/SUPPORT_MATRIX.md",
@@ -97,8 +97,8 @@
     },
     {
       "path": "docs/TYPED_VISIBILITY.md",
-      "sha256": "2e62c1a6cb9da581af4e0e58989d732fba62f00fda0291a625560f54ee46a268",
-      "size": 2404
+      "sha256": "8ed8e4e5980d3d64e5742f5e83c5cd4ac018e044ac5653e1f2dd8a27faa508bb",
+      "size": 2821
     },
     {
       "path": "docs/WORKFLOW.md",
@@ -247,7 +247,7 @@
     },
     {
       "path": "src/universal_diascreen_hmi/extended/RELEASE_MANIFEST.json",
-      "sha256": "6a6d0b996ea47340707fced48c70d212d64ae7126a7316a6095e0671111ab9ce",
+      "sha256": "f2f1fb947cedcbd074cc9dc5ad3b1edd4e7cd741a4be73fcaf0611b93523279f",
       "size": 4039
     },
     {
@@ -287,8 +287,8 @@
     },
     {
       "path": "src/universal_diascreen_hmi/extended/hmi4_inspect.py",
-      "sha256": "884703630c077de0d30faa0faf2b637bddae6fe56cc886a9163660e40a29d741",
-      "size": 13196
+      "sha256": "e4f7ce2cb627bb2df9f9393676dbe2f0569dd3f421ee1872922278f4bd738d0c",
+      "size": 13630
     },
     {
       "path": "src/universal_diascreen_hmi/extended/hmi4_registry.py",
@@ -487,8 +487,8 @@
     },
     {
       "path": "tests/test_typed_visibility.py",
-      "sha256": "7e88f64e8ec2063bd1b16370b0348083cb8073eeb609bffe6ee7f30dcc23a0f6",
-      "size": 9638
+      "sha256": "4cf76c10272bf3778cf22c93939586eda6493d7d66774fddc65efe75c6e773a6",
+      "size": 10515
     },
     {
       "path": "tools/private_qualification.py",
