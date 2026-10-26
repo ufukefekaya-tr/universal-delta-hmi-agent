@@ -1109,7 +1109,7 @@
     ]
   },
   "state_lookup_extension": {
-    "version": "0.4.3",
+    "version": "0.4.4",
     "document": "STATE_LOOKUP.md",
     "disposition": "SOURCE_BOUND_FILE_ONLY",
     "implementation": [
@@ -1122,8 +1122,24 @@
       "test_state_lookup.LookupTests.test_missing_duplicate_extra_negative_boolean_enum_refuse",
       "test_state_lookup.LookupTests.test_dependency_and_font_variants_refuse",
       "test_state_lookup.LookupTests.test_no_unsigned_or_bool_general_coercion_and_writer_refuse",
-      "test_state_lookup.LookupTests.test_fresh_session_donor_drift_restore_and_save"
+      "test_state_lookup.LookupTests.test_fresh_session_donor_drift_restore_and_save",
+      "test_dense_lookup.DenseTests.test_dense_view_keeps_produced_enum_separate_and_numeric_unknowns",
+      "test_dense_lookup.DenseTests.test_dense_holes_order_and_placeholder_guards",
+      "test_dense_lookup.DenseTests.test_readback_rejects_same_set_in_wrong_order",
+      "test_dense_lookup.DenseTests.test_marker_free_source_audit_does_not_change_profile_or_plan",
+      "test_dense_lookup.DenseTests.test_source_audit_digest_owner_text_duplicates_and_station_refuse",
+      "test_dense_lookup.DenseTests.test_no_fake_contract_enum_expansion_for_holes"
     ],
-    "simultaneous_mask_decoder": false
+    "simultaneous_mask_decoder": false,
+    "encoding": "DENSE_STATE_INDEX",
+    "sparse_serialized_values": "WITHDRAWN",
+    "readonly_source_expectation_audit": true
+  },
+  "fixed_bool_native_action": {
+    "status": "NOT_QUALIFIED",
+    "description": "Fixed TRUE/FALSE bit write is not momentary/maintained toggle or an INT constant button",
+    "reason": "No observed same-family SET/RESET donor in the inspected source; enum/opcode must not be invented",
+    "current_api": "NONE",
+    "native_or_runtime_accepted": false
   }
 }

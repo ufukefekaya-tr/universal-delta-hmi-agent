@@ -99,7 +99,7 @@ def build(raw,profile,spec,lookup_sources=None):
           'clone_element':common|{'new_page_id','new_element_id','retain_bindings','retain_macros','binding'},
           'replace_element':common|{'donor_page_id','donor_element_id','donor_sha256','retain_bindings','retain_macros'},
           'delete_element':{'op','page_id','element_id','expected_element_sha256'},
-          'state_lookup':common|{'donor','binding'},
+          'state_lookup':common|{'donor','binding','view'},
           'edit_page':{'op','page_id','expected_page_sha256','titles','descriptions','name','background_page_id'},
           'clone_page':{'op','page_id','expected_page_sha256','new_page_id','name','titles','retain_macros','png_base64'},
           'navigation':common|{'target_page_id','target_name'},

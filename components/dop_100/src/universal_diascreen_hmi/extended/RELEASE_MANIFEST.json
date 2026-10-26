@@ -1,15 +1,15 @@
 {
   "schema": "delta.hmi.source-release.v1",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "files": [
     {
       "path": "__init__.py",
-      "sha256": "f634a6681af86a11fb92ab372c03af7f24a5f287932c6808b61bf3527900915c",
+      "sha256": "82040d77efe2275bd109fc349e1f471d8a77601974163171b77904fa309499cd",
       "bytes": 111
     },
     {
       "path": "cli.py",
-      "sha256": "ba81dc3b41366aea51c50b1a8af7ee6f2f799fde9927a6ceb7962c6ffd338240",
+      "sha256": "00d9a5e7fa9a9c2cb0aa2229e23bbef9fabc9879a11020c6841360dcf9f4c3b3",
       "bytes": 10391
     },
     {
@@ -54,7 +54,7 @@
     },
     {
       "path": "extended/hmi4_bootstrap.py",
-      "sha256": "e42679be633821de07c9a1bb42dc2a106973d11887a9011ab06ee5b76744d379",
+      "sha256": "6d0656be830ff96a6ad2396467f3cbcf9d77840113fe4ade2eb3d64ab4af2302",
       "bytes": 3350
     },
     {
@@ -69,13 +69,13 @@
     },
     {
       "path": "extended/hmi4_service.py",
-      "sha256": "2275e4e61ee965e10df7a9b4674dc72100458780a98a6224630a90eae26e8571",
-      "bytes": 21576
+      "sha256": "4e71677fc99b7c570a6227e058fdc183c7ae3d1a8f393d3ad0c009a13e8c5161",
+      "bytes": 23512
     },
     {
       "path": "extended/hmi4_transaction.py",
-      "sha256": "07ed690770940cb5f48ec9aea6a063fa961926a0060b72b3f9c07930a0e9131c",
-      "bytes": 30683
+      "sha256": "b70d49d3e8fca1af966c367356276244208ab85589ec9573b9f4799b8279d4b6",
+      "bytes": 30690
     },
     {
       "path": "extended/hmi4_visual.py",
@@ -114,13 +114,13 @@
     },
     {
       "path": "extended/state_lookup.py",
-      "sha256": "cbdcba4cc665027fc641d6548e7f0705a2824dbdce1f61d3a41cdae10f579696",
-      "bytes": 9369
+      "sha256": "ce8a25556bd29b459151b8fd2d9a8dc03fc66b2ccb7677576f795656a6039342",
+      "bytes": 13864
     },
     {
       "path": "extended/transport.py",
-      "sha256": "5c1a404c379e623f8fa5e11094e4a6be98c6a300ddd84efdd50029c91e82f8ba",
-      "bytes": 5437
+      "sha256": "3cf107a731dd6135df08b7d00f742e88631883a1bd3c1caa82348593e7244c2d",
+      "bytes": 5542
     },
     {
       "path": "extended/worker.py",

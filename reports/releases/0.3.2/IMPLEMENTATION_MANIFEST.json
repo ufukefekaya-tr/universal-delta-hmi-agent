@@ -1,0 +1,265 @@
+{
+  "scope": "Current0.3.2 source; complete root public membership excluding separately snapshotted components and this manifest",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "cce2bd8f2e3d53263ad034e0000b1ad961e182e5d973787ebc71f105940f77d6"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "355293831c7a3db593acb78b6dbf987ffa911d1a67a5e65881159c72b8b02e77"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "db26458f880a1d30fdf13cbbf58f1a735a9c1f219bc13c64723de4f749e669a7"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "2ee765bbd53a37826f11c21688ff500b538dbc6f584d3af5df1b10926d445f9e"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "36ca07cc0c24a3a2cb6813ec7228ebb0192677d6fd1aacd89e9b1de918d56509"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "7c01c47ea582fbed8793149873c947a7ef80e2ae03a72c1f7bf468d800ea3ed6"
+    },
+    {
+      "path": "INDEX.md",
+      "sha256": "9db0e85d496af23c4a9c00f331de6594b25a6b49c42614a22c7a85bc524b6873"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "652be1c6bbe8b3a7f8d10f4fa6d99b17e299b3c3e21639e8fe480d2a0659981f"
+    },
+    {
+      "path": "README.md",
+      "sha256": "17a7653325148431d3a7b0babaa6ae3840ca58c3d0946390669b120e35768622"
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "8efa0ec9c043ad74da806ad937ee2e4a04e5462a8360b33230509efe8ce4c20e"
+    },
+    {
+      "path": "SYSTEM_PROMPT.md",
+      "sha256": "deb5d0b395a8b6ce7f11411ca94e6a67ccdd554a12b88a1644ced410e949a098"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "41b7ba04bb54833c2f068bcf3fa591d1f78bde889923de37e5ee0fdb7a6d3b9e"
+    },
+    {
+      "path": "docs/AGENT_START.md",
+      "sha256": "c19244144312f2c29b3a24456895ef63c482dcc69c34e996b02d86fe8c77561f"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "a0b3c67b811796b8c90b37aa7d461be2ece63852ab89c7dc52bf1166c93e6c12"
+    },
+    {
+      "path": "docs/DIASCREEN_HANDOFF.md",
+      "sha256": "efef1a83c3c83d1dd5fe0693453e3add6c61719c2d86cac8cd40197d04dfcbea"
+    },
+    {
+      "path": "docs/FEATURE_MIGRATION.json",
+      "sha256": "ff599e7d7d91fdb8a32f5b1e93cb0a5c99bb25e428d09857cdf6c97709986774"
+    },
+    {
+      "path": "docs/GAUGE_SOURCE_PROFILE.md",
+      "sha256": "e3772274632f5e76beb8c4374bf9a9ffa088d7660f968c89639221a6d76fc1a6"
+    },
+    {
+      "path": "docs/GOALS.md",
+      "sha256": "5d3f06d256860e85df932d7173745e931db7317181e902fce4168ea989589c94"
+    },
+    {
+      "path": "docs/JOBS.md",
+      "sha256": "e10300082ac4480548974e822c3c3f0c859596259641c3b17e3511fb83972b05"
+    },
+    {
+      "path": "docs/KAIZEN.md",
+      "sha256": "4a4f5f3d23d5f64ad70fabd996b0d756678346eb872242b4341ef34f1383df41"
+    },
+    {
+      "path": "docs/NATIVE_MIGRATION.json",
+      "sha256": "84a84a17745b02bb8839dbcec4479390276d8ca672bc05540440d5742bda0b21"
+    },
+    {
+      "path": "docs/NATIVE_SERVICE_UPDATE.md",
+      "sha256": "2ae047f4a17cf62ece19382e951e29f98c902eefaae75af269b05fc3d6c476cf"
+    },
+    {
+      "path": "docs/REGRESSIONS.json",
+      "sha256": "d67ab41d1cb7f868e69f3c3a29c5e5a181be950a7d8b45a691b36c68cc4b8991"
+    },
+    {
+      "path": "docs/STATE_LOOKUP.md",
+      "sha256": "272dd41430ef93ae5755e647490136fddbf5edf97984a6f0f8ca750f0a027008"
+    },
+    {
+      "path": "docs/SUPPORT.md",
+      "sha256": "f63a1e358e6ed7846f3e3251c41d75b85623444224b4c31abf72853ec52749ab"
+    },
+    {
+      "path": "docs/WORKFLOW.md",
+      "sha256": "d9811e6bd8f4376e8550f6699e46063801730e3fd2b9aa990c0f9c44e165703c"
+    },
+    {
+      "path": "examples/create_gateway_demo.py",
+      "sha256": "2581a0a7e54fbeffc5dd889edc066e71ac682d205ffee01ad6ea052de92e5745"
+    },
+    {
+      "path": "projects/README.md",
+      "sha256": "6054690d399769b2c5c80bd7db0962de6d439e12d3ea63ab8997aa7ee33e8810"
+    },
+    {
+      "path": "prompts/roles/IMPLEMENTER.md",
+      "sha256": "80de20092bc39e5740f0cff47fbea75c1ac6d5e6fbbb2f363610e1b35c85887a"
+    },
+    {
+      "path": "prompts/roles/REVIEWER.md",
+      "sha256": "5633f5c70b63c584a6959e588bedc668291338fb294200c6dae29262334934b0"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "84c7e9fbe705c398b0acedbdb32d13692c87c2c7f8f6fa07ce552be5e63a67c5"
+    },
+    {
+      "path": "reports/GAUGE_SOURCE_PROFILE.json",
+      "sha256": "4a4c316c403a625b3319232462753c7ddd712c511e923127e789cf2eb948ada4"
+    },
+    {
+      "path": "reports/INDEPENDENT_REVIEW.json",
+      "sha256": "e4d1b7ef0d175078238200a4698f853a654ae56c6b83b11b8c3797b487f55cf0"
+    },
+    {
+      "path": "reports/LICENSING.json",
+      "sha256": "6adb9b1c838000a6bfe99d500b93484b3c2f34f94f8756a7d2ab8ce85efb0e4b"
+    },
+    {
+      "path": "reports/NATIVE_SERVICE_UPDATE.json",
+      "sha256": "cdbbd00413049c4053a9107caa01732cb23ce5f9fe591dec1094860140c7f9d4"
+    },
+    {
+      "path": "reports/OMISSION_STATUS.md",
+      "sha256": "75bf2380cb4873949598aee6acb0dd72a2dfbaf96680cd8b47d2c126caf9b6b9"
+    },
+    {
+      "path": "reports/STATE_LOOKUP.json",
+      "sha256": "0b0f24d469863135ca2872d7eaa3cf3a5d11603d9fed77bb652e83cf767352cd"
+    },
+    {
+      "path": "reports/VERIFICATION.json",
+      "sha256": "6e1c0324965e0ea02f0ea9a025037a5856dbf9ad70ff4be1e55531aeeb8edaf9"
+    },
+    {
+      "path": "reports/releases/0.2.1/IMPLEMENTATION_MANIFEST.json",
+      "sha256": "5b9b14be2d1b442e789c50f85a52c4fea725461254f4df779ae50e89f64aa549"
+    },
+    {
+      "path": "reports/releases/0.3.0/IMPLEMENTATION_MANIFEST.json",
+      "sha256": "c4991ac1c48ea703633994cd1d0662ae307bd2908f9506eae538408d0856a8ca"
+    },
+    {
+      "path": "reports/releases/0.3.1/IMPLEMENTATION_MANIFEST.json",
+      "sha256": "82618809aa6ee4ad87d419ecdeba9da9c470b447d12b4350dbfe1a4dc9e0a5a2"
+    },
+    {
+      "path": "scripts/bootstrap.ps1",
+      "sha256": "d558b041b58ce324f66cd8d07a0a87513975a9cabd7c011a6c515f6423791a23"
+    },
+    {
+      "path": "scripts/bootstrap.sh",
+      "sha256": "e2eff0b9b1b82657988dc352ca23bd5e7dd39dcb00f7b6f180c27c72054e6cfd"
+    },
+    {
+      "path": "scripts/build_package.py",
+      "sha256": "aaae60324203e0bc594897431130b34a76ff903b7c34035fc08e77dda85ccf39"
+    },
+    {
+      "path": "scripts/finish_install.py",
+      "sha256": "af476baf6d6ea804e6746f3a4e599095eae910b008384a824b27e9406691c064"
+    },
+    {
+      "path": "scripts/probe_both.py",
+      "sha256": "2a2c01d464b85e07eb8a9e024485e4034c363071629c6cf4b7b5895c2eb546c1"
+    },
+    {
+      "path": "scripts/probe_stdio.py",
+      "sha256": "a70d05760b0c0290de97da7a5048a4a2e3daac3e1de97867e4a45c510e114a21"
+    },
+    {
+      "path": "src/delta_hmi/__init__.py",
+      "sha256": "42229c2fa9dea3d9b7309b4618229aa9de94e0971165a75a5de58ecf266e46a0"
+    },
+    {
+      "path": "src/delta_hmi/cli.py",
+      "sha256": "40d8e3a7e0054e635afebf62083602302596bebbe7c46a28cfb23a54a2b44520"
+    },
+    {
+      "path": "src/delta_hmi/config.py",
+      "sha256": "a690ba5da690604d97542b6e94f5e52facd5c13143a518e44b45e07094339e66"
+    },
+    {
+      "path": "src/delta_hmi/gateway.py",
+      "sha256": "105a45f6802e2a398a2bdc2bf96faf47cfe3094c6ed1defafb638d555538ed9b"
+    },
+    {
+      "path": "templates/backends.json",
+      "sha256": "d38dcc32b796e8d42e31c1d124489fa56bd5c06990999390fc3e5d4c82f980cb"
+    },
+    {
+      "path": "templates/component_files.json",
+      "sha256": "99558ad90b3e8296e73fce3ac427975e968e6c89bee6677b09396ba9cfcf755b"
+    },
+    {
+      "path": "templates/releases.lock.json",
+      "sha256": "509559bfbf627eebdc0ad164289548ffbeb6dd66107ef65405603da04eb1e427"
+    },
+    {
+      "path": "tests/test_ci.py",
+      "sha256": "64d84592c42ca6fa9b334410f06f3b2a514de2d5e1edc381586c40a5c83a8d22"
+    },
+    {
+      "path": "tests/test_config.py",
+      "sha256": "7cd6e4e3186347d41f8af62d40d6bad149fc920b0357c1c8b2089f1ab49236c4"
+    },
+    {
+      "path": "tests/test_diascreen_gateway.py",
+      "sha256": "4a8f95e7a54b185f98e47b092d14297bd2ad92100aa038b110b3cd12f42afe34"
+    },
+    {
+      "path": "tests/test_gateway.py",
+      "sha256": "7a59a2dae102dde9aff67adea5b757e5a3bbf2e73bc529172b4acc9f34a252e3"
+    },
+    {
+      "path": "tests/test_installation.py",
+      "sha256": "f8b3dd2054f4cec53d127b7887b777288eb060173f918e241336bcffd9b476a0"
+    },
+    {
+      "path": "tests/test_inventory.py",
+      "sha256": "50df131eeedcd2b044b29a512b49fc260d5469cfd0663be780b15178ca19659d"
+    },
+    {
+      "path": "tests/test_jobs_gateway.py",
+      "sha256": "34c57cd8d86dd58d0c4b74f4fe3116d0d8a68a4ecf925bd420acc55fbdbf228e"
+    },
+    {
+      "path": "tools/check_snapshots.py",
+      "sha256": "fa888ce951fe77165d1cf80ce3d7cbce3835bec214ec823c17cc10137fadb78b"
+    },
+    {
+      "path": "tools/ci.py",
+      "sha256": "8303d3a485af65f0606d845f27188179027ef7c78dae65defb2c7d10ad45dbb6"
+    },
+    {
+      "path": "tools/guard.py",
+      "sha256": "58ed8dced250e885f012702446ff138a078cd551d3ea3c7c7b82d7ee100a576d"
+    }
+  ]
+}

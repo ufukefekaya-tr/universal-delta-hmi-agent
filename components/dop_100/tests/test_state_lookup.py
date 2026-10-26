@@ -37,9 +37,10 @@ class LookupTests(unittest.TestCase):
   with self.assertRaises(Exception)as c:f()
   self.assertEqual(getattr(c.exception,'code',None),code,str(c.exception))
  def test_32_and_sparse_exact_domains_preserve_unowned_bytes(self):
-  for values in (range(32),(0,3,31)):
+  for values in (range(32),):
    spec=self.spec(values);b=self.build(spec);q=Project(b['candidate']);e=q.element(1,13);self.assertEqual([q.index.number(st,'Value')for st in e.states],list(values));self.assertIsNone(native_type(q,e));self.assertEqual(element_hash(q,q.element(1,10)),element_hash(self.q,self.q.element(1,10)));self.assertTrue(b['proof']['application_auth_globalmacros_exact']);self.assertTrue(b['proof']['resource_bytes_exact'])
    c=spec['contract'];self.assertEqual(audit_contract(q,c,sha(canonical(c)),True,lookup_markers=b['profile']['state_lookups'])['status'],'PASS');self.assertEqual(audit_contract(q,c,sha(canonical(c)),True)['status'],'FAIL')
+  self.refused('LOOKUP_DENSE_INDEXED',lambda:self.build(self.spec((0,3,31))))
  def test_missing_duplicate_extra_negative_boolean_enum_refuse(self):
   for variant in ('missing','duplicate','extra','negative','bool'):
    s=self.spec();op=s['operations'][0]
@@ -48,7 +49,7 @@ class LookupTests(unittest.TestCase):
    if variant=='extra':op['states'].append({**op['states'][0],'value':32})
    if variant=='negative':s['contract']['tags'][0]['enum'][0]=-1
    if variant=='bool':op['states'][0]['value']=False
-   s['contract_sha256']=sha(canonical(s['contract']));self.refused('LOOKUP_ENUM',lambda:self.build(s))
+   s['contract_sha256']=sha(canonical(s['contract']));self.refused('LOOKUP_STATES'if variant=='bool'else'LOOKUP_ENUM'if variant=='negative'else'LOOKUP_DENSE_INDEXED',lambda:self.build(s))
  def test_dependency_and_font_variants_refuse(self):
   e=self.dq.element(1,10)
   for old,new,code in [(b'VisibleVar=None',b'VisibleVar=$2','LOOKUP_DEPENDENCY'),(b'ChangeTime=500',b'EventID=1\r\nChangeTime=500','LOOKUP_SCHEMA'),(b'FontName0=Arial',b'FontName0=Unknown','LOOKUP_FONT')]:

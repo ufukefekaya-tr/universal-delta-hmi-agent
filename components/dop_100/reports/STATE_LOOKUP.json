@@ -1,65 +1,79 @@
 {
-  "schema": "delta.hmi.state-lookup.v1",
-  "version": "0.3.2",
-  "DIAScreen_component": "0.4.3",
+  "schema": "delta.hmi.state-lookup.v2",
+  "version": "0.3.3",
+  "DIAScreen_component": "0.4.4",
   "status": "PASS_SOURCE_BOUND_FILE_ONLY_WITH_DECLARED_LEGACY_HOST_SKIP",
   "tools": 70,
   "source_integrity": {
     "files": 32,
-    "engine_sha256": "1638ae743461ffddddf8531b3996c8b92e8eb38659b5486420550ae4ffd7b502",
-    "manifest_sha256": "66859f115fadb2398f7c69bf8f4b44472087842585938201de4813d18ece9e10"
+    "manifest_sha256": "152ad0278663a2dbe03815185e8e094880e79e52c66face11d8c2ddfb7bae8f8",
+    "engine_sha256": "3f3f40bd213794cae405bd70e69592d19afed5436d193a55048b27c875b5f025"
   },
-  "scope": "Original generic code and neutral fixtures; no customer DPA/profile/tags/endpoints/credentials/fonts/private generator",
+  "withdrawal": {
+    "previous_version": "0.4.3",
+    "sparse_serialized_StateValue": "WITHDRAWN",
+    "evidence": "Observed manufacturer-resaved source normalizes sparse values by ordinal while preserving all three-language text order",
+    "service_executed_vendor": false,
+    "private_native_files_distributed": false
+  },
+  "encoding": {
+    "native_family": [
+      7,
+      1
+    ],
+    "role": "LOOKUP_WORD16_NONNEGATIVE",
+    "ordered_indices": "0..maximum",
+    "actual_PLC_enum_enlarged": false,
+    "explicit_dense_view": true,
+    "holes": "Bounded literal unknown text with decimal index",
+    "outside_view_runtime": "UNQUALIFIED_NO_FALLBACK_CLAIM",
+    "general_type_coercion": false
+  },
+  "readonly_source_audit": {
+    "candidate_contract_expectation_owner_hash_bound": true,
+    "exact_link_station_address": true,
+    "ordered_three_language_text_map": true,
+    "profile_mutated": false,
+    "reapply_or_native_save": false,
+    "vendor_runtime_accepted": false
+  },
   "tests": {
     "gateway": {
       "cases": 63,
-      "failures": 0,
+      "failed": 0,
       "skipped": 0
     },
     "DIAScreen": {
-      "cases": 176,
-      "failures": 0,
+      "cases": 182,
+      "failed": 0,
       "skipped": 1,
-      "skip": "Legacy Windows OS symlink privilege; five new lookup tests do not skip"
+      "skip": "Legacy local Windows OS symlink privilege; all six new dense cases ran"
     }
   },
-  "logs_sha256": {
-    "gateway": "4a9872d16fab30ec3cc1ee1bc64003c244af40172d38c9f25a932402fbb0ec37",
-    "DIAScreen": "434506fec032e417212b0fb57ced1762d9495f568a98f954bee0900bfb7054ef"
-  },
-  "lookup": {
-    "role": "LOOKUP_WORD16_NONNEGATIVE",
-    "native_format": {
-      "MemLen": 1,
-      "MemFmt": 2
-    },
-    "signed_native_type": false,
-    "explicit_complete_enum": true,
-    "sparse_sets_supported": true,
-    "languages": 3,
-    "donor_pins_revalidated": true,
-    "general_type_coercion": false,
-    "simultaneous_mask_decoder": false,
-    "unknown_runtime_value": "UNQUALIFIED_NO_FALLBACK_CLAIM"
+  "test_logs_sha256": {
+    "gateway": "016cd130770a1091be4bda48e3972a86a7022f8eeee5820957a60db8512ff1e0",
+    "DIAScreen": "40869ab0043f7508397bedcf4eeb74e71d2e7e52e029ebd0fd57ac05ad5d1c26"
   },
   "fresh_protocols": {
-    "local_and_product_CLI_MCP": true,
-    "identical_saved_candidate": true,
-    "fresh_reopen": true,
-    "source_and_donor_unchanged": true,
-    "gauge_auth_application_globalmacros_resources_exact": true,
-    "donor_drift_approval_write_replay_negatives": "PASS"
+    "local_and_generic_CLI_MCP": true,
+    "identical_new_saved_bytes": true,
+    "full_read_reopen": true,
+    "produced15_view123_unknown108": true,
+    "marker_free_readonly_audit": true,
+    "source_donor_unowned_gauge_auth_resources_preserved": true
   },
   "relocated_wheel": {
     "status": "PASS",
-    "source_manifest_files": 32,
+    "files": 32,
     "space_path": true,
     "isolated_python": true
   },
   "independent_technical_review": "PASS",
+  "fixed_BOOL_write": "NOT_QUALIFIED_NO_OBSERVED_SET_RESET_DONOR",
+  "native_Alarm_table_writer": "NOT_IMPLEMENTED",
   "vendor_compile": "NOT_RUN",
   "simulator": "NOT_RUN",
-  "native_pixels": "NOT_ESTABLISHED",
   "physical": "NOT_RUN",
-  "offline_bundles": "Historical0.2.1 archives unchanged; current source update"
+  "scope": "Original generic code and neutral fixtures only; no customer native files/profiles/PLC labels/fonts/credentials",
+  "offline_bundles": "0.2.1 archives remain historical; source update"
 }

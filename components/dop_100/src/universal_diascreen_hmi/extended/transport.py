@@ -13,7 +13,7 @@ def install():
       'inspect_navigation':(dict(candidate_sha256=H),('candidate_sha256',)),
       'inspect_endpoint':(dict(candidate_sha256=H,expected_endpoint=O),('candidate_sha256',)),
       'inspect_affine_scale':(dict(candidate_sha256=H,page_id=I,element_id=I,raw_value=S,display_value=S),('candidate_sha256','page_id','element_id')),
-      'validate_bindings':(dict(candidate_sha256=H,contract=O,contract_sha256=H,require_all=B),('candidate_sha256','contract','contract_sha256')),
+      'validate_bindings':(dict(candidate_sha256=H,contract=O,contract_sha256=H,require_all=B,lookup_expectations={'type':'array','items':O,'minItems':1,'maxItems':1000},lookup_expectations_sha256=H),('candidate_sha256','contract','contract_sha256')),
       'plan_register_import':(dict(candidate_sha256=H,contract=O,contract_sha256=H,bindings={'type':'array','items':O,'minItems':1,'maxItems':999}),('candidate_sha256','contract','contract_sha256','bindings')),
       'plan_native_update':(dict(candidate_sha256=H,specification=O,specification_sha256=H),('candidate_sha256','specification','specification_sha256')),
       'inspect_native_plan':(dict(plan_sha256=H),('plan_sha256',)),

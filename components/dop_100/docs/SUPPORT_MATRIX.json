@@ -2471,6 +2471,42 @@
       "availability_at_authoring": "EXISTS",
       "execution_status": "PASS_FOCUSED_OFFLINE_0.4.3",
       "prior_observation": "Neutral source-derived lookup; vendor/runtime not run"
+    },
+    {
+      "test_name": "test_dense_lookup.DenseTests.test_dense_view_keeps_produced_enum_separate_and_numeric_unknowns",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "FOCUSED_NEUTRAL_PASS_0.4.4",
+      "prior_observation": "Dense indices/actual enum separation/readonly source-map audit; no vendor runtime claim"
+    },
+    {
+      "test_name": "test_dense_lookup.DenseTests.test_dense_holes_order_and_placeholder_guards",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "FOCUSED_NEUTRAL_PASS_0.4.4",
+      "prior_observation": "Dense indices/actual enum separation/readonly source-map audit; no vendor runtime claim"
+    },
+    {
+      "test_name": "test_dense_lookup.DenseTests.test_readback_rejects_same_set_in_wrong_order",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "FOCUSED_NEUTRAL_PASS_0.4.4",
+      "prior_observation": "Dense indices/actual enum separation/readonly source-map audit; no vendor runtime claim"
+    },
+    {
+      "test_name": "test_dense_lookup.DenseTests.test_marker_free_source_audit_does_not_change_profile_or_plan",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "FOCUSED_NEUTRAL_PASS_0.4.4",
+      "prior_observation": "Dense indices/actual enum separation/readonly source-map audit; no vendor runtime claim"
+    },
+    {
+      "test_name": "test_dense_lookup.DenseTests.test_source_audit_digest_owner_text_duplicates_and_station_refuse",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "FOCUSED_NEUTRAL_PASS_0.4.4",
+      "prior_observation": "Dense indices/actual enum separation/readonly source-map audit; no vendor runtime claim"
+    },
+    {
+      "test_name": "test_dense_lookup.DenseTests.test_no_fake_contract_enum_expansion_for_holes",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "FOCUSED_NEUTRAL_PASS_0.4.4",
+      "prior_observation": "Dense indices/actual enum separation/readonly source-map audit; no vendor runtime claim"
     }
   ],
   "private_qualification": {
@@ -2542,7 +2578,7 @@
     "runtime": "NOT_RUN"
   },
   "state_lookup_extension": {
-    "version": "0.4.3",
+    "version": "0.4.4",
     "document": "STATE_LOOKUP.md",
     "role": "LOOKUP_WORD16_NONNEGATIVE",
     "support": "SOURCE_BOUND_FILE_ONLY",
@@ -2551,9 +2587,33 @@
       "test_state_lookup.LookupTests.test_missing_duplicate_extra_negative_boolean_enum_refuse",
       "test_state_lookup.LookupTests.test_dependency_and_font_variants_refuse",
       "test_state_lookup.LookupTests.test_no_unsigned_or_bool_general_coercion_and_writer_refuse",
-      "test_state_lookup.LookupTests.test_fresh_session_donor_drift_restore_and_save"
+      "test_state_lookup.LookupTests.test_fresh_session_donor_drift_restore_and_save",
+      "test_dense_lookup.DenseTests.test_dense_view_keeps_produced_enum_separate_and_numeric_unknowns",
+      "test_dense_lookup.DenseTests.test_dense_holes_order_and_placeholder_guards",
+      "test_dense_lookup.DenseTests.test_readback_rejects_same_set_in_wrong_order",
+      "test_dense_lookup.DenseTests.test_marker_free_source_audit_does_not_change_profile_or_plan",
+      "test_dense_lookup.DenseTests.test_source_audit_digest_owner_text_duplicates_and_station_refuse",
+      "test_dense_lookup.DenseTests.test_no_fake_contract_enum_expansion_for_holes"
     ],
     "simultaneous_mask_decoder": false,
-    "vendor_compile": "NOT_RUN"
+    "vendor_compile": "NOT_RUN",
+    "encoding": "DENSE_STATE_INDEX",
+    "sparse_serialized_values": "WITHDRAWN",
+    "produced_enum_separate_from_view": true,
+    "readonly_source_expectation_audit": true
+  },
+  "state_lookup_withdrawal": {
+    "previous_version": "0.4.3",
+    "withdrawn": "Sparse State.Value construction",
+    "reason": "Source-observed manufacturer resave normalizes values by ordinal without text reordering",
+    "old_tests": "File preservation tests; not vendor/runtime proof",
+    "replacement": "Explicit ordered dense view with actual PLC enum retained"
+  },
+  "fixed_bool_native_action": {
+    "status": "NOT_QUALIFIED",
+    "description": "Fixed TRUE/FALSE bit write is not momentary/maintained toggle or an INT constant button",
+    "reason": "No observed same-family SET/RESET donor in the inspected source; enum/opcode must not be invented",
+    "current_api": "NONE",
+    "native_or_runtime_accepted": false
   }
 }

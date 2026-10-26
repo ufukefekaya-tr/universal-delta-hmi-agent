@@ -168,3 +168,11 @@ See [gauge readback and fresh source profiles](GAUGE_SOURCE_PROFILE.md). Complet
 ## State lookup extension0.4.3
 
 [Source-qualified state lookup](STATE_LOOKUP.md) supports explicit readonly positive enum text with three languages, exact donor pins and separate WORD16 role validation. General type conversion and DWORD mask decoding remain unsupported. Five neutral regression methods cover positive/negative and durable save paths.
+
+
+## Dense ordinal correction0.4.4
+
+Sparse State.Value writer support is withdrawn after a manufacturer-resaved source normalized indices. [State lookup](STATE_LOOKUP.md) now separates actual produced PLC codes from explicit dense display coverage and validates source text maps without rewriting or adopting profile markers. Runtime/default behavior outside the view remains unqualified.
+
+
+Fixed TRUE/FALSE bit actions remain unqualified without an observed SET/RESET source donor. A maintained toggle, momentary control or INT constant button is not an equivalent fixed BOOL write. No new native opcode is inferred.

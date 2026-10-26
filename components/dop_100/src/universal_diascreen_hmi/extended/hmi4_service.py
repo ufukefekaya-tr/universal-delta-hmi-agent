@@ -61,7 +61,7 @@ class Service(CoreService):
         r['fresh_source_profile']=dict(tool='intake_source_profile',implemented=True,scope='COMPLETE_COUNTED_FRAMING_PROPOSAL; no old acceptance copied')
         r['incomplete_index']='OPEN_AND_PROJECT_VIEWS_REFUSE_INDEX_INCOMPLETE'
         r['native_transactions']['operations']+=['delete_element','state_lookup']
-        r['state_lookup']=dict(role='LOOKUP_WORD16_NONNEGATIVE',explicit_enum=True,source_donor=True,states=128,native_qualified=False)
+        r['state_lookup']=dict(role='LOOKUP_WORD16_NONNEGATIVE',encoding='DENSE_STATE_INDEX',sparse_states=False,produced_enum_separate_from_view=True,source_expectation_audit=True,source_donor=True,states=128,native_qualified=False)
         r['native_transactions']['preserved_only_families']=[[3,1]]
         r['source_login_clone']=dict(family=[12,3],credential_writer=False,retained_source_only=True)
         r['qualification_state']='SOURCE_BOUND_FILE_TESTED_VENDOR_UNQUALIFIED'
@@ -116,8 +116,20 @@ class Service(CoreService):
         return {**result,'status':'PASS'}
     def inspect_parameters(self,revision=None):return dict(revision=reference.entry(revision)['revision'],matrix=reference.matrix(revision),scope='Frozen per-field native parameter matrix; not PLC runtime values')
     def get_reference_contract(self,revision=None):return reference.reference_contract(revision)
-    def validate_bindings(self,candidate_sha256,contract,contract_sha256,require_all=False):
-        self.checked(candidate_sha256);return inspect4.audit_contract(self._project(),contract,contract_sha256,require_all,lookup_markers=self.current_profile.get('state_lookups',[]))
+    def validate_bindings(self,candidate_sha256,contract,contract_sha256,require_all=False,lookup_expectations=None,lookup_expectations_sha256=None):
+        self.checked(candidate_sha256);hash_value(contract_sha256);require(sha(canonical(contract))==contract_sha256,'CONTRACT_HASH','Exact typed contract digest required');q=self._project();markers=list(self.current_profile.get('state_lookups',[]))
+        if lookup_expectations is None:
+            require(lookup_expectations_sha256 is None,'LOOKUP_EXPECTATION_HASH','Expectation list and digest must be provided together')
+        else:
+            require(isinstance(lookup_expectations,list) and 1<=len(lookup_expectations)<=1000,'LOOKUP_EXPECTATION','Bounded nonempty source expectations required');hash_value(lookup_expectations_sha256)
+            require(sha(canonical(lookup_expectations))==lookup_expectations_sha256,'LOOKUP_EXPECTATION_HASH','Exact source expectation digest required');tags=inspect4.contract_rows(contract);seen=set()
+            from .state_lookup import source_expectation
+            for item in lookup_expectations:
+                require(isinstance(item,dict) and all(type(item.get(k))is int and 0<=item[k]<=65534 for k in ('page_id','element_id')),'LOOKUP_EXPECTATION','Bounded exact source selectors required')
+                key=(item['page_id'],item['element_id']);require(key not in seen,'LOOKUP_EXPECTATION_DUPLICATE','One expectation per native owner');seen.add(key);e=q.element(*key)
+                adr=inspect4.address(inspect4.field(q,e.section,'ReadVar'));require(adr and adr['address']in tags,'TAG_MISSING','Expectation must refer to an audited exact contract tag')
+                marker=source_expectation(q,e,item,tags[adr['address']],self.current_profile);markers=[m for m in markers if(m.get('page_id'),m.get('element_id'))!=key];markers.append(marker)
+        result=inspect4.audit_contract(q,contract,contract_sha256,require_all,lookup_markers=markers);result['source_expectations_sha256']=lookup_expectations_sha256;result['profile_mutated']=False;result['candidate_sha256']=candidate_sha256;return result
     def inspect_affine_scale(self,candidate_sha256,page_id,element_id,raw_value=None,display_value=None):
         self.checked(candidate_sha256);q=self._project();n=inspect4.numeric(q,q.element(page_id,element_id));require(n is not None,'NUMERIC_FAMILY','Numeric input/display required')
         gain=inspect4.dec(n['native_gain']);offset=inspect4.dec(n['native_offset']);factor=inspect4.dec(n['factor']);require(gain!=0,'NUMERIC_SCALE','Zero gain has no inverse')
