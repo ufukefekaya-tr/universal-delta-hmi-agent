@@ -211,6 +211,17 @@ class NativeIndex:
                 pos = default_end + 2
                 current.tokens.append(Token(begin, pos, key, value, kind='opaque'))
                 continue
+            # Literal point-size owner observed on native6.6.2.48 Type3/SubType1.
+            # Other versions/sections/families retain the unknown-frame boundary.
+            gauge_font = (key == 'ScaleFontSize' and current.name == 'Element'
+                and current.one('Type',optional=True) is not None and current.one('Type').value == b'3'
+                and current.one('SubType',optional=True) is not None and current.one('SubType').value == b'1'
+                and self.sections[0].name == 'Application'
+                and all(self.sections[0].one(k,optional=True) is not None and self.sections[0].one(k).value == v
+                    for k,v in [('Version',b'6.6.2.48'),('NewVersion',b'6.6.2.48'),('ModelName',b'268502788')]))
+            if gauge_font:
+                require(re.fullmatch(rb'[0-9]{1,3}',value) is not None and int(value)<=512,
+                        'GAUGE_FONT','Bounded literal gauge point size required')
             count, kind = None, 'scalar'
             if WIDE.fullmatch(key):
                 count, kind = integer(value), 'wide'
@@ -225,7 +236,7 @@ class NativeIndex:
                 count = integer(current.one(width_key).value) * integer(value) * (2 if key == 'RcpGroup' else 4)
                 kind = 'blob'
             elif re.search(r'(?:Len|Length|Bytes|Size)[0-9]*$', key) and value != b'0' and not (
-                    current.name in PREAMBLE_HEADERS and re.fullmatch(r'Length[0-9]{3}', key)) and key not in {
+                    current.name in PREAMBLE_HEADERS and re.fullmatch(r'Length[0-9]{3}', key)) and not gauge_font and key not in {
                     'RcpLen', 'Rcp32Len', 'FontSize0', 'FontSize1', 'ElementFontSize', 'ReduceFontSize',
                     'ScrollSize', 'USBCachSize', 'ReadCtrlVarSize', 'CustomerScrollbarPictureSize', 'MemLen',
                     'LanguageFontSize0', 'LanguageFontSize1', 'LanguageFontSize2', 'FontSize2', 'UnitFontSize1', 'UnitFontSize2', 'TitleTextFontSize001', 'TitleTextFontSize002', 'GDRangeFontSize', 'GHRangeFontSize', 'GBRangeFontSize', 'GARangeFontSize',

@@ -84,6 +84,7 @@
     "inspect_offline_package",
     "inspect_operation",
     "inspect_transfer_package",
+    "intake_source_profile",
     "offline_simulator",
     "pending_changes",
     "plan_contract_rebind",
@@ -268,8 +269,12 @@
     "changes_native_bytes": false,
     "changes_render_order": false
   },
-  "version": "0.4.0",
+  "version": "0.4.2",
   "optional_dependencies": {
     "visual": "Pillow==12.2.0"
-  }
+  },
+  "stateless_tools": [
+    "capabilities",
+    "intake_source_profile"
+  ]
 }

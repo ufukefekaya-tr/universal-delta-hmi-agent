@@ -2393,6 +2393,54 @@
       "availability_at_authoring": "EXISTS",
       "execution_status": "PASS_FINAL_OFFLINE_SUITE_0.4.0",
       "prior_observation": "Original neutral regression; runtime optional dependency is recorded separately"
+    },
+    {
+      "test_name": "test_source_intake.SourceIntakeTests.test_literal_gauge_font_does_not_hide_following_page",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FOCUSED_OFFLINE_0.4.2",
+      "prior_observation": "Neutral synthetic framing/source-retention/dependency regression; no vendor acceptance"
+    },
+    {
+      "test_name": "test_source_intake.SourceIntakeTests.test_unknown_frame_is_not_a_complete_one_page_project",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FOCUSED_OFFLINE_0.4.2",
+      "prior_observation": "Neutral synthetic framing/source-retention/dependency regression; no vendor acceptance"
+    },
+    {
+      "test_name": "test_source_intake.SourceIntakeTests.test_new_scalar_is_model_version_and_family_scoped",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FOCUSED_OFFLINE_0.4.2",
+      "prior_observation": "Neutral synthetic framing/source-retention/dependency regression; no vendor acceptance"
+    },
+    {
+      "test_name": "test_source_intake.SourceIntakeTests.test_multilanguage_resource_fonts_are_scalar_but_unknowns_refuse",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FOCUSED_OFFLINE_0.4.2",
+      "prior_observation": "Neutral synthetic framing/source-retention/dependency regression; no vendor acceptance"
+    },
+    {
+      "test_name": "test_source_intake.SourceIntakeTests.test_fresh_profile_never_uses_old_or_partial_resource_ack",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FOCUSED_OFFLINE_0.4.2",
+      "prior_observation": "Neutral synthetic framing/source-retention/dependency regression; no vendor acceptance"
+    },
+    {
+      "test_name": "test_source_intake.SourceIntakeTests.test_readonly_delete_preserves_gauge_and_refuses_writer",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FOCUSED_OFFLINE_0.4.2",
+      "prior_observation": "Neutral synthetic framing/source-retention/dependency regression; no vendor acceptance"
+    },
+    {
+      "test_name": "test_source_intake.SourceIntakeTests.test_source_login_copy_retains_level_actions_and_empty_macros",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FOCUSED_OFFLINE_0.4.2",
+      "prior_observation": "Neutral synthetic framing/source-retention/dependency regression; no vendor acceptance"
+    },
+    {
+      "test_name": "test_source_intake.SourceIntakeTests.test_delete_event_browser_and_unknown_incoming_dependencies_refuse",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FOCUSED_OFFLINE_0.4.2",
+      "prior_observation": "Neutral synthetic framing/source-retention/dependency regression; no vendor acceptance"
     }
   ],
   "private_qualification": {
@@ -2443,5 +2491,24 @@
     "errors": 0,
     "report": "reports/TEST_RESULTS.json"
   },
-  "native_service_extension": "NATIVE_SERVICE_UPDATE.md"
+  "native_service_extension": "NATIVE_SERVICE_UPDATE.md",
+  "source_intake_extension": {
+    "document": "GAUGE_SOURCE_PROFILE.md",
+    "version": "0.4.2",
+    "tools": 70,
+    "tests": [
+      "test_source_intake.SourceIntakeTests.test_literal_gauge_font_does_not_hide_following_page",
+      "test_source_intake.SourceIntakeTests.test_unknown_frame_is_not_a_complete_one_page_project",
+      "test_source_intake.SourceIntakeTests.test_new_scalar_is_model_version_and_family_scoped",
+      "test_source_intake.SourceIntakeTests.test_multilanguage_resource_fonts_are_scalar_but_unknowns_refuse",
+      "test_source_intake.SourceIntakeTests.test_fresh_profile_never_uses_old_or_partial_resource_ack",
+      "test_source_intake.SourceIntakeTests.test_readonly_delete_preserves_gauge_and_refuses_writer",
+      "test_source_intake.SourceIntakeTests.test_source_login_copy_retains_level_actions_and_empty_macros",
+      "test_source_intake.SourceIntakeTests.test_delete_event_browser_and_unknown_incoming_dependencies_refuse"
+    ],
+    "scope": "SOURCE_BOUND_FILE_ONLY",
+    "gauge": "PRESERVED_ONLY",
+    "vendor_compile": "NOT_RUN",
+    "runtime": "NOT_RUN"
+  }
 }

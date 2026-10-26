@@ -8,6 +8,7 @@ from . import hmi4_transaction as transaction
 from . import hmi4_registry as reference
 from . import hmi4_visual as visual
 from . import hmi4_artifacts as artifacts
+from . import source_intake
 class Service(CoreService):
     def __init__(self,workspace,*,allow_write=False,read_roots=()):
         verify_release();reference_roots=[(ROOT/e['dpa']['path']).parent for e in reference.registry()['deliveries']]
@@ -19,6 +20,20 @@ class Service(CoreService):
             if row is None:db.execute('INSERT INTO metadata VALUES (?,?)',('hmi4_engine_sha256',self.extension_identity))
             db.execute('CREATE TABLE IF NOT EXISTS hmi4_bases (id TEXT PRIMARY KEY,raw BLOB NOT NULL,profile BLOB NOT NULL)')
         artifacts.init(self)
+    def open_project(self,path,source_sha256,profile,profile_sha256):
+        hash_value(source_sha256)
+        with immutable_read(self._path(path)) as (raw,unchanged):
+            require(sha(raw)==source_sha256,'SOURCE_HASH','Source changed before complete readback')
+            source_intake.complete_prefix(Project(raw));unchanged()
+        return super().open_project(path,source_sha256,profile,profile_sha256)
+    def _project(self):
+        return source_intake.complete_prefix(super()._project())
+    def intake_source_profile(self,path,source_sha256,expected_link,expected_station):
+        require(identity()==self.extension_identity,'ENGINE_DRIFT','Source intake engine changed')
+        with immutable_read(self._path(path)) as (raw,unchanged):
+            result=source_intake.intake(raw,source_sha256,expected_link,expected_station);unchanged()
+        require(identity()==self.extension_identity,'ENGINE_DRIFT','Source intake engine changed')
+        return result
     def checked(self,candidate_sha256,inspected=False):
         self._loaded();hash_value(candidate_sha256);require(candidate_sha256==sha(self.current),'CANDIDATE_HASH','Wrong current native candidate')
         require(identity()==self.extension_identity,'ENGINE_DRIFT','Active engine files changed')
@@ -42,6 +57,11 @@ class Service(CoreService):
         r['offline_project_package']=dict(implemented=True,headless=True,new_only=True,journal_reconciliation=True,vendor_transfer_package=False)
         r['contract_rebind']=dict(implemented=True,native_replay=False,required='Same declared ABI/meaning/scale/enums/limits; only source_digest can differ',PLC_runtime_accepted=False)
         r['retired_revisions_read_only']=True
+        r['fresh_source_profile']=dict(tool='intake_source_profile',implemented=True,scope='COMPLETE_COUNTED_FRAMING_PROPOSAL; no old acceptance copied')
+        r['incomplete_index']='OPEN_AND_PROJECT_VIEWS_REFUSE_INDEX_INCOMPLETE'
+        r['native_transactions']['operations'].append('delete_element')
+        r['native_transactions']['preserved_only_families']=[[3,1]]
+        r['source_login_clone']=dict(family=[12,3],credential_writer=False,retained_source_only=True)
         r['qualification_state']='SOURCE_BOUND_FILE_TESTED_VENDOR_UNQUALIFIED'
         return r
     def list_deliveries(self):return reference.list_deliveries()

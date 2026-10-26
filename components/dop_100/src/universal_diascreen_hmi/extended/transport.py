@@ -6,6 +6,7 @@ def install():
     S,H,I,O=cli.STRING,cli.HASH,cli.INTEGER,cli.OBJECT;B={'type':'boolean'}
     def schema(fields,required):return cli.object_schema(fields,required)
     extra={
+      'intake_source_profile':(dict(path=S,source_sha256=H,expected_link=S,expected_station=I),('path','source_sha256','expected_link','expected_station')),
       'inspect_native_catalog':(dict(candidate_sha256=H,page_id=I),('candidate_sha256',)),
       'inspect_multilingual_text':(dict(candidate_sha256=H,page_id=I),('candidate_sha256',)),
       'inspect_numeric_bindings':(dict(candidate_sha256=H),('candidate_sha256',)),

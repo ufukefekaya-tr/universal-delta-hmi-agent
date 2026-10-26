@@ -158,3 +158,8 @@ DIA-R2 withdraws the old pre-application preview claim. `preview(plan_sha256=...
 All18retained legacy names are verified by the dedicated real-stdio discovery test;17mapped rows no longer carry stale pending labels. The alarms row remains preserved/discovery-only. Discovery does not implement alarm history, runtime behavior or other unqualified functionality.
 
 The final0.1.1suite ran148tests:147passed, one host symlink-privilege skip, zero failures/errors. All mapped test targets and18legacy discovery names are verified by this version-qualified run; source-bound, contract-only, refusal and unqualified levels are unchanged.
+
+
+## Gauge source patch0.4.2
+
+See [gauge readback and fresh source profiles](GAUGE_SOURCE_PROFILE.md). Complete source indexing, read-only fresh profile proposals, source-retained login copies and dependency-checked readonly deletion are covered by eight neutral regressions. Gauge bytes remain preserved-only. Vendor/native pixel/runtime acceptance remains separate.

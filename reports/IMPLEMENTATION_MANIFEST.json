@@ -1,5 +1,5 @@
 {
-  "scope": "Current0.3.0 source; complete root public membership excluding components (separately snapshotted) and this manifest",
+  "scope": "Current0.3.1 source; complete root public membership excluding components (separately snapshotted) and this manifest",
   "files": [
     {
       "path": ".gitattributes",
@@ -19,7 +19,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "89cacea9e3ac07ee5567d91275e2500fe24946dd652400c12efc320dab5c6d74"
+      "sha256": "c3e1d4f6eec26a1aa9f26f9454b16ddb35f3f92fa7eaf55cad41f10f2d3e10dc"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -39,7 +39,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "bffa6048d7a92fe0e0286065b60fe32eb2125886fb461ebbb132fa94bfaf06b4"
+      "sha256": "725266cc2e0f03f1b36ab0930ae80520b3798e9a284952708c8f8f45fd33b3d0"
     },
     {
       "path": "SECURITY.md",
@@ -67,7 +67,11 @@
     },
     {
       "path": "docs/FEATURE_MIGRATION.json",
-      "sha256": "1b0b417592d3c73272b2136bfe38ca85316e26f3d8f382f9c50e17106702772c"
+      "sha256": "d4514f8465dbe80ba7fb1d6822c4e1ce81c9d55f367d57f5b060969d1bfa3625"
+    },
+    {
+      "path": "docs/GAUGE_SOURCE_PROFILE.md",
+      "sha256": "e3772274632f5e76beb8c4374bf9a9ffa088d7660f968c89639221a6d76fc1a6"
     },
     {
       "path": "docs/GOALS.md",
@@ -95,7 +99,7 @@
     },
     {
       "path": "docs/SUPPORT.md",
-      "sha256": "94b379725fdbfc2fcb6e1fa58d82ec29c6bbeb408db0a182ccfda2816aa567fb"
+      "sha256": "690be5060603ae37ed77722549904397644790cb5706d3dfd52c4d03d1980d06"
     },
     {
       "path": "docs/WORKFLOW.md",
@@ -119,7 +123,11 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "ecc20800b7da1898cd421a9627ff230f348ea5c0cee8a8caf51019f5babdf622"
+      "sha256": "40aed412fd607cff5681bd27494d9b34a99b1b2681a28e603eb8e8a3f3c5bc7e"
+    },
+    {
+      "path": "reports/GAUGE_SOURCE_PROFILE.json",
+      "sha256": "4a4c316c403a625b3319232462753c7ddd712c511e923127e789cf2eb948ada4"
     },
     {
       "path": "reports/INDEPENDENT_REVIEW.json",
@@ -144,6 +152,10 @@
     {
       "path": "reports/releases/0.2.1/IMPLEMENTATION_MANIFEST.json",
       "sha256": "5b9b14be2d1b442e789c50f85a52c4fea725461254f4df779ae50e89f64aa549"
+    },
+    {
+      "path": "reports/releases/0.3.0/IMPLEMENTATION_MANIFEST.json",
+      "sha256": "c4991ac1c48ea703633994cd1d0662ae307bd2908f9506eae538408d0856a8ca"
     },
     {
       "path": "scripts/bootstrap.ps1",
@@ -171,7 +183,7 @@
     },
     {
       "path": "src/delta_hmi/__init__.py",
-      "sha256": "078fe30f0e1c3f3bf460ad5764d253eaed47e96698b69c835c15ba7135018ef3"
+      "sha256": "b4fb0b842f2a605b0c6ed0e3069e6519c4c6c749fc9cc314d89ec3e4a9a2bfdf"
     },
     {
       "path": "src/delta_hmi/cli.py",
@@ -183,7 +195,7 @@
     },
     {
       "path": "src/delta_hmi/gateway.py",
-      "sha256": "0d8f8dd7690137dca948b25abc49c1bc267f846b5ae121fcf769c4df8202d205"
+      "sha256": "3badcf0bed91ea7eeeecfc2134a73a551a8d6a376bf35ca4d2dcb51a089798a6"
     },
     {
       "path": "templates/backends.json",
@@ -191,7 +203,7 @@
     },
     {
       "path": "templates/component_files.json",
-      "sha256": "4c744c655386f069bd773b4e3fc86634fd116ca9ad99a8b9d9f36c2022399458"
+      "sha256": "5c7ac02838a43a069dbb7193497c472693f4e3faa27f844e654d91463c5ed823"
     },
     {
       "path": "templates/releases.lock.json",
@@ -207,7 +219,7 @@
     },
     {
       "path": "tests/test_diascreen_gateway.py",
-      "sha256": "11edae1e0d1ae005ff354d6431daaea3d5ab6d05f85d173cd5d625606db8514a"
+      "sha256": "4a8f95e7a54b185f98e47b092d14297bd2ad92100aa038b110b3cd12f42afe34"
     },
     {
       "path": "tests/test_gateway.py",

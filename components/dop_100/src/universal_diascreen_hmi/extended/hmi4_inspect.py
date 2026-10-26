@@ -3,7 +3,7 @@
 from decimal import Decimal,InvalidOperation
 import re
 from .hmi4_bootstrap import *
-NATIVE_FIELDS=('Type','SubType','X','Y','Width','Height','Style','nPartsID','ReadVar','WriteVar','ReadLink','WriteLink','MemLen','MemFmt','ReadMemType','WriteMemType','Level','GainValue','OffsetValue','DotNum','IntNum','MinValue','MaxValue','HiWordFirst','HiDwordFirst','Order','Variation','VisibleLink','VisibleVar','VisibleCondition','InterLockVar','InterLockLevel','InterLockViewMode','TriggerVar','ReadOffsetVar','WriteOffsetVar','GoToScreenID','GoToScreenName','SetValue','EventID','SetLowSecurity')
+NATIVE_FIELDS=('Type','SubType','X','Y','Width','Height','Style','nPartsID','ReadVar','WriteVar','ReadLink','WriteLink','MemLen','MemFmt','ReadMemType','WriteMemType','Level','GainValue','OffsetValue','DotNum','IntNum','MinValue','MaxValue','HiWordFirst','HiDwordFirst','Order','Variation','VisibleLink','VisibleVar','VisibleCondition','InterLockVar','InterLockLevel','InterLockViewMode','TriggerVar','ReadOffsetVar','WriteOffsetVar','GoToScreenID','GoToScreenName','SetValue','EventID','SetLowSecurity','ScaleFontSize','ScaleFontColor','ScaleColor','ScaleDock','ScaleWidth','ScaleStyle','MainScale','SubScale')
 def dec(x):
     require(isinstance(x,(str,int)) and not isinstance(x,bool),'DECIMAL','Exact decimal string/integer required')
     try:v=Decimal(str(x))
@@ -34,6 +34,7 @@ def row(q,p,e):
     return dict(page_id=p.page_id,element_id=q.index.number(s,'nPartsID'),element_sha256=element_hash(q,e),native={k:field(q,s,k) for k in NATIVE_FIELDS if s.one(k,optional=True)},iec_type=native_type(q,e),numeric=numeric(q,e),states=[state_row(q,st) for st in e.states],macros=[dict(field=t.key,bytes=len(t.blob(q.file.payload)),sha256=sha(t.blob(q.file.payload))) for sec in [s,*e.states] for t in sec.tokens if t.kind=='macro'])
 def inventory(q,profile,page_id=None):
     profile_check(q,profile);pages=[q.page(page_id)] if page_id is not None else q.pages
+    require(not q.index.unqualified_records and (q.index.stop_reason=='end' or q.index.stop_reason.startswith('resource:')),'INDEX_INCOMPLETE','Partial native page counts are not a complete inventory')
     return dict(candidate_sha256=sha(q.file.original),model=q.metadata(),pages=len(q.pages),objects=sum(len(p.elements) for p in q.pages),coverage=dict(stop_reason=q.index.stop_reason,indexed_bytes=q.index.tail_start,opaque_bytes=len(q.file.payload)-q.index.tail_start,unqualified_records=len(q.index.unqualified_records)),items=[row(q,p,e) for p in pages for e in p.elements],native_qualified=False,vendor_compile='NOT_RUN')
 def endpoint(q):
     n=q.index.number(q.app,'PLCIP1')&0xffffffff

@@ -1,15 +1,15 @@
 {
   "schema": "delta.hmi.source-release.v1",
-  "version": "0.4.0",
+  "version": "0.4.2",
   "files": [
     {
       "path": "__init__.py",
-      "sha256": "c968d774f68a99c1ff3bccfe021a375957d82743abb1213a51524ead5f7c77f1",
+      "sha256": "a1b0fa75fb669779b3e3067b5fd9c9a2309f4d831e2f21434b1434081739ff9a",
       "bytes": 111
     },
     {
       "path": "cli.py",
-      "sha256": "19b2fb6162ad0be0df547ad27202bf85a4eaf03f789b59aceae55705639c1084",
+      "sha256": "46be8171532740cd6de216a0917f6d35f16c6d4239ddb1d8a8f8a33979e1cf9b",
       "bytes": 10391
     },
     {
@@ -54,13 +54,13 @@
     },
     {
       "path": "extended/hmi4_bootstrap.py",
-      "sha256": "6cb9a256586ed20d5b3aff123404b51389421b09622db41bf6be9f566e80051e",
+      "sha256": "bc8e7450d4fd9988cdfb46ba8fa76f4cf6202692315491256054a514746f5ad2",
       "bytes": 3350
     },
     {
       "path": "extended/hmi4_inspect.py",
-      "sha256": "ad45cfa945fbac81c3f8f3a3df9b18b9c79a6fe811533a484b10e5eb7af8ddde",
-      "bytes": 11618
+      "sha256": "ccd478357f85024272629dd80f0602fed36d7469f0c1b8896d7c090f752aaba6",
+      "bytes": 11927
     },
     {
       "path": "extended/hmi4_registry.py",
@@ -69,13 +69,13 @@
     },
     {
       "path": "extended/hmi4_service.py",
-      "sha256": "99a2f183cd12c380d3aa716bb2128072a8fa8dd1d3bcede97244a109312bafaa",
-      "bytes": 18224
+      "sha256": "b9e598aa4ecc9549c10e8caf3693df8aee9fc83e3755cb81774bb64a9d11536d",
+      "bytes": 19709
     },
     {
       "path": "extended/hmi4_transaction.py",
-      "sha256": "919b06de973cdb5b2a4f640eec37cba78352529d2b41208ffd44338eeb8e5111",
-      "bytes": 26751
+      "sha256": "54a15c94f4183574788f947511055a9a4114551d6ab98913a2d75952c3b42d21",
+      "bytes": 29483
     },
     {
       "path": "extended/hmi4_visual.py",
@@ -89,8 +89,13 @@
     },
     {
       "path": "extended/native_index.py",
-      "sha256": "9472ff4837a959b5e2864629b0fcb078fb34d0e35836089fb38537e42fbbb26e",
-      "bytes": 21237
+      "sha256": "9323ca8d29945d2516b70589961c55e63280bf73761ec2ba49820f198d5a9afb",
+      "bytes": 22199
+    },
+    {
+      "path": "extended/native_resource_intake.py",
+      "sha256": "1f6f497f91cf4506d3f328cb979c092d990c7fbec67315e72fa1823fbc4018a4",
+      "bytes": 10241
     },
     {
       "path": "extended/register_contract.py",
@@ -103,9 +108,14 @@
       "bytes": 2239
     },
     {
+      "path": "extended/source_intake.py",
+      "sha256": "7e49f2a4071885b7e889793c1e530ad41c5e3824f8b0509eee21d4933d75339b",
+      "bytes": 2620
+    },
+    {
       "path": "extended/transport.py",
-      "sha256": "e7f382fed970d6c9adf818a628ea544f32331f31de560a7f52179a439df5111d",
-      "bytes": 5280
+      "sha256": "5c1a404c379e623f8fa5e11094e4a6be98c6a300ddd84efdd50029c91e82f8ba",
+      "bytes": 5437
     },
     {
       "path": "extended/worker.py",

@@ -1,0 +1,67 @@
+{
+  "schema": "delta.hmi.gauge-source-profile.v1",
+  "version": "0.3.1",
+  "DIAScreen_component": "0.4.2",
+  "status": "PASS_FILE_SERVICES_WITH_DECLARED_LEGACY_HOST_SKIP",
+  "tools": 70,
+  "scope": "Original neutral source only; no customer native files/profiles/tags/endpoints/credentials/fonts/generators",
+  "source_integrity": {
+    "engine_sha256": "bab5adf0f6552b495b8365b2dca755b8ba1337e42692c7b004deccfa0d25747f",
+    "manifest_sha256": "9a259adbb88b3d80756239f1bd0845b16ef6b541e62cf34c5eceb87fb006b97b",
+    "files": 31
+  },
+  "tests": {
+    "gateway": {
+      "cases": 63,
+      "failures": 0,
+      "skipped": 0
+    },
+    "DIAScreen": {
+      "cases": 171,
+      "failures": 0,
+      "skipped": 1,
+      "skip": "Legacy Windows OS symlink permission; eight new neutral tests do not skip"
+    }
+  },
+  "log_sha256": {
+    "gateway": "33017fbdb6d43b549dd19f90d8a6a089e83d9d1eaddf71bb079e0839d56b0782",
+    "DIAScreen": "e7c570721067a2c4c0340ab6d4a875c3707440fe102d159fb12f27c14703d6e3"
+  },
+  "fresh_process_protocols": {
+    "paths": [
+      "CLI",
+      "MCP"
+    ],
+    "read_only_intake": true,
+    "new_only_candidate_save_reopen": true,
+    "exact_same_candidate": true,
+    "source_gauge_application_auth_globalmacros_resources_preserved": true,
+    "write_approval_hash_replay_unknown_frame_negatives": "PASS",
+    "acceptance": "ISOLATED_FILE_ONLY_NOT_PRODUCTION_UI"
+  },
+  "relocation": {
+    "status": "PASS",
+    "runtime_sources": 31,
+    "isolated_python": true,
+    "space_path": true,
+    "dependency_download": false
+  },
+  "independent_code_review": {
+    "status": "PASS",
+    "resolved_findings": [
+      "Outgoing event/file-browser dependency refusal",
+      "Numeric incoming PartID equality with leading-zero and unknown-expression refusal"
+    ]
+  },
+  "boundaries": {
+    "gauge": "PRESERVED_ONLY",
+    "login": "SOURCE_RETAINED_NO_CREDENTIAL_WRITER",
+    "profile": "READONLY_PROPOSAL_HOST_REGISTRY_AUTHORITY_UNCHANGED",
+    "vendor_compile": "NOT_RUN",
+    "simulator": "NOT_RUN",
+    "native_pixels": "NOT_ESTABLISHED",
+    "physical": "NOT_RUN"
+  },
+  "unchanged_DOP_B": "No source changes; prior981 PASS; hosted full suite rechecks",
+  "historical_offline_bundles": "0.2.1 archives unchanged; this is a source update"
+}

@@ -12,8 +12,8 @@
     },
     {
       "path": "INTEGRATION.json",
-      "sha256": "efdcafc41460e996749787450be0be0eae2138adde8f1d5eefe8431db75e7cde",
-      "size": 7362
+      "sha256": "7ca7d8fe6f495d385506f3b8e9dfac6b6077d4751dcd0396aba4d8fd9af56a06",
+      "size": 7467
     },
     {
       "path": "LICENSE",
@@ -51,6 +51,11 @@
       "size": 11036
     },
     {
+      "path": "docs/GAUGE_SOURCE_PROFILE.md",
+      "sha256": "e3772274632f5e76beb8c4374bf9a9ffa088d7660f968c89639221a6d76fc1a6",
+      "size": 2358
+    },
+    {
       "path": "docs/INTEGRATION.md",
       "sha256": "6e015d393dd7afc6f5c2b298cbaa4044a70949c32e04b4c2163d4bba00b90bb2",
       "size": 13231
@@ -77,13 +82,13 @@
     },
     {
       "path": "docs/SUPPORT_MATRIX.json",
-      "sha256": "21e7065463279608af6fb869be2178d63c81f805dfadba17d6d84b1888ceb40a",
-      "size": 108780
+      "sha256": "8208346d81a43f141622da3ceea032ef38dda7690b00af6b59e8842072aa4948",
+      "size": 112661
     },
     {
       "path": "docs/SUPPORT_MATRIX.md",
-      "sha256": "b8c1b6c65fe9b60a4a7a441c229a0ed94da0a7fac80de5ab62ab52ad05056d49",
-      "size": 30719
+      "sha256": "bade5e4f1d79870297f9bf4500ae9a2989488c3c90e5452bbb18173f10d04e13",
+      "size": 31087
     },
     {
       "path": "docs/WORKFLOW.md",
@@ -107,7 +112,7 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "2b8265f3bffcea505589da68ba89cbdad3fc5cc082e27b27d54b1795a83a78aa",
+      "sha256": "651700361b5c9cee70416b8b21761e940f11836b2a6a29fe8e4e733088a48c5d",
       "size": 1791
     },
     {
@@ -119,6 +124,11 @@
       "path": "reports/FINAL_REVIEW.md",
       "sha256": "28edba0421906abd692dda28985fc547c63104895ff8b9fdae77ab41cfcbdc31",
       "size": 4538
+    },
+    {
+      "path": "reports/GAUGE_SOURCE_PROFILE.json",
+      "sha256": "4a4c316c403a625b3319232462753c7ddd712c511e923127e789cf2eb948ada4",
+      "size": 2261
     },
     {
       "path": "reports/PRIVATE_QUALIFICATION.json",
@@ -171,13 +181,18 @@
       "size": 9783
     },
     {
+      "path": "reports/releases/0.4.0/FILE_MANIFEST.json",
+      "sha256": "df6eb3b5b3955db5d1fb8341986b9351cc393a89dc96defa7e72944457b3b524",
+      "size": 13980
+    },
+    {
       "path": "src/universal_diascreen_hmi/__init__.py",
-      "sha256": "c968d774f68a99c1ff3bccfe021a375957d82743abb1213a51524ead5f7c77f1",
+      "sha256": "a1b0fa75fb669779b3e3067b5fd9c9a2309f4d831e2f21434b1434081739ff9a",
       "size": 111
     },
     {
       "path": "src/universal_diascreen_hmi/cli.py",
-      "sha256": "19b2fb6162ad0be0df547ad27202bf85a4eaf03f789b59aceae55705639c1084",
+      "sha256": "46be8171532740cd6de216a0917f6d35f16c6d4239ddb1d8a8f8a33979e1cf9b",
       "size": 10391
     },
     {
@@ -197,8 +212,8 @@
     },
     {
       "path": "src/universal_diascreen_hmi/extended/RELEASE_MANIFEST.json",
-      "sha256": "e768ec7ecd81f7dcc3a5569e1a7a66ae3f63406a6e0900f8a55a423d7998c931",
-      "size": 4524
+      "sha256": "9a259adbb88b3d80756239f1bd0845b16ef6b541e62cf34c5eceb87fb006b97b",
+      "size": 4854
     },
     {
       "path": "src/universal_diascreen_hmi/extended/__init__.py",
@@ -232,13 +247,13 @@
     },
     {
       "path": "src/universal_diascreen_hmi/extended/hmi4_bootstrap.py",
-      "sha256": "6cb9a256586ed20d5b3aff123404b51389421b09622db41bf6be9f566e80051e",
+      "sha256": "bc8e7450d4fd9988cdfb46ba8fa76f4cf6202692315491256054a514746f5ad2",
       "size": 3350
     },
     {
       "path": "src/universal_diascreen_hmi/extended/hmi4_inspect.py",
-      "sha256": "ad45cfa945fbac81c3f8f3a3df9b18b9c79a6fe811533a484b10e5eb7af8ddde",
-      "size": 11618
+      "sha256": "ccd478357f85024272629dd80f0602fed36d7469f0c1b8896d7c090f752aaba6",
+      "size": 11927
     },
     {
       "path": "src/universal_diascreen_hmi/extended/hmi4_registry.py",
@@ -247,13 +262,13 @@
     },
     {
       "path": "src/universal_diascreen_hmi/extended/hmi4_service.py",
-      "sha256": "99a2f183cd12c380d3aa716bb2128072a8fa8dd1d3bcede97244a109312bafaa",
-      "size": 18224
+      "sha256": "b9e598aa4ecc9549c10e8caf3693df8aee9fc83e3755cb81774bb64a9d11536d",
+      "size": 19709
     },
     {
       "path": "src/universal_diascreen_hmi/extended/hmi4_transaction.py",
-      "sha256": "919b06de973cdb5b2a4f640eec37cba78352529d2b41208ffd44338eeb8e5111",
-      "size": 26751
+      "sha256": "54a15c94f4183574788f947511055a9a4114551d6ab98913a2d75952c3b42d21",
+      "size": 29483
     },
     {
       "path": "src/universal_diascreen_hmi/extended/hmi4_visual.py",
@@ -267,8 +282,13 @@
     },
     {
       "path": "src/universal_diascreen_hmi/extended/native_index.py",
-      "sha256": "9472ff4837a959b5e2864629b0fcb078fb34d0e35836089fb38537e42fbbb26e",
-      "size": 21237
+      "sha256": "9323ca8d29945d2516b70589961c55e63280bf73761ec2ba49820f198d5a9afb",
+      "size": 22199
+    },
+    {
+      "path": "src/universal_diascreen_hmi/extended/native_resource_intake.py",
+      "sha256": "1f6f497f91cf4506d3f328cb979c092d990c7fbec67315e72fa1823fbc4018a4",
+      "size": 10241
     },
     {
       "path": "src/universal_diascreen_hmi/extended/register_contract.py",
@@ -281,9 +301,14 @@
       "size": 2239
     },
     {
+      "path": "src/universal_diascreen_hmi/extended/source_intake.py",
+      "sha256": "7e49f2a4071885b7e889793c1e530ad41c5e3824f8b0509eee21d4933d75339b",
+      "size": 2620
+    },
+    {
       "path": "src/universal_diascreen_hmi/extended/transport.py",
-      "sha256": "e7f382fed970d6c9adf818a628ea544f32331f31de560a7f52179a439df5111d",
-      "size": 5280
+      "sha256": "5c1a404c379e623f8fa5e11094e4a6be98c6a300ddd84efdd50029c91e82f8ba",
+      "size": 5437
     },
     {
       "path": "src/universal_diascreen_hmi/extended/worker.py",
@@ -384,6 +409,11 @@
       "path": "tests/test_session.py",
       "sha256": "9a22f96204213e50fb88b77c33090f07661bea948806547e60792b7032cdbdcf",
       "size": 8005
+    },
+    {
+      "path": "tests/test_source_intake.py",
+      "sha256": "f92ae74255646375b4ad999daed5fdef3f80580b2f547324a7011d9cab5491f3",
+      "size": 6982
     },
     {
       "path": "tests/test_status.py",

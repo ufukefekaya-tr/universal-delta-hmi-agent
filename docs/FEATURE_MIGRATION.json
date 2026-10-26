@@ -1083,5 +1083,29 @@
   ],
   "final_omission_review": "PENDING_AFTER_IMPLEMENTATION",
   "backend_source": "components/dop_100/docs/SUPPORT_MATRIX.json@0.1.1",
-  "native_service_extension": "NATIVE_SERVICE_UPDATE.md"
+  "native_service_extension": "NATIVE_SERVICE_UPDATE.md",
+  "source_intake_extension": {
+    "document": "GAUGE_SOURCE_PROFILE.md",
+    "implementation": [
+      "extended.source_intake",
+      "extended.native_resource_intake",
+      "extended.native_index",
+      "extended.hmi4_transaction"
+    ],
+    "disposition": "SOURCE_BOUND_FILE_ONLY",
+    "gauge": "PRESERVED_ONLY",
+    "profile": "READONLY_PROPOSAL_HOST_REGISTRY_UNCHANGED",
+    "login": "SOURCE_RETAINED_ONLY",
+    "readonly_delete": "CLOSED_DEPENDENCY_GATE",
+    "tests": [
+      "test_source_intake.SourceIntakeTests.test_literal_gauge_font_does_not_hide_following_page",
+      "test_source_intake.SourceIntakeTests.test_unknown_frame_is_not_a_complete_one_page_project",
+      "test_source_intake.SourceIntakeTests.test_new_scalar_is_model_version_and_family_scoped",
+      "test_source_intake.SourceIntakeTests.test_multilanguage_resource_fonts_are_scalar_but_unknowns_refuse",
+      "test_source_intake.SourceIntakeTests.test_fresh_profile_never_uses_old_or_partial_resource_ack",
+      "test_source_intake.SourceIntakeTests.test_readonly_delete_preserves_gauge_and_refuses_writer",
+      "test_source_intake.SourceIntakeTests.test_source_login_copy_retains_level_actions_and_empty_macros",
+      "test_source_intake.SourceIntakeTests.test_delete_event_browser_and_unknown_incoming_dependencies_refuse"
+    ]
+  }
 }

@@ -57,7 +57,7 @@ class DiascreenGatewayTests(unittest.IsolatedAsyncioTestCase):
 
     async def test_all_audited_tools_and_dynamic_schema_retained(self):
         listed = {tool.name: tool for tool in await self.gateway.list_tools()}
-        self.assertEqual(len(DIA_TOOLS), 69)
+        self.assertEqual(len(DIA_TOOLS), 70)
         self.assertEqual(set(listed), {"delta_catalog", "dop_100__close_session"} | {"dop_100__" + name for name in DIA_TOOLS})
         opening = listed["dop_100__open_project"].input_schema
         self.assertEqual(set(opening["properties"]), {"profile_id", "path", "source_sha256"})
@@ -92,11 +92,21 @@ class DiascreenGatewayTests(unittest.IsolatedAsyncioTestCase):
 
     async def test_all_aliases_forward_only_exact_arguments(self):
         token = await self.open("a.dpa")
-        for name in DIA_TOOLS - {"capabilities", "open_project"}:
+        for name in DIA_TOOLS - {"capabilities", "open_project", "intake_source_profile"}:
             response = await self.gateway.call_tool("dop_100__" + name, {"session_id": token, "sentinel": name})
             self.assertFalse(response.is_error, name)
             self.assertEqual(self.created[-1].calls[-1], (name, {"sentinel": name}))
         self.assertTrue((await self.gateway.call_tool("dop_100__execute_shell", {"session_id": token})).is_error)
+
+    async def test_fresh_intake_is_stateless_and_never_injects_profile_authority(self):
+        args=dict(path='source.dpa',source_sha256='1'*64,expected_link='Link1',expected_station=1)
+        response=await self.gateway.call_tool('dop_100__intake_source_profile',args)
+        self.assertFalse(response.is_error);self.assertEqual(self.created[-1].calls[-1],('intake_source_profile',args))
+        self.assertEqual(self.gateway.dia_sessions,{})
+        for extra in ({'profile':{}},{'session_id':'foreign'},{'command':'arbitrary'}):
+            self.assertTrue((await self.gateway.call_tool('dop_100__intake_source_profile',{**args,**extra})).is_error)
+        listing={t.name:t for t in await self.gateway.list_tools()}
+        self.assertNotIn('session_id',listing['dop_100__intake_source_profile'].input_schema['properties'])
 
     async def test_missing_foreign_closed_and_failed_sessions_rejected(self):
         token = await self.open("a.dpa")

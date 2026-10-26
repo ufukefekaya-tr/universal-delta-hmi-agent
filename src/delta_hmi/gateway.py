@@ -21,7 +21,8 @@ FILE_TOOLS = frozenset({"open_project", "capabilities", "inspect", "plan_changes
 IDENTIFIERS = frozenset({"session_id", "plan_id", "job_id"})
 DIA_TOOLS = FILE_TOOLS | frozenset({"register_donor", "rollback", "pending_changes", "inspect_compiled", "evaluate_status", "list_screens", "layout", "element", "find", "addresses", "macros", "alarms", "set_property", "set_text", "rebind", "save", "screenshot_text", "clone_element", "clone_screen", "delete_element", "set_state_text"})
 DIA_TOOLS = DIA_TOOLS | frozenset(['apply_contract_rebind', 'apply_offline_package', 'check_text_fit', 'configure_native_service', 'configure_numeric_fields', 'create_alarm_catalog', 'create_element', 'create_screen', 'import_symbol_catalog', 'import_tags', 'inspect_affine_scale', 'inspect_artifact_plan', 'inspect_endpoint', 'inspect_multilingual_text', 'inspect_native_catalog', 'inspect_native_plan', 'inspect_navigation', 'inspect_numeric_bindings', 'inspect_numeric_fields', 'inspect_offline_package', 'inspect_operation', 'plan_contract_rebind', 'plan_native_update', 'plan_offline_package', 'plan_register_import', 'preview_native_page', 'restore_candidate', 'restore_plan', 'save_new', 'validate_bindings', 'validate_native_candidate', 'validate_register_contract', 'verify_symbol_contract', 'vendor_open_save_reopen', 'vendor_compile', 'offline_simulator', 'build_transfer_package', 'inspect_transfer_package'])
-DIA_TOOLS = DIA_TOOLS | {'reconcile_operation'}
+DIA_TOOLS = DIA_TOOLS | {'reconcile_operation','intake_source_profile'}
+DIA_STATELESS_TOOLS = frozenset({'capabilities','intake_source_profile'})
 JOB_TOOLS = frozenset({"preflight_job", "submit_job", "job_status", "job_result", "cancel_job"})
 MAX_DIA_SESSIONS = 8
 
@@ -198,7 +199,7 @@ class Gateway:
                             if tool.name == "open_project":
                                 value.input_schema = {"type": "object", "properties": {"path": {"type": "string"}, "source_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "profile_id": {"type": "string"}}, "required": ["path", "source_sha256", "profile_id"], "additionalProperties": False}
                                 value.description = (value.description or "") + " Opens a NEW isolated process and returns session_id; profile is selected only from the pinned registry."
-                            elif tool.name != "capabilities":
+                            elif tool.name not in DIA_STATELESS_TOOLS:
                                 value.input_schema.setdefault("properties", {})["session_id"] = {"type": "string"}
                                 value.input_schema.setdefault("required", []).append("session_id")
                         tools.append(value)
@@ -230,6 +231,12 @@ class Gateway:
             if arguments:
                 raise RoutingError("DIAScreen capabilities accepts no project/profile arguments")
             response = await self.handles["dop_100"].request("call_tool", name=operation, arguments={})
+        elif operation == "intake_source_profile":
+            if set(arguments) != {'path','source_sha256','expected_link','expected_station'}:
+                raise RoutingError('Fresh source intake accepts only source identity and expected native link/station')
+            if not isinstance(arguments['path'],str) or Path(arguments['path']).suffix.lower()!='.dpa':
+                raise RoutingError('Fresh source intake requires a DPA file; backend enforces workspace/read roots and native framing')
+            response = await self.handles['dop_100'].request('call_tool',name=operation,arguments=arguments)
         elif operation == "open_project":
             if set(arguments) != {"path", "source_sha256", "profile_id"}:
                 raise RoutingError("DIAScreen opening requires exactly path, source_sha256 and trusted profile_id")
@@ -417,7 +424,7 @@ def create_server(gateway):
     async def call_tool(context, params):
         return await gateway.call_tool(params.name, params.arguments)
 
-    return Server("universal-delta-hmi-agent", version="0.3.0", on_list_tools=list_tools, on_call_tool=call_tool)
+    return Server("universal-delta-hmi-agent", version="0.3.1", on_list_tools=list_tools, on_call_tool=call_tool)
 
 
 async def serve(config_path):

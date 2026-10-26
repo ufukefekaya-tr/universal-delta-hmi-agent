@@ -98,6 +98,7 @@ def build(raw,profile,spec):
           'move_element':common|{'new_page_id','new_element_id','retain_macros'},
           'clone_element':common|{'new_page_id','new_element_id','retain_bindings','retain_macros','binding'},
           'replace_element':common|{'donor_page_id','donor_element_id','donor_sha256','retain_bindings','retain_macros'},
+          'delete_element':{'op','page_id','element_id','expected_element_sha256'},
           'edit_page':{'op','page_id','expected_page_sha256','titles','descriptions','name','background_page_id'},
           'clone_page':{'op','page_id','expected_page_sha256','new_page_id','name','titles','retain_macros','png_base64'},
           'navigation':common|{'target_page_id','target_name'},
@@ -140,13 +141,39 @@ def build(raw,profile,spec):
             require(decoded['width']==800 and decoded['height']==480 and len(old)==1152040 and sha(old)==op.get('expected_dib_sha256') and end<=background.blob_end,'DIB_OWNER','Exact source800x480 24bit DIB owner required')
             new=png_dib(op['png_base64']);resource_patches.append(Patch(start,end,old,new,'native same-size source-qualified DIB'));proof.append(dict(op=kind,page_ids=owners,source_dib_sha256=sha(old),candidate_dib_sha256=sha(new)));continue
         p,i,e=checked_selector(q,op);claim(p,i);values={};donor=e
-        require(family(q,e) in SUPPORTED,'ELEMENT_FAMILY','Unqualified source family cannot be written')
+        login=family(q,e)==(12,3) and kind in ('edit_element','clone_element','move_element','replace_element')
+        require(family(q,e) in SUPPORTED or login,'ELEMENT_FAMILY','Unqualified source family cannot be written')
+        if kind=='delete_element':
+            require(family(q,e) in ((2,1),(10,6)) and field(q,e.section,'WriteVar') in ('','None') and macro_free(q,e),
+                'DELETE_SCOPE','Only source-owned macro-free read-only indicators/static labels may be removed')
+            require(q.index.number(e.section,'EventID',0)==0 and q.index.number(e.section,'RelatedFileBrowserPartID',-1)==-1,
+                'DELETE_DEPENDENCY','Event/file-browser dependent owners cannot be removed')
+            known={'nPartsID','rPartID','RelatedFileBrowserPartID','EventID'}
+            require(not any(t.key and t.key not in known and t.key.endswith(('PartID','EventID')) for t in e.section.tokens),
+                'DELETE_DEPENDENCY','Unknown source dependency variants remain read-only')
+            incoming=False
+            for z in q.page(p).elements:
+                if z is e:continue
+                for t in z.section.tokens:
+                    if t.key and t.key!='nPartsID' and t.key.endswith('PartID'):
+                        require(t.kind=='scalar' and re.fullmatch(rb'-?[0-9]{1,12}',t.value) is not None,
+                            'DELETE_DEPENDENCY','Unknown/non-numeric incoming dependency remains read-only')
+                        incoming = incoming or int(t.value)==i
+            require(q.index.number(e.section,'rPartID',-1)==-1 and not incoming,
+                'DELETE_DEPENDENCY','Grouped/referenced source owners cannot be removed')
+            removed.add((p,i));proof.append(dict(op=kind,page_id=p,element_id=i,source_sha256=element_hash(q,e),deleted=True));continue
+        if login and kind in ('clone_element','replace_element'):
+            require(op.get('retain_bindings') is True and (op.get('retain_macros') is True or macro_free(q,e)),'LOGIN_RETENTION','System-login source actions/security must be retained exactly')
+        if login and kind=='move_element':require(op.get('retain_macros') is True or macro_free(q,e),'LOGIN_RETENTION','System-login actions must be retained exactly')
         if kind in ('clone_element','replace_element'):
             require(type(op.get('retain_bindings')) is bool and type(op.get('retain_macros')) is bool,'RETAIN_FLAGS','Explicit binding/macro retention required')
             if kind=='replace_element':
                 donor=q.element(ident(op.get('donor_page_id')),ident(op.get('donor_element_id')))
                 require(op.get('donor_sha256')==element_hash(q,donor),'DONOR_DRIFT','Exact source donor hash required')
-                require(family(q,donor) in SUPPORTED,'ELEMENT_FAMILY','Unqualified donor family');values['nPartsID']=i
+                donor_login=family(q,donor)==(12,3)
+                require(family(q,donor) in SUPPORTED or donor_login,'ELEMENT_FAMILY','Unqualified donor family')
+                if donor_login:require(op.get('retain_bindings') is True and (op.get('retain_macros') is True or macro_free(q,donor)),'LOGIN_RETENTION','System-login donor actions/security must be retained exactly')
+                values['nPartsID']=i
             if not op['retain_bindings'] and 'binding' not in op:
                 require(not any(address(field(q,donor.section,k)) for k in ('ReadVar','WriteVar','VisibleVar','InterLockVar','TriggerVar')),'DONOR_BINDING','Use a native unbound/static donor; no synthetic field stripping')
             if not op['retain_macros']:require(macro_free(q,donor),'MACRO_SCOPE','Nonempty macros need explicit retention')
@@ -235,6 +262,7 @@ def build(raw,profile,spec):
     payload,ledger=apply_spans(q.file.payload,patches);require(restore_spans(payload,ledger)==q.file.payload,'INVERSE','Exact source payload inverse required')
     raw_after=q.file.encode(payload);final=Project(raw_after);validate_references(final)
     for item in proof:
+        if item.get('deleted'):require(all(final.index.number(z.section,'nPartsID')!=item['element_id'] for z in final.page(item['page_id']).elements),'TARGET_READBACK','Deleted source owner still exists')
         if 'new_block_sha256' in item:
             fe=final.element(item['target_page_id'],item['target_element_id']);require(element_hash(final,fe)==item['new_block_sha256'],'TARGET_READBACK','Every claimed replacement/clone/move must exist with its exact target bytes')
     if 'endpoint' in policy:

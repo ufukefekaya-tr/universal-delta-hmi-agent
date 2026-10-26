@@ -16,3 +16,8 @@ The historical inventory is complete as a discovery record, not as a promise tha
 Operating-mode atomicity, TIME conversion, ramp freshness, fault/home/drive interface behavior and PLC working feedback are contract-bound. Rolled-back heartbeat scheduling is not reinstated. This package cannot make missing PLC logic or physical hardware appear by installing software.
 
 No vendor, native pixel, panel or physical acceptance is inferred from synthetic tests, support-table rows or agent agreement. Real model acceptance is recorded with the exact file hash and scenario.
+
+
+## Gauge source patch0.4.2
+
+See [gauge readback and fresh source profiles](GAUGE_SOURCE_PROFILE.md). Complete source indexing, read-only fresh profile proposals, source-retained login copies and dependency-checked readonly deletion are covered by eight neutral regressions. Gauge bytes remain preserved-only. Vendor/native pixel/runtime acceptance remains separate.
