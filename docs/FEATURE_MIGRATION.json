@@ -1107,5 +1107,23 @@
       "test_source_intake.SourceIntakeTests.test_source_login_copy_retains_level_actions_and_empty_macros",
       "test_source_intake.SourceIntakeTests.test_delete_event_browser_and_unknown_incoming_dependencies_refuse"
     ]
+  },
+  "state_lookup_extension": {
+    "version": "0.4.3",
+    "document": "STATE_LOOKUP.md",
+    "disposition": "SOURCE_BOUND_FILE_ONLY",
+    "implementation": [
+      "extended.state_lookup",
+      "extended.hmi4_transaction",
+      "extended.hmi4_service"
+    ],
+    "tests": [
+      "test_state_lookup.LookupTests.test_32_and_sparse_exact_domains_preserve_unowned_bytes",
+      "test_state_lookup.LookupTests.test_missing_duplicate_extra_negative_boolean_enum_refuse",
+      "test_state_lookup.LookupTests.test_dependency_and_font_variants_refuse",
+      "test_state_lookup.LookupTests.test_no_unsigned_or_bool_general_coercion_and_writer_refuse",
+      "test_state_lookup.LookupTests.test_fresh_session_donor_drift_restore_and_save"
+    ],
+    "simultaneous_mask_decoder": false
   }
 }

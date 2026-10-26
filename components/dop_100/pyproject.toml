@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "universal-diascreen-hmi-agent"
-version = "0.4.2"
+version = "0.4.3"
 description = "Original file-only DIAScreen/DOP-100 inspection and controlled offline editing"
 readme = "README.md"
 requires-python = ">=3.11"

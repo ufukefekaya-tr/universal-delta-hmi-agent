@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "universal-delta-hmi-agent"
-version = "0.3.1"
+version = "0.3.2"
 description = "Isolated file MCP routing for Delta HMI engineering"
 readme = "README.md"
 requires-python = ">=3.14"

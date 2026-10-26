@@ -1,15 +1,15 @@
 {
   "schema": "delta.hmi.source-release.v1",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "files": [
     {
       "path": "__init__.py",
-      "sha256": "a1b0fa75fb669779b3e3067b5fd9c9a2309f4d831e2f21434b1434081739ff9a",
+      "sha256": "f634a6681af86a11fb92ab372c03af7f24a5f287932c6808b61bf3527900915c",
       "bytes": 111
     },
     {
       "path": "cli.py",
-      "sha256": "46be8171532740cd6de216a0917f6d35f16c6d4239ddb1d8a8f8a33979e1cf9b",
+      "sha256": "ba81dc3b41366aea51c50b1a8af7ee6f2f799fde9927a6ceb7962c6ffd338240",
       "bytes": 10391
     },
     {
@@ -54,13 +54,13 @@
     },
     {
       "path": "extended/hmi4_bootstrap.py",
-      "sha256": "bc8e7450d4fd9988cdfb46ba8fa76f4cf6202692315491256054a514746f5ad2",
+      "sha256": "e42679be633821de07c9a1bb42dc2a106973d11887a9011ab06ee5b76744d379",
       "bytes": 3350
     },
     {
       "path": "extended/hmi4_inspect.py",
-      "sha256": "ccd478357f85024272629dd80f0602fed36d7469f0c1b8896d7c090f752aaba6",
-      "bytes": 11927
+      "sha256": "0bf662606bcf032b31a60dfbe1f281dd2a4fabb8be756c7fb84c39d8b6ba34f3",
+      "bytes": 12534
     },
     {
       "path": "extended/hmi4_registry.py",
@@ -69,13 +69,13 @@
     },
     {
       "path": "extended/hmi4_service.py",
-      "sha256": "b9e598aa4ecc9549c10e8caf3693df8aee9fc83e3755cb81774bb64a9d11536d",
-      "bytes": 19709
+      "sha256": "2275e4e61ee965e10df7a9b4674dc72100458780a98a6224630a90eae26e8571",
+      "bytes": 21576
     },
     {
       "path": "extended/hmi4_transaction.py",
-      "sha256": "54a15c94f4183574788f947511055a9a4114551d6ab98913a2d75952c3b42d21",
-      "bytes": 29483
+      "sha256": "07ed690770940cb5f48ec9aea6a063fa961926a0060b72b3f9c07930a0e9131c",
+      "bytes": 30683
     },
     {
       "path": "extended/hmi4_visual.py",
@@ -111,6 +111,11 @@
       "path": "extended/source_intake.py",
       "sha256": "7e49f2a4071885b7e889793c1e530ad41c5e3824f8b0509eee21d4933d75339b",
       "bytes": 2620
+    },
+    {
+      "path": "extended/state_lookup.py",
+      "sha256": "cbdcba4cc665027fc641d6548e7f0705a2824dbdce1f61d3a41cdae10f579696",
+      "bytes": 9369
     },
     {
       "path": "extended/transport.py",

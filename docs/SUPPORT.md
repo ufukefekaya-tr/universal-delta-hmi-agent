@@ -21,3 +21,8 @@ No vendor, native pixel, panel or physical acceptance is inferred from synthetic
 ## Gauge source patch0.4.2
 
 See [gauge readback and fresh source profiles](GAUGE_SOURCE_PROFILE.md). Complete source indexing, read-only fresh profile proposals, source-retained login copies and dependency-checked readonly deletion are covered by eight neutral regressions. Gauge bytes remain preserved-only. Vendor/native pixel/runtime acceptance remains separate.
+
+
+## State lookup extension0.4.3
+
+[Source-qualified state lookup](STATE_LOOKUP.md) supports explicit readonly positive enum text with three languages, exact donor pins and separate WORD16 role validation. General type conversion and DWORD mask decoding remain unsupported. Five neutral regression methods cover positive/negative and durable save paths.

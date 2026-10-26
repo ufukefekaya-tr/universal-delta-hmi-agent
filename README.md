@@ -6,7 +6,9 @@ This release integrates the existing qualified offline capabilities of two indep
 
 Current source update: [native service migration](docs/NATIVE_SERVICE_UPDATE.md). The new source backend has 70 tools; published v0.2.1 offline archives remain historical 30-tool bundles.
 
-Latest source patch: [complete gauge readback and fresh profile intake](docs/GAUGE_SOURCE_PROFILE.md).
+Previous source patch: [complete gauge readback and fresh profile intake](docs/GAUGE_SOURCE_PROFILE.md).
+
+Latest source patch: [source-qualified state text lookup](docs/STATE_LOOKUP.md).
 
 ## Install
 

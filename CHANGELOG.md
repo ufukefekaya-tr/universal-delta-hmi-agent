@@ -8,6 +8,11 @@ DIAScreen component0.4.0 adds69 audited file tools/aliases: source-qualified ato
 
 # Changelog
 
+## 0.3.2
+
+Adds a source-qualified WORD16 nonnegative enum text lookup with exact donor/source pins, three-language state sets, closed dependency checks, durable reconstruction and dedicated readback. General native type checks stay strict.
+
+
 ## 0.2.1
 
 - Normalize Windows CI temporary-directory aliases before test subprocesses. No production backend guards, tests, assertions or skips are weakened.

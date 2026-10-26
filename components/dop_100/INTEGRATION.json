@@ -269,7 +269,7 @@
     "changes_native_bytes": false,
     "changes_render_order": false
   },
-  "version": "0.4.2",
+  "version": "0.4.3",
   "optional_dependencies": {
     "visual": "Pillow==12.2.0"
   },

@@ -99,7 +99,7 @@ def check_binding(q,e,contract,tag_address=None):
         t=tags[writes['address']];allowed=t.get('enum')
         require(allowed is not None and str(field(q,s,'SetValue')) in {str(v) for v in allowed},'ENUM','Constant button must target a declared sparse enum value')
     return dict(type=typ,read=reads,write=writes,status='PASS',scope='Native declared type/width/access/security/wordorder and optional numeric_input fields; not PLC behavioral equivalence')
-def audit_contract(q,contract,contract_sha256,require_all=False):
+def audit_contract(q,contract,contract_sha256,require_all=False,lookup_markers=()):
     hash_value(contract_sha256);require(sha(canonical(contract))==contract_sha256,'CONTRACT_HASH','Contract hash differs');tags=contract_rows(contract)
     rows=[];seen=set()
     for p in q.pages:
@@ -108,6 +108,11 @@ def audit_contract(q,contract,contract_sha256,require_all=False):
             declared=[b['address'] for b in bindings if b and b['address'] in tags]
             if declared:
                 try:
+                    marker=next((m for m in lookup_markers if m.get('page_id')==p.page_id and m.get('element_id')==q.index.number(s,'nPartsID')),None)
+                    if marker is not None:
+                        from .state_lookup import readback
+                        require(len(declared)==1,'LOOKUP_BINDING','One explicit lookup read address required');detail=readback(q,e,marker,tags[declared[0]])
+                        rows.append(dict(page_id=p.page_id,element_id=q.index.number(s,'nPartsID'),addresses=declared,status='PASS',lookup=detail));seen.update(declared);continue
                     # A partial contract audits only declared bindings; the full migration contract can require all.
                     if all(b is None or b['address'] in tags for b in bindings):check_binding(q,e,contract)
                     else:

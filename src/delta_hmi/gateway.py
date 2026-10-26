@@ -424,7 +424,7 @@ def create_server(gateway):
     async def call_tool(context, params):
         return await gateway.call_tool(params.name, params.arguments)
 
-    return Server("universal-delta-hmi-agent", version="0.3.1", on_list_tools=list_tools, on_call_tool=call_tool)
+    return Server("universal-delta-hmi-agent", version="0.3.2", on_list_tools=list_tools, on_call_tool=call_tool)
 
 
 async def serve(config_path):

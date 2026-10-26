@@ -1,6 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
 """Shared reusable CLI/MCP service; no private project generator imports."""
 from copy import deepcopy
+from contextlib import ExitStack
 import json
 from .hmi4_bootstrap import *
 from . import hmi4_inspect as inspect4
@@ -59,7 +60,8 @@ class Service(CoreService):
         r['retired_revisions_read_only']=True
         r['fresh_source_profile']=dict(tool='intake_source_profile',implemented=True,scope='COMPLETE_COUNTED_FRAMING_PROPOSAL; no old acceptance copied')
         r['incomplete_index']='OPEN_AND_PROJECT_VIEWS_REFUSE_INDEX_INCOMPLETE'
-        r['native_transactions']['operations'].append('delete_element')
+        r['native_transactions']['operations']+=['delete_element','state_lookup']
+        r['state_lookup']=dict(role='LOOKUP_WORD16_NONNEGATIVE',explicit_enum=True,source_donor=True,states=128,native_qualified=False)
         r['native_transactions']['preserved_only_families']=[[3,1]]
         r['source_login_clone']=dict(family=[12,3],credential_writer=False,retained_source_only=True)
         r['qualification_state']='SOURCE_BOUND_FILE_TESTED_VENDOR_UNQUALIFIED'
@@ -81,7 +83,7 @@ class Service(CoreService):
         opened=super().open_project(path,candidate_sha256,profile,profile_sha256)
         return {**opened,'reference_revision':e['revision'],'reference_status':e['status'],'staged_source':stage_source}
     def inspect_native_catalog(self,candidate_sha256,page_id=None):
-        self.checked(candidate_sha256);return inspect4.inventory(self._project(),self.current_profile,page_id)
+        self.checked(candidate_sha256);r=inspect4.inventory(self._project(),self.current_profile,page_id);r['state_lookups']=self.current_profile.get('state_lookups',[]);return r
     def inspect_numeric_bindings(self,candidate_sha256):
         self.checked(candidate_sha256);q=self._project()
         return dict(candidate_sha256=candidate_sha256,items=[inspect4.row(q,p,e) for p in q.pages for e in p.elements if inspect4.numeric(q,e) is not None],native_qualified=False)
@@ -115,7 +117,7 @@ class Service(CoreService):
     def inspect_parameters(self,revision=None):return dict(revision=reference.entry(revision)['revision'],matrix=reference.matrix(revision),scope='Frozen per-field native parameter matrix; not PLC runtime values')
     def get_reference_contract(self,revision=None):return reference.reference_contract(revision)
     def validate_bindings(self,candidate_sha256,contract,contract_sha256,require_all=False):
-        self.checked(candidate_sha256);return inspect4.audit_contract(self._project(),contract,contract_sha256,require_all)
+        self.checked(candidate_sha256);return inspect4.audit_contract(self._project(),contract,contract_sha256,require_all,lookup_markers=self.current_profile.get('state_lookups',[]))
     def inspect_affine_scale(self,candidate_sha256,page_id,element_id,raw_value=None,display_value=None):
         self.checked(candidate_sha256);q=self._project();n=inspect4.numeric(q,q.element(page_id,element_id));require(n is not None,'NUMERIC_FAMILY','Numeric input/display required')
         gain=inspect4.dec(n['native_gain']);offset=inspect4.dec(n['native_offset']);factor=inspect4.dec(n['factor']);require(gain!=0,'NUMERIC_SCALE','Zero gain has no inverse')
@@ -123,10 +125,23 @@ class Service(CoreService):
         if raw_value is not None:result['display_value']=str((inspect4.dec(raw_value)*gain+offset)/factor)
         if display_value is not None:result['raw_value']=str((inspect4.dec(display_value)*factor-offset)/gain)
         return result
+    def native_build(self,raw,profile,spec):
+        require(isinstance(spec,dict) and isinstance(spec.get('operations'),list) and 1<=len(spec['operations'])<=1000,'SPEC','Bounded native specification required')
+        sources={};held=[]
+        with ExitStack() as stack:
+            for op in spec.get('operations',[]):
+                if not isinstance(op,dict) or op.get('op')!='state_lookup':continue
+                d=op.get('donor');require(isinstance(d,dict) and set(d)=={'path','source_sha256','page_id','element_id','element_sha256','template_state_value'},'LOOKUP_DONOR','Exact source donor descriptor required')
+                name=d['path'];require(isinstance(name,str) and name and ':'not in name and '\\'not in name and not Path(name).is_absolute() and all(p not in ('','.','..')for p in name.split('/')),'LOOKUP_DONOR_PATH','Normalized workspace-relative donor path required')
+                hash_value(d['source_sha256']);hash_value(d['element_sha256']);require(all(type(d[k])is int and 0<=d[k]<=65534 for k in ('page_id','element_id','template_state_value')),'LOOKUP_DONOR','Bounded exact donor selectors required')
+                data,unchanged=stack.enter_context(immutable_read(self._path(name)));require(sha(data)==d['source_sha256'],'LOOKUP_DONOR_HASH','Immutable source donor changed');sources[d['source_sha256']]=source_intake.complete_prefix(Project(data));held.append(unchanged)
+            result=transaction.build(raw,profile,spec,lookup_sources=sources)
+            for unchanged in held:unchanged()
+            return result
     def plan_native_update(self,candidate_sha256,specification,specification_sha256):
         self.checked(candidate_sha256,inspected=True);self.write_scope();hash_value(specification_sha256)
         require(specification_sha256==sha(canonical(specification)),'SPEC_HASH','Exact immutable specification required')
-        built=transaction.build(self.current,self.current_profile,specification)
+        built=self.native_build(self.current,self.current_profile,specification)
         key=sha(canonical(dict(candidate_sha256=candidate_sha256,profile_sha256=self.current_profile_sha256)))
         with self.journal.connect() as db:
             old=db.execute('SELECT raw,profile FROM hmi4_bases WHERE id=?',(key,)).fetchone();values=(self.current,canonical(self.current_profile))
@@ -144,7 +159,7 @@ class Service(CoreService):
         with self.journal.connect() as db:row=db.execute('SELECT raw,profile FROM hmi4_bases WHERE id=?',(r['hmi4_base_key'],)).fetchone()
         require(row is not None,'BASE_UNKNOWN','Native plan base missing');raw=bytes(row[0]);profile=json.loads(row[1])
         require(sha(raw)==r['base_sha256'] and sha(canonical(profile))==r['base_profile_sha256'],'BASE_DRIFT','Native plan base changed')
-        built=transaction.build(raw,profile,op['specification']);require(built['candidate']==p['candidate'] and canonical(built['profile'])==canonical(p['profile']) and canonical(built['ledger'])==canonical(p['steps'][0]['ledger']),'PLAN_DRIFT','Native plan reconstruction differs')
+        built=self.native_build(raw,profile,op['specification']);require(built['candidate']==p['candidate'] and canonical(built['profile'])==canonical(p['profile']) and canonical(built['ledger'])==canonical(p['steps'][0]['ledger']),'PLAN_DRIFT','Native plan reconstruction differs')
     def inspect_native_plan(self,plan_sha256):
         p,_=self.journal.load_plan(plan_sha256);self.strict(p);op=self.journal.find('apply:'+p['record']['source_sha256']+':'+plan_sha256)
         return dict(plan_sha256=plan_sha256,record=p['record'],profile=p['profile'],operation=op,native_qualified=False)

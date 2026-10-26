@@ -2441,6 +2441,36 @@
       "availability_at_authoring": "EXISTS",
       "execution_status": "PASS_FOCUSED_OFFLINE_0.4.2",
       "prior_observation": "Neutral synthetic framing/source-retention/dependency regression; no vendor acceptance"
+    },
+    {
+      "test_name": "test_state_lookup.LookupTests.test_32_and_sparse_exact_domains_preserve_unowned_bytes",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FOCUSED_OFFLINE_0.4.3",
+      "prior_observation": "Neutral source-derived lookup; vendor/runtime not run"
+    },
+    {
+      "test_name": "test_state_lookup.LookupTests.test_missing_duplicate_extra_negative_boolean_enum_refuse",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FOCUSED_OFFLINE_0.4.3",
+      "prior_observation": "Neutral source-derived lookup; vendor/runtime not run"
+    },
+    {
+      "test_name": "test_state_lookup.LookupTests.test_dependency_and_font_variants_refuse",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FOCUSED_OFFLINE_0.4.3",
+      "prior_observation": "Neutral source-derived lookup; vendor/runtime not run"
+    },
+    {
+      "test_name": "test_state_lookup.LookupTests.test_no_unsigned_or_bool_general_coercion_and_writer_refuse",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FOCUSED_OFFLINE_0.4.3",
+      "prior_observation": "Neutral source-derived lookup; vendor/runtime not run"
+    },
+    {
+      "test_name": "test_state_lookup.LookupTests.test_fresh_session_donor_drift_restore_and_save",
+      "availability_at_authoring": "EXISTS",
+      "execution_status": "PASS_FOCUSED_OFFLINE_0.4.3",
+      "prior_observation": "Neutral source-derived lookup; vendor/runtime not run"
     }
   ],
   "private_qualification": {
@@ -2510,5 +2540,20 @@
     "gauge": "PRESERVED_ONLY",
     "vendor_compile": "NOT_RUN",
     "runtime": "NOT_RUN"
+  },
+  "state_lookup_extension": {
+    "version": "0.4.3",
+    "document": "STATE_LOOKUP.md",
+    "role": "LOOKUP_WORD16_NONNEGATIVE",
+    "support": "SOURCE_BOUND_FILE_ONLY",
+    "tests": [
+      "test_state_lookup.LookupTests.test_32_and_sparse_exact_domains_preserve_unowned_bytes",
+      "test_state_lookup.LookupTests.test_missing_duplicate_extra_negative_boolean_enum_refuse",
+      "test_state_lookup.LookupTests.test_dependency_and_font_variants_refuse",
+      "test_state_lookup.LookupTests.test_no_unsigned_or_bool_general_coercion_and_writer_refuse",
+      "test_state_lookup.LookupTests.test_fresh_session_donor_drift_restore_and_save"
+    ],
+    "simultaneous_mask_decoder": false,
+    "vendor_compile": "NOT_RUN"
   }
 }

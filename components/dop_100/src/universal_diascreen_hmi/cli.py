@@ -135,7 +135,7 @@ def serve(session, incoming=None, outgoing=None):
                 initialized = True
                 result = {'protocolVersion': requested if requested in PROTOCOLS else PROTOCOLS[0],
                           'capabilities': {'tools': {'listChanged': False}},
-                          'serverInfo': {'name': 'universal-diascreen-hmi', 'version': '0.4.2'},
+                          'serverInfo': {'name': 'universal-diascreen-hmi', 'version': '0.4.3'},
                           'instructions': 'File workspace only. Inspect first. Proposals require exact plan approval and --allow-write. Vendor/runtime acceptance is separate.'}
             elif method == 'ping':
                 result = {}

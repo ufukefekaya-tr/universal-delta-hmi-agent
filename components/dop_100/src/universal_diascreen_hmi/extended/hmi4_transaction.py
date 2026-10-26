@@ -43,7 +43,7 @@ def macro_free(q,e):return all(not t.blob(q.file.payload) for sec in [e.section,
 def rect_check(vals):
     require(all(type(vals[k]) is int for k in GEOMETRY),'GEOMETRY','Integer rectangle required')
     require(0<=vals['X']<vals['X']+vals['Width']<=800 and 0<=vals['Y']<vals['Y']+vals['Height']<=480,'GEOMETRY','Rectangle escapes800x480')
-def build(raw,profile,spec):
+def build(raw,profile,spec,lookup_sources=None):
     require(isinstance(spec,dict) and set(spec)<={'version','operations','contract','contract_sha256','policy'} and spec.get('version')==1,'SPEC','Exact version1 native specification required')
     operations=spec.get('operations');require(isinstance(operations,list) and 1<=len(operations)<=1000,'OPERATIONS','1..1000 explicit operations required')
     q=Project(raw);profile_check(q,profile)
@@ -99,6 +99,7 @@ def build(raw,profile,spec):
           'clone_element':common|{'new_page_id','new_element_id','retain_bindings','retain_macros','binding'},
           'replace_element':common|{'donor_page_id','donor_element_id','donor_sha256','retain_bindings','retain_macros'},
           'delete_element':{'op','page_id','element_id','expected_element_sha256'},
+          'state_lookup':common|{'donor','binding'},
           'edit_page':{'op','page_id','expected_page_sha256','titles','descriptions','name','background_page_id'},
           'clone_page':{'op','page_id','expected_page_sha256','new_page_id','name','titles','retain_macros','png_base64'},
           'navigation':common|{'target_page_id','target_name'},
@@ -141,6 +142,11 @@ def build(raw,profile,spec):
             require(decoded['width']==800 and decoded['height']==480 and len(old)==1152040 and sha(old)==op.get('expected_dib_sha256') and end<=background.blob_end,'DIB_OWNER','Exact source800x480 24bit DIB owner required')
             new=png_dib(op['png_base64']);resource_patches.append(Patch(start,end,old,new,'native same-size source-qualified DIB'));proof.append(dict(op=kind,page_ids=owners,source_dib_sha256=sha(old),candidate_dib_sha256=sha(new)));continue
         p,i,e=checked_selector(q,op);claim(p,i);values={};donor=e
+        if kind=='state_lookup':
+            from .state_lookup import build as lookup_build
+            require(contract is not None and lookup_sources is not None and op['donor']['source_sha256'] in lookup_sources,'LOOKUP_DONOR','An immutable read donor context and typed contract are required')
+            new,lookup_proof=lookup_build(q,e,op,lookup_sources[op['donor']['source_sha256']],contract,profile)
+            replacements[(p,i)]=new;proof.append(dict(op=kind,page_id=p,element_id=i,target_page_id=p,target_element_id=i,new_block_sha256=sha(new),lookup=lookup_proof));continue
         login=family(q,e)==(12,3) and kind in ('edit_element','clone_element','move_element','replace_element')
         require(family(q,e) in SUPPORTED or login,'ELEMENT_FAMILY','Unqualified source family cannot be written')
         if kind=='delete_element':
@@ -276,6 +282,10 @@ def build(raw,profile,spec):
             if (p.page_id,eid) in claimed:continue
             fe=final.element(p.page_id,eid);require(element_hash(q,e)==element_hash(final,fe),'UNOWNED','Unowned native element changed');unowned+=1
     for op in operations:
+        if op['op']=='state_lookup':
+            from .state_lookup import readback
+            marker=next(x['lookup']for x in proof if x.get('op')=='state_lookup' and x['page_id']==op['page_id'] and x['element_id']==op['element_id'])
+            readback(final,final.element(op['page_id'],op['element_id']),marker,contract_rows(contract)[op['binding']['address']]);continue
         if op['op']=='bind_element' or 'binding' in op:
             p,i=(op['new_page_id'],op['new_element_id']) if op['op']=='clone_element' else (op['page_id'],op['element_id'])
             check_binding(final,final.element(p,i),contract)
@@ -287,6 +297,7 @@ def build(raw,profile,spec):
     # Historical closed reconstruction metadata becomes lineage, never a new acceptance claim.
     for key in ('machine_candidate','r06_candidate','r07_candidate','home_native_pilot','r08_clean17','r09_clean17'):
         if key in fp:fp.setdefault('source_lineage',{})[key]=fp.pop(key)
+    fp['state_lookups']=[m for m in profile.get('state_lookups',[]) if (m['page_id'],m['element_id']) not in claimed]+[x['lookup']for x in proof if 'lookup'in x]
     fp['hmi4_native_update']=dict(engine_sha256=identity(),specification_sha256=sha(canonical(spec)),source_sha256=sha(raw),native_qualified=False,vendor_compile='NOT_RUN')
     if resource_patches or background_appends:
         from universal_diascreen_hmi.preview import decode_dib

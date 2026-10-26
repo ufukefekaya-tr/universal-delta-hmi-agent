@@ -1,0 +1,65 @@
+{
+  "schema": "delta.hmi.state-lookup.v1",
+  "version": "0.3.2",
+  "DIAScreen_component": "0.4.3",
+  "status": "PASS_SOURCE_BOUND_FILE_ONLY_WITH_DECLARED_LEGACY_HOST_SKIP",
+  "tools": 70,
+  "source_integrity": {
+    "files": 32,
+    "engine_sha256": "1638ae743461ffddddf8531b3996c8b92e8eb38659b5486420550ae4ffd7b502",
+    "manifest_sha256": "66859f115fadb2398f7c69bf8f4b44472087842585938201de4813d18ece9e10"
+  },
+  "scope": "Original generic code and neutral fixtures; no customer DPA/profile/tags/endpoints/credentials/fonts/private generator",
+  "tests": {
+    "gateway": {
+      "cases": 63,
+      "failures": 0,
+      "skipped": 0
+    },
+    "DIAScreen": {
+      "cases": 176,
+      "failures": 0,
+      "skipped": 1,
+      "skip": "Legacy Windows OS symlink privilege; five new lookup tests do not skip"
+    }
+  },
+  "logs_sha256": {
+    "gateway": "4a9872d16fab30ec3cc1ee1bc64003c244af40172d38c9f25a932402fbb0ec37",
+    "DIAScreen": "434506fec032e417212b0fb57ced1762d9495f568a98f954bee0900bfb7054ef"
+  },
+  "lookup": {
+    "role": "LOOKUP_WORD16_NONNEGATIVE",
+    "native_format": {
+      "MemLen": 1,
+      "MemFmt": 2
+    },
+    "signed_native_type": false,
+    "explicit_complete_enum": true,
+    "sparse_sets_supported": true,
+    "languages": 3,
+    "donor_pins_revalidated": true,
+    "general_type_coercion": false,
+    "simultaneous_mask_decoder": false,
+    "unknown_runtime_value": "UNQUALIFIED_NO_FALLBACK_CLAIM"
+  },
+  "fresh_protocols": {
+    "local_and_product_CLI_MCP": true,
+    "identical_saved_candidate": true,
+    "fresh_reopen": true,
+    "source_and_donor_unchanged": true,
+    "gauge_auth_application_globalmacros_resources_exact": true,
+    "donor_drift_approval_write_replay_negatives": "PASS"
+  },
+  "relocated_wheel": {
+    "status": "PASS",
+    "source_manifest_files": 32,
+    "space_path": true,
+    "isolated_python": true
+  },
+  "independent_technical_review": "PASS",
+  "vendor_compile": "NOT_RUN",
+  "simulator": "NOT_RUN",
+  "native_pixels": "NOT_ESTABLISHED",
+  "physical": "NOT_RUN",
+  "offline_bundles": "Historical0.2.1 archives unchanged; current source update"
+}
