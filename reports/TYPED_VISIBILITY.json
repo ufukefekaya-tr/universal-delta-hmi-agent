@@ -1,0 +1,49 @@
+{
+  "schema": "delta.hmi.source-update.v1",
+  "umbrella_version": "0.3.4",
+  "diascreen_version": "0.4.5",
+  "status": "PASS_SOURCE_BOUND_FILE_ONLY",
+  "role": "READ_ONLY_BOOL_VISIBILITY",
+  "scope": "Existing readonly numeric5/1 and static10/6 BOOL visibility fields; unchanged source conditions and separately audited numeric type",
+  "implemented": true,
+  "headless": true,
+  "native_qualified": false,
+  "runtime_qualified": false,
+  "vendor_compile": "NOT_RUN",
+  "tests": {
+    "gateway": 63,
+    "diascreen": 190,
+    "typed_visibility": 8,
+    "failures": 0,
+    "skipped": 1,
+    "skip_scope": "Legacy local Windows OS symlink privilege case; all8newvisibility methods ran"
+  },
+  "fresh_protocols": {
+    "local_cli": "PASS",
+    "local_mcp": "PASS",
+    "portable_cli": "PASS",
+    "portable_mcp": "PASS",
+    "same_exact_native_candidate": true,
+    "source_and_unowned_preserved": true,
+    "application_auth_globalmacros_resources_preserved": true,
+    "synthetic_not_runtime_truth": true
+  },
+  "portable_wheel": {
+    "source_files": 33,
+    "exact_python_bytes": true,
+    "relocated_path_with_spaces": true,
+    "isolated_python": true
+  },
+  "review": {
+    "technical": "PASS; initial negative fixture corrected before final suite",
+    "final_exact_omission": "External hash-bound final review required before commit"
+  },
+  "excluded": [
+    "GUI/Computer Use",
+    "Gauge/bar edits",
+    "Password/auth edits",
+    "PLC/device writes",
+    "Vendor/runtime truth qualification"
+  ],
+  "source_witness_privacy": "Private source evidence remains outside this repo; neutral fixtures only"
+}

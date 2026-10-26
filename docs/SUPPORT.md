@@ -1,4 +1,4 @@
-Current source extension: [native service update](NATIVE_SERVICE_UPDATE.md). See the current 69-tool integration inventory; historical release evidence below remains scoped to its original bytes.
+Current source extension: [native service update](NATIVE_SERVICE_UPDATE.md). See the current 70-tool integration inventory; historical release evidence below remains scoped to its original bytes.
 
 # Supported release scope
 
@@ -34,3 +34,6 @@ Sparse State.Value writer support is withdrawn after a manufacturer-resaved sour
 
 
 Fixed TRUE/FALSE bit actions remain unqualified without an observed SET/RESET source donor. A maintained toggle, momentary control or INT constant button is not an equivalent fixed BOOL write. No new native opcode is inferred.
+
+
+Typed visibility0.4.5: [existing readonly numeric/static visibility fields](TYPED_VISIBILITY.md) can use an exact BOOL contract while preserving the original source condition and numeric data type. Source-intent/file preservation is tested; manufacturer runtime truth remains separate.

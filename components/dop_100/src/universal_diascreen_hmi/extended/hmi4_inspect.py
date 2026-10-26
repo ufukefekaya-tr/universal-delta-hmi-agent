@@ -105,6 +105,13 @@ def audit_contract(q,contract,contract_sha256,require_all=False,lookup_markers=(
     for p in q.pages:
         for e in p.elements:
             s=e.section;bindings=[address(field(q,s,k)) for k in ('ReadVar','WriteVar')]
+            visible=address(field(q,s,'VisibleVar'))
+            if visible and visible['address'] in tags:
+                try:
+                    from .typed_visibility import readback as visibility_readback
+                    detail=visibility_readback(q,e,contract)
+                    rows.append(dict(page_id=p.page_id,element_id=q.index.number(s,'nPartsID'),addresses=[visible['address']],status='PASS',visibility=detail));seen.add(visible['address'])
+                except ValueError as error:rows.append(dict(page_id=p.page_id,element_id=q.index.number(s,'nPartsID'),addresses=[visible['address']],status='FAIL',role='visibility',reason=str(error)))
             declared=[b['address'] for b in bindings if b and b['address'] in tags]
             if declared:
                 try:

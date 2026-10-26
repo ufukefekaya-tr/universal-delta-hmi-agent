@@ -2615,5 +2615,29 @@
     "reason": "No observed same-family SET/RESET donor in the inspected source; enum/opcode must not be invented",
     "current_api": "NONE",
     "native_or_runtime_accepted": false
+  },
+  "typed_visibility_extension": {
+    "version": "0.4.5",
+    "document": "TYPED_VISIBILITY.md",
+    "support": "SOURCE_BOUND_FILE_ONLY",
+    "families": [
+      "readonly5/1",
+      "static10/6"
+    ],
+    "typed_role": "READ_ONLY_BOOL_VISIBILITY",
+    "condition_rewritten": false,
+    "requires_same_source_direct_witness": true,
+    "vendor_compile": "NOT_RUN",
+    "runtime": "NOT_RUN",
+    "tests": [
+      "test_typed_visibility.VisibilityTests.test_pair_source_conditions_separate_real_bool_and_unowned_preservation",
+      "test_typed_visibility.VisibilityTests.test_condition_boolean_unknown_and_wrong_role_refuse",
+      "test_typed_visibility.VisibilityTests.test_wrong_contract_type_width_access_and_hash_refuse",
+      "test_typed_visibility.VisibilityTests.test_wrong_family_and_unsupported_operation_refuse",
+      "test_typed_visibility.VisibilityTests.test_same_source_direct_witness_is_mandatory",
+      "test_typed_visibility.VisibilityTests.test_audit_cannot_hide_numeric_mismatch_behind_valid_bool",
+      "test_typed_visibility.VisibilityTests.test_macro_indirect_unknown_condition_and_missing_fields_refuse",
+      "test_typed_visibility.VisibilityTests.test_fresh_restore_exact_approval_newonly_save_and_readonly_audit"
+    ]
   }
 }

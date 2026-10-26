@@ -1,6 +1,6 @@
 # Native service update — 26 October 2026
 
-The current source tree exposes **69 DIAScreen tools and aliases** through the isolated `dop_100__` route, plus `close_session`. Existing DOP-B implementation and evidence are unchanged. Published v0.2.1 offline archives retain their historical 30-tool DIAScreen backend; this source update does not change those immutable archives or their download locks.
+The current source tree exposes **70 DIAScreen tools and aliases** through the isolated `dop_100__` route, plus `close_session`. Existing DOP-B implementation and evidence are unchanged. Published v0.2.1 offline archives retain their historical 30-tool DIAScreen backend; this source update does not change those immutable archives or their download locks.
 
 The reusable implementation is `src/universal_diascreen_hmi/extended/`. It imports the original generic backend, never a private customer build module. Default reference catalog is empty. No native project, tag catalog, customer endpoint, password, logo, machine logic, fonts or device data is distributed.
 
@@ -28,3 +28,6 @@ Optional trusted-host reference catalog: set `DIA_HMI_REFERENCE_ROOT` outside th
 Vendor headless opening/saving/compilation, real offline simulator, vendor transfer package, generic native alarm/history/recipe/trend/account constructors and password management remain explicitly unimplemented. Existing opaque data is preserved or affected edits are refused. These limitations do not prevent the qualified offline file services.
 
 Final current offline receipts are in ../../reports/NATIVE_SERVICE_UPDATE.json:62 gateway,981 unchanged DOP-B and163 DIAScreen cases;0failures,1declared Windows symlink permission skip. Actual source/open-plan-apply-new-save/reopen/ZIP paths pass in fresh CLI/MCP processes; optional font/render and relocated wheel integrity also pass. PNG framing/load/conversion and uncertain I/O return structured errors.
+
+
+Typed visibility0.4.5: [existing readonly numeric/static visibility fields](TYPED_VISIBILITY.md) can use an exact BOOL contract while preserving the original source condition and numeric data type. Source-intent/file preservation is tested; manufacturer runtime truth remains separate.

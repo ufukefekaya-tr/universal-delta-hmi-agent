@@ -1,4 +1,4 @@
-Current source extension: [native service update](docs/NATIVE_SERVICE_UPDATE.md). See the current 69-tool integration inventory; historical release evidence below remains scoped to its original bytes.
+Current source extension: [native service update](docs/NATIVE_SERVICE_UPDATE.md). See the current 70-tool integration inventory; historical release evidence below remains scoped to its original bytes.
 
 # Universal DIAScreen HMI Agent
 

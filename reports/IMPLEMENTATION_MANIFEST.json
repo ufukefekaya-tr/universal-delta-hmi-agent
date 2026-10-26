@@ -1,5 +1,5 @@
 {
-  "scope": "Current0.3.3 source; complete root public membership excluding separately snapshotted components and this manifest",
+  "scope": "Current0.3.4 source; complete root public membership excluding separately snapshotted components and this manifest",
   "files": [
     {
       "path": ".gitattributes",
@@ -19,7 +19,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "f0a20a1700bfb6c9a9c36aea16cbbd07b94f62adccbb101683184800e26eff6d"
+      "sha256": "21f2c2e59ac58a7e2bd7f692165141ca7336a7dac348b3d0596b2b6c74459a58"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -39,7 +39,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "17a7653325148431d3a7b0babaa6ae3840ca58c3d0946390669b120e35768622"
+      "sha256": "696207032abbbde1ba5a622abada2cb43098a34f050fa07db9d441d5d0873214"
     },
     {
       "path": "SECURITY.md",
@@ -67,7 +67,7 @@
     },
     {
       "path": "docs/FEATURE_MIGRATION.json",
-      "sha256": "f4b8e86cd8d97fb7eac35f415b8de84026cf2fd31baeeb28e121337b1ecaeccf"
+      "sha256": "265d92972ebef088add72487521f9642e7522c1985f7cc50c52551d96ae2c6f6"
     },
     {
       "path": "docs/GAUGE_SOURCE_PROFILE.md",
@@ -75,7 +75,7 @@
     },
     {
       "path": "docs/GOALS.md",
-      "sha256": "5d3f06d256860e85df932d7173745e931db7317181e902fce4168ea989589c94"
+      "sha256": "baa4f127d8a058353e33f6c484ae1372284a2bc6e31e7391163f8a30c75002bb"
     },
     {
       "path": "docs/JOBS.md",
@@ -91,7 +91,7 @@
     },
     {
       "path": "docs/NATIVE_SERVICE_UPDATE.md",
-      "sha256": "2ae047f4a17cf62ece19382e951e29f98c902eefaae75af269b05fc3d6c476cf"
+      "sha256": "8d88c4441e0f1d42ddaef62d5416a4a5d4fe3585b53bbc8331041a948a96e4c6"
     },
     {
       "path": "docs/REGRESSIONS.json",
@@ -103,7 +103,11 @@
     },
     {
       "path": "docs/SUPPORT.md",
-      "sha256": "ee2ed3f15471258524a1eac0ba2d9389bd1e36cababbdbfeb1140acb7690ecc5"
+      "sha256": "3aa034dc1960dc6a77e73df6a6e699ec8707e5344d99a82a12885c5d1ae2e2aa"
+    },
+    {
+      "path": "docs/TYPED_VISIBILITY.md",
+      "sha256": "2e62c1a6cb9da581af4e0e58989d732fba62f00fda0291a625560f54ee46a268"
     },
     {
       "path": "docs/WORKFLOW.md",
@@ -127,7 +131,7 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "b30e53e40e78c6bebd55b7f9965e92c18768fc53125fb9324d78e7204ca04dfa"
+      "sha256": "f488451a9ea4e0d36013377f623a7aebcbe0463df2a647780ff081ca051a8639"
     },
     {
       "path": "reports/GAUGE_SOURCE_PROFILE.json",
@@ -154,6 +158,10 @@
       "sha256": "86b89959cb4647216df57167bf641304285a6db4624981086e01448269176d3c"
     },
     {
+      "path": "reports/TYPED_VISIBILITY.json",
+      "sha256": "1626952ae92c7d137a7e07ebe1c998369a11873b83e4d726e954b53eb3344a4c"
+    },
+    {
       "path": "reports/VERIFICATION.json",
       "sha256": "6e1c0324965e0ea02f0ea9a025037a5856dbf9ad70ff4be1e55531aeeb8edaf9"
     },
@@ -176,6 +184,10 @@
     {
       "path": "reports/releases/0.3.2/STATE_LOOKUP.json",
       "sha256": "0b0f24d469863135ca2872d7eaa3cf3a5d11603d9fed77bb652e83cf767352cd"
+    },
+    {
+      "path": "reports/releases/0.3.3/IMPLEMENTATION_MANIFEST.json",
+      "sha256": "f1bb132abaaf04af0e59bfa321c20d73253cf2cc7608c86de8fd4d565f6c344f"
     },
     {
       "path": "scripts/bootstrap.ps1",
@@ -203,7 +215,7 @@
     },
     {
       "path": "src/delta_hmi/__init__.py",
-      "sha256": "e3965e526f72b0a28326ba99c96b44b1906fe9039b6423015b08fa9d2d26abf4"
+      "sha256": "212d197ebd2da2f106391fa91fbbd0a506cd4ce0447f2f542cf5992ad974a7b1"
     },
     {
       "path": "src/delta_hmi/cli.py",
@@ -215,7 +227,7 @@
     },
     {
       "path": "src/delta_hmi/gateway.py",
-      "sha256": "6b9613c829c8cbc7908218652d921a07cfb7469d78dc538a8b50ea7a6f65a7e7"
+      "sha256": "e98efeb86d9835731322688cdad15c0b8648d93c05cdfb318144c0b0b5cb81ba"
     },
     {
       "path": "templates/backends.json",
@@ -223,7 +235,7 @@
     },
     {
       "path": "templates/component_files.json",
-      "sha256": "18b769e3f1723c2e9317acd03497e635ec5d9ce4c72485e47237587b29ad1b11"
+      "sha256": "6c69a85899f23b8b99bc6240f46dfb343f33d0d07114bffa4b3ce4cfb2a23b99"
     },
     {
       "path": "templates/releases.lock.json",

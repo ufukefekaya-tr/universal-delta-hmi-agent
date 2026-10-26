@@ -68,3 +68,6 @@ CI tests the gateway and both original component suites on Windows and Linux. In
 - [Contributing](CONTRIBUTING.md), [security](SECURITY.md), [licensing](THIRD_PARTY_NOTICES.md)
 
 Apache-2.0 provides the contributor patent grant described in section 3. Third-party dependencies and runtimes retain their own licenses and notices. Delta product names describe compatibility targets; this is independent software without vendor endorsement.
+
+
+Typed numeric/dash visibility is documented in [DIAScreen visibility](components/dop_100/docs/TYPED_VISIBILITY.md). Existing source conditions and macros are preserved; validity and numeric types are checked separately.

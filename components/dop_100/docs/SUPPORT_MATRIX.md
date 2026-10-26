@@ -176,3 +176,8 @@ Sparse State.Value writer support is withdrawn after a manufacturer-resaved sour
 
 
 Fixed TRUE/FALSE bit actions remain unqualified without an observed SET/RESET source donor. A maintained toggle, momentary control or INT constant button is not an equivalent fixed BOOL write. No new native opcode is inferred.
+
+
+## Typed readonly visibility0.4.5
+
+[Source-qualified numeric/dash visibility](TYPED_VISIBILITY.md) binds an existing direct/local BOOL visibility operand to an explicit readonly PLC BOOL. The source condition is retained; REAL data type is audited separately. Only readonly5/1 and static10/6 are qualified for these edits. Native compile/runtime remains separate.

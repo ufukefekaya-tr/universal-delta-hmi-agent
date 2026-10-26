@@ -5,7 +5,7 @@ import os,json,re
 from .common import Error,canonical,sha,require,hash_value,no_links,write_new,engine_identity
 HERE=Path(__file__).resolve().parent
 ROOT=Path(os.environ.get('DIA_HMI_REFERENCE_ROOT',str(HERE))).absolute()
-VERSION='0.4.4'
+VERSION='0.4.5'
 def identity():return engine_identity()
 def release_inventory():
     root=HERE.parent

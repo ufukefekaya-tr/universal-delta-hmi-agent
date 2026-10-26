@@ -14,4 +14,6 @@ The release scope is two-family **file MCP engineering** with the documented cur
 
 Vendor compilation, native pixel behavior, live transport, panel and physical acceptance remain outside this release and require human evidence bound to the exact target/model/file. The repo does not close those acceptance stages using offline tests.
 
-Current source native-service migration: 69 DIAScreen tools; local generic tests and real private-input qualification are separate from the historical release. Exact current results: reports/NATIVE_SERVICE_UPDATE.json. New source tests do not qualify vendor compile, simulator or hardware.
+Current source native-service migration: 70 DIAScreen tools; local generic tests and real private-input qualification are separate from the historical release. Exact current results: reports/NATIVE_SERVICE_UPDATE.json. New source tests do not qualify vendor compile, simulator or hardware.
+
+Source update0.3.4 / DIAScreen0.4.5: typed readonly numeric/static visibility preserves source conditions and audits the BOOL role independently. Its current scope and receipts are in reports/TYPED_VISIBILITY.json; vendor/runtime acceptance remains separate.

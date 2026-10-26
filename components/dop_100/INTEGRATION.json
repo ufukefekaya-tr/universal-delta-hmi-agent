@@ -269,12 +269,33 @@
     "changes_native_bytes": false,
     "changes_render_order": false
   },
-  "version": "0.4.4",
+  "version": "0.4.5",
   "optional_dependencies": {
     "visual": "Pillow==12.2.0"
   },
   "stateless_tools": [
     "capabilities",
     "intake_source_profile"
-  ]
+  ],
+  "typed_visibility": {
+    "operation_argument": "visibility",
+    "operations": [
+      "edit_element",
+      "bind_element",
+      "clone_element",
+      "replace_element",
+      "move_element",
+      "numeric_display"
+    ],
+    "role": "READ_ONLY_BOOL_VISIBILITY",
+    "source_families": [
+      "readonly5/1",
+      "static10/6"
+    ],
+    "condition_retained": true,
+    "source_direct_witness_required": true,
+    "document": "docs/TYPED_VISIBILITY.md",
+    "native_qualified": false,
+    "runtime_qualified": false
+  }
 }

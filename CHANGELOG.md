@@ -8,6 +8,10 @@ DIAScreen component0.4.0 adds69 audited file tools/aliases: source-qualified ato
 
 # Changelog
 
+## 0.3.4
+
+DIAScreen0.4.5 adds source-qualified readonly numeric/static BOOL visibility, preserving existing conditions and separately auditing numeric and visibility types. No GUI, macro, gauge, password or PLC action is added.
+
 ## 0.3.3
 
 Withdraws sparse serialized state values after an observed manufacturer resave normalized them to ordinal indices. Adds explicit dense display coverage without changing the produced PLC enum and readonly exact source text-map validation without profile-marker adoption.

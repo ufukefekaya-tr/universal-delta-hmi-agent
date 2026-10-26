@@ -66,6 +66,9 @@ def build(raw,profile,spec,lookup_sources=None):
         require((p,i) not in claimed,'DUPLICATE_OWNER','Combine changes to the same source owner in one operation');claimed.add((p,i))
     def make(e,op,values=None):
         values=dict(values or {});s=e.section
+        if 'visibility' in op:
+            from .typed_visibility import values as visibility_values
+            visible,_=visibility_values(q,e,op['visibility'],contract,profile);values.update(visible)
         for k in op.get('fields',{}):require(k in GEOMETRY,'FIELD_SCOPE','Only geometry in fields; binding/type/auth/enum require their qualified operation')
         values.update(op.get('fields',{}));rect_check({k:values.get(k,q.index.number(s,k)) for k in GEOMETRY})
         patches=[token_patch(q,s,k,v,'native owned field') for k,v in values.items()]
@@ -92,12 +95,12 @@ def build(raw,profile,spec,lookup_sources=None):
         kind=op['op']
         common={'op','page_id','element_id','expected_element_sha256','fields','states'}
         allowed={
-          'edit_element':common,
-          'numeric_display':common|{'display'},
-          'bind_element':common|{'binding'},
-          'move_element':common|{'new_page_id','new_element_id','retain_macros'},
-          'clone_element':common|{'new_page_id','new_element_id','retain_bindings','retain_macros','binding'},
-          'replace_element':common|{'donor_page_id','donor_element_id','donor_sha256','retain_bindings','retain_macros'},
+          'edit_element':common|{'visibility'},
+          'numeric_display':common|{'display','visibility'},
+          'bind_element':common|{'binding','visibility'},
+          'move_element':common|{'new_page_id','new_element_id','retain_macros','visibility'},
+          'clone_element':common|{'new_page_id','new_element_id','retain_bindings','retain_macros','binding','visibility'},
+          'replace_element':common|{'donor_page_id','donor_element_id','donor_sha256','retain_bindings','retain_macros','visibility'},
           'delete_element':{'op','page_id','element_id','expected_element_sha256'},
           'state_lookup':common|{'donor','binding','view'},
           'edit_page':{'op','page_id','expected_page_sha256','titles','descriptions','name','background_page_id'},
@@ -282,6 +285,16 @@ def build(raw,profile,spec,lookup_sources=None):
             if (p.page_id,eid) in claimed:continue
             fe=final.element(p.page_id,eid);require(element_hash(q,e)==element_hash(final,fe),'UNOWNED','Unowned native element changed');unowned+=1
     for op in operations:
+        if 'visibility' in op:
+            from .typed_visibility import readback as visibility_readback
+            vp,vi=(op['new_page_id'],op['new_element_id']) if op['op'] in ('clone_element','move_element') else (op['page_id'],op['element_id'])
+            detail=visibility_readback(final,final.element(vp,vi),contract)
+            require(all(detail[k]==op['visibility'][k] for k in ('address','link','station','visible_when')),'VISIBILITY_READBACK','Exact typed visibility must survive native encode/reopen')
+            from .typed_visibility import values as visibility_values
+            source_owner=q.element(op['donor_page_id'],op['donor_element_id']) if op['op']=='replace_element' else q.element(op['page_id'],op['element_id'])
+            _,witnesses=visibility_values(q,source_owner,op['visibility'],contract,profile)
+            item=next(x for x in proof if x.get('op')==op['op'] and x.get('page_id')==op['page_id'] and x.get('element_id')==op['element_id'])
+            item['visibility']=dict(**detail,source_witnesses=witnesses)
         if op['op']=='state_lookup':
             from .state_lookup import readback
             marker=next(x['lookup']for x in proof if x.get('op')=='state_lookup' and x['page_id']==op['page_id'] and x['element_id']==op['element_id'])
