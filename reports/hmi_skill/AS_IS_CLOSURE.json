@@ -1,0 +1,21 @@
+{
+  "schema": "delta.hmi.as-is-closure.v1",
+  "status": "SCOPE_CLOSED_AS_IS_RELEASE_HANDOFF",
+  "source_commit": "8788e70a01b2d3a8052322ab34f99144636db1a9",
+  "versions": {
+    "gateway": "0.4.0",
+    "dop_b": "0.2.1",
+    "dop_100": "0.5.0",
+    "skill": "0.1.0"
+  },
+  "maintainer_direction": "Deliver current MCP with companion skill immediately; no further MCP or DOP-B development",
+  "code_changed_for_closure": false,
+  "skill": "G3/G4 accepted;6fileMITpackage ready",
+  "dop_b": "Implementation unchanged; no additional work authorized",
+  "full_distribution_qualification": "NOT_CLAIMED; remaining hosted jobs cancelled on request",
+  "observed_C3_hosted_linux_portable": "PASS before cancellation",
+  "local_tests": "101gatewayPASS;981B PASS;232DIA run231pass1legacyhostskip; freshWindows bundled install/doctor/bothstdio/jobsPASS",
+  "original_goal_G5": "DEFERRED with criteria unchanged",
+  "publication": "Separate external DELIVERY_STATUS.json binds actual release and asset readback; source archives remain frozen at listed commit",
+  "no_further_work": "Requires a new explicit maintainer request"
+}

@@ -139,7 +139,7 @@
     },
     {
       "path": "goals/hmi-skill-transition.json",
-      "sha256": "0e17e0707059a7400b296ed6c0c7a925d08f63e0842f98725eb9c1362c4b5684"
+      "sha256": "f219c02be6b38ce0b67460ad120ec8312125ffc506702d3332c1f488b31a5824"
     },
     {
       "path": "projects/README.md",
@@ -188,6 +188,10 @@
     {
       "path": "reports/VERIFICATION.json",
       "sha256": "6e1c0324965e0ea02f0ea9a025037a5856dbf9ad70ff4be1e55531aeeb8edaf9"
+    },
+    {
+      "path": "reports/hmi_skill/AS_IS_CLOSURE.json",
+      "sha256": "9353c25bae42996776a60778176d16a957bf9414a5970e629257c3b0d915c0f7"
     },
     {
       "path": "reports/hmi_skill/G0_ACCEPTANCE.json",

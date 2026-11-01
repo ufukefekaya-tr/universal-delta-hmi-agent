@@ -12,7 +12,7 @@
     "REOPENED"
   ],
   "skill_gate": "G2",
-  "current_goal": "G5",
+  "current_goal": "G4",
   "goals": [
     {
       "id": "G0",
@@ -987,10 +987,10 @@
         "No customer content in any distribution member",
         "Release locks and all artifacts bind the accepted source"
       ],
-      "state": "IN_PROGRESS",
+      "state": "PENDING",
       "evidence": [],
       "open_findings": [],
-      "next_step": "G5.1",
+      "next_step": null,
       "reopen_reason": null,
       "rollback": "Immutable baseline and new-only versioned artifacts",
       "history": [
@@ -1019,10 +1019,23 @@
           "from": "REOPENED",
           "to": "IN_PROGRESS",
           "reason": "Metadata version gate closed; continue portable package acceptance"
+        },
+        {
+          "from": "IN_PROGRESS",
+          "to": "PENDING",
+          "reason": "Maintainer explicitly ended MCP development and requested immediate existing-MCP plus skill as-is delivery; remaining qualification deferred without weakening criteria"
         }
       ],
-      "accepted_subjects": []
+      "accepted_subjects": [],
+      "scope_disposition": "DEFERRED_BY_USER_NOT_FULL_QUALIFICATION",
+      "resume_requires_new_explicit_request": true
     }
   ],
-  "private_state": "Existing ignored envelope/checkpoint; no private locations or runtime databases in public goals"
+  "private_state": "Existing ignored envelope/checkpoint; no private locations or runtime databases in public goals",
+  "scope_closure": {
+    "status": "AS_IS_DELIVERY_HANDOFF",
+    "further_mcp_development": "PROHIBITED_UNLESS_NEW_EXPLICIT_REQUEST",
+    "remaining_G5": "DEFERRED; original criteria retained",
+    "publication_receipt": "GitHub v0.4.0 DELIVERY_STATUS.json"
+  }
 }
