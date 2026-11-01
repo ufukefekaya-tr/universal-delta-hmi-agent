@@ -243,11 +243,15 @@
     },
     {
       "path": "reports/hmi_skill/G5_CODE_REVIEW.json",
+      "sha256": "f70e0a3f05435de22b33cfc7749bebf8aa28fc2400784af78883e397e4e0ecaa"
+    },
+    {
+      "path": "reports/hmi_skill/G5_CODE_REVIEW_C1.json",
       "sha256": "52cab69984e7bb4d40f611fcd75d6b3fa2a64af0d4da83b61c75244c14d6c7b5"
     },
     {
       "path": "reports/hmi_skill/G5_DISTRIBUTION.json",
-      "sha256": "b20f39938dfc6fc473257f35d201067ef361276b2dd49f0ef36b6ae44a42552c"
+      "sha256": "c846801b222098a89154ae63b8596c8bc30c16b334767f58ed8496f17446fee2"
     },
     {
       "path": "reports/hmi_skill/MCP_API_SCHEMAS.json",
@@ -411,7 +415,7 @@
     },
     {
       "path": "tests/test_wheel_contract.py",
-      "sha256": "60929236abc1b0864099be5f9d5ad6f93e7efc634c9525234049d22e3206e87b"
+      "sha256": "dd6502a1042ae514808f3f746c51aec4a9c63e23ad8fddc0108140e5e8fb0df8"
     },
     {
       "path": "tools/check_behavioral_evidence.py",
@@ -451,7 +455,7 @@
     },
     {
       "path": "tools/wheel_contract.py",
-      "sha256": "840ec733de54c99aa467d5bb41187583c31929243410069e3278db21f51ac06f"
+      "sha256": "9411232f8ab9a6d51ddc9489c6028b88c55fc5090d1e769cfd9fdedb8118e56c"
     }
   ]
 }

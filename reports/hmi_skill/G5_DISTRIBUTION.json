@@ -42,16 +42,26 @@
     "association": "Final gateway run after all functional changes; B/DIA full run retained on unchanged runtime source; no vendor/physical claims"
   },
   "windows_local_preliminary": {
-    "fresh_short_root_with_spaces": true,
-    "forced_bundled_install": "PASS",
-    "both_backend_doctor": "PASS",
-    "stdio": "RUNNING_AT_SOURCE_FREEZE",
-    "final_exact_source_windows_linux": "PENDING_HOSTED_CI"
+    "status": "PASS",
+    "source_archive_sha256": "ff54dca2eeef8aa9d0e2323121ce75013ecf93cf7531f92823e67e2d09603747",
+    "report_sha256": "b168c8fbe1509d54d4611c0c6f5991efca64be6930cff001206822e7c14ba363",
+    "fresh_relocated_install": true,
+    "forced_bundled_runtimes": true,
+    "source_bytes_unchanged": true,
+    "stdio_both": "PASS",
+    "separate_sessions": "PASS",
+    "job_routing_restart_and_unreviewed_refusal": "PASS",
+    "candidate_sha256": {
+      "dop_b": "8e713e824d894834329bea161face71ce2dbdbf7069d3784d9c3cd3368f38c5a",
+      "dop_100": "d990835c63248693e9798e51acd2c3b6fd6c170da4793b55c2f58ba01c210c9d"
+    },
+    "association": "Pre-candidate installer/stdio acceptance; final exact candidate Windows/Linux CI remains externally bound"
   },
   "corrected_failures": [
     "Initial long-root install refused by OS before new preflight; now bounded to64characters",
     "WindowsPowerShell host lackedGet-FileHash; process-local.NETSHA256 implementation now used",
     "HistoricalBwheel differs from canonicalexport onlyinexistingCRLF/LF; standalonewheels rebuiltfromunchangedcanonicalsource; historicalbundleunmodified",
-    "Adversarial metadata/body/entrypoint and archive parser gaps closed with tests andindependentreview"
+    "Adversarial metadata/body/entrypoint and archive parser gaps closed with tests andindependentreview",
+    "Final real wheel output used one LF while fixture expected two; linter/fixture corrected under independent narrow review; no runtime/API change, no release of rejected artifacts"
   ]
 }

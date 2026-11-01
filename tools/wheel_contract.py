@@ -83,7 +83,7 @@ def audit(path,family):
     headers=Counter((k.casefold(),str(v)) for k,v in wheel.items())
     if wheel.defects or wheel.get_payload(decode=True) or headers!=Counter({('wheel-version','1.0'):1,('generator','setuptools (84.0.0)'):1,('root-is-purelib','true'):1,('tag','py3-none-any'):1}):raise ValueError('Unexpected wheel build/platform metadata')
     if files[meta+'/top_level.txt'].replace(b'\r\n',b'\n')!=package.encode()+b'\n':raise ValueError('Wrong import owner metadata')
-    canonical='[console_scripts]\n'+''.join(k+' = '+v+'\n' for k,v in sorted(project['project'].get('scripts',{}).items()))+'\n'
+    canonical='[console_scripts]\n'+''.join(k+' = '+v+'\n' for k,v in sorted(project['project'].get('scripts',{}).items()))
     if files[meta+'/entry_points.txt'].replace(b'\r\n',b'\n')!=canonical.encode():raise ValueError('Unreviewed entrypoint metadata bytes')
     cfg=configparser.ConfigParser();cfg.read_string(files[meta+'/entry_points.txt'].decode('utf8'))
     if cfg.sections()!=['console_scripts'] or dict(cfg['console_scripts'])!=project['project'].get('scripts',{}):raise ValueError('Unexpected executable entrypoint')

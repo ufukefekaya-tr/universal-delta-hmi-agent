@@ -31,7 +31,7 @@ delta-hmi="delta_hmi.cli:main"
 ''','src/delta_hmi/__init__.py':b'# Original neutral test code\n','LICENSE':b'Neutral license fixture','README.md':b'Original neutral readme\n'}
         meta='universal_delta_hmi_agent-0.4.0.dist-info'
         headers=b'Metadata-Version: 2.4\nName: universal-delta-hmi-agent\nVersion: 0.4.0\nSummary: Neutral wheel test\nLicense-Expression: Apache-2.0\nRequires-Python: >=3.14\nDescription-Content-Type: text/markdown\nLicense-File: LICENSE\nRequires-Dist: mcp==2.3.0\nDynamic: license-file\n\n'
-        entries={'delta_hmi/__init__.py':source['src/delta_hmi/__init__.py'],meta+'/licenses/LICENSE':source['LICENSE'],meta+'/METADATA':headers+source['README.md'],meta+'/WHEEL':b'Wheel-Version: 1.0\nGenerator: setuptools (84.0.0)\nRoot-Is-Purelib: true\nTag: py3-none-any\n\n',meta+'/entry_points.txt':b'[console_scripts]\ndelta-hmi = delta_hmi.cli:main\n\n',meta+'/top_level.txt':b'delta_hmi\n'}
+        entries={'delta_hmi/__init__.py':source['src/delta_hmi/__init__.py'],meta+'/licenses/LICENSE':source['LICENSE'],meta+'/METADATA':headers+source['README.md'],meta+'/WHEEL':b'Wheel-Version: 1.0\nGenerator: setuptools (84.0.0)\nRoot-Is-Purelib: true\nTag: py3-none-any\n\n',meta+'/entry_points.txt':b'[console_scripts]\ndelta-hmi = delta_hmi.cli:main\n',meta+'/top_level.txt':b'delta_hmi\n'}
         return source,meta,entries
 
     def write(self,path,meta,entries):
