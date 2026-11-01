@@ -1,0 +1,72 @@
+{
+  "schema": "delta.hmi.scoped-review.v1",
+  "reviewer": "hmi_delta_inventory_review",
+  "status": "SCOPED_CODE_PASS",
+  "important_findings_open": 0,
+  "subjects": [
+    {
+      "path": "tools/package_contract.py",
+      "sha256": "48fc44dfc2a10c9e41400d94460ba94e3b49176b5732014d6ea5b7b5d0710b20"
+    },
+    {
+      "path": "tools/wheel_contract.py",
+      "sha256": "9411232f8ab9a6d51ddc9489c6028b88c55fc5090d1e769cfd9fdedb8118e56c"
+    },
+    {
+      "path": "tools/portable_probe.py",
+      "sha256": "ca4335f576271a4f86299c311310768320f580ed6f67a2ca98a5cd52b97abe98"
+    },
+    {
+      "path": "scripts/bootstrap.ps1",
+      "sha256": "db133e2bcd2e7b263caab0dbf6d695de9df76ae77776c7ba8c2dad8f204eed55"
+    },
+    {
+      "path": "scripts/finish_install.py",
+      "sha256": "56dfc58f61bef58177c4caf50011938d536b524d35d171113669cc0626497aa4"
+    },
+    {
+      "path": "tools/ci.py",
+      "sha256": "16da18a0bc195b5141af81c445154bfc0d404d66d6d6519921ac4f65a82233e8"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "73c5431d4640aa37676dda9cae8d67b4d0351db09aeeb2a6d86e87860e71945b"
+    },
+    {
+      "path": "tests/test_distribution_contract.py",
+      "sha256": "b76e453b7cd95ba7117f2d42803997bd80999917baba41621747ac719c57e75d"
+    },
+    {
+      "path": "tests/test_wheel_contract.py",
+      "sha256": "dd6502a1042ae514808f3f746c51aec4a9c63e23ad8fddc0108140e5e8fb0df8"
+    }
+  ],
+  "checks": [
+    "Root/component control pin before payload reads",
+    "Case-insensitive private/generated path rejection",
+    "Positive build/install staging",
+    "Bounded ZIP directory and full TAR metadata stream",
+    "Exact wheel authored/data/license/metadata/RECORD contracts",
+    "Generated WHEEL/entrypoint/import-owner payload closure"
+  ],
+  "tests": {
+    "distribution_helpers": 11,
+    "wheel_metadata_adversarial": 1
+  },
+  "not_yet_accepted": [
+    "Final exact commit CI",
+    "Final archives",
+    "GitHub publication/readback"
+  ],
+  "prior_receipt": {
+    "path": "reports/hmi_skill/G5_CODE_REVIEW_C1.json",
+    "sha256": "52cab69984e7bb4d40f611fcd75d6b3fa2a64af0d4da83b61c75244c14d6c7b5"
+  },
+  "post_candidate_clarification": {
+    "scope": "Linter false rejection corrected to actual setuptools84 single trailing LF; payload/comment/extraLF attacks still reject",
+    "independent_status": "PASS",
+    "previous_candidate": "641e68d30e3b005d1b0e9138cea57a50d3ba6165",
+    "runtime_api_skill": "UNCHANGED",
+    "targeted_wheel_test": "PASS"
+  }
+}

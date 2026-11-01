@@ -41,6 +41,7 @@ def name(value):
 
 def no_links(path):
     path=Path(path).absolute()
+    if '..' in path.parts:raise ValueError('Parent traversal in package path')
     for part in (path,*path.parents):
         if part.is_symlink() or (hasattr(part,'is_junction') and part.is_junction()):raise ValueError('Linked package path')
     if path.is_file() and path.stat().st_nlink!=1:raise ValueError('Hardlinked package file')

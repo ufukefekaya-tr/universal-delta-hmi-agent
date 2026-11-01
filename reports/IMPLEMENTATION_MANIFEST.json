@@ -243,15 +243,19 @@
     },
     {
       "path": "reports/hmi_skill/G5_CODE_REVIEW.json",
-      "sha256": "f70e0a3f05435de22b33cfc7749bebf8aa28fc2400784af78883e397e4e0ecaa"
+      "sha256": "6623cc582a94758cf7fe6b0a33dac1fb583feee885bfdb874a8ee47587f11d03"
     },
     {
       "path": "reports/hmi_skill/G5_CODE_REVIEW_C1.json",
       "sha256": "52cab69984e7bb4d40f611fcd75d6b3fa2a64af0d4da83b61c75244c14d6c7b5"
     },
     {
+      "path": "reports/hmi_skill/G5_CODE_REVIEW_C2.json",
+      "sha256": "f70e0a3f05435de22b33cfc7749bebf8aa28fc2400784af78883e397e4e0ecaa"
+    },
+    {
       "path": "reports/hmi_skill/G5_DISTRIBUTION.json",
-      "sha256": "c846801b222098a89154ae63b8596c8bc30c16b334767f58ed8496f17446fee2"
+      "sha256": "7288c898559ff5d6ce2eb4d1ca4bc9e913be395a3d74172a846edcf19c059a30"
     },
     {
       "path": "reports/hmi_skill/MCP_API_SCHEMAS.json",
@@ -383,7 +387,7 @@
     },
     {
       "path": "tests/test_distribution_contract.py",
-      "sha256": "b76e453b7cd95ba7117f2d42803997bd80999917baba41621747ac719c57e75d"
+      "sha256": "2e1a9260e11a811b48263b9e2b33c514e436a18413890d541a6acd662cbcf374"
     },
     {
       "path": "tests/test_gateway.py",
@@ -443,7 +447,7 @@
     },
     {
       "path": "tools/package_contract.py",
-      "sha256": "48fc44dfc2a10c9e41400d94460ba94e3b49176b5732014d6ea5b7b5d0710b20"
+      "sha256": "70112f743ebc6a126af5f85991501fa7975ef1269312f330046e185ee9e80641"
     },
     {
       "path": "tools/portable_probe.py",

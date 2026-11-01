@@ -6,7 +6,7 @@
   "subjects": [
     {
       "path": "tools/package_contract.py",
-      "sha256": "48fc44dfc2a10c9e41400d94460ba94e3b49176b5732014d6ea5b7b5d0710b20"
+      "sha256": "70112f743ebc6a126af5f85991501fa7975ef1269312f330046e185ee9e80641"
     },
     {
       "path": "tools/wheel_contract.py",
@@ -34,7 +34,7 @@
     },
     {
       "path": "tests/test_distribution_contract.py",
-      "sha256": "b76e453b7cd95ba7117f2d42803997bd80999917baba41621747ac719c57e75d"
+      "sha256": "2e1a9260e11a811b48263b9e2b33c514e436a18413890d541a6acd662cbcf374"
     },
     {
       "path": "tests/test_wheel_contract.py",
@@ -68,5 +68,16 @@
     "previous_candidate": "641e68d30e3b005d1b0e9138cea57a50d3ba6165",
     "runtime_api_skill": "UNCHANGED",
     "targeted_wheel_test": "PASS"
+  },
+  "prior_boundary_receipt": {
+    "path": "reports/hmi_skill/G5_CODE_REVIEW_C2.json",
+    "sha256": "f70e0a3f05435de22b33cfc7749bebf8aa28fc2400784af78883e397e4e0ecaa"
+  },
+  "post_candidate_boundary": {
+    "scope": "Explicit parent-traversal rejection in shared package-path gate; no outside output ever written",
+    "independent_status": "PASS",
+    "previous_candidate": "9265d6d326c75423bfc2b55cd975b2616bf7f189",
+    "runtime_api_skill_wheel_authored_bytes": "UNCHANGED",
+    "distribution_tests": 11
   }
 }

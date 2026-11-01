@@ -62,6 +62,7 @@
     "WindowsPowerShell host lackedGet-FileHash; process-local.NETSHA256 implementation now used",
     "HistoricalBwheel differs from canonicalexport onlyinexistingCRLF/LF; standalonewheels rebuiltfromunchangedcanonicalsource; historicalbundleunmodified",
     "Adversarial metadata/body/entrypoint and archive parser gaps closed with tests andindependentreview",
-    "Final real wheel output used one LF while fixture expected two; linter/fixture corrected under independent narrow review; no runtime/API change, no release of rejected artifacts"
+    "Final real wheel output used one LF while fixture expected two; linter/fixture corrected under independent narrow review; no runtime/API change, no release of rejected artifacts",
+    "Lexical output-root check retained parent segments; shared package path gate now rejects parent traversal before any output; independent negative testPASS"
   ]
 }

@@ -95,6 +95,8 @@ class DistributionContractTests(unittest.TestCase):
         q=self.root/'dist/existing.zip';q.parent.mkdir();q.write_bytes(b'keep')
         with self.assertRaises(FileExistsError):mod.build(q)
         self.assertEqual(q.read_bytes(),b'keep')
+        with self.assertRaisesRegex(ValueError,'Parent traversal'):mod.build(self.root/'dist/../outside.zip')
+        self.assertFalse((self.root/'outside.zip').exists())
 
     def test_component_control_must_be_pinned_before_component_read(self):
         p=self.root/'reports/IMPLEMENTATION_MANIFEST.json';v=json.loads(p.read_text());original=p.read_bytes()
