@@ -34,6 +34,12 @@ def check():
         path = entry[3:]
         if not any(path == p or (p.endswith('/') and path.startswith(p)) for p in env['allowed_write']):
             raise ValueError('Outside scope: '+path)
+        if path.startswith('skills/delta-hmi/') and env.get('task') == 'HMI-SKILL-20261101':
+            from check_goals import validate
+            workflow = json.loads((ROOT / 'goals/hmi-skill-transition.json').read_text('utf8'))
+            validate(workflow, ROOT)
+            if next(g for g in workflow['goals'] if g['id'] == 'G2')['state'] != 'PASS':
+                raise ValueError('Skill mutation requires exact accepted MCP G2')
     return {'status':'PASS','policy_epoch':env['policy_epoch'],'head':head}
 
 if __name__ == '__main__':

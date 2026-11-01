@@ -1,0 +1,56 @@
+{
+  "schema": "delta.hmi.goal-evidence.v1",
+  "task": "HMI-SKILL-TRANSITION",
+  "goal_id": "G0",
+  "status": "PASS",
+  "definition_sha256": "540c4938336e789cee2fc391f83cc483882062179d8aec40fc1b586bf09f4a0e",
+  "subjects": [
+    {
+      "path": "reports/hmi_skill/G0_INVENTORY.json",
+      "sha256": "068bcbd546c25c2ce2e0ff3b193df70cdb6ff151945002582259f021faabf2d5"
+    },
+    {
+      "path": "tools/check_goals.py",
+      "sha256": "4cf4a495601483fd143b4db85f20f6e47c0fd7243c27d808b50aaa330b12bc03"
+    },
+    {
+      "path": "tools/guard.py",
+      "sha256": "7a125c538359e15d3497522f5ce276d61b255a4d95226d3f6df793e2d263e9f0"
+    },
+    {
+      "path": "tests/test_goal_workflow.py",
+      "sha256": "fd1c8fb733f5b4d68d8b03dca1fdfb84d3a531a245124fa48695cfc958271be1"
+    }
+  ],
+  "checks": {
+    "thirteen_routes_classified": "PASS",
+    "external_seed_qualification_boundary": "PASS",
+    "independent_omission_review": "PASS",
+    "goal_dependency_and_receipt_negatives": "PASS",
+    "skill_edit_gate": "PASS",
+    "customer_payload_exclusion": "PASS"
+  },
+  "independent_review": {
+    "reviewer": "hmi_delta_inventory_review",
+    "decision": "PASS",
+    "scope": "Exact neutral inventory and goals/guard; not G1 implementation or vendor acceptance",
+    "findings": [
+      "failed/irrelevant receipt association CLOSED",
+      "early prerequisite execution CLOSED",
+      "qualification and restore pin ledger CLOSED"
+    ]
+  },
+  "tests": {
+    "gateway_and_goal_workflow": 72,
+    "DOP_B_baseline": 981,
+    "DIAScreen_baseline": 191,
+    "DIAScreen_legacy_host_skip": 1,
+    "new_goal_tests": 9,
+    "failures": 0
+  },
+  "qualification": {
+    "vendor_compile": "NOT_RUN",
+    "physical": "NOT_RUN"
+  },
+  "note": "Evidence identity validation binds accepted receipts; it does not authenticate a human/reviewer cryptographically."
+}

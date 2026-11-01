@@ -17,3 +17,8 @@ Vendor compilation, native pixel behavior, live transport, panel and physical ac
 Current source native-service migration: 70 DIAScreen tools; local generic tests and real private-input qualification are separate from the historical release. Exact current results: reports/NATIVE_SERVICE_UPDATE.json. New source tests do not qualify vendor compile, simulator or hardware.
 
 Source update0.3.4 / DIAScreen0.4.5: typed readonly numeric/static visibility preserves source conditions and audits the BOOL role independently. Its current scope and receipts are in reports/TYPED_VISIBILITY.json; vendor/runtime acceptance remains separate.
+
+
+## HMI consolidation and companion skill
+
+Current phased definition: [dynamic goals](../goals/hmi-skill-transition.json). Each goal contains its own workflow, dependencies, acceptance, evidence and retained transition history. Validate with `python tools/check_goals.py`. Private source locations and operational state remain in the existing ignored checkpoint. Skill authoring is gated by G2 acceptance. [Migration ledger](HMI_SKILL_MIGRATION.json).

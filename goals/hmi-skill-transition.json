@@ -1,0 +1,403 @@
+{
+  "schema": "delta.hmi.goal-workflow.v1",
+  "task": "HMI-SKILL-TRANSITION",
+  "baseline": "8df1155665f0961609d658ae32709f46a04a25fd",
+  "states": [
+    "PENDING",
+    "READY",
+    "IN_PROGRESS",
+    "BLOCKED",
+    "PASS",
+    "FAIL",
+    "REOPENED"
+  ],
+  "skill_gate": "G2",
+  "current_goal": "G1",
+  "goals": [
+    {
+      "id": "G0",
+      "purpose": "Source and behavior inventory",
+      "owner": "root",
+      "dependencies": [],
+      "inputs": [
+        "GENERAL_BASE"
+      ],
+      "allowed_scope": [
+        "public generic implementation and neutral evidence"
+      ],
+      "protected_scope": [
+        "external customer projects",
+        "existing native originals",
+        "DOP-B source unless separately scoped"
+      ],
+      "workflow": [
+        {
+          "id": "G0.1",
+          "action": "Freeze baseline and authority",
+          "completed": true
+        },
+        {
+          "id": "G0.2",
+          "action": "Classify every discovered behavior",
+          "completed": true
+        },
+        {
+          "id": "G0.3",
+          "action": "Independent omission review",
+          "completed": true
+        }
+      ],
+      "acceptance": [
+        "All thirteen differences mapped",
+        "No customer payload admitted"
+      ],
+      "state": "PASS",
+      "evidence": [
+        {
+          "path": "reports/hmi_skill/G0_ACCEPTANCE.json",
+          "sha256": "45fc6132c59d8bd3548eaa6b30aa06e1624fb2dffa23cecc5927ba307c855eb1"
+        }
+      ],
+      "open_findings": [],
+      "next_step": null,
+      "reopen_reason": null,
+      "rollback": "Immutable baseline and new-only versioned artifacts",
+      "history": [
+        {
+          "from": null,
+          "to": "IN_PROGRESS",
+          "reason": "Approved implementation plan initialized"
+        },
+        {
+          "from": "IN_PROGRESS",
+          "to": "PASS",
+          "reason": "Independent exact inventory and nine negative acceptance checks passed"
+        }
+      ],
+      "accepted_subjects": [
+        {
+          "path": "reports/hmi_skill/G0_INVENTORY.json",
+          "sha256": "068bcbd546c25c2ce2e0ff3b193df70cdb6ff151945002582259f021faabf2d5"
+        },
+        {
+          "path": "tools/check_goals.py",
+          "sha256": "4cf4a495601483fd143b4db85f20f6e47c0fd7243c27d808b50aaa330b12bc03"
+        },
+        {
+          "path": "tools/guard.py",
+          "sha256": "7a125c538359e15d3497522f5ce276d61b255a4d95226d3f6df793e2d263e9f0"
+        },
+        {
+          "path": "tests/test_goal_workflow.py",
+          "sha256": "fd1c8fb733f5b4d68d8b03dca1fdfb84d3a531a245124fa48695cfc958271be1"
+        }
+      ]
+    },
+    {
+      "id": "G1",
+      "purpose": "Project-neutral MCP consolidation",
+      "owner": "root",
+      "dependencies": [
+        "G0"
+      ],
+      "inputs": [
+        "G0"
+      ],
+      "allowed_scope": [
+        "public generic implementation and neutral evidence"
+      ],
+      "protected_scope": [
+        "external customer projects",
+        "existing native originals",
+        "DOP-B source unless separately scoped"
+      ],
+      "workflow": [
+        {
+          "id": "G1.1",
+          "action": "Implement qualified external catalog and seed-copy lifecycle",
+          "completed": false
+        },
+        {
+          "id": "G1.2",
+          "action": "Integrate neutral page/resource inspection",
+          "completed": false
+        },
+        {
+          "id": "G1.3",
+          "action": "Expose isolated MCP routes",
+          "completed": false
+        },
+        {
+          "id": "G1.4",
+          "action": "Test actual CLI/MCP saved-file chains",
+          "completed": false
+        }
+      ],
+      "acceptance": [
+        "All thirteen routes mapped and tested",
+        "New-only saves and isolation verified"
+      ],
+      "state": "IN_PROGRESS",
+      "evidence": [],
+      "open_findings": [],
+      "next_step": "G1.1",
+      "reopen_reason": null,
+      "rollback": "Immutable baseline and new-only versioned artifacts",
+      "history": [
+        {
+          "from": null,
+          "to": "PENDING",
+          "reason": "Approved implementation plan initialized"
+        },
+        {
+          "from": "PENDING",
+          "to": "IN_PROGRESS",
+          "reason": "G0 evidence accepted; approved MCP consolidation scope only"
+        }
+      ],
+      "accepted_subjects": []
+    },
+    {
+      "id": "G2",
+      "purpose": "Risk closure and MCP acceptance",
+      "owner": "root",
+      "dependencies": [
+        "G1"
+      ],
+      "inputs": [
+        "G1"
+      ],
+      "allowed_scope": [
+        "public generic implementation and neutral evidence"
+      ],
+      "protected_scope": [
+        "external customer projects",
+        "existing native originals",
+        "DOP-B source unless separately scoped"
+      ],
+      "workflow": [
+        {
+          "id": "G2.1",
+          "action": "Close deletion dependency gaps",
+          "completed": false
+        },
+        {
+          "id": "G2.2",
+          "action": "Test explicit fill semantics and recovery",
+          "completed": false
+        },
+        {
+          "id": "G2.3",
+          "action": "Align support registry and evidence",
+          "completed": false
+        },
+        {
+          "id": "G2.4",
+          "action": "Run baseline and new suites",
+          "completed": false
+        },
+        {
+          "id": "G2.5",
+          "action": "Independent exact-source acceptance",
+          "completed": false
+        }
+      ],
+      "acceptance": [
+        "No open important or critical findings",
+        "Current tested engine and tool schemas frozen"
+      ],
+      "state": "PENDING",
+      "evidence": [],
+      "open_findings": [],
+      "next_step": "G2.1",
+      "reopen_reason": null,
+      "rollback": "Immutable baseline and new-only versioned artifacts",
+      "history": [
+        {
+          "from": null,
+          "to": "PENDING",
+          "reason": "Approved implementation plan initialized"
+        }
+      ],
+      "accepted_subjects": []
+    },
+    {
+      "id": "G3",
+      "purpose": "MIT companion skill",
+      "owner": "root",
+      "dependencies": [
+        "G2"
+      ],
+      "inputs": [
+        "G2"
+      ],
+      "allowed_scope": [
+        "public generic implementation and neutral evidence"
+      ],
+      "protected_scope": [
+        "external customer projects",
+        "existing native originals",
+        "DOP-B source unless separately scoped"
+      ],
+      "workflow": [
+        {
+          "id": "G3.1",
+          "action": "Author minimal entry and family references",
+          "completed": false
+        },
+        {
+          "id": "G3.2",
+          "action": "Bind exact accepted MCP compatibility",
+          "completed": false
+        },
+        {
+          "id": "G3.3",
+          "action": "Check policy and authority boundaries",
+          "completed": false
+        }
+      ],
+      "acceptance": [
+        "Both family routes correctly selected",
+        "No parser, writer or authority duplicated in skill"
+      ],
+      "state": "PENDING",
+      "evidence": [],
+      "open_findings": [],
+      "next_step": "G3.1",
+      "reopen_reason": null,
+      "rollback": "Immutable baseline and new-only versioned artifacts",
+      "history": [
+        {
+          "from": null,
+          "to": "PENDING",
+          "reason": "Approved implementation plan initialized"
+        }
+      ],
+      "accepted_subjects": []
+    },
+    {
+      "id": "G4",
+      "purpose": "Behavioral acceptance",
+      "owner": "root",
+      "dependencies": [
+        "G3"
+      ],
+      "inputs": [
+        "G3"
+      ],
+      "allowed_scope": [
+        "public generic implementation and neutral evidence"
+      ],
+      "protected_scope": [
+        "external customer projects",
+        "existing native originals",
+        "DOP-B source unless separately scoped"
+      ],
+      "workflow": [
+        {
+          "id": "G4.1",
+          "action": "Run MCP-only baseline scenarios",
+          "completed": false
+        },
+        {
+          "id": "G4.2",
+          "action": "Run skill plus MCP scenarios",
+          "completed": false
+        },
+        {
+          "id": "G4.3",
+          "action": "Independent forward tests",
+          "completed": false
+        },
+        {
+          "id": "G4.4",
+          "action": "Correct and retest demonstrated failures",
+          "completed": false
+        }
+      ],
+      "acceptance": [
+        "Observable calls and saved artifacts match the authorized intent",
+        "No unauthorized action or false qualification"
+      ],
+      "state": "PENDING",
+      "evidence": [],
+      "open_findings": [],
+      "next_step": "G4.1",
+      "reopen_reason": null,
+      "rollback": "Immutable baseline and new-only versioned artifacts",
+      "history": [
+        {
+          "from": null,
+          "to": "PENDING",
+          "reason": "Approved implementation plan initialized"
+        }
+      ],
+      "accepted_subjects": []
+    },
+    {
+      "id": "G5",
+      "purpose": "Portable clean distribution",
+      "owner": "root",
+      "dependencies": [
+        "G4"
+      ],
+      "inputs": [
+        "G4"
+      ],
+      "allowed_scope": [
+        "public generic implementation and neutral evidence"
+      ],
+      "protected_scope": [
+        "external customer projects",
+        "existing native originals",
+        "DOP-B source unless separately scoped"
+      ],
+      "workflow": [
+        {
+          "id": "G5.1",
+          "action": "Clean Windows and Linux installation",
+          "completed": false
+        },
+        {
+          "id": "G5.2",
+          "action": "Relocation and real stdio probes",
+          "completed": false
+        },
+        {
+          "id": "G5.3",
+          "action": "Strict package membership and license audit",
+          "completed": false
+        },
+        {
+          "id": "G5.4",
+          "action": "Final independent exact-artifact review",
+          "completed": false
+        },
+        {
+          "id": "G5.5",
+          "action": "Scoped commit, hosted CI and release",
+          "completed": false
+        }
+      ],
+      "acceptance": [
+        "No customer content in any distribution member",
+        "Release locks and all artifacts bind the accepted source"
+      ],
+      "state": "PENDING",
+      "evidence": [],
+      "open_findings": [],
+      "next_step": "G5.1",
+      "reopen_reason": null,
+      "rollback": "Immutable baseline and new-only versioned artifacts",
+      "history": [
+        {
+          "from": null,
+          "to": "PENDING",
+          "reason": "Approved implementation plan initialized"
+        }
+      ],
+      "accepted_subjects": []
+    }
+  ],
+  "private_state": "Existing ignored envelope/checkpoint; no private locations or runtime databases in public goals"
+}

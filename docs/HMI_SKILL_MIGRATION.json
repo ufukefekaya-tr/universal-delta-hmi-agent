@@ -1,0 +1,338 @@
+{
+  "schema": "delta.hmi.skill-migration.v1",
+  "baseline": "8df1155665f0961609d658ae32709f46a04a25fd",
+  "source_ids": [
+    "GENERAL_BASE",
+    "LOCAL_DELTA_01",
+    "SYMBOL_WORKFLOW_01",
+    "DPS_WORKFLOW_01"
+  ],
+  "private_source_mapping": "Ignored task state only; source locations and customer artifacts are excluded",
+  "tools": [
+    {
+      "name": "list_deliveries",
+      "group": "reference",
+      "observed": "Existing generic code; missing MCP surface",
+      "boundary": "Trusted host-owned optional catalog; empty by default",
+      "disposition": "PLANNED_GENERIC_PORT",
+      "implementation": [],
+      "tests": [],
+      "required_tests": [
+        "empty catalog unavailable",
+        "exact source/profile/catalog/engine identity",
+        "family and permission refusal",
+        "saved-file/source preservation"
+      ]
+    },
+    {
+      "name": "current_delivery",
+      "group": "reference",
+      "observed": "Existing generic code; missing MCP surface",
+      "boundary": "Trusted host-owned optional catalog; empty by default",
+      "disposition": "PLANNED_GENERIC_PORT",
+      "implementation": [],
+      "tests": [],
+      "required_tests": [
+        "empty catalog unavailable",
+        "exact source/profile/catalog/engine identity",
+        "family and permission refusal",
+        "saved-file/source preservation"
+      ]
+    },
+    {
+      "name": "open_delivery",
+      "group": "reference",
+      "observed": "Existing generic code; missing MCP surface",
+      "boundary": "Trusted host-owned optional catalog; empty by default",
+      "disposition": "PLANNED_GENERIC_PORT",
+      "implementation": [],
+      "tests": [],
+      "required_tests": [
+        "empty catalog unavailable",
+        "exact source/profile/catalog/engine identity",
+        "family and permission refusal",
+        "saved-file/source preservation"
+      ]
+    },
+    {
+      "name": "inspect_parameters",
+      "group": "reference",
+      "observed": "Existing generic code; missing MCP surface",
+      "boundary": "Trusted host-owned optional catalog; empty by default",
+      "disposition": "PLANNED_GENERIC_PORT",
+      "implementation": [],
+      "tests": [],
+      "required_tests": [
+        "empty catalog unavailable",
+        "exact source/profile/catalog/engine identity",
+        "family and permission refusal",
+        "saved-file/source preservation"
+      ]
+    },
+    {
+      "name": "get_reference_contract",
+      "group": "reference",
+      "observed": "Existing generic code; missing MCP surface",
+      "boundary": "Trusted host-owned optional catalog; empty by default",
+      "disposition": "PLANNED_GENERIC_PORT",
+      "implementation": [],
+      "tests": [],
+      "required_tests": [
+        "empty catalog unavailable",
+        "exact source/profile/catalog/engine identity",
+        "family and permission refusal",
+        "saved-file/source preservation"
+      ]
+    },
+    {
+      "name": "inspect_template",
+      "group": "seed_copy",
+      "observed": "Reusable qualified exact-template copy lifecycle",
+      "boundary": "Externally reviewed seed/profile/catalog; no distributed native seed",
+      "disposition": "PLANNED_GENERIC_PORT",
+      "implementation": [],
+      "tests": [],
+      "required_tests": [
+        "empty catalog unavailable",
+        "exact source/profile/catalog/engine identity",
+        "family and permission refusal",
+        "saved-file/source preservation",
+        "independent neutrality/rights gate",
+        "no-replace and replay refusal",
+        "unknown-outcome reconciliation without write",
+        "restore/apply/save pin drift refusal"
+      ]
+    },
+    {
+      "name": "create_project",
+      "group": "seed_copy",
+      "observed": "Reusable qualified exact-template copy lifecycle",
+      "boundary": "Externally reviewed seed/profile/catalog; no distributed native seed",
+      "disposition": "PLANNED_GENERIC_PORT",
+      "implementation": [],
+      "tests": [],
+      "required_tests": [
+        "empty catalog unavailable",
+        "exact source/profile/catalog/engine identity",
+        "family and permission refusal",
+        "saved-file/source preservation",
+        "independent neutrality/rights gate",
+        "no-replace and replay refusal",
+        "unknown-outcome reconciliation without write",
+        "restore/apply/save pin drift refusal"
+      ]
+    },
+    {
+      "name": "apply_project_plan",
+      "group": "seed_copy",
+      "observed": "Reusable qualified exact-template copy lifecycle",
+      "boundary": "Externally reviewed seed/profile/catalog; no distributed native seed",
+      "disposition": "PLANNED_GENERIC_PORT",
+      "implementation": [],
+      "tests": [],
+      "required_tests": [
+        "empty catalog unavailable",
+        "exact source/profile/catalog/engine identity",
+        "family and permission refusal",
+        "saved-file/source preservation",
+        "independent neutrality/rights gate",
+        "no-replace and replay refusal",
+        "unknown-outcome reconciliation without write",
+        "restore/apply/save pin drift refusal"
+      ]
+    },
+    {
+      "name": "configure_target",
+      "group": "target_transition",
+      "observed": "Exact unchanged blank to configured-template relation and readback",
+      "boundary": "Not arbitrary model conversion or communication-field writer",
+      "disposition": "PLANNED_GENERIC_PORT",
+      "implementation": [],
+      "tests": [],
+      "required_tests": [
+        "empty catalog unavailable",
+        "exact source/profile/catalog/engine identity",
+        "family and permission refusal",
+        "saved-file/source preservation",
+        "independent neutrality/rights gate",
+        "no-replace and replay refusal",
+        "unknown-outcome reconciliation without write",
+        "restore/apply/save pin drift refusal"
+      ]
+    },
+    {
+      "name": "inspect_target_configuration",
+      "group": "target_transition",
+      "observed": "Exact unchanged blank to configured-template relation and readback",
+      "boundary": "Not arbitrary model conversion or communication-field writer",
+      "disposition": "PLANNED_GENERIC_PORT",
+      "implementation": [],
+      "tests": [],
+      "required_tests": [
+        "empty catalog unavailable",
+        "exact source/profile/catalog/engine identity",
+        "family and permission refusal",
+        "saved-file/source preservation",
+        "independent neutrality/rights gate",
+        "no-replace and replay refusal",
+        "unknown-outcome reconciliation without write",
+        "restore/apply/save pin drift refusal"
+      ]
+    },
+    {
+      "name": "create_neutral_screen",
+      "group": "neutral_page",
+      "observed": "Source-qualified stock-frame insertion and ancestry audit",
+      "boundary": "Reuse generic durable ledger; no private legacy plan store",
+      "disposition": "PLANNED_GENERIC_PORT",
+      "implementation": [],
+      "tests": [],
+      "required_tests": [
+        "empty catalog unavailable",
+        "exact source/profile/catalog/engine identity",
+        "family and permission refusal",
+        "saved-file/source preservation",
+        "independent neutrality/rights gate",
+        "no-replace and replay refusal",
+        "unknown-outcome reconciliation without write",
+        "restore/apply/save pin drift refusal"
+      ]
+    },
+    {
+      "name": "inspect_neutral_screens",
+      "group": "neutral_page",
+      "observed": "Source-qualified stock-frame insertion and ancestry audit",
+      "boundary": "Reuse generic durable ledger; no private legacy plan store",
+      "disposition": "PLANNED_GENERIC_PORT",
+      "implementation": [],
+      "tests": [],
+      "required_tests": [
+        "empty catalog unavailable",
+        "exact source/profile/catalog/engine identity",
+        "family and permission refusal",
+        "saved-file/source preservation",
+        "independent neutrality/rights gate",
+        "no-replace and replay refusal",
+        "unknown-outcome reconciliation without write",
+        "restore/apply/save pin drift refusal"
+      ]
+    },
+    {
+      "name": "inspect_native_resource_banks",
+      "group": "resources",
+      "observed": "Existing generic bounded decoder; missing service/transport route",
+      "boundary": "Unknown framing refused; no silent profile adoption",
+      "disposition": "PLANNED_GENERIC_PORT",
+      "implementation": [],
+      "tests": [],
+      "required_tests": [
+        "empty catalog unavailable",
+        "exact source/profile/catalog/engine identity",
+        "family and permission refusal",
+        "saved-file/source preservation"
+      ]
+    }
+  ],
+  "regressions": [
+    {
+      "id": "R01",
+      "scenario": "Macro/event/opaque dependency deletion refusal across legacy and native paths",
+      "state": "PLANNED"
+    },
+    {
+      "id": "R02",
+      "scenario": "Foreground shortcut versus seven explicit fill color fields",
+      "state": "PLANNED"
+    },
+    {
+      "id": "R03",
+      "scenario": "Artifact and contract-rebind recovery without replay",
+      "state": "PLANNED"
+    },
+    {
+      "id": "R04",
+      "scenario": "New-page move/clone refusal and coupled navigation names",
+      "state": "PLANNED"
+    },
+    {
+      "id": "R05",
+      "scenario": "Wide integer writer cannot represent a sparse or small enum",
+      "state": "PLANNED"
+    },
+    {
+      "id": "R06",
+      "scenario": "Full XML member-layout, array and access validation after schema drift",
+      "state": "PLANNED"
+    },
+    {
+      "id": "R07",
+      "scenario": "Typed visibility independent of numeric storage",
+      "state": "PLANNED"
+    },
+    {
+      "id": "R08",
+      "scenario": "Explicit SetValue and visible macro-source versus operand validation",
+      "state": "PLANNED"
+    },
+    {
+      "id": "R09",
+      "scenario": "Tool support descriptions agree with implemented/refusal routes",
+      "state": "PLANNED"
+    }
+  ],
+  "excluded": [
+    "Customer native projects, symbols, tags, endpoints, credentials, fonts, logos, screenshots, databases and machine builders",
+    "Project-specific delta generators",
+    "Undocumented vendor compile/simulator execution",
+    "False fixed BOOL SET/RESET qualification"
+  ],
+  "g0_review": "PASS_INDEPENDENT_EXACT_INVENTORY",
+  "qualification_contract": {
+    "authority": "Host-owned external immutable catalog; never supplied or changed by an MCP job",
+    "required": [
+      "family",
+      "model and panel dimensions",
+      "editor and native versions",
+      "decoder identity",
+      "seed, profile and catalog hashes",
+      "explicit allowed operations",
+      "exact-artifact independent neutrality review",
+      "origin and local reuse rights",
+      "separate qualification level"
+    ],
+    "neutrality": [
+      "One page and zero widgets are necessary but insufficient",
+      "Counted macros must be inert; Application, auth and opaque resources require exact-artifact review",
+      "Synthetic fixtures stay SYNTHETIC_OFFLINE_ONLY, never vendor-qualified"
+    ],
+    "forbidden_port": [
+      "Existing seed/catalog hashes",
+      "Customer endpoint and field maps",
+      "Vendor native bytes or customer assets"
+    ]
+  },
+  "neutral_page_freshness": {
+    "gates": [
+      "plan",
+      "restore_plan",
+      "restore_candidate",
+      "apply_plan",
+      "save_as",
+      "reconcile_operation"
+    ],
+    "pins": [
+      "engine",
+      "host catalog",
+      "seed",
+      "profile",
+      "stock page ancestry"
+    ],
+    "acceptance": "After a plan is created, independent changes to any pin must refuse further application/save/recovery; inverse-ledger equality alone is insufficient",
+    "limits": {
+      "neutral_frame_pages": 128,
+      "ordinary_native_transaction_pages": 96,
+      "report_per_operation": true
+    }
+  },
+  "g0_evidence": "reports/hmi_skill/G0_ACCEPTANCE.json"
+}
