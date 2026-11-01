@@ -1,6 +1,12 @@
 param([string]$BackendArchive, [switch]$Offline)
 $ErrorActionPreference = 'Stop'
 $repoRoot = Split-Path -Parent $PSScriptRoot
+function File-Sha256([string]$Candidate) {
+    $taskHasher = [System.Security.Cryptography.SHA256]::Create()
+    $taskStream = [System.IO.File]::OpenRead($Candidate)
+    try { return [System.BitConverter]::ToString($taskHasher.ComputeHash($taskStream)).Replace('-', '').ToLowerInvariant() }
+    finally { $taskStream.Dispose(); $taskHasher.Dispose() }
+}
 function Assert-NoLink([string]$Candidate) {
     $cursor = [System.IO.Path]::GetFullPath($Candidate)
     while ($cursor) {
@@ -17,6 +23,7 @@ $oldPythonHome = $env:PYTHONHOME
 try {
     Assert-NoLink $repoRoot
     foreach ($part in @('.local','.local/downloads','.local/backends','.venv')) { Assert-NoLink (Join-Path $repoRoot $part) }
+    if ($repoRoot.Length -gt 64) { throw 'WINDOWS_INSTALL_ROOT_TOO_LONG: use a fresh absolute root of at most 64 characters; no OS policy change is needed' }
     if (Test-Path -LiteralPath (Join-Path $repoRoot '.venv')) { throw 'EXISTING_GATEWAY_ENVIRONMENT_PRESERVED' }
     Remove-Item Env:PYTHONPATH -ErrorAction SilentlyContinue
     Remove-Item Env:PYTHONHOME -ErrorAction SilentlyContinue
@@ -36,7 +43,7 @@ try {
                 $stream = [System.IO.File]::Open($download, [System.IO.FileMode]::CreateNew)
                 $stream.Dispose()
                 Invoke-WebRequest -Uri $lock.dop_b.url -OutFile $download
-                if ((Get-FileHash -LiteralPath $download -Algorithm SHA256).Hash.ToLowerInvariant() -ne $lock.dop_b.sha256) { throw 'DOWNLOAD_HASH_MISMATCH' }
+                if ((File-Sha256 $download) -ne $lock.dop_b.sha256) { throw 'DOWNLOAD_HASH_MISMATCH' }
                 Assert-NoLink $BackendArchive
                 Move-Item -LiteralPath $download -Destination $BackendArchive
             }
@@ -44,7 +51,7 @@ try {
     }
     Assert-NoLink $BackendArchive
     if (-not (Test-Path -LiteralPath $BackendArchive -PathType Leaf)) { throw 'PINNED_DOP_B_ARCHIVE_MISSING' }
-    if ((Get-FileHash -LiteralPath $BackendArchive -Algorithm SHA256).Hash.ToLowerInvariant() -ne $lock.dop_b.sha256) { throw 'ARCHIVE_HASH_MISMATCH' }
+    if ((File-Sha256 $BackendArchive) -ne $lock.dop_b.sha256) { throw 'ARCHIVE_HASH_MISMATCH' }
     $target = Join-Path $repoRoot '.local/backends/dop_b'
     if (Test-Path -LiteralPath $target) { throw 'EXISTING_BACKEND_PRESERVED: use a fresh checkout for reinstall' }
     $check = [System.IO.DirectoryInfo]$repoRoot

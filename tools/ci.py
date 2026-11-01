@@ -1,7 +1,10 @@
 """Portable source CI; native vendor tests are deliberately separate."""
 import json, os, shutil, subprocess, sys, tempfile
+import importlib.util
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
+_spec=importlib.util.spec_from_file_location('ci_source_contract',ROOT/'tools/package_contract.py')
+_contract=importlib.util.module_from_spec(_spec);_spec.loader.exec_module(_contract)
 def run(*args,cwd=ROOT,env=None):
     subprocess.run([str(a) for a in args],cwd=cwd,check=True,env=env)
 
@@ -24,10 +27,12 @@ def main():
         for part in (ROOT,ROOT/'components/dop_b',ROOT/'components/dop_100'):
             with tempfile.TemporaryDirectory(prefix='delta-source-build-') as scratch:
                 staged=Path(scratch)/'source'
-                shutil.copytree(part,staged,ignore=shutil.ignore_patterns('.git','.agent-state','.local','.venv','*.egg-info','build','dist','__pycache__'))
+                _contract.stage_source(staged,None if part==ROOT else part.name)
                 run(sys.executable,'-I','-B','-m','pip','install','--no-deps','--no-build-isolation',staged)
     elif action=='test':
         env=test_environment()
+        run(sys.executable,'-B',ROOT/'tools/package_contract.py','--source-check',env=env)
+        run(sys.executable,'-B',ROOT/'tools/check_skill.py',env=env)
         run(sys.executable,'-B',ROOT/'tools/check_snapshots.py',env=env)
         run(sys.executable,'-B','-m','unittest','discover','-s','tests','-v',env=env)
         for family in ('dop_b','dop_100'):

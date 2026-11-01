@@ -1,0 +1,57 @@
+{
+  "schema": "delta.hmi.distribution.v1",
+  "status": "SOURCE_CANDIDATE_LOCAL_ACCEPTANCE",
+  "versions": {
+    "gateway": "0.4.0",
+    "dop_b": "0.2.1",
+    "dop_100": "0.5.0",
+    "skill": "0.1.0"
+  },
+  "membership": "Exact reviewed root/component inventories; no workspace discovery",
+  "metadata_revalidation": "G1_REVALIDATED_G5.json and G2_REVALIDATED_G5.json; runtime/API unchanged",
+  "qualification": "Offline structural/text file MCP only",
+  "vendor": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "publication": "PENDING; final immutable source/CI/artifact identity is bound externally by RELEASE_AUDIT.json",
+  "archive_acceptance": "PENDING",
+  "wheel_acceptance": "PENDING",
+  "clean_host_acceptance": "PENDING",
+  "code_review": "G5_CODE_REVIEW.json",
+  "local_source_tests": {
+    "gateway": {
+      "run": 101,
+      "passed": 101,
+      "skipped": 0,
+      "seconds": 20.292,
+      "log_sha256": "c9696110a3dfc83ffc2b4f0de8dc11bd021e1160eb510dbc64454f757596b07d"
+    },
+    "dop_b": {
+      "run": 981,
+      "passed": 981,
+      "skipped": 0,
+      "seconds": 345.242
+    },
+    "dop_100": {
+      "run": 232,
+      "passed": 231,
+      "skipped": 1,
+      "seconds": 152.429,
+      "skip": "Legacy host symlink privilege; separate real junction/refusal tests passed"
+    },
+    "component_log_sha256": "9caa275403c8bea2dd24eb305dee6384257937dc5b30dc533e80862745303d0e",
+    "association": "Final gateway run after all functional changes; B/DIA full run retained on unchanged runtime source; no vendor/physical claims"
+  },
+  "windows_local_preliminary": {
+    "fresh_short_root_with_spaces": true,
+    "forced_bundled_install": "PASS",
+    "both_backend_doctor": "PASS",
+    "stdio": "RUNNING_AT_SOURCE_FREEZE",
+    "final_exact_source_windows_linux": "PENDING_HOSTED_CI"
+  },
+  "corrected_failures": [
+    "Initial long-root install refused by OS before new preflight; now bounded to64characters",
+    "WindowsPowerShell host lackedGet-FileHash; process-local.NETSHA256 implementation now used",
+    "HistoricalBwheel differs from canonicalexport onlyinexistingCRLF/LF; standalonewheels rebuiltfromunchangedcanonicalsource; historicalbundleunmodified",
+    "Adversarial metadata/body/entrypoint and archive parser gaps closed with tests andindependentreview"
+  ]
+}

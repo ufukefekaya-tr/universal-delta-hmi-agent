@@ -1,4 +1,4 @@
-# Release goals
+# Historical release goals — 0.2.1
 
 | Goal | Evidence | State |
 |---|---|---|
@@ -21,4 +21,4 @@ Source update0.3.4 / DIAScreen0.4.5: typed readonly numeric/static visibility pr
 
 ## HMI consolidation and companion skill
 
-Current phased definition: [dynamic goals](../goals/hmi-skill-transition.json). Each goal contains its own workflow, dependencies, acceptance, evidence and retained transition history. Validate with `python tools/check_goals.py`. Private source locations and operational state remain in the existing ignored checkpoint. Skill authoring is gated by G2 acceptance. [Migration ledger](HMI_SKILL_MIGRATION.json).
+Current0.4.0 phased definition: [dynamic goals](../goals/hmi-skill-transition.json). Each goal contains its own workflow, dependencies, acceptance, evidence and retained transition history. Validate with `python tools/check_goals.py`. Private source locations and operational state remain in the existing ignored checkpoint. Skill authoring is gated by G2 acceptance. [Migration ledger](HMI_SKILL_MIGRATION.json). The table above is historical, not current qualification. Current components are gateway0.4.0, DOP-B0.2.1, DIAScreen0.5.0 and MITskill0.1.0.

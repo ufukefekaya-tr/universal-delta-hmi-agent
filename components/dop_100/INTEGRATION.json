@@ -216,7 +216,7 @@
     "runtime_dependencies": [],
     "installation_required": false
   },
-  "package_version": "0.1.1",
+  "package_version": "0.5.0",
   "proposal_review": {
     "tools": [
       "preview",

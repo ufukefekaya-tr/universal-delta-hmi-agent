@@ -15,6 +15,32 @@ def junction(shell, path, target):
 
 
 class InstallationTests(unittest.TestCase):
+    @unittest.skipUnless(os.name=='nt','Windows SHA256 preflight')
+    def test_wrong_archive_refused_before_backend_creation(self):
+        import json
+        with tempfile.TemporaryDirectory() as tmp:
+            base=Path(tmp);repo=base/'repo';(repo/'scripts').mkdir(parents=True);(repo/'templates').mkdir()
+            shutil.copy2(ROOT/'scripts/bootstrap.ps1',repo/'scripts/bootstrap.ps1')
+            (repo/'templates/releases.lock.json').write_text(json.dumps({'dop_b':{'sha256':'0'*64}}))
+            bad=base/'bad.zip';bad.write_bytes(b'not an authorized archive')
+            shell=shutil.which('pwsh') or shutil.which('powershell')
+            result=subprocess.run([shell,'-NoProfile','-File',str(repo/'scripts/bootstrap.ps1'),'-Offline','-BackendArchive',str(bad)],capture_output=True,text=True,timeout=15)
+            self.assertNotEqual(result.returncode,0)
+            self.assertIn('ARCHIVE_HASH_MISMATCH',result.stdout+result.stderr)
+            self.assertFalse((repo/'.local/backends').exists())
+
+    @unittest.skipUnless(os.name=='nt','Windows path-bound preflight')
+    def test_long_root_is_refused_before_runtime_or_download_writes(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo=Path(tmp)/('long-root-'+ 'x'*65);(repo/'scripts').mkdir(parents=True)
+            shutil.copy2(ROOT/'scripts/bootstrap.ps1',repo/'scripts/bootstrap.ps1')
+            shell=shutil.which('pwsh') or shutil.which('powershell')
+            result=subprocess.run([shell,'-NoProfile','-File',str(repo/'scripts/bootstrap.ps1')],capture_output=True,text=True,timeout=15)
+            self.assertNotEqual(result.returncode,0)
+            self.assertIn('WINDOWS_INSTALL_ROOT_TOO_LONG',result.stdout+result.stderr)
+            self.assertFalse((repo/'.local').exists())
+            self.assertFalse((repo/'.venv').exists())
+
     def test_materialization_refuses_external_runtime_link(self):
         spec=importlib.util.spec_from_file_location('install',ROOT/'scripts/finish_install.py')
         mod=importlib.util.module_from_spec(spec);spec.loader.exec_module(mod)

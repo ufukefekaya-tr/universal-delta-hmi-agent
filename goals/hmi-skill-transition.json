@@ -150,8 +150,8 @@
       "state": "PASS",
       "evidence": [
         {
-          "path": "reports/hmi_skill/G1_REVALIDATED_G2.json",
-          "sha256": "692f9d9f1e1b2ba164df6715ae2b69f223ec35acd4ef7626222231c3c4d9d859"
+          "path": "reports/hmi_skill/G1_REVALIDATED_G5.json",
+          "sha256": "6e22b244a4cefbdc98293513baa1f6042f8d3bf6e46d7081ea5f408110674800"
         }
       ],
       "open_findings": [],
@@ -190,12 +190,28 @@
           "to": "PASS",
           "reason": "G1 contracts revalidated on final0.5.0 runtime and G2 hardening",
           "prior_receipt": "reports/hmi_skill/G1_ACCEPTANCE.json"
+        },
+        {
+          "from": "PASS",
+          "to": "REOPENED",
+          "reason": "G5 metadata-only correction: INTEGRATION package_version0.1.1 to0.5.0; runtime/API unchanged; dependent gates paused for exact revalidation",
+          "prior_evidence": [
+            {
+              "path": "reports/hmi_skill/G1_REVALIDATED_G2.json",
+              "sha256": "692f9d9f1e1b2ba164df6715ae2b69f223ec35acd4ef7626222231c3c4d9d859"
+            }
+          ]
+        },
+        {
+          "from": "REOPENED",
+          "to": "PASS",
+          "reason": "Independent exact metadata-only revalidation; prior receipts retained, runtime/API bytes unchanged"
         }
       ],
       "accepted_subjects": [
         {
           "path": "components/dop_100/INTEGRATION.json",
-          "sha256": "99a4fde750bd8d62e31a7a7f4de02fcbb740403fc478eeb1ef64343275dbcece"
+          "sha256": "e00fe70b91e798c81144ba2016861ae4a823c53c796c4f3fbd32b0031f2f4766"
         },
         {
           "path": "components/dop_100/src/universal_diascreen_hmi/extended/RELEASE_MANIFEST.json",
@@ -334,8 +350,8 @@
       "state": "PASS",
       "evidence": [
         {
-          "path": "reports/hmi_skill/G2_ACCEPTANCE.json",
-          "sha256": "434806ca526afe0820ae1ff0ad872d7a445a3279b4ea52c4515a69ff6bdf1b84"
+          "path": "reports/hmi_skill/G2_REVALIDATED_G5.json",
+          "sha256": "f21dbf1fe49a2d62d00ae111d3495d171ae5aae7f127387049d188d44d1ae425"
         }
       ],
       "open_findings": [],
@@ -362,6 +378,22 @@
           "from": "REOPENED",
           "to": "PASS",
           "reason": "Independent exact-source PASS and installed fullCI74/981/232; no new critical skip"
+        },
+        {
+          "from": "PASS",
+          "to": "REOPENED",
+          "reason": "G5 metadata-only correction: INTEGRATION package_version0.1.1 to0.5.0; runtime/API unchanged; dependent gates paused for exact revalidation",
+          "prior_evidence": [
+            {
+              "path": "reports/hmi_skill/G2_ACCEPTANCE.json",
+              "sha256": "434806ca526afe0820ae1ff0ad872d7a445a3279b4ea52c4515a69ff6bdf1b84"
+            }
+          ]
+        },
+        {
+          "from": "REOPENED",
+          "to": "PASS",
+          "reason": "Independent exact metadata-only revalidation; prior receipts retained, runtime/API bytes unchanged"
         }
       ],
       "accepted_subjects": [
@@ -547,7 +579,7 @@
         },
         {
           "path": "components/dop_100/INTEGRATION.json",
-          "sha256": "99a4fde750bd8d62e31a7a7f4de02fcbb740403fc478eeb1ef64343275dbcece"
+          "sha256": "e00fe70b91e798c81144ba2016861ae4a823c53c796c4f3fbd32b0031f2f4766"
         },
         {
           "path": "components/dop_100/tools/session_guard.py",
@@ -687,6 +719,22 @@
           "from": "REOPENED",
           "to": "PASS",
           "reason": "Exact five top-level fields clarified; independent content/receipt comparison,5compatibilitytests andformatvalidator PASS; original forward-run identity retained"
+        },
+        {
+          "from": "PASS",
+          "to": "REOPENED",
+          "reason": "G5 metadata-only correction: INTEGRATION package_version0.1.1 to0.5.0; runtime/API unchanged; dependent gates paused for exact revalidation",
+          "prior_evidence": [
+            {
+              "path": "reports/hmi_skill/G3_REVALIDATED_G4.json",
+              "sha256": "d16f808b2524953b76c627a2917b5a974e72c1009048a2db8d3e4032d495ba98"
+            }
+          ]
+        },
+        {
+          "from": "REOPENED",
+          "to": "PASS",
+          "reason": "Prerequisite metadata revalidated; own accepted subjects and frozen test evidence unchanged; no rerun claim"
         }
       ],
       "accepted_subjects": [
@@ -817,6 +865,22 @@
           "from": "REOPENED",
           "to": "PASS",
           "reason": "Both fresh9case actors independently accepted; actualMCP/effects and postclarification distinction verified"
+        },
+        {
+          "from": "PASS",
+          "to": "REOPENED",
+          "reason": "G5 metadata-only correction: INTEGRATION package_version0.1.1 to0.5.0; runtime/API unchanged; dependent gates paused for exact revalidation",
+          "prior_evidence": [
+            {
+              "path": "reports/hmi_skill/G4_ACCEPTANCE.json",
+              "sha256": "d674bb01cd9edd72119877711bcb85865eb41f56080894d743876ed88d759f19"
+            }
+          ]
+        },
+        {
+          "from": "REOPENED",
+          "to": "PASS",
+          "reason": "Prerequisite metadata revalidated; own accepted subjects and frozen test evidence unchanged; no rerun claim"
         }
       ],
       "accepted_subjects": [
@@ -923,7 +987,7 @@
         "No customer content in any distribution member",
         "Release locks and all artifacts bind the accepted source"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "evidence": [],
       "open_findings": [],
       "next_step": "G5.1",
@@ -939,6 +1003,22 @@
           "from": "PENDING",
           "to": "READY",
           "reason": "G4 accepted; portable distribution gate opened"
+        },
+        {
+          "from": "READY",
+          "to": "IN_PROGRESS",
+          "reason": "Positive inventory packaging and actual portable installation acceptance"
+        },
+        {
+          "from": "IN_PROGRESS",
+          "to": "REOPENED",
+          "reason": "G5 metadata-only correction: INTEGRATION package_version0.1.1 to0.5.0; runtime/API unchanged; dependent gates paused for exact revalidation",
+          "prior_evidence": []
+        },
+        {
+          "from": "REOPENED",
+          "to": "IN_PROGRESS",
+          "reason": "Metadata version gate closed; continue portable package acceptance"
         }
       ],
       "accepted_subjects": []

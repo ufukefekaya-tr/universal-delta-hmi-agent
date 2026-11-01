@@ -7,8 +7,11 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import importlib.util
 
 ROOT = Path(__file__).resolve().parents[1]
+_spec=importlib.util.spec_from_file_location('install_source_contract',ROOT/'tools/package_contract.py')
+_contract=importlib.util.module_from_spec(_spec);_spec.loader.exec_module(_contract)
 
 
 def digest(path):
@@ -61,7 +64,9 @@ def main():
         '--hash=sha256:' + w['sha256'] for w in d['wheels']) for d in lock['dependencies']) + '\n', encoding='utf8')
     run(gateway_python, '-I', '-B', '-m', 'pip', 'install', '--no-index', '--require-hashes',
         '--find-links', dop_b / 'wheelhouse', '-r', requirements)
-    run(gateway_python, '-I', '-B', '-m', 'pip', 'install', '--no-deps', '--no-build-isolation', '--no-index', ROOT)
+    with tempfile.TemporaryDirectory(prefix='gateway-build-',dir=base) as scratch:
+        staged=_contract.stage_source(Path(scratch)/'source')
+        run(gateway_python,'-I','-B','-m','pip','install','--no-deps','--no-build-isolation','--no-index',staged)
 
     # Each family receives its own interpreter, stdlib and site-packages.
     dia = backends['dop_100']
@@ -72,7 +77,7 @@ def main():
     run(dia_python, '-I', '-B', '-m', 'pip', 'install', '--no-index', '--find-links', dop_b / 'wheelhouse', 'setuptools==84.0.0')
     with tempfile.TemporaryDirectory(prefix='dia-build-', dir=base) as scratch:
         staged = Path(scratch) / 'source'
-        shutil.copytree(ROOT / 'components/dop_100', staged, ignore=shutil.ignore_patterns('*.egg-info','build','dist','__pycache__'))
+        _contract.stage_source(staged,'dop_100')
         run(dia_python, '-I', '-B', '-m', 'pip', 'install', '--no-deps', '--no-build-isolation', '--no-index', staged)
     materialize_internal_links(dia)
     sys.path.insert(0, str(ROOT / 'src'))

@@ -14,13 +14,31 @@
     "source_export_sha256": "9c05351b23114371fa065874e5aebf4ddd7c9013df4b7806d357aea409c49355"
   },
   "dop_100": {
-    "version": "0.1.1",
-    "commit": "e39d2a3b3a48a28ed034a05b30e08a97e380cd0c",
-    "archive": "Universal-DIAScreen-HMI-Agent-0.1.1.zip",
-    "sha256": "35d643c179bd4e316dd017de85dec9b0cebf177d404f46122b5d7c7e50b20180",
-    "bytes": 706054,
+    "version": "0.5.0",
     "license": "Apache-2.0",
     "source_snapshot": "components/dop_100",
-    "status": "INDEPENDENT_OFFLINE_RELEASE_VERIFIED"
+    "accepted_runtime_commit": "c77d015691c7ebb7b512a477f631c12dbe37e5c9",
+    "extended_source_manifest_sha256": "a56f6411fd7e21681a0152696f457a14cb0a9175af64c567ca714756f0709d4f",
+    "install_method": "Build this reviewed source snapshot locally with the pinned runtime/wheelhouse; never install the historical DIA archive as current",
+    "status": "OFFLINE_SOURCE_ACCEPTED_VENDOR_UNQUALIFIED",
+    "historical_archive": {
+      "version": "0.1.1",
+      "commit": "e39d2a3b3a48a28ed034a05b30e08a97e380cd0c",
+      "archive": "Universal-DIAScreen-HMI-Agent-0.1.1.zip",
+      "sha256": "35d643c179bd4e316dd017de85dec9b0cebf177d404f46122b5d7c7e50b20180",
+      "bytes": 706054,
+      "license": "Apache-2.0",
+      "source_snapshot": "components/dop_100",
+      "status": "INDEPENDENT_OFFLINE_RELEASE_VERIFIED"
+    }
+  },
+  "gateway": {
+    "version": "0.4.0",
+    "source": "src/delta_hmi"
+  },
+  "skill": {
+    "version": "0.1.0",
+    "source": "skills/delta-hmi",
+    "license": "MIT"
   }
 }

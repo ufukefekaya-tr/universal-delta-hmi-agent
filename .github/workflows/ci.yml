@@ -20,3 +20,18 @@ jobs:
         run: python tools/ci.py install
       - name: Run isolated source suites and manifest checks
         run: python tools/ci.py test
+  portable:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.14'
+      - name: Install relocated source with pinned bundled runtimes and probe both MCP families
+        run: python -I -B tools/portable_probe.py --destination '${{ runner.temp }}/hmi portable'

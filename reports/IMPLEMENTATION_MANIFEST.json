@@ -1,5 +1,5 @@
 {
-  "scope": "Current0.3.4 source; complete root public membership excluding separately snapshotted components and this manifest",
+  "scope": "Current0.4.0 complete reviewed root public membership; separately pinned components and self manifest excluded",
   "files": [
     {
       "path": ".gitattributes",
@@ -7,7 +7,7 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "sha256": "355293831c7a3db593acb78b6dbf987ffa911d1a67a5e65881159c72b8b02e77"
+      "sha256": "73c5431d4640aa37676dda9cae8d67b4d0351db09aeeb2a6d86e87860e71945b"
     },
     {
       "path": ".gitignore",
@@ -35,11 +35,11 @@
     },
     {
       "path": "NOTICE",
-      "sha256": "652be1c6bbe8b3a7f8d10f4fa6d99b17e299b3c3e21639e8fe480d2a0659981f"
+      "sha256": "45e33d1d157aa4b4ba84f24375e7c8f63e7c71555252a54e42c304b02aa1e467"
     },
     {
       "path": "README.md",
-      "sha256": "696207032abbbde1ba5a622abada2cb43098a34f050fa07db9d441d5d0873214"
+      "sha256": "04ec0348a7beaa74ce0ddd46369051e55b0d773ddd5baa5949e02735d616a418"
     },
     {
       "path": "SECURITY.md",
@@ -51,7 +51,7 @@
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
-      "sha256": "41b7ba04bb54833c2f068bcf3fa591d1f78bde889923de37e5ee0fdb7a6d3b9e"
+      "sha256": "3e012dee4aa32cb2fb9d3bc1711bcee66a52da4206b60a65ed710f9553d99f8a"
     },
     {
       "path": "docs/AGENT_START.md",
@@ -67,7 +67,7 @@
     },
     {
       "path": "docs/FEATURE_MIGRATION.json",
-      "sha256": "77d32dedd16f8d292070a9ba671b9db688e70f9b473081fb3563afc0bdec5043"
+      "sha256": "1810f11aebf9d9ffa9fd46424baa16b95d009db9680918373fb6805bc189228b"
     },
     {
       "path": "docs/GAUGE_SOURCE_PROFILE.md",
@@ -75,7 +75,11 @@
     },
     {
       "path": "docs/GOALS.md",
-      "sha256": "baa4f127d8a058353e33f6c484ae1372284a2bc6e31e7391163f8a30c75002bb"
+      "sha256": "f39e9b4578b0006f76c26a92f32ea733e032ef4150714b0fafc7d1c82b7aab54"
+    },
+    {
+      "path": "docs/HMI_SKILL_MIGRATION.json",
+      "sha256": "a77a007ca9ba6c8d5c59abdac37b207f12f652891cc3de5919fd25f4cc595cb0"
     },
     {
       "path": "docs/JOBS.md",
@@ -84,6 +88,10 @@
     {
       "path": "docs/KAIZEN.md",
       "sha256": "4a4f5f3d23d5f64ad70fabd996b0d756678346eb872242b4341ef34f1383df41"
+    },
+    {
+      "path": "docs/MCP_CONSOLIDATION.md",
+      "sha256": "ab116d9828a992c6d4a924878f015e594192cf1094428c7a4ab7100f92ea4260"
     },
     {
       "path": "docs/NATIVE_MIGRATION.json",
@@ -98,12 +106,24 @@
       "sha256": "d67ab41d1cb7f868e69f3c3a29c5e5a181be950a7d8b45a691b36c68cc4b8991"
     },
     {
+      "path": "docs/RELEASE_0_4.md",
+      "sha256": "683226aa28b91c5b99eb4d88dd2022c11cb092855732f896b950294275c18e2c"
+    },
+    {
+      "path": "docs/SKILL_EVALUATION.md",
+      "sha256": "80144ac5845b3480857c7cfdc2650ef584a9c06e9a54b0f1574d04f5f2d9d503"
+    },
+    {
       "path": "docs/STATE_LOOKUP.md",
       "sha256": "ea43dbbd17fdd1c3c5d22f2ea512d18e043cdf1410a393d493d422d30c8d26dd"
     },
     {
       "path": "docs/SUPPORT.md",
-      "sha256": "3aa034dc1960dc6a77e73df6a6e699ec8707e5344d99a82a12885c5d1ae2e2aa"
+      "sha256": "f41c2716ab683a9bb1a0e5654111d02260c6da8fc9600d438e11a8b04d3a3373"
+    },
+    {
+      "path": "docs/TEMPLATE_CATALOG.md",
+      "sha256": "6ba55171cd6c87cf641e759e3178d3022b458727159455ae4cf4136a35830743"
     },
     {
       "path": "docs/TYPED_VISIBILITY.md",
@@ -116,6 +136,10 @@
     {
       "path": "examples/create_gateway_demo.py",
       "sha256": "2581a0a7e54fbeffc5dd889edc066e71ac682d205ffee01ad6ea052de92e5745"
+    },
+    {
+      "path": "goals/hmi-skill-transition.json",
+      "sha256": "0e17e0707059a7400b296ed6c0c7a925d08f63e0842f98725eb9c1362c4b5684"
     },
     {
       "path": "projects/README.md",
@@ -131,7 +155,7 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "f488451a9ea4e0d36013377f623a7aebcbe0463df2a647780ff081ca051a8639"
+      "sha256": "06842d16bb50b1ed8e9f63d15b9bcab6492896e512e7066e7f3b1ad290cd3e27"
     },
     {
       "path": "reports/GAUGE_SOURCE_PROFILE.json",
@@ -159,11 +183,75 @@
     },
     {
       "path": "reports/TYPED_VISIBILITY.json",
-      "sha256": "24a766b09bdb5e3ebb830070edfa40824ead4f622cf1241c98c89313f724d856"
+      "sha256": "d6954595127a199f7bccb1c03cf8c28168a204ad80cbb7c5b816817d5d75bc15"
     },
     {
       "path": "reports/VERIFICATION.json",
       "sha256": "6e1c0324965e0ea02f0ea9a025037a5856dbf9ad70ff4be1e55531aeeb8edaf9"
+    },
+    {
+      "path": "reports/hmi_skill/G0_ACCEPTANCE.json",
+      "sha256": "fbc7b91a227c1f83ecfd65e5bc3aef80bf5e33f4f5e33fec1c568f7dbc5cfcab"
+    },
+    {
+      "path": "reports/hmi_skill/G0_INVENTORY.json",
+      "sha256": "f4c85b648eef2615ab93110889d1456cf46a5c6557863765e2db0d33419e1739"
+    },
+    {
+      "path": "reports/hmi_skill/G1_ACCEPTANCE.json",
+      "sha256": "4e9e9c90709fa926045308c6d57d8376b1629578ec8b61dc502ff851ff88490a"
+    },
+    {
+      "path": "reports/hmi_skill/G1_REVALIDATED_G2.json",
+      "sha256": "692f9d9f1e1b2ba164df6715ae2b69f223ec35acd4ef7626222231c3c4d9d859"
+    },
+    {
+      "path": "reports/hmi_skill/G1_REVALIDATED_G5.json",
+      "sha256": "6e22b244a4cefbdc98293513baa1f6042f8d3bf6e46d7081ea5f408110674800"
+    },
+    {
+      "path": "reports/hmi_skill/G2_ACCEPTANCE.json",
+      "sha256": "434806ca526afe0820ae1ff0ad872d7a445a3279b4ea52c4515a69ff6bdf1b84"
+    },
+    {
+      "path": "reports/hmi_skill/G2_INDEPENDENT_REVIEW.json",
+      "sha256": "552aa876fb45f7b7f68b8669614d69a7acd53fac67c339851d2c29b3b642ce7f"
+    },
+    {
+      "path": "reports/hmi_skill/G2_REVALIDATED_G5.json",
+      "sha256": "f21dbf1fe49a2d62d00ae111d3495d171ae5aae7f127387049d188d44d1ae425"
+    },
+    {
+      "path": "reports/hmi_skill/G3_ACCEPTANCE.json",
+      "sha256": "af883eb5b9bb5797c4433fffd93ae74457d8c58faa5ab0631e567cab5e76b9b4"
+    },
+    {
+      "path": "reports/hmi_skill/G3_ACCEPTANCE_PRE_FORMAT.json",
+      "sha256": "9c571029205292842346c97d942935cbfaec3964640ccb3690b62c39c4d8078d"
+    },
+    {
+      "path": "reports/hmi_skill/G3_REVALIDATED_G4.json",
+      "sha256": "d16f808b2524953b76c627a2917b5a974e72c1009048a2db8d3e4032d495ba98"
+    },
+    {
+      "path": "reports/hmi_skill/G4_ACCEPTANCE.json",
+      "sha256": "d674bb01cd9edd72119877711bcb85865eb41f56080894d743876ed88d759f19"
+    },
+    {
+      "path": "reports/hmi_skill/G4_BEHAVIOR.json",
+      "sha256": "91c2831afe171375aff5d181c0bbfe60cdd23d1848be2192ca651a4f3dfa99d2"
+    },
+    {
+      "path": "reports/hmi_skill/G5_CODE_REVIEW.json",
+      "sha256": "52cab69984e7bb4d40f611fcd75d6b3fa2a64af0d4da83b61c75244c14d6c7b5"
+    },
+    {
+      "path": "reports/hmi_skill/G5_DISTRIBUTION.json",
+      "sha256": "b20f39938dfc6fc473257f35d201067ef361276b2dd49f0ef36b6ae44a42552c"
+    },
+    {
+      "path": "reports/hmi_skill/MCP_API_SCHEMAS.json",
+      "sha256": "359c76048ad0223a2ac9187c5bcb34c5fcef9fde7d19738c924ab5e5a07cf6ee"
     },
     {
       "path": "reports/releases/0.2.1/IMPLEMENTATION_MANIFEST.json",
@@ -191,7 +279,7 @@
     },
     {
       "path": "scripts/bootstrap.ps1",
-      "sha256": "d558b041b58ce324f66cd8d07a0a87513975a9cabd7c011a6c515f6423791a23"
+      "sha256": "db133e2bcd2e7b263caab0dbf6d695de9df76ae77776c7ba8c2dad8f204eed55"
     },
     {
       "path": "scripts/bootstrap.sh",
@@ -199,11 +287,11 @@
     },
     {
       "path": "scripts/build_package.py",
-      "sha256": "aaae60324203e0bc594897431130b34a76ff903b7c34035fc08e77dda85ccf39"
+      "sha256": "ebd38283002c8b2571d6da27bf4e433dcd4aeee8761825402d13ff134fd027c3"
     },
     {
       "path": "scripts/finish_install.py",
-      "sha256": "af476baf6d6ea804e6746f3a4e599095eae910b008384a824b27e9406691c064"
+      "sha256": "56dfc58f61bef58177c4caf50011938d536b524d35d171113669cc0626497aa4"
     },
     {
       "path": "scripts/probe_both.py",
@@ -214,8 +302,32 @@
       "sha256": "a70d05760b0c0290de97da7a5048a4a2e3daac3e1de97867e4a45c510e114a21"
     },
     {
+      "path": "skills/delta-hmi/LICENSE",
+      "sha256": "8d49f6d79d64fc05133efbed47a21af6b4ce74e8460077436bea22e5fc90d810"
+    },
+    {
+      "path": "skills/delta-hmi/SKILL.md",
+      "sha256": "d7441f02b8e2743957fd7a3c8cbaeb323f035346164921a174b4edb0af669357"
+    },
+    {
+      "path": "skills/delta-hmi/agents/openai.yaml",
+      "sha256": "830c449d7f96f7c3d1be9c0e7ee583e8d632bfac64d526493d7bf49c5c863cf0"
+    },
+    {
+      "path": "skills/delta-hmi/compatibility.json",
+      "sha256": "fbdbbd6cc54ff03dbdf0ee1c79edd5d1eb4ac10ae7918848da9d55515dbfea1b"
+    },
+    {
+      "path": "skills/delta-hmi/references/dop-100.md",
+      "sha256": "d47461f6d3ee222330249ecddb752fe0362658c79ba8a72fda4523f2e6b61154"
+    },
+    {
+      "path": "skills/delta-hmi/references/dop-b.md",
+      "sha256": "73ed05ca9f8d844a3b754de94b9c13c58683d46f7b60030fc2a9eb1f3a1d8f4c"
+    },
+    {
       "path": "src/delta_hmi/__init__.py",
-      "sha256": "212d197ebd2da2f106391fa91fbbd0a506cd4ce0447f2f542cf5992ad974a7b1"
+      "sha256": "8c78fdd15aa2ca4932b3ae84a7c3f079a4f46553aef01c6c70c01ef36cf126c4"
     },
     {
       "path": "src/delta_hmi/cli.py",
@@ -227,7 +339,7 @@
     },
     {
       "path": "src/delta_hmi/gateway.py",
-      "sha256": "e98efeb86d9835731322688cdad15c0b8648d93c05cdfb318144c0b0b5cb81ba"
+      "sha256": "058187bf8d0ccd63b9caa0414d6f9d88cadc6125ea7fcec2fb72635203e68370"
     },
     {
       "path": "templates/backends.json",
@@ -235,11 +347,23 @@
     },
     {
       "path": "templates/component_files.json",
-      "sha256": "ad89fecbecddcf2041150ad22080f7201e50a3c885cb0be543abf1c1e39c174b"
+      "sha256": "ba3961691cd528452dff3a09b94835857bda0b2e037d3a2bdc224b75d1173893"
     },
     {
       "path": "templates/releases.lock.json",
-      "sha256": "509559bfbf627eebdc0ad164289548ffbeb6dd66107ef65405603da04eb1e427"
+      "sha256": "52146276cedd3742bf7758e4e7aefb396d8d773f320dc31d18cdfcd035909d23"
+    },
+    {
+      "path": "tests/behavioral/tasks.json",
+      "sha256": "b2c5f6ce256390fae455160ca9db9bde36d3335c092933ee7a126fcfe9d1ff64"
+    },
+    {
+      "path": "tests/test_behavioral_evidence.py",
+      "sha256": "c18c2406f193b22e9f14a63beec502b2b2a0c938ed233581b415b165a044e26c"
+    },
+    {
+      "path": "tests/test_behavioral_preparation.py",
+      "sha256": "2da8271404d1619ad42d80c6b31bf539a8d71fe68be2465b07b13c2154280851"
     },
     {
       "path": "tests/test_ci.py",
@@ -251,15 +375,23 @@
     },
     {
       "path": "tests/test_diascreen_gateway.py",
-      "sha256": "4a8f95e7a54b185f98e47b092d14297bd2ad92100aa038b110b3cd12f42afe34"
+      "sha256": "590979b6ae0cf1afd727a11391bfa98d25646f7fd51e67c6298a3c8ff4dfb09c"
+    },
+    {
+      "path": "tests/test_distribution_contract.py",
+      "sha256": "b76e453b7cd95ba7117f2d42803997bd80999917baba41621747ac719c57e75d"
     },
     {
       "path": "tests/test_gateway.py",
       "sha256": "7a59a2dae102dde9aff67adea5b757e5a3bbf2e73bc529172b4acc9f34a252e3"
     },
     {
+      "path": "tests/test_goal_workflow.py",
+      "sha256": "fd1c8fb733f5b4d68d8b03dca1fdfb84d3a531a245124fa48695cfc958271be1"
+    },
+    {
       "path": "tests/test_installation.py",
-      "sha256": "f8b3dd2054f4cec53d127b7887b777288eb060173f918e241336bcffd9b476a0"
+      "sha256": "93c6c0fc5a578e11f0525fe8e17b6f0f89a29d21cb3b32ca9a73ea11ec035759"
     },
     {
       "path": "tests/test_inventory.py",
@@ -270,16 +402,56 @@
       "sha256": "34c57cd8d86dd58d0c4b74f4fe3116d0d8a68a4ecf925bd420acc55fbdbf228e"
     },
     {
+      "path": "tests/test_skill_contract.py",
+      "sha256": "819a84d29a656cd29eb43f8872b5cb90e0f258841badffc1fc6c2196a4588bc2"
+    },
+    {
+      "path": "tests/test_vendored_guard.py",
+      "sha256": "e85bd7c75fb2eb713856bfc0a6cf63b8109e2e753c933afd1569b546c6bd3ff2"
+    },
+    {
+      "path": "tests/test_wheel_contract.py",
+      "sha256": "60929236abc1b0864099be5f9d5ad6f93e7efc634c9525234049d22e3206e87b"
+    },
+    {
+      "path": "tools/check_behavioral_evidence.py",
+      "sha256": "bc6446d5565bf0ba3cc8af5a25a451ae8702004f37b62b4361a805a8391183f8"
+    },
+    {
+      "path": "tools/check_goals.py",
+      "sha256": "4cf4a495601483fd143b4db85f20f6e47c0fd7243c27d808b50aaa330b12bc03"
+    },
+    {
+      "path": "tools/check_skill.py",
+      "sha256": "28cf4c798a563b5d041900cc46e8c58af37b43ef933ee51d2c5c76442f90ad69"
+    },
+    {
       "path": "tools/check_snapshots.py",
       "sha256": "fa888ce951fe77165d1cf80ce3d7cbce3835bec214ec823c17cc10137fadb78b"
     },
     {
       "path": "tools/ci.py",
-      "sha256": "8303d3a485af65f0606d845f27188179027ef7c78dae65defb2c7d10ad45dbb6"
+      "sha256": "16da18a0bc195b5141af81c445154bfc0d404d66d6d6519921ac4f65a82233e8"
     },
     {
       "path": "tools/guard.py",
-      "sha256": "58ed8dced250e885f012702446ff138a078cd551d3ea3c7c7b82d7ee100a576d"
+      "sha256": "7a125c538359e15d3497522f5ce276d61b255a4d95226d3f6df793e2d263e9f0"
+    },
+    {
+      "path": "tools/package_contract.py",
+      "sha256": "48fc44dfc2a10c9e41400d94460ba94e3b49176b5732014d6ea5b7b5d0710b20"
+    },
+    {
+      "path": "tools/portable_probe.py",
+      "sha256": "ca4335f576271a4f86299c311310768320f580ed6f67a2ca98a5cd52b97abe98"
+    },
+    {
+      "path": "tools/prepare_behavioral_cases.py",
+      "sha256": "f0b7451a1b7be33918482c3ede488852540872fb03df94de4319cb18e4016c3f"
+    },
+    {
+      "path": "tools/wheel_contract.py",
+      "sha256": "840ec733de54c99aa467d5bb41187583c31929243410069e3278db21f51ac06f"
     }
   ]
 }

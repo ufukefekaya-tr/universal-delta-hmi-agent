@@ -1,0 +1,112 @@
+{
+  "schema": "delta.hmi.goal-evidence.v1",
+  "task": "HMI-SKILL-TRANSITION",
+  "goal_id": "G1",
+  "status": "PASS",
+  "definition_sha256": "f8dd9200c56d410e9e647d2d0f2fbd38d17055bfef926f37411b0af172e2db6b",
+  "subjects": [
+    {
+      "path": "components/dop_100/INTEGRATION.json",
+      "sha256": "e00fe70b91e798c81144ba2016861ae4a823c53c796c4f3fbd32b0031f2f4766"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/RELEASE_MANIFEST.json",
+      "sha256": "a56f6411fd7e21681a0152696f457a14cb0a9175af64c567ca714756f0709d4f"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/common.py",
+      "sha256": "b9ce51bef1b4fd18abcb546110aa195886648387b6219b6e055fa95b0a7de78d"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/core.py",
+      "sha256": "03d3dbd47da35225d2bcc59e5a3170a5c0be7bd0a81f6445fb52c270049811b8"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/hmi4_registry.py",
+      "sha256": "933254f3afc36ce1b55be506f253c99ae9959e8d472f1bb535ee314f368a8444"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/hmi4_service.py",
+      "sha256": "68f3c4e4fd0da06f4df3a31be4a5b4875e1c736d2e7e889b38c645fc97b22e7f"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/neutral_screens.py",
+      "sha256": "2b24666dfc52d0d2b342eb99d52d24ccf81e39adcdc828f8aaead42fb6fe2f39"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/template_catalog.py",
+      "sha256": "1ca21b4646fd9bbc9417442e7d6de5a67bc5fd0e171805037f2ea1e4382fb36d"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/template_lifecycle.py",
+      "sha256": "d32e075b16c4784401adaf83ebaba041c250f7e525507cb6011a5ceae52868c7"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/transport.py",
+      "sha256": "9c868e1627401a2a961a257aa83b22ea6e3c72d7b21a2914037b8698ca50b528"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/session.py",
+      "sha256": "0ebc337d3d19fe6f5b48d8aea3ece27e373bc600a392e5d714a5428a9cc8fff9"
+    },
+    {
+      "path": "components/dop_100/tests/test_reference_surface.py",
+      "sha256": "0c8c2f0bed87364afa62a234390a436b05cbfee06ba2c125d6c78213251ab628"
+    },
+    {
+      "path": "components/dop_100/tests/test_resource_bank_surface.py",
+      "sha256": "c95dcdae8a4bfe131905b675eac380795271e165912a04d72c3b5b4b343623f6"
+    },
+    {
+      "path": "components/dop_100/tests/test_template_lifecycle.py",
+      "sha256": "f95b172a061d3692af40df39f69e2d2c9a6c5d36386132f77f5bf038c8905652"
+    },
+    {
+      "path": "docs/HMI_SKILL_MIGRATION.json",
+      "sha256": "a77a007ca9ba6c8d5c59abdac37b207f12f652891cc3de5919fd25f4cc595cb0"
+    },
+    {
+      "path": "docs/TEMPLATE_CATALOG.md",
+      "sha256": "6ba55171cd6c87cf641e759e3178d3022b458727159455ae4cf4136a35830743"
+    },
+    {
+      "path": "src/delta_hmi/gateway.py",
+      "sha256": "058187bf8d0ccd63b9caa0414d6f9d88cadc6125ea7fcec2fb72635203e68370"
+    },
+    {
+      "path": "tests/test_diascreen_gateway.py",
+      "sha256": "590979b6ae0cf1afd727a11391bfa98d25646f7fd51e67c6298a3c8ff4dfb09c"
+    }
+  ],
+  "checks": {
+    "thirteen_routes_revalidated": "PASS",
+    "actual_stdio_and_saved_reread": "PASS",
+    "catalog_and_source_guards": "PASS",
+    "effect_ownership": "PASS",
+    "full_current_regressions": "PASS",
+    "independent_scope_review": "PASS"
+  },
+  "tests": {
+    "root": 74,
+    "dop_b": 981,
+    "dop_100": 232,
+    "failures": 0,
+    "legacy_windows_symlink_privilege_skips": 1,
+    "new_critical_cases_skipped": 0
+  },
+  "prior_receipt": {
+    "path": "reports/hmi_skill/G1_REVALIDATED_G2.json",
+    "sha256": "692f9d9f1e1b2ba164df6715ae2b69f223ec35acd4ef7626222231c3c4d9d859"
+  },
+  "review": "reports/hmi_skill/G2_INDEPENDENT_REVIEW.json",
+  "metadata_revalidation": {
+    "scope": "Only INTEGRATION package_version and matching component_files pin",
+    "independent_status": "PASS",
+    "reviewer": "hmi_delta_inventory_review",
+    "integration_sha256": "e00fe70b91e798c81144ba2016861ae4a823c53c796c4f3fbd32b0031f2f4766",
+    "runtime_api_skill_diff_from": "4a9ed71463bef0c85e7ccfdbdacb6a5ff0d2a5ca",
+    "runtime_api_skill_bytes": "UNCHANGED",
+    "current_snapshot_check": "PASS482B+112DIA",
+    "tests_note": "Prior full/runtime tests are retained as prior execution evidence; no new behavioral run claimed by metadata rebind"
+  }
+}
