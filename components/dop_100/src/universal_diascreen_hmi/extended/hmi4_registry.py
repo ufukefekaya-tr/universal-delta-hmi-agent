@@ -2,16 +2,28 @@
 """Read-only versioned reference catalog. Active machine semantics are data, not code."""
 import json
 from .hmi4_bootstrap import *
+from .template_catalog import document,path_at
+def root():return no_links(os.environ.get('DIA_HMI_REFERENCE_ROOT',str(ROOT))).resolve()
 def registry():
-    path=ROOT/'registry.json'
+    path=root()/'registry.json'
     if not os.environ.get('DIA_HMI_REFERENCE_ROOT'):return dict(schema='delta.hmi.reference-registry.v1',active_revision=None,deliveries=[],font_sha256={})
-    value=json.loads(no_links(path).read_bytes());require(value.get('schema')=='delta.hmi.reference-registry.v1','REGISTRY','Unknown trusted host reference catalog');return value
+    with immutable_read(no_links(path)) as (raw,unchanged):value=document(raw);unchanged()
+    require(value.get('schema')=='delta.hmi.reference-registry.v1' and isinstance(value.get('deliveries'),list) and len(value['deliveries'])<=128,'REGISTRY','Unknown trusted host reference catalog')
+    revisions=set()
+    for e in value['deliveries']:
+        revision=e.get('revision');require(isinstance(revision,str) and re.fullmatch('[A-Za-z0-9_-]{1,80}',revision) and revision not in revisions,'REGISTRY','Bounded unique reference identity required');revisions.add(revision)
+        for k in ('dpa','profile','parameters','tags'):
+            if k in e:
+                require(isinstance(e[k],dict) and set(e[k])=={'path','sha256'},'REGISTRY','Exact reference file pin required');path_at(root(),e[k]['path']);hash_value(e[k]['sha256'])
+        require('dpa'in e and 'profile'in e,'REGISTRY','Reference source/profile required')
+    require(value.get('active_revision') is None or value['active_revision']in revisions,'REGISTRY','Active reference is absent')
+    return value
 
 def entry(revision=None):
     reg=registry();revision=revision or reg['active_revision'];rows=[r for r in reg['deliveries'] if r['revision']==revision]
     require(len(rows)==1,'DELIVERY_UNKNOWN','Unknown versioned delivery');return rows[0]
 def read_pin(pin):
-    path=no_links(ROOT/pin['path']);require(path.resolve().is_relative_to(ROOT),'REGISTRY_PATH','Reference escapes project')
+    path=path_at(root(),pin['path'])
     with immutable_read(path) as (raw,unchanged):require(sha(raw)==pin['sha256'],'REFERENCE_DRIFT','Frozen reference changed');unchanged()
     return raw
 def load(revision=None):

@@ -48,7 +48,7 @@ class Service(Session):
         self._loaded(); hash_value(plan_sha256)
         plan, parent = self.journal.load_plan(plan_sha256)
         record = plan['record']
-        require(record['source_sha256'] == sha(self.source) and record['profile_sha256'] == self.profile_sha256
+        require(record['source_sha256'] == sha(self.source) and record['profile_sha256'] == self.profile_sha256 and record['source_path']==self.source_identity()
                 and record['base_sha256'] == sha(self.current)
                 and record['base_profile_sha256'] == self.current_profile_sha256,
                 'PLAN_SOURCE', 'Durable plan belongs to another source/profile/base')
@@ -84,7 +84,7 @@ class Service(Session):
         donors = {key: sha(value.file.original) for key, value in sorted(self.donors.items())}
         for identity, plan in reversed(chain):
             record = plan['record']
-            require(record['source_sha256'] == sha(self.source) and record['profile_sha256'] == self.profile_sha256
+            require(record['source_sha256'] == sha(self.source) and record['profile_sha256'] == self.profile_sha256 and record['source_path']==self.source_identity()
                     and record['base_sha256'] == sha(candidate) and record['base_profile_sha256'] == profile_sha
                     and record['donors'] == donors, 'PLAN_CHAIN', 'Source/profile/base/donor recovery chain differs')
             candidate, profile_sha = plan['candidate'], record['candidate_profile_sha256']

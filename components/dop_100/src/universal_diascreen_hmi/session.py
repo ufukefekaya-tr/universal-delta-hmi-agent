@@ -81,6 +81,11 @@ class Session:
         require(digest(canonical(self.profile)) == self.profile_sha256, 'PROFILE_DRIFT', 'Pinned profile changed')
         require(digest(canonical(self.current_profile)) == self.current_profile_sha256, 'PROFILE_DRIFT', 'Derived candidate profile changed outside an approved plan')
 
+    def source_identity(self):
+        """Stable within a relocated workspace; external read roots stay explicit."""
+        return ('workspace:'+self.source_path.relative_to(self.workspace).as_posix()
+                if self.source_path.is_relative_to(self.workspace) else 'external:'+str(self.source_path))
+
     def _project(self):
         self._loaded()
         q = Project(self.current)
@@ -235,6 +240,7 @@ class Session:
                 for pid in op['page_ids']:
                     candidate_profile.setdefault('background_sha256', {})[str(pid)] = color_hash
         record = {'source_sha256': digest(self.source), 'base_sha256': digest(self.current),
+                  'source_path': self.source_identity(),
                   'base_profile_sha256': self.current_profile_sha256,
                   'candidate_sha256': digest(candidate), 'profile_sha256': self.profile_sha256,
                   'candidate_profile_sha256': digest(canonical(candidate_profile)),
@@ -258,7 +264,7 @@ class Session:
         require(digest(canonical(record)) == plan_sha256 and digest(plan['candidate']) == record['candidate_sha256']
                 and digest(canonical(plan['profile'])) == record['candidate_profile_sha256']
                 and digest(canonical(plan['steps'])) == record['ledger_sha256'], 'PLAN_DRIFT', 'Immutable proposal bytes, profile, ledger or record changed')
-        require(record['source_sha256'] == digest(self.source) and record['profile_sha256'] == self.profile_sha256,
+        require(record['source_sha256'] == digest(self.source) and record['profile_sha256'] == self.profile_sha256 and record['source_path']==self.source_identity(),
                 'PLAN_DRIFT', 'Proposal source/profile association changed')
         return plan
 

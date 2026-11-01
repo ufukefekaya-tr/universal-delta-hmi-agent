@@ -10,7 +10,7 @@ from unittest.mock import patch
 
 from mcp import types
 from delta_hmi.config import GatewayConfig
-from delta_hmi.gateway import DIA_TOOLS, Gateway, connect_backend, result
+from delta_hmi.gateway import DIA_TOOLS, DIA_OPEN_TOOLS, DIA_STATELESS_TOOLS, Gateway, connect_backend, result
 try:
     from test_config import make_config
 except ImportError:
@@ -57,7 +57,7 @@ class DiascreenGatewayTests(unittest.IsolatedAsyncioTestCase):
 
     async def test_all_audited_tools_and_dynamic_schema_retained(self):
         listed = {tool.name: tool for tool in await self.gateway.list_tools()}
-        self.assertEqual(len(DIA_TOOLS), 70)
+        self.assertEqual(len(DIA_TOOLS), 83)
         self.assertEqual(set(listed), {"delta_catalog", "dop_100__close_session"} | {"dop_100__" + name for name in DIA_TOOLS})
         opening = listed["dop_100__open_project"].input_schema
         self.assertEqual(set(opening["properties"]), {"profile_id", "path", "source_sha256"})
@@ -92,11 +92,27 @@ class DiascreenGatewayTests(unittest.IsolatedAsyncioTestCase):
 
     async def test_all_aliases_forward_only_exact_arguments(self):
         token = await self.open("a.dpa")
-        for name in DIA_TOOLS - {"capabilities", "open_project", "intake_source_profile"}:
+        for name in DIA_TOOLS - DIA_STATELESS_TOOLS - DIA_OPEN_TOOLS:
             response = await self.gateway.call_tool("dop_100__" + name, {"session_id": token, "sentinel": name})
             self.assertFalse(response.is_error, name)
             self.assertEqual(self.created[-1].calls[-1], (name, {"sentinel": name}))
         self.assertTrue((await self.gateway.call_tool("dop_100__execute_shell", {"session_id": token})).is_error)
+
+    async def test_catalog_and_template_openers_have_separate_lifecycles(self):
+        for name,args in [('inspect_template',{'template_id':'blank'}),('list_deliveries',{})]:
+            response=await self.gateway.call_tool('dop_100__'+name,args)
+            self.assertFalse(response.is_error);self.assertEqual(self.gateway.dia_sessions,{})
+            self.assertTrue((await self.gateway.call_tool('dop_100__'+name,{**args,'session_id':'foreign'})).is_error)
+        a=await self.gateway.call_tool('dop_100__create_project',{'template_id':'blank'})
+        b=await self.gateway.call_tool('dop_100__open_delivery',{'revision':'neutral'})
+        self.assertFalse(a.is_error);self.assertFalse(b.is_error)
+        first,second=a.structured_content['session_id'],b.structured_content['session_id'];self.assertNotEqual(first,second)
+        for name in ('apply_project_plan','inspect_neutral_screens','inspect_native_resource_banks'):
+            self.assertTrue((await self.gateway.call_tool('dop_100__'+name,{})).is_error)
+            self.assertFalse((await self.gateway.call_tool('dop_100__'+name,{'session_id':first})).is_error)
+        listing={t.name:t for t in await self.gateway.list_tools()}
+        for name in DIA_OPEN_TOOLS|DIA_STATELESS_TOOLS:
+            self.assertNotIn('session_id',listing['dop_100__'+name].input_schema['properties'])
 
     async def test_fresh_intake_is_stateless_and_never_injects_profile_authority(self):
         args=dict(path='source.dpa',source_sha256='1'*64,expected_link='Link1',expected_station=1)
@@ -141,11 +157,12 @@ class DiascreenGatewayTests(unittest.IsolatedAsyncioTestCase):
             self.data["backends"]["dop_100"]["allow_write"] = allowed
             self.path.write_text(json.dumps(self.data))
             cfg = GatewayConfig.load(self.path).backends["dop_100"]
-            host={"DIA_HMI_REFERENCE_ROOT":"trusted-reference","DIA_HMI_FONT_ROOT":"trusted-fonts","UNTRUSTED_JOB_ENV":"secret-not-forwarded"}
+            host={"DIA_HMI_REFERENCE_ROOT":"trusted-reference","DIA_HMI_FONT_ROOT":"trusted-fonts","DIA_HMI_TEMPLATE_ROOT":"trusted-templates","UNTRUSTED_JOB_ENV":"secret-not-forwarded"}
             with patch.dict(os.environ,host), patch("delta_hmi.gateway.stdio_client", stdio), patch("delta_hmi.gateway.ClientSession", Session):
                 async with connect_backend(cfg): pass
             self.assertEqual(observed[-1].env['DIA_HMI_REFERENCE_ROOT'],host['DIA_HMI_REFERENCE_ROOT'])
             self.assertEqual(observed[-1].env['DIA_HMI_FONT_ROOT'],host['DIA_HMI_FONT_ROOT'])
+            self.assertEqual(observed[-1].env['DIA_HMI_TEMPLATE_ROOT'],host['DIA_HMI_TEMPLATE_ROOT'])
             self.assertNotIn('UNTRUSTED_JOB_ENV',observed[-1].env)
             self.assertIn("universal_diascreen_hmi.cli", observed[-1].args)
             self.assertNotIn("serve", observed[-1].args)

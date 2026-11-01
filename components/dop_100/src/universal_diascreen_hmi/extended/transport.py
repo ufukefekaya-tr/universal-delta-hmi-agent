@@ -6,6 +6,17 @@ def install():
     S,H,I,O=cli.STRING,cli.HASH,cli.INTEGER,cli.OBJECT;B={'type':'boolean'}
     def schema(fields,required):return cli.object_schema(fields,required)
     extra={
+      'list_deliveries':({},()), 'current_delivery':({},()),
+      'open_delivery':(dict(revision=S,candidate_sha256=H,profile_sha256=H,stage_source=B),('revision','candidate_sha256','profile_sha256')),
+      'inspect_parameters':(dict(revision=S),()),'get_reference_contract':(dict(revision=S),()),
+      'inspect_template':(dict(template_id=S),('template_id',)),
+      'create_project':(dict(template_id=S,output_path=S,seed_sha256=H,profile_sha256=H,catalog_sha256=H,engine_sha256=H),('template_id','output_path','seed_sha256','profile_sha256','catalog_sha256','engine_sha256')),
+      'apply_project_plan':(dict(plan_sha256=H,approval_sha256=H),('plan_sha256','approval_sha256')),
+      'configure_target':(dict(candidate_sha256=H,from_template_id=S,target_template_id=S,output_path=S),('candidate_sha256','from_template_id','target_template_id','output_path')),
+      'inspect_target_configuration':(dict(candidate_sha256=H),('candidate_sha256',)),
+      'create_neutral_screen':(dict(candidate_sha256=H,template_id=S,new_page_id=I,name=S,background_color=I),('candidate_sha256','template_id','new_page_id','name','background_color')),
+      'inspect_neutral_screens':(dict(candidate_sha256=H,template_id=S),('candidate_sha256','template_id')),
+      'inspect_native_resource_banks':(dict(candidate_sha256=H),('candidate_sha256',)),
       'intake_source_profile':(dict(path=S,source_sha256=H,expected_link=S,expected_station=I),('path','source_sha256','expected_link','expected_station')),
       'inspect_native_catalog':(dict(candidate_sha256=H,page_id=I),('candidate_sha256',)),
       'inspect_multilingual_text':(dict(candidate_sha256=H,page_id=I),('candidate_sha256',)),

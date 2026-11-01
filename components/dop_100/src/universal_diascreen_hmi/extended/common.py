@@ -37,6 +37,11 @@ def engine_identity():
     files={p.relative_to(root).as_posix():sha(p.read_bytes()) for p in sorted(root.rglob('*.py'))}
     reference=os.environ.get('DIA_HMI_REFERENCE_ROOT')
     if reference:files['trusted-host-registry']=sha(no_links(Path(reference)/'registry.json').read_bytes())
+    templates=os.environ.get('DIA_HMI_TEMPLATE_ROOT')
+    if templates:
+        from .file_ownership import immutable_read
+        with immutable_read(no_links(Path(templates)/'catalog.json')) as (raw,unchanged):
+            files['trusted-host-template-catalog']=sha(raw);unchanged()
     return sha(canonical(files))
 
 

@@ -61,14 +61,20 @@
   "extra_tools": [
     "apply_contract_rebind",
     "apply_offline_package",
+    "apply_project_plan",
     "build_transfer_package",
     "check_text_fit",
     "configure_native_service",
     "configure_numeric_fields",
+    "configure_target",
     "create_alarm_catalog",
     "create_element",
+    "create_neutral_screen",
+    "create_project",
     "create_screen",
+    "current_delivery",
     "evaluate_status",
+    "get_reference_contract",
     "import_symbol_catalog",
     "import_tags",
     "inspect_affine_scale",
@@ -78,14 +84,21 @@
     "inspect_multilingual_text",
     "inspect_native_catalog",
     "inspect_native_plan",
+    "inspect_native_resource_banks",
     "inspect_navigation",
+    "inspect_neutral_screens",
     "inspect_numeric_bindings",
     "inspect_numeric_fields",
     "inspect_offline_package",
     "inspect_operation",
+    "inspect_parameters",
+    "inspect_target_configuration",
+    "inspect_template",
     "inspect_transfer_package",
     "intake_source_profile",
+    "list_deliveries",
     "offline_simulator",
+    "open_delivery",
     "pending_changes",
     "plan_contract_rebind",
     "plan_native_update",
@@ -275,7 +288,12 @@
   },
   "stateless_tools": [
     "capabilities",
-    "intake_source_profile"
+    "intake_source_profile",
+    "list_deliveries",
+    "current_delivery",
+    "inspect_parameters",
+    "get_reference_contract",
+    "inspect_template"
   ],
   "typed_visibility": {
     "operation_argument": "visibility",
@@ -297,5 +315,18 @@
     "document": "docs/TYPED_VISIBILITY.md",
     "native_qualified": false,
     "runtime_qualified": false
+  },
+  "isolated_openers": [
+    "open_project",
+    "open_delivery",
+    "create_project"
+  ],
+  "template_catalog": {
+    "host_environment": "DIA_HMI_TEMPLATE_ROOT",
+    "default": "EMPTY_UNAVAILABLE",
+    "seed_bundled": false,
+    "mode": "QUALIFIED_TEMPLATE_BYTE_COPY",
+    "arbitrary_model_conversion": false,
+    "neutral_page_limit": 128
   }
 }

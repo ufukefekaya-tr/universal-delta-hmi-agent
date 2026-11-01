@@ -2006,7 +2006,7 @@
         },
         {
           "path": "INTEGRATION.json",
-          "sha256": "a70673842f4979c63563d206070074b53ff80d1b03327fe0e4846b177ba66775"
+          "sha256": "77663a23fe68d0d38df6f7549824034dccaaf0a093c93f07bdfb50663c18429b"
         },
         {
           "path": "LICENSE",
@@ -2038,7 +2038,7 @@
         },
         {
           "path": "reports/FILE_MANIFEST.json",
-          "sha256": "c6f3a3cdd7b247a8d4e798997ccc642e1dba4f46090cb7769fc4d8fbcfae8949"
+          "sha256": "2226ae102c646da2807b67060fd9527b570b7aa5a9e544b9a6b8b44fbda3a033"
         },
         {
           "path": "reports/FINAL_REVIEW.md",
@@ -2142,11 +2142,11 @@
         },
         {
           "path": "src/universal_diascreen_hmi/extended/common.py",
-          "sha256": "e50eccb34423e5805873c013e03b64e6af472c04aba0a750db6fb878f2e112c2"
+          "sha256": "b9ce51bef1b4fd18abcb546110aa195886648387b6219b6e055fa95b0a7de78d"
         },
         {
           "path": "src/universal_diascreen_hmi/extended/core.py",
-          "sha256": "e8147e40a26ec1cbb8463b1ada07b8cf20fcc331ecfc3bfb92a86c87898792d8"
+          "sha256": "135d4386dacd4868c8beaa8b14f7ba651df26d5463d5442bf51376b9e10c091a"
         },
         {
           "path": "src/universal_diascreen_hmi/extended/file_ownership.py",
@@ -2166,11 +2166,11 @@
         },
         {
           "path": "src/universal_diascreen_hmi/extended/hmi4_registry.py",
-          "sha256": "c674f50ba0bf6256b664783d38ba4068e81d7ffc365dc30d0130eb12c3a79a09"
+          "sha256": "933254f3afc36ce1b55be506f253c99ae9959e8d472f1bb535ee314f368a8444"
         },
         {
           "path": "src/universal_diascreen_hmi/extended/hmi4_service.py",
-          "sha256": "4e71677fc99b7c570a6227e058fdc183c7ae3d1a8f393d3ad0c009a13e8c5161"
+          "sha256": "3463f9f3b6fa1a3750599aee5a258958ba0d76962a84c9148ef6c8cb1c8857df"
         },
         {
           "path": "src/universal_diascreen_hmi/extended/hmi4_transaction.py",
@@ -2197,12 +2197,16 @@
           "sha256": "1f6f497f91cf4506d3f328cb979c092d990c7fbec67315e72fa1823fbc4018a4"
         },
         {
+          "path": "src/universal_diascreen_hmi/extended/neutral_screens.py",
+          "sha256": "2b24666dfc52d0d2b342eb99d52d24ccf81e39adcdc828f8aaead42fb6fe2f39"
+        },
+        {
           "path": "src/universal_diascreen_hmi/extended/register_contract.py",
           "sha256": "e70e8be0382a81939391788196ecc48b0110c9d8128f4a9de951b80f4945a7dd"
         },
         {
           "path": "src/universal_diascreen_hmi/extended/RELEASE_MANIFEST.json",
-          "sha256": "f2f1fb947cedcbd074cc9dc5ad3b1edd4e7cd741a4be73fcaf0611b93523279f"
+          "sha256": "36250fbe513ca69046bf04830a98d00f8b04b331607a7725964565475c30d44c"
         },
         {
           "path": "src/universal_diascreen_hmi/extended/runner.py",
@@ -2217,8 +2221,16 @@
           "sha256": "ce8a25556bd29b459151b8fd2d9a8dc03fc66b2ccb7677576f795656a6039342"
         },
         {
+          "path": "src/universal_diascreen_hmi/extended/template_catalog.py",
+          "sha256": "1ca21b4646fd9bbc9417442e7d6de5a67bc5fd0e171805037f2ea1e4382fb36d"
+        },
+        {
+          "path": "src/universal_diascreen_hmi/extended/template_lifecycle.py",
+          "sha256": "30113a163ab67182b8d49e906280f09c665885e11ca89f1296cad028fb936b5a"
+        },
+        {
           "path": "src/universal_diascreen_hmi/extended/transport.py",
-          "sha256": "3cf107a731dd6135df08b7d00f742e88631883a1bd3c1caa82348593e7244c2d"
+          "sha256": "e4b3b93cc99899ca8280b8d7df95d4c10dcaadfb85766e8898eaf1a1ca4e83ba"
         },
         {
           "path": "src/universal_diascreen_hmi/extended/typed_visibility.py",
@@ -2250,7 +2262,7 @@
         },
         {
           "path": "src/universal_diascreen_hmi/session.py",
-          "sha256": "53e5c5a1143cf7125a5e1e8cb14748536faed053d8d4bfd7a108482e9ff8b539"
+          "sha256": "0ebc337d3d19fe6f5b48d8aea3ece27e373bc600a392e5d714a5428a9cc8fff9"
         },
         {
           "path": "src/universal_diascreen_hmi/symbols.py",
@@ -2305,8 +2317,16 @@
           "sha256": "27b7ff8ce3587f38a3c32edb3605c034d7e30820a0bed8777dec543198ee9754"
         },
         {
+          "path": "tests/test_reference_surface.py",
+          "sha256": "0c8c2f0bed87364afa62a234390a436b05cbfee06ba2c125d6c78213251ab628"
+        },
+        {
           "path": "tests/test_release.py",
           "sha256": "d8f78c69a15cf0eef41ab8eb9fdd05c62f2fd8f36c94d4d9cdaa2752a2baf5f4"
+        },
+        {
+          "path": "tests/test_resource_bank_surface.py",
+          "sha256": "c95dcdae8a4bfe131905b675eac380795271e165912a04d72c3b5b4b343623f6"
         },
         {
           "path": "tests/test_session.py",
@@ -2331,6 +2351,10 @@
         {
           "path": "tests/test_symbols.py",
           "sha256": "e011829fbaf59d09630dae8774cfbc5393eeb403ac8730445291ed5f9717840e"
+        },
+        {
+          "path": "tests/test_template_lifecycle.py",
+          "sha256": "4baa82c0f501cb74781ce3565fa2fad37200cc031f48875aab16999c53286e4c"
         },
         {
           "path": "tests/test_typed_visibility.py",

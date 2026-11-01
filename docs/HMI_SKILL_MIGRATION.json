@@ -14,9 +14,16 @@
       "group": "reference",
       "observed": "Existing generic code; missing MCP surface",
       "boundary": "Trusted host-owned optional catalog; empty by default",
-      "disposition": "PLANNED_GENERIC_PORT",
-      "implementation": [],
-      "tests": [],
+      "disposition": "OFFLINE_TESTED_GENERIC_PORT",
+      "implementation": [
+        "components/dop_100/src/universal_diascreen_hmi/extended/hmi4_service.py:list_deliveries",
+        "components/dop_100/src/universal_diascreen_hmi/extended/transport.py",
+        "src/delta_hmi/gateway.py"
+      ],
+      "tests": [
+        "components/dop_100/tests/test_reference_surface.py",
+        "tests/test_diascreen_gateway.py"
+      ],
       "required_tests": [
         "empty catalog unavailable",
         "exact source/profile/catalog/engine identity",
@@ -29,9 +36,16 @@
       "group": "reference",
       "observed": "Existing generic code; missing MCP surface",
       "boundary": "Trusted host-owned optional catalog; empty by default",
-      "disposition": "PLANNED_GENERIC_PORT",
-      "implementation": [],
-      "tests": [],
+      "disposition": "OFFLINE_TESTED_GENERIC_PORT",
+      "implementation": [
+        "components/dop_100/src/universal_diascreen_hmi/extended/hmi4_service.py:current_delivery",
+        "components/dop_100/src/universal_diascreen_hmi/extended/transport.py",
+        "src/delta_hmi/gateway.py"
+      ],
+      "tests": [
+        "components/dop_100/tests/test_reference_surface.py",
+        "tests/test_diascreen_gateway.py"
+      ],
       "required_tests": [
         "empty catalog unavailable",
         "exact source/profile/catalog/engine identity",
@@ -44,9 +58,16 @@
       "group": "reference",
       "observed": "Existing generic code; missing MCP surface",
       "boundary": "Trusted host-owned optional catalog; empty by default",
-      "disposition": "PLANNED_GENERIC_PORT",
-      "implementation": [],
-      "tests": [],
+      "disposition": "OFFLINE_TESTED_GENERIC_PORT",
+      "implementation": [
+        "components/dop_100/src/universal_diascreen_hmi/extended/hmi4_service.py:open_delivery",
+        "components/dop_100/src/universal_diascreen_hmi/extended/transport.py",
+        "src/delta_hmi/gateway.py"
+      ],
+      "tests": [
+        "components/dop_100/tests/test_reference_surface.py",
+        "tests/test_diascreen_gateway.py"
+      ],
       "required_tests": [
         "empty catalog unavailable",
         "exact source/profile/catalog/engine identity",
@@ -59,9 +80,16 @@
       "group": "reference",
       "observed": "Existing generic code; missing MCP surface",
       "boundary": "Trusted host-owned optional catalog; empty by default",
-      "disposition": "PLANNED_GENERIC_PORT",
-      "implementation": [],
-      "tests": [],
+      "disposition": "OFFLINE_TESTED_GENERIC_PORT",
+      "implementation": [
+        "components/dop_100/src/universal_diascreen_hmi/extended/hmi4_service.py:inspect_parameters",
+        "components/dop_100/src/universal_diascreen_hmi/extended/transport.py",
+        "src/delta_hmi/gateway.py"
+      ],
+      "tests": [
+        "components/dop_100/tests/test_reference_surface.py",
+        "tests/test_diascreen_gateway.py"
+      ],
       "required_tests": [
         "empty catalog unavailable",
         "exact source/profile/catalog/engine identity",
@@ -74,9 +102,16 @@
       "group": "reference",
       "observed": "Existing generic code; missing MCP surface",
       "boundary": "Trusted host-owned optional catalog; empty by default",
-      "disposition": "PLANNED_GENERIC_PORT",
-      "implementation": [],
-      "tests": [],
+      "disposition": "OFFLINE_TESTED_GENERIC_PORT",
+      "implementation": [
+        "components/dop_100/src/universal_diascreen_hmi/extended/hmi4_service.py:get_reference_contract",
+        "components/dop_100/src/universal_diascreen_hmi/extended/transport.py",
+        "src/delta_hmi/gateway.py"
+      ],
+      "tests": [
+        "components/dop_100/tests/test_reference_surface.py",
+        "tests/test_diascreen_gateway.py"
+      ],
       "required_tests": [
         "empty catalog unavailable",
         "exact source/profile/catalog/engine identity",
@@ -89,9 +124,16 @@
       "group": "seed_copy",
       "observed": "Reusable qualified exact-template copy lifecycle",
       "boundary": "Externally reviewed seed/profile/catalog; no distributed native seed",
-      "disposition": "PLANNED_GENERIC_PORT",
-      "implementation": [],
-      "tests": [],
+      "disposition": "OFFLINE_TESTED_GENERIC_PORT",
+      "implementation": [
+        "components/dop_100/src/universal_diascreen_hmi/extended/hmi4_service.py:inspect_template",
+        "components/dop_100/src/universal_diascreen_hmi/extended/transport.py",
+        "src/delta_hmi/gateway.py"
+      ],
+      "tests": [
+        "components/dop_100/tests/test_template_lifecycle.py",
+        "tests/test_diascreen_gateway.py"
+      ],
       "required_tests": [
         "empty catalog unavailable",
         "exact source/profile/catalog/engine identity",
@@ -108,9 +150,16 @@
       "group": "seed_copy",
       "observed": "Reusable qualified exact-template copy lifecycle",
       "boundary": "Externally reviewed seed/profile/catalog; no distributed native seed",
-      "disposition": "PLANNED_GENERIC_PORT",
-      "implementation": [],
-      "tests": [],
+      "disposition": "OFFLINE_TESTED_GENERIC_PORT",
+      "implementation": [
+        "components/dop_100/src/universal_diascreen_hmi/extended/hmi4_service.py:create_project",
+        "components/dop_100/src/universal_diascreen_hmi/extended/transport.py",
+        "src/delta_hmi/gateway.py"
+      ],
+      "tests": [
+        "components/dop_100/tests/test_template_lifecycle.py",
+        "tests/test_diascreen_gateway.py"
+      ],
       "required_tests": [
         "empty catalog unavailable",
         "exact source/profile/catalog/engine identity",
@@ -127,9 +176,16 @@
       "group": "seed_copy",
       "observed": "Reusable qualified exact-template copy lifecycle",
       "boundary": "Externally reviewed seed/profile/catalog; no distributed native seed",
-      "disposition": "PLANNED_GENERIC_PORT",
-      "implementation": [],
-      "tests": [],
+      "disposition": "OFFLINE_TESTED_GENERIC_PORT",
+      "implementation": [
+        "components/dop_100/src/universal_diascreen_hmi/extended/hmi4_service.py:apply_project_plan",
+        "components/dop_100/src/universal_diascreen_hmi/extended/transport.py",
+        "src/delta_hmi/gateway.py"
+      ],
+      "tests": [
+        "components/dop_100/tests/test_template_lifecycle.py",
+        "tests/test_diascreen_gateway.py"
+      ],
       "required_tests": [
         "empty catalog unavailable",
         "exact source/profile/catalog/engine identity",
@@ -146,9 +202,16 @@
       "group": "target_transition",
       "observed": "Exact unchanged blank to configured-template relation and readback",
       "boundary": "Not arbitrary model conversion or communication-field writer",
-      "disposition": "PLANNED_GENERIC_PORT",
-      "implementation": [],
-      "tests": [],
+      "disposition": "OFFLINE_TESTED_GENERIC_PORT",
+      "implementation": [
+        "components/dop_100/src/universal_diascreen_hmi/extended/hmi4_service.py:configure_target",
+        "components/dop_100/src/universal_diascreen_hmi/extended/transport.py",
+        "src/delta_hmi/gateway.py"
+      ],
+      "tests": [
+        "components/dop_100/tests/test_template_lifecycle.py",
+        "tests/test_diascreen_gateway.py"
+      ],
       "required_tests": [
         "empty catalog unavailable",
         "exact source/profile/catalog/engine identity",
@@ -165,9 +228,16 @@
       "group": "target_transition",
       "observed": "Exact unchanged blank to configured-template relation and readback",
       "boundary": "Not arbitrary model conversion or communication-field writer",
-      "disposition": "PLANNED_GENERIC_PORT",
-      "implementation": [],
-      "tests": [],
+      "disposition": "OFFLINE_TESTED_GENERIC_PORT",
+      "implementation": [
+        "components/dop_100/src/universal_diascreen_hmi/extended/hmi4_service.py:inspect_target_configuration",
+        "components/dop_100/src/universal_diascreen_hmi/extended/transport.py",
+        "src/delta_hmi/gateway.py"
+      ],
+      "tests": [
+        "components/dop_100/tests/test_template_lifecycle.py",
+        "tests/test_diascreen_gateway.py"
+      ],
       "required_tests": [
         "empty catalog unavailable",
         "exact source/profile/catalog/engine identity",
@@ -184,9 +254,16 @@
       "group": "neutral_page",
       "observed": "Source-qualified stock-frame insertion and ancestry audit",
       "boundary": "Reuse generic durable ledger; no private legacy plan store",
-      "disposition": "PLANNED_GENERIC_PORT",
-      "implementation": [],
-      "tests": [],
+      "disposition": "OFFLINE_TESTED_GENERIC_PORT",
+      "implementation": [
+        "components/dop_100/src/universal_diascreen_hmi/extended/hmi4_service.py:create_neutral_screen",
+        "components/dop_100/src/universal_diascreen_hmi/extended/transport.py",
+        "src/delta_hmi/gateway.py"
+      ],
+      "tests": [
+        "components/dop_100/tests/test_template_lifecycle.py",
+        "tests/test_diascreen_gateway.py"
+      ],
       "required_tests": [
         "empty catalog unavailable",
         "exact source/profile/catalog/engine identity",
@@ -203,9 +280,16 @@
       "group": "neutral_page",
       "observed": "Source-qualified stock-frame insertion and ancestry audit",
       "boundary": "Reuse generic durable ledger; no private legacy plan store",
-      "disposition": "PLANNED_GENERIC_PORT",
-      "implementation": [],
-      "tests": [],
+      "disposition": "OFFLINE_TESTED_GENERIC_PORT",
+      "implementation": [
+        "components/dop_100/src/universal_diascreen_hmi/extended/hmi4_service.py:inspect_neutral_screens",
+        "components/dop_100/src/universal_diascreen_hmi/extended/transport.py",
+        "src/delta_hmi/gateway.py"
+      ],
+      "tests": [
+        "components/dop_100/tests/test_template_lifecycle.py",
+        "tests/test_diascreen_gateway.py"
+      ],
       "required_tests": [
         "empty catalog unavailable",
         "exact source/profile/catalog/engine identity",
@@ -222,14 +306,21 @@
       "group": "resources",
       "observed": "Existing generic bounded decoder; missing service/transport route",
       "boundary": "Unknown framing refused; no silent profile adoption",
-      "disposition": "PLANNED_GENERIC_PORT",
-      "implementation": [],
-      "tests": [],
+      "disposition": "OFFLINE_TESTED_GENERIC_PORT",
+      "implementation": [
+        "components/dop_100/src/universal_diascreen_hmi/extended/hmi4_service.py:inspect_native_resource_banks",
+        "components/dop_100/src/universal_diascreen_hmi/extended/transport.py",
+        "src/delta_hmi/gateway.py"
+      ],
+      "tests": [
+        "components/dop_100/tests/test_resource_bank_surface.py",
+        "tests/test_diascreen_gateway.py"
+      ],
       "required_tests": [
-        "empty catalog unavailable",
-        "exact source/profile/catalog/engine identity",
-        "family and permission refusal",
-        "saved-file/source preservation"
+        "exact candidate and engine identity",
+        "closed decoder positive algorithm with declared synthetic sentinel substitution",
+        "unsupported model/framing/opaque variants refuse",
+        "no source/profile mutation; no template catalog needed"
       ]
     }
   ],
@@ -334,5 +425,7 @@
       "report_per_operation": true
     }
   },
-  "g0_evidence": "reports/hmi_skill/G0_ACCEPTANCE.json"
+  "g0_evidence": "reports/hmi_skill/G0_ACCEPTANCE.json",
+  "g1_review": "PASS_INDEPENDENT_EXACT_SOURCE",
+  "g1_evidence": "reports/hmi_skill/G1_ACCEPTANCE.json"
 }

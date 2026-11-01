@@ -10,9 +10,14 @@ from . import hmi4_registry as reference
 from . import hmi4_visual as visual
 from . import hmi4_artifacts as artifacts
 from . import source_intake
+from . import template_catalog, template_lifecycle, neutral_screens
 class Service(CoreService):
     def __init__(self,workspace,*,allow_write=False,read_roots=()):
-        verify_release();reference_roots=[(ROOT/e['dpa']['path']).parent for e in reference.registry()['deliveries']]
+        for env in ('DIA_HMI_REFERENCE_ROOT','DIA_HMI_TEMPLATE_ROOT'):
+            if os.environ.get(env):
+                root=no_links(os.environ[env]).resolve(strict=True);work=no_links(workspace).resolve(strict=True)
+                require(not(root.is_relative_to(work) or work.is_relative_to(root)),'CATALOG_OVERLAP','Host catalogs must be disjoint from workspace/effect roots')
+        verify_release();reference_roots=[(reference.root()/e['dpa']['path']).parent for e in reference.registry()['deliveries']]
         super().__init__(workspace,allow_write=allow_write,read_roots=[*read_roots,*reference_roots])
         self.extension_identity=identity()
         with self.journal.connect() as db:
@@ -21,6 +26,7 @@ class Service(CoreService):
             if row is None:db.execute('INSERT INTO metadata VALUES (?,?)',('hmi4_engine_sha256',self.extension_identity))
             db.execute('CREATE TABLE IF NOT EXISTS hmi4_bases (id TEXT PRIMARY KEY,raw BLOB NOT NULL,profile BLOB NOT NULL)')
         artifacts.init(self)
+        template_lifecycle.init(self)
     def open_project(self,path,source_sha256,profile,profile_sha256):
         hash_value(source_sha256)
         with immutable_read(self._path(path)) as (raw,unchanged):
@@ -41,6 +47,8 @@ class Service(CoreService):
         if inspected:require(self.inspected_sha==candidate_sha256,'INSPECTION_REQUIRED','Inspect the exact current native source first')
     def write_scope(self):
         require(identity()==self.extension_identity,'ENGINE_DRIFT','Active engine changed')
+        if self.current_profile and 'neutral_template_pins'in self.current_profile:
+            template_catalog.require_pins(self.current_profile['neutral_template_pins'])
         if self.source is not None:
             forbidden={e['dpa']['sha256'] for e in reference.registry()['deliveries'] if e['status']=='USER_CANCELLED'}
             require(sha(self.source) not in forbidden and sha(self.current) not in forbidden,'CANCELLED_SOURCE','Cancelled machine revisions are historical read-only references')
@@ -67,6 +75,42 @@ class Service(CoreService):
         r['qualification_state']='SOURCE_BOUND_FILE_TESTED_VENDOR_UNQUALIFIED'
         return r
     def list_deliveries(self):return reference.list_deliveries()
+    def inspect_template(self,template_id):
+        self.project_creation.engine();_,profile,info=template_catalog.load(template_id)
+        return dict(**info,profile=profile,engine_sha256=identity(),seed_files_distributed=False)
+    def create_project(self,template_id,output_path,seed_sha256,profile_sha256,catalog_sha256,engine_sha256):
+        return template_lifecycle.propose(self,template_id,output_path,seed_sha256,profile_sha256,catalog_sha256,engine_sha256)
+    def apply_project_plan(self,plan_sha256,approval_sha256):return template_lifecycle.apply(self,plan_sha256,approval_sha256)
+    def configure_target(self,candidate_sha256,from_template_id,target_template_id,output_path):
+        return template_lifecycle.configure(self,candidate_sha256,from_template_id,target_template_id,output_path)
+    def inspect_target_configuration(self,candidate_sha256):
+        self.checked(candidate_sha256);q=self._project()
+        fields={'driver':'ControllerName1','link':'CommName1','station':'DefPLCStationNr1','interface':'Interface1','port':'PLCPort1','ipv4_integer':'PLCIP1','interface0':'Interface0'}
+        numeric={'station','interface','port','ipv4_integer','interface0'};actual={}
+        for key,field in fields.items():
+            actual[key]=None if q.app.one(field,optional=True) is None else (q.index.number(q.app,field) if key in numeric else q.index.scalar(q.app,field))
+        if actual['ipv4_integer'] is not None:
+            import ipaddress
+            require(0<=actual['ipv4_integer']<=0xffffffff,'TARGET_CONFIGURATION','Native IPv4 integer exceeds bounds')
+            actual['ipv4']=str(ipaddress.IPv4Address(actual['ipv4_integer']))
+        mismatches=[key for key in ('link','station') if actual[key] is not None and actual[key]!=self.current_profile[key]]
+        require(not mismatches,'TARGET_CONFIGURATION','Native communication differs from declared profile: '+','.join(mismatches))
+        missing=[key for key in fields if actual[key] is None]
+        return dict(candidate_sha256=candidate_sha256,model=q.index.scalar(q.app,'ModelName'),
+                    native_application_communication=actual,missing_native_fields=missing,status='PARTIAL_READBACK' if missing else 'NATIVE_READBACK_PASS',
+                    declared_profile=dict(panel=self.current_profile['panel'],application_versions=self.current_profile['application_versions'],link=self.current_profile['link'],station=self.current_profile['station']),
+                    arbitrary_model_conversion=False,vendor_qualified=False,runtime_driver_qualified=False)
+    def inspect_native_resource_banks(self,candidate_sha256):
+        from .native_resource_intake import inspect_banks
+        return inspect_banks(self,candidate_sha256)
+    def inspect_neutral_screens(self,candidate_sha256,template_id):return neutral_screens.inspect(self,candidate_sha256,template_id)
+    def create_neutral_screen(self,candidate_sha256,template_id,new_page_id,name,background_color):
+        require(isinstance(name,str),'NEUTRAL_PAGE_NAME','String page name required')
+        try:name.encode('utf-16-le','strict')
+        except UnicodeEncodeError:require(False,'NEUTRAL_PAGE_NAME','Invalid Unicode page name')
+        inspected=self.inspect_neutral_screens(candidate_sha256,template_id)
+        spec=dict(version=1,operations=[dict(op='create_neutral_screen',template_pins=inspected['template_pins'],new_page_id=new_page_id,name=name,background_color=background_color)])
+        return self.plan_native_update(candidate_sha256,spec,sha(canonical(spec)))
     def current_delivery(self):
         e=reference.entry();return dict(active_revision=e['revision'],status=e['status'],dpa_path=e['dpa']['path'],candidate_sha256=e['dpa']['sha256'],profile_sha256=e['profile_sha256'],endpoint=e.get('endpoint'),vendor_compile='NOT_RUN')
     def open_delivery(self,revision,candidate_sha256,profile_sha256,stage_source=True):
@@ -79,7 +123,7 @@ class Service(CoreService):
                 with immutable_read(p) as (b,unchanged):require(b==raw,'SOURCE_DRIFT','Staged source differs');unchanged()
             else:write_new(p,raw)
             path=name
-        else:path=str(ROOT/e['dpa']['path'])
+        else:path=str(reference.root()/e['dpa']['path'])
         opened=super().open_project(path,candidate_sha256,profile,profile_sha256)
         return {**opened,'reference_revision':e['revision'],'reference_status':e['status'],'staged_source':stage_source}
     def inspect_native_catalog(self,candidate_sha256,page_id=None):
@@ -138,7 +182,10 @@ class Service(CoreService):
         if display_value is not None:result['raw_value']=str((inspect4.dec(display_value)*factor-offset)/gain)
         return result
     def native_build(self,raw,profile,spec):
+        if 'neutral_template_pins'in profile:template_catalog.require_pins(profile['neutral_template_pins'])
         require(isinstance(spec,dict) and isinstance(spec.get('operations'),list) and 1<=len(spec['operations'])<=1000,'SPEC','Bounded native specification required')
+        if any(isinstance(o,dict) and o.get('op')=='create_neutral_screen' for o in spec['operations']):
+            return neutral_screens.build(raw,profile,spec)
         sources={};held=[]
         with ExitStack() as stack:
             for op in spec.get('operations',[]):
@@ -161,6 +208,7 @@ class Service(CoreService):
             if old is None:db.execute('INSERT INTO hmi4_bases VALUES (?,?,?)',(key,*values))
         steps=[dict(operation_id='hmi4-native-update',input_payload_sha256=sha(Project(self.current).file.payload),output_payload_sha256=sha(Project(built['candidate']).file.payload),ledger=built['ledger'],reviewed_resources_after=built['profile']['reviewed_resources'])]
         record=dict(source_sha256=sha(self.source),base_sha256=candidate_sha256,base_profile_sha256=self.current_profile_sha256,profile_sha256=self.profile_sha256,candidate_sha256=sha(built['candidate']),candidate_profile_sha256=sha(canonical(built['profile'])),ledger_sha256=sha(canonical(steps)),operations=[dict(op='hmi4_native_update',specification=specification,specification_sha256=specification_sha256)],donors={key:sha(v.file.original) for key,v in sorted(self.donors.items())},hmi4_engine_sha256=identity(),hmi4_base_key=key)
+        record['source_path']=self.source_identity()
         h=sha(canonical(record));plan=dict(record=record,candidate=built['candidate'],profile=built['profile'],steps=steps);self.journal.save_plan(h,plan,self.applied[-1] if self.applied else None);self.plans[h]=plan
         return dict(plan_sha256=h,approval_sha256_required=h,candidate_sha256=record['candidate_sha256'],candidate_profile_sha256=record['candidate_profile_sha256'],specification_sha256=specification_sha256,engine_sha256=identity(),proof=built['proof'],applied=False)
     def strict(self,p):
@@ -173,6 +221,7 @@ class Service(CoreService):
         require(sha(raw)==r['base_sha256'] and sha(canonical(profile))==r['base_profile_sha256'],'BASE_DRIFT','Native plan base changed')
         built=self.native_build(raw,profile,op['specification']);require(built['candidate']==p['candidate'] and canonical(built['profile'])==canonical(p['profile']) and canonical(built['ledger'])==canonical(p['steps'][0]['ledger']),'PLAN_DRIFT','Native plan reconstruction differs')
     def inspect_native_plan(self,plan_sha256):
+        if template_lifecycle.exists(self,plan_sha256):return template_lifecycle.inspect_plan(self,plan_sha256)
         p,_=self.journal.load_plan(plan_sha256);self.strict(p);op=self.journal.find('apply:'+p['record']['source_sha256']+':'+plan_sha256)
         return dict(plan_sha256=plan_sha256,record=p['record'],profile=p['profile'],operation=op,native_qualified=False)
     def restore_plan(self,plan_sha256):
@@ -211,5 +260,10 @@ class Service(CoreService):
     def plan_contract_rebind(self,candidate_sha256,previous_contract,previous_sha256,contract,contract_sha256):return artifacts.plan_rebind(self,candidate_sha256,previous_contract,previous_sha256,contract,contract_sha256)
     def apply_contract_rebind(self,plan_sha256,approval_sha256):return artifacts.apply(self,plan_sha256,approval_sha256)
     def reconcile_operation(self,operation_id):
+        if self.journal.inspect(operation_id)['kind']=='qualified_template_copy':return template_lifecycle.reconcile(self,operation_id)
+        operation=self.journal.inspect(operation_id)
+        if operation['kind']=='save_as':
+            plan,_=self.journal.load_plan(operation['intent']['plan_sha256']);self.strict(plan)
+            if 'neutral_template_pins'in plan['profile']:template_catalog.require_pins(plan['profile']['neutral_template_pins'])
         if self.journal.inspect(operation_id)['kind'] in ('offline_project_package','contract_rebind'):return artifacts.reconcile(self,operation_id)
         return super().reconcile_operation(operation_id)

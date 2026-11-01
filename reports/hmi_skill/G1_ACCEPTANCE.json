@@ -1,0 +1,125 @@
+{
+  "schema": "delta.hmi.goal-evidence.v1",
+  "task": "HMI-SKILL-TRANSITION",
+  "goal_id": "G1",
+  "status": "PASS",
+  "definition_sha256": "f8dd9200c56d410e9e647d2d0f2fbd38d17055bfef926f37411b0af172e2db6b",
+  "subjects": [
+    {
+      "path": "components/dop_100/INTEGRATION.json",
+      "sha256": "77663a23fe68d0d38df6f7549824034dccaaf0a093c93f07bdfb50663c18429b"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/RELEASE_MANIFEST.json",
+      "sha256": "36250fbe513ca69046bf04830a98d00f8b04b331607a7725964565475c30d44c"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/common.py",
+      "sha256": "b9ce51bef1b4fd18abcb546110aa195886648387b6219b6e055fa95b0a7de78d"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/core.py",
+      "sha256": "135d4386dacd4868c8beaa8b14f7ba651df26d5463d5442bf51376b9e10c091a"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/hmi4_registry.py",
+      "sha256": "933254f3afc36ce1b55be506f253c99ae9959e8d472f1bb535ee314f368a8444"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/hmi4_service.py",
+      "sha256": "3463f9f3b6fa1a3750599aee5a258958ba0d76962a84c9148ef6c8cb1c8857df"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/neutral_screens.py",
+      "sha256": "2b24666dfc52d0d2b342eb99d52d24ccf81e39adcdc828f8aaead42fb6fe2f39"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/template_catalog.py",
+      "sha256": "1ca21b4646fd9bbc9417442e7d6de5a67bc5fd0e171805037f2ea1e4382fb36d"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/template_lifecycle.py",
+      "sha256": "30113a163ab67182b8d49e906280f09c665885e11ca89f1296cad028fb936b5a"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/transport.py",
+      "sha256": "e4b3b93cc99899ca8280b8d7df95d4c10dcaadfb85766e8898eaf1a1ca4e83ba"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/session.py",
+      "sha256": "0ebc337d3d19fe6f5b48d8aea3ece27e373bc600a392e5d714a5428a9cc8fff9"
+    },
+    {
+      "path": "components/dop_100/tests/test_reference_surface.py",
+      "sha256": "0c8c2f0bed87364afa62a234390a436b05cbfee06ba2c125d6c78213251ab628"
+    },
+    {
+      "path": "components/dop_100/tests/test_resource_bank_surface.py",
+      "sha256": "c95dcdae8a4bfe131905b675eac380795271e165912a04d72c3b5b4b343623f6"
+    },
+    {
+      "path": "components/dop_100/tests/test_template_lifecycle.py",
+      "sha256": "4baa82c0f501cb74781ce3565fa2fad37200cc031f48875aab16999c53286e4c"
+    },
+    {
+      "path": "docs/HMI_SKILL_MIGRATION.json",
+      "sha256": "664b4cd34cf4491dc31ddd3a887dba0ec562f092dfc58c2e9b94e9ff7e25dc92"
+    },
+    {
+      "path": "docs/TEMPLATE_CATALOG.md",
+      "sha256": "1b1505a03a3b64f8c42adbee0d9af55f161671b380130b2ebb89b63c5423c057"
+    },
+    {
+      "path": "src/delta_hmi/gateway.py",
+      "sha256": "af6c94e86167608848220aeb5cfa1dcdaa2bce51d3d77cc5db5f2dbf059af8e1"
+    },
+    {
+      "path": "tests/test_diascreen_gateway.py",
+      "sha256": "590979b6ae0cf1afd727a11391bfa98d25646f7fd51e67c6298a3c8ff4dfb09c"
+    }
+  ],
+  "checks": {
+    "thirteen_routes": "PASS",
+    "actual_stdio_create_edit_save_reread": "PASS",
+    "catalog_defaults_and_qualification": "PASS",
+    "source_and_new_output_protection": "PASS",
+    "source_namespace_and_session_isolation": "PASS",
+    "postwrite_recovery_without_replay": "PASS",
+    "neutral_ancestry_and_pin_freshness": "PASS",
+    "independent_code_review": "PASS"
+  },
+  "tests": {
+    "diascreen_suite_before_two_scoped_fixes": {
+      "run": 213,
+      "failures": 0,
+      "legacy_host_symlink_skip": 1
+    },
+    "affected_final_tests": {
+      "run": 3,
+      "failures": 0,
+      "scope": "Wrong native header, exact page-vs-seed proof, real stdio edit/save chain"
+    },
+    "root_suite": {
+      "run": 73,
+      "failures": 0
+    }
+  },
+  "independent_review": {
+    "reviewer": "hmi_delta_inventory_review",
+    "decision": "PASS",
+    "open_important": 0,
+    "closed_findings": [
+      "stale transition before write",
+      "same-seed project identity collision",
+      "response-loss plan discovery and continued editing",
+      "actual Application target readback",
+      "actual header version versus profile allowlist",
+      "stock page owner hash scope"
+    ]
+  },
+  "qualification": {
+    "vendor": "NOT_RUN",
+    "physical": "NOT_RUN",
+    "resource_positive_test": "Original synthetic post-SRAM sentinel substituted only in test; production decoder variant unchanged"
+  }
+}
