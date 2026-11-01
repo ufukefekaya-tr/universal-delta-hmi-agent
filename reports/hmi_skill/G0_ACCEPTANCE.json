@@ -7,7 +7,7 @@
   "subjects": [
     {
       "path": "reports/hmi_skill/G0_INVENTORY.json",
-      "sha256": "068bcbd546c25c2ce2e0ff3b193df70cdb6ff151945002582259f021faabf2d5"
+      "sha256": "f4c85b648eef2615ab93110889d1456cf46a5c6557863765e2db0d33419e1739"
     },
     {
       "path": "tools/check_goals.py",
@@ -28,7 +28,8 @@
     "independent_omission_review": "PASS",
     "goal_dependency_and_receipt_negatives": "PASS",
     "skill_edit_gate": "PASS",
-    "customer_payload_exclusion": "PASS"
+    "customer_payload_exclusion": "PASS",
+    "portable_git_blob_receipts": "PASS"
   },
   "independent_review": {
     "reviewer": "hmi_delta_inventory_review",

@@ -55,7 +55,7 @@
       "evidence": [
         {
           "path": "reports/hmi_skill/G0_ACCEPTANCE.json",
-          "sha256": "45fc6132c59d8bd3548eaa6b30aa06e1624fb2dffa23cecc5927ba307c855eb1"
+          "sha256": "fbc7b91a227c1f83ecfd65e5bc3aef80bf5e33f4f5e33fec1c568f7dbc5cfcab"
         }
       ],
       "open_findings": [],
@@ -72,12 +72,22 @@
           "from": "IN_PROGRESS",
           "to": "PASS",
           "reason": "Independent exact inventory and nine negative acceptance checks passed"
+        },
+        {
+          "from": "PASS",
+          "to": "REOPENED",
+          "reason": "Portable receipt check detected Windows newline normalization between worktree and Git blobs"
+        },
+        {
+          "from": "REOPENED",
+          "to": "PASS",
+          "reason": "Neutral JSON artifacts normalized to LF and exact receipt pins rebound"
         }
       ],
       "accepted_subjects": [
         {
           "path": "reports/hmi_skill/G0_INVENTORY.json",
-          "sha256": "068bcbd546c25c2ce2e0ff3b193df70cdb6ff151945002582259f021faabf2d5"
+          "sha256": "f4c85b648eef2615ab93110889d1456cf46a5c6557863765e2db0d33419e1739"
         },
         {
           "path": "tools/check_goals.py",
