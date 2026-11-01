@@ -1,6 +1,6 @@
 # Third-party license scope
 
-Original umbrella source and documentation are Apache-2.0. The independent original DOP-B0.2.1 and DIAScreen0.1.1 component sources also retain their own Apache-2.0 LICENSE and NOTICE files. See each component's license metadata; the umbrella declaration does not relicense unrelated code or assets.
+Original umbrella MCP source and documentation are Apache-2.0; the companion skill exception is stated below. The isolated DOP-B0.2.1 and DIAScreen0.5.0 components retain their own Apache-2.0 LICENSE and NOTICE files. See each component's license metadata; the umbrella declaration does not relicense unrelated code or assets.
 
 The optional offline bundle contains pinned CPython runtimes and dependency wheels. These keep their original licenses. The full retained notice inventory, exact source URLs and artifact hashes are in [components/dop_b/licenses](components/dop_b/licenses/README.md) and its `inventory.json`. This includes matching standalone runtime full-build notices and source-availability information for Berkeley DB's Sleepycat terms. The HMI runtime does not use its optional `_dbm` module.
 
@@ -11,3 +11,9 @@ Historical DIAScreen upstream code without a declared license is excluded. Vendo
 The original source license includes Apache-2.0 section3's contributor patent grant. This is not patent registration or a license to every third-party patent. Product names identify compatibility targets without vendor endorsement.
 
 The optional DIAScreen visuals extra declares Pillow12.2.0 (installed metadata SPDX: MIT-CMU). Pillow wheels and host fonts are not redistributed by this source update; obtain the dependency and fonts under their own licenses.
+# Companion skill license scope
+
+The original instructions, references, UI metadata and compatibility record in
+`skills/delta-hmi/` use the MIT license in that directory. MCP code and other
+original repository documentation retain Apache-2.0. The skill contains no
+parser, native writer, vendor seed, runtime or copied third-party assets.

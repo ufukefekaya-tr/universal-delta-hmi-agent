@@ -1,0 +1,82 @@
+{
+  "schema": "delta.hmi.companion-skill.v1",
+  "skill": {
+    "name": "delta-hmi",
+    "version": "0.1.0",
+    "license": "MIT"
+  },
+  "mcp": {
+    "repository": "https://github.com/ufukefekaya-tr/universal-delta-hmi-agent",
+    "accepted_source_commit": "c77d015691c7ebb7b512a477f631c12dbe37e5c9",
+    "umbrella_version": "0.4.0",
+    "components": {
+      "dop_b": {
+        "version": "0.2.1",
+        "input_schema_sha256": "77e3f9da6a41579a1001090d1e324c90e5c78d69083eb5699b895de7522ee245",
+        "schema_tools": 9
+      },
+      "dop_100": {
+        "version": "0.5.0",
+        "input_schema_sha256": "1ae8734323308fe50ce0bdf6b080e5da4b7803147364cd97c221ee016e0ef0ac",
+        "schema_tools": 83
+      }
+    },
+    "diascreen_source_manifest_sha256": "a56f6411fd7e21681a0152696f457a14cb0a9175af64c567ca714756f0709d4f",
+    "gateway_source_sha256": "058187bf8d0ccd63b9caa0414d6f9d88cadc6125ea7fcec2fb72635203e68370",
+    "schema_snapshot": {
+      "path": "reports/hmi_skill/MCP_API_SCHEMAS.json",
+      "sha256": "359c76048ad0223a2ac9187c5bcb34c5fcef9fde7d19738c924ab5e5a07cf6ee",
+      "layer": "RAW_BACKEND_INPUT_SCHEMAS; gateway adds namespace/session authority"
+    }
+  },
+  "gateway_contract": {
+    "dop_b_prefix": "dop_b__",
+    "dop_100_prefix": "dop_100__",
+    "dop_100_new_sessions": [
+      "open_project",
+      "open_delivery",
+      "create_project"
+    ],
+    "dop_100_stateless": [
+      "capabilities",
+      "intake_source_profile",
+      "list_deliveries",
+      "current_delivery",
+      "inspect_parameters",
+      "get_reference_contract",
+      "inspect_template"
+    ],
+    "dop_100_open_project_fields": [
+      "profile_id",
+      "path",
+      "source_sha256"
+    ],
+    "dop_100_other_project_calls_require": "session_id",
+    "persistent_jobs": "DOP_B_ONLY_SEPARATE_HOST_POLICY"
+  },
+  "control_documents": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "2ee765bbd53a37826f11c21688ff500b538dbc6f584d3af5df1b10926d445f9e",
+      "url": "https://github.com/ufukefekaya-tr/universal-delta-hmi-agent/blob/c77d015691c7ebb7b512a477f631c12dbe37e5c9/AGENTS.md"
+    },
+    {
+      "path": "SYSTEM_PROMPT.md",
+      "sha256": "deb5d0b395a8b6ce7f11411ca94e6a67ccdd554a12b88a1644ced410e949a098",
+      "url": "https://github.com/ufukefekaya-tr/universal-delta-hmi-agent/blob/c77d015691c7ebb7b512a477f631c12dbe37e5c9/SYSTEM_PROMPT.md"
+    },
+    {
+      "path": "INDEX.md",
+      "sha256": "9db0e85d496af23c4a9c00f331de6594b25a6b49c42614a22c7a85bc524b6873",
+      "url": "https://github.com/ufukefekaya-tr/universal-delta-hmi-agent/blob/c77d015691c7ebb7b512a477f631c12dbe37e5c9/INDEX.md"
+    }
+  ],
+  "policy": "Read actual governing files; do not copy or override them. Discovery hashes are compatibility evidence, not user authorization.",
+  "qualification": {
+    "offline": "ACCEPTED_G2",
+    "vendor_compile": "NOT_RUN",
+    "physical": "NOT_RUN",
+    "seed_bundled": false
+  },
+  "mismatch_behavior": "READ_ONLY_IF_COMPATIBLE; no native mutation until versions/source/required schemas match"
+}

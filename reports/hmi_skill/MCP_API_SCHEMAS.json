@@ -1,0 +1,2000 @@
+{
+  "schema": "delta.hmi.backend-input-schemas.v1",
+  "source_commit": "c77d015691c7ebb7b512a477f631c12dbe37e5c9",
+  "capture": "ACTUAL_INITIALIZE_AND_TOOLS_LIST_OVER_STDIO; no source project opened",
+  "families": {
+    "dop_b": {
+      "version": "0.2.1",
+      "tools": [
+        {
+          "name": "apply_plan",
+          "input_schema": {
+            "properties": {
+              "session_id": {
+                "title": "Session Id",
+                "type": "string"
+              },
+              "plan_id": {
+                "title": "Plan Id",
+                "type": "string"
+              },
+              "approval_path": {
+                "title": "Approval Path",
+                "type": "string"
+              }
+            },
+            "required": [
+              "session_id",
+              "plan_id",
+              "approval_path"
+            ],
+            "type": "object",
+            "title": "apply_planArguments"
+          }
+        },
+        {
+          "name": "capabilities",
+          "input_schema": {
+            "properties": {
+              "profile_id": {
+                "title": "Profile Id",
+                "type": "string"
+              }
+            },
+            "required": [
+              "profile_id"
+            ],
+            "type": "object",
+            "title": "capabilitiesArguments"
+          }
+        },
+        {
+          "name": "diff",
+          "input_schema": {
+            "properties": {
+              "session_id": {
+                "title": "Session Id",
+                "type": "string"
+              }
+            },
+            "required": [
+              "session_id"
+            ],
+            "type": "object",
+            "title": "diffArguments"
+          }
+        },
+        {
+          "name": "inspect",
+          "input_schema": {
+            "properties": {
+              "session_id": {
+                "title": "Session Id",
+                "type": "string"
+              }
+            },
+            "required": [
+              "session_id"
+            ],
+            "type": "object",
+            "title": "inspectArguments"
+          }
+        },
+        {
+          "name": "open_project",
+          "input_schema": {
+            "properties": {
+              "profile_id": {
+                "title": "Profile Id",
+                "type": "string"
+              },
+              "source_path": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Source Path"
+              }
+            },
+            "required": [
+              "profile_id"
+            ],
+            "type": "object",
+            "title": "open_projectArguments"
+          }
+        },
+        {
+          "name": "plan_changes",
+          "input_schema": {
+            "properties": {
+              "session_id": {
+                "title": "Session Id",
+                "type": "string"
+              },
+              "design": {
+                "additionalProperties": true,
+                "title": "Design",
+                "type": "object"
+              },
+              "idempotency_key": {
+                "title": "Idempotency Key",
+                "type": "string"
+              },
+              "operations": {
+                "anyOf": [
+                  {
+                    "items": {
+                      "additionalProperties": true,
+                      "type": "object"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Operations"
+              }
+            },
+            "required": [
+              "session_id",
+              "design",
+              "idempotency_key"
+            ],
+            "type": "object",
+            "title": "plan_changesArguments"
+          }
+        },
+        {
+          "name": "preview",
+          "input_schema": {
+            "properties": {
+              "session_id": {
+                "title": "Session Id",
+                "type": "string"
+              },
+              "plan_id": {
+                "title": "Plan Id",
+                "type": "string"
+              },
+              "output_path": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Output Path"
+              },
+              "values": {
+                "anyOf": [
+                  {
+                    "additionalProperties": true,
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Values"
+              },
+              "states": {
+                "anyOf": [
+                  {
+                    "additionalProperties": true,
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "States"
+              },
+              "valid": {
+                "default": true,
+                "title": "Valid",
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "session_id",
+              "plan_id"
+            ],
+            "type": "object",
+            "title": "previewArguments"
+          }
+        },
+        {
+          "name": "save_as",
+          "input_schema": {
+            "properties": {
+              "session_id": {
+                "title": "Session Id",
+                "type": "string"
+              },
+              "output_path": {
+                "title": "Output Path",
+                "type": "string"
+              }
+            },
+            "required": [
+              "session_id",
+              "output_path"
+            ],
+            "type": "object",
+            "title": "save_asArguments"
+          }
+        },
+        {
+          "name": "validate",
+          "input_schema": {
+            "properties": {
+              "session_id": {
+                "title": "Session Id",
+                "type": "string"
+              },
+              "plan_id": {
+                "title": "Plan Id",
+                "type": "string"
+              }
+            },
+            "required": [
+              "session_id",
+              "plan_id"
+            ],
+            "type": "object",
+            "title": "validateArguments"
+          }
+        }
+      ]
+    },
+    "dop_100": {
+      "version": "0.5.0",
+      "tools": [
+        {
+          "name": "addresses",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "alarms",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "apply_contract_rebind",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "plan_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "approval_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "plan_sha256",
+              "approval_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "apply_offline_package",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "plan_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "approval_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "plan_sha256",
+              "approval_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "apply_plan",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "plan_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "approval_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "plan_sha256",
+              "approval_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "apply_project_plan",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "plan_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "approval_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "plan_sha256",
+              "approval_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "build_transfer_package",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "candidate_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "capabilities",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "check_text_fit",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "page_id": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "candidate_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "clone_element",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "operation": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "operation"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "clone_screen",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "operation": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "operation"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "configure_native_service",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "family": {
+                "type": "string"
+              },
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "family",
+              "candidate_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "configure_numeric_fields",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "page_id": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "element_id": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "expected_element_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "spec": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "candidate_sha256",
+              "page_id",
+              "element_id",
+              "expected_element_sha256",
+              "spec"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "configure_target",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "from_template_id": {
+                "type": "string"
+              },
+              "target_template_id": {
+                "type": "string"
+              },
+              "output_path": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "candidate_sha256",
+              "from_template_id",
+              "target_template_id",
+              "output_path"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "create_alarm_catalog",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "candidate_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "create_element",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "donor_id": {
+                "type": "string"
+              },
+              "donor_page_id": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "donor_element_id": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "page_id": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "new_element_id": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "name": {
+                "type": "string"
+              },
+              "rect": {
+                "type": "object"
+              },
+              "retain_bindings": {
+                "type": "boolean"
+              },
+              "retain_macros": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "donor_id",
+              "donor_page_id",
+              "donor_element_id",
+              "page_id",
+              "new_element_id",
+              "name",
+              "rect",
+              "retain_bindings",
+              "retain_macros"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "create_neutral_screen",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "template_id": {
+                "type": "string"
+              },
+              "new_page_id": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "name": {
+                "type": "string"
+              },
+              "background_color": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "candidate_sha256",
+              "template_id",
+              "new_page_id",
+              "name",
+              "background_color"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "create_project",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "template_id": {
+                "type": "string"
+              },
+              "output_path": {
+                "type": "string"
+              },
+              "seed_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "profile_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "catalog_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "engine_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "template_id",
+              "output_path",
+              "seed_sha256",
+              "profile_sha256",
+              "catalog_sha256",
+              "engine_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "create_screen",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "donor_id": {
+                "type": "string"
+              },
+              "donor_page_id": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "new_page_id": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "donor_id",
+              "donor_page_id",
+              "new_page_id",
+              "name"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "current_delivery",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "delete_element",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "operation": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "operation"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "diff",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "element",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "page_id": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "element_id": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "page_id",
+              "element_id"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "evaluate_status",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "values": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "values"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "find",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "page_id": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "query": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "query"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "get_reference_contract",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "revision": {
+                "type": "string"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "import_symbol_catalog",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "xml": {
+                "type": "string"
+              },
+              "contract": {
+                "type": "object"
+              },
+              "contract_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "expected_xml_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "bindings": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                },
+                "maxItems": 999
+              }
+            },
+            "required": [
+              "xml",
+              "contract",
+              "contract_sha256",
+              "expected_xml_sha256",
+              "bindings"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "import_tags",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "address_space": {
+                "type": "string"
+              },
+              "xml": {
+                "type": "string"
+              },
+              "contract": {
+                "type": "object"
+              },
+              "contract_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "expected_xml_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "bindings": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                },
+                "maxItems": 999
+              }
+            },
+            "required": [
+              "address_space",
+              "xml",
+              "contract",
+              "contract_sha256",
+              "expected_xml_sha256",
+              "bindings"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "inspect",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "view": {
+                "type": "string",
+                "enum": [
+                  "project",
+                  "screens",
+                  "layout",
+                  "element",
+                  "find",
+                  "addresses",
+                  "macros",
+                  "alarms",
+                  "symbols",
+                  "resources",
+                  "text",
+                  "design"
+                ]
+              },
+              "page_id": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "element_id": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "query": {
+                "type": "string"
+              },
+              "sort": {
+                "type": "string",
+                "enum": [
+                  "layer",
+                  "coordinate"
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "inspect_affine_scale",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "page_id": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "element_id": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "raw_value": {
+                "type": "string"
+              },
+              "display_value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "candidate_sha256",
+              "page_id",
+              "element_id"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "inspect_artifact_plan",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "plan_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "plan_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "inspect_compiled",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string"
+              },
+              "artifact_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "source_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "receipt": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "path",
+              "artifact_sha256",
+              "source_sha256",
+              "candidate_sha256",
+              "receipt"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "inspect_endpoint",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "expected_endpoint": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "candidate_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "inspect_multilingual_text",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "page_id": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "candidate_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "inspect_native_catalog",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "page_id": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "candidate_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "inspect_native_plan",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "plan_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "plan_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "inspect_native_resource_banks",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "candidate_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "inspect_navigation",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "candidate_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "inspect_neutral_screens",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "template_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "candidate_sha256",
+              "template_id"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "inspect_numeric_bindings",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "candidate_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "inspect_numeric_fields",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "page_id": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "element_id": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "candidate_sha256",
+              "page_id",
+              "element_id"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "inspect_offline_package",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string"
+              },
+              "artifact_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "expected_endpoint": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "path",
+              "artifact_sha256",
+              "candidate_sha256",
+              "expected_endpoint"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "inspect_operation",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "operation_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "operation_id"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "inspect_parameters",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "revision": {
+                "type": "string"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "inspect_target_configuration",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "candidate_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "inspect_template",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "template_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "template_id"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "inspect_transfer_package",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "candidate_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "intake_source_profile",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "expected_link": {
+                "type": "string"
+              },
+              "expected_station": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "path",
+              "source_sha256",
+              "expected_link",
+              "expected_station"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "layout",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "page_id": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "sort": {
+                "type": "string",
+                "enum": [
+                  "layer",
+                  "coordinate"
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "list_deliveries",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "list_screens",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "macros",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "offline_simulator",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "candidate_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "open_delivery",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "revision": {
+                "type": "string"
+              },
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "profile_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "stage_source": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "revision",
+              "candidate_sha256",
+              "profile_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "open_project",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string"
+              },
+              "source_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "profile": {
+                "type": "object"
+              },
+              "profile_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "path",
+              "source_sha256",
+              "profile",
+              "profile_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "pending_changes",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "plan_changes",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "operations": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 1000,
+                "items": {
+                  "type": "object"
+                }
+              }
+            },
+            "required": [
+              "operations"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "plan_contract_rebind",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "previous_contract": {
+                "type": "object"
+              },
+              "previous_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "contract": {
+                "type": "object"
+              },
+              "contract_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "candidate_sha256",
+              "previous_contract",
+              "previous_sha256",
+              "contract",
+              "contract_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "plan_native_update",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "specification": {
+                "type": "object"
+              },
+              "specification_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "candidate_sha256",
+              "specification",
+              "specification_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "plan_offline_package",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "output_path": {
+                "type": "string"
+              },
+              "dpa_name": {
+                "type": "string"
+              },
+              "expected_endpoint": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "candidate_sha256",
+              "output_path",
+              "dpa_name",
+              "expected_endpoint"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "plan_register_import",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "contract": {
+                "type": "object"
+              },
+              "contract_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "bindings": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                },
+                "minItems": 1,
+                "maxItems": 999
+              }
+            },
+            "required": [
+              "candidate_sha256",
+              "contract",
+              "contract_sha256",
+              "bindings"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "preview",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "page_id": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "values": {
+                "type": "object"
+              },
+              "gallery": {
+                "type": "boolean"
+              },
+              "plan_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "preview_native_page",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "page_id": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "language": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "values": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "candidate_sha256",
+              "page_id",
+              "language"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "rebind",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "operation": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "operation"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "reconcile_operation",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "operation_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "operation_id"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "register_donor",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "donor_id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "donor_id",
+              "path",
+              "sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "restore_candidate",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "plan_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "approval_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "plan_sha256",
+              "approval_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "restore_plan",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "plan_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "plan_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "rollback",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "save",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string"
+              },
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "path",
+              "candidate_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "save_as",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string"
+              },
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "path",
+              "candidate_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "save_new",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string"
+              },
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "path",
+              "candidate_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "screenshot_text",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "page_id": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "sort": {
+                "type": "string",
+                "enum": [
+                  "layer",
+                  "coordinate"
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "set_property",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "operation": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "operation"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "set_state_text",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "operation": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "operation"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "set_text",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "operation": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "operation"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "validate",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "plan_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "validate_bindings",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "contract": {
+                "type": "object"
+              },
+              "contract_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "require_all": {
+                "type": "boolean"
+              },
+              "lookup_expectations": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                },
+                "minItems": 1,
+                "maxItems": 1000
+              },
+              "lookup_expectations_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "candidate_sha256",
+              "contract",
+              "contract_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "validate_native_candidate",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "include_font_fit": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "candidate_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "validate_register_contract",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "contract": {
+                "type": "object"
+              },
+              "contract_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "contract",
+              "contract_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "vendor_compile",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "candidate_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "vendor_open_save_reopen",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "candidate_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "candidate_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "verify_symbol_contract",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "contract": {
+                "type": "object"
+              },
+              "contract_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "contract",
+              "contract_sha256"
+            ],
+            "additionalProperties": false
+          }
+        }
+      ]
+    }
+  }
+}

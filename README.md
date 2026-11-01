@@ -34,6 +34,13 @@ The Windows launch option applies only to that installer process and does not ch
 
 ## Use
 
+The optional [Delta HMI companion skill](skills/delta-hmi/SKILL.md) is version
+0.1.0 under MIT; MCP code remains Apache-2.0. Extract the skill ZIP so
+`delta-hmi/SKILL.md` is inside your Codex skills directory, connect this MCP using
+the generated host configuration, then invoke `$delta-hmi`. The skill ZIP
+contains instructions and compatibility metadata; the file server is installed
+separately. It does not bundle project inputs, vendor seeds or a second parser.
+
 Call `delta_catalog` to see actual backend availability and authority. Tool names have explicit family prefixes:
 
 - `dop_b__`: nine file tools and five persistent job tools. Jobs require a separately configured trusted policy; discovery never starts the queue.

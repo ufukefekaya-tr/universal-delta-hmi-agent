@@ -1,0 +1,89 @@
+{
+  "schema": "delta.hmi.goal-evidence.v1",
+  "task": "HMI-SKILL-TRANSITION",
+  "goal_id": "G3",
+  "status": "PASS",
+  "definition_sha256": "9f8929aa884b9b161040638225e143971f39c7de315960ab481704c5a7a62712",
+  "subjects": [
+    {
+      "path": "skills/delta-hmi/agents/openai.yaml",
+      "sha256": "830c449d7f96f7c3d1be9c0e7ee583e8d632bfac64d526493d7bf49c5c863cf0"
+    },
+    {
+      "path": "skills/delta-hmi/compatibility.json",
+      "sha256": "fbdbbd6cc54ff03dbdf0ee1c79edd5d1eb4ac10ae7918848da9d55515dbfea1b"
+    },
+    {
+      "path": "skills/delta-hmi/LICENSE",
+      "sha256": "8d49f6d79d64fc05133efbed47a21af6b4ce74e8460077436bea22e5fc90d810"
+    },
+    {
+      "path": "skills/delta-hmi/references/dop-100.md",
+      "sha256": "d47461f6d3ee222330249ecddb752fe0362658c79ba8a72fda4523f2e6b61154"
+    },
+    {
+      "path": "skills/delta-hmi/references/dop-b.md",
+      "sha256": "6a77cda15ba7ef3de19007ae7e5b6d821f6b44e11dc02c2508707e6180b5ade3"
+    },
+    {
+      "path": "skills/delta-hmi/SKILL.md",
+      "sha256": "d7441f02b8e2743957fd7a3c8cbaeb323f035346164921a174b4edb0af669357"
+    },
+    {
+      "path": "tools/check_skill.py",
+      "sha256": "28cf4c798a563b5d041900cc46e8c58af37b43ef933ee51d2c5c76442f90ad69"
+    },
+    {
+      "path": "tests/test_skill_contract.py",
+      "sha256": "819a84d29a656cd29eb43f8872b5cb90e0f258841badffc1fc6c2196a4588bc2"
+    },
+    {
+      "path": "reports/hmi_skill/MCP_API_SCHEMAS.json",
+      "sha256": "359c76048ad0223a2ac9187c5bcb34c5fcef9fde7d19738c924ab5e5a07cf6ee"
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "45e33d1d157aa4b4ba84f24375e7c8f63e7c71555252a54e42c304b02aa1e467"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "3e012dee4aa32cb2fb9d3bc1711bcee66a52da4206b60a65ed710f9553d99f8a"
+    }
+  ],
+  "checks": {
+    "mcp_g2_precondition": "PASS",
+    "six_file_instruction_only_skill": "PASS",
+    "family_contract_separation": "PASS",
+    "accepted_source_and_input_schemas": "PASS",
+    "control_policy_authority_preserved": "PASS",
+    "mit_apache_scope_separation": "PASS",
+    "implicit_invocation_default": "PASS",
+    "independent_content_review": "PASS",
+    "first_party_format_validator": "PASS",
+    "compatibility_negatives": "PASS"
+  },
+  "tests": {
+    "integrity_and_compatibility": 5,
+    "failures": 0,
+    "first_party_skill_creator": "PASS",
+    "decision_behavior": "SEPARATE_G4"
+  },
+  "independent_review": {
+    "reviewer": "hmi_delta_inventory_review",
+    "status": "PASS",
+    "important_findings": 0,
+    "minor_finding": "Current DIAScreen notice version corrected0.1.1to0.5.0; license boundary unchanged"
+  },
+  "actual_stdio_discovery": {
+    "dop_b": {
+      "version": "0.2.1",
+      "tools": 9
+    },
+    "dop_100": {
+      "version": "0.5.0",
+      "tools": 83
+    }
+  },
+  "source_commit": "c77d015691c7ebb7b512a477f631c12dbe37e5c9",
+  "format_normalization": "Trailing empty line removed from third-party notice before commit; skill/code/schema bytes unchanged"
+}

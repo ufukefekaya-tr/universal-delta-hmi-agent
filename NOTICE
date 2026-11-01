@@ -1,7 +1,9 @@
 Universal Delta HMI Agent
 Copyright 2026 Universal Delta HMI Agent contributors
 
-Original source and documentation in this repository are licensed under the
-Apache License, Version 2.0. This notice does not relicense separately distributed
+Original MCP source and documentation in this repository are licensed under the
+Apache License, Version 2.0. The original companion skill content under
+skills/delta-hmi/ is separately licensed under its MIT LICENSE. This notice does
+not relicense separately distributed
 backends, dependencies, vendor software, customer projects or third-party assets.
 Delta product names identify compatibility targets; no vendor endorsement is implied.

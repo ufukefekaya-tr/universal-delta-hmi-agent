@@ -12,7 +12,7 @@
     "REOPENED"
   ],
   "skill_gate": "G2",
-  "current_goal": "G3",
+  "current_goal": "G4",
   "goals": [
     {
       "id": "G0",
@@ -609,27 +609,32 @@
         {
           "id": "G3.1",
           "action": "Author minimal entry and family references",
-          "completed": false
+          "completed": true
         },
         {
           "id": "G3.2",
           "action": "Bind exact accepted MCP compatibility",
-          "completed": false
+          "completed": true
         },
         {
           "id": "G3.3",
           "action": "Check policy and authority boundaries",
-          "completed": false
+          "completed": true
         }
       ],
       "acceptance": [
         "Both family routes correctly selected",
         "No parser, writer or authority duplicated in skill"
       ],
-      "state": "READY",
-      "evidence": [],
+      "state": "PASS",
+      "evidence": [
+        {
+          "path": "reports/hmi_skill/G3_ACCEPTANCE.json",
+          "sha256": "af883eb5b9bb5797c4433fffd93ae74457d8c58faa5ab0631e567cab5e76b9b4"
+        }
+      ],
       "open_findings": [],
-      "next_step": "G3.1",
+      "next_step": null,
       "reopen_reason": null,
       "rollback": "Immutable baseline and new-only versioned artifacts",
       "history": [
@@ -642,9 +647,78 @@
           "from": "PENDING",
           "to": "READY",
           "reason": "G2 accepted; skill authoring gate opened"
+        },
+        {
+          "from": "READY",
+          "to": "IN_PROGRESS",
+          "reason": "G2 committedc77d015; original MIT companion instructions only"
+        },
+        {
+          "from": "IN_PROGRESS",
+          "to": "PASS",
+          "reason": "Independent six-file MIT skill content/contract PASS;5negative gates andfirstpartyformat validator"
+        },
+        {
+          "from": "PASS",
+          "to": "REOPENED",
+          "reason": "Final notice whitespace normalization",
+          "prior_evidence": {
+            "path": "reports/hmi_skill/G3_ACCEPTANCE_PRE_FORMAT.json",
+            "sha256": "9c571029205292842346c97d942935cbfaec3964640ccb3690b62c39c4d8078d"
+          }
+        },
+        {
+          "from": "REOPENED",
+          "to": "PASS",
+          "reason": "Notice-only formatting corrected; content and compatibility unchanged, hashes rebound"
         }
       ],
-      "accepted_subjects": []
+      "accepted_subjects": [
+        {
+          "path": "skills/delta-hmi/agents/openai.yaml",
+          "sha256": "830c449d7f96f7c3d1be9c0e7ee583e8d632bfac64d526493d7bf49c5c863cf0"
+        },
+        {
+          "path": "skills/delta-hmi/compatibility.json",
+          "sha256": "fbdbbd6cc54ff03dbdf0ee1c79edd5d1eb4ac10ae7918848da9d55515dbfea1b"
+        },
+        {
+          "path": "skills/delta-hmi/LICENSE",
+          "sha256": "8d49f6d79d64fc05133efbed47a21af6b4ce74e8460077436bea22e5fc90d810"
+        },
+        {
+          "path": "skills/delta-hmi/references/dop-100.md",
+          "sha256": "d47461f6d3ee222330249ecddb752fe0362658c79ba8a72fda4523f2e6b61154"
+        },
+        {
+          "path": "skills/delta-hmi/references/dop-b.md",
+          "sha256": "6a77cda15ba7ef3de19007ae7e5b6d821f6b44e11dc02c2508707e6180b5ade3"
+        },
+        {
+          "path": "skills/delta-hmi/SKILL.md",
+          "sha256": "d7441f02b8e2743957fd7a3c8cbaeb323f035346164921a174b4edb0af669357"
+        },
+        {
+          "path": "tools/check_skill.py",
+          "sha256": "28cf4c798a563b5d041900cc46e8c58af37b43ef933ee51d2c5c76442f90ad69"
+        },
+        {
+          "path": "tests/test_skill_contract.py",
+          "sha256": "819a84d29a656cd29eb43f8872b5cb90e0f258841badffc1fc6c2196a4588bc2"
+        },
+        {
+          "path": "reports/hmi_skill/MCP_API_SCHEMAS.json",
+          "sha256": "359c76048ad0223a2ac9187c5bcb34c5fcef9fde7d19738c924ab5e5a07cf6ee"
+        },
+        {
+          "path": "NOTICE",
+          "sha256": "45e33d1d157aa4b4ba84f24375e7c8f63e7c71555252a54e42c304b02aa1e467"
+        },
+        {
+          "path": "THIRD_PARTY_NOTICES.md",
+          "sha256": "3e012dee4aa32cb2fb9d3bc1711bcee66a52da4206b60a65ed710f9553d99f8a"
+        }
+      ]
     },
     {
       "id": "G4",
@@ -690,7 +764,7 @@
         "Observable calls and saved artifacts match the authorized intent",
         "No unauthorized action or false qualification"
       ],
-      "state": "PENDING",
+      "state": "READY",
       "evidence": [],
       "open_findings": [],
       "next_step": "G4.1",
@@ -701,6 +775,11 @@
           "from": null,
           "to": "PENDING",
           "reason": "Approved implementation plan initialized"
+        },
+        {
+          "from": "PENDING",
+          "to": "READY",
+          "reason": "G3 contents accepted; independent real decision tests next"
         }
       ],
       "accepted_subjects": []
