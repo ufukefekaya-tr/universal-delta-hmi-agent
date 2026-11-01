@@ -14,9 +14,10 @@ Inspect the actual source, prepare the requested design/typed contract and
 operations, then call `plan_changes` with its required idempotency key. Inspect
 the returned plan and preview, validate, apply under the exact design/plan
 authorization returned by this backend, and save to a separate relative output.
-Legacy `apply_plan` uses an `approval_path` containing the returned
-`approval_contract` plus `approved: true`, issued under actual user/host
-authority. Materializing already authorized local consent is different from
+Legacy `apply_plan` uses an `approval_path` containing the returned top-level
+`source_sha256`, `profile_sha256`, `design_sha256`, `bindings_sha256` and
+`operations_sha256`, plus `approved: true` and backend-required authority fields
+under actual user/host authority. Materializing already authorized local consent is different from
 fabricating an independent job-review receipt; neither file grants its own
 authority.
 Use `diff` and reopen the saved bytes for verification. Source-qualified donor,

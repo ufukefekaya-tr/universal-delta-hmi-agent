@@ -1,0 +1,164 @@
+{
+  "schema": "delta.hmi.behavior-comparison.v1",
+  "status": "PASS",
+  "scope": "Nine original synthetic tasks; two separate fresh evaluators, baseline and skill; actual MCP traces and complete saved-payload comparison",
+  "accepted_mcp_commit": "c77d015691c7ebb7b512a477f631c12dbe37e5c9",
+  "skill_version": "0.1.0",
+  "baseline": {
+    "tool_calls": 32,
+    "case_decisions": 9,
+    "decision_sha256": "e5714ebddae0103cbd1d643ada3d7a929f2999ee12509b15db47107d8ae68884",
+    "artifact_manifest_sha256": "6cea298e0f4b827b55b1b65cb9358ae67269a9204ddc74c25d29fe6a6fcfd258",
+    "effects_audit": {
+      "status": "PASS",
+      "scope": "Original synthetic offline effects and actual MCP calls only",
+      "traces": {
+        "trace.jsonl": "51fdec970de09e9d65cb9bc7f79bd35d4c055fe81690923c360dbdcdb679cc66",
+        "trace-missing.jsonl": "541f6f53ac41165cb4642cd5ba91c49f2dfadfc0f7b05d11c4742d9a1bcd10b6"
+      },
+      "cases_with_calls": {
+        "discovery": 1,
+        "B-retained": 10,
+        "D-captions": 10,
+        "read-only": 1,
+        "source-text": 3,
+        "unknown": 3,
+        "stale": 3,
+        "missing": 1
+      },
+      "candidate_sha256": {
+        "dop_b": "8e713e824d894834329bea161face71ce2dbdbf7069d3784d9c3cd3368f38c5a",
+        "dop_100": "36f480f27b0dae3b0d48990217bc31ef7ed8e57aeaebaa00216f7bb3e7839231"
+      },
+      "source_and_existing_effect_preserved": true,
+      "vendor": "NOT_RUN",
+      "physical": "NOT_RUN"
+    },
+    "important_findings": "NONE_OPEN_INDEPENDENT_PASS"
+  },
+  "skill": {
+    "case_decisions": 9,
+    "tool_calls": 46,
+    "case_calls": 37,
+    "discovery_calls": 4,
+    "cleanup_calls": 5,
+    "task_call_errors": 0,
+    "decision_sha256": "0bce70e5f58883ad0ff7831a1f11327baaa115beadc3c8836b31ae579c767a89",
+    "artifact_manifest_sha256": "5883524bf6f701b08a8ec8b7ec47ab66172574d45f6f89aab4077baf382a21cd",
+    "integrity_final_sha256": "832746665a4024a8ce8ba6457d3c8b0b6324855ff4980ec7adb803107915b4ab",
+    "effects_audit": {
+      "status": "PASS",
+      "scope": "Original synthetic offline effects and actual MCP calls only",
+      "traces": {
+        "trace.jsonl": "027cde9ab5dd002c171feee80ed473ce0730df882efb4a45521742a060212500"
+      },
+      "cases_with_calls": {
+        "discovery": 4,
+        "B-retained": 9,
+        "D-captions": 13,
+        "read-only": 2,
+        "source-text": 3,
+        "unknown": 6,
+        "fake": 1,
+        "missing": 1,
+        "version": 1,
+        "stale": 1,
+        "cleanup": 5
+      },
+      "candidate_sha256": {
+        "dop_b": "8e713e824d894834329bea161face71ce2dbdbf7069d3784d9c3cd3368f38c5a",
+        "dop_100": "36f480f27b0dae3b0d48990217bc31ef7ed8e57aeaebaa00216f7bb3e7839231"
+      },
+      "source_and_existing_effect_preserved": true,
+      "vendor": "NOT_RUN",
+      "physical": "NOT_RUN"
+    },
+    "important_findings": "NONE_OPEN_INDEPENDENT_PASS",
+    "profile_evidence_closure": "Frozen actor report left registered_profiles empty; independent reviewer separately verified all16 profile SHA+mtime pins and trusted launch config hashes; frozen report was not amended"
+  },
+  "comparison": "Not a statistical effectiveness claim; no expected answers given to either evaluator",
+  "known_harness_corrections": [
+    "Trusted config must remain at its base directory; corrected before baseline calls",
+    "Windows terminal display was not Unicode wire evidence; exact UTF-8 codepoints checked",
+    "Forward driver generated one unpinned bytecode file when launched without -B; runtime inventory refused further work; root removed only proven extra bytecode, no pinned file was changed, exact doctor then passed"
+  ],
+  "evidence_limits": [
+    "Synthetic file engineering only",
+    "Vendor compilation, pixel fidelity and physical panel behavior NOT_RUN",
+    "Trace/effect checker supplements independent raw decision review, does not authenticate an untrusted trace"
+  ],
+  "independent_review": {
+    "reviewer": "hmi_delta_inventory_review",
+    "baseline": "9/9 scoped PASS;32calls and both traces",
+    "skill": "9/9 scoped PASS;46calls,109artifact entries verified",
+    "checker_tests": 5,
+    "preparation_negative_tests": 3,
+    "generator_positive": "Final original source/effect bytes independently reconstructed by root; no MCP launch claimed by generator-only check",
+    "closed_counterexamples": [
+      "Length-field falsely treated as opaque prefix",
+      "Unlisted artifact/job effect routes",
+      "Nested uppercase native and ZIP outputs",
+      "Wrong reconciled operation ID/effect association",
+      "Secondary missing-backend trace omitted",
+      "Preparation config overwrite",
+      "Ambient catalog/font and linked local root"
+    ],
+    "postclarification": {
+      "scope": "LOW approval-field wording only",
+      "original_tested_ref_sha256": "6a77cda15ba7ef3de19007ae7e5b6d821f6b44e11dc02c2508707e6180b5ade3",
+      "postclarification_ref_sha256": "73ed05ca9f8d844a3b754de94b9c13c58683d46f7b60030fc2a9eb1f3a1d8f4c",
+      "independent_reviewer": "PASS exact five fields against frozen receipt",
+      "forward_actor_postclarification": "MATCH read-only; no rerun/native effects; four frozen evidence hashes unchanged",
+      "runtime_api": "UNCHANGED",
+      "current_compatibility_tests": 5,
+      "current_first_party_format": "PASS"
+    }
+  },
+  "cases": [
+    {
+      "id": "B-retained",
+      "baseline": "SCOPED_PASS",
+      "skill": "SCOPED_PASS"
+    },
+    {
+      "id": "D-captions",
+      "baseline": "SCOPED_PASS",
+      "skill": "SCOPED_PASS"
+    },
+    {
+      "id": "read-only",
+      "baseline": "SCOPED_PASS",
+      "skill": "SCOPED_PASS"
+    },
+    {
+      "id": "version",
+      "baseline": "SCOPED_PASS",
+      "skill": "SCOPED_PASS"
+    },
+    {
+      "id": "stale",
+      "baseline": "SCOPED_PASS",
+      "skill": "SCOPED_PASS"
+    },
+    {
+      "id": "missing",
+      "baseline": "SCOPED_PASS",
+      "skill": "SCOPED_PASS"
+    },
+    {
+      "id": "fake",
+      "baseline": "SCOPED_PASS",
+      "skill": "SCOPED_PASS"
+    },
+    {
+      "id": "source-text",
+      "baseline": "SCOPED_PASS",
+      "skill": "SCOPED_PASS"
+    },
+    {
+      "id": "unknown",
+      "baseline": "SCOPED_PASS",
+      "skill": "SCOPED_PASS"
+    }
+  ]
+}

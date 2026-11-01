@@ -12,7 +12,7 @@
     "REOPENED"
   ],
   "skill_gate": "G2",
-  "current_goal": "G4",
+  "current_goal": "G5",
   "goals": [
     {
       "id": "G0",
@@ -629,8 +629,8 @@
       "state": "PASS",
       "evidence": [
         {
-          "path": "reports/hmi_skill/G3_ACCEPTANCE.json",
-          "sha256": "af883eb5b9bb5797c4433fffd93ae74457d8c58faa5ab0631e567cab5e76b9b4"
+          "path": "reports/hmi_skill/G3_REVALIDATED_G4.json",
+          "sha256": "d16f808b2524953b76c627a2917b5a974e72c1009048a2db8d3e4032d495ba98"
         }
       ],
       "open_findings": [],
@@ -671,6 +671,22 @@
           "from": "REOPENED",
           "to": "PASS",
           "reason": "Notice-only formatting corrected; content and compatibility unchanged, hashes rebound"
+        },
+        {
+          "from": "PASS",
+          "to": "REOPENED",
+          "reason": "Post-forward LOW wording correction: exact top-level DOP-B approval hash fields, no API/runtime change",
+          "prior_evidence": [
+            {
+              "path": "reports/hmi_skill/G3_ACCEPTANCE.json",
+              "sha256": "af883eb5b9bb5797c4433fffd93ae74457d8c58faa5ab0631e567cab5e76b9b4"
+            }
+          ]
+        },
+        {
+          "from": "REOPENED",
+          "to": "PASS",
+          "reason": "Exact five top-level fields clarified; independent content/receipt comparison,5compatibilitytests andformatvalidator PASS; original forward-run identity retained"
         }
       ],
       "accepted_subjects": [
@@ -692,7 +708,7 @@
         },
         {
           "path": "skills/delta-hmi/references/dop-b.md",
-          "sha256": "6a77cda15ba7ef3de19007ae7e5b6d821f6b44e11dc02c2508707e6180b5ade3"
+          "sha256": "73ed05ca9f8d844a3b754de94b9c13c58683d46f7b60030fc2a9eb1f3a1d8f4c"
         },
         {
           "path": "skills/delta-hmi/SKILL.md",
@@ -742,32 +758,37 @@
         {
           "id": "G4.1",
           "action": "Run MCP-only baseline scenarios",
-          "completed": false
+          "completed": true
         },
         {
           "id": "G4.2",
           "action": "Run skill plus MCP scenarios",
-          "completed": false
+          "completed": true
         },
         {
           "id": "G4.3",
           "action": "Independent forward tests",
-          "completed": false
+          "completed": true
         },
         {
           "id": "G4.4",
           "action": "Correct and retest demonstrated failures",
-          "completed": false
+          "completed": true
         }
       ],
       "acceptance": [
         "Observable calls and saved artifacts match the authorized intent",
         "No unauthorized action or false qualification"
       ],
-      "state": "READY",
-      "evidence": [],
+      "state": "PASS",
+      "evidence": [
+        {
+          "path": "reports/hmi_skill/G4_ACCEPTANCE.json",
+          "sha256": "d674bb01cd9edd72119877711bcb85865eb41f56080894d743876ed88d759f19"
+        }
+      ],
       "open_findings": [],
-      "next_step": "G4.1",
+      "next_step": null,
       "reopen_reason": null,
       "rollback": "Immutable baseline and new-only versioned artifacts",
       "history": [
@@ -780,9 +801,78 @@
           "from": "PENDING",
           "to": "READY",
           "reason": "G3 contents accepted; independent real decision tests next"
+        },
+        {
+          "from": "READY",
+          "to": "IN_PROGRESS",
+          "reason": "Build isolated neutral actual-MCP baseline and independent skill decision cases"
+        },
+        {
+          "from": "IN_PROGRESS",
+          "to": "REOPENED",
+          "reason": "Post-forward LOW wording correction: exact top-level DOP-B approval hash fields, no API/runtime change",
+          "prior_evidence": []
+        },
+        {
+          "from": "REOPENED",
+          "to": "PASS",
+          "reason": "Both fresh9case actors independently accepted; actualMCP/effects and postclarification distinction verified"
         }
       ],
-      "accepted_subjects": []
+      "accepted_subjects": [
+        {
+          "path": "tools/check_behavioral_evidence.py",
+          "sha256": "bc6446d5565bf0ba3cc8af5a25a451ae8702004f37b62b4361a805a8391183f8"
+        },
+        {
+          "path": "tools/prepare_behavioral_cases.py",
+          "sha256": "f0b7451a1b7be33918482c3ede488852540872fb03df94de4319cb18e4016c3f"
+        },
+        {
+          "path": "tests/test_behavioral_evidence.py",
+          "sha256": "c18c2406f193b22e9f14a63beec502b2b2a0c938ed233581b415b165a044e26c"
+        },
+        {
+          "path": "tests/test_behavioral_preparation.py",
+          "sha256": "2da8271404d1619ad42d80c6b31bf539a8d71fe68be2465b07b13c2154280851"
+        },
+        {
+          "path": "tests/behavioral/tasks.json",
+          "sha256": "b2c5f6ce256390fae455160ca9db9bde36d3335c092933ee7a126fcfe9d1ff64"
+        },
+        {
+          "path": "docs/SKILL_EVALUATION.md",
+          "sha256": "80144ac5845b3480857c7cfdc2650ef584a9c06e9a54b0f1574d04f5f2d9d503"
+        },
+        {
+          "path": "reports/hmi_skill/G4_BEHAVIOR.json",
+          "sha256": "91c2831afe171375aff5d181c0bbfe60cdd23d1848be2192ca651a4f3dfa99d2"
+        },
+        {
+          "path": "skills/delta-hmi/agents/openai.yaml",
+          "sha256": "830c449d7f96f7c3d1be9c0e7ee583e8d632bfac64d526493d7bf49c5c863cf0"
+        },
+        {
+          "path": "skills/delta-hmi/compatibility.json",
+          "sha256": "fbdbbd6cc54ff03dbdf0ee1c79edd5d1eb4ac10ae7918848da9d55515dbfea1b"
+        },
+        {
+          "path": "skills/delta-hmi/LICENSE",
+          "sha256": "8d49f6d79d64fc05133efbed47a21af6b4ce74e8460077436bea22e5fc90d810"
+        },
+        {
+          "path": "skills/delta-hmi/references/dop-100.md",
+          "sha256": "d47461f6d3ee222330249ecddb752fe0362658c79ba8a72fda4523f2e6b61154"
+        },
+        {
+          "path": "skills/delta-hmi/references/dop-b.md",
+          "sha256": "73ed05ca9f8d844a3b754de94b9c13c58683d46f7b60030fc2a9eb1f3a1d8f4c"
+        },
+        {
+          "path": "skills/delta-hmi/SKILL.md",
+          "sha256": "d7441f02b8e2743957fd7a3c8cbaeb323f035346164921a174b4edb0af669357"
+        }
+      ]
     },
     {
       "id": "G5",
@@ -833,7 +923,7 @@
         "No customer content in any distribution member",
         "Release locks and all artifacts bind the accepted source"
       ],
-      "state": "PENDING",
+      "state": "READY",
       "evidence": [],
       "open_findings": [],
       "next_step": "G5.1",
@@ -844,6 +934,11 @@
           "from": null,
           "to": "PENDING",
           "reason": "Approved implementation plan initialized"
+        },
+        {
+          "from": "PENDING",
+          "to": "READY",
+          "reason": "G4 accepted; portable distribution gate opened"
         }
       ],
       "accepted_subjects": []
