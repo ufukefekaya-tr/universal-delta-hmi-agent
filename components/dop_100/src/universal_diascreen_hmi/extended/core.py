@@ -7,7 +7,7 @@ from universal_diascreen_hmi.errors import AgentError,digest
 from universal_diascreen_hmi.operations import qualified_xml
 from universal_diascreen_hmi.symbols import validate_reference
 from .common import *
-from .file_ownership import immutable_read,worker_lease
+from .file_ownership import immutable_read,worker_lease,write_owned
 from .catalog import TYPES,validate_catalog
 from .register_contract import validate_register_contract
 from .journal import Journal
@@ -126,6 +126,7 @@ class Service(Session):
         self._loaded(); hash_value(candidate_sha256)
         require(self.allow_write and self.applied, 'WRITE_DISABLED', 'An applied exact plan and --allow-write required')
         require(candidate_sha256 == sha(self.current), 'CANDIDATE_HASH', 'Wrong save candidate')
+        require(len(self.current)<=64*1024*1024,'OUTPUT_LIMIT','Candidate exceeds bounded saved-file reread profile')
         output = self._path(path, output=True)
         require(self.source_path.is_relative_to(self.workspace), 'RECOVERY_SOURCE_SCOPE',
                 'Durable save requires an immutable source copy within workspace; external originals remain read-only inputs')
@@ -140,11 +141,12 @@ class Service(Session):
             self.journal.transition(identity, 'RUNNING')
             creating = True
             try:
-                write_new(output,self.current)
+                write_owned(self.journal,identity,output,self.current)
                 creating = False
                 with immutable_read(output) as (saved,output_unchanged):
                     require(saved == self.current and Project(saved).file.payload == Project(self.current).file.payload,
                             'SAVED_REREAD','Saved native bytes/readback differ')
+                    require(self.journal.output_owned(identity,output),'OUTPUT_OWNERSHIP','Saved output no longer matches its held-descriptor claim')
                     self.project_creation.engine();source_unchanged();output_unchanged()
                     result = dict(path=relative,sha256=sha(saved),candidate_sha256=sha(saved),
                         saved_reread='PASS',source_unchanged=True,vendor_compile='NOT_RUN',native_qualified=False)

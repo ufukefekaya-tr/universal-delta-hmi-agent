@@ -1,0 +1,366 @@
+{
+  "schema": "delta.hmi.goal-evidence.v1",
+  "task": "HMI-SKILL-TRANSITION",
+  "goal_id": "G2",
+  "status": "PASS",
+  "definition_sha256": "08461ebedfd56859c21760df8f44c8854a9bb23eba8058ce71180d9e60581b30",
+  "subjects": [
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/__init__.py",
+      "sha256": "9c174a85806daebb4a7758ab3c5a04b8e4e699a287750362050d0c96dee8d5ea"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/cli.py",
+      "sha256": "4a3a4dbd7bafba3ceef3aadf9999bf5261c3647bb77e29627e1fab57e5b0bc02"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/contracts.py",
+      "sha256": "6c03cd57c9ddb419f19d926c3e87b2d7bf1bffe54dd8647e1ee332b98900bfc2"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/deletion_guard.py",
+      "sha256": "2b42ca4149fe3591988caab06df3e94e02997e0822b62af818e713927a79fa46"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/errors.py",
+      "sha256": "a66c5c1369f5786bb186bc02a7cda4f67ebbfe6d2ab6c52989e311d11ca7a8a3"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/__init__.py",
+      "sha256": "2d10750f1f0e23d3aa56b2def40eafff5313f7f2cc7481d6eeb15dbcff2c816d"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/catalog.py",
+      "sha256": "ec25fcaf0be23e9c5ab447be5e214e3aca41d67bf978eed52f3c9e7dd58302c3"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/common.py",
+      "sha256": "b9ce51bef1b4fd18abcb546110aa195886648387b6219b6e055fa95b0a7de78d"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/core.py",
+      "sha256": "03d3dbd47da35225d2bcc59e5a3170a5c0be7bd0a81f6445fb52c270049811b8"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/file_ownership.py",
+      "sha256": "2d939117377eb0b2774722770a1260f76b23a009611020f0cf6249e9f9b6cc29"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/hmi4_artifacts.py",
+      "sha256": "72d2e013b43b1eb5eab27e3bfa1b14e91ccdd7a138a5f07722567bab927db403"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/hmi4_bootstrap.py",
+      "sha256": "61119c725a36641a1f794ad84a0ccac74d6a176e5bd9083623de8a81823c31c5"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/hmi4_inspect.py",
+      "sha256": "9262b874cc77c9ba4bd3c5fbeb07458fe15bc96ba837f35cedeebc6d2e074d20"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/hmi4_registry.py",
+      "sha256": "933254f3afc36ce1b55be506f253c99ae9959e8d472f1bb535ee314f368a8444"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/hmi4_service.py",
+      "sha256": "68f3c4e4fd0da06f4df3a31be4a5b4875e1c736d2e7e889b38c645fc97b22e7f"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/hmi4_transaction.py",
+      "sha256": "6d6aa6faba69c4c291d7d5a1adfd841693b8133eb4b8a2083de4475188413c12"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/hmi4_visual.py",
+      "sha256": "86b96530bdd1dab77c895fd7d864a9715a15eb5e971d9dbd79b53146706c5003"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/journal.py",
+      "sha256": "1230ef74ac14fd101ae5b928f43e98b65631afd053b97dc9f4f4389cab19a3ca"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/native_index.py",
+      "sha256": "9323ca8d29945d2516b70589961c55e63280bf73761ec2ba49820f198d5a9afb"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/native_resource_intake.py",
+      "sha256": "1f6f497f91cf4506d3f328cb979c092d990c7fbec67315e72fa1823fbc4018a4"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/neutral_screens.py",
+      "sha256": "2b24666dfc52d0d2b342eb99d52d24ccf81e39adcdc828f8aaead42fb6fe2f39"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/register_contract.py",
+      "sha256": "e70e8be0382a81939391788196ecc48b0110c9d8128f4a9de951b80f4945a7dd"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/runner.py",
+      "sha256": "e7eff464fd19e12307e08d6f9263befe2ba0f0998e81d279c5b975732af7bdd4"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/source_intake.py",
+      "sha256": "7e49f2a4071885b7e889793c1e530ad41c5e3824f8b0509eee21d4933d75339b"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/state_lookup.py",
+      "sha256": "ce8a25556bd29b459151b8fd2d9a8dc03fc66b2ccb7677576f795656a6039342"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/template_catalog.py",
+      "sha256": "1ca21b4646fd9bbc9417442e7d6de5a67bc5fd0e171805037f2ea1e4382fb36d"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/template_lifecycle.py",
+      "sha256": "d32e075b16c4784401adaf83ebaba041c250f7e525507cb6011a5ceae52868c7"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/tool_support.py",
+      "sha256": "3748d73913b44917ed18f92a1608cdac72e46aabd919acef7db23e076cac2616"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/transport.py",
+      "sha256": "9c868e1627401a2a961a257aa83b22ea6e3c72d7b21a2914037b8698ca50b528"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/typed_visibility.py",
+      "sha256": "76ad5bb663719c59b4a4bc4164a962ab7d3b227dbfd43c314a1f679fe850368f"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/worker.py",
+      "sha256": "afb5bfd90c34d7ac239afe9693747cb6652ba0cdbd9dd1eec7463c7abe7ad122"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/macros.py",
+      "sha256": "9477445b60610e836ffb44b77e72e0d09c54b75e1e0192cfffd9d854bccd78a5"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/native.py",
+      "sha256": "85b3a22c48905d6bf21140b971e37294abac7af7291b800aaa3962dc35ad700d"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/operations.py",
+      "sha256": "70bf2c9a4d97e88557d9c3758403bfe3bd2b7ed9a404d62b4b28ccdc88f598eb"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/preview.py",
+      "sha256": "957d78309bed4c9f8c66885d8339680388bc0e4e15a825216e6a4e6f7c37d962"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/resources.py",
+      "sha256": "312aa3adc6a91b87703b748787a223510fbed29559a7f01d126d47a6ee0390b7"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/session.py",
+      "sha256": "0ebc337d3d19fe6f5b48d8aea3ece27e373bc600a392e5d714a5428a9cc8fff9"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/symbols.py",
+      "sha256": "1d5e26a918144801436ae287c4b4a03a43c5eda2c21c4227b615070a8d45574e"
+    },
+    {
+      "path": "components/dop_100/src/universal_diascreen_hmi/extended/RELEASE_MANIFEST.json",
+      "sha256": "a56f6411fd7e21681a0152696f457a14cb0a9175af64c567ca714756f0709d4f"
+    },
+    {
+      "path": "src/delta_hmi/__init__.py",
+      "sha256": "8c78fdd15aa2ca4932b3ae84a7c3f079a4f46553aef01c6c70c01ef36cf126c4"
+    },
+    {
+      "path": "src/delta_hmi/cli.py",
+      "sha256": "40d8e3a7e0054e635afebf62083602302596bebbe7c46a28cfb23a54a2b44520"
+    },
+    {
+      "path": "src/delta_hmi/config.py",
+      "sha256": "a690ba5da690604d97542b6e94f5e52facd5c13143a518e44b45e07094339e66"
+    },
+    {
+      "path": "src/delta_hmi/gateway.py",
+      "sha256": "058187bf8d0ccd63b9caa0414d6f9d88cadc6125ea7fcec2fb72635203e68370"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "06842d16bb50b1ed8e9f63d15b9bcab6492896e512e7066e7f3b1ad290cd3e27"
+    },
+    {
+      "path": "components/dop_100/pyproject.toml",
+      "sha256": "e92c655189a604646eefe4b9b8a6198a4e0e78af7845cca26206eca5229688c2"
+    },
+    {
+      "path": "components/dop_100/INTEGRATION.json",
+      "sha256": "99a4fde750bd8d62e31a7a7f4de02fcbb740403fc478eeb1ef64343275dbcece"
+    },
+    {
+      "path": "components/dop_100/tools/session_guard.py",
+      "sha256": "73fcc08ef499b5ff1f95278fad92a63081006d9052be4a48caa2ea3d51663ab8"
+    },
+    {
+      "path": "components/dop_100/tests/test_consolidation_risks.py",
+      "sha256": "392f51fe44830dc5b85453657c5925e81e93f739991f0a512efe28129ffcd94a"
+    },
+    {
+      "path": "components/dop_100/tests/test_template_lifecycle.py",
+      "sha256": "f95b172a061d3692af40df39f69e2d2c9a6c5d36386132f77f5bf038c8905652"
+    },
+    {
+      "path": "tests/test_diascreen_gateway.py",
+      "sha256": "590979b6ae0cf1afd727a11391bfa98d25646f7fd51e67c6298a3c8ff4dfb09c"
+    },
+    {
+      "path": "tests/test_vendored_guard.py",
+      "sha256": "e85bd7c75fb2eb713856bfc0a6cf63b8109e2e753c933afd1569b546c6bd3ff2"
+    },
+    {
+      "path": "docs/MCP_CONSOLIDATION.md",
+      "sha256": "ab116d9828a992c6d4a924878f015e594192cf1094428c7a4ab7100f92ea4260"
+    },
+    {
+      "path": "docs/SUPPORT.md",
+      "sha256": "f41c2716ab683a9bb1a0e5654111d02260c6da8fc9600d438e11a8b04d3a3373"
+    },
+    {
+      "path": "reports/TYPED_VISIBILITY.json",
+      "sha256": "d6954595127a199f7bccb1c03cf8c28168a204ad80cbb7c5b816817d5d75bc15"
+    },
+    {
+      "path": "reports/hmi_skill/G2_INDEPENDENT_REVIEW.json",
+      "sha256": "552aa876fb45f7b7f68b8669614d69a7acd53fac67c339851d2c29b3b642ce7f"
+    }
+  ],
+  "checks": {
+    "deletion_closure": "PASS",
+    "fill_semantics": "PASS",
+    "effect_ownership": "PASS",
+    "recovery_no_replay": "PASS",
+    "state_and_type_separation": "PASS",
+    "active_navigation": "PASS",
+    "support_truth": "PASS",
+    "full_suites": "PASS",
+    "independent_exact_source": "PASS",
+    "no_customer_payload": "PASS"
+  },
+  "tests": {
+    "root": 74,
+    "dop_b": 981,
+    "dop_100": 232,
+    "failures": 0,
+    "legacy_windows_symlink_privilege_skips": 1,
+    "new_critical_cases_skipped": 0
+  },
+  "independent_review": {
+    "path": "reports/hmi_skill/G2_INDEPENDENT_REVIEW.json",
+    "sha256": "552aa876fb45f7b7f68b8669614d69a7acd53fac67c339851d2c29b3b642ce7f"
+  },
+  "findings": [
+    {
+      "id": "D01",
+      "trigger": "Legacy deletion bypassed dependency checks",
+      "evidence": "test_shared_deletion_has_narrow_positive_and_opaque_negative",
+      "impact": "Unsafe mutation or false acceptance evidence",
+      "correction": "Shared closed inert graph audit",
+      "retest": "PASS",
+      "status": "CLOSED"
+    },
+    {
+      "id": "D02",
+      "trigger": "Page events and PartID0 were not closed",
+      "evidence": "test_deletion_rejects_event_unknown_scalar_and_group_reference_in_both_paths",
+      "impact": "Unsafe mutation or false acceptance evidence",
+      "correction": "Common sentinel rules; object0 is not a sentinel",
+      "retest": "PASS",
+      "status": "CLOSED"
+    },
+    {
+      "id": "F01",
+      "trigger": "Foreground shortcut could imply all fill owners",
+      "evidence": "test_foreground_shortcut_does_not_flatten_seven_fill_owners",
+      "impact": "Unsafe mutation or false acceptance evidence",
+      "correction": "FgColor-only shortcut, explicit seven fields and saved reread",
+      "retest": "PASS",
+      "status": "CLOSED"
+    },
+    {
+      "id": "R01",
+      "trigger": "Lost exclusive-create race could become success",
+      "evidence": "test_package_missing_partial_prepared_and_collision_are_not_success",
+      "impact": "Unsafe mutation or false acceptance evidence",
+      "correction": "Collision terminalFAILED, never replayed",
+      "retest": "PASS",
+      "status": "CLOSED"
+    },
+    {
+      "id": "R02",
+      "trigger": "RUNNING foreign same-byte file could appear owned",
+      "evidence": "test_running_and_claimed_partial_outputs_never_establish_complete_effect",
+      "impact": "Unsafe mutation or false acceptance evidence",
+      "correction": "Held descriptor + op/plan/path/size/hash claims",
+      "retest": "PASS",
+      "status": "CLOSED"
+    },
+    {
+      "id": "R03",
+      "trigger": "Historical success could mask recreated output",
+      "evidence": "test_terminal_success_is_historical_when_output_identity_changes",
+      "impact": "Unsafe mutation or false acceptance evidence",
+      "correction": "Fresh identity verification, immutable history",
+      "retest": "PASS",
+      "status": "CLOSED"
+    },
+    {
+      "id": "R04",
+      "trigger": "Artifact recovery could use stale template qualification",
+      "evidence": "test_neutral_descendant_artifact_recovery_rechecks_seed_and_review",
+      "impact": "Unsafe mutation or false acceptance evidence",
+      "correction": "write_scope, strict chain and exact loaded source/profile",
+      "retest": "PASS",
+      "status": "CLOSED"
+    },
+    {
+      "id": "N01",
+      "trigger": "Dormant aliases or old page names could grant navigation",
+      "evidence": "test_new_page_move_clone_and_wrong_navigation_name_refuse",
+      "impact": "Unsafe mutation or false acceptance evidence",
+      "correction": "Actual1/10 graph and planned/final name checks",
+      "retest": "PASS",
+      "status": "CLOSED"
+    },
+    {
+      "id": "P01",
+      "trigger": "Postwrite error claimed no effect",
+      "evidence": "test_unexpected_postwrite_error_never_claims_no_effect",
+      "impact": "Unsafe mutation or false acceptance evidence",
+      "correction": "Explicit unverified outcome diagnostic",
+      "retest": "PASS",
+      "status": "CLOSED"
+    },
+    {
+      "id": "S01",
+      "trigger": "Discovery could overstate absent adapters",
+      "evidence": "test_support_discovery_and_capabilities_share_status",
+      "impact": "Unsafe mutation or false acceptance evidence",
+      "correction": "Common support registry, seven explicit unsupported routes",
+      "retest": "PASS",
+      "status": "CLOSED"
+    },
+    {
+      "id": "G01",
+      "trigger": "Vendored guard read wrong committed controls",
+      "evidence": "test_vendored_guard.VendoredGuardTests.test_control_epoch_uses_component_git_prefix",
+      "impact": "Unsafe mutation or false acceptance evidence",
+      "correction": "Git prefix-aware control/staged paths",
+      "retest": "PASS",
+      "status": "CLOSED"
+    }
+  ],
+  "mcp": {
+    "umbrella_version": "0.4.0",
+    "diascreen_version": "0.5.0",
+    "dop_b_version": "0.2.1",
+    "diascreen_tools": 83,
+    "source_manifest_sha256": "a56f6411fd7e21681a0152696f457a14cb0a9175af64c567ca714756f0709d4f"
+  },
+  "qualification": {
+    "vendor_compile": "NOT_RUN",
+    "native_pixels": "NOT_ESTABLISHED",
+    "physical": "NOT_RUN"
+  }
+}

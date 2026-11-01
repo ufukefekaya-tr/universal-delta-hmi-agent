@@ -5,10 +5,11 @@ from pathlib import Path
 import json,zipfile
 from .hmi4_bootstrap import *
 from .hmi4_inspect import endpoint,audit_contract,contract_rows
+from .file_ownership import write_owned
 def init(service):
     with service.journal.connect() as db:db.execute('CREATE TABLE IF NOT EXISTS hmi4_artifact_plans (id TEXT PRIMARY KEY,kind TEXT NOT NULL,record BLOB NOT NULL,payload BLOB NOT NULL)')
 def store(service,kind,record,payload):
-    record={**record,'kind':kind,'engine_sha256':identity(),'payload_sha256':sha(payload)};h=sha(canonical(record))
+    record={**record,'source_path':service.source_identity(),'kind':kind,'engine_sha256':identity(),'payload_sha256':sha(payload)};h=sha(canonical(record))
     with service.journal.connect() as db:
         values=(h,kind,canonical(record),payload);old=db.execute('SELECT * FROM hmi4_artifact_plans WHERE id=?',(h,)).fetchone()
         require(old is None or tuple(old)==values,'PLAN_DRIFT','Artifact plan collision')
@@ -49,6 +50,7 @@ def plan_package(service,candidate_sha256,output_path,dpa_name,expected_endpoint
     require(output.suffix.lower()=='.zip','PACKAGE_PATH','New .zip output required')
     require(isinstance(expected_endpoint,dict) and set(expected_endpoint)=={'ip','port'},'ENDPOINT','Explicit endpoint gate required')
     raw=zip_bytes(service.current,service.current_profile,dpa_name,'MCP_CURRENT_CANDIDATE');inspect_zip(raw,candidate_sha256,expected_endpoint)
+    require(len(raw)<=64*1024*1024,'OUTPUT_LIMIT','Package exceeds bounded saved-file reread profile')
     record=dict(source_sha256=sha(service.source),candidate_sha256=candidate_sha256,profile_sha256=service.current_profile_sha256,path=output.relative_to(service.workspace).as_posix(),endpoint=expected_endpoint)
     return store(service,'offline_project_package',record,raw)
 def plan_rebind(service,candidate_sha256,previous_contract,previous_sha256,contract,contract_sha256):
@@ -64,35 +66,52 @@ def plan_rebind(service,candidate_sha256,previous_contract,previous_sha256,contr
     return store(service,'contract_rebind',dict(source_sha256=sha(service.source),candidate_sha256=candidate_sha256,profile_sha256=service.current_profile_sha256),canonical(receipt)+b'\n')
 def apply(service,plan_sha256,approval_sha256):
     service.write_scope();require(service.allow_write,'WRITE_DISABLED','--allow-write required');require(plan_sha256==approval_sha256,'APPROVAL','Exact immutable artifact plan approval required')
-    kind,record,data=load(service,plan_sha256);service.checked(record['candidate_sha256']);require(record['source_sha256']==sha(service.source) and record['profile_sha256']==service.current_profile_sha256,'PLAN_SOURCE','Artifact source/profile changed')
+    kind,record,data=load(service,plan_sha256);service.checked(record['candidate_sha256']);require(record['source_sha256']==sha(service.source) and record['profile_sha256']==service.current_profile_sha256 and record['source_path']==service.source_identity(),'PLAN_SOURCE','Artifact source/profile changed')
     with worker_lease(service.workspace):
         previous=service.journal.find('hmi4artifact:'+plan_sha256)
         require(previous is None,'REPLAY_OR_UNKNOWN','Artifact intent already exists; inspect_artifact_plan and reconcile_operation instead of replaying')
         output=None
         if kind=='offline_project_package':output=service._path(record['path'],output=True);inspect_zip(data,record['candidate_sha256'],record['endpoint'])
         operation=service.journal.reserve('hmi4artifact:'+plan_sha256,kind,dict(plan_sha256=plan_sha256,**record));service.journal.transition(operation,'RUNNING')
+        creating=output is not None
         try:
             with immutable_read(service.source_path) as (source,unchanged):require(sha(source)==record['source_sha256'],'SOURCE_DRIFT','Artifact source file changed');unchanged()
             if output is not None:
-                write_new(output,data)
-                with immutable_read(output) as (saved,unchanged):require(saved==data,'SAVED_REREAD','ZIP write differs');inspect_zip(saved,record['candidate_sha256'],record['endpoint']);unchanged()
+                write_owned(service.journal,operation,output,data);creating=False
+                with immutable_read(output) as (saved,unchanged):require(saved==data and service.journal.output_owned(operation,output),'SAVED_REREAD','ZIP bytes/descriptor differ');inspect_zip(saved,record['candidate_sha256'],record['endpoint']);unchanged()
                 result=dict(path=str(output),artifact_sha256=sha(data),candidate_sha256=record['candidate_sha256'],vendor_transfer_package=False)
             else:result=json.loads(data)
             service.journal.transition(operation,'SUCCEEDED',result)
+        except FileExistsError:
+            service.journal.transition(operation,'FAILED' if creating else 'UNKNOWN_OUTCOME',dict(reason='OUTPUT_EXISTS_NOT_OWNED' if creating else 'Artifact outcome requires reconciliation'));raise
         except BaseException:
             service.journal.transition(operation,'UNKNOWN_OUTCOME',dict(reason='Artifact outcome requires reconciliation'));raise
     return dict(operation_id=operation,status='SUCCEEDED',kind=kind,result=result)
 def reconcile(service,operation_id):
+    service.write_scope()
     op=service.journal.inspect(operation_id)
-    if op['state'] in ('SUCCEEDED','FAILED','TIMED_OUT'):return service.inspect_operation(operation_id)
     intent=op['intent'];kind,record,data=load(service,intent['plan_sha256']);require(kind==op['kind'],'OPERATION','Wrong artifact operation kind')
     with worker_lease(service.workspace):
+        service._loaded();require(record['source_sha256']==sha(service.source) and record['source_path']==service.source_identity()
+                and record['candidate_sha256']==sha(service.current) and record['profile_sha256']==service.current_profile_sha256,
+                'PLAN_SOURCE','Reconciliation requires the exact source/candidate/profile; never reconstruct by replay')
+        with immutable_read(service.source_path) as (source,unchanged):require(sha(source)==record['source_sha256'],'SOURCE_DRIFT','Reconciliation source changed');unchanged()
+        if op['state'] in ('FAILED','TIMED_OUT') or kind=='contract_rebind' and op['state']=='SUCCEEDED':return service.inspect_operation(operation_id)
         with service.journal.connect() as db:started=db.execute('SELECT 1 FROM events WHERE operation_id=? AND state=?',(operation_id,'RUNNING')).fetchone()
-        if not started:return service.inspect_operation(operation_id)
+        if not started:
+            if op['state']!='UNKNOWN_OUTCOME':service.journal.transition(operation_id,'UNKNOWN_OUTCOME',dict(reason='PREPARED_INTENT_IS_NOT_EFFECT_PROOF'))
+            return service.inspect_operation(operation_id)
         if kind=='contract_rebind':service.journal.transition(operation_id,'SUCCEEDED',json.loads(data))
         else:
-            path=service._path(record['path'])
+            path=no_links(service.workspace/record['path'])
+            require(path.resolve().is_relative_to(service.workspace),'PATH_SCOPE','Artifact output escapes workspace')
             if path.is_file():
                 with immutable_read(path) as (saved,unchanged):
-                    if saved==data:inspect_zip(saved,record['candidate_sha256'],record['endpoint']);unchanged();service.journal.transition(operation_id,'SUCCEEDED',dict(artifact_sha256=sha(data),candidate_sha256=record['candidate_sha256'],reconciled=True))
+                    if saved==data and service.journal.output_owned(operation_id,path):
+                        inspect_zip(saved,record['candidate_sha256'],record['endpoint']);unchanged()
+                        if op['state']!='SUCCEEDED':service.journal.transition(operation_id,'SUCCEEDED',dict(artifact_sha256=sha(data),candidate_sha256=record['candidate_sha256'],reconciled=True))
+                    else:require(op['state']!='SUCCEEDED','OUTPUT_OWNERSHIP','Historical package success no longer verifies the current file')
+            else:require(op['state']!='SUCCEEDED','OUTPUT_OWNERSHIP','Historical package output is now missing')
+            if service.journal.inspect(operation_id)['state'] not in ('SUCCEEDED','UNKNOWN_OUTCOME'):
+                service.journal.transition(operation_id,'UNKNOWN_OUTCOME',dict(reason='MISSING_OR_DIFFERENT_ARTIFACT'))
     return service.inspect_operation(operation_id)

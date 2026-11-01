@@ -282,7 +282,7 @@
     "changes_native_bytes": false,
     "changes_render_order": false
   },
-  "version": "0.4.5",
+  "version": "0.5.0",
   "optional_dependencies": {
     "visual": "Pillow==12.2.0"
   },
@@ -328,5 +328,6 @@
     "mode": "QUALIFIED_TEMPLATE_BYTE_COPY",
     "arbitrary_model_conversion": false,
     "neutral_page_limit": 128
-  }
+  },
+  "deletion_boundary": "Shared closed inert indexed graph only; macros/events/opaque resources/unknown fields refuse"
 }

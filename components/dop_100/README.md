@@ -1,4 +1,4 @@
-Current source extension: [native service update](docs/NATIVE_SERVICE_UPDATE.md). See the current 70-tool integration inventory; historical release evidence below remains scoped to its original bytes.
+Current source: DIAScreen 0.5.0, with 83 routes including explicit unsupported refusals. See [MCP consolidation](../../docs/MCP_CONSOLIDATION.md) and the source integration inventory. Historical release evidence below remains scoped to its original bytes. Native seeds and reference catalogs remain host-private and are not bundled.
 
 # Universal DIAScreen HMI Agent
 

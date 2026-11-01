@@ -67,7 +67,9 @@ A post-write interruption remains `UNKNOWN_OUTCOME`. Repeat `create_project`
 with the same pins/path to discover the existing proposal in a fresh isolated
 session; this does not copy again. Inspect the plan, then reconcile its operation.
 Recovery inspects only the existing exact effect and never retries native writes.
-A proven copy can attach as source to an empty session through a read-only open.
+A completed held-descriptor claim, exact length/SHA and stable file identity are
+required; RUNNING alone is insufficient. A proven copy can attach as source to
+an empty session through a read-only open.
 Another loaded project's state is left untouched. A PREPARED intent alone or a
 pre-existing same-byte file does not establish a successful owned copy.
 

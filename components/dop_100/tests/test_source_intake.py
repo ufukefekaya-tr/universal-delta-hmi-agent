@@ -54,8 +54,8 @@ class SourceIntakeTests(unittest.TestCase):
     def test_readonly_delete_preserves_gauge_and_refuses_writer(self):
         raw,profile=gauge_source();q=Project(raw)
         op=dict(op='delete_element',page_id=1,element_id=13,expected_element_sha256=element_hash(q,q.element(1,13)))
-        result=tx.build(raw,profile,dict(version=1,operations=[op]));f=Project(result['candidate'])
-        self.assertEqual(element_hash(q,q.element(1,10)),element_hash(f,f.element(1,10)))
+        # The old PASS ignored opaque resource/global dependency closure and is withdrawn.
+        self.refused('DELETE_DEPENDENCY',lambda:tx.build(raw,profile,dict(version=1,operations=[op])))
         op.update(element_id=12,expected_element_sha256=element_hash(q,q.element(1,12)))
         self.refused('DELETE_SCOPE',lambda:tx.build(raw,profile,dict(version=1,operations=[op])))
     def test_source_login_copy_retains_level_actions_and_empty_macros(self):

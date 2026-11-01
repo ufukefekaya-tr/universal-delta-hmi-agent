@@ -118,14 +118,17 @@
       "implementation": [
         "operations.operation_patches:clone_screen",
         "operations.validate_references",
-        "extended.hmi4_transaction.build"
+        "extended.hmi4_transaction.build",
+        "deletion_guard.check"
       ],
       "test_evidence": [
         "test_operations.OperationTests.test_screen_frame_clone_delete_and_navigation_guards",
-        "test_extended.ExtendedTests.test_source_move_and_clone"
+        "test_extended.ExtendedTests.test_source_move_and_clone",
+        "test_consolidation_risks.RiskTests.test_shared_deletion_has_narrow_positive_and_opaque_negative",
+        "test_consolidation_risks.RiskTests.test_new_page_move_clone_and_wrong_navigation_name_refuse"
       ],
       "support_level": "SOURCE_BOUND_UNQUALIFIED",
-      "limitations": "Source-qualified page clone and ID/name/Level navigation; same-plan new-page element targets refused.",
+      "limitations": "Source-qualified page clone; actual1/10 navigation with planned/final target-name equality. Deletion only with a closed inert indexed empty-resource dependency graph; opaque/macro/event/unknown variants refuse. Same-plan new-page object targets refused.",
       "evidence_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN"
     },
     {

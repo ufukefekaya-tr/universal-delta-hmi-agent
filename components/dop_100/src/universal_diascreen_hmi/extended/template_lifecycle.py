@@ -2,7 +2,7 @@
 """Durable, new-only qualified template copies. Never a vendor project constructor."""
 import json
 from .common import *
-from .file_ownership import immutable_read, worker_lease
+from .file_ownership import immutable_read, worker_lease,write_owned
 from .hmi4_bootstrap import Project, profile_check
 from . import template_catalog as catalog
 
@@ -104,13 +104,14 @@ def apply(service, plan_id, approval_sha256):
                     and canonical(service.current_profile)==canonical(source_profile),
                     'TEMPLATE_TRANSITION','Transition source session changed after proposal')
         output = no_links(service._path(record['path'], output=True))
-        operation = service.journal.reserve('template:'+record['path'], 'qualified_template_copy', dict(plan_sha256=plan_id))
+        operation = service.journal.reserve('template:'+record['path'], 'qualified_template_copy', dict(plan_sha256=plan_id,path=record['path']))
         service.journal.transition(operation, 'RUNNING')
         creating = True
         try:
-            write_new(output, raw); creating = False
+            write_owned(service.journal,operation,output,raw); creating = False
             with immutable_read(output) as (saved, unchanged):
                 require(saved == raw, 'SAVED_REREAD', 'Template copy bytes differ'); profile_check(Project(saved), profile)
+                require(service.journal.output_owned(operation,output),'OUTPUT_OWNERSHIP','Template output descriptor differs')
                 load(service, plan_id); unchanged()
                 result = dict(path=record['path'], candidate_sha256=sha(saved), saved_reread='PASS',
                               byte_identical_seed=True, vendor_qualified=False, vendor_compile='NOT_RUN')
@@ -129,13 +130,16 @@ def reconcile(service, operation_id):
         operation = service.journal.inspect(operation_id)
         record, raw, profile, _ = load(service, operation['intent']['plan_sha256'])
         if operation['state'] in ('SUCCEEDED', 'FAILED', 'TIMED_OUT'):
+            if operation['state']=='SUCCEEDED':
+                require(service.journal.output_owned(operation_id,no_links(service.workspace/record['path'])),
+                        'OUTPUT_OWNERSHIP','Historical copy success is not current file identity acceptance')
             return attach_reconciled_source(service,operation_id,record,raw,profile)
         with service.journal.connect() as db:
             started = db.execute('SELECT 1 FROM events WHERE operation_id=? AND state=?', (operation_id, 'RUNNING')).fetchone()
         output = no_links(service.workspace / record['path'])
         if started and output.is_file():
             with immutable_read(output) as (saved, unchanged):
-                if saved == raw:
+                if saved == raw and service.journal.output_owned(operation_id,output):
                     profile_check(Project(saved), profile); load(service, operation['intent']['plan_sha256']); unchanged()
                     service.journal.transition(operation_id, 'SUCCEEDED', dict(reconciled=True, path=record['path'], candidate_sha256=sha(saved),
                         byte_identical_seed=True, saved_reread='PASS', vendor_qualified=False, vendor_compile='NOT_RUN'))

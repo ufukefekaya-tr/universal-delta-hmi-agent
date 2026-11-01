@@ -328,47 +328,82 @@
     {
       "id": "R01",
       "scenario": "Macro/event/opaque dependency deletion refusal across legacy and native paths",
-      "state": "PLANNED"
+      "state": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_shared_deletion_has_narrow_positive_and_opaque_negative",
+        "test_deletion_rejects_event_unknown_scalar_and_group_reference_in_both_paths",
+        "test_global_and_page_macros_prevent_page_and_element_deletion"
+      ]
     },
     {
       "id": "R02",
       "scenario": "Foreground shortcut versus seven explicit fill color fields",
-      "state": "PLANNED"
+      "state": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_foreground_shortcut_does_not_flatten_seven_fill_owners"
+      ]
     },
     {
       "id": "R03",
       "scenario": "Artifact and contract-rebind recovery without replay",
-      "state": "PLANNED"
+      "state": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_package_postwrite_recovery_never_replays",
+        "test_native_save_postwrite_loss_recovery_does_not_save_again",
+        "test_contract_rebind_recovery_and_project_namespace",
+        "test_running_and_claimed_partial_outputs_never_establish_complete_effect",
+        "test_terminal_success_is_historical_when_output_identity_changes"
+      ]
     },
     {
       "id": "R04",
       "scenario": "New-page move/clone refusal and coupled navigation names",
-      "state": "PLANNED"
+      "state": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_new_page_move_clone_and_wrong_navigation_name_refuse"
+      ]
     },
     {
       "id": "R05",
       "scenario": "Wide integer writer cannot represent a sparse or small enum",
-      "state": "PLANNED"
+      "state": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_wide_numeric_enum_writer_and_setvalue_shortcuts_refuse"
+      ]
     },
     {
       "id": "R06",
       "scenario": "Full XML member-layout, array and access validation after schema drift",
-      "state": "PLANNED"
+      "state": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_xml_update_rechecks_full_member_access_offset_and_array_shape"
+      ]
     },
     {
       "id": "R07",
       "scenario": "Typed visibility independent of numeric storage",
-      "state": "PLANNED"
+      "state": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_typed_visibility.VisibilityTests"
+      ]
     },
     {
       "id": "R08",
       "scenario": "Explicit SetValue and visible macro-source versus operand validation",
-      "state": "PLANNED"
+      "state": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_wide_numeric_enum_writer_and_setvalue_shortcuts_refuse",
+        "test_operations.OperationTests.test_macro_slot_type_access_and_visible_source"
+      ]
     },
     {
       "id": "R09",
       "scenario": "Tool support descriptions agree with implemented/refusal routes",
-      "state": "PLANNED"
+      "state": "PASS_OFFLINE",
+      "test_evidence": [
+        "test_support_discovery_and_capabilities_share_status",
+        "test_unexpected_postwrite_error_never_claims_no_effect"
+      ]
     }
   ],
   "excluded": [
@@ -426,6 +461,8 @@
     }
   },
   "g0_evidence": "reports/hmi_skill/G0_ACCEPTANCE.json",
-  "g1_review": "PASS_INDEPENDENT_EXACT_SOURCE",
-  "g1_evidence": "reports/hmi_skill/G1_ACCEPTANCE.json"
+  "g1_review": "PASS_REVALIDATED_AT_G2",
+  "g1_evidence": "reports/hmi_skill/G1_REVALIDATED_G2.json",
+  "g2_review": "PASS_INDEPENDENT_EXACT_SOURCE",
+  "g2_evidence": "reports/hmi_skill/G2_ACCEPTANCE.json"
 }

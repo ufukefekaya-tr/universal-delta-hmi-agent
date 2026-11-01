@@ -2,7 +2,7 @@
 from .. import cli
 from ..errors import AgentError
 from .hmi4_bootstrap import Error
-def install():
+def definitions():
     S,H,I,O=cli.STRING,cli.HASH,cli.INTEGER,cli.OBJECT;B={'type':'boolean'}
     def schema(fields,required):return cli.object_schema(fields,required)
     extra={
@@ -53,7 +53,9 @@ def install():
       'configure_native_service':(dict(family=S,candidate_sha256=H),('family','candidate_sha256')),
       'create_alarm_catalog':(dict(candidate_sha256=H),('candidate_sha256',)),
     }
-    cli.COMMON.update({name:schema(fields,required) for name,(fields,required) in extra.items()})
+    return {name:schema(fields,required) for name,(fields,required) in extra.items()}
+def install():
+    cli.COMMON.update(definitions())
     original=cli.call_tool
     def call(session,name,arguments):
         try:return original(session,name,arguments)

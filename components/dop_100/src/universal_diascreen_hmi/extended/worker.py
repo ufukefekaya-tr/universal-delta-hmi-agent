@@ -13,7 +13,7 @@ class VendorWorker:
 
     def capabilities(self):
         return {name: {'implemented': name in IMPLEMENTED_ROUTES, 'headless': False, 'native_qualified': False}
-                for name in ('create_project', 'configure_target', 'vendor_open_save_reopen', 'vendor_compile',
+                for name in ('vendor_open_save_reopen', 'vendor_compile',
                              'offline_simulator', 'build_transfer_package', 'inspect_transfer_package')}
 
     def execute(self, operation, source_sha256, candidate_sha256):

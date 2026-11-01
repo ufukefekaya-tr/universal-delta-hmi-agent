@@ -43,6 +43,7 @@ def navigation(q):
     edges=[]
     for p in q.pages:
         for e in p.elements:
+            if family(q,e)!=(1,10):continue
             s=e.section;dest=q.index.number(s,'GoToScreenID',0)
             if dest:
                 edges.append(dict(page_id=p.page_id,element_id=q.index.number(s,'nPartsID'),target=dest,name=field(q,s,'GoToScreenName'),level=q.index.number(s,'Level',0)))

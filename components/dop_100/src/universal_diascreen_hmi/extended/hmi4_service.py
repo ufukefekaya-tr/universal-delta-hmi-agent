@@ -73,6 +73,12 @@ class Service(CoreService):
         r['native_transactions']['preserved_only_families']=[[3,1]]
         r['source_login_clone']=dict(family=[12,3],credential_writer=False,retained_source_only=True)
         r['qualification_state']='SOURCE_BOUND_FILE_TESTED_VENDOR_UNQUALIFIED'
+        from .tool_support import registry
+        r['tool_support']=registry()
+        r['qualified_templates']=dict(environment='DIA_HMI_TEMPLATE_ROOT',default='EMPTY_UNAVAILABLE',seed_bundled=False,
+            creation='EXACT_TEMPLATE_BYTE_COPY',neutral_page_limit=128,arbitrary_model_conversion=False)
+        r['deletion']=dict(level='CLOSED_INERT_INDEXED_EMPTY_RESOURCE_GRAPH_ONLY',unknown_dependency='REFUSED',
+            macros_events_opaque_resources='NO_CLOSURE_NO_DELETE',legacy_and_native_same_guard=True)
         return r
     def list_deliveries(self):return reference.list_deliveries()
     def inspect_template(self,template_id):
@@ -233,7 +239,12 @@ class Service(CoreService):
         require(a.file.payload[:a.pages[0].section.start]==b.file.payload[:b.pages[0].section.start],'APPLICATION_PRESERVE','Generic editing cannot alter Application/auth/global macros')
         return super().apply_plan(plan_sha256,approval_sha256)
     def restore_candidate(self,plan_sha256,approval_sha256):
-        self.write_scope();r=super().restore_candidate(plan_sha256,approval_sha256)
+        self.write_scope();seen=set();key=plan_sha256
+        while key is not None:
+            require(key not in seen and len(seen)<1000,'PLAN_CHAIN','Cyclic or oversized recovery chain');seen.add(key)
+            plan,key=self.journal.load_plan(key);self.strict(plan)
+            if 'neutral_template_pins'in plan['profile']:template_catalog.require_pins(plan['profile']['neutral_template_pins'])
+        r=super().restore_candidate(plan_sha256,approval_sha256)
         for p in self.plans.values():self.strict(p)
         return r
     def save_as(self,path,candidate_sha256):
@@ -260,6 +271,8 @@ class Service(CoreService):
     def plan_contract_rebind(self,candidate_sha256,previous_contract,previous_sha256,contract,contract_sha256):return artifacts.plan_rebind(self,candidate_sha256,previous_contract,previous_sha256,contract,contract_sha256)
     def apply_contract_rebind(self,plan_sha256,approval_sha256):return artifacts.apply(self,plan_sha256,approval_sha256)
     def reconcile_operation(self,operation_id):
+        self.write_scope()
+        for key in self.applied:self.strict(self.plans[key])
         if self.journal.inspect(operation_id)['kind']=='qualified_template_copy':return template_lifecycle.reconcile(self,operation_id)
         operation=self.journal.inspect(operation_id)
         if operation['kind']=='save_as':

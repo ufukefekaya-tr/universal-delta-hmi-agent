@@ -170,6 +170,8 @@ def build(raw,profile,spec,lookup_sources=None):
                         incoming = incoming or int(t.value)==i
             require(q.index.number(e.section,'rPartID',-1)==-1 and not incoming,
                 'DELETE_DEPENDENCY','Grouped/referenced source owners cannot be removed')
+            from universal_diascreen_hmi.deletion_guard import check as deletion_check
+            deletion_check(q,p,i)
             removed.add((p,i));proof.append(dict(op=kind,page_id=p,element_id=i,source_sha256=element_hash(q,e),deleted=True));continue
         if login and kind in ('clone_element','replace_element'):
             require(op.get('retain_bindings') is True and (op.get('retain_macros') is True or macro_free(q,e)),'LOGIN_RETENTION','System-login source actions/security must be retained exactly')
@@ -196,13 +198,15 @@ def build(raw,profile,spec,lookup_sources=None):
                 removed.add((p,i))
             values['nPartsID']=newid
         if kind=='navigation':
+            require(family(q,e)==(1,10),'NAVIGATION_FAMILY','Only an actual source navigation control may change page navigation')
             target=ident(op.get('target_page_id'));require(target in new_page_ids,'NAVIGATION','Missing target page')
             require(e.section.one('GoToScreenID',optional=True) is not None,'NAVIGATION','Source is not a native navigation control')
             name=op.get('target_name');require(isinstance(name,str) and re.fullmatch('[A-Za-z0-9_ .-]{1,120}',name),'NAVIGATION','Explicit ASCII native target name required')
-            known={field(q,z.section,'GoToScreenName') for pg in q.pages for z in pg.elements if q.index.number(z.section,'GoToScreenID',0)==target}
-            if target in source_page_ids:known.add(q.index.text(q.page(target).section,'wTextLen','').rstrip('\0'))
-            known.update(x['name'] for x in operations if x['op']=='clone_page' and x['new_page_id']==target and 'name' in x)
-            require(name in known,'NAVIGATION_NAME','Target name must match its source-known native alias or explicit new page name')
+            known={q.index.text(q.page(target).section,'wTextLen','').rstrip('\0')} if target in source_page_ids else set()
+            planned_rename=next((x['name'] for x in operations if x['op']=='edit_page' and x['page_id']==target and 'name'in x),None)
+            if planned_rename is not None:known={planned_rename}
+            known.update(x.get('name',q.index.text(q.page(x['page_id']).section,'wTextLen','').rstrip('\0')) for x in operations if x['op']=='clone_page' and x['new_page_id']==target)
+            require(name in known,'NAVIGATION_NAME','Target name must match the actual source or newly planned page name; dormant aliases grant no authority')
             values.update(GoToScreenID=target,GoToScreenName=name)
         if kind=='numeric_display':
             require(family(q,e) in ((5,1),(6,1)) and native_type(q,e) in ('INT','DINT','REAL'),'NUMERIC_TYPE','Observed INT/DINT/REAL numeric family required')
@@ -270,6 +274,12 @@ def build(raw,profile,spec,lookup_sources=None):
     require(len(q.file.payload)+sum(len(p.new)-len(p.old) for p in patches)<=128*1024*1024,'PAYLOAD_LIMIT','Native payload exceeds128MiB')
     payload,ledger=apply_spans(q.file.payload,patches);require(restore_spans(payload,ledger)==q.file.payload,'INVERSE','Exact source payload inverse required')
     raw_after=q.file.encode(payload);final=Project(raw_after);validate_references(final)
+    for page in final.pages:
+        for element in page.elements:
+            if family(final,element)==(1,10):
+                target=final.index.number(element.section,'GoToScreenID',0)
+                require(field(final,element.section,'GoToScreenName')==final.index.text(final.page(target).section,'wTextLen','').rstrip('\0'),
+                        'NAVIGATION_NAME','Final active navigation ID/name must match the actual target page')
     for item in proof:
         if item.get('deleted'):require(all(final.index.number(z.section,'nPartsID')!=item['element_id'] for z in final.page(item['page_id']).elements),'TARGET_READBACK','Deleted source owner still exists')
         if 'new_block_sha256' in item:

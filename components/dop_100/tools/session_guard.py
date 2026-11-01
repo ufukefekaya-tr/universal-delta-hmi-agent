@@ -21,9 +21,10 @@ def git(*args):
 
 def epoch():
     stream = bytearray()
+    prefix=git('rev-parse','--show-prefix').decode().strip()
     for name in CONTROL:
         raw = (ROOT / name).read_bytes()
-        if git('show', 'HEAD:' + name) != raw:
+        if git('show', 'HEAD:' + prefix + name) != raw:
             raise ValueError('Uncommitted control plane: ' + name)
         stream.extend(name.encode() + b'\0' + raw + b'\0')
     return digest(stream)
@@ -61,7 +62,8 @@ def check(action='resume', paths=()):
             raise ValueError('Path outside task scope: ' + rel)
     if action == 'commit':
         staged = git('diff', '--cached', '--name-only', '-z').split(b'\0')
-        names = [n.decode() for n in staged if n]
+        prefix=git('rev-parse','--show-prefix').decode().strip()
+        names = [n.decode()[len(prefix):] for n in staged if n and n.decode().startswith(prefix)]
         if not names:
             raise ValueError('Empty staged mutation')
         check('edit', names)

@@ -43,9 +43,10 @@ EDIT_ALIASES = {'set_property': 'set_property', 'set_text': 'set_text', 'set_sta
 
 
 def tools_list():
+    from .extended.tool_support import description
     result = []
     for name, schema in COMMON.items():
-        result.append({'name': name, 'description': 'File-only ' + name + '. Source/profile/plan pins and offline support boundaries apply.', 'inputSchema': schema})
+        result.append({'name': name, 'description': description(name), 'inputSchema': schema})
     for name in ALIASES:
         props, required = {}, []
         if name in ('layout', 'element', 'find', 'screenshot_text'):
@@ -135,7 +136,7 @@ def serve(session, incoming=None, outgoing=None):
                 initialized = True
                 result = {'protocolVersion': requested if requested in PROTOCOLS else PROTOCOLS[0],
                           'capabilities': {'tools': {'listChanged': False}},
-                          'serverInfo': {'name': 'universal-diascreen-hmi', 'version': '0.4.5'},
+                          'serverInfo': {'name': 'universal-diascreen-hmi', 'version': '0.5.0'},
                           'instructions': 'File workspace only. Inspect first. Proposals require exact plan approval and --allow-write. Vendor/runtime acceptance is separate.'}
             elif method == 'ping':
                 result = {}
@@ -151,7 +152,7 @@ def serve(session, incoming=None, outgoing=None):
                 except AgentError as exc:
                     result = {'content': [{'type': 'text', 'text': _dump(exc.as_dict())}], 'structuredContent': {'error': exc.as_dict()}, 'isError': True}
                 except (ValueError, TypeError, KeyError, IndexError, OverflowError, AttributeError, OSError):
-                    result = {'content': [{'type': 'text', 'text': _dump({'code': 'INVALID_OR_UNQUALIFIED', 'message': 'Input is malformed, unsupported, or unavailable; no write was applied'})}], 'isError': True}
+                    result = {'content': [{'type': 'text', 'text': _dump({'code': 'INVALID_OR_UNQUALIFIED', 'message': 'Input or outcome is unverified; inspect the durable plan, operation and artifacts before retrying'})}], 'isError': True}
             else:
                 outgoing.write((_dump({'jsonrpc': '2.0', 'id': identity, 'error': {'code': -32601, 'message': 'Method not found'}}) + '\n').encode('utf-8')); outgoing.flush()
                 continue

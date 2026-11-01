@@ -96,8 +96,9 @@ class OperationTests(unittest.TestCase):
     def test_screen_frame_clone_delete_and_navigation_guards(self):
         data = native()
         result, _ = compile_changes(data, [{'op': 'clone_screen', 'donor_id': 'seed', 'donor_page_id': 2, 'new_page_id': 3, 'name': 'Third'},
-                      {'op': 'delete_screen', 'page_id': 2}, {'op': 'default_screen', 'page_id': 3}], profile(), {'seed': Project(data)})
-        self.assertEqual([p.page_id for p in Project(result).pages], [1, 3])
+                      {'op': 'default_screen', 'page_id': 3}], profile(), {'seed': Project(data)})
+        self.assertEqual([p.page_id for p in Project(result).pages], [1, 2, 3])
+        self.fail({'op':'delete_screen','page_id':2},code='DELETE_DEPENDENCY')
         self.fail({'op': 'delete_screen', 'page_id': 1}, code='DEFAULT_PAGE')
         self.fail({'op': 'navigation', 'page_id': 1, 'element_id': 10, 'target_page_id': 2}, code='CONTROL_TYPE')
 

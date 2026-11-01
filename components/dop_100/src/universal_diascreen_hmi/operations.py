@@ -332,6 +332,8 @@ def operation_patches(q, op, profile, donors=None):
             patches.append(token_patch(q, e.section, 'GoToScreenName', q.index.text(page.section, 'wTextLen'), 'coupled page navigation name'))
         return patches
     if name == 'delete_element':
+        from .deletion_guard import check
+        check(q,op['page_id'],op['element_id'])
         return [Patch(e.section.start, e.end, q.file.payload[e.section.start:e.end], b'', 'delete exact screen-local identity')]
     if name == 'reorder_element':
         page = q.page(whole(op.get('page_id'), 'page_id'))
@@ -383,6 +385,8 @@ def operation_patches(q, op, profile, donors=None):
         return [Patch(q.index.tail_start, q.index.tail_start, b'', clone, 'append donor screen/frame+aux')]
     if name == 'delete_screen':
         page = q.page(whole(op.get('page_id'), 'page_id'))
+        from .deletion_guard import check
+        check(q,page.page_id)
         return [Patch(page.section.start, page.end, q.file.payload[page.section.start:page.end], b'', 'delete exact screen identity')]
     if name == 'default_screen':
         page = q.page(whole(op.get('page_id'), 'page_id'))

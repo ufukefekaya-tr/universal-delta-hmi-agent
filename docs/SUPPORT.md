@@ -1,11 +1,11 @@
-Current source extension: [native service update](NATIVE_SERVICE_UPDATE.md). See the current 70-tool integration inventory; historical release evidence below remains scoped to its original bytes.
+Current source extension: [MCP consolidation](MCP_CONSOLIDATION.md). The DIAScreen source inventory contains 83 routes, including explicit unsupported refusals. Historical release evidence below remains scoped to its original bytes.
 
 # Supported release scope
 
 | Route | Implementation | Evidence boundary |
 |---|---|---|
 | DOP-B | DOPSoft 2 file backend; nine plan/edit/save tools and five durable job tools | Exact profile/source contracts; qualified existing controls and donor-bound creation only |
-| DOP-100 | Independent DIAScreen file backend;30 audited tools and isolated project sessions | Hash-pinned native layout, bounded operations and saved-layer previews |
+| DOP-100 | Independent DIAScreen 0.5.0 source backend;83 routes and isolated project sessions | Hash-pinned native layout, bounded operations, optional external qualified templates; unsupported routes explicitly refuse |
 
 Full support descriptions remain in [DOP-B support](../components/dop_b/docs/SUPPORT_MATRIX.md) and [DIAScreen support](../components/dop_100/docs/SUPPORT_MATRIX.md). The umbrella never translates one native format into the other or guesses a profile from an extension.
 

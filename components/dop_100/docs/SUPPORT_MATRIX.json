@@ -153,13 +153,16 @@
       "implementation": [
         "operations.operation_patches:clone_screen",
         "operations.validate_references",
-        "extended.hmi4_transaction.build"
+        "extended.hmi4_transaction.build",
+        "deletion_guard.check"
       ],
       "planned_tests": [
         "test_operations.OperationTests.test_screen_frame_clone_delete_and_navigation_guards",
-        "test_extended.ExtendedTests.test_source_move_and_clone"
+        "test_extended.ExtendedTests.test_source_move_and_clone",
+        "test_consolidation_risks.RiskTests.test_shared_deletion_has_narrow_positive_and_opaque_negative",
+        "test_consolidation_risks.RiskTests.test_new_page_move_clone_and_wrong_navigation_name_refuse"
       ],
-      "limits": "Source-qualified page clone and ID/name/Level navigation; same-plan new-page element targets refused.",
+      "limits": "Source-qualified page clone; actual1/10 navigation with planned/final target-name equality. Deletion only with a closed inert indexed empty-resource dependency graph; opaque/macro/event/unknown variants refuse. Same-plan new-page object targets refused.",
       "known_history": "upstream edit/MCP",
       "test_execution": "PASS_REFERENCED_OFFLINE_TESTS; support level distinguishes refusal/contract from implementation",
       "human_boundary": "Vendor/native pixel/panel/runtime/physical NOT_RUN",
@@ -2507,6 +2510,14 @@
       "availability_at_authoring": "EXISTS",
       "execution_status": "FOCUSED_NEUTRAL_PASS_0.4.4",
       "prior_observation": "Dense indices/actual enum separation/readonly source-map audit; no vendor runtime claim"
+    },
+    {
+      "test_name": "test_consolidation_risks.RiskTests.test_shared_deletion_has_narrow_positive_and_opaque_negative",
+      "scope": "Original neutral consolidation counterexamples; no vendor acceptance"
+    },
+    {
+      "test_name": "test_consolidation_risks.RiskTests.test_new_page_move_clone_and_wrong_navigation_name_refuse",
+      "scope": "Original neutral consolidation counterexamples; no vendor acceptance"
     }
   ],
   "private_qualification": {
@@ -2641,5 +2652,14 @@
       "test_typed_visibility.VisibilityTests.test_existing_unsupported_visibility_is_preserved_without_acceptance_credit"
     ],
     "existing_other_families": "PRESERVED_ONLY; no visibility acceptance credit"
+  },
+  "consolidation_extension": {
+    "version": "0.5.0",
+    "tools": 83,
+    "document": "../../docs/MCP_CONSOLIDATION.md",
+    "seed_bundled": false,
+    "output_claims": "Held descriptor + operation/plan/path/size/SHA; no replay",
+    "vendor_compile": "NOT_RUN",
+    "runtime": "NOT_RUN"
   }
 }

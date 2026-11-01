@@ -36,7 +36,7 @@
   },
   "review": {
     "technical": "PASS; initial negative fixture corrected before final suite",
-    "final_exact_omission": "External hash-bound final review required before commit"
+    "final_exact_omission": "SUPERSEDED_BY_HASH_BOUND_CURRENT_G2_INDEPENDENT_PASS"
   },
   "excluded": [
     "GUI/Computer Use",
@@ -47,5 +47,21 @@
   ],
   "source_witness_privacy": "Private source evidence remains outside this repo; neutral fixtures only",
   "regression_correction": "Preserve existing visibility on unsupported source families separately without matched-address credit; keep numeric/static writer scope strict",
-  "private_test_evidence": "Initial full private regression exposed overbroad visibility audit; actual legacy recovery and9neutral tests passed after the narrow preserved-only correction. Complete private evidence is maintained externally."
+  "private_test_evidence": "Initial full private regression exposed overbroad visibility audit; actual legacy recovery and9neutral tests passed after the narrow preserved-only correction. Complete private evidence is maintained externally.",
+  "historical_report": true,
+  "current_revalidation": {
+    "umbrella": "0.4.0",
+    "diascreen": "0.5.0",
+    "tests": {
+      "root": 74,
+      "dop_b": 981,
+      "dop_100": 232,
+      "failures": 0,
+      "legacy_windows_symlink_privilege_skips": 1,
+      "new_critical_cases_skipped": 0
+    },
+    "review": "reports/hmi_skill/G2_INDEPENDENT_REVIEW.json",
+    "acceptance": "reports/hmi_skill/G2_ACCEPTANCE.json",
+    "private_report_copied": false
+  }
 }

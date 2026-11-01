@@ -101,14 +101,14 @@ class TemplateTests(unittest.TestCase):
         self.assertEqual(a.current,b.current)
     def test_response_loss_discovers_effect_by_plan_and_reconciles_no_write(self):
         s=self.service();p=self.propose(s);h=p['plan_sha256'];s.inspect_native_plan(h)
-        original=lifecycle.write_new
-        def interrupted(path,data):original(path,data);raise OSError('synthetic post-write loss')
-        with patch.object(lifecycle,'write_new',interrupted):
+        original=lifecycle.write_owned
+        def interrupted(journal,oid,path,data):original(journal,oid,path,data);raise OSError('synthetic post-write loss')
+        with patch.object(lifecycle,'write_owned',interrupted):
             with self.assertRaises(OSError):s.apply_project_plan(h,h)
         s=self.service();again=self.propose(s);self.assertEqual(again['plan_sha256'],h)
         op=s.inspect_native_plan(h)['operation'];self.assertEqual(op['state'],'UNKNOWN_OUTCOME')
         before=(self.work/'new.dpa').stat().st_mtime_ns
-        with patch.object(lifecycle,'write_new',side_effect=AssertionError('recovery must never write')):
+        with patch.object(lifecycle,'write_owned',side_effect=AssertionError('recovery must never write')):
             recovered=s.reconcile_operation(op['operation_id']);self.assertEqual(recovered['state'],'SUCCEEDED')
             self.assertEqual(recovered['session_source'],'ATTACHED_VERIFIED_TEMPLATE_COPY')
         self.assertEqual((self.work/'new.dpa').stat().st_mtime_ns,before)
@@ -142,6 +142,18 @@ class TemplateTests(unittest.TestCase):
             pin=self.host/name;old=pin.read_bytes();pin.write_bytes(old+b' ')
             self.refusal('TEMPLATE_DRIFT',lambda:s.save_as('never.dpa',sha(s.current)));pin.write_bytes(old)
         self.assertFalse((self.work/'never.dpa').exists())
+    def test_neutral_descendant_artifact_recovery_rechecks_seed_and_review(self):
+        from universal_diascreen_hmi.extended import hmi4_artifacts as artifacts
+        s=self.copy();p=s.create_neutral_screen(sha(s.current),'blank_a',3,'Three',0);h=p['plan_sha256'];s.apply_plan(h,h);s.inspect()
+        before=dict(tags=[dict(address='D100',type='INT',words=1,access='READ_ONLY')],source_digest='0'*64);after={**before,'source_digest':'1'*64}
+        package=s.plan_offline_package(sha(s.current),'neutral.zip','neutral.dpa',dict(ip='0.0.0.0',port=502))['plan_sha256']
+        rebind=s.plan_contract_rebind(sha(s.current),before,sha(canonical(before)),after,sha(canonical(after)))['plan_sha256']
+        for ph in (package,rebind):
+            kind,record,data=artifacts.load(s,ph);oid=s.journal.reserve('hmi4artifact:'+ph,kind,dict(plan_sha256=ph,**record));s.journal.transition(oid,'RUNNING')
+            for name in ('blank_a.dpa','blank_a.review.json'):
+                path=self.host/name;original=path.read_bytes();path.write_bytes(original+b' ')
+                self.refusal('TEMPLATE_DRIFT',lambda:s.reconcile_operation(oid));path.write_bytes(original)
+                self.assertEqual(s.inspect_operation(oid)['state'],'RUNNING')
     def test_missing_catalog_and_workspace_overlap(self):
         with patch.dict(os.environ,{'DIA_HMI_TEMPLATE_ROOT':''}):
             self.refusal('TEMPLATE_UNAVAILABLE',lambda:self.service().inspect_template('blank_a'))

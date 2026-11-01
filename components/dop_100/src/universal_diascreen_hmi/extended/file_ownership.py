@@ -5,6 +5,20 @@ import os
 from .common import no_links,require
 
 
+def descriptor_identity(stat):
+    return {key:getattr(stat,key) for key in ('st_dev','st_ino','st_size','st_mtime_ns','st_ctime_ns')}
+
+
+def write_owned(journal,operation_id,path,data):
+    """Exclusive creation + held-descriptor claims; not a generic overwrite API."""
+    no_links(path)
+    require(isinstance(data,bytes) and len(data)<=64*1024*1024,'OUTPUT_LIMIT','Output must fit the shared bounded reread profile')
+    with path.open('xb') as stream:
+        journal.claim_output(operation_id,path,os.fstat(stream.fileno()),data)
+        stream.write(data);stream.flush();os.fsync(stream.fileno())
+        journal.finish_output(operation_id,path,os.fstat(stream.fileno()),data)
+
+
 @contextmanager
 def worker_lease(workspace):
     path=no_links(workspace/'.runtime/template-worker.lock')
@@ -60,6 +74,7 @@ def immutable_read(path):
             require(all(getattr(before,k)==getattr(after,k)==getattr(current,k) for k in keys),
                     'OUTPUT_DRIFT','Output identity changed during verification')
             require(before.st_ctime_ns==after.st_ctime_ns,'OUTPUT_DRIFT','Held output changed during verification')
+        unchanged.file_identity=descriptor_identity(before)
         unchanged()
         yield data,unchanged
         unchanged()

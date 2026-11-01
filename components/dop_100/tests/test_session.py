@@ -57,7 +57,7 @@ class SessionTests(unittest.TestCase):
         self.s.rollback(); self.s.open_project('other.dpa', digest(native()), profile(), digest(canonical(profile())))
 
     def test_r09_replay_and_stale_other_plan(self):
-        one = self.proposal(); two = self.s.plan_changes([{'op': 'delete_element', 'page_id': 1, 'element_id': 11}])
+        one = self.proposal(); two = self.s.plan_changes([{'op': 'set_text', 'page_id': 1, 'element_id': 11, 'state_value':0,'text':'OTHER'}])
         self.s.apply_plan(one['plan_sha256'], one['plan_sha256'])
         with self.assertRaises(AgentError) as ctx: self.s.apply_plan(one['plan_sha256'], one['plan_sha256'])
         self.assertEqual(ctx.exception.code, 'ALREADY_APPLIED')

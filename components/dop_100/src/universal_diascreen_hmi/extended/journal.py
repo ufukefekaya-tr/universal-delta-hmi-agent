@@ -4,8 +4,9 @@ import json
 from contextlib import contextmanager
 from pathlib import Path
 import sqlite3
+import stat as file_stat
 import uuid
-from .file_ownership import immutable_read, worker_lease
+from .file_ownership import immutable_read, worker_lease,descriptor_identity
 from .common import canonical, engine_identity, hash_value, no_links, now, require, sha
 
 TERMINAL = {'SUCCEEDED', 'FAILED', 'TIMED_OUT'}
@@ -28,6 +29,46 @@ class Journal:
             db.execute('CREATE TABLE IF NOT EXISTS plans (id TEXT PRIMARY KEY, record BLOB NOT NULL, candidate BLOB NOT NULL, profile BLOB NOT NULL, steps BLOB NOT NULL, parent TEXT)')
             db.execute('CREATE TABLE IF NOT EXISTS operations (id TEXT PRIMARY KEY, request_key TEXT UNIQUE NOT NULL, kind TEXT NOT NULL, intent BLOB NOT NULL, state TEXT NOT NULL, result BLOB, created TEXT NOT NULL, updated TEXT NOT NULL)')
             db.execute('CREATE TABLE IF NOT EXISTS events (seq INTEGER PRIMARY KEY AUTOINCREMENT, operation_id TEXT NOT NULL, state TEXT NOT NULL, record BLOB NOT NULL)')
+            db.execute('CREATE TABLE IF NOT EXISTS output_claims (operation_id TEXT PRIMARY KEY, record BLOB NOT NULL)')
+
+    def claim_output(self,operation_id,path,stat,data):
+        path=no_links(path)
+        require(path.is_relative_to(self.workspace) and stat.st_nlink==1 and file_stat.S_ISREG(stat.st_mode)
+                and stat.st_ino>0,'OUTPUT_OWNERSHIP','Stable regular exclusive workspace output descriptor required')
+        record=dict(path=path.relative_to(self.workspace).as_posix(),created=descriptor_identity(stat),completed=None,
+                    bytes=len(data),sha256=sha(data),operation_id=operation_id)
+        with self.connect() as db:
+            op=db.execute('SELECT state,kind,intent FROM operations WHERE id=?',(operation_id,)).fetchone()
+            require(op is not None and op[0]=='RUNNING','OUTPUT_OWNERSHIP','Only a running owned operation can claim its new descriptor')
+            intent=json.loads(op[2]);record['plan_sha256']=intent['plan_sha256'];record['operation_sha256']=sha(canonical(dict(kind=op[1],intent=intent,operation_id=operation_id)))
+            require('path'not in intent or intent['path']==record['path'],'OUTPUT_OWNERSHIP','Output path differs from the exact operation intent')
+            require(db.execute('SELECT 1 FROM output_claims WHERE operation_id=?',(operation_id,)).fetchone() is None,'OUTPUT_OWNERSHIP','Output descriptor is claimed only once')
+            db.execute('INSERT INTO output_claims VALUES (?,?)',(operation_id,canonical(record)))
+
+    def finish_output(self,operation_id,path,stat,data):
+        with self.connect() as db:
+            row=db.execute('SELECT record FROM output_claims WHERE operation_id=?',(operation_id,)).fetchone()
+            require(row is not None,'OUTPUT_OWNERSHIP','New output creation claim missing');record=json.loads(row[0])
+            current=path.stat()
+            require(record['path']==path.relative_to(self.workspace).as_posix() and record['completed'] is None
+                    and all(getattr(stat,k)==record['created'][k]==getattr(current,k) for k in ('st_dev','st_ino'))
+                    and stat.st_nlink==current.st_nlink==1,'OUTPUT_OWNERSHIP','Created output identity changed')
+            require(stat.st_size==record['bytes']==len(data) and sha(data)==record['sha256'],'OUTPUT_OWNERSHIP','Completed descriptor length/payload differs')
+            record.update(completed=descriptor_identity(stat))
+            db.execute('UPDATE output_claims SET record=? WHERE operation_id=?',(canonical(record),operation_id))
+
+    def output_owned(self,operation_id,path):
+        with self.connect() as db:row=db.execute('SELECT record FROM output_claims WHERE operation_id=?',(operation_id,)).fetchone()
+        if row is None or not path.is_file():return False
+        record=json.loads(row[0])
+        if record.get('completed') is None or record['path']!=path.relative_to(self.workspace).as_posix():return False
+        op=self.inspect(operation_id)
+        require(record.get('operation_id')==operation_id and record.get('plan_sha256')==op['intent']['plan_sha256']
+                and record.get('operation_sha256')==sha(canonical(dict(kind=op['kind'],intent=op['intent'],operation_id=operation_id))),
+                'OUTPUT_OWNERSHIP','Output claim belongs to another operation/plan')
+        with immutable_read(path) as (raw,unchanged):
+            result=record['completed']==unchanged.file_identity and record['bytes']==len(raw) and record['sha256']==sha(raw);unchanged()
+        return result
 
     @contextmanager
     def connect(self):
@@ -114,7 +155,7 @@ class Journal:
     def _reconcile_save_owned(self, identity):
         require(engine_identity() == self.engine_sha256, 'ENGINE_DRIFT', 'Recovery engine changed')
         operation = self.inspect(identity)
-        if operation['state'] in TERMINAL:
+        if operation['state'] in ('FAILED','TIMED_OUT'):
             return operation
         intent = operation['intent']
         require(operation['kind'] == 'save_as', 'RECONCILE_UNSUPPORTED', 'Only file-save effects have an implemented reconciliation oracle')
@@ -131,16 +172,18 @@ class Journal:
                 and source.resolve().is_relative_to(self.workspace), 'PATH_SCOPE', 'Recorded path escapes workspace')
         if output.is_file() and source.is_file():
             with immutable_read(source) as (source_raw,source_unchanged), immutable_read(output) as (saved,output_unchanged):
-                if sha(saved) == intent['candidate_sha256'] and sha(source_raw) == intent['source_sha256']:
+                if sha(saved) == intent['candidate_sha256'] and sha(source_raw) == intent['source_sha256'] and self.output_owned(identity,output):
                     plan, _ = self.load_plan(intent['plan_sha256'])
                     require(plan['record']['source_sha256'] == intent['source_sha256']
                             and plan['record']['candidate_sha256'] == intent['candidate_sha256']
                             and plan['candidate'] == saved, 'PLAN_DRIFT', 'Saved effect differs from durable plan')
                     from universal_diascreen_hmi.native import Project
                     Project(saved);source_unchanged();output_unchanged()
-                    self.transition(identity, 'SUCCEEDED', {'saved_reread': 'PASS', 'reconciled': True,
-                        'candidate_sha256': intent['candidate_sha256'], 'vendor_compile': 'NOT_RUN', 'native_qualified':False})
+                    if operation['state']!='SUCCEEDED':
+                        self.transition(identity, 'SUCCEEDED', {'saved_reread': 'PASS', 'reconciled': True,
+                            'candidate_sha256': intent['candidate_sha256'], 'vendor_compile': 'NOT_RUN', 'native_qualified':False})
                     return self.inspect(identity)
+        require(operation['state']!='SUCCEEDED','OUTPUT_OWNERSHIP','Historical success remains recorded, but current source/output effect no longer verifies')
         if operation['state'] != 'UNKNOWN_OUTCOME':
             self.transition(identity, 'UNKNOWN_OUTCOME', {'reason': 'MISSING_OR_DIFFERENT_SOURCE_OR_OUTPUT'})
         return self.inspect(identity)
